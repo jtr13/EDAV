@@ -1,3 +1,3 @@
 # EDAV
 
-[Resources for learning R](/Learning R)
+[Resources for learning R](/tree/master/Learning%20R)
