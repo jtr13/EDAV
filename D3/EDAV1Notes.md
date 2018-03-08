@@ -122,4 +122,9 @@ EDAV1.html: Overview
 
 ### Part D: Student Submissions
 
-Share your code to manipulate the page here by submitting a pull request.
+Share your code to manipulate the page here by submitting a pull request. \#\#\#\#\# Oleh move circle
+
+``` javascript
+function move() {d3.select("circle").transition().duration(2000).attr("cx", "400")};
+d3.select("circle").transition().duration(2000).attr("cx", "400");
+```
