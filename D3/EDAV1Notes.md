@@ -73,7 +73,7 @@ EDAV1.html: Overview
     ``` javascript
     d3.select("circle").transition().duration(2000).attr("cx", "400");
 
-    d3.select("ellipse").transition().durations(2000).attr("tranform", "translate (400, 400)");
+    d3.select("ellipse").transition().duration(2000).attr("transform", "translate (400, 400)");
 
     d3.select("line").transition().duration(2000).attr("x1", "400");
 
