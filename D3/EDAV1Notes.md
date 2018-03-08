@@ -3,13 +3,13 @@ EDAV1.html: Overview
 
 ### Part A: Chrome Developer Tools, `d3.select()`
 
-1.  Open EDAV1.html in Chrome *after* downloading from one of the following:
+1.  Open a *downloaded version* of EDAV1.html. You can download the file:
 
-    1.  Courseworks
+    1.  from the Courseworks Files folder
 
-    2.  Click [here](https://raw.githubusercontent.com/jtr13/EDAV/master/D3/EDAV1.html) and then File, Save Page As...
+    2.  from this repo by clicking [here](https://raw.githubusercontent.com/jtr13/EDAV/master/D3/EDAV1.html) and then File, Save Page As...
 
-    3.  Download a ZIP of the whole repo by clicking [here](https://github.com/jtr13/EDAV/archive/master.zip)
+    3.  by downloading a ZIP of the whole repo by clicking [here](https://github.com/jtr13/EDAV/archive/master.zip)
 
 2.  Click View, Developer, Developer Tools, then the Elements tab.
 
