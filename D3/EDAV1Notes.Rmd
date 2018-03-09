@@ -123,10 +123,12 @@ output: github_document
     
 ### Part D: Student Submissions
 
-Share your code to manipulate the page here by submitting a pull request. 
-##### Oleh
-move circle
+Share your code! Submit a pull request to [EDAV1Notes.Rmd](EDAV1Notes.Rmd)
+
+### from Oleh: move circle function
+
 ```{javascript}
 function move() {d3.select("circle").transition().duration(2000).attr("cx", "400")};
-d3.select("circle").transition().duration(2000).attr("cx", "400");
+
+move()
 ```
