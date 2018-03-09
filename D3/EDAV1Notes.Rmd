@@ -130,5 +130,5 @@ Share your code! Submit a pull request to [EDAV1Notes.Rmd](EDAV1Notes.Rmd)
 ```{javascript}
 function move() {d3.select("circle").transition().duration(2000).attr("cx", "400")};
 
-move()
+move();
 ```
