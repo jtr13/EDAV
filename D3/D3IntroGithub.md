@@ -3,10 +3,6 @@ D3 Overview
 Joyce Robbins
 3/8/2018
 
-``` r
-knitr::opts_chunk$set(eval=FALSE)
-```
-
 Framework of an .html file
 ==========================
 
