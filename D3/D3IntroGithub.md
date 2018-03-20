@@ -191,9 +191,9 @@ Chaining methods
 <p id="id2" style="font-size: 72px;">
 Watch me turn red and shrink.
 </p>
-
 ``` js
-d3.select("#id2").transition().duration(3000).style("font-size", "24px").style("color", "red");
+d3.select("#id2").transition().duration(3000)
+  .style("font-size", "24px").style("color", "red");
 ```
 
 Chaining methods: two transitions
@@ -207,7 +207,6 @@ Chaining methods: two transitions
 <p id="id3" style="font-size: 72px;">
 Watch me turn red, <em>then</em> shrink.
 </p>
-
 ``` js
 d3.select("#id3")
   .transition().duration(3000).style("color", "red")
@@ -259,6 +258,8 @@ Selecting by ID
 <p id="id1">
 Watch me grow.
 </p>
+D3:
+
 ``` js
 d3.select("#id1").transition().duration(3000)
   .style("font-size", "72px");
