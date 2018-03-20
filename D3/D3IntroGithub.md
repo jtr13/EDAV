@@ -3,6 +3,10 @@ D3 Overview
 Joyce Robbins
 3/8/2018
 
+``` r
+knitr::opts_chunk$set(eval=FALSE)
+```
+
 Framework of an .html file
 ==========================
 
@@ -192,8 +196,7 @@ Chaining methods
 Watch me turn red and shrink.
 </p>
 ``` js
-d3.select("#id2").transition().duration(3000)
-  .style("font-size", "24px").style("color", "red");
+d3.select("#id2").transition().duration(3000).style("font-size", "24px").style("color", "red");
 ```
 
 Chaining methods: two transitions
