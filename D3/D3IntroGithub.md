@@ -191,6 +191,8 @@ Chaining methods
 <p id="id2" style="font-size: 72px;">
 Watch me turn red and shrink.
 </p>
+D3:
+
 ``` js
 d3.select("#id2").transition().duration(3000)
   .style("font-size", "24px").style("color", "red");
@@ -207,6 +209,8 @@ Chaining methods: two transitions
 <p id="id3" style="font-size: 72px;">
 Watch me turn red, <em>then</em> shrink.
 </p>
+D3:
+
 ``` js
 d3.select("#id3")
   .transition().duration(3000).style("color", "red")
@@ -258,8 +262,6 @@ Selecting by ID
 <p id="id1">
 Watch me grow.
 </p>
-D3:
-
 ``` js
 d3.select("#id1").transition().duration(3000)
   .style("font-size", "72px");
@@ -271,6 +273,8 @@ Selecting by class
 <svg width="500" height="300">
 <!-- some SVG --> <rect class="trio" x="100" y="50" width="75" height="75" fill="blue"></rect> <rect class="trio" x="200" y="50" width="75" height="75" fill="blue"></rect> <rect class="trio" x="300" y="50" width="75" height="75" fill="blue"></rect>
 </svg>
+D3:
+
 ``` js
 d3.selectAll("rect.trio").transition().duration(3000)
   .attr("y", "150").attr("fill", "orange");
@@ -281,9 +285,6 @@ PRACTICE
 
 Download and open [EDAV2.html](EDAV2.html)
 
-<table>
-<tr>
-<td>
 1.  Move all the circles to the right.
 
 2.  Move them back to the left *and* change their color.
@@ -292,14 +293,6 @@ Download and open [EDAV2.html](EDAV2.html)
 
 4.  Move all the circles to the middle of the screen, *then* move them all to the same location.
 
-</td>
-<td>
-<svg id="practice1" width="500" height="400">
-</svg>
-<script src="practice1.js"></script>
-</td>
-</tr>
-</table>
 Modifying elements
 ==================
 
@@ -519,15 +512,6 @@ Hover to execute this code (and fix the typo):
 d3.select("#typo").text("Manhattan")
 ```
 
-<script>
-d3.select("#fixtypo")
-.on("mouseover", function () {
-d3.select("#typo").text("Manhattan")
-})
-.on("mouseout", function () {
-d3.select("#typo").text("Manhatten")
-});
-</script>
 Modifying SVG text
 ==================
 
@@ -553,15 +537,6 @@ Hover to execute this code (and fix the typo):
 d3.select("#svgtypo").text("Web scraping is fun.")
 ```
 
-<script>
-d3.select("#fixsvgtypo")
-.on("mouseover", function () {
-d3.select("#svgtypo").text("Web scraping is fun.")
-})
-.on("mouseout", function () {
-d3.select("#svgtypo").text("Web scrapping is fun.")
-});
-</script>
 Moving (and modifying) SVG text
 ===============================
 
