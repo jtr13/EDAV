@@ -122,7 +122,7 @@ CSS rules enable styling *and* selecting.
 SVG
 ===
 
-``` svg
+``` html
 <svg width="500" height="300">  <!-- some SVG -->
     <rect x="20" y="20" width="460" height="260" fill="aliceblue"></rect>
     <circle cx="50" cy="75" r="20" fill="blue"></circle>
@@ -153,7 +153,7 @@ Template Literals
 ``` js
 let a = 3;
 let b = 4;
-console.log(`This is an equation: ${a} + ${b} = ${a + b}`)
+console.log(`This is an equation: ${a} + ${b} = ${a + b}`);
 ```
 
 instead of:
@@ -507,7 +507,7 @@ Manhatten
 Hover to execute this code (and fix the typo):
 
 ``` js
-d3.select("#typo").text("Manhattan")
+d3.select("#typo").text("Manhattan");
 ```
 
 Modifying SVG text
@@ -532,7 +532,7 @@ svg
 Hover to execute this code (and fix the typo):
 
 ``` js
-d3.select("#svgtypo").text("Web scraping is fun.")
+d3.select("#svgtypo").text("Web scraping is fun.");
 ```
 
 Moving (and modifying) SVG text
@@ -557,7 +557,7 @@ font-weight="bold" font-size="40px">I want to move left.</text>
 ### Hover to execute this code:
 
 ``` js
-d3.select("#moveleft").attr("x", "20").text("Thanks, now I'm happy!")
+d3.select("#moveleft").attr("x", "20").text("Thanks, now I'm happy!");
 ```
 
 Modifying elements
@@ -570,7 +570,7 @@ d3.select("p").attr("id", "myid");
 
 d3.select("h1").style("color", "red");
 
-d3.select("text").text("Changing some svg text.")
+d3.select("text").text("Changing some svg text.");
 ```
 
 Modifying elements heads-up
@@ -621,13 +621,28 @@ Adding elements
 ### HTML
 
 ``` js
-d3.select("body").append("p")
+d3.select("body").append("p");
 ```
 
 ### SVG
 
 ``` js
-d3.select("svg").append("circle")
+d3.select("svg").append("circle");
+```
+
+Removing elements
+=================
+
+### HTML
+
+``` js
+d3.select("p").remove();
+```
+
+### SVG
+
+``` js
+d3.select("circle").remove();
 ```
 
 PRACTICE 2
