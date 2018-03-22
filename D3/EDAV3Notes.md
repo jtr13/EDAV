@@ -118,31 +118,121 @@ d3.select("ellipse").transition().duration(2000)
 Add a delay
 =======
 ``` js
-<script id="">
-
-</script>
+<script id="s6">
+var svg = d3.select("body").append("svg")
+    .attr("width", "500").attr("height", "400");
+svg.append("rect").attr("x", "0").attr("y", "0")
+      .attr("width", "500").attr("height", "400").attr("fill", "lightblue");
+svg.append("circle").attr("cx", "250").attr("cy", "150")
+    .attr("r", "20").attr("fill", "blue");
+svg.append("ellipse").attr("cx", "150").attr("cy", "100")
+    .attr("rx", "30").attr("ry", "50").attr("fill", "yellow");
+d3.select("circle").transition().duration(2000)
+    .attr("cx", "400");
+d3.select("ellipse").transition().duration(2000)
+    .attr("cy","300");
+d3.select("circle").transition().delay(2000).duration(2000)
+    .attr("cx", "250");
+d3.select("ellipse").transition().delay(2000).duration(2000)
+    .attr("cy","100");
+</script>    
 ```
 
 Use `.on("end", function() {})`
 =======
 ``` js
-<script id="">
+<script id="s7">		
 
+var svg = d3.select("body").append("svg")
+    .attr("width", "500").attr("height", "400");
+svg.append("rect").attr("x", "0").attr("y", "0")
+      .attr("width", "500").attr("height", "400").attr("fill", "lightblue");
+svg.append("circle").attr("cx", "250").attr("cy", "150")
+    .attr("r", "20").attr("fill", "blue");
+svg.append("ellipse").attr("cx", "150").attr("cy", "100")
+    .attr("rx", "30").attr("ry", "50").attr("fill", "yellow");
+d3.select("circle").transition().duration(2000)
+    .attr("cx", "400");
+d3.select("ellipse").transition().duration(2000)
+    .attr("cy","300").on("end", function() {
+
+  d3.select("circle").transition()
+      .duration(2000).attr("cx", "250");
+  d3.select("ellipse").transition()
+      .duration(2000).attr("cy","100");
+
+});
 </script>
 ```
 
 Practice
 =======
-``` js
-<script id="">
+Download and open [EDAV3.html](EDAV3.html)
 
-</script>
-```
+Create the same visualization we did last class, but this time, build all the elements and execute the transitions from within the .html file:
 
-Binding data... (fi)
+1. Create an svg, background rectangle, and six circles, one with an id.
+
+1. Move all circles to the right.
+
+1. Move them back to the left and change their color.
+
+1. Move the circle with the id to the right.
+
+1. Move all the circles to the middle of the screen, then move them all to the same location.
+
+Binding data... (*finally*)
 =======
 ``` js
-<script id="">
+<script id="s8">
+  d3.select("body").append("h1").text("Data Driven Documents");
+  var svg = d3.select("body").append("svg")
+      .attr("width", "500").attr("height", "400");
+  svg.append("rect").attr("x", "0").attr("y", "0")
+        .attr("width", "500").attr("height", "400").attr("fill", "aliceblue");
+
+  svg.append("circle").attr("cx", "50").attr("cy", "100")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "150")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "200")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "250")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "300")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "350")
+      .attr("r", "20").attr("fill", "blue");
 
 </script>
 ```
+
+Binding data (Console)
+=======
+``` js
+var dataset = [90, 230, 140, 75, 180, 25];
+
+var circ = d3.selectAll("circle");
+
+circ
+
+circ.data(); // nothing there
+
+circ.data(dataset); // check Elements, nothing changed
+
+circ.data();  // now we see data
+
+circ.attr("cx", function(d) {return d;});
+
+circ.attr("cx", function(d) {return d/2;);
+
+circ.attr("cx", function(d) {return d/4;}).attr("r", "10");
+
+circ.attr("r", d => d/10); // ES6 arrow functions
+```
+
+Practice 2
+=======
+Download and open [EDAV2.html](EDAV2.html)
+
+Either in the Console or in the .html file bind data -- an array of exactly six values -- to the circles and use the data property to modify the circles.
