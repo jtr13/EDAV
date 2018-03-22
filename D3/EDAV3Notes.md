@@ -224,7 +224,7 @@ circ.data();  // now we see data
 
 circ.attr("cx", function(d) {return d;});
 
-circ.attr("cx", function(d) {return d/2;);
+circ.attr("cx", function(d) {return d/2;});
 
 circ.attr("cx", function(d) {return d/4;}).attr("r", "10");
 
