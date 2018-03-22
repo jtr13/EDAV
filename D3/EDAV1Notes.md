@@ -122,7 +122,7 @@ EDAV1.html: Overview
 
 ### Part D: Student Submissions
 
-Share your code! Submit a pull request to [EDAV1Notes.Rmd](EDAV1Notes.Rmd)
+Share your code! Submit a pull request to this file. [EDAV1Notes.md](EDAV1Notes.md)
 
 (You don't have to know any git to do this. Just click on the file and then the "edit this file" button -- the one that looks like a pencil. Add some code, add a note, and click Commit Changes. I will review your proposed changes before merging. Fear not, you can't mess anything up no matter what you do. It's a good chance to practice.)
 
