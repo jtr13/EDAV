@@ -236,3 +236,38 @@ Practice 2
 Download and open [EDAV2.html](EDAV2.html)
 
 Either in the Console or in the .html file bind data -- an array of exactly six values -- to the circles and use the data property to modify the circles.
+
+<script id="practice_2">
+  d3.select("body").append("h1").text("Data Driven Documents");
+  var svg = d3.select("body").append("svg")
+      .attr("width", "500").attr("height", "400");
+  svg.append("rect").attr("x", "0").attr("y", "0")
+        .attr("width", "500").attr("height", "400").attr("fill", "aliceblue");
+
+  svg.append("circle").attr("cx", "50").attr("cy", "100")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "150")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "200")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "250")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "300")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "350")
+      .attr("r", "20").attr("fill", "blue");
+
+
+  var dataset = [100, 150, 200, 250, 300, 350];
+
+	var circ = d3.selectAll("circle");
+
+	circ.data(dataset); 
+
+	circ.transition().duration(2000)
+		.attr("cx", function(d) {
+			return d;
+		});
+
+
+</script>
