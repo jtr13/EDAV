@@ -24,7 +24,7 @@ d3.select("circle").on("mouseout", goblue);
 d3.select("ellipse").on("mouseout", goblue);
 ```
 
-If you find any errors, please submit a pull request to this file: [ExerciseSolutions.md](ExerciseSolutions.md)
+If you find any errors, please submit a pull request to this file.
 
 You are encouraged to add solutions to later assignments... it will count as your community contribution. Again, submit by making a pull request to this file.
 
