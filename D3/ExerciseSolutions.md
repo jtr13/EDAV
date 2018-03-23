@@ -30,3 +30,74 @@ You are encouraged to add solutions to later assignments... it will count as you
 
 (You don't have to know any git to do this. Just click the "edit this file" button on the top right -- the one that looks like a pencil. Add some code following the pattern of previous examples, add a commit note, such as "added EDAV2 solutions", and click Commit Changes. I will review your proposed changes before merging. Fear not, you can't mess anything up no matter what you do. It's a good chance to practice.)
 
+EDAV 3
+
+<script id="practice_1">		
+
+var svg = d3.select("body").append("svg")
+    .attr("width", "500").attr("height", "400");
+svg.append("rect").attr("x", "0").attr("y", "0")
+      .attr("width", "500").attr("height", "400").attr("fill", "lightblue");
+
+svg.append("circle").attr("cx", "50").attr("cy", "50")
+    .attr("r", "20").attr("fill", "blue");
+svg.append("circle").attr("cx", "50").attr("cy", "100")
+    .attr("r", "20").attr("fill", "blue");
+svg.append("circle").attr("cx", "50").attr("cy", "150")
+    .attr("r", "20").attr("fill", "blue").attr("id", "important");
+svg.append("circle").attr("cx", "50").attr("cy", "200")
+    .attr("r", "20").attr("fill", "blue");
+svg.append("circle").attr("cx", "50").attr("cy", "250")
+    .attr("r", "20").attr("fill", "blue");
+svg.append("circle").attr("cx", "50").attr("cy", "300")
+    .attr("r", "20").attr("fill", "blue");
+
+d3.selectAll("circle").transition().duration(1000)
+    .attr("cx", "400");
+d3.selectAll("circle").transition().delay(1000).duration(1000)
+    .attr("cx", "50").attr("fill", "red");
+d3.select("#important").transition().delay(2000).duration(1000)
+    .attr("cx", "400").on("end", function() {
+    	d3.selectAll("circle").transition()
+      		.duration(1000).attr("cx", "250");
+  		d3.selectAll("circle").transition().delay(1000)
+      		.duration(1000).attr("cy","200");
+
+    });
+
+</script>
+
+<script id="practice_2">
+  d3.select("body").append("h1").text("Data Driven Documents");
+  var svg = d3.select("body").append("svg")
+      .attr("width", "500").attr("height", "400");
+  svg.append("rect").attr("x", "0").attr("y", "0")
+        .attr("width", "500").attr("height", "400").attr("fill", "aliceblue");
+
+  svg.append("circle").attr("cx", "50").attr("cy", "100")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "150")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "200")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "250")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "300")
+      .attr("r", "20").attr("fill", "blue");
+  svg.append("circle").attr("cx", "50").attr("cy", "350")
+      .attr("r", "20").attr("fill", "blue");
+
+
+  var dataset = [100, 150, 200, 250, 300, 350];
+
+	var circ = d3.selectAll("circle");
+
+	circ.data(dataset); 
+
+	circ.transition().duration(2000)
+		.attr("cx", function(d) {
+			return d;
+		});
+
+
+</script>
