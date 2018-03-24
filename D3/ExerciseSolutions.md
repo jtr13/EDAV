@@ -128,14 +128,13 @@ d3.select("#important").transition().delay(2000).duration(1000)
 
 Solution 4
 
-``` js
-
 1. Create <svg> element from previous example 
 2. Add <script> element to <body>
-
-	<body>
+	
+``` js	
+<body>
     
-      <svg width="500" height="400">  
+        <svg width="500" height="400">  
 			<rect x="0" y="0" width="500" height="400" fill="aliceblue"></rect>
 			<circle cx="50" cy="100" r="20" fill="blue"></circle>
 			<circle cx="50" cy="150" r="20" fill="blue"></circle>
@@ -152,7 +151,7 @@ Solution 4
             d3.selectAll("circle").transition().delay(6000).duration(2000).attr("cx","200").transition().duration(2000).attr("cy","200")
         </script>
 
-  </body>
+ </body>
 =======
 </script>
 ```
