@@ -66,6 +66,7 @@ Solution 2 (circles created statically but modified dynamically)
         svg.append("circle").attr("cy","350");
 
         var circ=d3.selectAll("circle");
+	
         circ.attr("cx","50").attr("r","20").attr("fill","blue"); // saves a lot of typing ... compare to Solution 1
 
         circ.transition().duration(3000).attr("cx","450").on("end",function(){
@@ -75,11 +76,11 @@ Solution 2 (circles created statically but modified dynamically)
                         circ.transition().duration(3000).attr("cx","250").on("end",function () {
                             circ.transition().duration(3000).attr("cy","250");
                             });
-										});
-						});
-				});
+			});
+		});
+	});
 </script>
-
+```
 
 Solution 3 (circles created dynamically)
 
