@@ -160,7 +160,7 @@ Solution 1
 </script>
 ```
 
-Solution 2 (with transitions)
+Solution 2 (with multiple transitions)
 
 ``` js
 <script>
