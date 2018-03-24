@@ -24,14 +24,11 @@ d3.select("circle").on("mouseout", goblue);
 d3.select("ellipse").on("mouseout", goblue);
 ```
 
-If you find any errors, please submit a pull request to this file.
 
-You are encouraged to add solutions to later assignments... it will count as your community contribution. Again, submit by making a pull request to this file.
-
-(You don't have to know any git to do this. Just click the "edit this file" button on the top right -- the one that looks like a pencil. Add some code following the pattern of previous examples, add a commit note, such as "added EDAV2 solutions", and click Commit Changes. I will review your proposed changes before merging. Fear not, you can't mess anything up no matter what you do. It's a good chance to practice.)
 
 EDAV 3
 
+``` js
 <script id="practice_1">		
 
 var svg = d3.select("body").append("svg")
@@ -66,7 +63,9 @@ d3.select("#important").transition().delay(2000).duration(1000)
     });
 
 </script>
+```
 
+``` js
 <script id="practice_2">
   d3.select("body").append("h1").text("Data Driven Documents");
   var svg = d3.select("body").append("svg")
@@ -92,12 +91,17 @@ d3.select("#important").transition().delay(2000).duration(1000)
 
 	var circ = d3.selectAll("circle");
 
-	circ.data(dataset); 
+	circ.data(dataset);
 
 	circ.transition().duration(2000)
 		.attr("cx", function(d) {
 			return d;
 		});
-
-
 </script>
+```
+
+If you find any errors, please submit a pull request to this file.
+
+You are encouraged to add solutions to later assignments... it will count as your community contribution. Again, submit by making a pull request to this file.
+
+(You don't have to know any git to do this. Just click the "edit this file" button on the top right -- the one that looks like a pencil. Add some code following the pattern of previous examples, add a commit note, such as "added EDAV2 solutions", and click Commit Changes. I will review your proposed changes before merging. Fear not, you can't mess anything up no matter what you do. It's a good chance to practice.)
