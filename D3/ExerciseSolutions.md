@@ -1,9 +1,9 @@
 Exercise Solutions
 ================
 
-EDAV 1
+### EDAV 1
 
-Part C: Interactivity
+**Part C: Interactivity**
 
 4. Add the same event listern to the ellipse.
 
@@ -26,7 +26,33 @@ d3.select("ellipse").on("mouseout", goblue);
 
 
 
-EDAV 3
+### EDAV 3
+
+**Practice 1**
+
+Solution 1 
+
+``` js
+ <svg width="500" height="400">
+     <rect x="0" y="0" width="500" height="400" fill="aliceblue"></rect>
+     <circle cx="50" cy="100" r="20" fill="blue"></circle>
+     <circle cx="50" cy="150" r="20" fill="blue"></circle>
+     <circle id="c3" cx="50" cy="200" r="20" fill="blue"></circle>
+     <circle cx="50" cy="250" r="20" fill="blue"></circle>
+     <circle cx="50" cy="300" r="20" fill="blue"></circle>
+     <circle cx="50" cy="350" r="20" fill="blue"></circle>
+</svg>
+
+<script>
+     d3.selectAll("circle").transition().duration(3000).attr("cx","450");
+     d3.selectAll("circle").transition().delay(3000).duration(3000).attr("cx","50").attr("fill","red");
+     d3.select("#c3").transition().delay(6000).duration(3000).attr("cx","450");
+     d3.selectAll("circle").transition().delay(9000).duration(3000).attr("cx","250")
+     d3.selectAll("circle").transition().delay(12000).duration(3000).attr("cy","250");
+</script>
+```
+
+Solutions 2 (all elements created dynamically)
 
 ``` js
 <script id="practice_1">		
@@ -64,6 +90,8 @@ d3.select("#important").transition().delay(2000).duration(1000)
 
 </script>
 ```
+
+**Practice 2**
 
 ``` js
 <script id="practice_2">
