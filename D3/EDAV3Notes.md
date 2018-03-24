@@ -181,6 +181,40 @@ Create the same visualization we did last class, but this time, build all the el
 
 1. Move all the circles to the middle of the screen, then move them all to the same location.
 
+<script id="practice_1">		
+
+var svg = d3.select("body").append("svg")
+    .attr("width", "500").attr("height", "400");
+svg.append("rect").attr("x", "0").attr("y", "0")
+      .attr("width", "500").attr("height", "400").attr("fill", "lightblue");
+
+svg.append("circle").attr("cx", "50").attr("cy", "50")
+    .attr("r", "20").attr("fill", "blue");
+svg.append("circle").attr("cx", "50").attr("cy", "100")
+    .attr("r", "20").attr("fill", "blue");
+svg.append("circle").attr("cx", "50").attr("cy", "150")
+    .attr("r", "20").attr("fill", "blue").attr("id", "important");
+svg.append("circle").attr("cx", "50").attr("cy", "200")
+    .attr("r", "20").attr("fill", "blue");
+svg.append("circle").attr("cx", "50").attr("cy", "250")
+    .attr("r", "20").attr("fill", "blue");
+svg.append("circle").attr("cx", "50").attr("cy", "300")
+    .attr("r", "20").attr("fill", "blue");
+
+d3.selectAll("circle").transition().duration(1000)
+    .attr("cx", "400");
+d3.selectAll("circle").transition().delay(1000).duration(1000)
+    .attr("cx", "50").attr("fill", "red");
+d3.select("#important").transition().delay(2000).duration(1000)
+    .attr("cx", "400").on("end", function() {
+    	d3.selectAll("circle").transition()
+      		.duration(1000).attr("cx", "250");
+  		d3.selectAll("circle").transition().delay(1000)
+      		.duration(1000).attr("cy","200");
+    });
+
+</script>
+
 Binding data... (*finally*)
 =======
 ``` js
