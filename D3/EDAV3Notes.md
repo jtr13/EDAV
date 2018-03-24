@@ -165,7 +165,7 @@ d3.select("ellipse").transition().duration(2000)
 </script>
 ```
 
-Practice
+Practice 1
 =======
 Download and open [EDAV3.html](EDAV3.html)
 
