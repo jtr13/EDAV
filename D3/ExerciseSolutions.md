@@ -52,7 +52,36 @@ Solution 1
 </script>
 ```
 
-Solutions 2 (all elements created dynamically)
+Solution 2 (circles created statically but modified dynamically)
+``` js
+<script>
+        var svg=d3.select("body").append("svg").attr("width", "500").attr("height", "400");
+        svg.append("rect").attr("x", "0").attr("y", "0").attr("width", "500").attr("height", "400").attr("fill", "lightblue");
+
+        svg.append("circle").attr("cy","100");
+        svg.append("circle").attr("cy","150");
+        svg.append("circle").attr("id","c3").attr("cy","200");
+        svg.append("circle").attr("cy","250");
+        svg.append("circle").attr("cy","300");
+        svg.append("circle").attr("cy","350");
+
+        var circ=d3.selectAll("circle");
+        circ.attr("cx","50").attr("r","20").attr("fill","blue"); // saves a lot of typing ... compare to Solution 1
+
+        circ.transition().duration(3000).attr("cx","450").on("end",function(){
+            circ.transition().duration(3000).attr("cx","50")
+                .attr("fill","red").on("end",function() {
+                    d3.select("#c3").transition().duration(3000).attr("cx","450").on("end", function () {
+                        circ.transition().duration(3000).attr("cx","250").on("end",function () {
+                            circ.transition().duration(3000).attr("cy","250");
+                            });
+										});
+						});
+				});
+</script>
+
+
+Solution 3 (circles created dynamically)
 
 ``` js
 <script id="practice_1">		
