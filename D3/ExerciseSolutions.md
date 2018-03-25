@@ -31,7 +31,58 @@ d3.select("circle").on("mouseout", goblue);
 d3.select("ellipse").on("mouseout", goblue);
 ```
 
+### EDAV 2
 
+**Practice 1**
+
+Solution 
+
+On the console, type the following commands :
+
+``` js
+d3.selectAll("circle").transition().duration(2000).attr("cx", "400");
+d3.selectAll("circle").transition().duration(2000).attr("cx", "50").attr("fill","red");
+d3.select("#my_circle").transition().duration(2000).attr("cx","400")
+d3.selectAll("circle").transition().duration(2000).attr("cx","200").transition().duration(2000).attr("cy","200")
+
+```
+
+**Practice 2**
+
+Solution
+
+Step 1,2 -> Update EDAV2.html to add class to one of the circles and also add style sheet to the circle having that class
+Code for <style> and <svg> below:
+	
+``` js
+<style type="text/css">
+            .my_circle {
+                fill : green;
+                stroke : orange;
+                stroke-width: 10;
+            }
+  </style>
+```
+
+``` js
+<svg width="500" height="400">  
+			<rect x="0" y="0" width="500" height="400" fill="aliceblue"></rect>
+			<circle cx="50" cy="100" r="20" fill="blue"></circle>
+			<circle cx="50" cy="150" r="20" fill="blue"></circle>
+			<circle class= "my_circle" cx="50" cy="200" r="20" fill="blue"></circle>
+			<circle cx="50" cy="250" r="20" fill="blue"></circle>
+			<circle cx="50" cy="300" r="20" fill="blue"></circle>
+			<circle cx="50" cy="350" r="20" fill="blue"></circle>
+</svg>
+```
+
+Step 3-5 : On console as below : 
+
+``` js
+d3.selectAll("circle").classed("my_circle", true)
+d3.select("svg").append("text").attr("x", 50).attr("y",100).text("1").attr("fill","white");
+d3.select("text").transition().duration(4000).text("2").attr("y",150);
+```
 
 ### EDAV 3
 
