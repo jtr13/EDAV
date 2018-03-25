@@ -140,7 +140,7 @@ SVG
 JavaScript
 ==========
 
-*IDVW* pp. 52-61
+*IDVW* pp. 36-52
 
 Be generally familiar with arrays, objects, functions
 
