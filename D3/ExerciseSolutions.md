@@ -49,7 +49,8 @@ Solution
 
 Step 1,2 -> Update EDAV2.html to add class to one of the circles and also add style sheet to the circle having that class
 Code for <style> and <svg> below:
-
+	
+``` js
 <style type="text/css">
             .my_circle {
                 fill : green;
@@ -57,7 +58,9 @@ Code for <style> and <svg> below:
                 stroke-width: 10;
             }
   </style>
+```
 
+``` js
 <svg width="500" height="400">  
 			<rect x="0" y="0" width="500" height="400" fill="aliceblue"></rect>
 			<circle cx="50" cy="100" r="20" fill="blue"></circle>
@@ -67,13 +70,15 @@ Code for <style> and <svg> below:
 			<circle cx="50" cy="300" r="20" fill="blue"></circle>
 			<circle cx="50" cy="350" r="20" fill="blue"></circle>
 </svg>
+```
 
 Step 3-5 : On console as below : 
 
+``` js
 d3.selectAll("circle").classed("my_circle", true)
 d3.select("svg").append("text").attr("x", 50).attr("y",100).text("1").attr("fill","white");
 d3.select("text").transition().duration(4000).text("2").attr("y",150);
-
+```
 
 ### EDAV 3
 
