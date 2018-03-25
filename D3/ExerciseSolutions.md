@@ -38,10 +38,14 @@ d3.select("ellipse").on("mouseout", goblue);
 Solution 
 
 On the console, type the following commands :
+
+``` js
 d3.selectAll("circle").transition().duration(2000).attr("cx", "400");
 d3.selectAll("circle").transition().duration(2000).attr("cx", "50").attr("fill","red");
 d3.select("#my_circle").transition().duration(2000).attr("cx","400")
 d3.selectAll("circle").transition().duration(2000).attr("cx","200").transition().duration(2000).attr("cy","200")
+
+```
 
 **Practice 2**
 
