@@ -132,15 +132,12 @@ SVG
 </svg>
 ```
 
-<svg width="500" height="300">
-<!-- some SVG --> <rect x="20" y="20" width="460" height="260" fill="aliceblue"></rect> <circle cx="50" cy="75" r="20" fill="blue"></circle> <ellipse cx="175" cy="100" rx="45" ry="30" fill="green"></ellipse> <text x="150" y="200">(150, 200)</text> <line x1="250" y1="150" x2="300" y2="200" stroke="red" stroke-width="3"></line>
-</svg>
 *IDVW* pp. 52-61
 
 JavaScript
 ==========
 
-*IDVW* pp. 52-61
+*IDVW* pp. 36-52
 
 Be generally familiar with arrays, objects, functions
 
