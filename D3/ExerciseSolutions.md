@@ -407,7 +407,6 @@ Solution 3 (using `.data(dataset).enter().append("circle")` to create circles)
 			.data(reallynewbardata);
 
  bars.attr("width", d => d);
-
   ```
 
 	Add and style new bars:
