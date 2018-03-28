@@ -3,7 +3,10 @@ Exercise Solutions
 
 If you find any errors, please submit a pull request to this file.
 
-You are encouraged to add solutions. Again, submit by making a pull request to this file. Note that code chunks begin with `\`\`\` js` and end with `\`\`\``.
+You are encouraged to add solutions. Again, submit by making a pull request to this file. Note that code chunks begin with
+    ``` js
+and end with
+    ```
 
 (You don't have to know any git to do this. Just click the "edit this file" button on the top right -- the one that looks like a pencil. Add some code following the pattern of previous examples, add a commit note, such as "added EDAV2 solutions", and click Commit Changes. I will review your proposed changes before merging. Fear not, you can't mess anything up no matter what you do. It's a good chance to practice.)
 
@@ -35,7 +38,7 @@ d3.select("ellipse").on("mouseout", goblue);
 
 **Practice 1**
 
-Solution 
+Solution
 
 On the console, type the following commands :
 
@@ -53,7 +56,7 @@ Solution
 
 Step 1,2 -> Update EDAV2.html to add class to one of the circles and also add style sheet to the circle having that class
 Code for <style> and <svg> below:
-	
+
 ``` js
 <style type="text/css">
             .my_circle {
@@ -76,7 +79,7 @@ Code for <style> and <svg> below:
 </svg>
 ```
 
-Step 3-5 : On console as below : 
+Step 3-5 : On console as below :
 
 ``` js
 d3.selectAll("circle").classed("my_circle", true)
@@ -88,7 +91,7 @@ d3.select("text").transition().duration(4000).text("2").attr("y",150);
 
 **Practice 1**
 
-Solution 1 
+Solution 1
 
 ``` js
  <svg width="500" height="400">
@@ -124,7 +127,7 @@ Solution 2 (circles created statically but modified dynamically)
         svg.append("circle").attr("cy","350");
 
         var circ=d3.selectAll("circle");
-	
+
         circ.attr("cx","50").attr("r","20").attr("fill","blue"); // saves a lot of typing ... compare to Solution 1
 
         circ.transition().duration(3000).attr("cx","450").on("end",function(){
@@ -179,12 +182,12 @@ d3.select("#important").transition().delay(2000).duration(1000)
 
 Solution 4
 
-1. Create <svg> element from previous example 
+1. Create <svg> element from previous example
 2. Add <script> element to <body>
-	
-``` js	
+
+``` js
 <body>
-    
+
         <svg width="500" height="400">  
 			<rect x="0" y="0" width="500" height="400" fill="aliceblue"></rect>
 			<circle cx="50" cy="100" r="20" fill="blue"></circle>
@@ -194,7 +197,7 @@ Solution 4
 			<circle cx="50" cy="300" r="20" fill="blue"></circle>
 			<circle cx="50" cy="350" r="20" fill="blue"></circle>
         </svg>
-        
+
         <script>
             d3.selectAll("circle").transition().duration(2000).attr("cx", "400");
             d3.selectAll("circle").transition().delay(2000).duration(2000).attr("cx", "50").attr("fill","red");
@@ -304,4 +307,3 @@ Solution 3 (using `.data(dataset).enter().append("circle")` to create circles)
         });
 </script>
 ```
-
