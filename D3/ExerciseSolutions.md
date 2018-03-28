@@ -411,8 +411,8 @@ Solution 3 (using `.data(dataset).enter().append("circle")` to create circles)
 
  Add and style new bars:
 
-	``` js
-	var newbars = bars.enter()
+ ``` js
+ var newbars = bars.enter()
 	    .append("rect")
 	      .attr("x", "30")
 	      .attr("y", (d, i) => i*50)
@@ -421,7 +421,7 @@ Solution 3 (using `.data(dataset).enter().append("circle")` to create circles)
 	      .attr("fill", "lightgreen")
 				.attr("stroke", "purple")
 				.attr("stroke-width", "3");
-	```
+ ```
 
 5. Use .merge() to combine the update and enter selections into one selection and then transition the height of all of the bars to half their current height.
 
