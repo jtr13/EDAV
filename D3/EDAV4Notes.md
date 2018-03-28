@@ -199,7 +199,7 @@ Submit / view solutions here: [ExerciseSolutions.md](ExerciseSolutions.md)
 
     `var bardata = [300, 100, 150, 225, 75, 275];`
     
-*Note: it's best to work in the Console for the following so you don't have to sequence the changes.*
+    *Note: it's best to work in the Console for the following so you don't have to sequence the changes.*
 
 1. Change the data to any six other values and update the lengths of the bars.
 
