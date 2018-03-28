@@ -188,9 +188,11 @@ Scenario: no DOM elements exist
 Practice 1: Horizontal Bar Chart
 =======
 
+Submit / view solutions here: [ExerciseSolutions.md](ExerciseSolutions.md)
+
 1. Create a new html file (try to recreate the template without looking!). Add a script that adds an svg element and horizontal bars of the lengths (in pixels) specified in `bardata`. Create the bars with the data / enter / append sequence.
 
-  `var bardata = [300, 100, 150, 225, 75, 275];`
+    `var bardata = [300, 100, 150, 225, 75, 275];`
 
 1. Change the data to any six other values and update the lengths of the bars.
 
