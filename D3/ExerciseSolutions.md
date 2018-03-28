@@ -424,6 +424,7 @@ Solution 3 (using `.data(dataset).enter().append("circle")` to create circles)
 				.attr("stroke-width", "3");
 
 	```
+
 5. Use .merge() to combine the update and enter selections into one selection and then transition the height of all of the bars to half their current height.
 
  ``` js
