@@ -429,6 +429,16 @@ Solution 3 (using `.data(dataset).enter().append("circle")` to create circles)
  ``` js
  newbars.merge(bars)
 		   .attr("width", d => d/2);
-
+ ```
 
 6. Add text labels inside the bars at the right end with the length of the bar in pixels.
+
+ ``` js
+ svg.selectAll("text")
+     .data(reallynewbardata)
+     .enter()
+     .append("text")
+       .attr("x", d => d/2 + 33)
+       .attr("y", (d, i) => i*50 + 25)
+       .text(d => d/2);
+ ```
