@@ -403,10 +403,10 @@ Solution 3 (using `.data(dataset).enter().append("circle")` to create circles)
   ``` js
   var reallynewbardata = [300, 100, 250, 50, 200, 150, 325, 275];
 
- var bars = svg.selectAll("rect")
+  var bars = svg.selectAll("rect")
 			.data(reallynewbardata);
 
- bars.attr("width", d => d);
+  bars.attr("width", d => d);
   ```
 
 	Add and style new bars:
