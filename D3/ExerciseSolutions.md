@@ -1,6 +1,10 @@
 Exercise Solutions
 ================
+[EDAV1](#edav-1)
 
+[EDAV2](#edav-2)
+
+[EDAV3](#edav-3)
 
 If you find any errors, please submit a pull request to this file.
 
