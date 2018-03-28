@@ -199,7 +199,7 @@ Submit / view solutions here: [ExerciseSolutions.md](ExerciseSolutions.md)
 
 1. Change the data to any six other values and update the lengths of the bars.
 
-1. Bind a new dataset, `newbardata` to the bars and remove any extra bars.
+1. Bind a new dataset, `newbardata` to the bars, update the bar lengths, and remove any extra bars.
 
     `newbardata = [250, 125, 80, 100];`
 
