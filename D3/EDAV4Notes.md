@@ -138,22 +138,25 @@ Scenario 1: Combining update and enter selections with `.merge()`
 
 ``` js
 <script id="s5">
+// simplified code after 3/27 class:
 
-    var allcirc = svg.selectAll("circle")
-        .data([123, 52, 232, 90, 34, 12, 189, 110])
+    var allcirc = circ  // all existing circles -- see script s1
+        .data([123, 52, 232, 90, 34, 12, 189, 110]);
         .enter()  // 2 placeholders
         .append("circle")  // placeholders -> circles
-          .attr("cx", "50")
+          .attr("cx", "50")  // acts on enter selection only
           .attr("cy", (d, i) => i * 50 + 100)
           .attr("r", "20")
           .attr("fill", "red")
-        .merge(circ)  // combines update & enter sel.
-          .transition()
+	.merge(circ)  // combines enter and update selections
+	
+    allcirc.transition() // acts on all 8 circles
           .duration(3000)
           .attr("cx", "400")
           .attr("fill", "purple");
 
     allcirc.transition() // acts on all 8 circles
+        .delay(3000)
         .duration(3000)
         .attr("cx", "50");
 
