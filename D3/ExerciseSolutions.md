@@ -6,6 +6,8 @@ Exercise Solutions
 
 [EDAV3](#edav-3)
 
+[EDAV4](#edav-4)
+
 If you find any errors, please submit a pull request to this file.
 
 You are encouraged to add solutions. Again, submit by making a pull request to this file. Note that code chunks begin with
