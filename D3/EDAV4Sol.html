@@ -8,100 +8,97 @@
 	
 	<body>
 	
-
   <script id="s1">
 		
 		// 1. Create svg and initial bars
 		
-		var svg = d3.select("body")
-			    .append("svg")
-			      .attr("width", "500")
-			      .attr("height", "400");
+	var svg = d3.select("body")
+		.append("svg")
+			.attr("width", "500")
+			.attr("height", "400");
 		
-		var bardata = [300, 100, 150, 225, 75, 275];
+	var bardata = [300, 100, 150, 225, 75, 275];
 		
-		var bars = svg.selectAll("rect")
-			    .data(bardata);
+	var bars = svg.selectAll("rect")
+		.data(bardata);
 		
-		var bars = bars.enter()
-			    .append("rect")
-			      .attr("x", "30")
-				   	.attr("y", (d, i) => i*50)
-						.attr("width", d => d)
-						.attr("height", "35")
-						.attr("fill", "lightgreen");
+	var bars = bars.enter()
+		.append("rect")
+			.attr("x", "30")
+			.attr("y", (d, i) => i*50)
+			.attr("width", d => d)
+			.attr("height", "35")
+			.attr("fill", "lightgreen");
 		
-//		   2. Change the data
+		//		   2. Change the data
 		
- var bardata2 = [93, 21, 250, 78, 224, 140];
+	var bardata2 = [93, 21, 250, 78, 224, 140];
  
- var bars = svg.selectAll("rect")
-     .data(bardata2); 
-
- bars.transition()
-     .duration(3000)
-     .attr("width", d => d);
+	var bars = svg.selectAll("rect")
+		.data(bardata2); 
 		
+	bars.transition()
+			.duration(3000)
+			.attr("width", d => d);
 		
+		// 3. Bind new data, update bar lengths, remove extra bars
+		
+	var newbardata = [250, 125, 80, 100];
+		
+	var bars = bars.data(newbardata);  
 			
-			// 3. Bind new data, update bar lengths, remove extra bars
-		
-		var newbardata = [250, 125, 80, 100];
-		
-		var bars = bars.data(newbardata);  
-			
-		bars.exit()					// remove exit selection
-		    .transition()
-		    .delay(3000)
-		    .remove();
+	bars.exit()					// remove exit selection
+			.transition()
+		  .delay(3000)
+		  .remove();
 
-		bars.transition()   // modify update selection
-		    .delay(3000)
-				.duration(3000)
-				.attr("width", d => d);
+	bars.transition()   // modify update selection
+			.delay(3000)
+			.duration(3000)
+			.attr("width", d => d);
 
 	  // 4. Bind a new dataset, update bar lengths, 
 	 	//    add new bars, change stroke color	
 
-		var reallynewbardata = [300, 100, 250, 50, 200, 150, 325, 275];
+	var reallynewbardata = [300, 100, 250, 50, 200, 150, 325, 275];
 		
-		var bars = bars.data(reallynewbardata);
+	var bars = bars.data(reallynewbardata);
 		
-		bars.transition()  // change length of update selection
-		    .delay(6000)
-			  .duration(3000)
-		    .attr("width", d => d);
+	bars.transition()  // change length of update selection
+			.delay(6000)
+			.duration(3000)
+		  .attr("width", d => d);
 		
-		var newbars = bars.enter()   // add new bars
-				.append("rect")
+	var newbars = bars.enter()   // add new bars
+		.append("rect")
 		
-		newbars.transition()       
-		      .delay(9000)
-		      .duration(0)
-				  .attr("x", "30")
-				  .attr("y", (d, i) => i*50)
-				  .attr("width", d => d)
-				  .attr("height", "35")
-				  .attr("fill", "lightgreen")
-		      .attr("stroke", "purple")     // add stroke color
-		      .attr("stroke-width", "3");  
+	newbars.transition()       
+			.delay(9000)
+		  .duration(0)
+			.attr("x", "30")
+			.attr("y", (d, i) => i*50)
+			.attr("width", d => d)
+			.attr("height", "35")
+			.attr("fill", "lightgreen")
+		  .attr("stroke", "purple")     // add stroke color
+		  .attr("stroke-width", "3");  
 		
 		// 5. Merge enter and update sel & transition bar lengths to 1/2
 		
-		var allbars = newbars
-		      .merge(bars);
+	var allbars = newbars
+	  .merge(bars);
 		
-		allbars.transition()
-		      .delay(9000)
-		      .duration(3000)
-		      .attr("width", d => d/2);
+	allbars.transition()
+			.delay(9000)
+		  .duration(3000)
+		  .attr("width", d => d/2);
 		
 		// 6.  Add text 
 		
-		svg.selectAll("text")
-		   .data(reallynewbardata)
-			 .enter()
-		   .append("text")
+	svg.selectAll("text")
+		 .data(reallynewbardata)
+		 .enter()
+		 .append("text")
 		   .transition()
 		   .delay(12000)
 		   .duration(0)
@@ -109,16 +106,9 @@
 		   .attr("y", (d, i) => i*50 + 25)
 		   .text(d => d/2);
 
-	
+	</script>		
 
-						</script>
-		
-
-			</body>
+	</body>
   
-
-
-	
-	
 </html>
 	
