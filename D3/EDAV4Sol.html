@@ -7,6 +7,8 @@
 	</head>
 	
 	<body>
+		
+	<h2 id="main">EDAV 4 Practice</h2>	
 	
   <script id="s1">
 		
@@ -39,7 +41,10 @@
 		
 	bars.transition()
 			.duration(3000)
-			.attr("width", d => d);
+			.attr("width", d => d)
+			.on("start", function () {
+		d3.select("#main").text("Join new data")
+	});
 		
 // 3. Bind new data, update bar lengths, remove extra bars
 		
@@ -50,29 +55,36 @@
 	bars.exit()					// remove exit selection
 			.transition()
 		  .delay(3000)
-		  .remove();
+		  .remove();	
 
-	bars.transition()   // modify update selection
+	bars.transition()   
 			.delay(3000)
 			.duration(3000)
-			.attr("width", d => d);
+			.attr("width", d => d)
+	.on("start", function () {
+		d3.select("#main").text("Join newbardata")
+	});
 
 // 4. Bind a new dataset, update bar lengths, add new bars, change stroke color	
+			
 
 	var reallynewbardata = [300, 100, 250, 50, 200, 150, 325, 275];
 		
 	var bars = bars.data(reallynewbardata);
 		
-	bars.transition()  // change length of update selection
+	bars.transition()  // change bar length of update selection
 			.delay(6000)
 			.duration(3000)
-		  .attr("width", d => d);
+		  .attr("width", d => d)
+			.on("start", function () {
+		d3.select("#main").text("Join reallynewbardata")
+	});
 		
-	var newbars = bars.enter()   // add new bars
-		.append("rect")
+	var newbars = bars.enter()  
+		.append("rect")		
 		
 	newbars.transition()       
-			.delay(9000)
+			.delay(6000)
 		  .duration(0)
 			.attr("x", "30")
 			.attr("y", (d, i) => i*50)
@@ -90,7 +102,13 @@
 	allbars.transition()
 			.delay(9000)
 		  .duration(3000)
-		  .attr("width", d => d/2);
+		  .attr("width", d => d/2)
+			.on("start", function () {
+		d3.select("#main").text("Merge bars")
+	})
+			.on("end", function () {
+		d3.select("#main").text("Add labels")
+	});
 		
 // 6.  Add text 
 		
