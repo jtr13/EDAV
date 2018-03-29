@@ -441,3 +441,104 @@ Solution 3 (using `.data(dataset).enter().append("circle")` to create circles)
        .attr("y", (d, i) => i*50 + 25)
        .text(d => d/2);
  ```
+ 
+Solution 2 
+
+```js
+<script id="s1">
+             
+             // 1) Create a new html file (try to recreate the template without looking!). Add a script that adds an svg element and horizontal bars of the lengths (in pixels) specified in bardata. Create the bars with the data / enter / append sequence.
+             
+             var bardata = [300, 100, 150, 225, 75, 275]
+             
+             d3.select("body")
+                 .append("svg")
+                    .attr("width", 500)
+                    .attr("height","500");
+             
+             var svg = d3.select("svg");
+                   
+             var bars = svg.selectAll("rect")
+                            .data(bardata)
+                            .enter()
+                            .append("rect")
+                            .attr("x", "50")
+                            .attr("y", (d,i) => i*50 + 50)
+                            .attr("fill", "green")
+                            .attr("height", 20)
+                            .attr("width", d=> d);
+             
+             // 2) Change the data to any six other values and update the lengths of the bars.
+             bardata = [200,180,160,140,120,100];
+             
+             bars.data(bardata).transition().delay(1000);
+             bars.transition().delay(2000).attr("fill","red").attr("width",d=>d);
+             
+             // 3) Bind a new dataset, newbardata to the bars and remove any extra bars.
+             var newbardata = [250, 125, 80, 100];
+             var bars = svg.selectAll("rect")
+                            .data(newbardata);
+             
+             bars.exit().transition().delay(4000).remove();
+             bars.transition().delay(6000).attr("width", d=> d ). attr("fill","blue");
+             
+	     
+             //Delays are not working below this line, so I used the below commands on console
+             /*
+             // 4) Bind a new dataset, reallynewbardata, to the bars, then add additional bars so each data value has a bar. Make the outline (stroke) of the new bars a different color.
+             
+
+             var reallynewbardata = [300, 100, 250, 50, 200, 150, 325, 275];
+             var bars = svg.selectAll("rect")
+                            .data(reallynewbardata);
+                           
+             bars.attr("width", d=> d )
+                 .attr("fill","cyan");
+             
+             var all_bars = bars.enter()
+                          .append("rect")
+                          .attr("x", "50")
+                          .attr("y",(d,i) => i*50+50)
+                          .attr("height",20)
+                          .attr("width",d=>d)
+                          .attr("fill","cyan")
+                          .attr("stroke","black")
+                          .merge(bars);
+              
+             // 5) Use .merge() to combine the update and enter selections into one selection and then transition the height of all of the bars to half their current height.
+
+             //merge done in previous step
+             all_bars.transition().duration(4000)
+                    .attr("width",d=>d/2)
+                    .attr("fill","yellow")
+                    .attr("stroke","red")
+                    
+            // 6) Add text labels inside the bars at the right end with the length of the bar in pixels.              
+            var new_text = svg.selectAll("text")
+			    .data(reallynewbardata)
+                            .enter()
+                            .append("text")
+                            .text(d=>d/2)
+                            .attr("fill","black")
+                            .attr("x", d=> d/2+30)
+                            .attr("font-size","9px")
+                            .attr("y",(d,i) => i*50+65)
+                            
+            // If you want text aligned to Left end of bars( easier )
+            
+             var new_text = svg.selectAll("text")
+			    .data(reallynewbardata)
+                            .enter()
+                            .append("text")
+                            .text(d=>d/2)
+                            .attr("fill","black")
+                            .attr("x", "55")
+                            .attr("font-size","9px")
+                            .attr("y",(d,i) => i*50+65)
+                            
+                    
+             */
+             
+                           
+            </script>
+```
