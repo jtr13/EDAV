@@ -442,7 +442,7 @@ Solution 3 (using `.data(dataset).enter().append("circle")` to create circles)
        .text(d => d/2);
  ```
  
-Solution 2 
+Solution 2
 
 ```js
 <script id="s1">
@@ -542,3 +542,7 @@ Solution 2
                            
             </script>
 ```
+
+Solution 3
+
+With delays... runs as a single script: [EDAV4Sol.html](EDAV4Sol.html)
