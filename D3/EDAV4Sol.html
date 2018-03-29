@@ -10,7 +10,7 @@
 	
   <script id="s1">
 		
-		// 1. Create svg and initial bars
+// 1. Create svg and initial bars
 		
 	var svg = d3.select("body")
 		.append("svg")
@@ -30,7 +30,7 @@
 			.attr("height", "35")
 			.attr("fill", "lightgreen");
 		
-		//		   2. Change the data
+// 2. Change the data
 		
 	var bardata2 = [93, 21, 250, 78, 224, 140];
  
@@ -41,7 +41,7 @@
 			.duration(3000)
 			.attr("width", d => d);
 		
-		// 3. Bind new data, update bar lengths, remove extra bars
+// 3. Bind new data, update bar lengths, remove extra bars
 		
 	var newbardata = [250, 125, 80, 100];
 		
@@ -57,8 +57,7 @@
 			.duration(3000)
 			.attr("width", d => d);
 
-	  // 4. Bind a new dataset, update bar lengths, 
-	 	//    add new bars, change stroke color	
+// 4. Bind a new dataset, update bar lengths, add new bars, change stroke color	
 
 	var reallynewbardata = [300, 100, 250, 50, 200, 150, 325, 275];
 		
@@ -83,7 +82,7 @@
 		  .attr("stroke", "purple")     // add stroke color
 		  .attr("stroke-width", "3");  
 		
-		// 5. Merge enter and update sel & transition bar lengths to 1/2
+// 5. Merge enter and update sel & transition bar lengths to 1/2
 		
 	var allbars = newbars
 	  .merge(bars);
@@ -93,7 +92,7 @@
 		  .duration(3000)
 		  .attr("width", d => d/2);
 		
-		// 6.  Add text 
+// 6.  Add text 
 		
 	svg.selectAll("text")
 		 .data(reallynewbardata)
