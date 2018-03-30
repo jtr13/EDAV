@@ -37,23 +37,23 @@
     		.data(data);
 
 
-  	bars.enter().append("rect")				// add new elements
+  	bars.enter().append("rect")	// add new elements
 			.attr("x", (d, i) => 50*i + 50)
 			.attr("y", d => 400 - d)
 			.attr("width", "35")
 			.attr("height", d => d)
 			.attr("fill", "yellow")
-    .merge(bars)									// merge
+    		.merge(bars)	// merge
 			.transition()
 		 	.duration(2000)
 			.attr("y", d => 400 - d)
 			.attr("height", d => d)
 			.attr("fill", "orange");
 
-		bars.exit().remove();					// remove extra elements
+		bars.exit().remove();	// remove extra elements
 		}
 
-			// Add add / remove buttons
+		// Add add / remove buttons
 			
 		</script>
 		
