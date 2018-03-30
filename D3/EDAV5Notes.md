@@ -75,8 +75,13 @@ Change the bar chart to a vertical bar chart.
 
 Add "add" and "remove" buttons.
 =======
-[EDAV5_3.html](EDAV_3.html)
+[EDAV5_3.html](EDAV5_3.html)
 
-Add scales
+Scales
 =======
-[EDAV5_4.html](EDAV_4.html)
+``` js
+var myscale = d3.scaleLinear()
+    .domain([0,10])
+    .range([0, 500]);
+```    
+    
