@@ -1,6 +1,8 @@
 Debugging Tips
 ================
 
+### Submit a pull request to add to this file.
+
 SVG elements don't appear
 =======
 Strategy: Click Elements in Javascript Console to see what happened
