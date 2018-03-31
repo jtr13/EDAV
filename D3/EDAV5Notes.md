@@ -70,17 +70,22 @@ Also available here: [EDAV5_1.html](EDAV5_1.html)
 
 Practice 1
 =======
+Open [EDAV5_1.html](EDAV5_1.html) locally and practice running the `update()` function with different datasets in the Console.
+
+
+Practice 2
+=======
 Change the bar chart to a vertical bar chart.
 
 Solution: [EDAV5_2.html](EDAV5_2.html)
 
-Practice 2
+Practice 3
 =======
 Add "add" and "remove" buttons.
 
 Solution: [EDAV5_3.html](EDAV5_3.html)
 
-Practice 3
+Practice 4
 =======
 
 Up to this point, we have assumed one-to-one correspondence between pixels and data values.  Scales allow flexibility in mapping data values to pixels. Add an ordinal scale to map the position of the bars appropriately given the width of the `svg` element, using `d3.scaleBand()`.
@@ -93,7 +98,7 @@ Up to this point, we have assumed one-to-one correspondence between pixels and d
 
 See: *IDVW*, Chapter 9, pp. 150-153  
 
-Practice 4
+Practice 5
 =======
 Add a linear scale for the y-axis using `d3.scaleLinear()`, so data will be scaled appropriately to the height of the `svg` element.
 
@@ -104,3 +109,5 @@ var yScale = d3.scaleLinear()
 ```
 
 See: *IDVW*, Chapter 7 (Note that our dataset is one-dimensional so we only have `d`, not `d[0]` and `d[1]`.)
+
+Hint for 4 & 5: Take out the transitions and get the scales working. Then, if you want, add transitions back in.
