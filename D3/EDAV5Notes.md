@@ -12,7 +12,7 @@ Also available here: [EDAV5_1.html](EDAV5_1.html)
   <head>
     <meta charset="utf-8">
     <title>EDAV5_1</title>
-    <script src="https://d3js.org/d3.v4.min.js"></script> 
+    <script src="https://d3js.org/d3.v4.min.js"></script>
   </head>
 
   <body>
@@ -64,24 +64,44 @@ Also available here: [EDAV5_1.html](EDAV5_1.html)
     </script>
 
   </body>
-  
+
 </html>
 ```
 
 Practice 1
 =======
 Change the bar chart to a vertical bar chart.
-[EDAV5_2.html](EDAV5_2.html)
 
+Solution: [EDAV5_2.html](EDAV5_2.html)
+
+Practice 2
+=======
 Add "add" and "remove" buttons.
-=======
-[EDAV5_3.html](EDAV5_3.html)
 
-Scales
+Solution: [EDAV5_3.html](EDAV5_3.html)
+
+Practice 3
 =======
+
+Up to this point, we have assumed one-to-one correspondence between pixels and data values.  Scales allow flexibility in mapping data values to pixels. Add an ordinal scale to map the position of the bars appropriately given the width of the `svg` element, using `d3.scaleBand()`.
+
 ``` js
-var myscale = d3.scaleLinear()
-    .domain([0,10])
-    .range([0, 500]);
-```    
-    
+ var xScale = d3.scaleBand()
+     .domain([...])
+     .range([...]);
+```
+
+ See: *IDVW*, Chapter 9, pp. 150-153
+
+
+Practice 4
+=======
+Add a linear scale for the y-axis using `d3.scaleLinear()`, so data will be scaled appropriately to the height of the `svg` element.
+
+``` js
+var yScale = d3.scaleLinear()
+    .domain([...])
+    .range([...]);
+```
+
+See: *IDVW*, Chapter 7 (Note that our dataset is one-dimensional so we only have `d`, not `d[0]` and `d[1]`.)
