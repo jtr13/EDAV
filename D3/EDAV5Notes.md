@@ -91,8 +91,7 @@ Up to this point, we have assumed one-to-one correspondence between pixels and d
      .range([...]);
 ```
 
- See: *IDVW*, Chapter 9, pp. 150-153
-
+See: *IDVW*, Chapter 9, pp. 150-153  
 
 Practice 4
 =======
