@@ -19,7 +19,7 @@ Also available here: [EDAV5_1.html](EDAV5_1.html)
 
     <script id="s1">
 
-// 1. Create svg and initial bars
+// Create svg and initial bars
 
   var svg = d3.select("body")
     .append("svg")
