@@ -37,17 +37,17 @@
         .data(data);
 
     bars.enter().append("rect")
-      .attr("x", (d, i) => 50*i + 50)
-      .attr("y", d => 400 - d)
-      .attr("width", "35")
-      .attr("height", d => d)
-      .attr("fill", "yellow")
-    .merge(bars)
-      .transition()
-      .duration(2000)
-      .attr("y", d => 400 - d)
-      .attr("height", d => d)
-      .attr("fill", "orange");
+        .attr("x", (d, i) => 50*i + 50)
+        .attr("y", d => 400 - d)
+        .attr("width", "35")
+        .attr("height", d => d)
+        .attr("fill", "yellow")
+      .merge(bars)
+        .transition()
+        .duration(2000)
+        .attr("y", d => 400 - d)
+        .attr("height", d => d)
+        .attr("fill", "orange");
 
     bars.exit().remove();
 
@@ -63,15 +63,15 @@
 
     <script>
     d3.selectAll("p")
-      .on("click", function () {
+        .on("click", function () {
 
       var paraID = d3.select(this).attr("id");
 
       if (paraID == "add") {
-        var newvalue = Math.floor(Math.random()*400);
-        bardata.push(newvalue);
+          var newvalue = Math.floor(Math.random()*400);
+          bardata.push(newvalue);
       } else {
-        bardata.pop();
+          bardata.pop();
       };
 
       update(bardata);
