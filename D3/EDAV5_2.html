@@ -23,10 +23,10 @@
       .data(bardata);
 
   bars.enter().append("rect")
-      .attr("x", (d, i) => 50*i + 50)
-      .attr("y", d => 400 - d)
-      .attr("width", "35")
-      .attr("height", d => d)
+      .attr("x", (d, i) => 50*i + 50)   // CHANGE
+      .attr("y", d => 400 - d)          // CHANGE
+      .attr("width", "35")              // CHANGE
+      .attr("height", d => d)           // CHANGE
       .attr("fill", "lightgreen");
 
 // General Update Pattern
@@ -40,8 +40,8 @@
     bars.enter().append("rect")
       .attr("x", (d, i) => 50*i + 50)   // CHANGE
       .attr("y", d => 400 - d)          // CHANGE
-      .attr("width", "35")
-      .attr("height", d => d)
+      .attr("width", "35")              // CHANGE
+      .attr("height", d => d)           // CHANGE
       .attr("fill", "yellow")
     .merge(bars)
       .transition()
