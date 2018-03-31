@@ -42,8 +42,8 @@ Also available here: [EDAV5_1.html](EDAV5_1.html)
 
   function update(data) {
 
-  var bars = svg.selectAll("rect")    // data join
-    .data(data);
+    var bars = svg.selectAll("rect")    // data join
+        .data(data);
 
 
     bars.enter().append("rect")    // add new elements
