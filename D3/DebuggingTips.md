@@ -37,7 +37,7 @@ Strategy: Click Elements in Javascript Console to see what happened
 ```
 
 #### Diagnosis
-The circles appear but are in the wrong place? Why because `svg` was never selected. With `append()` items are added to the parent node of the selection, so you m.ust specify what that is with a selection before selectAll. If you don't -- as in this case -- the default parent is the document element (`<html>`), which explains why the circles appear after the `</body>` tag.
+The circles appear but are in the wrong place. Why? Because `svg` was never selected. With `append()` items are added to the parent node of the selection, so you m.ust specify what that is with a selection before selectAll. If you don't -- as in this case -- the default parent is the document element (`<html>`), which explains why the circles appear after the `</body>` tag.
 
 #### Solution
 Change `d3.selectAll("circle")` to `d3.select("svg").selectAll("circle")`
