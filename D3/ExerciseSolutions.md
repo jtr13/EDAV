@@ -8,6 +8,8 @@ Exercise Solutions
 
 [EDAV 4](#edav-4)
 
+[EDAV 5](#edav-5)
+
 If you find any errors, please submit a pull request to this file.
 
 You are encouraged to add solutions. Again, submit by making a pull request to this file. Note that code chunks begin with
@@ -546,3 +548,110 @@ Solution 2
 Solution 3
 
 With delays... runs as a single script: [EDAV4Sol.html](EDAV4Sol.html)
+
+
+### EDAV 5
+
+```js 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>EDAV5_4&5</title>
+		<script src="https://d3js.org/d3.v4.min.js"></script> 
+	</head>
+	
+	<body>
+	
+		<script id="s1">
+		
+// 1. Create svg and initial bars
+	 
+		
+	var svg = d3.select("body")
+		.append("svg")
+			.attr("width", "500")
+			.attr("height", "500");
+		
+	var bardata = [300, 100, 150, 225, 75, 275];
+		
+	var xScale = d3.scaleBand()
+                  //.domain([0,5000])  // fixed, it can be switched to dynamic, using max(data), currently 1:10
+                  .domain(d3.range(bardata.length))
+                  .range([0,500])      // 500 is height of svg
+                  .paddingInner(0.10);
+	 
+	var yScale = d3.scaleLinear()
+                  //.domain([0,10000])
+                  .domain([0,d3.max(bardata,d=>d)])  // dynamic
+                  .range([0,500]);  // 500 is width of svg
+                  
+	var bars = svg.selectAll("rect")
+			.data(bardata);
+		
+	bars.enter().append("rect")
+			.attr("y", d => 400-yScale(d))
+			.attr("x", (d, i) => xScale(i))
+			.attr("width", xScale.bandwidth())
+			.attr("height", d=>yScale(d) )
+			.attr("fill", "lightgreen");
+		
+// General Update Pattern
+			
+	function update(data) {
+  	var bars = svg.selectAll("rect")  // data join
+    		.data(data);
+    		
+	  var xScale = d3.scaleBand()
+                  .domain(d3.range(data.length))
+                  .range([0,500]) // 500 is width of svg
+                  .paddingInner(0.10);
+	 
+  	var yScale = d3.scaleLinear()
+                  .domain([0,5000])  // fixed, it can be switched to dynamic, using max(data), currently 1:10
+                  .domain([0,d3.max(data,d=>d)])  // dynamic
+                  .range([0,500]); // 500 is height of svg
+    		
+  	bars.enter().append("rect")				// add new elements
+      	.merge(bars)									// merge before, so that XScale can be re-calculated dynamically
+				.transition()
+		 		.duration(2000)
+				.attr("x", (d,i) => xScale(i))
+				.attr("y", d => 400-yScale(d))
+				.attr("width", xScale.bandwidth())
+				.attr("height", d => yScale(d))
+				.attr("fill", "yellow")
+	 
+	 	bars.exit().remove();					// remove extra elements
+	 	
+		}
+			// change to vertical bar chart
+			
+		</script>
+		
+		<p id ="add"> Add an element.</p>
+		<p id = "remove"> Remove an element.</p>
+		
+		<script>
+		
+		  d3.selectAll("p")
+		    .on("click",function() {
+		        
+		        var paraID = d3.select(this).attr("id");
+		        
+		        if(paraID == "add") {
+		            var new_val = Math.floor(Math.random()*400);
+		            bardata.push(new_val);
+		        } else {
+		            bardata.pop();
+		        };
+		    
+		        update(bardata)      
+		    });
+		    
+		</script>
+
+	</body>
+  
+</html>
+```
