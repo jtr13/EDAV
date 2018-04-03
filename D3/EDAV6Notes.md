@@ -22,7 +22,9 @@ x-axis [EDAV6_3_axes.html](EDAV6_3_axes.html)
 
 Transitions
 =======
+[EDAV6_4_transitions.html](EDAV6_4_transitions.html)
 
 Object Constancy
 =======
+[EDAV6_5_obj_constancy.html](EDAV6_5_obj_constancy.html)
 
