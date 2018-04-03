@@ -85,6 +85,8 @@ Add "add" and "remove" buttons.
 
 Solution: [EDAV5_3.html](EDAV5_3.html)
 
+*Hint for 4 & 5: Take out the transitions and get the scales working. Then, if you want, add transitions back in.*
+
 Practice 4
 =======
 
@@ -98,6 +100,8 @@ Up to this point, we have assumed one-to-one correspondence between pixels and d
 
 See: *IDVW*, Chapter 9, pp. 150-153  
 
+Solution: [EDAV5_4_scaleBand.html](EDAV5_4_scaleBand.html)
+
 Practice 5
 =======
 Add a linear scale for the y-axis using `d3.scaleLinear()`, so data will be scaled appropriately to the height of the `svg` element.
@@ -110,4 +114,4 @@ var yScale = d3.scaleLinear()
 
 See: *IDVW*, Chapter 7 (Note that our dataset is one-dimensional so we only have `d`, not `d[0]` and `d[1]`.)
 
-Hint for 4 & 5: Take out the transitions and get the scales working. Then, if you want, add transitions back in.
+Solution: [EDAV5_5_scaleLinear.html](EDAV5_5_scaleLinear.html)
