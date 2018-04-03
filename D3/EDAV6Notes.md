@@ -18,6 +18,10 @@ Margins [EDAV6_1_margins.html](EDAV6_1_margins.html)
 
 y-axis [EDAV6_2_yaxis.html](EDAV6_2_yaxis.html)
 
+Practice
+=======
+Add x-axis
+
 x-axis [EDAV6_3_axes.html](EDAV6_3_axes.html)
 
 Transitions
