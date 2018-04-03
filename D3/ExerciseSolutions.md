@@ -552,7 +552,7 @@ With delays... runs as a single script: [EDAV4Sol.html](EDAV4Sol.html)
 
 ### EDAV 5
 
-```js 
+``` js 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -576,15 +576,15 @@ With delays... runs as a single script: [EDAV4Sol.html](EDAV4Sol.html)
 	var bardata = [300, 100, 150, 225, 75, 275];
 		
 	var xScale = d3.scaleBand()
-                  //.domain([0,5000])  // fixed, it can be switched to dynamic, using max(data), currently 1:10
+                  //.domain([0,5000]) 
                   .domain(d3.range(bardata.length))
-                  .range([0,500])      // 500 is height of svg
+                  .range([0,500])      // 500 is width of svg
                   .paddingInner(0.10);
 	 
 	var yScale = d3.scaleLinear()
                   //.domain([0,10000])
                   .domain([0,d3.max(bardata,d=>d)])  // dynamic
-                  .range([0,500]);  // 500 is width of svg
+                  .range([0,500]);  // 500 is height of svg
                   
 	var bars = svg.selectAll("rect")
 			.data(bardata);
