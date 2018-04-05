@@ -20,15 +20,4 @@ y-axis [EDAV6_2_yaxis.html](EDAV6_2_yaxis.html)
 
 Practice
 =======
-Add x-axis
-
-x-axis [EDAV6_3_axes.html](EDAV6_3_axes.html)
-
-Transitions
-=======
-[EDAV6_4_transitions.html](EDAV6_4_transitions.html)
-
-Object Constancy
-=======
-[EDAV6_5_obj_constancy.html](EDAV6_5_obj_constancy.html)
-
+Add an x-axis to the previous file.
