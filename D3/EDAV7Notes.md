@@ -12,8 +12,6 @@ Transitions
 
 ### First attempt
 
-**Of note:** 
-
 [EDAV7_2_transitions.html](EDAV7_2_transitions.html)
 
 **Of note:** 
