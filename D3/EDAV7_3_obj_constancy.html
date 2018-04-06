@@ -81,6 +81,21 @@
   function update(data, exitpos) {
 
 
+    xScale.domain(d3.range(data.length));
+
+    yScale.domain([0, d3.max(data, d => d.value)]);
+
+    svg.select(".xAxis")
+        .transition()
+        .duration(dur)
+        .ease(d3.easeLinear)
+        .call(xAxis);
+
+    svg.select(".yAxis")
+        .transition()
+        .duration(dur)
+        .ease(d3.easeLinear)
+        .call(yAxis);
 
     var bars = svg.select("#plot")
          .selectAll("rect")
@@ -135,22 +150,6 @@
           bardata.pop();
           var exitpos = w;
       };
-
-      xScale.domain(d3.range(bardata.length));
-
-      yScale.domain([0, d3.max(bardata, d => d.value)]);
-
-      svg.select(".xAxis")
-          .transition()
-          .duration(dur)
-          .ease(d3.easeLinear)
-          .call(xAxis);
-
-      svg.select(".yAxis")
-          .transition()
-          .duration(dur)
-          .ease(d3.easeLinear)
-          .call(yAxis);
 
       update(bardata, w);
 
