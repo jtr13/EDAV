@@ -77,6 +77,16 @@
 
   function update(data) {
 
+    xScale.domain(d3.range(data.length));
+
+    yScale.domain([0, d3.max(data)]);
+
+    svg.select(".xAxis")                        // NEW
+        .call(xAxis);
+
+    svg.select(".yAxis")
+        .call(yAxis);
+    
     var bars = svg.select("#plot")
         .selectAll("rect")
         .data(data);
@@ -116,16 +126,6 @@
       } else {
           bardata.pop();
       };
-
-      xScale.domain(d3.range(bardata.length));
-
-      yScale.domain([0, d3.max(bardata)]);
-
-      svg.select(".xAxis")                        // NEW
-          .call(xAxis);
-
-      svg.select(".yAxis")
-          .call(yAxis);
 
       update(bardata);
 
