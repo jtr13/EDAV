@@ -20,7 +20,7 @@
       left: 25};
   var innerWidth = w - margin.left - margin.right;
   var innerHeight = h - margin.top - margin.bottom;
-  var dur = 500;
+  var dur = 1500;
 
   var svg = d3.select("body")
     .append("svg")
@@ -97,7 +97,11 @@
         .attr("width", xScale.bandwidth())
         .attr("height", d => innerHeight - yScale(d))
 
-    bars.exit().remove();
+    bars.exit()
+        .transition()
+        .duration(dur)
+        .attr("x", w)
+        .remove();
 
   }
 
