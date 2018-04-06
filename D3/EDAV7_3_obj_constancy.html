@@ -80,7 +80,6 @@
 
   function update(data, exitpos) {
 
-
     xScale.domain(d3.range(data.length));
 
     yScale.domain([0, d3.max(data, d => d.value)]);
@@ -151,7 +150,7 @@
           var exitpos = w;
       };
 
-      update(bardata, w);
+      update(bardata, exitpos);
 
     });
 
