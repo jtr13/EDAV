@@ -18,7 +18,7 @@ Transitions
 
 * Rather than smoothly transitioning off to the left, all bars are resized when "Remove bar (left)" is clicked
 
-* Bars do not smoothly transition off to the right, they are removed immediately and then the remaining bars transition to their new places to the right.
+* When "Remove bar (right) is clicked, the bar on the right immediately disappears, and then the remaining bars transition to their new places to the right.
 
 ### Join data by key to maintain object constancy
 
