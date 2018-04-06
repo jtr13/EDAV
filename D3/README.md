@@ -1,6 +1,6 @@
 Resources for learning D3
 
-Please feel free to add detail to this README by making edits and submitting a pull request.
+Please feel free to add detail to this README by making edits and submitting a pull request. In particular it would be helpful to include contents and references where appropriate to pages in *Interactice Data Visualization for the Web, 2nd ed.*
 
 [EDAV 1](EDAV1Notes.md)
 
