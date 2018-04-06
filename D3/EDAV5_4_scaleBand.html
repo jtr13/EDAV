@@ -43,6 +43,8 @@
 
   function update(data) {
 
+    xScale.domain(d3.range(data.length)); // NEW
+    
     var bars = svg.selectAll("rect")
         .data(data);
 
@@ -80,8 +82,6 @@
       } else {
           bardata.pop();    // remove last element
       };
-
-      xScale.domain(d3.range(bardata.length)); // NEW
 
       update(bardata);
 
