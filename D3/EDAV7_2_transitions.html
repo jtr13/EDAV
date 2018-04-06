@@ -20,7 +20,7 @@
       left: 25};
   var innerWidth = w - margin.left - margin.right;
   var innerHeight = h - margin.top - margin.bottom;
-  var dur = 1500;
+  var dur = 1500;                                 // NEW
 
   var svg = d3.select("body")
     .append("svg")
@@ -83,13 +83,13 @@
         .data(data);
 
     bars.enter().append("rect")
-        .attr("x", w)
-        .attr("y", d => yScale(d))
+        .attr("x", w)                                  // NEW
+        .attr("y", d => yScale(d))                     // MOVED
         .attr("width", xScale.bandwidth())
         .attr("height", d => innerHeight - yScale(d))
         .attr("fill", "blue")
       .merge(bars)
-        .transition()                          // NEW
+        .transition()                                 // NEW
         .duration(dur)
         .ease(d3.easeLinear)
         .attr("x", (d, i) => xScale(i))
@@ -97,11 +97,7 @@
         .attr("width", xScale.bandwidth())
         .attr("height", d => innerHeight - yScale(d))
 
-    bars.exit()
-        .transition()
-        .duration(dur)
-        .attr("x", w)
-        .remove();
+    bars.exit().remove();
 
   }
 
