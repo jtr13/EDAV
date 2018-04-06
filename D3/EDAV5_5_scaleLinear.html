@@ -48,6 +48,10 @@
 
   function update(data) {
 
+    xScale.domain(d3.range(data.length));
+
+    yScale.domain([0, d3.max(data)]);
+    
     var bars = svg.selectAll("rect")
         .data(data);
 
@@ -86,10 +90,6 @@
       } else {
           bardata.pop();
       };
-
-      xScale.domain(d3.range(bardata.length));
-
-      yScale.domain([0, d3.max(bardata)]);
 
       update(bardata);
 
