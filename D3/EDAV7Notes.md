@@ -10,8 +10,22 @@ Transitions
 =======
 [Transitions.pdf](Transitions.pdf)
 
-First attempt (note problem with removing an element on the left)
+###First attempt
+
+**Of note:** 
+
 [EDAV7_2_transitions.html](EDAV7_2_transitions.html)
 
-Join data by key to maintain object constancy
+**Of note:** 
+
+* Rather than smoothly transitioning off to the left, all bars are resized when "Remove bar (left)" is clicked
+
+* Bars do not smoothly transition off to the right, they are removed immediately and then the remaining bars transition to their new places to the right.
+
+###Join data by key to maintain object constancy
+
 [EDAV7_3_obj_constancy.html](EDAV7_3_obj_constancy.html)
+
+**Of note:** 
+
+* Bars now smoothly transition off to the left and right
