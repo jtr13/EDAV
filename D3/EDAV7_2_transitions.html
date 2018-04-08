@@ -81,21 +81,9 @@
     xScale.domain(d3.range(data.length));
 
     yScale.domain([0, d3.max(data)]);
-
-    svg.select(".xAxis")
-        .transition()
-        .duration(dur)
-        .ease(d3.easeLinear)
-        .call(xAxis);
-
-    svg.select(".yAxis")
-        .transition()
-        .duration(dur)
-        .ease(d3.easeLinear)
-        .call(yAxis);
     
     var bars = svg.select("#plot")
-        .selectAll("rect")
+      .selectAll("rect")
         .data(data);
 
     bars.enter().append("rect")
@@ -105,7 +93,7 @@
         .attr("height", d => innerHeight - yScale(d))
         .attr("fill", "blue")
       .merge(bars)
-        .transition()                                 // NEW
+      .transition()                                 // NEW
         .duration(dur)
         .ease(d3.easeLinear)
         .attr("x", (d, i) => xScale(i))
@@ -114,6 +102,18 @@
         .attr("height", d => innerHeight - yScale(d))
 
     bars.exit().remove();
+    
+    svg.select(".xAxis")
+      .transition()
+        .duration(dur)
+        .ease(d3.easeLinear)
+        .call(xAxis);
+
+    svg.select(".yAxis")
+      .transition()
+        .duration(dur)
+        .ease(d3.easeLinear)
+        .call(yAxis);
 
   }
 
