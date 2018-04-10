@@ -72,9 +72,6 @@
     xScale.domain(d3.range(data.length));
 
     yScale.domain([0, d3.max(data)]);
-
-    svg.select(".yAxis")                        // NEW
-          .call(yAxis);
     
     var bars = svg.select("#plot")
         .selectAll("rect")
@@ -89,6 +86,9 @@
       .attr("fill", "blue");
 
     bars.exit().remove();
+    
+    svg.select(".yAxis")                        // NEW
+          .call(yAxis);
 
   }
 

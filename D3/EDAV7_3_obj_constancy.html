@@ -84,18 +84,6 @@
 
     yScale.domain([0, d3.max(data, d => d.value)]);
 
-    svg.select(".xAxis")
-        .transition()
-        .duration(dur)
-        .ease(d3.easeLinear)
-        .call(xAxis);
-
-    svg.select(".yAxis")
-        .transition()
-        .duration(dur)
-        .ease(d3.easeLinear)
-        .call(yAxis);
-
     var bars = svg.select("#plot")
          .selectAll("rect")
         .data(data, d => d.key);                           // CHANGE
@@ -116,10 +104,22 @@
         .attr("height", d => innerHeight - yScale(d.value)) // CHANGE
 
     bars.exit()
-        .transition()                                        // NEW
+      .transition()                                        // NEW
         .duration(dur)
         .attr("x", exitpos)
         .remove();
+    
+    svg.select(".xAxis")
+      .transition()
+        .duration(dur)
+        .ease(d3.easeLinear)
+        .call(xAxis);
+
+    svg.select(".yAxis")
+      .transition()
+        .duration(dur)
+        .ease(d3.easeLinear)
+        .call(yAxis);
 
   }
 
