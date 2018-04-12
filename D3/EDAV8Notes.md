@@ -250,9 +250,10 @@ Finally, we'll add a class and style definitions:
 The `append("path")` line becomes:
 
 ``` js
-d3.select("svg").datum(dataset)
+svg.append("path")
+    .datum(dataset)
     .attr("d", mylinegen)
-    .attr("class", "line");
+    .attr("class", "linestyle");
 ```
 
 Putting it all together, we have: [EDAV8_1_linegen.html](EDAV8_1_linegen.html)
