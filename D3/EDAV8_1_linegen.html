@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Line generator</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style type ="text/css">
+      .linestyle {
+        fill: none;
+        stroke: teal;
+        stroke-width: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var w = 500;
+
+      var h = 400;
+
+      var svg = d3.select("body").append("svg")
+          .attr("width", w).attr("height", h);
+
+      var dataset = [ [0, 60], [1, 43], [2, 43], [3, 56],
+          [4, 45], [5, 62], [6, 49] ];
+
+      var xScale = d3.scaleBand()
+        .domain(d3.range(dataset.length))
+        .range([0, w]);
+
+      var yScale = d3.scaleLinear()
+        .domain([d3.min(dataset, d => d[1]) - 20,
+                 d3.max(dataset, d => d[1]) + 20])
+        .range([h, 0]);
+
+      var mylinegen = d3.line()
+        .x(d => xScale(d[0]))
+        .y(d => yScale(d[1]));
+
+      svg.append("path")
+         .datum(dataset)
+         .attr("d", mylinegen)
+         .attr("class", "linestyle");
+
+    </script>
+
+  </body>
+</html>
