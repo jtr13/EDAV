@@ -240,7 +240,7 @@ Now let's do it the direct way: bind the *datum* and calculate the path in one s
 
 Finally, we'll add a class and style definitions:
 
-``` js
+``` html
 <style>
   .line {
     fill: none;
