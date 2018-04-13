@@ -66,7 +66,7 @@ A simpler example:
 ``` js
 [1, 2, 3].map(d => d + 1);
 ```
-$\rhd$ `(3) [2, 3, 4]`
+> `(3) [2, 3, 4]`
 
 ### Strings
 
