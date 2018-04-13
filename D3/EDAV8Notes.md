@@ -94,13 +94,13 @@ Line Charts
 
 ex.
 ``` js
-<svg width = "500" height = "400">
-  <path d="M 50 400 L 100 300 L 150 300
+    <svg width = "500" height = "400">
+      <path d="M 50 400 L 100 300 L 150 300
            L 200 33 L 250 175 L 300 275
            L 350 250 L 400 125" fill="none"
            stroke="red" stroke-width="5">
-  </path>
-</svg>
+      </path>
+    </svg>
 ```
 
 `d` attribute:
