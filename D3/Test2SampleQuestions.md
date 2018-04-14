@@ -1,6 +1,19 @@
 GR5702 Test 2 Sample Questions
 ================
 
+<strong>NOTES:
+
+* The actual test will contain 25 multiple questions.
+
+* It is not cumulative.
+
+* The style of the coding questions will be similar to these questions. That is, the focus will be on understanding concepts and being able to read D3 code, rather than syntax.
+
+</strong>
+
+
+### Questions
+
 1) The data frame `schooldata` contains 349 rows of data (1 row per school) and 6 columns: `DBN`, `School Name`, `Number of Test Takers`, `Reading`, `Math`, and `Writing`. A graph of missing values was produced as follows:
 
 `> extracat::visna(schooldata)`
