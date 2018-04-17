@@ -231,7 +231,8 @@ Now let's add a `<path>` element with that `d` attribute: (this step is just for
 Now let's do it the direct way: bind the *datum* and calculate the path in one step:
 
 ``` js
-> d3.select("svg").datum(dataset)
+> d3.select("svg").append("path")
+    .datum(dataset)
     .attr("d", mylinegen)
     .attr("fill", "none")
     .attr("stroke", "teal")
@@ -242,7 +243,7 @@ Finally, we'll add a class and style definitions:
 
 ``` html
 <style>
-  .line {
+  .linestyle {
     fill: none;
     stroke: teal;
     stroke-width: 5px;
