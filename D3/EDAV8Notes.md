@@ -264,6 +264,6 @@ Putting it all together, we have: [EDAV8_1_linegen.html](EDAV8_1_linegen.html)
 
 And another example with axes [EDAV8_2_linechart.html](EDAV8_2_linechart.html)
 
-(Also uses: `d3.timeParse()` and JavaScript [`*Array*.foreach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+(Also uses: `d3.timeParse()` and JavaScript [`Array.foreach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) )
 
 
