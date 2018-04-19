@@ -15,3 +15,8 @@ Please feel free to add detail to this README by making edits and submitting a p
 [EDAV 6](EDAV6Notes.md)
 
 [EDAV 7](EDAV7Notes.md)
+
+[EDAV 8](EDAV8Notes.md)
+* Debugging tips
+* Helpful JavaScript
+* Line Charts
