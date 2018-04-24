@@ -20,3 +20,8 @@ Please feel free to add detail to this README by making edits and submitting a p
 * Debugging tips
 * Helpful JavaScript
 * Line Charts
+
+[EDAV 9](EDAV9.pdf)
+* changes in d3 v5
+* reading files
+* layouts (ex. d3.stack() )
