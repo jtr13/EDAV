@@ -1,7 +1,7 @@
 --- 
 title: "EDAV Resource"
 author: "Zach Bogart"
-date: "`r Sys.Date()`"
+date: "2018-05-22"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]

@@ -1,0 +1,6 @@
+[
+["index.html", "EDAV Resource Preface", " EDAV Resource Zach Bogart 2018-05-22 Preface This is the very first part of the book. "],
+["intro.html", "Chapter 1 Introduction 1.1 What this book is 1.2 What this book isn’t", " Chapter 1 Introduction This is the explanation of what this book is for and what it is not for. 1.1 What this book is TODO 1.2 What this book isn’t TODO "],
+["basics.html", "Chapter 2 R Basics 2.1 Do it the Lazy Way! 2.2 R in the context of this class", " Chapter 2 R Basics This section includes some helpful pointers on working with R. 2.1 Do it the Lazy Way! Shortcut references 2.2 R in the context of this class TODO "],
+["resources.html", "Chapter 3 External Resources 3.1 Graphical Data Analysis with R (Unwin 2015)", " Chapter 3 External Resources This is a long list of helpful external resources, from books to URLs to exercises, etc. 3.1 Graphical Data Analysis with R (Unwin 2015) Testing linking "]
+]
