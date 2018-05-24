@@ -1,0 +1,58 @@
+# Iris Example {#iris}
+
+This exmaple goes through some work with the iris dataset.
+
+Let's start with loading the package so we can get the data.
+```{r}
+# Pull in data from library
+library(datasets)
+```
+
+This is not a huge dataset, but it is helpful to get into the habit of treating datasets as large no matter what. Because of this, make sure you inspect the size and structure of your dataset before going and printing it to the console. 
+
+Here we can see that we have 150 observations across 5 different variables.
+```{r}
+dim(iris)
+```
+
+There are a bunch of ways to get inforamtion on your dataset. Here are a few:
+```{r message=FALSE}
+str(iris)
+
+summary(iris)
+
+library(dplyr)
+glimpse(iris)
+```
+
+Let's plot something!
+```{r}
+library(ggplot2)
+ggplot(iris)
+```
+
+Where is it? Maybe if I add some aesthetics. I remember that was an important word that came up somewhere:
+```{r}
+ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width))
+```
+
+Still nothing. I have to add a geom for something to show up.
+```{r}
+ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point()
+```
+
+Now let's add a color mapping by `Species`:
+```{r}
+ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point(aes(color = Species))
+```
+
+
+
+
+
+
+
+
+
