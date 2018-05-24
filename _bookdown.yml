@@ -1,5 +1,5 @@
 book_filename: "edav-resource"
-chapter_name: "Chapter "
+chapter_name: ""
 repo: https://github.com/jtr13/EDAV
 output_dir: docs
 # rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Diving-In.Rmd"]
