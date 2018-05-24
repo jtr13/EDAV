@@ -54,6 +54,7 @@ Still nothing. I have to add a geom for something to show up.
 ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point()
 ```
+
 Yay! Something showed up! Notice where we put the `data`, inside of `ggplot()`. ggplot is built on layers. Here we put it in the main call to `ggplot`. The `data` argument is also available in `geom_point()`, but in that case it would only apply to that layer. Here, we are saying, for all layers, unless specified otherwise, make the `data` be `iris`.
 
 Now let's add a color mapping by `Species`:
