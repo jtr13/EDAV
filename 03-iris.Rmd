@@ -118,9 +118,14 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
 
 No more legend. So, in ggplot, there is a difference between where an aesthetic is placed. It is also called MAPPING an aesthetic (making it vary with data inside `aes`) or SETTING an aesthetic (make it a constant attribute across all datapoints outside of `aes`).
 
+Second thing: still can't really see the data
+  Problem with overlap and need jitter
+  
+Showing when jitter is needed
+
 ## Formatting for prez
 
-
+Adding titles/labels
 
 ## Helpful links
 
