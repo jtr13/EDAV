@@ -113,7 +113,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.2" data-path="basics.html"><a href="basics.html#do-it-the-lazy-way"><i class="fa fa-check"></i><b>2.2</b> Do it the Lazy Way!</a></li>
 <li class="chapter" data-level="2.3" data-path="basics.html"><a href="basics.html#r-in-the-context-of-this-class"><i class="fa fa-check"></i><b>2.3</b> R in the context of this class</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="iris.html"><a href="iris.html"><i class="fa fa-check"></i><b>3</b> Iris Example</a></li>
+<li class="chapter" data-level="3" data-path="iris.html"><a href="iris.html"><i class="fa fa-check"></i><b>3</b> Iris Example</a><ul>
+<li class="chapter" data-level="3.1" data-path="iris.html"><a href="iris.html#viewing-data"><i class="fa fa-check"></i><b>3.1</b> Viewing Data</a></li>
+<li class="chapter" data-level="3.2" data-path="iris.html"><a href="iris.html#plotting-data"><i class="fa fa-check"></i><b>3.2</b> Plotting data</a></li>
+<li class="chapter" data-level="3.3" data-path="iris.html"><a href="iris.html#markdown-etiquette"><i class="fa fa-check"></i><b>3.3</b> Markdown Etiquette</a></li>
+<li class="chapter" data-level="3.4" data-path="iris.html"><a href="iris.html#overlapping-data"><i class="fa fa-check"></i><b>3.4</b> Overlapping Data</a></li>
+<li class="chapter" data-level="3.5" data-path="iris.html"><a href="iris.html#formatting-for-prez"><i class="fa fa-check"></i><b>3.5</b> Formatting for prez</a></li>
+<li class="chapter" data-level="3.6" data-path="iris.html"><a href="iris.html#helpful-links"><i class="fa fa-check"></i><b>3.6</b> Helpful links</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>4</b> External Resources</a><ul>
 <li class="chapter" data-level="4.1" data-path="resources.html"><a href="resources.html#books"><i class="fa fa-check"></i><b>4.1</b> Books</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="resources.html"><a href="resources.html#graphical-data-analysis-with-r"><i class="fa fa-check"></i><b>4.1.1</b> <a href="http://rosuda.org/GDA"><strong>Graphical Data Analysis with R</strong></a></a></li>
@@ -147,15 +154,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="iris" class="section level1">
 <h1><span class="header-section-number">3</span> Iris Example</h1>
-<p>This exmaple goes through some work with the iris dataset.</p>
-<p>Let’s start with loading the package so we can get the data.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Pull in data from library</span>
-<span class="kw">library</span>(datasets)</code></pre></div>
+<p>This example goes through some work with the <code>iris</code> dataset. Includes info about viewing data, plotting with ggplot, markdown, and more.</p>
+<div id="viewing-data" class="section level2">
+<h2><span class="header-section-number">3.1</span> Viewing Data</h2>
+<p>Let’s start with loading the package so we can get the data as a dataframe.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(datasets)
+
+<span class="kw">class</span>(iris)</code></pre></div>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
 <p>This is not a huge dataset, but it is helpful to get into the habit of treating datasets as large no matter what. Because of this, make sure you inspect the size and structure of your dataset before going and printing it to the console.</p>
 <p>Here we can see that we have 150 observations across 5 different variables.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(iris)</code></pre></div>
 <pre><code>## [1] 150   5</code></pre>
-<p>There are a bunch of ways to get inforamtion on your dataset. Here are a few:</p>
+<p>There are a bunch of ways to get information on your dataset. Here are a few:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(iris)</code></pre></div>
 <pre><code>## &#39;data.frame&#39;:    150 obs. of  5 variables:
 ##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
@@ -178,7 +189,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 ##                 
 ##                 
 ## </code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This one requires dplyr, but it&#39;s worth it :)</span>
+<span class="kw">library</span>(dplyr)
 <span class="kw">glimpse</span>(iris)</code></pre></div>
 <pre><code>## Observations: 150
 ## Variables: 5
@@ -187,22 +199,72 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 ## $ Petal.Length &lt;dbl&gt; 1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5,...
 ## $ Petal.Width  &lt;dbl&gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1,...
 ## $ Species      &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, s...</code></pre>
+<p>Plotting the data by calling <code>iris</code> to the console will print the whole thing. Go ahead and try it in this case, but this is not recommended for larger datasets. Instead, use <code>head()</code> in the console or <code>View()</code>.</p>
+<p>If you want to learn more about these commands, or anything for that matter, just type <code>?&lt;command&gt;</code> into the console. <code>?head</code>, for example, will reveal that there is an additional argument to <code>head</code> called <code>n</code> for the number of lines printed, which defaults to 6. Also, you may notice there is something called <code>tail</code>. I wonder what that does? :)</p>
+</div>
+<div id="plotting-data" class="section level2">
+<h2><span class="header-section-number">3.2</span> Plotting data</h2>
 <p>Let’s plot something!</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Something&#39;s missing</span>
+<span class="kw">library</span>(ggplot2)
 <span class="kw">ggplot</span>(iris)</code></pre></div>
-<p><img src="03-iris_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="03-iris_files/figure-html/blank_plot-1.png" width="672" /></p>
 <p>Where is it? Maybe if I add some aesthetics. I remember that was an important word that came up somewhere:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width))</code></pre></div>
-<p><img src="03-iris_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Still not working...</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width))</code></pre></div>
+<p><img src="03-iris_files/figure-html/blank_plot_aes-1.png" width="672" /></p>
 <p>Still nothing. I have to add a geom for something to show up.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># There we go!</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
-<p><img src="03-iris_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="03-iris_files/figure-html/first_ggplot-1.png" width="672" /> Yay! Something showed up! Notice where we put the <code>data</code>, inside of <code>ggplot()</code>. ggplot is built on layers. Here we put it in the main call to <code>ggplot</code>. The <code>data</code> argument is also available in <code>geom_point()</code>, but in that case it would only apply to that layer. Here, we are saying, for all layers, unless specified otherwise, make the <code>data</code> be <code>iris</code>.</p>
 <p>Now let’s add a color mapping by <code>Species</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species))</code></pre></div>
-<p><img src="03-iris_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="03-iris_files/figure-html/ggplot_colored-1.png" width="672" /></p>
+<p>Usually it is helpful to store the main portion of the plot in a variable and add on the layers. The code below achieves the same output as above:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sepal_plot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width))
 
+sepal_plot <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species))</code></pre></div>
+</div>
+<div id="markdown-etiquette" class="section level2">
+<h2><span class="header-section-number">3.3</span> Markdown Etiquette</h2>
+<p>Working with markdown and chunks can get out of hand, but there are some helpful tricks. First, consider naming your chunks as you go. If you combine this with headers, your work will be much more organized. Specifically, the little line at the bottom of the editor becomes much more useful.</p>
+<p>From this: <img src="images/03-iris-jumpbar.png" alt="Pic" /></p>
+<p>To this: <img src="images/03-iris-jumpbar-formatted.png" alt="Pic" /></p>
+<p>Just add a name to the start of each chunk: <code>{r &lt;cool-code-chunk-name&gt;, &lt;chunk_option&gt; = TRUE}</code></p>
+<p>Now you can see what the chunks were about as well as get a sense of where you are in the document. Just don’t forget, it is a space after the <code>r</code> and commas for the other chunk options like <code>eval</code> or <code>echo</code>.</p>
+</div>
+<div id="overlapping-data" class="section level2">
+<h2><span class="header-section-number">3.4</span> Overlapping Data</h2>
+<p>Eagle-eyed viewers may notice that we seem to be a few points short. We should be seeing 150 points, but we only see 117 (yes, I counted). Where are those missing points? They are actually hiding behind other points. This dataset rounds to the nearest tenth of a centimeter, which is what is giving us those regular placings of the points. How did I know the data was in centimeters? <code>?iris</code> of course! <a href="https://youtu.be/UIKGV2cTgqA?t=3m9s">Ah, you ask a silly question, you get a silly answer</a>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This plot hides some of the points</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species))</code></pre></div>
+<p>What’s the culprit? The <code>color</code> aesthetic. The color by default is opaque and will hide any points that are behind it. As a rule, it is always beneficial to reduce the opacity a little no matter what to avoid this problem. To do this, change the <code>alpha</code> value to something other than it’s default <code>1</code>, like <code>0.5</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species, <span class="dt">alpha =</span> <span class="fl">0.5</span>))</code></pre></div>
+<p><img src="03-iris_files/figure-html/overlap_alpha-1.png" width="672" /></p>
+<p>Okay…a couple things with this.</p>
+<p>First, did you notice the new addition to the legend? That looks silly! Why did that show up? Well, when we added the <code>alpha</code> into <code>aes()</code>. Specifically, this is saying:</p>
+<p><code>geom_point(mapping = aes(color = Species, alpha = 0.5))</code></p>
+<p>So, we are mapping these given <em>aesthetics</em>, <code>color</code> and <code>alpha</code>, to certain values. ggplot knows that usually the aesthetic mapping will vary since you are probably passing in data that varies, so it will create a legend for each mapping. However, we don’t need a legend for the <code>alpha</code>: we explicitly set it to be 0.5. To fix this, we can pull <code>alpha</code> out of <code>aes</code> and instead treat it like an <em>attribute</em>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species), <span class="dt">alpha =</span> <span class="fl">0.5</span>)</code></pre></div>
+<p><img src="03-iris_files/figure-html/overlap_alpha_fix1-1.png" width="672" /></p>
+<p>No more legend. So, in ggplot, there is a difference between where an aesthetic is placed. It is also called MAPPING an aesthetic (making it vary with data inside <code>aes</code>) or SETTING an aesthetic (make it a constant attribute across all datapoints outside of <code>aes</code>).</p>
+</div>
+<div id="formatting-for-prez" class="section level2">
+<h2><span class="header-section-number">3.5</span> Formatting for prez</h2>
+</div>
+<div id="helpful-links" class="section level2">
+<h2><span class="header-section-number">3.6</span> Helpful links</h2>
+<p>Mapping aesthetics to things in ggplot datacamp</p>
+<p>Markdown code chunks</p>
+<p>rfds</p>
+
+</div>
 </div>
             </section>
 
