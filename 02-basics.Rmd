@@ -1,25 +1,48 @@
 # R Basics {#basics}
 
-This section includes some helpful pointers on working with R.
+So...there is soooo much to the world of R. Textbooks, cheatsheets, exercises, packages, and other buzzwords full of resources you could go through. However, R is being used for a lot of different things, not all of which are EDAV. 
 
-## Get your house in order
+So, here we will provide a collection of resources that you should be familiar with in the context of this course. This is not to say that any of these resources are prerequisites, but they will come up in the course and we want to give you places to learn about them.
 
-Setting up R Studio is important in order to have an effective workflow. Learn about the IDE and your life will be a whole lot easier. Check out some of the cheat sheets.
+Since people come with a variety of backgrounds, we will try to provide the essentials as well as some resources for more advanced users.
 
-## Do it the Lazy Way!
+As always, if you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV).
 
-Shortcuts are your best friend to get work done faster. And they are easy to find.
+## Essentials
 
-In the toolbar:
-`Tools > Keyboard Shortcuts Help` OR `⌥⇧K`
+## 
 
-Some good ones:
 
-* Insert assignment operator (`<-`): Alt/Option+-
-* Insert pipe (`%>%`): Ctrl/Cmd+Shift+M
-* Comment Code:  Ctrl/Cmd+Shift+C
-* Run current line/selection: Ctrl/Cmd+Enter
-* Re-run previous region: Ctrl/Cmd+Shift+P
+
+
+
+Here are some of the bare bones stuff.
+
+setting up r basics of intro to R plotting with ggplot what the tidyverse is importing data dplyr
+
+ESSENTIALS
+
+DataCamp Intro to R- ignore matrices and lists Factors are important
+
+Plotting ggplot2
+
+r4ds jumps right in installing R/RStudio link What the tidyverse is link 2 ways to do everything, but we will use tidyverse
+
+DC Importing Data
+
+great but overkill
+mostly use read_csv (different kinds)
+DC Data manip with R dplyr link the main verbs
+
+Learning R RStudio webinar
+
+R Markdown course
+
+Learning R file: incorporate it into this prereq
+
+OTHER Sticker Examples
+
+
 
 ## R in the context of this class
 

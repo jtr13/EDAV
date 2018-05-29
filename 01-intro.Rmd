@@ -1,14 +1,17 @@
 # Introduction {#intro}
 
+## Everything you need for EDAV
+
 This resource has everything you need and more to be successful with R, this EDAV course, and beyond.
 
-## What this book is
+With this resource, we try to give you a **curated collection of tools and references** that will make it easier to learn how to work with data in R. 
 
-1. One-stop center for EDAV slides and R code examples
-2. Searchable reference to helpful materials
-3. Collection of case studies
-4. Full of tips and tricks
+We also believe it is important to learn by example, so there are **several walkthroughs** where we work with data and discuss problems as well as some tips/tricks that will help you.
 
-## What this book isn't
+So, this resource provides a **curated list of materials relevant to EDAV** as well as examples that directly relate to the work you will be doing in this course.
 
-1. NOT a comprehensive manual to R
+We hope this resource serves you well.
+
+## Improving this resource
+
+If you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV).
