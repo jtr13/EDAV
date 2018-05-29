@@ -1,7 +1,7 @@
 --- 
 title: "EDAV Resource"
 author: "Zach Bogart"
-date: "2018-05-24"
+date: "2018-05-29"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -9,9 +9,11 @@ biblio-style: apalike
 link-citations: yes
 github-repo: jtr13/EDAV
 # url: ''
-description: "Everything you need"
+description: "Everything you need to do well in EDAV"
 ---
 
-# Preface {-}
+# About this resource {-}
 
-This is the very first part of the book.
+This resource is specifically tailored to the EDAV course offered at Columbia University. However, anyone interested in working with data in R will benefit from perusing these pages.
+
+

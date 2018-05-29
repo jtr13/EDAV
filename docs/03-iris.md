@@ -1,6 +1,31 @@
-# Iris Example {#iris}
+# Walkthrough: Iris Example {#iris}
 
-This example goes through some work with the `iris` dataset. Includes info about viewing data, plotting with ggplot, markdown, and more.
+This example goes through some work with the `iris` dataset to get to a finished scatterplot that is ready to present. Includes info about viewing data, plotting with ggplot, markdown, and more.
+
+Here's what we end up with:
+
+<img src="03-iris_files/figure-html/goal-1.png" width="672" />
+
+## Quick Note on Doing it the Lazy Way
+
+Shortcuts are your best friend to get work done faster. And they are easy to find.
+
+In the toolbar:
+`Tools > Keyboard Shortcuts Help` OR `⌥⇧K`
+
+Some good ones:
+
+* Insert assignment operator (`<-`): Alt/Option+-
+* Insert pipe (`%>%`): Ctrl/Cmd+Shift+M
+* Comment Code:  Ctrl/Cmd+Shift+C
+* Run current line/selection: Ctrl/Cmd+Enter
+* Re-run previous region: Ctrl/Cmd+Shift+P
+
+Be on the lookout for things you do often and try to see if there is a faster way to do them.
+
+Additionally, the RStudio IDE can be a little daunting, but it is full of useful tools that you can read about in [this cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf) or go through with this DataCamp course: [Part 1](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1), [Part 2](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-2).
+
+Okay, now let's get to it...
 
 ## Viewing Data
 
@@ -96,7 +121,7 @@ ggplot(iris)
 
 <img src="03-iris_files/figure-html/blank_plot-1.png" width="672" />
 
-Where is it? Maybe if I add some aesthetics. I remember that was an important word that came up somewhere:
+Where is it? Maybe if we add some aesthetics. I remember that was an important word that came up somewhere:
 
 ```r
 # Still not working...
@@ -105,7 +130,7 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width))
 
 <img src="03-iris_files/figure-html/blank_plot_aes-1.png" width="672" />
 
-Still nothing. I have to add a geom for something to show up.
+Still nothing. Remember, you have to add a geom for something to show up.
 
 ```r
 # There we go!
@@ -115,7 +140,7 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
 
 <img src="03-iris_files/figure-html/first_ggplot-1.png" width="672" />
 
-Yay! Something showed up! Notice where we put the `data`, inside of `ggplot()`. ggplot is built on layers. Here we put it in the main call to `ggplot`. The `data` argument is also available in `geom_point()`, but in that case it would only apply to that layer. Here, we are saying, for all layers, unless specified otherwise, make the `data` be `iris`.
+Yay! Something showed up! Notice where we put the `data`, inside of `ggplot()`. ggplot is built on layers. Here we put it in the main call to `ggplot`. The `data` argument is also available in `geom_point()`, but in that case it would only apply to that layer. Here, we are saying, for all layers, unless specified, make the `data` be `iris`.
 
 Now let's add a color mapping by `Species`:
 
@@ -152,7 +177,7 @@ Now you can see what the chunks were about as well as get a sense of where you a
 
 ## Overlapping Data
 
-Eagle-eyed viewers may notice that we seem to be a few points short. We should be seeing 150 points, but we only see 117 (yes, I counted). Where are those missing points? They are actually hiding behind other points. This dataset rounds to the nearest tenth of a centimeter, which is what is giving us those regular placings of the points. How did I know the data was in centimeters? `?iris` of course! [Ah, you ask a silly question, you get a silly answer](https://youtu.be/UIKGV2cTgqA?t=3m9s).
+Eagle-eyed viewers may notice that we seem to be a few points short. We should be seeing 150 points, but we only see 117 (yes, I counted). Where are those missing points? They are actually hiding behind other points. This dataset rounds to the nearest tenth of a centimeter, which is what is giving us those regular placings of the points. How did I know the data was in centimeters? `?iris` of course! [Ah, you ask a silly question, you get a silly answer](https://youtu.be/UIKGV2cTgqA?t=3m10s).
 
 
 ```r
@@ -160,6 +185,8 @@ Eagle-eyed viewers may notice that we seem to be a few points short. We should b
 ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) + 
   geom_point(aes(color = Species))
 ```
+
+<img src="03-iris_files/figure-html/overlapping_data_repeated-1.png" width="672" />
 
 What's the culprit? The `color` aesthetic. The color by default is opaque and will hide any points that are behind it. As a rule, it is always beneficial to reduce the opacity a little no matter what to avoid this problem. To do this, change the `alpha` value to something other than it's default `1`, like `0.5`. 
 
@@ -173,11 +200,13 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
 
 Okay...a couple things with this. 
 
-First, did you notice the new addition to the legend? That looks silly! Why did that show up? Well, when we added the `alpha` into `aes()`. Specifically, this is saying:
+### First: The Legend
+
+**First**, did you notice the new addition to the legend? That looks silly! Why did that show up? Well, when we added the `alpha` into `aes()`, we got a new legend. Let's look at what we are doing with `geom_point()`. Specifically, this is saying how we should map the `color` and `alpha`:
 
 `geom_point(mapping = aes(color = Species, alpha = 0.5))`
 
-So, we are mapping these given *aesthetics*, `color` and `alpha`, to certain values. ggplot knows that usually the aesthetic mapping will vary since you are probably passing in data that varies, so it will create a legend for each mapping. However, we don't need a legend for the `alpha`: we explicitly set it to be 0.5. To fix this, we can pull `alpha` out of `aes` and instead treat it like an *attribute*:
+So, we are mapping these given *aesthetics*, `color` and `alpha`, to certain values. `ggplot` knows that usually the aesthetic mapping will vary since you are probably passing in data that varies, so it will create a legend for each mapping. However, we don't need a legend for the `alpha`: we explicitly set it to be 0.5. To fix this, we can pull `alpha` out of `aes` and instead treat it like an *attribute*:
 
 
 ```r
@@ -187,19 +216,168 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
 
 <img src="03-iris_files/figure-html/overlap_alpha_fix1-1.png" width="672" />
 
-No more legend. So, in ggplot, there is a difference between where an aesthetic is placed. It is also called MAPPING an aesthetic (making it vary with data inside `aes`) or SETTING an aesthetic (make it a constant attribute across all datapoints outside of `aes`).
+No more legend. So, in ggplot, there is a difference between where an aesthetic is placed. It is also called MAPPING an aesthetic (making it vary with data inside `aes`) or SETTING an aesthetic (make it a constant attribute across all datapoints outside of `aes`). <linkqwe>
 
-## Formatting for prez
+### Second: Jittering
 
+**Secondly**, did this alpha trick really help us? Are we able to see anything in the plot in an easier way? Not really. Since the points perfectly overlap, the opacity difference doesn't help us much. Usually, opacity will work, but here the data is so regular that we don't gain anything in the perception department.
 
+We can fix this by introducing some *jitter* to the datapoints. Jitter adds a little random noise and moves the datapoints so that they don't fully overlap:
+
+```r
+ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(aes(color = Species), alpha = 0.5, position = "jitter")
+```
+
+<img src="03-iris_files/figure-html/overlap-jitter-fix1-1.png" width="672" />
+
+Consider your motives when using jittering. You are by definition altering the data, but it may be beneficial in some situations.
+
+***
+*Aside*
+
+Here's a quick example where opacity using `alpha` might be more directly helpful.
+
+```r
+# lib for arranging plots side by side
+library(gridExtra)
+
+# make some normally distributed data
+x_points <- rnorm(n = 10000, mean = 0, sd = 2)
+y_points <- rnorm(n = 10000, mean = 6, sd = 2)
+df <- data.frame(x_points, y_points)
+
+# plot with/without changed alpha
+plt1 <- ggplot(df, aes(x_points, y_points)) +
+  geom_point() +
+  ggtitle("Before (alpha = 1)")
+plt2 <- ggplot(df, aes(x_points, y_points)) +
+  geom_point(alpha = 0.1) +
+  ggtitle("After (alpha = 0.1)")
+
+# arrange plots
+gridExtra::grid.arrange(plt1, plt2, 
+                        ncol = 2, nrow = 1)
+```
+
+<img src="03-iris_files/figure-html/opacity-useful-aside-1.png" width="672" />
+
+Here it is much easier to see where the dataset is concentrated.
+
+***
+
+## Formatting for presentation
+
+Let's say we have finished this plot and we are ready to present it to other people:
+<img src="03-iris_files/figure-html/present-plot-1.png" width="672" />
+
+We should clean it up a bit so it can stand on its own. 
+
+## Alter Appearance
+
+First, let's make the x/y labels a little cleaner and more descriptive:
+
+```r
+ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(aes(color = Species), alpha = 0.5, position = "jitter") +
+  xlab("Sepal Length (cm)") +
+  ylab("Sepal Width (cm)")
+```
+
+<img src="03-iris_files/figure-html/clean-xy-labels-1.png" width="672" />
+
+Next, add a title that encapsulates the plot:
+
+```r
+ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(aes(color = Species), alpha = 0.5, position = "jitter") +
+  xlab("Sepal Length (cm)") +
+  ylab("Sepal Width (cm)") +
+  ggtitle("Sepal Dimensions in Different Species of Iris Flowers")
+```
+
+<img src="03-iris_files/figure-html/title_added-1.png" width="672" />
+
+And make the points a little bigger:
+
+```r
+ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(aes(color = Species), size = 3, alpha = 0.5, position = "jitter") +
+  xlab("Sepal Length (cm)") +
+  ylab("Sepal Width (cm)") +
+  ggtitle("Sepal Dimensions in Different Species of Iris Flowers")
+```
+
+<img src="03-iris_files/figure-html/size_fixed-1.png" width="672" />
+
+Now it's looking presentable.
+
+## Consider Themes
+
+It may be better for your situation to change the theme of the plot (the background, axes, etc.; the "accessories" of the plot). Explore what different themes can offer and pick one that is right for you.
+
+```r
+base_plot <- ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(aes(color = Species), size = 3, alpha = 0.5, position = "jitter") +
+  xlab("Sepal Length (cm)") +
+  ylab("Sepal Width (cm)") +
+  ggtitle("Sepal Dimensions in Different Species of Iris Flowers")
+
+base_plot
+```
+
+<img src="03-iris_files/figure-html/themes-1.png" width="672" />
+
+```r
+base_plot + theme_light()
+```
+
+<img src="03-iris_files/figure-html/themes-2.png" width="672" />
+
+```r
+base_plot + theme_minimal()
+```
+
+<img src="03-iris_files/figure-html/themes-3.png" width="672" />
+
+```r
+base_plot + theme_classic()
+```
+
+<img src="03-iris_files/figure-html/themes-4.png" width="672" />
+
+```r
+base_plot + theme_void()
+```
+
+<img src="03-iris_files/figure-html/themes-5.png" width="672" />
+
+I'm going to go with `theme_minimal()` this time. 
+
+***
+
+So here we are! We got a lovely scatterplot ready to show the world!
+
+<img src="03-iris_files/figure-html/final-result-1.png" width="672" />
+
+## Going Deeper
+
+We have just touched the surface of ggplot and dipped our toes into grammar of graphics. If you want to go deeper, I highly recommend the DataCamp [@datacamp] courses on *Data Visualization with ggplot2* with [Rick Scavetta](https://www.datacamp.com/instructors/rickscavetta). There are three parts and they are quite dense, but the [first part](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1) is definitely worth checking out. 
 
 ## Helpful links
 
-Mapping aesthetics to things in ggplot datacamp
+[RStudio ggplot2 Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
 
-Markdown code chunks 
+[DataCamp: Mapping aesthetics to things in ggplot](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-1/chapter-3-aesthetics?ex=1)
 
-rfds
+[R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
+[R for Data Science](http://r4ds.had.co.nz/)
+
+
+
+
+
 
 
 

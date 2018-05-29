@@ -33,4 +33,7 @@ All the info you could want on the RStudio interface. [@rstudio_ide]
 RStudio cheat sheet collection https://www.rstudio.com/resources/cheatsheets/
 Markdown basics https://rmarkdown.rstudio.com/authoring_basics.html
 
+When you knit code, there are helpful options for suppressing warnings, plots, etc.
+https://yihui.name/knitr/options/
+
 
