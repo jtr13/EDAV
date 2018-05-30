@@ -23,7 +23,7 @@ Some good ones:
 
 Be on the lookout for things you do often and try to see if there is a faster way to do them.
 
-Additionally, the RStudio IDE can be a little daunting, but it is full of useful tools that you can read about in [this cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf) or go through with this DataCamp course: [Part 1](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1), [Part 2](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-2).
+Additionally, the RStudio IDE can be a little daunting, but it is full of useful tools that you can read about in [this cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf){target="_blank"} or go through with this DataCamp course: [Part 1](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1){target="_blank"}, [Part 2](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-2){target="_blank"}.
 
 Okay, now let's get to it...
 
@@ -177,7 +177,7 @@ Now you can see what the chunks were about as well as get a sense of where you a
 
 ## Overlapping Data
 
-Eagle-eyed viewers may notice that we seem to be a few points short. We should be seeing 150 points, but we only see 117 (yes, I counted). Where are those missing points? They are actually hiding behind other points. This dataset rounds to the nearest tenth of a centimeter, which is what is giving us those regular placings of the points. How did I know the data was in centimeters? `?iris` of course! [Ah, you ask a silly question, you get a silly answer](https://youtu.be/UIKGV2cTgqA?t=3m10s).
+Eagle-eyed viewers may notice that we seem to be a few points short. We should be seeing 150 points, but we only see 117 (yes, I counted). Where are those missing points? They are actually hiding behind other points. This dataset rounds to the nearest tenth of a centimeter, which is what is giving us those regular placings of the points. How did I know the data was in centimeters? `?iris` of course! [Ah, you ask a silly question, you get a silly answer](https://youtu.be/UIKGV2cTgqA?t=3m10s){target="_blank"}.
 
 
 ```r
@@ -216,7 +216,7 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
 
 <img src="03-iris_files/figure-html/overlap_alpha_fix1-1.png" width="672" />
 
-No more legend. So, in ggplot, there is a difference between where an aesthetic is placed. It is also called MAPPING an aesthetic (making it vary with data inside `aes`) or SETTING an aesthetic (make it a constant attribute across all datapoints outside of `aes`). <linkqwe>
+No more legend. So, in ggplot, there is a difference between where an aesthetic is placed. It is also called MAPPING an aesthetic (making it vary with data inside `aes`) or SETTING an aesthetic (make it a constant attribute across all datapoints outside of `aes`).
 
 ### Second: Jittering
 
@@ -362,17 +362,17 @@ So here we are! We got a lovely scatterplot ready to show the world!
 
 ## Going Deeper
 
-We have just touched the surface of ggplot and dipped our toes into grammar of graphics. If you want to go deeper, I highly recommend the DataCamp [@datacamp] courses on *Data Visualization with ggplot2* with [Rick Scavetta](https://www.datacamp.com/instructors/rickscavetta). There are three parts and they are quite dense, but the [first part](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1) is definitely worth checking out. 
+We have just touched the surface of ggplot and dipped our toes into grammar of graphics. If you want to go deeper, I highly recommend the DataCamp [@datacamp] courses on *Data Visualization with ggplot2* with [Rick Scavetta](https://www.datacamp.com/instructors/rickscavetta){target="_blank"}. There are three parts and they are quite dense, but the [first part](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"} is definitely worth checking out. 
 
 ## Helpful links
 
-[RStudio ggplot2 Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+[RStudio ggplot2 Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf){target="_blank"}
 
-[DataCamp: Mapping aesthetics to things in ggplot](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-1/chapter-3-aesthetics?ex=1)
+[DataCamp: Mapping aesthetics to things in ggplot](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-1/chapter-3-aesthetics?ex=1){target="_blank"}
 
-[R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+[R Markdown Reference Guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf){target="_blank"}
 
-[R for Data Science](http://r4ds.had.co.nz/)
+[R for Data Science](http://r4ds.had.co.nz/){target="_blank"}
 
 
 
