@@ -1,8 +1,11 @@
 # R Basics {#basics}
 
-So...there is soooo much to the world of R. Textbooks, cheatsheets, exercises, packages, and other buzzwords full of resources you could go through. However, R is being used for a lot of different things, not all of which are EDAV. 
 
-So, here we will provide a collection of resources that you should be familiar with in the context of this course. This is not to say that any of these resources are prerequisites, but they will come up in the course and we want to give you places to learn about them.
+
+
+So...there is soooo much to the world of R. Textbooks, cheatsheets, exercises, packages, and other buzzwords full of resources you could go through. 12608 packages on [CRAN](https://cran.r-project.org), the network through which R code and packages are distributed. It can be overwhelming.  However, bear in mind that R is being used for a lot of different things, not all of which are relevant to EDAV. 
+
+To help you navigate the landscape, here we provide a collection of resources that you should be familiar with in the context of this course. This is not to say that any of these resources are prerequisites, but they will come up in the course and we want to give you places to learn about them.
 
 Since people come with a variety of backgrounds, we will try to provide the essentials as well as some resources for more advanced users.
 
