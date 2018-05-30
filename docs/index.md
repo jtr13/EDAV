@@ -1,6 +1,6 @@
 --- 
 title: "EDAV Resource"
-author: "Zach Bogart"
+author: ["Zach Bogart", "Joyce Robbins"]
 date: "2018-05-30"
 site: bookdown::bookdown_site
 documentclass: book
