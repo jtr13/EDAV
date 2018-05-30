@@ -25,4 +25,8 @@ I have made a few tshirts so you can show your love for R. Hope you enjoy.
 <center>
 [![Blue R Shirt](images/blue-r-shirt.png)](https://teespring.com/mztees-hex-r){target="_blank"}
 [![Black Tidyverse R Shirt](images/black-tidyverse-r-shirt.png)](https://teespring.com/mztees-r-tidyverse){target="_blank"}
+
+[Blue R Shirt](https://teespring.com/mztees-hex-r){target="_blank"}
+
+[Black Tidyverse R Shirt](https://teespring.com/mztees-r-tidyverse){target="_blank"}
 </center>
