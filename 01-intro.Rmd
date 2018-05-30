@@ -14,4 +14,4 @@ We hope this resource serves you well.
 
 ## Improving this resource
 
-If you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV).
+If you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
