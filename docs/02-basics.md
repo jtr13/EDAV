@@ -3,7 +3,7 @@
 
 
 
-So...there is soooo much to the world of R. Textbooks, cheatsheets, exercises, and other buzzwords full of resources you could go through. There are over 12608 packages on [CRAN](https://cran.r-project.org){target="_blank"}, the network through which R code and packages are distributed. It can be overwhelming.  However, bear in mind that R is being used for a lot of different things, not all of which are relevant to EDAV. 
+So...there is soooo much to the world of R. Textbooks, cheatsheets, exercises, and other buzzwords full of resources you could go through. There are over 12610 packages on [CRAN](https://cran.r-project.org){target="_blank"}, the network through which R code and packages are distributed. It can be overwhelming.  However, bear in mind that R is being used for a lot of different things, not all of which are relevant to EDAV. 
 
 To help you navigate the landscape, here we provide a collection of resources that you should be familiar with in the context of this course. This is not to say that any of these resources are prerequisites, but they will come up in the course and we want to give you places to learn about them.
 
@@ -35,7 +35,7 @@ As always, if you would like to improve this resource, consider submitting a pul
 
 ### Tidyverse
 
-Don't know what the Tidyverse is? It's great and we use it throughout this course. Specifically, `ggplot2` and `dplyr`, two packages within the Tidyverse. 
+Don't know what the [tidyverse](https://www.tidyverse.org/) is? It's great and we use it throughout this course. Specifically, `ggplot2` and `dplyr`, two packages within the Tidyverse. 
 
 * What's ggplot? Check out [this DataCamp course](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}. This course is split up into three parts and it is quite long, but it does go over pretty much everything ggplot has to offer. If you are starting out, stick with [Part 1](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}. *Advanced*: Want case studies to go through? Try [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-2/chapter-5-case-study?ex=1){target="_blank"} or [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-part-3/data-munging-and-visualization-case-study?ex=1){target="_blank"}.
 
