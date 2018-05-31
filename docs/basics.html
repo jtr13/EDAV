@@ -50,6 +50,71 @@
 
 
 
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; position: absolute; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; }
+pre.numberSource a.sourceLine:empty
+  { position: absolute; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: absolute; left: -5em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -86,46 +151,17 @@
 <li class="chapter" data-level="3" data-path="iris.html"><a href="iris.html"><i class="fa fa-check"></i><b>3</b> Walkthrough: Iris Example</a><ul>
 <li class="chapter" data-level="3.1" data-path="iris.html"><a href="iris.html#quick-note-on-doing-it-the-lazy-way"><i class="fa fa-check"></i><b>3.1</b> Quick Note on Doing it the Lazy Way</a></li>
 <li class="chapter" data-level="3.2" data-path="iris.html"><a href="iris.html#viewing-data"><i class="fa fa-check"></i><b>3.2</b> Viewing Data</a></li>
-<li class="chapter" data-level="3.3" data-path="iris.html"><a href="iris.html#data.frame"><i class="fa fa-check"></i><b>3.3</b> [1] “data.frame”</a></li>
-<li class="chapter" data-level="3.4" data-path="iris.html"><a href="iris.html#section"><i class="fa fa-check"></i><b>3.4</b> [1] 150 5</a></li>
-<li class="chapter" data-level="3.5" data-path="iris.html"><a href="iris.html#data.frame-150-obs.-of-5-variables"><i class="fa fa-check"></i><b>3.5</b> ‘data.frame’: 150 obs. of 5 variables:</a></li>
-<li class="chapter" data-level="3.6" data-path="iris.html"><a href="iris.html#sepal.length-num-5.1-4.9-4.7-4.6-5-5.4-4.6-5-4.4-4.9"><i class="fa fa-check"></i><b>3.6</b> $ Sepal.Length: num 5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 …</a></li>
-<li class="chapter" data-level="3.7" data-path="iris.html"><a href="iris.html#sepal.width-num-3.5-3-3.2-3.1-3.6-3.9-3.4-3.4-2.9-3.1"><i class="fa fa-check"></i><b>3.7</b> $ Sepal.Width : num 3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 …</a></li>
-<li class="chapter" data-level="3.8" data-path="iris.html"><a href="iris.html#petal.length-num-1.4-1.4-1.3-1.5-1.4-1.7-1.4-1.5-1.4-1.5"><i class="fa fa-check"></i><b>3.8</b> $ Petal.Length: num 1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 …</a></li>
-<li class="chapter" data-level="3.9" data-path="iris.html"><a href="iris.html#petal.width-num-0.2-0.2-0.2-0.2-0.2-0.4-0.3-0.2-0.2-0.1"><i class="fa fa-check"></i><b>3.9</b> $ Petal.Width : num 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 …</a></li>
-<li class="chapter" data-level="3.10" data-path="iris.html"><a href="iris.html#species-factor-w-3-levels-setosaversicolor..-1-1-1-1-1-1-1-1-1-1"><i class="fa fa-check"></i><b>3.10</b> $ Species : Factor w/ 3 levels “setosa”,“versicolor”,..: 1 1 1 1 1 1 1 1 1 1 …</a></li>
-<li class="chapter" data-level="3.11" data-path="iris.html"><a href="iris.html#sepal.length-sepal.width-petal.length-petal.width"><i class="fa fa-check"></i><b>3.11</b> Sepal.Length Sepal.Width Petal.Length Petal.Width</a></li>
-<li class="chapter" data-level="3.12" data-path="iris.html"><a href="iris.html#min.-4.300-min.-2.000-min.-1.000-min.-0.100"><i class="fa fa-check"></i><b>3.12</b> Min. :4.300 Min. :2.000 Min. :1.000 Min. :0.100</a></li>
-<li class="chapter" data-level="3.13" data-path="iris.html"><a href="iris.html#st-qu.5.100-1st-qu.2.800-1st-qu.1.600-1st-qu.0.300"><i class="fa fa-check"></i><b>3.13</b> 1st Qu.:5.100 1st Qu.:2.800 1st Qu.:1.600 1st Qu.:0.300</a></li>
-<li class="chapter" data-level="3.14" data-path="iris.html"><a href="iris.html#median-5.800-median-3.000-median-4.350-median-1.300"><i class="fa fa-check"></i><b>3.14</b> Median :5.800 Median :3.000 Median :4.350 Median :1.300</a></li>
-<li class="chapter" data-level="3.15" data-path="iris.html"><a href="iris.html#mean-5.843-mean-3.057-mean-3.758-mean-1.199"><i class="fa fa-check"></i><b>3.15</b> Mean :5.843 Mean :3.057 Mean :3.758 Mean :1.199</a></li>
-<li class="chapter" data-level="3.16" data-path="iris.html"><a href="iris.html#rd-qu.6.400-3rd-qu.3.300-3rd-qu.5.100-3rd-qu.1.800"><i class="fa fa-check"></i><b>3.16</b> 3rd Qu.:6.400 3rd Qu.:3.300 3rd Qu.:5.100 3rd Qu.:1.800</a></li>
-<li class="chapter" data-level="3.17" data-path="iris.html"><a href="iris.html#max.-7.900-max.-4.400-max.-6.900-max.-2.500"><i class="fa fa-check"></i><b>3.17</b> Max. :7.900 Max. :4.400 Max. :6.900 Max. :2.500</a></li>
-<li class="chapter" data-level="3.18" data-path="iris.html"><a href="iris.html#species"><i class="fa fa-check"></i><b>3.18</b> Species</a></li>
-<li class="chapter" data-level="3.19" data-path="iris.html"><a href="iris.html#setosa-50"><i class="fa fa-check"></i><b>3.19</b> setosa :50</a></li>
-<li class="chapter" data-level="3.20" data-path="iris.html"><a href="iris.html#versicolor50"><i class="fa fa-check"></i><b>3.20</b> versicolor:50</a></li>
-<li class="chapter" data-level="3.21" data-path="iris.html"><a href="iris.html#virginica-50"><i class="fa fa-check"></i><b>3.21</b> virginica :50</a></li>
-<li class="chapter" data-level="3.22" data-path="iris.html"><a href="iris.html#section-1"><i class="fa fa-check"></i><b>3.22</b> </a></li>
-<li class="chapter" data-level="3.23" data-path="iris.html"><a href="iris.html#section-2"><i class="fa fa-check"></i><b>3.23</b> </a></li>
-<li class="chapter" data-level="3.24" data-path="iris.html"><a href="iris.html#section-3"><i class="fa fa-check"></i><b>3.24</b> </a></li>
-<li class="chapter" data-level="3.25" data-path="iris.html"><a href="iris.html#observations-150"><i class="fa fa-check"></i><b>3.25</b> Observations: 150</a></li>
-<li class="chapter" data-level="3.26" data-path="iris.html"><a href="iris.html#variables-5"><i class="fa fa-check"></i><b>3.26</b> Variables: 5</a></li>
-<li class="chapter" data-level="3.27" data-path="iris.html"><a href="iris.html#sepal.length-5.1-4.9-4.7-4.6-5.0-5.4-4.6-5.0-4.4-4.9"><i class="fa fa-check"></i><b>3.27</b> $ Sepal.Length <dbl> 5.1, 4.9, 4.7, 4.6, 5.0, 5.4, 4.6, 5.0, 4.4, 4.9,…</a></li>
-<li class="chapter" data-level="3.28" data-path="iris.html"><a href="iris.html#sepal.width-3.5-3.0-3.2-3.1-3.6-3.9-3.4-3.4-2.9-3.1"><i class="fa fa-check"></i><b>3.28</b> $ Sepal.Width <dbl> 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1,…</a></li>
-<li class="chapter" data-level="3.29" data-path="iris.html"><a href="iris.html#petal.length-1.4-1.4-1.3-1.5-1.4-1.7-1.4-1.5-1.4-1.5"><i class="fa fa-check"></i><b>3.29</b> $ Petal.Length <dbl> 1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5,…</a></li>
-<li class="chapter" data-level="3.30" data-path="iris.html"><a href="iris.html#petal.width-0.2-0.2-0.2-0.2-0.2-0.4-0.3-0.2-0.2-0.1"><i class="fa fa-check"></i><b>3.30</b> $ Petal.Width <dbl> 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1,…</a></li>
-<li class="chapter" data-level="3.31" data-path="iris.html"><a href="iris.html#species-setosa-setosa-setosa-setosa-setosa-setosa-s"><i class="fa fa-check"></i><b>3.31</b> $ Species <fct> setosa, setosa, setosa, setosa, setosa, setosa, s…</a></li>
-<li class="chapter" data-level="3.32" data-path="iris.html"><a href="iris.html#plotting-data"><i class="fa fa-check"></i><b>3.32</b> Plotting data</a></li>
-<li class="chapter" data-level="3.33" data-path="iris.html"><a href="iris.html#markdown-etiquette"><i class="fa fa-check"></i><b>3.33</b> Markdown Etiquette</a></li>
-<li class="chapter" data-level="3.34" data-path="iris.html"><a href="iris.html#overlapping-data"><i class="fa fa-check"></i><b>3.34</b> Overlapping Data</a><ul>
-<li class="chapter" data-level="3.34.1" data-path="iris.html"><a href="iris.html#first-the-legend"><i class="fa fa-check"></i><b>3.34.1</b> First: The Legend</a></li>
-<li class="chapter" data-level="3.34.2" data-path="iris.html"><a href="iris.html#second-jittering"><i class="fa fa-check"></i><b>3.34.2</b> Second: Jittering</a></li>
+<li class="chapter" data-level="3.3" data-path="iris.html"><a href="iris.html#plotting-data"><i class="fa fa-check"></i><b>3.3</b> Plotting data</a></li>
+<li class="chapter" data-level="3.4" data-path="iris.html"><a href="iris.html#markdown-etiquette"><i class="fa fa-check"></i><b>3.4</b> Markdown Etiquette</a></li>
+<li class="chapter" data-level="3.5" data-path="iris.html"><a href="iris.html#overlapping-data"><i class="fa fa-check"></i><b>3.5</b> Overlapping Data</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="iris.html"><a href="iris.html#first-the-legend"><i class="fa fa-check"></i><b>3.5.1</b> First: The Legend</a></li>
+<li class="chapter" data-level="3.5.2" data-path="iris.html"><a href="iris.html#second-jittering"><i class="fa fa-check"></i><b>3.5.2</b> Second: Jittering</a></li>
 </ul></li>
-<li class="chapter" data-level="3.35" data-path="iris.html"><a href="iris.html#formatting-for-presentation"><i class="fa fa-check"></i><b>3.35</b> Formatting for presentation</a></li>
-<li class="chapter" data-level="3.36" data-path="iris.html"><a href="iris.html#alter-appearance"><i class="fa fa-check"></i><b>3.36</b> Alter Appearance</a></li>
-<li class="chapter" data-level="3.37" data-path="iris.html"><a href="iris.html#consider-themes"><i class="fa fa-check"></i><b>3.37</b> Consider Themes</a></li>
-<li class="chapter" data-level="3.38" data-path="iris.html"><a href="iris.html#going-deeper"><i class="fa fa-check"></i><b>3.38</b> Going Deeper</a></li>
-<li class="chapter" data-level="3.39" data-path="iris.html"><a href="iris.html#helpful-links"><i class="fa fa-check"></i><b>3.39</b> Helpful links</a></li>
+<li class="chapter" data-level="3.6" data-path="iris.html"><a href="iris.html#formatting-for-presentation"><i class="fa fa-check"></i><b>3.6</b> Formatting for presentation</a></li>
+<li class="chapter" data-level="3.7" data-path="iris.html"><a href="iris.html#alter-appearance"><i class="fa fa-check"></i><b>3.7</b> Alter Appearance</a></li>
+<li class="chapter" data-level="3.8" data-path="iris.html"><a href="iris.html#consider-themes"><i class="fa fa-check"></i><b>3.8</b> Consider Themes</a></li>
+<li class="chapter" data-level="3.9" data-path="iris.html"><a href="iris.html#going-deeper"><i class="fa fa-check"></i><b>3.9</b> Going Deeper</a></li>
+<li class="chapter" data-level="3.10" data-path="iris.html"><a href="iris.html#helpful-links"><i class="fa fa-check"></i><b>3.10</b> Helpful links</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>4</b> External Resources</a><ul>
 <li class="chapter" data-level="4.1" data-path="resources.html"><a href="resources.html#books"><i class="fa fa-check"></i><b>4.1</b> Books</a><ul>
