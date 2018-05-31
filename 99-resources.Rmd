@@ -4,7 +4,7 @@ This is a long list of helpful external resources, from books to URLs to exercis
 
 ## Books
 
-A lot of these are available for students through [Columbia Libraries](http://library.columbia.edu/), in both physical and e-book formats. 
+A lot of these are available for students through [Columbia Libraries](http://library.columbia.edu/){target="_blank"}, in both physical and e-book formats. 
 
 ### [**Graphical Data Analysis with R**](http://rosuda.org/GDA)
 
