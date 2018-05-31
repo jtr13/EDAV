@@ -1,7 +1,7 @@
 --- 
 title: "EDAV Resource"
 author: ["Zach Bogart", "Joyce Robbins"]
-date: "2018-05-30"
+date: "2018-05-31"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
