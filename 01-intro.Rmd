@@ -15,3 +15,18 @@ We hope this resource serves you well.
 ## Improving this resource
 
 If you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
+
+## Fun Stuff: R Shirts
+
+I have made a few tshirts so you can show your love for R. Hope you enjoy. 
+
+*P.S. Designing a cool shirt or sticker is a great addition to your community contribution. It has to be cool, though :)*
+
+<center>
+[![Blue R Shirt](images/blue-r-shirt.png)](https://teespring.com/mztees-hex-r){target="_blank"}
+[![Black Tidyverse R Shirt](images/black-tidyverse-r-shirt.png)](https://teespring.com/mztees-r-tidyverse){target="_blank"}
+
+[Blue R Shirt](https://teespring.com/mztees-hex-r){target="_blank"}
+
+[Black Tidyverse R Shirt](https://teespring.com/mztees-r-tidyverse){target="_blank"}
+</center>
