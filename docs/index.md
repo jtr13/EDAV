@@ -1,7 +1,7 @@
 --- 
 title: "EDAV Resource"
 author: ["Zach Bogart", "Joyce Robbins"]
-date: "2018-05-31"
+date: "2018-06-01"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -14,6 +14,27 @@ description: "Everything you need to do well in EDAV"
 
 # About this resource {-}
 
-This resource is specifically tailored to the EDAV course offered at Columbia University. However, anyone interested in working with data in R will benefit from perusing these pages.
+This resource is specifically tailored to the EDAV course offered at [Columbia University](https://www.columbia.edu/){target="_blank"}. However, anyone interested in working with data in R will benefit from perusing these pages.
+
+## Contact
+
+Zach Bogart: 
+[Website](https://zachbogart.com/){target="_blank"}
+/
+[Twitter](https://twitter.com/zachbogart){target="_blank"}
+
+Joyce Robbins: 
+[Columbia Profile](http://stat.columbia.edu/department-directory/name/joyce-robbins/){target="_blank"}
+/
+[Website](http://www.joyce-robbins.com/){target="_blank"}
+/
+[Twitter](https://twitter.com/jtrnyc){target="_blank"}
+/
+[Github](https://github.com/jtr13){target="_blank"}
+
+
+
+
+
 
 

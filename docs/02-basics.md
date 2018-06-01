@@ -1,5 +1,4 @@
-# R Basics {#basics}
-
+# I NEED HELP {#basics}
 
 
 
@@ -11,7 +10,7 @@ Since people come with a variety of backgrounds, we will try to provide the esse
 
 As always, if you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
 
-## Essentials
+## Getting Started
 
 ### Setting up R and RStudio
 
@@ -33,25 +32,31 @@ R is just like any language, programming or otherwise: you need to *use* it to g
 
 * Just starting out in R? Check out [this DataCamp course](https://www.datacamp.com/courses/free-introduction-to-r){target="_blank"} for a quick introduction. For this course, you can skim/mostly ignore matrices and lists (Parts 3 & 6).
 
-* *More Advanced*: Want to curl up with a good book about R? We recommend [R for Data Science](http://r4ds.had.co.nz/){target="_blank"}. It jumps right in, but is quite extensive. Focus less on Part IV (Model).
+*More Advanced*: Want to curl up with a good book about R? We recommend [R for Data Science](http://r4ds.had.co.nz/){target="_blank"}. It jumps right in, but is quite extensive. Focus less on Part IV (Model).
 
-### Importing Data
-
-* DC Importing Data
-  great but overkill
-  mostly use read_csv (different kinds)
+## Getting More Specific
 
 ### Tidyverse
 
 Don't know what the [tidyverse](https://www.tidyverse.org/) is? It's great and we use it throughout this course. Specifically, `ggplot2` and `dplyr`, two packages within the Tidyverse. 
 
-* What's ggplot? Check out [this DataCamp course](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}. This course is split up into three parts and it is quite long, but it does go over pretty much everything ggplot has to offer. If you are starting out, stick with [Part 1](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}. *Advanced*: Want case studies to go through? Try [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-2/chapter-5-case-study?ex=1){target="_blank"} or [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-part-3/data-munging-and-visualization-case-study?ex=1){target="_blank"}.
+* What's ggplot? Check out [this DataCamp course](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}. This course is split up into three parts and it is quite long, but it does go over pretty much everything ggplot has to offer. If you are starting out, stick with [Part 1](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}.
 
-* What's dplyr? Make friends with [this DataCamp course](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial){target="_blank"}. It goes through the main dplyr verbs: select, mutate, filter, arrange, summarise; as well as the [lovely pipe operator](https://www.datacamp.com/community/tutorials/pipe-r-tutorial){target="_blank"}. TODO
+* What's dplyr? Make friends with [this DataCamp course](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial){target="_blank"}. It goes through the main dplyr verbs: select, mutate, filter, arrange, summarise; as well as the [lovely pipe operator](https://www.datacamp.com/community/tutorials/pipe-r-tutorial){target="_blank"}.
 
-* DC Data manip with R dplyr link the main verbs TODO
+*Advanced*: Want case studies to go through? Try [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-2/chapter-5-case-study?ex=1){target="_blank"} or [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-part-3/data-munging-and-visualization-case-study?ex=1){target="_blank"}.
 
-### Markdown
+### Importing Data
+
+We often will need to pull data into RStudio to work with it. 
+
+* "Pull data"? I'm already confused. But wait! Here's a [DataCamp course on importing data using `dplyr`](https://www.datacamp.com/courses/importing-data-in-r-part-1){target="_blank"}. **Note**: This course explains how to import every kind of data format under the sun...all you need to be familiar with for this course (mostly) is pulling in CSV files using `read_csv`. So, if you are overwhelmed, just stick to the [read_csv stuff](https://campus.datacamp.com/courses/importing-data-in-r-part-1/importing-data-from-flat-files-with-utils?ex=1){target="_blank"}.
+
+*Advanced*: Importing every data format under the sun you say? I want to know how to do that. Here's [Part 1](https://www.datacamp.com/courses/importing-data-in-r-part-1){target="_blank"}, as well as [Part 2](https://www.datacamp.com/courses/importing-data-in-r-part-2){target="_blank"}, which focuses on databases and HTTP requests. Go nuts.
+
+### R Markdown
+
+R Markdown is how you will be submitting assignments for this course. In general, it is a great way to communicate your findings to others.
 
 * Don't know about R Markdown? [DataCamp course](https://www.datacamp.com/courses/reporting-with-r-markdown){target="_blank"} to the rescue! We will be using html formatting so focus on that. There is also an [RStudio webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r- markdown/){target="_blank"} about it.
 
@@ -63,7 +68,7 @@ There are a bunch of people using the same tools you are.
 
 * Your fellow classmates are a good place to start! Post questions to [Piazza](https://piazza.com/){target="_blank"} to see how they could help.
 
-* *More Advanced*: There is a vibrant RStudio Community page. Also, R likes twitter. Check out [#rstats](https://twitter.com/search?q=%23rstats){target="_blank"} or maybe [let Hadley Wickham know about a wonky error message](https://twitter.com/hadleywickham/status/952259891342794752){target="_blank"}.
+* *More Advanced*: There is a vibrant [RStudio Community page](https://community.rstudio.com/){target="_blank"}. Also, R likes twitter. Check out [#rstats](https://twitter.com/search?q=%23rstats){target="_blank"} or maybe [let Hadley Wickham know about a wonky error message](https://twitter.com/hadleywickham/status/952259891342794752){target="_blank"}.
 
 
 
