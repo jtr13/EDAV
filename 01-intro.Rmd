@@ -14,7 +14,7 @@ We hope this resource serves you well.
 
 ## Improving this resource
 
-If you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
+Not finding what you are looking for? Think a section could be made clearer? If you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
 
 ## Fun Stuff: R Shirts
 
