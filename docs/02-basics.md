@@ -1,4 +1,4 @@
-# I NEED HELP {#basics}
+# The Basics {#basics}
 
 
 
@@ -64,7 +64,9 @@ R Markdown is how you will be submitting assignments for this course. In general
 
 ## Help Me, R Community!
 
-There are a bunch of people using the same tools you are.
+![via https://dev.to/rly](images/halp_me_orly.png)
+
+Relax. There are a bunch of people using the same tools you are.
 
 * Your fellow classmates are a good place to start! Post questions to [Piazza](https://piazza.com/){target="_blank"} to see how they could help.
 
