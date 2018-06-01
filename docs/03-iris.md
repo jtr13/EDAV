@@ -1,10 +1,51 @@
 # Walkthrough: Iris Example {#iris}
 
-This example goes through some work with the `iris` dataset to get to a finished scatterplot that is ready to present. Includes info about viewing data, plotting with ggplot, markdown, and more.
+### tl;dr
 
 Here's what we end up with:
 
+
+```r
+library(ggplot2)
+base_plot <- ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point(aes(color = Species), size = 3, alpha = 0.5, position = "jitter") +
+  xlab("Sepal Length (cm)") +
+  ylab("Sepal Width (cm)") +
+  ggtitle("Sepal Dimensions in Different Species of Iris Flowers")
+
+base_plot + theme_minimal()
+```
+
 <img src="03-iris_files/figure-html/goal-1.png" width="672" />
+
+Wondering how we got there? Read on.
+
+## Overview
+
+This example goes through some work with the `iris` dataset to get to a finished scatterplot that is ready to present.
+
+### Packages 
+
+* [`ggplot2`](https://www.rdocumentation.org/packages/ggplot2){target="_blank"}
+* [`dplyr`](https://www.rdocumentation.org/packages/dplyr){target="_blank"}
+* [`stats`](https://www.rdocumentation.org/packages/stats){target="_blank"}
+* [`Base`](https://www.rdocumentation.org/packages/base){target="_blank"}
+* [`datasets`](https://www.rdocumentation.org/packages/datasets){target="_blank"}
+* [(`gridExtra`)](https://www.rdocumentation.org/packages/gridExtra){target="_blank"}
+
+### Techniques
+
+* Keyboard Shortcuts
+* Viewing Data Structure/Dimensions/etc.
+* Accessing Documentation
+* Plotting with `ggplot2`
+* Layered Nature of `ggplot2`/Grammar of Graphics
+* Mapping aesthetics in `ggplot2`
+* Overlapping Data: alpha and jitter
+* Presenting Graphics
+* Themes
+
+***
 
 ## Quick Note on Doing it the Lazy Way
 
@@ -130,7 +171,7 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width))
 
 <img src="03-iris_files/figure-html/blank_plot_aes-1.png" width="672" />
 
-Still nothing. Remember, you have to add a geom for something to show up.
+Still nothing. Remember, you have to add a `geom` for something to show up.
 
 ```r
 # There we go!
@@ -162,7 +203,7 @@ sepal_plot +
 
 ## Markdown Etiquette
 
-Working with markdown and chunks can get out of hand, but there are some helpful tricks. First, consider naming your chunks as you go. If you combine this with headers, your work will be much more organized. Specifically, the little line at the bottom of the editor becomes much more useful.
+I'm seeing that my R Markdown file is getting a little messy. Working with markdown and chunks can get out of hand, but there are some helpful tricks. First, consider naming your chunks as you go. If you combine this with headers, your work will be much more organized. Specifically, the little line at the bottom of the editor becomes much more useful.
 
 From this:
 ![Pic](images/03-iris-jumpbar.png)
@@ -173,11 +214,11 @@ To this:
 Just add a name to the start of each chunk:
 `{r <cool-code-chunk-name>, <chunk_option> = TRUE}`
 
-Now you can see what the chunks were about as well as get a sense of where you are in the document. Just don't forget, it is a space after the `r` and commas for the other chunk options like `eval` or `echo`.
+Now you can see what the chunks were about as well as get a sense of where you are in the document. Just don't forget, it is a space after the `r` and commas for the other chunk options you may have like `eval` or `echo`.
 
 ## Overlapping Data
 
-Eagle-eyed viewers may notice that we seem to be a few points short. We should be seeing 150 points, but we only see 117 (yes, I counted). Where are those missing points? They are actually hiding behind other points. This dataset rounds to the nearest tenth of a centimeter, which is what is giving us those regular placings of the points. How did I know the data was in centimeters? `?iris` of course! [Ah, you ask a silly question, you get a silly answer](https://youtu.be/UIKGV2cTgqA?t=3m10s){target="_blank"}.
+Eagle-eyed viewers may notice that we seem to be a few points short. We should be seeing 150 points, but we only see 117 (yes, I counted). Where are those 33 missing points? They are actually hiding behind other points. This dataset rounds to the nearest tenth of a centimeter, which is what is giving us those regular placings of the points. How did I know the data was in centimeters? Running `?iris` in the console of course! [Ah, you ask a silly question, you get a silly answer](https://youtu.be/UIKGV2cTgqA?t=3m10s){target="_blank"}.
 
 
 ```r
@@ -220,7 +261,7 @@ No more legend. So, in ggplot, there is a difference between where an aesthetic 
 
 ### Second: Jittering
 
-**Secondly**, did this alpha trick really help us? Are we able to see anything in the plot in an easier way? Not really. Since the points perfectly overlap, the opacity difference doesn't help us much. Usually, opacity will work, but here the data is so regular that we don't gain anything in the perception department.
+**Secondly**, did this alpha trick *really* help us? Are we able to see anything in the plot in an easier way? Not really. Since the points perfectly overlap, the opacity difference doesn't help us much. Usually, opacity will work, but here the data is so regular that we don't gain anything in the perception department.
 
 We can fix this by introducing some *jitter* to the datapoints. Jitter adds a little random noise and moves the datapoints so that they don't fully overlap:
 
@@ -236,7 +277,7 @@ Consider your motives when using jittering. You are by definition altering the d
 ***
 *Aside*
 
-Here's a quick example where opacity using `alpha` might be more directly helpful.
+We are dealing with a case where jittering works best to see the data, while changing the `alpha` doesn't help us much. Here's a quick example where opacity using `alpha` might be more directly helpful.
 
 ```r
 # lib for arranging plots side by side
