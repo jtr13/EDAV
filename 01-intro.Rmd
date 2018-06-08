@@ -6,6 +6,8 @@ This resource has everything you need and more to be successful with R, this EDA
 
 With this resource, we try to give you a **curated collection of tools and references** that will make it easier to learn how to work with data in R. 
 
+In addition, we include sections on basic chart type examples so you can learn by doing.
+
 We also believe it is important to learn by example, so there are **several walkthroughs** where we work with data and discuss problems as well as some tips/tricks that will help you.
 
 So, this resource provides a **curated list of materials relevant to EDAV** as well as examples that directly relate to the work you will be doing in this course.
