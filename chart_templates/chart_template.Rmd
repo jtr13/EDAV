@@ -1,0 +1,35 @@
+# Chart: <chart_name> {#<snappy_link name>}
+
+## tl:dr
+Full-fledged example of something
+```{r}
+
+```
+
+## Simple Examples
+Bare-bones results of chart
+
+```{r}
+# store data
+```
+
+### <chart> using Base R
+```{r}
+# plot data
+```
+
+### <chart> using ggplot
+```{r}
+# plot data
+```
+
+## When to use
+When this type of chart should be used
+
+## Links to External Resources
+
+## Textbook Link to Chart Section
+
+## Notes
+
+
