@@ -1,4 +1,4 @@
-# The Basics {#basics}
+# R Basics {#basics}
 
 ```{r, echo = FALSE}
 numpack <- dim(available.packages(repos = "http://cloud.r-project.org/"))[1]
