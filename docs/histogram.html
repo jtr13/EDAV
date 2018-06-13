@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="intro.html">
+<link rel="prev" href="iris.html">
+<link rel="next" href="resources.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -187,19 +187,100 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">EDAV Resource</h1>
-<h4 class="author"><em>Zach Bogart</em></h4>
-<h4 class="author"><em>Joyce Robbins</em></h4>
-<h4 class="date"><em>2018-06-13</em></h4>
+<div id="histogram" class="section level1">
+<h1><span class="header-section-number">4</span> Chart: Histogram</h1>
+<div id="tldr-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> tl:dr</h2>
+<p>Gimme a full-fledged example!</p>
+<p>Here’s an application of histograms that looks at how the beaks of Galapagos finches changed due to external factors:</p>
+<p><img src="04-histogram_files/figure-html/tldr-finch-example-1.png" width="672" /></p>
+<p>And here’s the code:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(Sleuth3) <span class="co"># data</span>
+<span class="kw">library</span>(ggplot2) <span class="co"># plotting</span>
+
+<span class="co"># load data</span>
+finches &lt;-<span class="st"> </span>Sleuth3<span class="op">::</span>case0201
+<span class="co"># finch histograms by year with overlayed density curves</span>
+<span class="kw">ggplot</span>(finches, <span class="kw">aes</span>(<span class="dt">x =</span> Depth, <span class="dt">y =</span> ..density..)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="co"># plotting</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>, <span class="dt">colour =</span> <span class="st">&quot;darkGrey&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;lightBlue&quot;</span>, <span class="dt">boundary =</span> <span class="dv">0</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>Year) <span class="op">+</span>
+<span class="st">  </span><span class="co"># formatting</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Severe Drought Led to Finches with Bigger Chompers&quot;</span>,
+          <span class="dt">subtitle =</span> <span class="st">&quot;Beak Depth Density of Galapagos Finches by Year&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Beak Depth (mm)&quot;</span>, <span class="dt">caption =</span> <span class="st">&quot;Source: Sleuth3::case0201&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.subtitle =</span> <span class="kw">element_text</span>(<span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;grey35&quot;</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.caption =</span> <span class="kw">element_text</span>(<span class="dt">color =</span> <span class="st">&quot;grey68&quot;</span>))</code></pre></div>
+<p>For more info on this dataset, type <code>?Sleuth3::case0201</code> into the console.</p>
 </div>
-<div id="about-this-resource" class="section level1 unnumbered">
-<h1>About this resource</h1>
-<p>This resource is specifically tailored to the EDAV course offered at <a href="https://www.columbia.edu/" target="_blank">Columbia University</a>. However, anyone interested in working with data in R will benefit from perusing these pages.</p>
-<div id="contact" class="section level2">
-<h2><span class="header-section-number">0.1</span> Contact</h2>
-<p>Zach Bogart: <a href="https://zachbogart.com/" target="_blank">Website</a> / <a href="https://twitter.com/zachbogart" target="_blank">Twitter</a></p>
-<p>Joyce Robbins: <a href="http://stat.columbia.edu/department-directory/name/joyce-robbins/" target="_blank">Columbia Profile</a> / <a href="http://www.joyce-robbins.com/" target="_blank">Website</a> / <a href="https://twitter.com/jtrnyc" target="_blank">Twitter</a> / <a href="https://github.com/jtr13" target="_blank">Github</a></p>
+<div id="simple-examples" class="section level2">
+<h2><span class="header-section-number">4.2</span> Simple Examples</h2>
+<p>Whoa whoa whoa! Much simpler please!</p>
+<p>Let’s use a very simple dataset:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># store data</span>
+x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">50</span>, <span class="dv">51</span>, <span class="dv">53</span>, <span class="dv">55</span>, <span class="dv">56</span>, <span class="dv">60</span>, <span class="dv">65</span>, <span class="dv">65</span>, <span class="dv">68</span>)</code></pre></div>
+<div id="histogram-using-base-r" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Histogram using Base R</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot data</span>
+<span class="kw">hist</span>(x, <span class="dt">col =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="dt">main =</span> <span class="st">&quot;Base R Histogram of x&quot;</span>)</code></pre></div>
+<p><img src="04-histogram_files/figure-html/base-r-hist-1.png" width="672" /></p>
+<p>For the Base R histogram, it’s advantages are in it’s ease to setup. In truth, all you need to plot the data <code>x</code> in question is <code>hist(x)</code>, but we included a little color and a title to make it more presentable.</p>
+<p>Full documentation on <code>hist()</code> can be found <a href="https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist" target="_blank">here</a></p>
+</div>
+<div id="histogram-using-ggplot2" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Histogram using ggplot2</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># import ggplot</span>
+<span class="kw">library</span>(ggplot2)
+<span class="co"># must store data as dataframe</span>
+df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(x)
+
+<span class="co"># plot data</span>
+<span class="kw">ggplot</span>(df, <span class="kw">aes</span>(x)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;lightBlue&quot;</span>, 
+                 <span class="dt">binwidth =</span> <span class="dv">5</span>, <span class="dt">center =</span> <span class="fl">52.5</span>)</code></pre></div>
+<p><img src="04-histogram_files/figure-html/ggplot-hist-1.png" width="672" /></p>
+<p>The ggplot version is a little more complicated on the surface, but you get more power and control as a result. <strong>Note</strong>: as shown above, ggplot expects a dataframe, so if you are getting an error where “R doesn’t know what to” like this:</p>
+<div class="figure">
+<img src="images/ggplot_df_error.png" alt="ggplot dataframe error" />
+<p class="caption">ggplot dataframe error</p>
+</div>
+<p>make sure you are using a dataframe.</p>
+</div>
+</div>
+<div id="when-to-use" class="section level2">
+<h2><span class="header-section-number">4.3</span> When to use</h2>
+<p>Use a histogram to show the distribution of <em>one continuous variable</em>. The y-scale can be represented in a variety of ways to express different results:</p>
+<ul>
+<li><strong>Count</strong>: Number of points that fall in each bin</li>
+<li><strong>Relative frequency</strong>: (<strong>Count</strong>) / (Total Number of datapoints)</li>
+<li><strong>Cumulative Frequency</strong>: Accumulation of all previous <strong>Relative frequencies</strong></li>
+<li><strong>Density</strong>: (<strong>Relative Frequency</strong>) / (binwidth)</li>
+</ul>
+</div>
+<div id="considerations" class="section level2">
+<h2><span class="header-section-number">4.4</span> Considerations</h2>
+<ul>
+<li>Be mindful of the boundaries of the bins and whether a point will fall into the left or right bin if it is on a boundary.</li>
+<li>The default binwidth of 30 is not always ideal, so consider altering it if things are looking strange.</li>
+</ul>
+</div>
+<div id="theory" class="section level2">
+<h2><span class="header-section-number">4.5</span> Theory</h2>
+<ul>
+<li>For more info about histograms and continuous variables, check out <a href="http://www.gradaanwr.net/content/03-examining-continuous-variables/" target="_blank">Chapter 3</a> of the textbook.</li>
+</ul>
+</div>
+<div id="external-resources" class="section level2">
+<h2><span class="header-section-number">4.6</span> External Resources</h2>
+<ul>
+<li><a href="https://campus.datacamp.com/courses/data-visualization-with-ggplot2-1/chapter-4-geometries?ex=5" target="_blank">DataCamp ggplot2 Histograms Exercise</a>: Simple interactive example of histograms with ggplot2</li>
+<li><a href="https://www.datacamp.com/community/tutorials/make-histogram-basic-r" target="_blank">DataCamp Histogram with Basic R</a>: “Tutorial for new R users whom need an accessible and easy-to-understand resource on how to create their own histogram with basic R.” ’Nuff said.</li>
+<li><a href="https://www.datacamp.com/community/tutorials/make-histogram-ggplot2" target="_blank">DataCamp Histogram with ggplot2</a>: Great article on making histograms with ggplot2.</li>
+<li><a href="https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist" target="_blank">hist documentation</a>: base R histogram documentation page.</li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" target="_blank">ggplot2 cheatsheet</a>: Always good to make close by.</li>
+</ul>
 
 </div>
 </div>
@@ -208,8 +289,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="iris.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
