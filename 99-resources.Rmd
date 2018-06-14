@@ -37,3 +37,9 @@ When you knit code, there are helpful options for suppressing warnings, plots, e
 https://yihui.name/knitr/options/
 
 
+<!-- Footer -->
+<center>
+</br></br>
+![EDAV](images/icons/edav_resource_small.png)
+</br></br>
+</center>

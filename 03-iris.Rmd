@@ -323,3 +323,9 @@ We have just touched the surface of ggplot and dipped our toes into grammar of g
 
 
 
+<!-- Footer -->
+<center>
+</br></br>
+![EDAV](images/icons/edav_resource_small.png)
+</br></br>
+</center>
