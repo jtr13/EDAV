@@ -111,3 +111,9 @@ Use a histogram to show the distribution of *one continuous variable*. The y-sca
 
 
 
+<!-- Footer -->
+<center>
+</br></br>
+![EDAV](images/icons/edav_resource_small.png)
+</br></br>
+</center>

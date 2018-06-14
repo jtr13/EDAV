@@ -32,3 +32,11 @@ I have made a few tshirts so you can show your love for R. Hope you enjoy.
 
 [Black Tidyverse R Shirt](https://teespring.com/mztees-r-tidyverse){target="_blank"}
 </center>
+
+
+<!-- Footer -->
+<center>
+</br></br>
+![EDAV](images/icons/edav_resource_small.png)
+</br></br>
+</center>

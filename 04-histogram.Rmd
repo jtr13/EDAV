@@ -112,7 +112,7 @@ Use a histogram to show the distribution of *one continuous variable*. The y-sca
 " 'Nuff said.
 - [DataCamp Histogram with ggplot2](https://www.datacamp.com/community/tutorials/make-histogram-ggplot2){target="_blank"}: Great article on making histograms with ggplot2.
 - [hist documentation](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist){target="_blank"}: base R histogram documentation page.
-- [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf){target="_blank"}: Always good to make close by.
+- [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf){target="_blank"}: Always good to have close by.
 
 
 
@@ -122,3 +122,9 @@ Use a histogram to show the distribution of *one continuous variable*. The y-sca
 
 
 
+<!-- Footer -->
+<center>
+</br></br>
+![EDAV](images/icons/edav_resource_small.png)
+</br></br>
+</center>
