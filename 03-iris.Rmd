@@ -328,6 +328,6 @@ We have just touched the surface of ggplot and dipped our toes into grammar of g
 <!-- Footer -->
 <center>
 </br></br>
-![EDAV](images/icons/edav_resource_small.png)
+[![EDAV](images/icons/edav_resource_small.png)](https://jtr13.github.io/EDAV/)
 </br></br>
 </center>
