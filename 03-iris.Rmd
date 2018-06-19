@@ -1,5 +1,9 @@
 # Walkthrough: Iris Example {#iris}
 
+## Overview
+
+This example goes through some work with the `iris` dataset to get to a finished scatterplot that is ready to present.
+
 ### tl;dr
 
 Here's what we end up with:
@@ -16,10 +20,6 @@ base_plot + theme_minimal()
 ```
 
 Wondering how we got there? Read on.
-
-## Overview
-
-This example goes through some work with the `iris` dataset to get to a finished scatterplot that is ready to present.
 
 ### Packages 
 
@@ -64,6 +64,8 @@ Be on the lookout for things you do often and try to see if there is a faster wa
 Additionally, the RStudio IDE can be a little daunting, but it is full of useful tools that you can read about in [this cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf){target="_blank"} or go through with this DataCamp course: [Part 1](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1){target="_blank"}, [Part 2](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-2){target="_blank"}.
 
 Okay, now let's get to it...
+
+***
 
 ## Viewing Data
 
@@ -196,7 +198,7 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
 Consider your motives when using jittering. You are by definition altering the data, but it may be beneficial in some situations.
 
 ***
-*Aside*
+###*Aside*
 
 We are dealing with a case where jittering works best to see the data, while changing the `alpha` doesn't help us much. Here's a quick example where opacity using `alpha` might be more directly helpful.
 ```{r opacity-useful-aside, message=FALSE}
@@ -237,7 +239,7 @@ We should clean it up a bit so it can stand on its own.
 
 ## Alter Appearance
 
-First, let's make the x/y labels a little cleaner and more descriptive:
+First, let's make the `x`/`y` labels a little cleaner and more descriptive:
 ```{r clean-xy-labels}
 ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) + 
   geom_point(aes(color = Species), alpha = 0.5, position = "jitter") +
