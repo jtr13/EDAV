@@ -1,5 +1,9 @@
 # Chart: Histogram {#histogram}
 
+## Overview
+
+This section covers how to make histograms.
+
 ## tl:dr
 Gimme a full-fledged example!
 
@@ -71,7 +75,7 @@ ggplot(df, aes(x)) +
 
 <img src="04-histogram_files/figure-html/ggplot-hist-1.png" width="672" />
 
-The ggplot version is a little more complicated on the surface, but you get more power and control as a result. **Note**: as shown above, ggplot expects a dataframe, so if you are getting an error where "R doesn't know what to" like this:
+The ggplot version is a little more complicated on the surface, but you get more power and control as a result. **Note**: as shown above, ggplot expects a dataframe, so if you are getting an error where "R doesn't know what to do" like this:
 
 ![ggplot dataframe error](images/ggplot_df_error.png)
 
