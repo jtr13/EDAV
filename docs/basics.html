@@ -128,7 +128,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.2.3" data-path="basics.html"><a href="basics.html#importing-data"><i class="fa fa-check"></i><b>2.2.3</b> Importing Data</a></li>
 <li class="chapter" data-level="2.2.4" data-path="basics.html"><a href="basics.html#r-markdown"><i class="fa fa-check"></i><b>2.2.4</b> R Markdown</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="basics.html"><a href="basics.html#help-me-r-community"><i class="fa fa-check"></i><b>2.3</b> Help Me, R Community!</a></li>
+<li class="chapter" data-level="2.3" data-path="basics.html"><a href="basics.html#getting-help"><i class="fa fa-check"></i><b>2.3</b> Getting Help</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="basics.html"><a href="basics.html#things-to-try"><i class="fa fa-check"></i><b>2.3.1</b> Things to Try</a></li>
+<li class="chapter" data-level="2.3.2" data-path="basics.html"><a href="basics.html#help-me-r-community"><i class="fa fa-check"></i><b>2.3.2</b> Help Me, R Community!</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="iris.html"><a href="iris.html"><i class="fa fa-check"></i><b>3</b> Walkthrough: Iris Example</a><ul>
 <li class="chapter" data-level="3.1" data-path="iris.html"><a href="iris.html#overview"><i class="fa fa-check"></i><b>3.1</b> Overview</a><ul>
@@ -228,6 +231,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Don’t know your way around the RStudio IDE? I highly recommend <a href="https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1" target="_blank">this DataCamp course</a>. Sections from Part 1 (Orientation, Programming, and Projects) are the most relevant for this course. They include videos about all the regions in RStudio, how to program efficiently/effectively in the IDE (gotta love those keyboard shortcuts), and the benefits of setting up R projects. A little hazy on that last sentence? The course will help.</li>
 </ul>
 <p><em>More Advanced</em>: Another option <a href="https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-part-1/" target="_blank">is this RStudio webinar</a>. Just want a quick reference to brush up with? Take a look at the <a href="https://www.rstudio.com/resources/cheatsheets/" target="_blank">RStudio Cheatsheets page</a>.</p>
+<p><em>More Advanced</em>: Want to make the RStudio IDE your own? Look into <a href="https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio" target="_blank">modifying the preferences</a>. You can customize the look of the IDE like default colors and typefaces, tweak default behaviors like clearing the environment on load, and integrate a session to a git repository. If something about the IDE bugs you, chances are you can make it more to your liking.</p>
 </div>
 <div id="learning-about-r" class="section level3">
 <h3><span class="header-section-number">2.1.3</span> Learning About R</h3>
@@ -244,7 +248,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3><span class="header-section-number">2.2.1</span> Installing Packages</h3>
 <p>A lot of the cool stuff comes from installing packages into R.</p>
 <ul>
-<li><p>How do you install packages? The main function we use is <code>install.packages(&quot;&quot;)</code>, which installs from <a href="https://cran.r-project.org" target="_blank">CRAN</a>, a well-known place where packages are stored. Then, once installed, you can use packages by calling them within <code>library()</code>.</p></li>
+<li><p>How do you install packages? The main function we use is <code>install.packages(&quot;&lt;package_name&gt;&quot;)</code>, which installs from <a href="https://cran.r-project.org" target="_blank">CRAN</a>, a well-known place where packages are stored. Then, once installed, you can use packages by calling them within <code>library()</code>.</p></li>
 <li><p>Still confused? <a href="https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=16" target="_blank">This DataCamp video</a> should help explain the process. Also be sure to try the <a href="https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=17" target="_blank">accompanying exercise</a> to make sure you have a feel for loading a package.</p></li>
 </ul>
 <p><em>More Advanced</em>: Want more info? Check out this <a href="https://www.datacamp.com/community/tutorials/r-packages-guide" target="_blank">DataCamp article on everything about installing packages in R</a>. As well as covering the basics, this article shows you how to install packages that are not located on CRAN using <code>devtools</code>, as well as ways to monitor the status/health of your installed packages.</p>
@@ -276,24 +280,42 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><em>More Advanced</em>: Want to jump right in? Open a new R Markdown file (File &gt; New File &gt; R Markdown…), and set its <em>Default Output Format</em> to HTML. You will get a R Markdown template you can tinker with. Try knitting the document to see what everything does.</p>
 </div>
 </div>
-<div id="help-me-r-community" class="section level2">
-<h2><span class="header-section-number">2.3</span> Help Me, R Community!</h2>
+<div id="getting-help" class="section level2">
+<h2><span class="header-section-number">2.3</span> Getting Help</h2>
 <div class="figure">
 <img src="images/halp_me_orly.png" alt="via https://dev.to/rly" />
 <p class="caption">via <a href="https://dev.to/rly" class="uri">https://dev.to/rly</a></p>
 </div>
+<p>First off…breeeeeathe. We can fix this. There are a bunch of resources out there that can help you.</p>
+<div id="things-to-try" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Things to Try</h3>
+<ul>
+<li><p>Remember: Always try to help yourself! <a href="https://www.r-project.org/help.html" target="_blank">This article</a> has a great list of tools to help you learn about anything you may be confused by. This includes learning about functions and packages as well as searching for info about a function/package/problem/etc. This is the perfect place to learn how to get the info you need.</p></li>
+<li><p>The RStudio Help menu (in the top toolbar) is a fantastic place to go for understanding/fixing any problems. There are links to documentation and manuals as well as cheatsheets and a lovely collection of keyboard shortcuts.</p></li>
+<li>Vignettes are a great way to learn about packages and how they work. Vignettes are like stylized manuals that can do a better job at explaining a package’s contents. For example, <code>ggplot2</code> has a vignette on aesthetics called <code>ggplot2-specs</code> that talks about different ways you can map data to different formats.
+<ul>
+<li>Typing <code>browseVignettes()</code> in the console will show you all the vignettes for all of the packages you have installed.</li>
+<li>You can also see vignettes by package by typing `vignette(package = “<package_name>”) into the console.</li>
+<li>To run a specific vignette, use <code>vignette(&quot;&lt;vignette_name&gt;&quot;)</code>. If the vignette can’t be resolved, include the package name as well: <code>vignette(&quot;&lt;vignette_name&quot;, package = &quot;&lt;package_name&gt;&quot;)</code></li>
+</ul></li>
+<li><p>Don’t ignore errors. They are telling you so much! If you give up because red text showed up in your console, take the time to see what that red text is <em>saying</em> Learn <a href="http://www.dummies.com/programming/r/how-to-read-errors-and-warnings-in-r/" target="_blank">how to read errors</a> and <a href="https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/programming?ex=18" target="_blank">what they are telling you</a>. They usually include where the problem happened and what R thinks the problem stems from.</p></li>
+</ul>
+<p><em>More Advanced</em>: Learn to love debugger mode. Debugging can have a steep learning curve, but huge payoffs. Take a look at these videos about <a href="https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/programming?ex=20" target="_blank">debugging with R</a>. Topics include running the debugger, setting breakpoints, customizing preferences, and more. <strong>Note</strong>: R Markdown files have some limitations for debugging, as discussed in <a href="https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio#debugging-in-r-markdown-documents" target="_blank">this article</a>. You could also consider working out your code in a <code>.R</code> file before including it in your R Markdown homework submission.</p>
+</div>
+<div id="help-me-r-community" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Help Me, R Community!</h3>
 <p>Relax. There are a bunch of people using the same tools you are.</p>
 <ul>
-<li><p>Try to help yourself! <a href="https://www.r-project.org/help.html" target="_blank">This article</a> has a great list of tools to help you learn about anything you may be confused by.</p></li>
 <li><p>Your fellow classmates are a good place to start! Post questions to <a href="https://piazza.com/" target="_blank">Piazza</a> to see how they could help.</p></li>
 <li><p>There is a lot of great documentation on R and its functions/packages/etc. Get comfy with <a href="https://www.rdocumentation.org/" target="_blank">R Documentation</a> and it will help you immensely.</p></li>
-<li><p><em>More Advanced</em>: There is a vibrant <a href="https://community.rstudio.com/" target="_blank">RStudio Community page</a>. Also, R likes twitter. Check out <a href="https://twitter.com/search?q=%23rstats" target="_blank">#rstats</a> or maybe <a href="https://twitter.com/hadleywickham/status/952259891342794752" target="_blank">let Hadley Wickham know about a wonky error message</a>.</p></li>
 </ul>
+<p><em>More Advanced</em>: There is a vibrant <a href="https://community.rstudio.com/" target="_blank">RStudio Community page</a>. Also, R likes twitter. Check out <a href="https://twitter.com/search?q=%23rstats" target="_blank">#rstats</a> or maybe <a href="https://twitter.com/hadleywickham/status/952259891342794752" target="_blank">let Hadley Wickham know about a wonky error message</a>.</p>
 <!-- Footer -->
 <center>
-</br></br> <img src="images/icons/edav_resource_small.png" alt="EDAV" /> </br></br>
+</br></br> <a href="https://jtr13.github.io/EDAV/"><img src="images/icons/edav_resource_small.png" alt="EDAV" /></a> </br></br>
 </center>
 
+</div>
 </div>
 </div>
             </section>

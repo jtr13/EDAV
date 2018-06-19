@@ -26,6 +26,8 @@ Great! RStudio is up and running on your computer! Now make sure you get comfy w
 
 *More Advanced*: Another option [is this RStudio webinar](https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-part-1/){target="_blank"}. Just want a quick reference to brush up with? Take a look at the [RStudio Cheatsheets page](https://www.rstudio.com/resources/cheatsheets/){target="_blank"}.
 
+*More Advanced*: Want to make the RStudio IDE your own? Look into [modifying the preferences](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio){target="_blank"}. You can customize the look of the IDE like default colors and typefaces, tweak default behaviors like clearing the environment on load, and integrate a session to a git repository. If something about the IDE bugs you, chances are you can make it more to your liking.
+
 ### Learning About R
 
 R is just like any language, programming or otherwise: you need to *use* it to get *used* to it.
@@ -40,7 +42,7 @@ R is just like any language, programming or otherwise: you need to *use* it to g
 
 A lot of the cool stuff comes from installing packages into R. 
 
-* How do you install packages? The main function we use is `install.packages("")`, which installs from [CRAN](https://cran.r-project.org){target="_blank"}, a well-known place where packages are stored. Then, once installed, you can use packages by calling them within `library()`. 
+* How do you install packages? The main function we use is `install.packages("<package_name>")`, which installs from [CRAN](https://cran.r-project.org){target="_blank"}, a well-known place where packages are stored. Then, once installed, you can use packages by calling them within `library()`. 
 
 * Still confused? [This DataCamp video](https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=16){target="_blank"} should help explain the process. Also be sure to try the [accompanying exercise](https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=17){target="_blank"} to make sure you have a feel for loading a package.
 
@@ -74,19 +76,36 @@ R Markdown is how you will be submitting assignments for this course. In general
 
 *More Advanced*: Want to jump right in? Open a new R Markdown file (File > New File > R Markdown...), and set its *Default Output Format* to HTML. You will get a R Markdown template you can tinker with. Try knitting the document to see what everything does.
 
-## Help Me, R Community!
+## Getting Help
 
 ![via https://dev.to/rly](images/halp_me_orly.png)
 
-Relax. There are a bunch of people using the same tools you are.
+First off...breeeeeathe. We can fix this. There are a bunch of resources out there that can help you.
 
-* Try to help yourself! [This article](https://www.r-project.org/help.html){target="_blank"} has a great list of tools to help you learn about anything you may be confused by.
+### Things to Try
+
+* Remember: Always try to help yourself! [This article](https://www.r-project.org/help.html){target="_blank"} has a great list of tools to help you learn about anything you may be confused by. This includes learning about functions and packages as well as searching for info about a function/package/problem/etc. This is the perfect place to learn how to get the info you need.
+
+* The RStudio Help menu (in the top toolbar) is a fantastic place to go for understanding/fixing any problems. There are links to documentation and manuals as well as cheatsheets and a lovely collection of keyboard shortcuts.
+
+* Vignettes are a great way to learn about packages and how they work. Vignettes are like stylized manuals that can do a better job at explaining a package's contents. For example, `ggplot2` has a vignette on aesthetics called `ggplot2-specs` that talks about different ways you can map data to different formats.
+    + Typing `browseVignettes()` in the console will show you all the vignettes for all of the packages you have installed.
+    + You can also see vignettes by package by typing `vignette(package = "<package_name>") into the console.
+    + To run a specific vignette, use `vignette("<vignette_name>")`. If the vignette can't be resolved, include the package name as well: `vignette("<vignette_name", package = "<package_name>")`
+    
+* Don't ignore errors. They are telling you so much! If you give up because red text showed up in your console, take the time to see what that red text is *saying* Learn [how to read errors](http://www.dummies.com/programming/r/how-to-read-errors-and-warnings-in-r/){target="_blank"} and [what they are telling you](https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/programming?ex=18){target="_blank"}. They usually include where the problem happened and what R thinks the problem stems from. 
+
+*More Advanced*: Learn to love debugger mode. Debugging can have a steep learning curve, but huge payoffs. Take a look at these videos about [debugging with R](https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/programming?ex=20){target="_blank"}. Topics include running the debugger, setting breakpoints, customizing preferences, and more. **Note**: R Markdown files have some limitations for debugging, as discussed in [this article](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio#debugging-in-r-markdown-documents){target="_blank"}. You could also consider working out your code in a `.R` file before including it in your R Markdown homework submission.
+
+### Help Me, R Community!
+
+Relax. There are a bunch of people using the same tools you are.
 
 * Your fellow classmates are a good place to start! Post questions to [Piazza](https://piazza.com/){target="_blank"} to see how they could help.
 
 * There is a lot of great documentation on R and its functions/packages/etc. Get comfy with [R Documentation](https://www.rdocumentation.org/){target="_blank"} and it will help you immensely.
 
-* *More Advanced*: There is a vibrant [RStudio Community page](https://community.rstudio.com/){target="_blank"}. Also, R likes twitter. Check out [#rstats](https://twitter.com/search?q=%23rstats){target="_blank"} or maybe [let Hadley Wickham know about a wonky error message](https://twitter.com/hadleywickham/status/952259891342794752){target="_blank"}.
+*More Advanced*: There is a vibrant [RStudio Community page](https://community.rstudio.com/){target="_blank"}. Also, R likes twitter. Check out [#rstats](https://twitter.com/search?q=%23rstats){target="_blank"} or maybe [let Hadley Wickham know about a wonky error message](https://twitter.com/hadleywickham/status/952259891342794752){target="_blank"}.
 
 
 
@@ -95,6 +114,6 @@ Relax. There are a bunch of people using the same tools you are.
 <!-- Footer -->
 <center>
 </br></br>
-![EDAV](images/icons/edav_resource_small.png)
+[![EDAV](images/icons/edav_resource_small.png)](https://jtr13.github.io/EDAV/)
 </br></br>
 </center>
