@@ -1,10 +1,11 @@
 # R Basics {#basics}
 
 ```{r, echo = FALSE}
-numpack <- dim(available.packages(repos = "http://cloud.r-project.org/"))[1]
+package_num <- dim(available.packages(repos = "http://cloud.r-project.org/"))[1]
+numpack <- floor(package_num / 100) * 100
 ```
 
-So...there is soooo much to the world of R. Textbooks, cheatsheets, exercises, and other buzzwords full of resources you could go through. There are over `r numpack` packages on [CRAN](https://cran.r-project.org){target="_blank"}, the network through which R code and packages are distributed. It can be overwhelming.  However, bear in mind that R is being used for a lot of different things, not all of which are relevant to EDAV. 
+So...there is soooo much to the world of R. Textbooks, cheatsheets, exercises, and other buzzwords full of resources you could go through. There are over `r format(numpack, scientific=FALSE)` packages on [CRAN](https://cran.r-project.org){target="_blank"}, the network through which R code and packages are distributed. It can be overwhelming.  However, bear in mind that R is being used for a lot of different things, not all of which are relevant to EDAV. 
 
 To help you navigate the landscape, here we provide a collection of resources that you should be familiar with in the context of this course. This is not to say that any of these resources are prerequisites, but they will come up in the course and we want to give you places to learn about them.
 
@@ -37,6 +38,16 @@ R is just like any language, programming or otherwise: you need to *use* it to g
 *More Advanced*: Want to curl up with a good book about R? We recommend [R for Data Science](http://r4ds.had.co.nz/){target="_blank"}. It jumps right in, but is quite extensive. Focus less on Part IV (Model).
 
 ## Getting More Specific
+
+### Installing Packages
+
+A lot of the cool stuff comes from installing packages into R. 
+
+* How do you install packages? The main function we use is `install.packages("")`, which installs from [CRAN](https://cran.r-project.org){target="_blank"}, a well-known place where packages are stored. Then, once installed, you can use packages by calling them within `library()`. 
+
+* Still confused? [This DataCamp video](https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=16){target="_blank"} should help explain the process. Also be sure to try the [accompanying exercise](https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=17){target="_blank"} to make sure you have a feel for loading a package.
+
+*More Advanced*: Want more info? Check out this [DataCamp article on everything about installing packages in R](https://www.datacamp.com/community/tutorials/r-packages-guide){target="_blank"}. As well as covering the basics, this article shows you how to install packages that are not located on CRAN using `devtools`, as well as ways to monitor the status/health of your installed packages.
 
 ### Tidyverse
 
@@ -71,6 +82,8 @@ R Markdown is how you will be submitting assignments for this course. In general
 ![via https://dev.to/rly](images/halp_me_orly.png)
 
 Relax. There are a bunch of people using the same tools you are.
+
+* Try to help yourself! [This article](https://www.r-project.org/help.html){target="_blank"} has a great list of tools to help you learn about anything you may be confused by.
 
 * Your fellow classmates are a good place to start! Post questions to [Piazza](https://piazza.com/){target="_blank"} to see how they could help.
 
