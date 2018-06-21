@@ -72,7 +72,8 @@ df <- data.frame(x)
 # plot data
 ggplot(df, aes(x)) +
   geom_histogram(color = "grey", fill = "lightBlue", 
-                 binwidth = 5, center = 52.5)
+                 binwidth = 5, center = 52.5) +
+  ggtitle("ggplot2 histogram of x")
 ```
 
 <img src="04-histogram_files/figure-html/ggplot-hist-1.png" width="672" />
@@ -114,7 +115,8 @@ hist(x, col = "lightblue", right = FALSE, ylim = c(0, 4),
 ```r
 # default...note the pop-up about default bin number
 ggplot(finches, aes(x = Depth)) +
-  geom_histogram()
+  geom_histogram() +
+  ggtitle("Default with pop-up about bin number")
 ```
 
 ```
@@ -123,21 +125,25 @@ ggplot(finches, aes(x = Depth)) +
 
 <img src="04-histogram_files/figure-html/unnamed-chunk-1-1.png" width="672" />
 
+Here are examples of changing the bins using the two ways described above:
+
 ```r
 # using binwidth
-ggplot(finches, aes(x = Depth)) +
-  geom_histogram(binwidth = 0.5, boundary = 6)
-```
-
-<img src="04-histogram_files/figure-html/unnamed-chunk-1-2.png" width="672" />
-
-```r
+p1 <- ggplot(finches, aes(x = Depth)) +
+  geom_histogram(binwidth = 0.5, boundary = 6) +
+  ggtitle("Changed binwidth value")
 # using bins
-ggplot(finches, aes(x = Depth)) +
-  geom_histogram(bins = 48, boundary = 6)
+p2 <- ggplot(finches, aes(x = Depth)) +
+  geom_histogram(bins = 48, boundary = 6) +
+  ggtitle("Changed bins value")
+
+# format plot layout
+library(gridExtra)
+grid.arrange(p1, p2, ncol = 2)
 ```
 
-<img src="04-histogram_files/figure-html/unnamed-chunk-1-3.png" width="672" />
+<img src="04-histogram_files/figure-html/fixed-histograms-binwidth-1.png" width="672" />
+
 
 *   **Bin Alignment**: Make sure the axes reflect the true boundaries of the histogram. You can use `boundary` to specify the endpoint of any bin or `center` to specify the center of any bin. `ggplot2` will be able to calculate where to place the rest of the bins (Also, notice that when the boundary was changed, the number of bins got smaller by one. This is because by default the bins are centered and go over/under the range of the data.)
 
@@ -147,29 +153,34 @@ df <- data.frame(x)
 # default alignment
 ggplot(df, aes(x)) +
   geom_histogram(binwidth = 5,
-                 fill = "lightBlue", col = "black")
+                 fill = "lightBlue", col = "black") +
+  ggtitle("Default Bin Alignment")
 ```
 
 <img src="04-histogram_files/figure-html/unnamed-chunk-2-1.png" width="672" />
 
+
 ```r
 # specify alignment with boundary
-ggplot(df, aes(x)) +
+p3 <- ggplot(df, aes(x)) +
   geom_histogram(binwidth = 5, boundary = 60,
-                 fill = "lightBlue", col = "black")
-```
+                 fill = "lightBlue", col = "black") +
+  ggtitle("Bin Alignment Using boundary")
 
-<img src="04-histogram_files/figure-html/unnamed-chunk-2-2.png" width="672" />
-
-```r
 # specify alignment with center
-ggplot(df, aes(x)) +
+p4 <- ggplot(df, aes(x)) +
   geom_histogram(binwidth = 5, center = 67.5,
-                 fill = "lightBlue", col = "black")
+                 fill = "lightBlue", col = "black") +
+  ggtitle("Bin Alignment Using center")
+
+# format layout
+library(gridExtra)
+grid.arrange(p3, p4, ncol = 2)
 ```
 
-<img src="04-histogram_files/figure-html/unnamed-chunk-2-3.png" width="672" />
+<img src="04-histogram_files/figure-html/alignment-fix-1.png" width="672" />
 
+**Note**: Don't use both `boundary` *and* `center` for bin alignment. Just pick one.
 
 ## Theory
 
