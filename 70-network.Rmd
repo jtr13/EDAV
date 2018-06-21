@@ -1,5 +1,7 @@
 # Networks {#networks}
 
+![](images/banners/banner_network.png)
+
 ## ggnetwork (static)
 
 ## visNetwork (interactive)
