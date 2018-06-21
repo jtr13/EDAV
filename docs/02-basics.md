@@ -26,7 +26,7 @@ Great! RStudio is up and running on your computer! Now make sure you get comfy w
 
 *More Advanced*: Another option [is this RStudio webinar](https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-part-1/){target="_blank"}. Just want a quick reference to brush up with? Take a look at the [RStudio Cheatsheets page](https://www.rstudio.com/resources/cheatsheets/){target="_blank"}.
 
-*More Advanced*: Want to make the RStudio IDE your own? Look into [modifying the preferences](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio){target="_blank"}. You can customize the look of the IDE like default colors and typefaces, tweak default behaviors like clearing the environment on load, and integrate a session to a git repository. If something about the IDE bugs you, chances are you can make it more to your liking.
+*More Advanced*: Want to make the RStudio IDE your own? Look into [modifying the preferences](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio){target="_blank"}. You can customize the look of the IDE like default colors and typefaces, tweak default behaviors like clearing the environment on load, and integrate a session with a git repository. If something about the IDE bugs you, chances are you can make it more to your liking.
 
 ### Learning About R
 
@@ -90,10 +90,10 @@ First off...breeeeeathe. We can fix this. There are a bunch of resources out the
 
 * Vignettes are a great way to learn about packages and how they work. Vignettes are like stylized manuals that can do a better job at explaining a package's contents. For example, `ggplot2` has a vignette on aesthetics called `ggplot2-specs` that talks about different ways you can map data to different formats.
     + Typing `browseVignettes()` in the console will show you all the vignettes for all of the packages you have installed.
-    + You can also see vignettes by package by typing `vignette(package = "<package_name>") into the console.
+    + You can also see vignettes by package by typing `vignette(package = "<package_name>")` into the console.
     + To run a specific vignette, use `vignette("<vignette_name>")`. If the vignette can't be resolved, include the package name as well: `vignette("<vignette_name", package = "<package_name>")`
     
-* Don't ignore errors. They are telling you so much! If you give up because red text showed up in your console, take the time to see what that red text is *saying* Learn [how to read errors](http://www.dummies.com/programming/r/how-to-read-errors-and-warnings-in-r/){target="_blank"} and [what they are telling you](https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/programming?ex=18){target="_blank"}. They usually include where the problem happened and what R thinks the problem stems from. 
+* Don't ignore errors. They are telling you so much! If you give up because red text showed up in your console, take the time to see what that red text is *saying*. Learn [how to read errors](http://www.dummies.com/programming/r/how-to-read-errors-and-warnings-in-r/){target="_blank"} and [what they are telling you](https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/programming?ex=18){target="_blank"}. They usually include where the problem happened and what R thinks the problem stems from. 
 
 *More Advanced*: Learn to love debugger mode. Debugging can have a steep learning curve, but huge payoffs. Take a look at these videos about [debugging with R](https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/programming?ex=20){target="_blank"}. Topics include running the debugger, setting breakpoints, customizing preferences, and more. **Note**: R Markdown files have some limitations for debugging, as discussed in [this article](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio#debugging-in-r-markdown-documents){target="_blank"}. You could also consider working out your code in a `.R` file before including it in your R Markdown homework submission.
 
