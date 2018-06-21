@@ -1,5 +1,7 @@
 # R Basics {#basics}
 
+![](images/banners/banner_basics.png)
+
 ```{r, echo = FALSE}
 package_num <- dim(available.packages(repos = "http://cloud.r-project.org/"))[1]
 numpack <- floor(package_num / 100) * 100

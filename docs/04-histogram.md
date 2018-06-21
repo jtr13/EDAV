@@ -1,5 +1,7 @@
 # Chart: Histogram {#histogram}
 
+![](images/banners/banner_histogram.png)
+
 ## Overview
 
 This section covers how to make histograms.
@@ -91,8 +93,83 @@ Use a histogram to show the distribution of *one continuous variable*. The y-sca
 
 ## Considerations
 
-*   Be mindful of the boundaries of the bins and whether a point will fall into the left or right bin if it is on a boundary.
-*   The default binwidth of 30 is not always ideal, so consider altering it if things are looking strange.
+*   **Bin Boundaries**: Be mindful of the boundaries of the bins and whether a point will fall into the left or right bin if it is on a boundary.
+
+```r
+# format layout
+op <- par(mfrow = c(1, 2), las = 1)
+
+# right closed
+hist(x, col = "lightblue", ylim = c(0, 4),
+     xlab = "right closed ex. (55, 60]", font.lab = 2)
+# right open
+hist(x, col = "lightblue", right = FALSE, ylim = c(0, 4),
+     xlab = "right open ex. [55, 60)", font.lab = 2)
+```
+
+<img src="04-histogram_files/figure-html/bin-boundaries-1.png" width="672" />
+
+*   **Bin Number**: The default bin number of 30 in ggplot2 is not always ideal, so consider altering it if things are looking strange. You can specify the width explicitly with `binwidth` or provide the desired number of bins with `bins`.
+
+```r
+# default...note the pop-up about default bin number
+ggplot(finches, aes(x = Depth)) +
+  geom_histogram()
+```
+
+```
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+```
+
+<img src="04-histogram_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+
+```r
+# using binwidth
+ggplot(finches, aes(x = Depth)) +
+  geom_histogram(binwidth = 0.5, boundary = 6)
+```
+
+<img src="04-histogram_files/figure-html/unnamed-chunk-1-2.png" width="672" />
+
+```r
+# using bins
+ggplot(finches, aes(x = Depth)) +
+  geom_histogram(bins = 48, boundary = 6)
+```
+
+<img src="04-histogram_files/figure-html/unnamed-chunk-1-3.png" width="672" />
+
+*   **Bin Alignment**: Make sure the axes reflect the true boundaries of the histogram. You can use `boundary` to specify the endpoint of any bin or `center` to specify the center of any bin. `ggplot2` will be able to calculate where to place the rest of the bins (Also, notice that when the boundary was changed, the number of bins got smaller by one. This is because by default the bins are centered and go over/under the range of the data.)
+
+```r
+df <- data.frame(x)
+
+# default alignment
+ggplot(df, aes(x)) +
+  geom_histogram(binwidth = 5,
+                 fill = "lightBlue", col = "black")
+```
+
+<img src="04-histogram_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+
+```r
+# specify alignment with boundary
+ggplot(df, aes(x)) +
+  geom_histogram(binwidth = 5, boundary = 60,
+                 fill = "lightBlue", col = "black")
+```
+
+<img src="04-histogram_files/figure-html/unnamed-chunk-2-2.png" width="672" />
+
+```r
+# specify alignment with center
+ggplot(df, aes(x)) +
+  geom_histogram(binwidth = 5, center = 67.5,
+                 fill = "lightBlue", col = "black")
+```
+
+<img src="04-histogram_files/figure-html/unnamed-chunk-2-3.png" width="672" />
+
 
 ## Theory
 

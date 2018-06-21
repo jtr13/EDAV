@@ -1,5 +1,7 @@
 # Walkthrough: Iris Example {#iris}
 
+![](images/banners/banner_iris.png)
+
 ## Overview
 
 This example goes through some work with the `iris` dataset to get to a finished scatterplot that is ready to present.

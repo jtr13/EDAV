@@ -113,8 +113,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#everything-you-need-for-edav"><i class="fa fa-check"></i><b>1.1</b> Everything you need for EDAV</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#improving-this-resource"><i class="fa fa-check"></i><b>1.2</b> Improving this resource</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#fun-stuff-r-shirts"><i class="fa fa-check"></i><b>1.3</b> Fun Stuff: R Shirts</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#what-the-banners-mean"><i class="fa fa-check"></i><b>1.2</b> What the Banners Mean</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#improving-this-resource"><i class="fa fa-check"></i><b>1.3</b> Improving this resource</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#fun-stuff-r-shirts"><i class="fa fa-check"></i><b>1.4</b> Fun Stuff: R Shirts</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>2</b> R Basics</a><ul>
 <li class="chapter" data-level="2.1" data-path="basics.html"><a href="basics.html#getting-started"><i class="fa fa-check"></i><b>2.1</b> Getting Started</a><ul>
@@ -211,6 +212,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="histogram" class="section level1">
 <h1><span class="header-section-number">4</span> Chart: Histogram</h1>
+<div class="figure">
+<img src="images/banners/banner_histogram.png" />
+
+</div>
 <div id="overview-1" class="section level2">
 <h2><span class="header-section-number">4.1</span> Overview</h2>
 <p>This section covers how to make histograms.</p>
@@ -288,9 +293,54 @@ df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(x)
 <div id="considerations" class="section level2">
 <h2><span class="header-section-number">4.5</span> Considerations</h2>
 <ul>
-<li>Be mindful of the boundaries of the bins and whether a point will fall into the left or right bin if it is on a boundary.</li>
-<li>The default binwidth of 30 is not always ideal, so consider altering it if things are looking strange.</li>
+<li><strong>Bin Boundaries</strong>: Be mindful of the boundaries of the bins and whether a point will fall into the left or right bin if it is on a boundary.</li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># format layout</span>
+op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mfrow =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="dt">las =</span> <span class="dv">1</span>)
+
+<span class="co"># right closed</span>
+<span class="kw">hist</span>(x, <span class="dt">col =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">4</span>),
+     <span class="dt">xlab =</span> <span class="st">&quot;right closed ex. (55, 60]&quot;</span>, <span class="dt">font.lab =</span> <span class="dv">2</span>)
+<span class="co"># right open</span>
+<span class="kw">hist</span>(x, <span class="dt">col =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="dt">right =</span> <span class="ot">FALSE</span>, <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">4</span>),
+     <span class="dt">xlab =</span> <span class="st">&quot;right open ex. [55, 60)&quot;</span>, <span class="dt">font.lab =</span> <span class="dv">2</span>)</code></pre></div>
+<p><img src="04-histogram_files/figure-html/bin-boundaries-1.png" width="672" /></p>
+<ul>
+<li><strong>Bin Number</strong>: The default bin number of 30 in ggplot2 is not always ideal, so consider altering it if things are looking strange. You can specify the width explicitly with <code>binwidth</code> or provide the desired number of bins with <code>bins</code>.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># default...note the pop-up about default bin number</span>
+<span class="kw">ggplot</span>(finches, <span class="kw">aes</span>(<span class="dt">x =</span> Depth)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>()</code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="04-histogram_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># using binwidth</span>
+<span class="kw">ggplot</span>(finches, <span class="kw">aes</span>(<span class="dt">x =</span> Depth)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="fl">0.5</span>, <span class="dt">boundary =</span> <span class="dv">6</span>)</code></pre></div>
+<p><img src="04-histogram_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># using bins</span>
+<span class="kw">ggplot</span>(finches, <span class="kw">aes</span>(<span class="dt">x =</span> Depth)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">48</span>, <span class="dt">boundary =</span> <span class="dv">6</span>)</code></pre></div>
+<p><img src="04-histogram_files/figure-html/unnamed-chunk-1-3.png" width="672" /></p>
+<ul>
+<li><strong>Bin Alignment</strong>: Make sure the axes reflect the true boundaries of the histogram. You can use <code>boundary</code> to specify the endpoint of any bin or <code>center</code> to specify the center of any bin. <code>ggplot2</code> will be able to calculate where to place the rest of the bins (Also, notice that when the boundary was changed, the number of bins got smaller by one. This is because by default the bins are centered and go over/under the range of the data.)</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(x)
+
+<span class="co"># default alignment</span>
+<span class="kw">ggplot</span>(df, <span class="kw">aes</span>(x)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">5</span>,
+                 <span class="dt">fill =</span> <span class="st">&quot;lightBlue&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;black&quot;</span>)</code></pre></div>
+<p><img src="04-histogram_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># specify alignment with boundary</span>
+<span class="kw">ggplot</span>(df, <span class="kw">aes</span>(x)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">5</span>, <span class="dt">boundary =</span> <span class="dv">60</span>,
+                 <span class="dt">fill =</span> <span class="st">&quot;lightBlue&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;black&quot;</span>)</code></pre></div>
+<p><img src="04-histogram_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># specify alignment with center</span>
+<span class="kw">ggplot</span>(df, <span class="kw">aes</span>(x)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">5</span>, <span class="dt">center =</span> <span class="fl">67.5</span>,
+                 <span class="dt">fill =</span> <span class="st">&quot;lightBlue&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;black&quot;</span>)</code></pre></div>
+<p><img src="04-histogram_files/figure-html/unnamed-chunk-2-3.png" width="672" /></p>
 </div>
 <div id="theory" class="section level2">
 <h2><span class="header-section-number">4.6</span> Theory</h2>

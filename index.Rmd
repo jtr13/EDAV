@@ -15,7 +15,7 @@ description: "Everything you need to do well in EDAV"
 # About this resource {-}
 
 <center>
-![EDAV](images/icons/edav_resource.png)
+![](images/banners/edav_banner.png)
 </center>
 
 This resource is specifically tailored to the EDAV course offered at [Columbia University](https://www.columbia.edu/){target="_blank"}. However, anyone interested in working with data in R will benefit from perusing these pages.

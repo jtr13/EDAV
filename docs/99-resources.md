@@ -1,5 +1,7 @@
 # External Resources {#resources}
 
+![](images/banners/banner_resources.png)
+
 This is a long list of helpful external resources, from books to URLs to exercises, etc.
 
 ## Books
