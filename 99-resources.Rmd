@@ -40,6 +40,6 @@ https://yihui.name/knitr/options/
 <!-- Footer -->
 <center>
 </br></br>
-![EDAV](images/icons/edav_resource_small.png)
+[![EDAV](images/icons/edav_resource_small.png)](https://jtr13.github.io/EDAV/)
 </br></br>
 </center>
