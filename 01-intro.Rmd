@@ -30,17 +30,17 @@ The banners at the top of each page are an effort to improve your ability to nav
 
 ![](images/banners/banner_green.png)
 
-**Green == DOC**: The green banners signal pages that contain more compact **documentation**. An example of a green page is the [histogram page](histogram.html), which includes simple examples of how to create histograms, when to use them, and things to be aware of/watch out for. The green pages are less hand-holdy than the red pages: they explain how to use a chart/tool using examples and simple terms. If you have an idea in mind and are just wondering how to execute it, the green pages will help fill in those gaps.
+**Green == DOC**: The green banners signal pages that contain more compact **documentation**. An example of a green page is the [histogram page](histogram.html), which includes simple examples of how to create histograms, when to use them, and things to be aware of/watch out for. The green pages hold your hand much less than the red pages: they explain how to use a chart/tool using examples and simple terms. If you have an idea in mind and are just wondering how to execute it, the green pages will help fill in those gaps.
 
 ![](images/banners/banner_yellow.png)
 
-**Yellow == REF**: The yellow banners signal pages that contain simple collections of  **references**. An example of a yellow page is the [external resources page](resources.html), which is a long list of materials that you can look through and learn from. Yellow pages have the least amount of explanation: they are collections of resources and references that will help you learn about new things. 
+**Yellow == REF**: The yellow banners signal pages that contain simple collections of  **references**. An example of a yellow page is the [external resources page](resources.html), which is a list of materials that you can look through and learn from. Yellow pages have the least amount of hand-holding: they are collections of resources and references that will help you learn about new things. 
 
 ## Improving this resource
 
 Not finding what you are looking for? Think a section could be made clearer? If you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
 
-## Fun Stuff: R Shirts
+## Fun Stuff: T-Shirts
 
 I have made a few tshirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy. 
 
@@ -48,15 +48,15 @@ I have made a few tshirts available on [Teespring](https://teespring.com/stores/
 
 <center>
 
-[![EDAV Shirt Color](images/grey_edav_shirt.png)](https://teespring.com/edav-color-tee){target="_blank"}
-[![EDAV Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-single){target="_blank"}
-[![Blue R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-hex-edav){target="_blank"}
-[![Black Tidyverse R Shirt](images/black-tidyverse-r-shirt.png)](https://teespring.com/edav-tidyverse){target="_blank"}
+[![Color EDAV Logo Shirt](images/grey_edav_shirt.png)](https://teespring.com/edav-color-tee){target="_blank"}
+[![White EDAV Logo Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-single){target="_blank"}
+[![R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-hex-edav){target="_blank"}
+[![Tidyverse R Shirt](images/black-tidyverse-r-shirt.png)](https://teespring.com/edav-tidyverse){target="_blank"}
 
-[Grey EDAV Shirt](https://teespring.com/edav-color-tee){target="_blank"}</br>
-[Blue EDAV Shirt](https://teespring.com/edav-single){target="_blank"}</br>
-[Blue R Shirt](https://teespring.com/r-hex-edav){target="_blank"}</br>
-[Black Tidyverse R Shirt](https://teespring.com/edav-tidyverse){target="_blank"}</br>
+[Color EDAV Logo Shirt](https://teespring.com/edav-color-tee){target="_blank"}</br>
+[EDAV Logo Shirt](https://teespring.com/edav-single){target="_blank"}</br>
+[R Shirt](https://teespring.com/r-hex-edav){target="_blank"}</br>
+[Tidyverse R Shirt](https://teespring.com/edav-tidyverse){target="_blank"}</br>
 </center>
 
 

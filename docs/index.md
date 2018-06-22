@@ -1,7 +1,7 @@
 --- 
 title: "EDAV Resource"
 author: "Zach Bogart, Joyce Robbins"
-date: "2018-06-21"
+date: "2018-06-22"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -18,7 +18,7 @@ description: "Everything you need to do well in EDAV"
 ![](images/banners/edav_banner.png)
 </center>
 
-This resource is specifically tailored to the EDAV course offered at [Columbia University](https://www.columbia.edu/){target="_blank"}. However, anyone interested in working with data in R will benefit from perusing these pages.
+This resource is specifically tailored to the Exploratory Data Analysis and Visualization course offered at [Columbia University](https://www.columbia.edu/){target="_blank"}. However, anyone interested in working with data in R will benefit from perusing these pages.
 
 ## Contact
 
