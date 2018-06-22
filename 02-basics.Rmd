@@ -1,4 +1,4 @@
-# R Basics {#basics}
+# R Basics {#basics} 
 
 ![](images/banners/banner_basics.png)
 
