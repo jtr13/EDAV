@@ -1,6 +1,6 @@
 # Chart: PLOT {#PLOT}
 
-![](images/banners/banner_histogram.png)
+![](images/banners/banner_boxplot.png)
 
 ## Overview
 
