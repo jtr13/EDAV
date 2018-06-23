@@ -1,10 +1,10 @@
-# Chart: Boxplot {#boxplot}
+# Chart: PLOT {#PLOT}
 
-![](images/banners/banner_boxplot.png)
+![](images/banners/banner_bargraph.png)
 
 ## Overview
 
-This section covers how to make boxplots.
+This section covers how to make PLOT.
 
 ## tl:dr
 <!-- Gimme a full-fledged example! -->
