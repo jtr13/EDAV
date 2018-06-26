@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="project.html">
-
+<link rel="prev" href="networks.html">
+<link rel="next" href="resources.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -246,45 +246,178 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="resources" class="section level1">
-<h1><span class="header-section-number">8</span> General Resources</h1>
+<div id="project" class="section level1">
+<h1><span class="header-section-number">7</span> Final Project Notes</h1>
 <div class="figure">
-<img src="images/banners/banner_resources.png" />
+<img src="images/banners/banner_presentation.png" />
 
 </div>
-<p>This is a long list of helpful general resources related to EDAV.</p>
-<div id="books" class="section level2">
-<h2><span class="header-section-number">8.1</span> Books</h2>
-<p>A lot of these are available for students through <a href="http://library.columbia.edu/" target="_blank">Columbia Libraries</a>, in both physical and e-book formats.</p>
-<div id="graphical-data-analysis-with-r" class="section level3">
-<h3><span class="header-section-number">8.1.1</span> <a href="http://rosuda.org/GDA" target="_blank"><strong>Graphical Data Analysis with R</strong></a></h3>
-<p>This book systematically goes through the different types of data, including categorical variables, continuous variables, and time series. The author shows different examples of plotting techniques using ggplot and promoting the “grammar of graphics” model. Code snippets included and available at the <a href="http://rosuda.org/GDA">book’s website</a>.</p>
+<div id="overview-3" class="section level2">
+<h2><span class="header-section-number">7.1</span> Overview</h2>
+<p>This section goes over what’s expected for the final project.</p>
+<p><strong>General Note</strong>: Please note that this sheet cannot possibly cover all the “do’s and don’ts” of data analysis and visualization. You are expected to follow all of the best practices discussed in class throughout the semester.</p>
 </div>
-<div id="r-for-data-science" class="section level3">
-<h3><span class="header-section-number">8.1.2</span> <a href="http://r4ds.had.co.nz/" target="_blank"><strong>R for Data Science</strong></a></h3>
-<p>The classic. Everything from data types, programming, modeling, communicating, and those keyboard shortcuts you keep forgetting. To quote the book, “this book will teach you how to do data science with R.” Nuff said.</p>
+<div id="general-info" class="section level2">
+<h2><span class="header-section-number">7.2</span> General Info</h2>
+<div id="goal" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> Goal</h3>
+<p>The goal of this project is to perform an exploratory data analysis / create visualizations with data of your choosing in order to gain preliminary insights on questions of interest to you.</p>
+</div>
+<div id="teams" class="section level3">
+<h3><span class="header-section-number">7.2.2</span> Teams</h3>
+<p>You must work in teams of 2-4 people. (If you have specific interests you should try to find partners on <a href="https://piazza.com/" target="_blank">Piazza</a> first as we will not be able to match on specific criteria – we will simply assign groups in the order in which responses come in.)</p>
+</div>
+<div id="topics" class="section level3">
+<h3><span class="header-section-number">7.2.3</span> Topics</h3>
+<p>Start with a topic / question that interests you and <em>then</em> look for data!</p>
+</div>
+<div id="data" class="section level3">
+<h3><span class="header-section-number">7.2.4</span> Data</h3>
+<p>Choose data from the original source: that is, one that is not included in R (or similar), nor used in Kaggle (or similar) competitions, nor relatively well-known/well-trodden through some other forum. If in doubt, <em>ask</em>!</p>
+<p>A few examples are:</p>
+<ul>
+<li><a href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a></li>
+<li><a href="https://www.bls.gov/" target="_blank">US Bureau of Labor Statistics</a></li>
+</ul>
+</div>
+<div id="analysis" class="section level3">
+<h3><span class="header-section-number">7.2.5</span> Analysis</h3>
+<p>You have a lot of freedom to choose what to do, as long as you restrict yourselves to exploratory techniques (rather than modeling / prediction approaches). In addition, your analysis must be clearly documented and reproducible.</p>
+</div>
+<div id="feedback" class="section level3">
+<h3><span class="header-section-number">7.2.6</span> Feedback</h3>
+<p>At any point, you may ask the head TA or the instructor (jtr13) for advice. Our primary role in this regard will be to provide general guidance on your choice of data / topic / direction. As always, you are encouraged to post specific questions to <a href="https://piazza.com/" target="_blank">Piazza</a>, particularly coding questions and issues. You may also volunteer to discuss your project with the class in order to get feedback–if you’d like to do this, <a href="http://stat.columbia.edu/department-directory/name/joyce-robbins/" target="_blank">email the instructor</a> to schedule a date.</p>
+</div>
+<div id="peer-review" class="section level3">
+<h3><span class="header-section-number">7.2.7</span> Peer Review</h3>
+<p>A portion of your grade is based on the feedback <em>you</em> give to other groups. After the due date, each individual will be assigned two project groups to review, and instructions will be provided.</p>
+<p><strong>Note</strong>: part of the grade you receive for the class is based on the quality of review that you <em>write</em>, not on the feedback that your project <em>receives.</em> Your grade for the project (as for all other assignments for the class) will be determined solely by the instructor and TAs.</p>
+</div>
+<div id="report-format" class="section level3">
+<h3><span class="header-section-number">7.2.8</span> Report Format</h3>
+<p>With the exception of the interactive part, your project should be submitted to CourseWorks in the same manner as homework assignments, as <strong>.Rmd</strong> and <strong>.html</strong> files, with graphs / output rendered. You will lose points if we have trouble reading your file, need to ask you to resubmit with graphs visible, if links are broken, or if we have other difficulties accessing your materials. It’s ok if code is in different files and different places, just make sure there are working links in your report to these locations. <strong>Note</strong>: Using Markdown + code chunks is supposed to make combining code, text and graphs easier. If it is making it more difficult, you are probably trying to do something that isn’t well suited to the tool set. Focus on the text and graphs, not the formatting. If you’re not sure if something is important to focus on or not, please ask.</p>
+<p><em>Advice</em>: don’t wait to start writing. Your overall project will undoubtedly be better if you give up trying to get that last graph perfect or the last bit of analysis done and get to the <em>writing</em>!</p>
+</div>
+<div id="a-note-on-style" class="section level3">
+<h3><span class="header-section-number">7.2.9</span> A Note on Style</h3>
+<p>You are encouraged to be as intellectually honest as possible. That means pointing out flaws in your work, detailing obstacles, disagreements, decision points, etc. – the kinds of “behind-the-scene” things that are important but often left out of reports. You may use the first person (“I”/“We”) or specific team members’ names, as relevant.</p>
 </div>
 </div>
-<div id="cheatsheets" class="section level2">
-<h2><span class="header-section-number">8.2</span> Cheatsheets</h2>
-<div id="cheatsheet-of-cheatsheets" class="section level3">
-<h3><span class="header-section-number">8.2.1</span> <a href="https://paulvanderlaken.com/author/lakenp/" target="_blank"><strong>Cheatsheet of cheatsheets</strong></a></h3>
-<p>Paul van der Laken has put together a large collection of R resource links, including cheat sheets, style guides, package info, blogs, and other helpful resources.</p>
+<div id="outline" class="section level2">
+<h2><span class="header-section-number">7.3</span> Outline</h2>
+<p>Your report should include the following sections, with subtitles (“Introduction”, etc.) as indicated:</p>
+<div id="introduction" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> Introduction</h3>
+<p>Explain why you chose this topic, and the questions you are interested in studying.</p>
+<p>List team members and a description of how each contributed to the project.</p>
 </div>
-<div id="rstudio-cheatsheet-collection" class="section level3">
-<h3><span class="header-section-number">8.2.2</span> <a href="https://www.rstudio.com/resources/cheatsheets/" target="_blank">RStudio Cheatsheet Collection</a></h3>
-<p>Collection of downloadable cheatsheets from RStudio. Includes ones on R Markdown, Data Transformation (<code>dplyr</code>), and Data Visualization (<code>ggplot2</code>). They also have a R Markdown Reference Guide, which is great for remembering that one chunk option that’s on the tip of your tongue.</p>
+<div id="description-of-data" class="section level3">
+<h3><span class="header-section-number">7.3.2</span> Description of Data</h3>
+<p>Describe how the data was collected, how you accessed it, and any other noteworthy features.</p>
+</div>
+<div id="analysis-of-data-quality" class="section level3">
+<h3><span class="header-section-number">7.3.3</span> Analysis of Data Quality</h3>
+<p>Provide a detailed, well-organized description of data quality, including textual description, graphs, and code.</p>
+</div>
+<div id="main-analysis-exploratory-data-analysis" class="section level3">
+<h3><span class="header-section-number">7.3.4</span> Main Analysis (Exploratory Data Analysis)</h3>
+<p>Provide a detailed, well-organized description of your findings, including textual description, graphs, and code. Your focus should be on both the results and the process. Include, as reasonable and relevant, approaches that didn’t work, challenges, the data cleaning process, etc.</p>
+</div>
+<div id="executive-summary-presentation-style" class="section level3">
+<h3><span class="header-section-number">7.3.5</span> Executive Summary (Presentation-style)</h3>
+<p>Provide a short nontechnical summary of the most revealing findings of your analysis written for a nontechnical audience. The length should be approximately two pages (if we were using pages…) Take extra care to clean up your graphs, ensuring that best practices for presentation are followed.</p>
+<p><strong>Note</strong>: “Presentation” here refers to the style of graph, that is, graphs that are cleaned up for presentation, as opposed to the rough ones we often use for exploratory data analysis. You do not have to present your work to the class! However, you may choose to present your work as your community contribution, in which case you need to email me to set a date before the community contribution due date. (The presentation itself may be later.)</p>
+</div>
+<div id="interactive-component" class="section level3">
+<h3><span class="header-section-number">7.3.6</span> Interactive Component</h3>
+<p>Select one (or more) of your key findings to present in an interactive format. Be selective in the choices that you present to the user; the idea is that in 5-10 minutes, users should have a good sense of the question(s) that you are interested in and the trends you’ve identified in the data. In other words, they should understand the value of the analysis, be it business value, scientific value, general knowledge, etc.</p>
+<p>Interactive graphs must follow all of the best practices as with static graphs in terms of perception, labeling, accuracy, etc.</p>
+<p>You may choose the tool (D3, Shiny, or other) The complexity of your tool will be taken into account: we expect more complexity from a higher-level tool like Shiny than a lower-level tool like D3, which requires you to build a lot from scratch.</p>
+<p>Make sure that the user is clear on what the tool does and how to use it.</p>
+<p>Publish your graph somewhere on the web and provide a link in your report in the interactive section. The obvious choices are <a href="http://blockbuilder.org/" target="_blank">blockbuilder.org</a> to create a block for D3, and <a href="https://www.shinyapps.io/" target="_blank">shinyapps.io</a> for Shiny apps but other options are fine. You are encouraged to share experiences on <a href="https://piazza.com/" target="_blank">Piazza</a> to help classmates with the publishing process.</p>
+<p>As applicable, all of the following will be considered in the grading process:</p>
+<ul>
+<li>Choice of data and plot types to present</li>
+<li>Clear relevance to question(s), project in general</li>
+<li>Design of interactive component(s)</li>
+<li>Clarity of presentation, including instructions</li>
+<li>Technical execution (include a description of what you would work on in the future, what you’ve attempted, etc. so we know it’s on your radar)</li>
+</ul>
+</div>
+<div id="conclusion" class="section level3">
+<h3><span class="header-section-number">7.3.7</span> Conclusion</h3>
+<p>Discuss limitations and future directions, lessons learned.</p>
+</div>
+</div>
+<div id="faq" class="section level2">
+<h2><span class="header-section-number">7.4</span> FAQ</h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>How long should the project be?</strong> It should take the reader approximately 15-20 minutes to read the report. We cannot provide a specific number of graphs or pages since there are so many variables. Use your judgment to cover all of the important material without being repetitive. You can report on what you’ve done without including all of the graphs; for example, if you looked at maps of each of the fifty states you can include 1 or 2 as examples.</p></li>
+<li><p><strong>Do we have to present the project to the class?</strong> No. Presenting your project as your community contribution is optional.</p></li>
+<li><p><strong>Someone has already used the same data, is that ok?</strong> Yes. As long as you get the data from the original source, not a site like Kaggle, you’re fine. You can check with the professor if you want to be sure.</p></li>
+<li><p><strong>I spent 30 minutes looking at my data, and then 1000 hours building this super cool interactive app so users can analyze the data themselves. Can’t you count the interactive part for 95% of my grade?</strong> No. While skill sets overlap in the real world, and it’s important to know something about building things, the assumption is that you are doing the work of the data scientist: actually analyzing the data rather than building tools for someone else to do it. The former (the data!) has been the main focus of this class and therefore is the primary focus of the final project.</p></li>
+</ol>
+</div>
+<div id="rubric" class="section level2">
+<h2><span class="header-section-number">7.5</span> Rubric</h2>
+<ol style="list-style-type: decimal">
+<li>Introduction (including choice of data, questions), Team description
+<ul>
+<li>10 points</li>
+</ul></li>
+<li>Description of Data
+<ul>
+<li>10 points</li>
+</ul></li>
+<li>Graphical Analysis of Data Quality
+<ul>
+<li>10 points</li>
+</ul></li>
+<li>Main Analysis (focus on quality of EDA choices / techniques)
+<ul>
+<li>20 points</li>
+</ul></li>
+<li>Executive Summary (focus on quality of presentation choices / techniques)
+<ul>
+<li>20 points</li>
+</ul></li>
+<li>Interactive Component
+<ul>
+<li>20 points</li>
+</ul></li>
+<li>Conclusion
+<ul>
+<li>10 points</li>
+</ul></li>
+</ol>
+<p>TOTAL = 100 points</p>
+<ul>
+<li><p>Points will be deducted for technical flaws (problems opening files, following links, etc.), for not citing sources, and for lack of reproducibility.</p></li>
+<li><p><strong>Late Submissions</strong>: 10 points will be deducted per day.</p></li>
+<li><p><strong>Plagiarism of any kind will not be tolerated and will result in a grade of 0 for the project.</strong></p></li>
+</ul>
+</div>
+<div id="executive-summary-notes" class="section level2">
+<h2><span class="header-section-number">7.6</span> Executive Summary Notes</h2>
+<p>The executive summary should be a well-formatted, presentable final product of your results. Here are some notes to consider when putting it together:</p>
+<ul>
+<li>Title, axis labels, tick mark labels, and legends should be comprehensible (easy to understand) and legible (easy to read / decipher).</li>
+<li>Tick marks should not be labeled in scientific notation or with long strings of zeros, such as 3000000000. Instead, convert to smaller numbers and change the units: 3000000000 becomes “3” and the axis label “billions of views”.</li>
+<li>Units should be intuitive (An axis labeled in month/day/year format is intuitive; one labeled in seconds since January 1, 1970 is not.)</li>
+<li>The font size should be large enough to read clearly. The default in ggplot2 is generally too small. You can easily change it by passing the base font size to the theme, such as <code>+ theme_grey(16)</code> (The default base font size is 11).</li>
+<li>The order of items on the axes and legends should be logical. (Alphabetical is usually not the best option.)</li>
+<li>Colors should be color-vision-deficiency-friendly.</li>
+<li>If categorical variable levels are long, set up the graph so the categorical variable is on the y-axis and the names are horizontal. A better option, if possible, is to shorten the names of the levels.</li>
+<li>Not all EDA graphs lend themselves to presentation, either because the graph form is hard to understand without practice or it’s not well labeled. The labeling problem can be solved by adding text in an image editor. The downside is that it is not reproducible. If you want to go this route, for the Mac, <a href="https://www.apple.com/keynote/" target="_blank">Keynote</a> and <a href="https://paintbrush.sourceforge.io/" target="_blank">Paintbrush</a> are good, free options.</li>
+<li>Err on the side of simplicity. Don’t, for example, overuse color when it’s not necessary. Ask yourself: does color make this graph any clearer? If it doesn’t, leave it out.</li>
+<li>Test your graphs on nontechnical friends and family and ask for feedback.</li>
+</ul>
+<p>Above all, have fun with it :)</p>
 <!-- Footer -->
 <center>
 </br></br> <a href="https://jtr13.github.io/EDAV/"><img src="images/icons/edav_resource_small.png" alt="EDAV" /></a> </br></br>
 </center>
 
-<div id="refs" class="references">
-<div>
-<p>DataCamp. 2018. “DataCamp.” <a href="https://www.datacamp.com/" class="uri">https://www.datacamp.com/</a>.</p>
-</div>
-</div>
-</div>
 </div>
 </div>
             </section>
@@ -292,8 +425,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="project.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="networks.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
