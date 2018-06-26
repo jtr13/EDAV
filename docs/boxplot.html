@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="basics.html">
+<link rel="prev" href="histogram.html">
+<link rel="next" href="networks.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -220,57 +220,138 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">1</span> Introduction</h1>
+<div id="boxplot" class="section level1">
+<h1><span class="header-section-number">5</span> Chart: Boxplot</h1>
 <div class="figure">
-<img src="images/banners/banner_intro.png" />
+<img src="images/banners/banner_boxplot.png" />
 
 </div>
-<div id="everything-you-need-for-edav" class="section level2">
-<h2><span class="header-section-number">1.1</span> Everything you need for EDAV</h2>
-<p>This resource has everything you need and more to be successful with R, this EDAV course, and beyond.</p>
-<p>With this resource, we try to give you a <strong>curated collection of tools and references</strong> that will make it easier to learn how to work with data in R.</p>
-<p>In addition, we include sections on <strong>basic chart types/tools</strong> so you can learn by doing.</p>
-<p>There are also <strong>several walkthroughs</strong> where we work with data and discuss problems as well as some tips/tricks that will help you.</p>
-<p>So, this resource provides a <strong>curated list of materials relevant to EDAV</strong> as well as examples that directly relate to the work you will be doing in this course.</p>
-<p>We hope this resource serves you well.</p>
+<div id="overview-2" class="section level2">
+<h2><span class="header-section-number">5.1</span> Overview</h2>
+<p>This section covers how to make boxplots.</p>
 </div>
-<div id="what-the-banners-mean" class="section level2">
-<h2><span class="header-section-number">1.2</span> What the Banners Mean</h2>
-<p>The banners at the top of each page are an effort to improve your ability to navigate this resource. Each one is color-coded based on its content and has a unique icon to improve recall. There are four types:</p>
-<div class="figure">
-<img src="images/banners/banner_blue.png" />
+<div id="tldr-2" class="section level2">
+<h2><span class="header-section-number">5.2</span> tl:dr</h2>
+<p>I want a nice example and I want it NOW!</p>
+<p>Here’s a look at the weights of newborn chicks split by the feed supplement they received:</p>
+<p><img src="05-boxplot_files/figure-html/tldr-show-plot-1.png" width="672" /></p>
+<p>And here’s the code:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(datasets) <span class="co"># data</span>
+<span class="kw">library</span>(ggplot2) <span class="co"># plotting</span>
 
-</div>
-<p><strong>Blue == INFO</strong>: The blue banners signal pages that contain basic <strong>information</strong>. Examples of blue pages include this introduction page and the <a href="basics.html">basics page</a>, which explains how to setup R/RStudio as well as ways to get help if you need it. Blue pages are the help desk of this resource: look to them if you are lost and need to find your way.</p>
-<div class="figure">
-<img src="images/banners/banner_red.png" />
+<span class="co"># reorder supplements</span>
+supps &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;horsebean&quot;</span>, <span class="st">&quot;linseed&quot;</span>, <span class="st">&quot;soybean&quot;</span>, <span class="st">&quot;meatmeal&quot;</span>, <span class="st">&quot;sunflower&quot;</span>, <span class="st">&quot;casein&quot;</span>)
 
+<span class="co"># boxplot by feed supplement with jitter layer</span>
+<span class="kw">ggplot</span>(chickwts, <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">factor</span>(feed, <span class="dt">levels =</span> supps), 
+                     <span class="dt">y =</span> weight)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="co"># plotting</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">fill =</span> <span class="st">&quot;#cc9a38&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;#473e2c&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>, <span class="dt">width =</span> <span class="fl">0.1</span>, <span class="dt">color =</span> <span class="st">&quot;#926d25&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="co"># formatting</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Casein Makes You Fat?!&quot;</span>,
+          <span class="dt">subtitle =</span> <span class="st">&quot;Boxplots of Chick Weights by Feed Supplement&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Feed Supplement&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Chick Weight (g)&quot;</span>, <span class="dt">caption =</span> <span class="st">&quot;Source: datasets::chickwts&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.subtitle =</span> <span class="kw">element_text</span>(<span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;grey35&quot;</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.caption =</span> <span class="kw">element_text</span>(<span class="dt">color =</span> <span class="st">&quot;grey68&quot;</span>))</code></pre></div>
+<p>For more info on this dataset, type <code>?datasets::chickwts</code> into the console.</p>
 </div>
-<p><strong>Red == WALK</strong>: The red banners signal pages that contain more extensive <strong>walkthroughs</strong>. An example of a red page is the <a href="iris.html">iris walkthrough</a>, where a well-known dataset is presented as a pretty scatterplot and steps are shown from start to finish. This page type is the most thorough: it trys to provide full documentation, explanations of design choices, and advice on best practices. It’s like going to office hours and having a great clarifying chat with a course assistant…in article form. If you would like to see a fully-worked-through example of something with a lot of guidance along the way, check out the red pages.</p>
-<div class="figure">
-<img src="images/banners/banner_green.png" />
+<div id="simple-examples-1" class="section level2">
+<h2><span class="header-section-number">5.3</span> Simple Examples</h2>
+<p>Okay…<em>much</em> simpler please.</p>
+<p>Let’s use the <code>airquality</code> dataset from the <code>datasets</code> package:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(datasets)
+<span class="kw">head</span>(airquality, <span class="dt">n =</span> <span class="dv">5</span>)</code></pre></div>
+<pre><code>##   Ozone Solar.R Wind Temp Month Day
+## 1    41     190  7.4   67     5   1
+## 2    36     118  8.0   72     5   2
+## 3    12     149 12.6   74     5   3
+## 4    18     313 11.5   62     5   4
+## 5    NA      NA 14.3   56     5   5</code></pre>
+<div id="boxplot-using-base-r" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Boxplot using Base R</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot data</span>
+<span class="kw">boxplot</span>(airquality, <span class="dt">col =</span> <span class="st">&#39;lightBlue&#39;</span>, <span class="dt">main =</span> <span class="st">&quot;Base R Boxplots of airquality&quot;</span>)</code></pre></div>
+<p><img src="05-boxplot_files/figure-html/base-r-1.png" width="672" /></p>
+<p>Boxplots with Base R are super easy. Like <a href="histogram.html">histograms</a>, boxplots only need the data. In this case, we passed a dataframe with six variables, so it made separate boxplots for each variable. You may not want to create boxplots for every variable, in which case you could specify the variables individually or use <a href="https://www.rdocumentation.org/packages/dplyr/versions/0.7.5/topics/filter" target="_blank"><code>filter</code></a> from the <a href="https://www.rdocumentation.org/packages/dplyr/versions/0.7.5" target="_blank"><code>dplyr</code></a> package.</p>
+</div>
+<div id="boxplot-using-ggplot2" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Boxplot using ggplot2</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># import ggplot</span>
+<span class="kw">library</span>(ggplot2)
 
-</div>
-<p><strong>Green == DOC</strong>: The green banners signal pages that contain more compact <strong>documentation</strong>. An example of a green page is the <a href="histogram.html">histogram page</a>, which includes simple examples of how to create histograms, when to use them, and things to be aware of/watch out for. The green pages hold your hand much less than the red pages: they explain how to use a chart/tool using examples and simple terms. If you have an idea in mind and are just wondering how to execute it, the green pages will help fill in those gaps.</p>
-<div class="figure">
-<img src="images/banners/banner_yellow.png" />
+<span class="co"># plot data</span>
+g1 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">stack</span>(airquality), <span class="kw">aes</span>(<span class="dt">x =</span> ind, <span class="dt">y =</span> values)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">fill =</span> <span class="st">&quot;lightBlue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="co"># extra formatting</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;ggplot2 Boxplots of airquality&quot;</span>)
 
+g1</code></pre></div>
+<pre><code>## Warning: Removed 44 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="05-boxplot_files/figure-html/ggplot-1.png" width="672" /></p>
+<p><code>ggplot2</code> requires data to be mapped to the <code>x</code> and <code>y</code> aesthetics. Here we use the <code>stack</code> function to combine each column of the <code>airquality</code> dataframe. Reading the documentation for the <code>stack</code> function (<code>?utils::stack</code>), we see the new stacked dataframe has two columns: <code>values</code> and <code>ind</code>, which we use to create the boxplots. <strong>Notice</strong>: <code>ggplot2</code> warns us that it is ignoring “non-finite values”, which are the NA’s in the dataset.</p>
 </div>
-<p><strong>Yellow == REF</strong>: The yellow banners signal pages that contain simple collections of <strong>references</strong>. An example of a yellow page is the <a href="resources.html">external resources page</a>, which is a list of materials that you can look through and learn from. Yellow pages have the least amount of hand-holding: they are collections of resources and references that will help you learn about new things.</p>
 </div>
-<div id="improving-this-resource" class="section level2">
-<h2><span class="header-section-number">1.3</span> Improving this resource</h2>
-<p>Not finding what you are looking for? Think a section could be made clearer? If you would like to improve this resource, consider submitting a pull request on the <a href="https://github.com/jtr13/EDAV" target="_blank">github page</a>.</p>
+<div id="when-to-use-1" class="section level2">
+<h2><span class="header-section-number">5.4</span> When to use</h2>
+<p>Boxplots should be used to display <em>continuous variables</em>. They are particularly useful for identifying outliers and comparing different groups.</p>
+<p><em>Aside</em>: Boxplots may even help you <a href="https://xkcd.com/539/" target="_blank">convince someone you are their outlier</a> (If you like it when people over-explain jokes, <a href="https://www.explainxkcd.com/wiki/index.php/539:_Boyfriend" target="_blank">here is why that comic is funny</a>.).</p>
 </div>
-<div id="fun-stuff-t-shirts" class="section level2">
-<h2><span class="header-section-number">1.4</span> Fun Stuff: T-Shirts</h2>
-<p>I have made a few tshirts available on <a href="https://teespring.com/stores/edav" target="_blank">Teespring</a> so you can show your love for EDAV and R. Hope you enjoy.</p>
-<p><em>P.S. Designing a cool shirt or sticker is a great addition to your community contribution. It has to be cool, though :)</em></p>
-<center>
-<p><a href="https://teespring.com/edav-color-tee" target="_blank"><img src="images/grey_edav_shirt.png" alt="Color EDAV Logo Shirt" /></a> <a href="https://teespring.com/edav-single" target="_blank"><img src="images/blue_edav_shirt.png" alt="White EDAV Logo Shirt" /></a> <a href="https://teespring.com/r-hex-edav" target="_blank"><img src="images/blue-r-shirt.png" alt="R Shirt" /></a> <a href="https://teespring.com/edav-tidyverse" target="_blank"><img src="images/black-tidyverse-r-shirt.png" alt="Tidyverse R Shirt" /></a></p>
-<a href="https://teespring.com/edav-color-tee" target="_blank">Color EDAV Logo Shirt</a></br> <a href="https://teespring.com/edav-single" target="_blank">EDAV Logo Shirt</a></br> <a href="https://teespring.com/r-hex-edav" target="_blank">R Shirt</a></br> <a href="https://teespring.com/edav-tidyverse" target="_blank">Tidyverse R Shirt</a></br>
-</center>
+<div id="considerations-1" class="section level2">
+<h2><span class="header-section-number">5.5</span> Considerations</h2>
+<ul>
+<li><strong>Flipping Orientation</strong>: Often you want boxplots to be horizontal. Super easy to do: just tack on <code>coord_flip()</code>:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># g1 plot from above (5.3.2)</span>
+g1 <span class="op">+</span><span class="st"> </span><span class="kw">coord_flip</span>()</code></pre></div>
+<pre><code>## Warning: Removed 44 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="05-boxplot_files/figure-html/flip-boxplot-1.png" width="672" /></p>
+<ul>
+<li><strong>NOT for categorical data</strong>: Boxplots are great, but they do NOT work with categorical data. Make sure your variable is continuous before using boxplots. Here’s an example of what <em>not</em> to do:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(likert) <span class="co"># data</span>
+<span class="kw">library</span>(dplyr) <span class="co"># data manipulation</span>
+
+<span class="co"># load/format data</span>
+<span class="kw">data</span>(pisaitems)
+pisa &lt;-<span class="st"> </span>pisaitems[<span class="dv">1</span><span class="op">:</span><span class="dv">100</span>, <span class="dv">2</span><span class="op">:</span><span class="dv">7</span>] <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">mutate_all</span>(as.integer) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>dplyr<span class="op">::</span><span class="kw">filter</span>(<span class="kw">complete.cases</span>(.))
+
+<span class="co"># create theme</span>
+theme &lt;-<span class="st"> </span><span class="kw">theme</span>(<span class="dt">plot.title =</span> <span class="kw">element_text</span>(<span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.subtitle =</span> <span class="kw">element_text</span>(<span class="dt">face =</span> <span class="st">&quot;bold&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;grey35&quot;</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">plot.caption =</span> <span class="kw">element_text</span>(<span class="dt">color =</span> <span class="st">&quot;grey68&quot;</span>))
+
+<span class="co"># create plot</span>
+plot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">stack</span>(pisa), <span class="kw">aes</span>(<span class="dt">x =</span> ind, <span class="dt">y =</span> values)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">fill =</span> <span class="st">&quot;#9B3535&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Don&#39;t Plot Boxplots of Categorical Variables Like This&quot;</span>,
+          <span class="dt">subtitle =</span> <span class="st">&quot;...seriously don&#39;t. Here, I&#39;ll make it red so it looks scary:&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Assessment Code&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Values&quot;</span>, <span class="dt">caption =</span> <span class="st">&quot;Source: likert::pisaitems&quot;</span>)
+
+<span class="co"># bad boxplot</span>
+plot <span class="op">+</span><span class="st"> </span>theme</code></pre></div>
+<p><img src="05-boxplot_files/figure-html/bad-boxplots-1.png" width="672" /></p>
+</div>
+<div id="theory-1" class="section level2">
+<h2><span class="header-section-number">5.6</span> Theory</h2>
+<!-- *   TODO Outliers  -->
+<ul>
+<li>For more info about boxplots and continuous variables, check out <a href="http://www.gradaanwr.net/content/03-examining-continuous-variables/" target="_blank">Chapter 3</a> of the textbook.</li>
+</ul>
+</div>
+<div id="external-resources-1" class="section level2">
+<h2><span class="header-section-number">5.7</span> External Resources</h2>
+<ul>
+<li><a href="https://campus.datacamp.com/courses/helsinki-open-data-science/logistic-regression?ex=7" target="_blank">DataCamp: Quick Exercise on Boxplots</a>: a simple example of making boxplots from a dataset.</li>
+<li><a href="http://t-redactyl.io/blog/2016/04/creating-plots-in-r-using-ggplot2-part-10-boxplots.html" target="_blank">Article on boxplots with ggplot2</a>: An excellent collection of code examples on how to make boxplots with <code>ggplot2</code>. Covers layering, working with legends, faceting, formatting, and more. If you want a boxplot to look a certain way, this article will help.</li>
+<li><a href="https://plot.ly/ggplot2/box-plots/" target="_blank">Boxplots with plotly package</a>: boxplot examples using the <code>plotly</code> package. These allow for a little interactivity on hover, which might better explain the underlying statistics of your plot.</li>
+<li><a href="http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization" target="_blank">ggplot2 Boxplot: Quick Start Guide</a>: Article from <a href="http://www.sthda.com/english/" target="_blank">STHDA</a> on making boxplots using ggplot2. Excellent starting point for getting immediate results and custom formatting.</li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" target="_blank">ggplot2 cheatsheet</a>: Always good to have close by.</li>
+</ul>
 <!-- Footer -->
 <center>
 </br></br> <a href="https://jtr13.github.io/EDAV/"><img src="images/icons/edav_resource_small.png" alt="EDAV" /></a> </br></br>
@@ -283,8 +364,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="basics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="histogram.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="networks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
