@@ -20,8 +20,8 @@ finches <- Sleuth3::case0201
 # finch histograms by year with overlayed density curves
 ggplot(finches, aes(x = Depth, y = ..density..)) + 
   # plotting
-  geom_histogram(bins = 20, colour = "darkGrey", fill = "lightBlue", boundary = 0) +
-  geom_density(color = "red") + 
+  geom_histogram(bins = 20, colour = "#80593D", fill = "#9FC29F", boundary = 0) +
+  geom_density(color = "#3D6480") + 
   facet_wrap(~Year) +
   # formatting
   ggtitle("Severe Drought Led to Finches with Bigger Chompers",
@@ -42,8 +42,8 @@ finches <- Sleuth3::case0201
 # finch histograms by year with overlayed density curves
 ggplot(finches, aes(x = Depth, y = ..density..)) + 
   # plotting
-  geom_histogram(bins = 20, colour = "darkGrey", fill = "lightBlue", boundary = 0) +
-  geom_density(color = "red") + 
+  geom_histogram(bins = 20, colour = "#80593D", fill = "#9FC29F", boundary = 0) +
+  geom_density(color = "#3D6480") + 
   facet_wrap(~Year) +
   # formatting
   ggtitle("Severe Drought Led to Finches with Bigger Chompers",
