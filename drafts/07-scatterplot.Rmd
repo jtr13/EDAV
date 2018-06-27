@@ -1,18 +1,17 @@
-# Chart: PLOT {#PLOT}
+# Chart: Scatterplot {#scatterplot}
 
 ![](images/banners/banner_scatterplot.png)
 
 ## Overview
 
-This section covers how to make PLOT.
+This section covers how to make scatterplots
 
 ## tl:dr
-<!-- Gimme a full-fledged example! -->
+<!-- Nice Example Joke -->
 
-<!-- Here's an application of histograms that looks at how the beaks of Galapagos finches changed due to external factors: -->
+<!-- Explanation: -->
 
-EXPLAIN
-```{r tldr-loading, echo=FALSE}
+```{r tldr-show-plot, echo=FALSE}
 
 ```
 
@@ -21,36 +20,55 @@ And here's the code:
 
 ```
 
-## Simple Examples
-NOTE
+For more info on this dataset, type <TODO> into the console.
 
-DATA
+## Simple Examples
+<!-- Simplify Note -->
+ 
+<!-- Simple Explanation of Data: -->
 ```{r simple-example-data}
 
 ```
 
-### PLOT using Base R
+### Boxplot using Base R
 ```{r base-r}
 # plot data
 
 ```
 
-INFO/COMMENT
+<!-- Base R Plot Explanation -->
 
-### PLOT using ggplot2
+### Boxplot using ggplot2
 ```{r ggplot}
 # import ggplot
 library(ggplot2)
 
+# plot data
+g1 <- ggplot(stack(airquality), aes(x = ind, y = values)) + 
+  geom_boxplot(fill = "lightBlue") +
+  # extra formatting
+  labs(x = "") +
+  ggtitle("ggplot2 Boxplots of airquality")
+
+g1
 ```
 
+<!-- ggplot2 explanation -->
+
 ## When to use
+<!-- Quick Note on When to use this plot -->
 
 ## Considerations
 
+<!-- *   List of things to pay attention to with examples -->
+
 ## Theory
 
+<!-- *   Link to textbook -->
+
 ## External Resources
+
+<!-- - []](){target="_blank"}: Links to resources with quick blurb -->
 
 
 
