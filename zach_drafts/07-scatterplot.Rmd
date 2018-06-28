@@ -1,17 +1,43 @@
 # Chart: Scatterplot {#scatterplot}
 
 ![](images/banners/banner_scatterplot.png)
+<!-- Notes
+
+- Mammals could be cool
+  - Scatter plot of brain vs body weight
+  - annotate a few key points
+
+
+-->
+
 
 ## Overview
 
 This section covers how to make scatterplots
 
-## tl:dr
+## tl;dr
 <!-- Nice Example Joke -->
 
 <!-- Explanation: -->
+```{r}
+# str(mammals)
+row.names(mammals)
+
+```
+
 
 ```{r tldr-show-plot, echo=FALSE}
+library(MASS) # data
+library(ggplot2) # plotting
+
+ggplot(mammals, aes(x = body, y = brain)) +
+  geom_point(col = "#ff0000") +
+  # geom_text(aes(label = ifelse(body > 1000, as.character(row.names(mammals)),'')), hjust = 0, vjust = 0) +
+  # geom_text(aes(label = row.names(mammals)), hjust = 0, vjust = 0) +
+  geom_text(aes(label = ifelse(row.names(mammals) == "Human", as.character(row.names(mammals)),'')), hjust = 0, vjust = 0) +
+  scale_x_log10() +
+  scale_y_log10() +
+  ggtitle("Testing out Scatterplots", subtitle = "Testing some more")
 
 ```
 
@@ -70,6 +96,9 @@ g1
 
 <!-- - []](){target="_blank"}: Links to resources with quick blurb -->
 
+- Note about labeling points
+  https://stackoverflow.com/questions/15624656/label-points-in-geom-point
+
 
 
 
@@ -78,6 +107,6 @@ g1
 <!-- Footer -->
 <center>
 </br></br>
-[![EDAV](images/icons/edav_resource_small.png)](https://jtr13.github.io/EDAV/)
+[![EDAV](images/icons/edav_resource_small.png)](index.html)
 </br></br>
 </center>
