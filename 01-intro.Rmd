@@ -42,7 +42,7 @@ Not finding what you are looking for? Think a section could be made clearer? If 
 
 ## Fun Stuff: T-Shirts
 
-I have made a few tshirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy. 
+Zach Bogart has made a few tshirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy. 
 
 *P.S. Designing a cool shirt or sticker is a great addition to your community contribution. It has to be cool, though :)*
 
@@ -63,6 +63,6 @@ I have made a few tshirts available on [Teespring](https://teespring.com/stores/
 <!-- Footer -->
 <center>
 </br></br>
-[![EDAV](images/icons/edav_resource_small.png)](https://jtr13.github.io/EDAV/)
+[![EDAV](images/icons/edav_resource_small.png)](index.html)
 </br></br>
 </center>

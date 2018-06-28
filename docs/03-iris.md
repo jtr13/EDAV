@@ -429,6 +429,6 @@ We have just touched the surface of ggplot and dipped our toes into grammar of g
 <!-- Footer -->
 <center>
 </br></br>
-[![EDAV](images/icons/edav_resource_small.png)](https://jtr13.github.io/EDAV/)
+[![EDAV](images/icons/edav_resource_small.png)](index.html)
 </br></br>
 </center>
