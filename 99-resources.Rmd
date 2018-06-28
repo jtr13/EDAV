@@ -33,6 +33,6 @@ Collection of downloadable cheatsheets from RStudio. Includes ones on R Markdown
 <!-- Footer -->
 <center>
 </br></br>
-[![EDAV](images/icons/edav_resource_small.png)](https://jtr13.github.io/EDAV/)
+[![EDAV](images/icons/edav_resource_small.png)](index.html)
 </br></br>
 </center>
