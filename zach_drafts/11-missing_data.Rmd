@@ -1,0 +1,24 @@
+# Placeholder {#placeholder}
+
+![](images/banners/banners_placeholder_missing_data.png)
+
+## Notes
+
+- dealing with NAs (why they ruin things)
+- Options to deal with them
+- visualizing missing data
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<center>
+</br></br>
+[![EDAV](images/icons/edav_resource_small.png)](index.html)
+</br></br>
+</center>
