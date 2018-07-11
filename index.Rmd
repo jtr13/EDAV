@@ -57,7 +57,7 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 
 #### Networks
 <center>
-[![Networks](images/banners/banner_network.png)](networks.html)
+[![Networks](images/banners/banner_network.png)](visnetwork.html)
 </center>
 
 ### Red Pages

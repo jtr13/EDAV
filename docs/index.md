@@ -1,7 +1,7 @@
 --- 
 title: "EDAV Resource"
 author: "Zach Bogart, Joyce Robbins"
-date: "2018-06-28"
+date: "2018-07-11"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -57,7 +57,7 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 
 #### Networks
 <center>
-[![Networks](images/banners/banner_network.png)](networks.html)
+[![Networks](images/banners/banner_network.png)](visnetwork.html)
 </center>
 
 ### Red Pages

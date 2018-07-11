@@ -1,0 +1,28 @@
+# TODO Contribute to this resource {#contribute}
+
+![](images/banners/banner_contribute.png)
+
+## Overview
+
+- How to improve this resource
+- Community Contribution: Propose a new page and submit it as github pull request
+- We appreciate any improvements and will consider all submissions closely
+
+## Improving this resource
+
+Not finding what you are looking for? Think a section could be made clearer? If you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<center>
+</br></br>
+[![EDAV](images/icons/edav_resource_small.png)](index.html)
+</br></br>
+</center>
