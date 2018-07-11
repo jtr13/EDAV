@@ -1,8 +1,8 @@
-# Networks {#networks}
+# Networks {#visnetwork}
 
 ![](images/banners/banner_network.png)
 
-## ggnetwork (static)
+<!--## ggnetwork (static)-->
 
 ## visNetwork (interactive)
 
