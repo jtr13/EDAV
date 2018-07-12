@@ -165,10 +165,3 @@ The executive summary should be a well-formatted, presentable final product of y
 *   Test your graphs on nontechnical friends and family and ask for feedback.
 
 Above all, have fun with it :)
-
-<!-- Footer -->
-<center>
-</br></br>
-[![EDAV](images/icons/edav_resource_small.png)](index.html)
-</br></br>
-</center>

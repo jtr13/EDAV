@@ -58,9 +58,3 @@ Zach Bogart has made a few tshirts available on [Teespring](https://teespring.co
 </center>
 
 
-<!-- Footer -->
-<center>
-</br></br>
-[![EDAV](images/icons/edav_resource_small.png)](index.html)
-</br></br>
-</center>
