@@ -12,8 +12,6 @@ In addition, we include sections on **basic chart types/tools** so you can learn
 
 There are also **several walkthroughs** where we work with data and discuss problems as well as some tips/tricks that will help you.
 
-So, this resource provides a **curated list of materials relevant to EDAV** as well as examples that directly relate to the work you will be doing in this course.
-
 We hope this resource serves you well.
 
 ## What the Banners Mean
