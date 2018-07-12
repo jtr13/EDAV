@@ -3,6 +3,7 @@ bookdown::gitbook:
   split_by: chapter
   highlight: pygments
   includes:
+    in_header: header.html
     after_body: footer.html
   config:
     toc:
