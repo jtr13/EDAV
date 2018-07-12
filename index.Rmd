@@ -93,10 +93,3 @@ Joyce Robbins:
 /
 [Github](https://github.com/jtr13){target="_blank"}
 
-
-<!-- Footer -->
-<center>
-</br></br>
-[![EDAV](images/icons/edav_resource_small.png)](index.html)
-</br></br>
-</center>

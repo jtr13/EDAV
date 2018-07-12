@@ -28,11 +28,3 @@ Collection of downloadable cheatsheets from RStudio. Includes ones on R Markdown
 
 
 
-
-
-<!-- Footer -->
-<center>
-</br></br>
-[![EDAV](images/icons/edav_resource_small.png)](index.html)
-</br></br>
-</center>
