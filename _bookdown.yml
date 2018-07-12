@@ -2,6 +2,10 @@ book_filename: "edav-resource"
 chapter_name: ""
 repo: https://github.com/jtr13/EDAV
 output_dir: docs
-# rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Diving-In.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
+edit: https://github.com/jtr13/EDAV/edit/master/%s
+
+# change for ordering book chapters
+# rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Diving-In.Rmd"]
+
