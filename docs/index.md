@@ -1,18 +1,20 @@
 --- 
-title: "EDAV Resource"
+title: "edav.info/"
 author: "Zach Bogart, Joyce Robbins"
-date: "2018-07-12"
+date: "2018-07-14"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: jtr13/EDAV
-# url: ''
+url: 'edav.info/'
 description: "Everything you need to do well in EDAV"
 ---
 
-# About this resource {-}
+<a href="index.html"><img src="images/icons/edav_resource_small.png"></a>
+
+# About {-}
 
 <center>
 ![](images/banners/edav_banner.png)

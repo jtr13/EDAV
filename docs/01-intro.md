@@ -46,12 +46,11 @@ Zach Bogart has made a few tshirts available on [Teespring](https://teespring.co
 
 <center>
 
-[![Color EDAV Logo Shirt](images/grey_edav_shirt.png)](https://teespring.com/edav-color-tee){target="_blank"}
-[![White EDAV Logo Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-single){target="_blank"}
+[![White EDAV Logo Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-info){target="_blank"}
+<br>
 [![R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-hex-edav){target="_blank"}
 [![Tidyverse R Shirt](images/black-tidyverse-r-shirt.png)](https://teespring.com/edav-tidyverse){target="_blank"}
 
-[Color EDAV Logo Shirt](https://teespring.com/edav-color-tee){target="_blank"}</br>
 [EDAV Logo Shirt](https://teespring.com/edav-single){target="_blank"}</br>
 [R Shirt](https://teespring.com/r-hex-edav){target="_blank"}</br>
 [Tidyverse R Shirt](https://teespring.com/edav-tidyverse){target="_blank"}</br>

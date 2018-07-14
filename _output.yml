@@ -3,13 +3,15 @@ bookdown::gitbook:
   split_by: chapter
   highlight: pygments
   includes:
-    in_header: header.html
+    in_header: favicon.html
+    before_body: header.html
     after_body: footer.html
+    
   config:
     toc:
       collapse: subsection
       before: |
-        <li><a href="./">EDAV Resource</a></li>
+        <li><a href="index.html">edav.info/</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 

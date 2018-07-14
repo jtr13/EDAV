@@ -5,19 +5,19 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>EDAV Resource</title>
+  <title>edav.info/</title>
   <meta name="description" content="Everything you need to do well in EDAV">
   <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="EDAV Resource" />
+  <meta property="og:title" content="edav.info/" />
   <meta property="og:type" content="book" />
-  
+  <meta property="og:url" content="edav.info/" />
   
   <meta property="og:description" content="Everything you need to do well in EDAV" />
   <meta name="github-repo" content="jtr13/EDAV" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="EDAV Resource" />
+  <meta name="twitter:title" content="edav.info/" />
   
   <meta name="twitter:description" content="Everything you need to do well in EDAV" />
   
@@ -25,7 +25,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins">
 
 
-<meta name="date" content="2018-07-12">
+<meta name="date" content="2018-07-14">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -52,8 +52,8 @@
 <script src="libs/vis-4.20.1/vis.min.js"></script>
 <script src="libs/visNetwork-binding-2.0.4/visNetwork.js"></script>
 <!-- 
-Header 
-  - included at the beginning of every page
+Favicon 
+  - included in the toolbar of every page
   - EDAV Logo favicon
   - via: https://www.favicon-generator.org/
 -->
@@ -128,10 +128,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">EDAV Resource</a></li>
+<li><a href="index.html">edav.info/</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this resource</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a><ul>
 <li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#table-of-contents"><i class="fa fa-check"></i><b>0.1</b> Table of Contents</a><ul>
 <li class="chapter" data-level="0.1.1" data-path="index.html"><a href="index.html#blue-pages"><i class="fa fa-check"></i><b>0.1.1</b> Blue Pages</a></li>
 <li class="chapter" data-level="0.1.2" data-path="index.html"><a href="index.html#green-pages"><i class="fa fa-check"></i><b>0.1.2</b> Green Pages</a></li>
@@ -267,7 +267,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">EDAV Resource</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">edav.info/</a>
           </h1>
         </div>
 
@@ -275,6 +275,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<!-- 
+Header 
+  - included at the top of every page
+  - EDAV logo back to index.html
+-->
+
+<center>
+<a href="index.html"><img src="images/icons/edav_resource_url.png"></a>
+</center>
 <div id="visnetwork" class="section level1">
 <h1><span class="header-section-number">6</span> Networks</h1>
 <div class="figure">
@@ -298,8 +307,8 @@ connections &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<sp
 <p>Draw the network with <code>visNetwork(nodes, edges)</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(visNetwork)
 <span class="kw">visNetwork</span>(boroughs, connections)</code></pre></div>
-<div id="htmlwidget-7d8fb57cd1eb21326146" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7d8fb57cd1eb21326146">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-97daa8079e3b1ca55856" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-97daa8079e3b1ca55856">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
 <p>Add labels by adding a label column to <code>nodes</code>:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)</code></pre></div>
 <pre><code>## 
@@ -312,8 +321,8 @@ connections &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<sp
 ##     intersect, setdiff, setequal, union</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boroughs &lt;-<span class="st"> </span>boroughs <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">label =</span> id)
 <span class="kw">visNetwork</span>(boroughs, connections)</code></pre></div>
-<div id="htmlwidget-49841e38fbb9bcd77f4b" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-49841e38fbb9bcd77f4b">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6bd6a470ce360a5a9394" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6bd6a470ce360a5a9394">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="performance" class="section level3">
 <h3><span class="header-section-number">6.1.2</span> Performance</h3>
@@ -329,23 +338,23 @@ connections &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<sp
 <p>Add a column of actual color names to the nodes data frame:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boroughs &lt;-<span class="st"> </span>boroughs <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">is.island =</span> <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">color =</span> <span class="kw">ifelse</span>(is.island, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;yellow&quot;</span>))
 <span class="kw">visNetwork</span>(boroughs, connections)</code></pre></div>
-<div id="htmlwidget-ecda64e9c33f349bd5cb" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ecda64e9c33f349bd5cb">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0ae6609060c933e5009d" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0ae6609060c933e5009d">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="directed-nodes-arrows" class="section level3">
 <h3><span class="header-section-number">6.1.5</span> Directed nodes (arrows)</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visNetwork</span>(boroughs, connections) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">visEdges</span>(<span class="dt">arrows =</span> <span class="st">&quot;to;from&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;green&quot;</span>)</code></pre></div>
-<div id="htmlwidget-eb37c5593a325b359cae" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-eb37c5593a325b359cae">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"to;from","color":"green"}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-030d996620a192d8f800" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-030d996620a192d8f800">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"to;from","color":"green"}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="turn-off-the-physics-simulation" class="section level3">
 <h3><span class="header-section-number">6.1.6</span> Turn off the physics simulation</h3>
 <p>It’s much faster without the simulation. The nodes are randomly placed and can be moved around without affecting the rest of the network, at least in the case of small networks.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visNetwork</span>(boroughs, connections) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">visEdges</span>(<span class="dt">physics =</span> <span class="ot">FALSE</span>)</code></pre></div>
-<div id="htmlwidget-42350c6fabf922947ac2" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-42350c6fabf922947ac2">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"physics":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c2ea42758d76372240da" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c2ea42758d76372240da">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"physics":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="grey-out-nodes-far-from-selected-defined-by-degree" class="section level3">
 <h3><span class="header-section-number">6.1.7</span> Grey out nodes far from selected (defined by “degree”)</h3>
@@ -353,14 +362,14 @@ connections &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<sp
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># defaults to 1 degree</span>
 <span class="kw">visNetwork</span>(boroughs, connections) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">visOptions</span>(<span class="dt">highlightNearest =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<div id="htmlwidget-3bfc31bbc806cb4880e5" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3bfc31bbc806cb4880e5">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)"},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-35ea7972e12902d9f5b7" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-35ea7972e12902d9f5b7">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)"},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null}},"evals":[],"jsHooks":[]}</script>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># set degree to 2</span>
 <span class="kw">visNetwork</span>(boroughs, connections) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">visOptions</span>(<span class="dt">highlightNearest =</span> <span class="kw">list</span>(<span class="dt">enabled =</span> <span class="ot">TRUE</span>, 
                                      <span class="dt">degree =</span> <span class="dv">2</span>))</code></pre></div>
-<div id="htmlwidget-7d724e27dfb78c218897" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7d724e27dfb78c218897">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)"},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":2,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-18db2d2c03ae8ee2352d" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-18db2d2c03ae8ee2352d">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)"},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":2,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null}},"evals":[],"jsHooks":[]}</script>
 
 </div>
 </div>
