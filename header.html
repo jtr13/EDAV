@@ -2,8 +2,21 @@
 Header 
   - included at the top of every page
   - EDAV logo back to index.html
+  - smiles on hover :)
 -->
 
+<script>
+  function hover(element) {
+  element.setAttribute('src', 'images/icons/edav_resource_url.png');
+}
+
+function unhover(element) {
+  element.setAttribute('src', 'images/icons/edav_resource_url_no_smile.png');
+}
+</script>
+
 <center>
-<a href="index.html"><img src="images/icons/edav_resource_url.png"></a>
+<!--<a href="index.html"><img src="images/icons/edav_resource_url.png"></a>-->
+<br>
+<a href="index.html"><img src="images/icons/edav_resource_url_no_smile.png" onmouseover="hover(this);" onmouseout="unhover(this);" /></a>
 </center>
