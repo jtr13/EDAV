@@ -282,8 +282,21 @@ Header
   - EDAV logo back to index.html
 -->
 
+<script>
+  function hover(element) {
+  element.setAttribute('src', 'images/icons/edav_resource_url.png');
+}
+
+function unhover(element) {
+  element.setAttribute('src', 'images/icons/edav_resource_url_no_smile.png');
+}
+</script>
+
 <center>
-<a href="index.html"><img src="images/icons/edav_resource_url.png"></a>
+<!--<a href="index.html"><img src="images/icons/edav_resource_url.png"></a>-->
+<br>
+<img class="foo" src="images/icons/edav_resource_url.png" onmouseover="hover(this);" onmouseout="unhover(this);" />
+<a href="index.html"><img src="images/icons/edav_resource_url_no_smile.png" onmouseover="hover(this);" onmouseout="unhover(this);" /></a>
 </center>
 <div id="iris" class="section level1">
 <h1><span class="header-section-number">3</span> Walkthrough: Iris Example</h1>
@@ -573,7 +586,7 @@ Footer
 
 <center>
 <br><br>
-<a href="index.html"><img src="images/icons/edav_resource_small.png"></a>
+<a href=""><img src="images/icons/edav_resource_small.png"></a>
 <br><br>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 </center>
