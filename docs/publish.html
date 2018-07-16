@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="scatterplot.html">
-<link rel="next" href="project.html">
+<link rel="prev" href="project.html">
+<link rel="next" href="resources.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -328,94 +328,52 @@ function unhover(element) {
 <br><br>
 <a href="index.html"><img src="images/icons/edav_resource_url_no_smile.png" onmouseover="hover(this);" onmouseout="unhover(this);" /></a>
 </center>
-<div id="visnetwork" class="section level1">
-<h1><span class="header-section-number">7</span> Networks</h1>
+<div id="publish" class="section level1">
+<h1><span class="header-section-number">9</span> Publishing with R</h1>
 <div class="figure">
-<img src="images/banners/banner_network.png" />
+<img src="images/banners/banner_publish.png" />
 
 </div>
-<!--## ggnetwork (static)-->
-<div id="visnetwork-interactive" class="section level2">
-<h2><span class="header-section-number">7.1</span> visNetwork (interactive)</h2>
-<p><code>visNetwork</code> is a powerful R implementation of the interactive JavaScript <code>vis.js</code> library; it uses <code>tidyverse</code> piping: <a href="https://datastorm-open.github.io/visNetwork/" class="uri">https://datastorm-open.github.io/visNetwork/</a></p>
-<p>–&gt; The Vignette has clear worked-out examples: <a href="https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html" class="uri">https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html</a></p>
-<p>The <code>visNetwork</code> documentation doesn’t provide the same level of explanation as the original, so it’s worth checking out the <code>vis.js</code> documentation as well: <a href="http://visjs.org/index.html" class="uri">http://visjs.org/index.html</a> In particular, the <a href="http://visjs.org/network_examples.html">interactive examples</a> are particularly useful for trying out different options. For example, you can test out physics options with this <a href="http://visjs.org/examples/network/physics/physicsConfiguration.html">network configurator</a>.</p>
-<div id="minimum-working-example" class="section level3">
-<h3><span class="header-section-number">7.1.1</span> Minimum working example</h3>
-<p>Create a <a href="https://datastorm-open.github.io/visNetwork/nodes.html">node data frame</a>with a minimum one of column (must be called <code>id</code>) with node names:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># nodes</span>
-boroughs &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id =</span> <span class="kw">c</span>(<span class="st">&quot;The Bronx&quot;</span>, <span class="st">&quot;Manhattan&quot;</span>, <span class="st">&quot;Queens&quot;</span>, <span class="st">&quot;Brooklyn&quot;</span>, <span class="st">&quot;Staten Island&quot;</span>))</code></pre></div>
-<p>Create a separate data frame of <a href="https://datastorm-open.github.io/visNetwork/edges.html">edges</a> with <code>from</code> and <code>to</code> columns.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># edges</span>
-connections &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">from =</span> <span class="kw">c</span>(<span class="st">&quot;The Bronx&quot;</span>, <span class="st">&quot;The Bronx&quot;</span>, <span class="st">&quot;Queens&quot;</span>, <span class="st">&quot;Queens&quot;</span>, <span class="st">&quot;Manhattan&quot;</span>, <span class="st">&quot;Brooklyn&quot;</span>), <span class="dt">to =</span> <span class="kw">c</span>(<span class="st">&quot;Manhattan&quot;</span>, <span class="st">&quot;Queens&quot;</span>, <span class="st">&quot;Brooklyn&quot;</span>, <span class="st">&quot;Manhattan&quot;</span>, <span class="st">&quot;Brooklyn&quot;</span>, <span class="st">&quot;Staten Island&quot;</span>))</code></pre></div>
-<p>Draw the network with <code>visNetwork(nodes, edges)</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(visNetwork)
-<span class="kw">visNetwork</span>(boroughs, connections)</code></pre></div>
-<div id="htmlwidget-0fef3531a0f66e76c4e4" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0fef3531a0f66e76c4e4">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
-<p>Add labels by adding a label column to <code>nodes</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)</code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boroughs &lt;-<span class="st"> </span>boroughs <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">label =</span> id)
-<span class="kw">visNetwork</span>(boroughs, connections)</code></pre></div>
-<div id="htmlwidget-d11a791fabb22108da4b" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d11a791fabb22108da4b">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
+<div id="overview-5" class="section level2">
+<h2><span class="header-section-number">9.1</span> Overview</h2>
+<p>This section discusses how we built <em>edav.info/</em> and includes references for building sites/books of your own using R.</p>
 </div>
-<div id="performance" class="section level3">
-<h3><span class="header-section-number">7.1.2</span> Performance</h3>
-<p><code>visNetwork</code> can be very slow.</p>
-<p><code>%&gt;% visPhysics(stabilization = FALSE)</code> starts rendering before the stabilization is complete, which does actually speed things up but allows you to see what’s happening, which makes a big difference in user experience. (It’s also fun to watch the network stabilize). Other performance tips are described <a href="https://datastorm-open.github.io/visNetwork/performance.html">here</a>.</p>
+<div id="bookdown" class="section level2">
+<h2><span class="header-section-number">9.2</span> Bookdown</h2>
+<p><em>edav.info/</em> is built using <a href="https://bookdown.org/">Bookdown</a>, “a free and open-source R package built on top of <a href="https://rmarkdown.rstudio.com/">R Markdown</a> to make it really easy to write books and long-form articles/reports.”</p>
+<p>The biggest selling-point for <code>bookdown</code> is that it allows you to make content that is both professional and adaptable. If you want to update a regular book, you need to issue another edition and go through a lot of hassle. With <code>bookdown</code>, you can publish it in different formats (including print, if desired) and be able to change things easily when needed.</p>
+<p>We chose <code>bookdown</code> for <em>edav.info/</em> because it allows us to present a lot of content in a compact, searchable manner, while also letting students suggest updates and contribute to its structure. Again, it is professional <em>and</em> adaptable (The default <code>bookdown</code> output is essentially just an online book, but we tried to liven it up by adding a lot of helpful icons, logos, and banners to improve navigation).</p>
+<p>Below are some helpful references we used in creating <em>edav.info/</em>, which may be helpful if you are interested in creating your own website or online resource with R.</p>
 </div>
-<div id="helpful-configuration-tools" class="section level3">
-<h3><span class="header-section-number">7.1.3</span> Helpful configuration tools</h3>
-<p><code>%&gt;% visConfigure(enabled = TRUE)</code> is a useful tool for configuring options interactively. Upon completion, click “generate options” for the code to reproduce the settings. More <a href="https://datastorm-open.github.io/visNetwork/configure.html">here</a> (Note that changing options and then viewing them requires a lot of vertical scrolling in the browser. I’m not sure if anything can be done about this. If you have a solution, let me know!)</p>
+<div id="essentials" class="section level2">
+<h2><span class="header-section-number">9.3</span> Essentials</h2>
+<ul>
+<li><p><a href="http://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html">How to Start a Bookdown Book</a>: The hardest part about <code>bookdown</code> is getting it up and running. <a href="http://seankross.com/about/">Sean Kross</a> has the best template instructions we found. We started this project by cloning his template repo and building off of it. Excellent descriptions on what all the files do and what is essential to start your project.</p></li>
+<li><p><a href="https://bookdown.org/yihui/bookdown/">bookdown: Authoring Books and Technical Documents with R Markdown</a>: This textbook by <a href="https://yihui.name/en/">Yihui Xie</a>, author of the <code>bookdown</code> package, explains everything <code>bookdown</code> is able to accomplish (published using <code>bookdown</code>…because of course it is). An incredible informative reference which we always kept close by. Author’s blurb:</p></li>
+</ul>
+<blockquote>
+<p>A guide to authoring books with R Markdown, including how to generate figures and tables, and insert cross-references, citations, HTML widgets, and Shiny apps in R Markdown.</p>
+</blockquote>
+<ul>
+<li><p><a href="https://www.rstudio.com/resources/webinars/introducing-bookdown/">RStudio Bookdown Talk</a>: Yihui Xie (author of the <code>bookdown</code> package) discusses his package and what it can do in a one-hour talk. Good for seeing finished examples.</p></li>
+<li><p><a href="https://bookdown.org/home/about.html">bookdown.org</a>: Site for the <code>bookdown</code> package. Has a bunch of popular books published using <code>bookdown</code> and some info about how to get started using the package.</p></li>
+<li><p><a href="http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html">Creating Websites in R</a>: This tutorial, written by <a href="http://www.emilyzabor.com/">Emily Zabor</a> (a Columbia alum), provides a thorough tutorial for creating websites using different R tools. She discusses how to make different kinds of sites (personal, package, project, blog) as well as GitHub integration and step-by-step instructions for getting setup with templates and hosting. Very detailed and worth perusing if interested in making your own site.</p></li>
+</ul>
 </div>
-<div id="coloring-nodes" class="section level3">
-<h3><span class="header-section-number">7.1.4</span> Coloring nodes</h3>
-<p>Add a column of actual color names to the nodes data frame:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">boroughs &lt;-<span class="st"> </span>boroughs <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">is.island =</span> <span class="kw">c</span>(<span class="ot">FALSE</span>, <span class="ot">TRUE</span>, <span class="ot">FALSE</span>, <span class="ot">FALSE</span>, <span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">color =</span> <span class="kw">ifelse</span>(is.island, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;yellow&quot;</span>))
-<span class="kw">visNetwork</span>(boroughs, connections)</code></pre></div>
-<div id="htmlwidget-9b46b106081923621437" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9b46b106081923621437">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
-</div>
-<div id="directed-nodes-arrows" class="section level3">
-<h3><span class="header-section-number">7.1.5</span> Directed nodes (arrows)</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visNetwork</span>(boroughs, connections) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">visEdges</span>(<span class="dt">arrows =</span> <span class="st">&quot;to;from&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;green&quot;</span>)</code></pre></div>
-<div id="htmlwidget-812fdc3089d908c960f7" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-812fdc3089d908c960f7">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"to;from","color":"green"}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
-</div>
-<div id="turn-off-the-physics-simulation" class="section level3">
-<h3><span class="header-section-number">7.1.6</span> Turn off the physics simulation</h3>
-<p>It’s much faster without the simulation. The nodes are randomly placed and can be moved around without affecting the rest of the network, at least in the case of small networks.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visNetwork</span>(boroughs, connections) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">visEdges</span>(<span class="dt">physics =</span> <span class="ot">FALSE</span>)</code></pre></div>
-<div id="htmlwidget-3e41e356a6f4a6a6749f" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3e41e356a6f4a6a6749f">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"physics":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)"},"evals":[],"jsHooks":[]}</script>
-</div>
-<div id="grey-out-nodes-far-from-selected-defined-by-degree" class="section level3">
-<h3><span class="header-section-number">7.1.7</span> Grey out nodes far from selected (defined by “degree”)</h3>
-<p>(Click a node to see effect.)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># defaults to 1 degree</span>
-<span class="kw">visNetwork</span>(boroughs, connections) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">visOptions</span>(<span class="dt">highlightNearest =</span> <span class="ot">TRUE</span>)</code></pre></div>
-<div id="htmlwidget-852adae0f488998cddf6" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-852adae0f488998cddf6">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)"},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null}},"evals":[],"jsHooks":[]}</script>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># set degree to 2</span>
-<span class="kw">visNetwork</span>(boroughs, connections) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">visOptions</span>(<span class="dt">highlightNearest =</span> <span class="kw">list</span>(<span class="dt">enabled =</span> <span class="ot">TRUE</span>, 
-                                     <span class="dt">degree =</span> <span class="dv">2</span>))</code></pre></div>
-<div id="htmlwidget-a710ac03fb35d65e85ca" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a710ac03fb35d65e85ca">{"x":{"nodes":{"id":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"label":["The Bronx","Manhattan","Queens","Brooklyn","Staten Island"],"is.island":[false,true,false,false,true],"color":["yellow","blue","yellow","yellow","blue"]},"edges":{"from":["The Bronx","The Bronx","Queens","Queens","Manhattan","Brooklyn"],"to":["Manhattan","Queens","Brooklyn","Manhattan","Brooklyn","Staten Island"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)"},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":2,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":false,"fit":false,"resetHighlight":true,"clusterOptions":null}},"evals":[],"jsHooks":[]}</script>
+<div id="trimmings" class="section level2">
+<h2><span class="header-section-number">9.4</span> Trimmings</h2>
+<ul>
+<li><p><strong>Custom Domain Names</strong>: GitHub integration with custom domain names is easy to setup. GitHub has an article on <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/">how to setup a custom domain with GitHub Pages</a> that will help to get your desired URL hooked up (custom domain names: the vanity plates of the internet). <a href="https://pages.github.com/">GitHub Pages</a> supports free hosting, which makes the whole process a lot easier. Also, if you are in the market for a cool domain name, <a href="https://domains.google/#/">Google Domains</a> is a great place to get the one of your dreams.</p></li>
+<li><p><strong>Custom 404 Page</strong>: Your site may be lovely, but a default 404 page is always a let down. Not <em>if</em> but <em>when</em> someone types part of your URL incorrectly or a link gets broken, you should make sure there is something to see other than a boring backend page you had no input in designing. <a href="https://mycyberuniverse.com/developing/custom-404-page-for-website-hosted-on-github.html">This article</a> explains the process, but all you have to do is make a file called <code>404.html</code> in your root directory and GitHub will use it rather than the default. Because of this, there is really no excuse for not having one.</p>
+Some considerations:
+<ul>
+<li><strong>Always include a link back to the site</strong>: Throw the user a life-saver.</li>
+<li><strong>Make it clear that something went wrong</strong>: Don’t hide the fact that this page is because of some error.</li>
+<li><strong>Other than that, have fun with it!</strong>: There are <a href="https://www.canva.com/learn/404-page-design/">plenty of examples</a> of people making <a href="https://www.pagecloud.com/blog/best-404-pages">excellent 404 pages</a>. It should make a frustrating experience just a little bit more bearable.</li>
+</ul></li>
+</ul>
+<p>Here’s a look at <a href="404.html">our 404 page</a>. Hopefully you aren’t seeing it that often. :)</p>
 
-</div>
 </div>
 </div>
 <!-- 
@@ -435,8 +393,8 @@ Footer
           </div>
         </div>
       </div>
-<a href="scatterplot.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="project.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -466,7 +424,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jtr13/EDAV/edit/master/70-network.Rmd",
+"link": "https://github.com/jtr13/EDAV/edit/master/95-bookdown.Rmd",
 "text": "Edit"
 },
 "download": null,

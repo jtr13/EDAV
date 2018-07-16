@@ -90,6 +90,11 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 ### Yellow Pages
 **Yellow == REF**: The yellow banners signal pages that contain simple collections of  **references**.
 
+#### Publishing with R
+<center>
+[![Publishing with R](images/banners/banner_publish.png)](publish.html)
+</center>
+
 #### General Resources
 <center>
 [![General Resources](images/banners/banner_resources.png)](resources.html)
