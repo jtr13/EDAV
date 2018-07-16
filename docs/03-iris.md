@@ -279,7 +279,7 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
 Consider your motives when using jittering. You are by definition altering the data, but it may be beneficial in some situations.
 
 ***
-###*Aside*
+###*Aside*: Example Where Alpha Blending Works
 
 We are dealing with a case where jittering works best to see the data, while changing the `alpha` doesn't help us much. Here's a quick example where opacity using `alpha` might be more directly helpful.
 

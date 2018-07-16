@@ -57,6 +57,11 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 [![Chart: Boxplot](images/banners/banner_boxplot.png)](boxplot.html)
 </center>
 
+#### Chart: Scatterplot
+<center>
+[![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatterplot.html)
+</center>
+
 #### Networks
 <center>
 [![Networks](images/banners/banner_network.png)](visnetwork.html)

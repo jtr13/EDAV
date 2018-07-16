@@ -1,7 +1,7 @@
 --- 
 title: "edav.info/"
 author: "Zach Bogart, Joyce Robbins"
-date: "2018-07-14"
+date: "2018-07-15"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -55,6 +55,11 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 #### Chart: Boxplot
 <center>
 [![Chart: Boxplot](images/banners/banner_boxplot.png)](boxplot.html)
+</center>
+
+#### Chart: Scatterplot
+<center>
+[![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatterplot.html)
 </center>
 
 #### Networks
