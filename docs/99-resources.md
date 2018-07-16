@@ -1,4 +1,4 @@
-# General Resources {#resources}
+# General Resources {#general}
 
 ![](images/banners/banner_resources.png)
 

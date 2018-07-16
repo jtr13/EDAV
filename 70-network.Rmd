@@ -1,4 +1,4 @@
-# Networks {#visnetwork}
+# Networks {#network}
 
 ![](images/banners/banner_network.png)
 

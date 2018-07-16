@@ -1,4 +1,4 @@
-# Chart: Boxplot {#boxplot}
+# Chart: Boxplot {#box}
 
 ![](images/banners/banner_boxplot.png)
 

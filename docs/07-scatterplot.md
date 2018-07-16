@@ -1,4 +1,4 @@
-# Chart: Scatterplot {#scatterplot}
+# Chart: Scatterplot {#scatter}
 
 ![](images/banners/banner_scatterplot.png)
 

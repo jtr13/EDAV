@@ -61,22 +61,22 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 
 #### Chart: Histogram
 <center>
-[![Chart: Histogram](images/banners/banner_histogram.png)](histogram.html)
+[![Chart: Histogram](images/banners/banner_histogram.png)](histo.html)
 </center>
 
 #### Chart: Boxplot
 <center>
-[![Chart: Boxplot](images/banners/banner_boxplot.png)](boxplot.html)
+[![Chart: Boxplot](images/banners/banner_boxplot.png)](box.html)
 </center>
 
 #### Chart: Scatterplot
 <center>
-[![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatterplot.html)
+[![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatter.html)
 </center>
 
 #### Networks
 <center>
-[![Networks](images/banners/banner_network.png)](visnetwork.html)
+[![Networks](images/banners/banner_network.png)](network.html)
 </center>
 
 ### Red Pages
@@ -97,7 +97,7 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 
 #### General Resources
 <center>
-[![General Resources](images/banners/banner_resources.png)](resources.html)
+[![General Resources](images/banners/banner_resources.png)](general.html)
 </center>
 
 ## License
