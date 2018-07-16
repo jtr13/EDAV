@@ -12,7 +12,7 @@ url: 'edav.info/'
 description: "Everything you need to do well in EDAV"
 ---
 
-<a href="index.html"><img src="images/icons/edav_resource_small.png"></a>
+
 
 # About {-}
 
