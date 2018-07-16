@@ -1,7 +1,7 @@
 --- 
 title: "edav.info/"
 author: "Zach Bogart, Joyce Robbins"
-date: "`r Sys.Date()`"
+date: '`r format(Sys.Date(), "%Y")`'
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
