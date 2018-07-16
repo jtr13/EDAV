@@ -194,7 +194,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.3.2" data-path="histogram.html"><a href="histogram.html#histogram-using-ggplot2"><i class="fa fa-check"></i><b>4.3.2</b> Histogram using ggplot2</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="histogram.html"><a href="histogram.html#when-to-use"><i class="fa fa-check"></i><b>4.4</b> When to use</a></li>
-<li class="chapter" data-level="4.5" data-path="histogram.html"><a href="histogram.html#considerations"><i class="fa fa-check"></i><b>4.5</b> Considerations</a></li>
+<li class="chapter" data-level="4.5" data-path="histogram.html"><a href="histogram.html#considerations"><i class="fa fa-check"></i><b>4.5</b> Considerations</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="histogram.html"><a href="histogram.html#bin-boundaries"><i class="fa fa-check"></i><b>4.5.1</b> Bin Boundaries</a></li>
+<li class="chapter" data-level="4.5.2" data-path="histogram.html"><a href="histogram.html#bin-number"><i class="fa fa-check"></i><b>4.5.2</b> Bin Number</a></li>
+<li class="chapter" data-level="4.5.3" data-path="histogram.html"><a href="histogram.html#bin-alignment"><i class="fa fa-check"></i><b>4.5.3</b> Bin Alignment</a></li>
+</ul></li>
 <li class="chapter" data-level="4.6" data-path="histogram.html"><a href="histogram.html#theory"><i class="fa fa-check"></i><b>4.6</b> Theory</a></li>
 <li class="chapter" data-level="4.7" data-path="histogram.html"><a href="histogram.html#external-resources"><i class="fa fa-check"></i><b>4.7</b> External Resources</a></li>
 </ul></li>
@@ -206,7 +210,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3.2" data-path="boxplot.html"><a href="boxplot.html#boxplot-using-ggplot2"><i class="fa fa-check"></i><b>5.3.2</b> Boxplot using ggplot2</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="boxplot.html"><a href="boxplot.html#when-to-use-1"><i class="fa fa-check"></i><b>5.4</b> When to use</a></li>
-<li class="chapter" data-level="5.5" data-path="boxplot.html"><a href="boxplot.html#considerations-1"><i class="fa fa-check"></i><b>5.5</b> Considerations</a></li>
+<li class="chapter" data-level="5.5" data-path="boxplot.html"><a href="boxplot.html#considerations-1"><i class="fa fa-check"></i><b>5.5</b> Considerations</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="boxplot.html"><a href="boxplot.html#flipping-orientation"><i class="fa fa-check"></i><b>5.5.1</b> Flipping Orientation</a></li>
+<li class="chapter" data-level="5.5.2" data-path="boxplot.html"><a href="boxplot.html#not-for-categorical-data"><i class="fa fa-check"></i><b>5.5.2</b> NOT for categorical data</a></li>
+</ul></li>
 <li class="chapter" data-level="5.6" data-path="boxplot.html"><a href="boxplot.html#theory-1"><i class="fa fa-check"></i><b>5.6</b> Theory</a></li>
 <li class="chapter" data-level="5.7" data-path="boxplot.html"><a href="boxplot.html#external-resources-1"><i class="fa fa-check"></i><b>5.7</b> External Resources</a></li>
 </ul></li>
@@ -218,7 +225,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.3.2" data-path="scatterplot.html"><a href="scatterplot.html#scatterplot-using-ggplot2"><i class="fa fa-check"></i><b>6.3.2</b> Scatterplot using ggplot2</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="scatterplot.html"><a href="scatterplot.html#when-to-use-2"><i class="fa fa-check"></i><b>6.4</b> When to use</a></li>
-<li class="chapter" data-level="6.5" data-path="scatterplot.html"><a href="scatterplot.html#considerations-2"><i class="fa fa-check"></i><b>6.5</b> Considerations</a></li>
+<li class="chapter" data-level="6.5" data-path="scatterplot.html"><a href="scatterplot.html#considerations-2"><i class="fa fa-check"></i><b>6.5</b> Considerations</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="scatterplot.html"><a href="scatterplot.html#overlapping-data-1"><i class="fa fa-check"></i><b>6.5.1</b> Overlapping Data</a></li>
+<li class="chapter" data-level="6.5.2" data-path="scatterplot.html"><a href="scatterplot.html#scaling"><i class="fa fa-check"></i><b>6.5.2</b> Scaling</a></li>
+</ul></li>
 <li class="chapter" data-level="6.6" data-path="scatterplot.html"><a href="scatterplot.html#modifications"><i class="fa fa-check"></i><b>6.6</b> Modifications</a></li>
 <li class="chapter" data-level="6.7" data-path="scatterplot.html"><a href="scatterplot.html#theory-2"><i class="fa fa-check"></i><b>6.7</b> Theory</a></li>
 <li class="chapter" data-level="6.8" data-path="scatterplot.html"><a href="scatterplot.html#external-resources-2"><i class="fa fa-check"></i><b>6.8</b> External Resources</a></li>
@@ -430,10 +440,14 @@ scatter <span class="op">+</span>
 <h2><span class="header-section-number">6.5</span> Considerations</h2>
 <p>TODO</p>
 <!-- *   List of things to pay attention to with examples -->
-<ul>
-<li><p><strong>Overlapping Data</strong>: Data with similar values will overlap in a scatterplot and may lead to problems. Consider exploring <a href="iris.html#aside-example-where-alpha-blending-works">alpha blending</a> or <a href="iris.html#second-jittering">jittering</a> as remedies (links from <a href="iris.html#overlapping-data">Overlapping Data</a> section of <a href="iris.html">Iris Walkthrough</a>).</p></li>
-<li><p><strong>Scaling</strong>: Modify the scales to make it more legible</p></li>
-</ul>
+<div id="overlapping-data-1" class="section level3">
+<h3><span class="header-section-number">6.5.1</span> Overlapping Data</h3>
+<p>Data with similar values will overlap in a scatterplot and may lead to problems. Consider exploring <a href="iris.html#aside-example-where-alpha-blending-works">alpha blending</a> or <a href="iris.html#second-jittering">jittering</a> as remedies (links from <a href="iris.html#overlapping-data">Overlapping Data</a> section of <a href="iris.html">Iris Walkthrough</a>).</p>
+</div>
+<div id="scaling" class="section level3">
+<h3><span class="header-section-number">6.5.2</span> Scaling</h3>
+<p>Modify the scales to make it more legible</p>
+</div>
 </div>
 <div id="modifications" class="section level2">
 <h2><span class="header-section-number">6.6</span> Modifications</h2>

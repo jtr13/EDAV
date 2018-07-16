@@ -94,7 +94,8 @@ Use a histogram to show the distribution of *one continuous variable*. The y-sca
 
 ## Considerations
 
-*   **Bin Boundaries**: Be mindful of the boundaries of the bins and whether a point will fall into the left or right bin if it is on a boundary.
+### Bin Boundaries
+Be mindful of the boundaries of the bins and whether a point will fall into the left or right bin if it is on a boundary.
 
 ```r
 # format layout
@@ -110,7 +111,8 @@ hist(x, col = "lightblue", right = FALSE, ylim = c(0, 4),
 
 <img src="04-histogram_files/figure-html/bin-boundaries-1.png" width="672" />
 
-*   **Bin Number**: The default bin number of 30 in ggplot2 is not always ideal, so consider altering it if things are looking strange. You can specify the width explicitly with `binwidth` or provide the desired number of bins with `bins`.
+### Bin Number
+The default bin number of 30 in ggplot2 is not always ideal, so consider altering it if things are looking strange. You can specify the width explicitly with `binwidth` or provide the desired number of bins with `bins`.
 
 ```r
 # default...note the pop-up about default bin number
@@ -145,7 +147,8 @@ grid.arrange(p1, p2, ncol = 2)
 <img src="04-histogram_files/figure-html/fixed-histograms-binwidth-1.png" width="672" />
 
 
-*   **Bin Alignment**: Make sure the axes reflect the true boundaries of the histogram. You can use `boundary` to specify the endpoint of any bin or `center` to specify the center of any bin. `ggplot2` will be able to calculate where to place the rest of the bins (Also, notice that when the boundary was changed, the number of bins got smaller by one. This is because by default the bins are centered and go over/under the range of the data.)
+### Bin Alignment
+Make sure the axes reflect the true boundaries of the histogram. You can use `boundary` to specify the endpoint of any bin or `center` to specify the center of any bin. `ggplot2` will be able to calculate where to place the rest of the bins (Also, notice that when the boundary was changed, the number of bins got smaller by one. This is because by default the bins are centered and go over/under the range of the data.)
 
 ```r
 df <- data.frame(x)

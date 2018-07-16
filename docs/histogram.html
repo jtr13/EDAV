@@ -194,7 +194,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.3.2" data-path="histogram.html"><a href="histogram.html#histogram-using-ggplot2"><i class="fa fa-check"></i><b>4.3.2</b> Histogram using ggplot2</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="histogram.html"><a href="histogram.html#when-to-use"><i class="fa fa-check"></i><b>4.4</b> When to use</a></li>
-<li class="chapter" data-level="4.5" data-path="histogram.html"><a href="histogram.html#considerations"><i class="fa fa-check"></i><b>4.5</b> Considerations</a></li>
+<li class="chapter" data-level="4.5" data-path="histogram.html"><a href="histogram.html#considerations"><i class="fa fa-check"></i><b>4.5</b> Considerations</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="histogram.html"><a href="histogram.html#bin-boundaries"><i class="fa fa-check"></i><b>4.5.1</b> Bin Boundaries</a></li>
+<li class="chapter" data-level="4.5.2" data-path="histogram.html"><a href="histogram.html#bin-number"><i class="fa fa-check"></i><b>4.5.2</b> Bin Number</a></li>
+<li class="chapter" data-level="4.5.3" data-path="histogram.html"><a href="histogram.html#bin-alignment"><i class="fa fa-check"></i><b>4.5.3</b> Bin Alignment</a></li>
+</ul></li>
 <li class="chapter" data-level="4.6" data-path="histogram.html"><a href="histogram.html#theory"><i class="fa fa-check"></i><b>4.6</b> Theory</a></li>
 <li class="chapter" data-level="4.7" data-path="histogram.html"><a href="histogram.html#external-resources"><i class="fa fa-check"></i><b>4.7</b> External Resources</a></li>
 </ul></li>
@@ -206,7 +210,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3.2" data-path="boxplot.html"><a href="boxplot.html#boxplot-using-ggplot2"><i class="fa fa-check"></i><b>5.3.2</b> Boxplot using ggplot2</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="boxplot.html"><a href="boxplot.html#when-to-use-1"><i class="fa fa-check"></i><b>5.4</b> When to use</a></li>
-<li class="chapter" data-level="5.5" data-path="boxplot.html"><a href="boxplot.html#considerations-1"><i class="fa fa-check"></i><b>5.5</b> Considerations</a></li>
+<li class="chapter" data-level="5.5" data-path="boxplot.html"><a href="boxplot.html#considerations-1"><i class="fa fa-check"></i><b>5.5</b> Considerations</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="boxplot.html"><a href="boxplot.html#flipping-orientation"><i class="fa fa-check"></i><b>5.5.1</b> Flipping Orientation</a></li>
+<li class="chapter" data-level="5.5.2" data-path="boxplot.html"><a href="boxplot.html#not-for-categorical-data"><i class="fa fa-check"></i><b>5.5.2</b> NOT for categorical data</a></li>
+</ul></li>
 <li class="chapter" data-level="5.6" data-path="boxplot.html"><a href="boxplot.html#theory-1"><i class="fa fa-check"></i><b>5.6</b> Theory</a></li>
 <li class="chapter" data-level="5.7" data-path="boxplot.html"><a href="boxplot.html#external-resources-1"><i class="fa fa-check"></i><b>5.7</b> External Resources</a></li>
 </ul></li>
@@ -218,7 +225,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="6.3.2" data-path="scatterplot.html"><a href="scatterplot.html#scatterplot-using-ggplot2"><i class="fa fa-check"></i><b>6.3.2</b> Scatterplot using ggplot2</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="scatterplot.html"><a href="scatterplot.html#when-to-use-2"><i class="fa fa-check"></i><b>6.4</b> When to use</a></li>
-<li class="chapter" data-level="6.5" data-path="scatterplot.html"><a href="scatterplot.html#considerations-2"><i class="fa fa-check"></i><b>6.5</b> Considerations</a></li>
+<li class="chapter" data-level="6.5" data-path="scatterplot.html"><a href="scatterplot.html#considerations-2"><i class="fa fa-check"></i><b>6.5</b> Considerations</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="scatterplot.html"><a href="scatterplot.html#overlapping-data-1"><i class="fa fa-check"></i><b>6.5.1</b> Overlapping Data</a></li>
+<li class="chapter" data-level="6.5.2" data-path="scatterplot.html"><a href="scatterplot.html#scaling"><i class="fa fa-check"></i><b>6.5.2</b> Scaling</a></li>
+</ul></li>
 <li class="chapter" data-level="6.6" data-path="scatterplot.html"><a href="scatterplot.html#modifications"><i class="fa fa-check"></i><b>6.6</b> Modifications</a></li>
 <li class="chapter" data-level="6.7" data-path="scatterplot.html"><a href="scatterplot.html#theory-2"><i class="fa fa-check"></i><b>6.7</b> Theory</a></li>
 <li class="chapter" data-level="6.8" data-path="scatterplot.html"><a href="scatterplot.html#external-resources-2"><i class="fa fa-check"></i><b>6.8</b> External Resources</a></li>
@@ -395,9 +405,9 @@ df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(x)
 </div>
 <div id="considerations" class="section level2">
 <h2><span class="header-section-number">4.5</span> Considerations</h2>
-<ul>
-<li><strong>Bin Boundaries</strong>: Be mindful of the boundaries of the bins and whether a point will fall into the left or right bin if it is on a boundary.</li>
-</ul>
+<div id="bin-boundaries" class="section level3">
+<h3><span class="header-section-number">4.5.1</span> Bin Boundaries</h3>
+<p>Be mindful of the boundaries of the bins and whether a point will fall into the left or right bin if it is on a boundary.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># format layout</span>
 op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mfrow =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="dt">las =</span> <span class="dv">1</span>)
 
@@ -408,9 +418,10 @@ op &lt;-<span class="st"> </span><span class="kw">par</span>(<span class="dt">mf
 <span class="kw">hist</span>(x, <span class="dt">col =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="dt">right =</span> <span class="ot">FALSE</span>, <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>, <span class="dv">4</span>),
      <span class="dt">xlab =</span> <span class="st">&quot;right open ex. [55, 60)&quot;</span>, <span class="dt">font.lab =</span> <span class="dv">2</span>)</code></pre></div>
 <p><img src="04-histogram_files/figure-html/bin-boundaries-1.png" width="672" /></p>
-<ul>
-<li><strong>Bin Number</strong>: The default bin number of 30 in ggplot2 is not always ideal, so consider altering it if things are looking strange. You can specify the width explicitly with <code>binwidth</code> or provide the desired number of bins with <code>bins</code>.</li>
-</ul>
+</div>
+<div id="bin-number" class="section level3">
+<h3><span class="header-section-number">4.5.2</span> Bin Number</h3>
+<p>The default bin number of 30 in ggplot2 is not always ideal, so consider altering it if things are looking strange. You can specify the width explicitly with <code>binwidth</code> or provide the desired number of bins with <code>bins</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># default...note the pop-up about default bin number</span>
 <span class="kw">ggplot</span>(finches, <span class="kw">aes</span>(<span class="dt">x =</span> Depth)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>() <span class="op">+</span>
@@ -431,9 +442,10 @@ p2 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(finches, <span c
 <span class="kw">library</span>(gridExtra)
 <span class="kw">grid.arrange</span>(p1, p2, <span class="dt">ncol =</span> <span class="dv">2</span>)</code></pre></div>
 <p><img src="04-histogram_files/figure-html/fixed-histograms-binwidth-1.png" width="672" /></p>
-<ul>
-<li><strong>Bin Alignment</strong>: Make sure the axes reflect the true boundaries of the histogram. You can use <code>boundary</code> to specify the endpoint of any bin or <code>center</code> to specify the center of any bin. <code>ggplot2</code> will be able to calculate where to place the rest of the bins (Also, notice that when the boundary was changed, the number of bins got smaller by one. This is because by default the bins are centered and go over/under the range of the data.)</li>
-</ul>
+</div>
+<div id="bin-alignment" class="section level3">
+<h3><span class="header-section-number">4.5.3</span> Bin Alignment</h3>
+<p>Make sure the axes reflect the true boundaries of the histogram. You can use <code>boundary</code> to specify the endpoint of any bin or <code>center</code> to specify the center of any bin. <code>ggplot2</code> will be able to calculate where to place the rest of the bins (Also, notice that when the boundary was changed, the number of bins got smaller by one. This is because by default the bins are centered and go over/under the range of the data.)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(x)
 
 <span class="co"># default alignment</span>
@@ -459,6 +471,7 @@ p4 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(df, <span class=
 <span class="kw">grid.arrange</span>(p3, p4, <span class="dt">ncol =</span> <span class="dv">2</span>)</code></pre></div>
 <p><img src="04-histogram_files/figure-html/alignment-fix-1.png" width="672" /></p>
 <p><strong>Note</strong>: Don’t use both <code>boundary</code> <em>and</em> <code>center</code> for bin alignment. Just pick one.</p>
+</div>
 </div>
 <div id="theory" class="section level2">
 <h2><span class="header-section-number">4.6</span> Theory</h2>

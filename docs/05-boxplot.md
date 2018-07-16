@@ -100,7 +100,8 @@ Boxplots should be used to display *continuous variables*. They are particularly
 
 ## Considerations
 
-*   **Flipping Orientation**: Often you want boxplots to be horizontal. Super easy to do: just tack on `coord_flip()`:
+### Flipping Orientation
+Often you want boxplots to be horizontal. Super easy to do: just tack on `coord_flip()`:
 
 ```r
 # g1 plot from above (5.3.2)
@@ -113,7 +114,8 @@ g1 + coord_flip()
 
 <img src="05-boxplot_files/figure-html/flip-boxplot-1.png" width="672" />
 
-*   **NOT for categorical data**: Boxplots are great, but they do NOT work with categorical data. Make sure your variable is continuous before using boxplots. Here's an example of what *not* to do:
+### NOT for categorical data
+Boxplots are great, but they do NOT work with categorical data. Make sure your variable is continuous before using boxplots. Here's an example of what *not* to do:
 
 ```r
 library(likert) # data

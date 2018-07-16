@@ -134,9 +134,11 @@ Scatterplots are great for exploring relationships between variables. Basically,
 TODO
 
 <!-- *   List of things to pay attention to with examples -->
-*   **Overlapping Data**: Data with similar values will overlap in a scatterplot and may lead to problems. Consider exploring [alpha blending](iris.html#aside-example-where-alpha-blending-works) or [jittering](iris.html#second-jittering) as remedies (links from [Overlapping Data](iris.html#overlapping-data) section of [Iris Walkthrough](iris.html)).
+### Overlapping Data
+Data with similar values will overlap in a scatterplot and may lead to problems. Consider exploring [alpha blending](iris.html#aside-example-where-alpha-blending-works) or [jittering](iris.html#second-jittering) as remedies (links from [Overlapping Data](iris.html#overlapping-data) section of [Iris Walkthrough](iris.html)).
 
-*   **Scaling**: Modify the scales to make it more legible
+### Scaling
+Modify the scales to make it more legible
 
 ## Modifications
 
