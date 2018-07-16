@@ -28,11 +28,11 @@ The banners at the top of each page are an effort to improve your ability to nav
 
 ![](images/banners/banner_green.png)
 
-**Green == DOC**: The green banners signal pages that contain more compact **documentation**. An example of a green page is the [histogram page](histogram.html), which includes simple examples of how to create histograms, when to use them, and things to be aware of/watch out for. The green pages hold your hand much less than the red pages: they explain how to use a chart/tool using examples and simple terms. If you have an idea in mind and are just wondering how to execute it, the green pages will help fill in those gaps.
+**Green == DOC**: The green banners signal pages that contain more compact **documentation**. An example of a green page is the [histogram page](histo.html), which includes simple examples of how to create histograms, when to use them, and things to be aware of/watch out for. The green pages hold your hand much less than the red pages: they explain how to use a chart/tool using examples and simple terms. If you have an idea in mind and are just wondering how to execute it, the green pages will help fill in those gaps.
 
 ![](images/banners/banner_yellow.png)
 
-**Yellow == REF**: The yellow banners signal pages that contain simple collections of  **references**. An example of a yellow page is the [external resources page](resources.html), which is a list of materials that you can look through and learn from. Yellow pages have the least amount of hand-holding: they are collections of resources and references that will help you learn about new things. 
+**Yellow == REF**: The yellow banners signal pages that contain simple collections of  **references**. An example of a yellow page is the [external resources page](general.html), which is a list of materials that you can look through and learn from. Yellow pages have the least amount of hand-holding: they are collections of resources and references that will help you learn about new things. 
 
 ## Improving this resource
 

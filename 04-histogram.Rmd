@@ -1,4 +1,4 @@
-# Chart: Histogram {#histogram}
+# Chart: Histogram {#histo}
 
 ![](images/banners/banner_histogram.png)
 
