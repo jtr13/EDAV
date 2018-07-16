@@ -36,7 +36,7 @@ The banners at the top of each page are an effort to improve your ability to nav
 
 ## Improving this resource
 
-Not finding what you are looking for? Think a section could be made clearer? If you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
+Not finding what you are looking for? Think a section could be made clearer? Consider improving edav.info/ by submitting a pull request to the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
 
 ## Fun Stuff: T-Shirts
 
