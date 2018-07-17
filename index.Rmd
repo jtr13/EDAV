@@ -14,7 +14,7 @@ description: "Everything you need to do well in EDAV"
 
 
 
-# About {-}
+# Aboot {-}
 
 <center>
 ![](images/banners/edav_banner.png)
