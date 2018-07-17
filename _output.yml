@@ -14,4 +14,6 @@ bookdown::gitbook:
         <li><a href="index.html">edav.info/</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
+    sharing:
+      facebook: false
+      twitter: false
