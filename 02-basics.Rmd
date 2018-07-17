@@ -13,8 +13,6 @@ To help you navigate the landscape, here we provide a collection of resources th
 
 Since people come with a variety of backgrounds, we will try to provide the essentials as well as some resources for more advanced users. Do not feel you have to go through all of these resources, but know that they are here if/when you need them. :)
 
-As always, if you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
-
 ## Getting Started
 
 ### Setting up R and RStudio
@@ -55,7 +53,7 @@ A lot of the cool stuff comes from installing packages into R.
 
 ### Tidyverse
 
-Don't know what the [tidyverse](https://www.tidyverse.org/) is? It's great and we use it throughout this course. Specifically, `ggplot2` and `dplyr`, two packages within the Tidyverse. 
+Don't know what the [tidyverse](https://www.tidyverse.org/){target="_blank"} is? It's great and we use it throughout this course. Specifically, `ggplot2` and `dplyr`, two packages within the Tidyverse. 
 
 * What's ggplot? Check out [this DataCamp course](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}. This course is split up into three parts and it is quite long, but it does go over pretty much everything ggplot has to offer. If you are starting out, stick with [Part 1](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}.
 
