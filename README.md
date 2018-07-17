@@ -1,10 +1,9 @@
-# EDAV
+# edav.info/
 
-Link to the site: https://jtr13.github.io/EDAV/
+This is code and text behind the [edav.info/](https://jtr13.github.io/EDAV/) resource.
 
-To update the book, run `bookdown::render_book('index.Rmd', 'all')`. This will update the `/docs` folder, which you can then view in a browser.
+## Contact
 
+Zach Bogart: [Website](https://zachbogart.com/) / [Twitter](https://twitter.com/zachbogart)
 
-[D3](/D3)
-
-[Resources for learning R](/Learning%20R)
+Joyce Robbins: [Columbia Profile](http://stat.columbia.edu/department-directory/name/joyce-robbins/) / [Website](http://www.joyce-robbins.com/) / [Twitter](https://twitter.com/jtrnyc) / [Github](https://github.com/jtr13)
