@@ -24,7 +24,7 @@ Students often want to know how they can excel in a course and we understand tha
 
 > Just read the syllabus, focus on the topics discussed therein, and be able to understand their nuances.
 >
-> --- Prof 
+> --- Typical Prof 
 
 This answer is often given after a quick sigh and delivered in a surprisingly condescending tone.
 
