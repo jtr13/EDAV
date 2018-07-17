@@ -155,10 +155,10 @@ TODO
 
 ## External Resources
 <!-- - []](){target="_blank"}: Links to resources with quick blurb -->
-- [Quick-R article](https://www.statmethods.net/graphs/scatterplot.html) about scatterplots using Base R. Goes from the simple into the very fancy, with Matrices, High Density, and 3D versions. 
-- [STHDA Base R](http://www.sthda.com/english/wiki/scatter-plots-r-base-graphs): article on scatterplots in Base R. More examples of how to enhance the humble graph.
-- [STHDA ggplot2](http://www.sthda.com/english/wiki/ggplot2-scatterplot-easy-scatter-plot-using-ggplot2-and-r-statistical-software): article on scatterplots in `ggplot2`. Heavy on the formatting options available and facet warps.
-- [Stack Overflow](https://stackoverflow.com/questions/15624656/label-points-in-geom-point) on adding labels to points from `geom_point()`
+- [Quick-R article](https://www.statmethods.net/graphs/scatterplot.html){target="_blank"} about scatterplots using Base R. Goes from the simple into the very fancy, with Matrices, High Density, and 3D versions. 
+- [STHDA Base R](http://www.sthda.com/english/wiki/scatter-plots-r-base-graphs){target="_blank"}: article on scatterplots in Base R. More examples of how to enhance the humble graph.
+- [STHDA ggplot2](http://www.sthda.com/english/wiki/ggplot2-scatterplot-easy-scatter-plot-using-ggplot2-and-r-statistical-software){target="_blank"}: article on scatterplots in `ggplot2`. Heavy on the formatting options available and facet warps.
+- [Stack Overflow](https://stackoverflow.com/questions/15624656/label-points-in-geom-point){target="_blank"} on adding labels to points from `geom_point()`
 - [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf){target="_blank"}: Always good to have close by.
 
 

@@ -12,12 +12,12 @@
 
 
 The `visNetwork` documentation doesn't provide the same level of explanation as the original, so it's worth checking out the `vis.js` documentation as well:
-http://visjs.org/index.html  In particular, the [interactive examples](http://visjs.org/network_examples.html) are particularly useful for trying out different options. For example, you can test out physics options with this [network configurator](http://visjs.org/examples/network/physics/physicsConfiguration.html). 
+http://visjs.org/index.html  In particular, the [interactive examples](http://visjs.org/network_examples.html){target="_blank"} are particularly useful for trying out different options. For example, you can test out physics options with this [network configurator](http://visjs.org/examples/network/physics/physicsConfiguration.html){target="_blank"}. 
 
 
 ### Minimum working example
 
-Create a [node data frame](https://datastorm-open.github.io/visNetwork/nodes.html)with a minimum one of column (must be called `id`) with node names:
+Create a [node data frame](https://datastorm-open.github.io/visNetwork/nodes.html){target="_blank"} with a minimum one of column (must be called `id`) with node names:
 
 ```{r}
 # nodes
@@ -25,7 +25,7 @@ boroughs <- data.frame(id = c("The Bronx", "Manhattan", "Queens", "Brooklyn", "S
 ```
 
 
-Create a separate data frame of [edges](https://datastorm-open.github.io/visNetwork/edges.html) with `from` and `to` columns. 
+Create a separate data frame of [edges](https://datastorm-open.github.io/visNetwork/edges.html){target="_blank"} with `from` and `to` columns. 
 
 
 ```{r}
@@ -56,11 +56,11 @@ visNetwork(boroughs, connections)
 
 `visNetwork` can be very slow. 
 
-`%>% visPhysics(stabilization = FALSE)` starts rendering before the stabilization is complete, which does actually speed things up but allows you to see what's happening, which makes a big difference in user experience.  (It's also fun to watch the network stabilize).  Other performance tips are described [here](https://datastorm-open.github.io/visNetwork/performance.html).
+`%>% visPhysics(stabilization = FALSE)` starts rendering before the stabilization is complete, which does actually speed things up but allows you to see what's happening, which makes a big difference in user experience.  (It's also fun to watch the network stabilize).  Other performance tips are described [here](https://datastorm-open.github.io/visNetwork/performance.html){target="_blank"}.
   
 ### Helpful configuration tools  
   
-`%>% visConfigure(enabled = TRUE)` is a useful tool for configuring options interactively.  Upon completion, click "generate options" for the code to reproduce the settings. More [here](https://datastorm-open.github.io/visNetwork/configure.html) (Note that changing options and then viewing them requires a lot of vertical scrolling in the browser.  I'm not sure if anything can be done about this. If you have a solution, let me know!)
+`%>% visConfigure(enabled = TRUE)` is a useful tool for configuring options interactively.  Upon completion, click "generate options" for the code to reproduce the settings. More [here](https://datastorm-open.github.io/visNetwork/configure.html){target="_blank"} (Note that changing options and then viewing them requires a lot of vertical scrolling in the browser.  I'm not sure if anything can be done about this. If you have a solution, let me know!)
   
 ### Coloring nodes
 
