@@ -10,7 +10,7 @@ A lot of these are available for students through [Columbia Libraries](http://li
 
 ### [**Graphical Data Analysis with R**](http://rosuda.org/GDA){target="_blank"}
 
-This book systematically goes through the different types of data, including categorical variables, continuous variables, and time series. The author shows different examples of plotting techniques using ggplot and promoting the "grammar of graphics" model. Code snippets included and available at the [book's website](http://rosuda.org/GDA).
+This book systematically goes through the different types of data, including categorical variables, continuous variables, and time series. The author shows different examples of plotting techniques using ggplot and promoting the "grammar of graphics" model. Code snippets included and available at the [book's website](http://rosuda.org/GDA){target="_blank"}.
 
 ### [**R for Data Science**](http://r4ds.had.co.nz/){target="_blank"}
 
