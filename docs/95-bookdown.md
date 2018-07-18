@@ -35,14 +35,12 @@ Below are some helpful references we used in creating *edav.info/*, which may be
 
 - **Custom Domain Names**: GitHub integration with custom domain names is easy to setup. GitHub has an article on [how to setup a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/){target="_blank"} that will help to get your desired URL hooked up (custom domain names: the vanity plates of the internet). [GitHub Pages](https://pages.github.com/){target="_blank"} supports free hosting, which makes the whole process a lot easier. Also, if you are in the market for a cool domain name, [Google Domains](https://domains.google/#/){target="_blank"} is a great place to get the one of your dreams.
 
-- **Custom 404 Page**: Your site may be lovely, but a default 404 page is always a let down. Not *if* but *when* someone types part of your URL incorrectly or a link gets broken, you should make sure there is something to see other than a boring backend page you had no input in designing. [This article](https://mycyberuniverse.com/developing/custom-404-page-for-website-hosted-on-github.html){target="_blank"} explains the process, but all you have to do is make a file called `404.html` in your root directory and GitHub will use it rather than the default. Because of this, there is really no excuse for not having one. 
+- **Custom 404 Page**: Your site may be lovely, but a default 404 page is always a let down. Not *if* but *when* someone types part of your URL incorrectly or a link gets broken, you should make sure there is something to see other than a boring backend page you had no input in designing. [This article](https://mycyberuniverse.com/developing/custom-404-page-for-website-hosted-on-github.html){target="_blank"} explains the process, but all you have to do is make a file called `404.html` in your root directory and GitHub will use it rather than the default. Because of this, there is really no excuse for not having one. Here's a look at [our 404 page](404.html). Hopefully you aren't seeing it that often. :)
 
     Some considerations:
     - **Always include a link back to the site**: Throw the user a life-saver.
     - **Make it clear that something went wrong**: Don't hide the fact that this page is because of some error.
     - **Other than that, have fun with it!**: There are [plenty of examples](https://www.canva.com/learn/404-page-design/){target="_blank"} of people making [excellent 404 pages](https://www.pagecloud.com/blog/best-404-pages){target="_blank"}. It should make a frustrating experience just a little bit more bearable.
-    
-Here's a look at [our 404 page](404.html). Hopefully you aren't seeing it that often. :)
 
 
 
