@@ -3,7 +3,7 @@ git config --global user.email "zb2223@columbia.edu"
 git config --global user.name "Zach Bogart"
 
 # clone the repository to the book-output directory
-git clone -b gh-pages \
+git clone -b master \
   https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git \
   book-output
 cd book-output
