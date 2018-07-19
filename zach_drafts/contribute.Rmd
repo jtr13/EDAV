@@ -1,6 +1,6 @@
 # Improve this resource {#contribute}
 
-![](images/banners/banners_contribute.png)
+![](images/banners/banner_contribute.png)
 
 ## Overview
 
@@ -17,14 +17,15 @@ This page explains how to contribute to **edav.info/**.
 
 ## Submit A New Issue
 
-- Go to the github page and open a new issue issue
+- Go to the github page and open a new issue
 
 ## Solve an Open Issue
 
-- Submit a pull request to
+- Submit a pull request to the GitHub in response to an open issue
 
 ## Community Contribution
 
+- Notes on Community Contribution
 
 Notes
 

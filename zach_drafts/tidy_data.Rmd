@@ -1,6 +1,6 @@
 # Placeholder {#placeholder}
 
-![](images/banners/banners_placeholder_tidy_data.png)
+![](images/banners/banner_placeholder_tidy_data.png)
 
 ## Notes
 
