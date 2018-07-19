@@ -10,12 +10,15 @@ This page explains how to contribute to *edav.info/*.
 
 - this resource should be yours
 - if you don't like something, make that known to us!
+- great experience in working on collab projects (discussed in ref page)
 
-This 
+We don't want *edav.info/* to be just another resource. Rather we want it to be *your* resource. If there are things that trip you up or cause you frustration, chances are you're not alone. Everyone comes to this course with different backgrounds and expertise. Being able to collect all that knowledge in one place is this resource's mission and you can help move that mission forward.
 
 ## Contribute Directly
 
 - Use the edit icon at the top of every page
+
+The simplest way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. 
 
 ## Submit A New Issue
 
