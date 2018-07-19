@@ -18,7 +18,7 @@ We don't want *edav.info/* to be just another resource. Rather we want it to be 
 
 - Use the edit icon at the top of every page
 
-The simplest way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. 
+The simplest way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will take you to the markdown that generated the page you were on, where you can edit its contents.
 
 ## Submit A New Issue
 
