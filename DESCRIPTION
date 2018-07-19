@@ -8,6 +8,8 @@ Imports: bookdown,
   Sleuth3,
   svglite,
   tidyverse,
-  visNetwork
+  visNetwork,
+  gridExtra,
+  likert
 Remotes: 
   rstudio/bookdown
