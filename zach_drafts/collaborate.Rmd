@@ -16,7 +16,11 @@ This section includes links to help GitHub and advice on collaborating in teams 
 
 ## GitHub
 
-## 
+Links:
+- setting up git with R
+- basics of git repo and collaborating
+- 
+
 
 
 

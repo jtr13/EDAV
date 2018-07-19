@@ -4,12 +4,14 @@
 
 ## Overview
 
-This page explains how to contribute to **edav.info/**.
+This page explains how to contribute to *edav.info/*.
 
 ## Why Contribute?
 
 - this resource should be yours
 - if you don't like something, make that known to us!
+
+This 
 
 ## Contribute Directly
 

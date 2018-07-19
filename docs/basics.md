@@ -10,6 +10,23 @@ To help you navigate the landscape, here we provide a collection of resources th
 
 Since people come with a variety of backgrounds, we will try to provide the essentials as well as some resources for more advanced users. Do not feel you have to go through all of these resources, but know that they are here if/when you need them. :)
 
+## Essentials Checklist
+
+In an effort to get everyone on the same page, here is a checklist of essentials so you can get up and running with this course. It will echo/reference a lot of info said below, but we want to make sure everything mentioned is clear and understood.
+
+Okay, then. Here are the essentials, in checklist form:
+
+1. **Download R and RStudio**: This is the biggest thing to do by far. Make sure to download both R and RStudio, as mentioned in [Setting up R and RStudio](#setting-up-r-and-rstudio).
+2. **Learn your way around RStudio**: RStudio is powerful...if you know how to use it. Take the time to look through the [DataCamp sections on the RStudio IDE](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1){target="_blank"} so you feel comfortable (see [Use RStudio Like a Pro](#use-rstudio-like-a-pro) section).
+3. **Try something!**: Getting comfortable with an IDE is all about practice. So while the DataCamp vids are great, don't solely rely on them. Try things out for yourself! Here are some things to play around with:
+    - Create an R Script file, paste in `print("Hello, World!")`, and run it
+    - Create an R Markdown file and have it generate an HTML page
+    - Download a package like `tidyverse` or `MASS`
+    - Do some math in the console
+4. **Learn how to get help**: Make sure you are comfortable searching for answers when you get stuck. See the above section on [getting help](#getting-help) for some...help.
+5. **Get the Textbook**: This course uses *Graphical Data Analysis with R* as its textbook. Here is an [Amazon Link for a physical copy](https://www.amazon.com/Graphical-Data-Analysis-Chapman-Hall/dp/1498715230){target="_blank"} and a link to the [book's website](http://www.gradaanwr.net/){target="_blank"}. 
+6. **Setup DataCamp Account**: A lot of the references and support materials discussed in edav.info/ are from [DataCamp](https://www.datacamp.com/){target="_blank"}, an online collection of courses/articles on data science. Some of the sections are free, but most are behind a paywall. If you are enrolled in this course, you should receive an invitation to create an account that will allow you full-access to the site. 
+
 ## Getting Started
 
 ### Setting up R and RStudio
@@ -107,22 +124,7 @@ Relax. There are a bunch of people using the same tools you are.
 
 *More Advanced*: There is a vibrant [RStudio Community page](https://community.rstudio.com/){target="_blank"}. Also, R likes twitter. Check out [#rstats](https://twitter.com/search?q=%23rstats){target="_blank"} or maybe [let Hadley Wickham know about a wonky error message](https://twitter.com/hadleywickham/status/952259891342794752){target="_blank"}.
 
-## Essentials Checklist
 
-In an effort to get everyone on the same page, here is a checklist of essentials so you can get up and running with this course. It will echo/reference a lot of info said above, but we want to make sure everything mentioned is clear and understood.
-
-Okay, then. Here are the essentials, in checklist form:
-
-1. **Download R and RStudio**: This is the biggest thing to do by far. Make sure to download both R and RStudio, as mentioned in [Setting up R and RStudio](#setting-up-r-and-rstudio).
-2. **Learn your way around RStudio**: RStudio is powerful...if you know how to use it. Take the time to look through the [DataCamp sections on the RStudio IDE](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1){target="_blank"} so you feel comfortable (see [Use RStudio Like a Pro](#use-rstudio-like-a-pro) section).
-3. **Try something!**: Getting comfortable with an IDE is all about practice. So while the DataCamp vids are great, don't solely rely on them. Try things out for yourself! Here are some things to play around with:
-    - Create an R Script file, paste in `print("Hello, World!")`, and run it
-    - Create an R Markdown file and have it generate an HTML page
-    - Download a package like `tidyverse` or `MASS`
-    - Do some math in the console
-4. **Learn how to get help**: Make sure you are comfortable searching for answers when you get stuck. See the above section on [getting help](#getting-help) for some...help.
-5. **Get the Textbook**: This course uses *Graphical Data Analysis with R* as its textbook. Here is an [Amazon Link for a physical copy](https://www.amazon.com/Graphical-Data-Analysis-Chapman-Hall/dp/1498715230){target="_blank"} and a link to the [book's website](http://www.gradaanwr.net/){target="_blank"}. 
-6. **Setup DataCamp Account**: A lot of the references and support materials discussed in edav.info/ are from [DataCamp](https://www.datacamp.com/){target="_blank"}, an online collection of courses/articles on data science. Some of the sections are free, but most are behind a paywall. If you are enrolled in this course, you should receive an invitation to create an account that will allow you full-access to the site. 
 
 
 

@@ -29,7 +29,7 @@ Below are some helpful references we used in creating *edav.info/*, which may be
 
 - [bookdown.org](https://bookdown.org/home/about.html){target="_blank"}: Site for the `bookdown` package. Has a bunch of popular books published using `bookdown` and some info about how to get started using the package.
 
-- [Creating Websites in R](http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html){target="_blank"}: This tutorial, written by [Emily Zabor](http://www.emilyzabor.com/){target="_blank"} (a Columbia alum), provides a thorough tutorial for creating websites using different R tools. She discusses how to make different kinds of sites (personal, package, project, blog) as well as GitHub integration and step-by-step instructions for getting setup with templates and hosting. Very detailed and worth perusing if interested in making your own site.
+- [Creating Websites in R](http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html){target="_blank"}: This tutorial, written by [Emily Zabor](http://www.emilyzabor.com/){target="_blank"} (a Columbia alum), provides a thorough walkthrough for creating websites using different R tools. She discusses how to make different kinds of sites (personal, package, project, blog) as well as GitHub integration and step-by-step instructions for getting setup with templates and hosting. Very detailed and worth perusing if interested in making your own site.
 
 ## Trimmings
 
