@@ -10,5 +10,5 @@ cd book-output
 git rm -rf *
 cp -r ../docs/* ./
 git add --all *
-git commit -m "Update the book thru Travis"
+git commit -m "render book with Travis"
 git push -q origin master
