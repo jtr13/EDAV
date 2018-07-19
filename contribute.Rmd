@@ -1,6 +1,6 @@
 # Improve this resource {#contribute}
 
-![](images/banners/banner_contribute.png)
+![](images/banners/banner_collab.png)
 
 ## Overview
 
