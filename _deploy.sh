@@ -11,4 +11,4 @@ git rm -rf *
 cp -r ../docs/* ./
 git add --all *
 git commit -m "Update the book thru Travis"
-git push -q origin gh-pages
+git push -q origin master
