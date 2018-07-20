@@ -1,0 +1,17 @@
+# TODO Contribute to this resource {#contribute}
+
+![](images/banners/banners_contribute.png)
+
+## Overview
+
+- Click on Edit icon at the top of any page to edit it and submit changes as a pull request
+
+- How to improve this resource
+- Community Contribution: Propose a new page and submit it as github pull request
+- We appreciate any improvements and will consider all submissions closely
+
+## Improving this resource
+
+Not finding what you are looking for? Think a section could be made clearer? If you would like to improve this resource, consider submitting a pull request on the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
+
+

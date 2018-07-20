@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>edav.info/</title>
+  <meta name="description" content="Everything you need to do well in EDAV">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="edav.info/" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="edav.info/" />
+  
+  <meta property="og:description" content="Everything you need to do well in EDAV" />
+  <meta name="github-repo" content="jtr13/EDAV" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="edav.info/" />
+  
+  <meta name="twitter:description" content="Everything you need to do well in EDAV" />
+  
+
+<meta name="author" content="Zach Bogart, Joyce Robbins">
+
+
+<meta name="date" content="2018-01-01">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="intro.html">
+<link rel="next" href="project.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<link href="libs/vis-4.20.1/vis.css" rel="stylesheet" />
+<script src="libs/vis-4.20.1/vis.min.js"></script>
+<script src="libs/visNetwork-binding-2.0.4/visNetwork.js"></script>
+<!-- 
+Favicon 
+  - included in the toolbar of every page
+  - EDAV Logo favicon
+  - via: https://www.favicon-generator.org/
+-->
+
+<link rel="apple-touch-icon" sizes="57x57" href="images/icons/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/icons/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/icons/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/icons/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/icons/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/icons/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/icons/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/icons/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/icons/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/icons/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html"><b>edav.info/</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#table-of-contents"><i class="fa fa-check"></i><b>0.1</b> Table of Contents</a><ul>
+<li class="chapter" data-level="0.1.1" data-path="index.html"><a href="index.html#blue-pages"><i class="fa fa-check"></i><b>0.1.1</b> Blue Pages</a></li>
+<li class="chapter" data-level="0.1.2" data-path="index.html"><a href="index.html#green-pages"><i class="fa fa-check"></i><b>0.1.2</b> Green Pages</a></li>
+<li class="chapter" data-level="0.1.3" data-path="index.html"><a href="index.html#red-pages"><i class="fa fa-check"></i><b>0.1.3</b> Red Pages</a></li>
+<li class="chapter" data-level="0.1.4" data-path="index.html"><a href="index.html#yellow-pages"><i class="fa fa-check"></i><b>0.1.4</b> Yellow Pages</a></li>
+</ul></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#contact"><i class="fa fa-check"></i><b>0.2</b> Contact</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#everything-you-need-for-edav"><i class="fa fa-check"></i><b>1.1</b> Everything you need for EDAV</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#what-the-banners-mean"><i class="fa fa-check"></i><b>1.2</b> What the Banners Mean</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#improving-this-resource"><i class="fa fa-check"></i><b>1.3</b> Improving this resource</a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#fun-stuff-t-shirts"><i class="fa fa-check"></i><b>1.4</b> Fun Stuff: T-Shirts</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>2</b> R Basics</a><ul>
+<li class="chapter" data-level="2.1" data-path="basics.html"><a href="basics.html#essentials-checklist"><i class="fa fa-check"></i><b>2.1</b> Essentials Checklist</a></li>
+<li class="chapter" data-level="2.2" data-path="basics.html"><a href="basics.html#getting-started"><i class="fa fa-check"></i><b>2.2</b> Getting Started</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="basics.html"><a href="basics.html#setting-up-r-and-rstudio"><i class="fa fa-check"></i><b>2.2.1</b> Setting up R and RStudio</a></li>
+<li class="chapter" data-level="2.2.2" data-path="basics.html"><a href="basics.html#use-rstudio-like-a-pro"><i class="fa fa-check"></i><b>2.2.2</b> Use RStudio Like a Pro</a></li>
+<li class="chapter" data-level="2.2.3" data-path="basics.html"><a href="basics.html#learning-about-r"><i class="fa fa-check"></i><b>2.2.3</b> Learning About R</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="basics.html"><a href="basics.html#getting-more-specific"><i class="fa fa-check"></i><b>2.3</b> Getting More Specific</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="basics.html"><a href="basics.html#installing-packages"><i class="fa fa-check"></i><b>2.3.1</b> Installing Packages</a></li>
+<li class="chapter" data-level="2.3.2" data-path="basics.html"><a href="basics.html#tidyverse"><i class="fa fa-check"></i><b>2.3.2</b> Tidyverse</a></li>
+<li class="chapter" data-level="2.3.3" data-path="basics.html"><a href="basics.html#importing-data"><i class="fa fa-check"></i><b>2.3.3</b> Importing Data</a></li>
+<li class="chapter" data-level="2.3.4" data-path="basics.html"><a href="basics.html#r-markdown"><i class="fa fa-check"></i><b>2.3.4</b> R Markdown</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="basics.html"><a href="basics.html#getting-help"><i class="fa fa-check"></i><b>2.4</b> Getting Help</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="basics.html"><a href="basics.html#things-to-try"><i class="fa fa-check"></i><b>2.4.1</b> Things to Try</a></li>
+<li class="chapter" data-level="2.4.2" data-path="basics.html"><a href="basics.html#help-me-r-community"><i class="fa fa-check"></i><b>2.4.2</b> Help Me, R Community!</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="project.html"><a href="project.html"><i class="fa fa-check"></i><b>3</b> Final Project Notes</a><ul>
+<li class="chapter" data-level="3.1" data-path="project.html"><a href="project.html#overview"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="project.html"><a href="project.html#general-info"><i class="fa fa-check"></i><b>3.2</b> General Info</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="project.html"><a href="project.html#goal"><i class="fa fa-check"></i><b>3.2.1</b> Goal</a></li>
+<li class="chapter" data-level="3.2.2" data-path="project.html"><a href="project.html#teams"><i class="fa fa-check"></i><b>3.2.2</b> Teams</a></li>
+<li class="chapter" data-level="3.2.3" data-path="project.html"><a href="project.html#topics"><i class="fa fa-check"></i><b>3.2.3</b> Topics</a></li>
+<li class="chapter" data-level="3.2.4" data-path="project.html"><a href="project.html#data"><i class="fa fa-check"></i><b>3.2.4</b> Data</a></li>
+<li class="chapter" data-level="3.2.5" data-path="project.html"><a href="project.html#analysis"><i class="fa fa-check"></i><b>3.2.5</b> Analysis</a></li>
+<li class="chapter" data-level="3.2.6" data-path="project.html"><a href="project.html#feedback"><i class="fa fa-check"></i><b>3.2.6</b> Feedback</a></li>
+<li class="chapter" data-level="3.2.7" data-path="project.html"><a href="project.html#peer-review"><i class="fa fa-check"></i><b>3.2.7</b> Peer Review</a></li>
+<li class="chapter" data-level="3.2.8" data-path="project.html"><a href="project.html#report-format"><i class="fa fa-check"></i><b>3.2.8</b> Report Format</a></li>
+<li class="chapter" data-level="3.2.9" data-path="project.html"><a href="project.html#a-note-on-style"><i class="fa fa-check"></i><b>3.2.9</b> A Note on Style</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="project.html"><a href="project.html#outline"><i class="fa fa-check"></i><b>3.3</b> Outline</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="project.html"><a href="project.html#introduction-1"><i class="fa fa-check"></i><b>3.3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.3.2" data-path="project.html"><a href="project.html#description-of-data"><i class="fa fa-check"></i><b>3.3.2</b> Description of Data</a></li>
+<li class="chapter" data-level="3.3.3" data-path="project.html"><a href="project.html#analysis-of-data-quality"><i class="fa fa-check"></i><b>3.3.3</b> Analysis of Data Quality</a></li>
+<li class="chapter" data-level="3.3.4" data-path="project.html"><a href="project.html#main-analysis-exploratory-data-analysis"><i class="fa fa-check"></i><b>3.3.4</b> Main Analysis (Exploratory Data Analysis)</a></li>
+<li class="chapter" data-level="3.3.5" data-path="project.html"><a href="project.html#executive-summary-presentation-style"><i class="fa fa-check"></i><b>3.3.5</b> Executive Summary (Presentation-style)</a></li>
+<li class="chapter" data-level="3.3.6" data-path="project.html"><a href="project.html#interactive-component"><i class="fa fa-check"></i><b>3.3.6</b> Interactive Component</a></li>
+<li class="chapter" data-level="3.3.7" data-path="project.html"><a href="project.html#conclusion"><i class="fa fa-check"></i><b>3.3.7</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="project.html"><a href="project.html#faq"><i class="fa fa-check"></i><b>3.4</b> FAQ</a></li>
+<li class="chapter" data-level="3.5" data-path="project.html"><a href="project.html#rubric"><i class="fa fa-check"></i><b>3.5</b> Rubric</a></li>
+<li class="chapter" data-level="3.6" data-path="project.html"><a href="project.html#executive-summary-notes"><i class="fa fa-check"></i><b>3.6</b> Executive Summary Notes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="histo.html"><a href="histo.html"><i class="fa fa-check"></i><b>4</b> Chart: Histogram</a><ul>
+<li class="chapter" data-level="4.1" data-path="histo.html"><a href="histo.html#overview-1"><i class="fa fa-check"></i><b>4.1</b> Overview</a></li>
+<li class="chapter" data-level="4.2" data-path="histo.html"><a href="histo.html#tldr"><i class="fa fa-check"></i><b>4.2</b> tl;dr</a></li>
+<li class="chapter" data-level="4.3" data-path="histo.html"><a href="histo.html#simple-examples"><i class="fa fa-check"></i><b>4.3</b> Simple Examples</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="histo.html"><a href="histo.html#histogram-using-base-r"><i class="fa fa-check"></i><b>4.3.1</b> Histogram using Base R</a></li>
+<li class="chapter" data-level="4.3.2" data-path="histo.html"><a href="histo.html#histogram-using-ggplot2"><i class="fa fa-check"></i><b>4.3.2</b> Histogram using ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="histo.html"><a href="histo.html#when-to-use"><i class="fa fa-check"></i><b>4.4</b> When to use</a></li>
+<li class="chapter" data-level="4.5" data-path="histo.html"><a href="histo.html#considerations"><i class="fa fa-check"></i><b>4.5</b> Considerations</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="histo.html"><a href="histo.html#bin-boundaries"><i class="fa fa-check"></i><b>4.5.1</b> Bin Boundaries</a></li>
+<li class="chapter" data-level="4.5.2" data-path="histo.html"><a href="histo.html#bin-number"><i class="fa fa-check"></i><b>4.5.2</b> Bin Number</a></li>
+<li class="chapter" data-level="4.5.3" data-path="histo.html"><a href="histo.html#bin-alignment"><i class="fa fa-check"></i><b>4.5.3</b> Bin Alignment</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="histo.html"><a href="histo.html#theory"><i class="fa fa-check"></i><b>4.6</b> Theory</a></li>
+<li class="chapter" data-level="4.7" data-path="histo.html"><a href="histo.html#external-resources"><i class="fa fa-check"></i><b>4.7</b> External Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="box.html"><a href="box.html"><i class="fa fa-check"></i><b>5</b> Chart: Boxplot</a><ul>
+<li class="chapter" data-level="5.1" data-path="box.html"><a href="box.html#overview-2"><i class="fa fa-check"></i><b>5.1</b> Overview</a></li>
+<li class="chapter" data-level="5.2" data-path="box.html"><a href="box.html#tldr-1"><i class="fa fa-check"></i><b>5.2</b> tl;dr</a></li>
+<li class="chapter" data-level="5.3" data-path="box.html"><a href="box.html#simple-examples-1"><i class="fa fa-check"></i><b>5.3</b> Simple Examples</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="box.html"><a href="box.html#boxplot-using-base-r"><i class="fa fa-check"></i><b>5.3.1</b> Boxplot using Base R</a></li>
+<li class="chapter" data-level="5.3.2" data-path="box.html"><a href="box.html#boxplot-using-ggplot2"><i class="fa fa-check"></i><b>5.3.2</b> Boxplot using ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="box.html"><a href="box.html#when-to-use-1"><i class="fa fa-check"></i><b>5.4</b> When to use</a></li>
+<li class="chapter" data-level="5.5" data-path="box.html"><a href="box.html#considerations-1"><i class="fa fa-check"></i><b>5.5</b> Considerations</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="box.html"><a href="box.html#flipping-orientation"><i class="fa fa-check"></i><b>5.5.1</b> Flipping Orientation</a></li>
+<li class="chapter" data-level="5.5.2" data-path="box.html"><a href="box.html#not-for-categorical-data"><i class="fa fa-check"></i><b>5.5.2</b> NOT for categorical data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="box.html"><a href="box.html#theory-1"><i class="fa fa-check"></i><b>5.6</b> Theory</a></li>
+<li class="chapter" data-level="5.7" data-path="box.html"><a href="box.html#external-resources-1"><i class="fa fa-check"></i><b>5.7</b> External Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="scatter.html"><a href="scatter.html"><i class="fa fa-check"></i><b>6</b> Chart: Scatterplot</a><ul>
+<li class="chapter" data-level="6.1" data-path="scatter.html"><a href="scatter.html#overview-3"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
+<li class="chapter" data-level="6.2" data-path="scatter.html"><a href="scatter.html#tldr-2"><i class="fa fa-check"></i><b>6.2</b> tl;dr</a></li>
+<li class="chapter" data-level="6.3" data-path="scatter.html"><a href="scatter.html#simple-examples-2"><i class="fa fa-check"></i><b>6.3</b> Simple Examples</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="scatter.html"><a href="scatter.html#scatterplot-using-base-r"><i class="fa fa-check"></i><b>6.3.1</b> Scatterplot using Base R</a></li>
+<li class="chapter" data-level="6.3.2" data-path="scatter.html"><a href="scatter.html#scatterplot-using-ggplot2"><i class="fa fa-check"></i><b>6.3.2</b> Scatterplot using ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="scatter.html"><a href="scatter.html#when-to-use-2"><i class="fa fa-check"></i><b>6.4</b> When to use</a></li>
+<li class="chapter" data-level="6.5" data-path="scatter.html"><a href="scatter.html#considerations-2"><i class="fa fa-check"></i><b>6.5</b> Considerations</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="scatter.html"><a href="scatter.html#overlapping-data"><i class="fa fa-check"></i><b>6.5.1</b> Overlapping Data</a></li>
+<li class="chapter" data-level="6.5.2" data-path="scatter.html"><a href="scatter.html#scaling"><i class="fa fa-check"></i><b>6.5.2</b> Scaling</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="scatter.html"><a href="scatter.html#modifications"><i class="fa fa-check"></i><b>6.6</b> Modifications</a></li>
+<li class="chapter" data-level="6.7" data-path="scatter.html"><a href="scatter.html#theory-2"><i class="fa fa-check"></i><b>6.7</b> Theory</a></li>
+<li class="chapter" data-level="6.8" data-path="scatter.html"><a href="scatter.html#external-resources-2"><i class="fa fa-check"></i><b>6.8</b> External Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>7</b> Networks</a><ul>
+<li class="chapter" data-level="7.1" data-path="network.html"><a href="network.html#visnetwork-interactive"><i class="fa fa-check"></i><b>7.1</b> visNetwork (interactive)</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="network.html"><a href="network.html#minimum-working-example"><i class="fa fa-check"></i><b>7.1.1</b> Minimum working example</a></li>
+<li class="chapter" data-level="7.1.2" data-path="network.html"><a href="network.html#performance"><i class="fa fa-check"></i><b>7.1.2</b> Performance</a></li>
+<li class="chapter" data-level="7.1.3" data-path="network.html"><a href="network.html#helpful-configuration-tools"><i class="fa fa-check"></i><b>7.1.3</b> Helpful configuration tools</a></li>
+<li class="chapter" data-level="7.1.4" data-path="network.html"><a href="network.html#coloring-nodes"><i class="fa fa-check"></i><b>7.1.4</b> Coloring nodes</a></li>
+<li class="chapter" data-level="7.1.5" data-path="network.html"><a href="network.html#directed-nodes-arrows"><i class="fa fa-check"></i><b>7.1.5</b> Directed nodes (arrows)</a></li>
+<li class="chapter" data-level="7.1.6" data-path="network.html"><a href="network.html#turn-off-the-physics-simulation"><i class="fa fa-check"></i><b>7.1.6</b> Turn off the physics simulation</a></li>
+<li class="chapter" data-level="7.1.7" data-path="network.html"><a href="network.html#grey-out-nodes-far-from-selected-defined-by-degree"><i class="fa fa-check"></i><b>7.1.7</b> Grey out nodes far from selected (defined by “degree”)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="iris.html"><a href="iris.html"><i class="fa fa-check"></i><b>8</b> Walkthrough: Iris Example</a><ul>
+<li class="chapter" data-level="8.1" data-path="iris.html"><a href="iris.html#overview-4"><i class="fa fa-check"></i><b>8.1</b> Overview</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="iris.html"><a href="iris.html#tldr-3"><i class="fa fa-check"></i><b>8.1.1</b> tl;dr</a></li>
+<li class="chapter" data-level="8.1.2" data-path="iris.html"><a href="iris.html#packages"><i class="fa fa-check"></i><b>8.1.2</b> Packages</a></li>
+<li class="chapter" data-level="8.1.3" data-path="iris.html"><a href="iris.html#techniques"><i class="fa fa-check"></i><b>8.1.3</b> Techniques</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="iris.html"><a href="iris.html#quick-note-on-doing-it-the-lazy-way"><i class="fa fa-check"></i><b>8.2</b> Quick Note on Doing it the Lazy Way</a></li>
+<li class="chapter" data-level="8.3" data-path="iris.html"><a href="iris.html#viewing-data"><i class="fa fa-check"></i><b>8.3</b> Viewing Data</a></li>
+<li class="chapter" data-level="8.4" data-path="iris.html"><a href="iris.html#plotting-data"><i class="fa fa-check"></i><b>8.4</b> Plotting data</a></li>
+<li class="chapter" data-level="8.5" data-path="iris.html"><a href="iris.html#markdown-etiquette"><i class="fa fa-check"></i><b>8.5</b> Markdown Etiquette</a></li>
+<li class="chapter" data-level="8.6" data-path="iris.html"><a href="iris.html#overlapping-data-1"><i class="fa fa-check"></i><b>8.6</b> Overlapping Data</a><ul>
+<li class="chapter" data-level="8.6.1" data-path="iris.html"><a href="iris.html#first-the-legend"><i class="fa fa-check"></i><b>8.6.1</b> First: The Legend</a></li>
+<li class="chapter" data-level="8.6.2" data-path="iris.html"><a href="iris.html#second-jittering"><i class="fa fa-check"></i><b>8.6.2</b> Second: Jittering</a></li>
+<li class="chapter" data-level="8.6.3" data-path="iris.html"><a href="iris.html#aside-example-where-alpha-blending-works"><i class="fa fa-check"></i><b>8.6.3</b> <em>Aside</em>: Example Where Alpha Blending Works</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="iris.html"><a href="iris.html#formatting-for-presentation"><i class="fa fa-check"></i><b>8.7</b> Formatting for presentation</a></li>
+<li class="chapter" data-level="8.8" data-path="iris.html"><a href="iris.html#alter-appearance"><i class="fa fa-check"></i><b>8.8</b> Alter Appearance</a></li>
+<li class="chapter" data-level="8.9" data-path="iris.html"><a href="iris.html#consider-themes"><i class="fa fa-check"></i><b>8.9</b> Consider Themes</a></li>
+<li class="chapter" data-level="8.10" data-path="iris.html"><a href="iris.html#going-deeper"><i class="fa fa-check"></i><b>8.10</b> Going Deeper</a></li>
+<li class="chapter" data-level="8.11" data-path="iris.html"><a href="iris.html#helpful-links"><i class="fa fa-check"></i><b>8.11</b> Helpful links</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="publish.html"><a href="publish.html"><i class="fa fa-check"></i><b>9</b> Publishing with R</a><ul>
+<li class="chapter" data-level="9.1" data-path="publish.html"><a href="publish.html#overview-5"><i class="fa fa-check"></i><b>9.1</b> Overview</a></li>
+<li class="chapter" data-level="9.2" data-path="publish.html"><a href="publish.html#bookdown"><i class="fa fa-check"></i><b>9.2</b> Bookdown</a></li>
+<li class="chapter" data-level="9.3" data-path="publish.html"><a href="publish.html#essentials"><i class="fa fa-check"></i><b>9.3</b> Essentials</a></li>
+<li class="chapter" data-level="9.4" data-path="publish.html"><a href="publish.html#trimmings"><i class="fa fa-check"></i><b>9.4</b> Trimmings</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="general.html"><a href="general.html"><i class="fa fa-check"></i><b>10</b> General Resources</a><ul>
+<li class="chapter" data-level="10.1" data-path="general.html"><a href="general.html#books"><i class="fa fa-check"></i><b>10.1</b> Books</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="general.html"><a href="general.html#graphical-data-analysis-with-r"><i class="fa fa-check"></i><b>10.1.1</b> <a href="http://rosuda.org/GDA" target="_blank"><strong>Graphical Data Analysis with R</strong></a></a></li>
+<li class="chapter" data-level="10.1.2" data-path="general.html"><a href="general.html#r-for-data-science"><i class="fa fa-check"></i><b>10.1.2</b> <a href="http://r4ds.had.co.nz/" target="_blank"><strong>R for Data Science</strong></a></a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="general.html"><a href="general.html#cheatsheets"><i class="fa fa-check"></i><b>10.2</b> Cheatsheets</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="general.html"><a href="general.html#cheatsheet-of-cheatsheets"><i class="fa fa-check"></i><b>10.2.1</b> <a href="https://paulvanderlaken.com/author/lakenp/" target="_blank"><strong>Cheatsheet of cheatsheets</strong></a></a></li>
+<li class="chapter" data-level="10.2.2" data-path="general.html"><a href="general.html#rstudio-cheatsheet-collection"><i class="fa fa-check"></i><b>10.2.2</b> <a href="https://www.rstudio.com/resources/cheatsheets/" target="_blank">RStudio Cheatsheet Collection</a></a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">edav.info/</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!-- 
+Header 
+  - included at the top (head) of every page
+  - EDAV logo back to index.html
+  - smiles on hover :)
+-->
+
+<!-- Free Font Awesome Stylesheet -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+<!-- Logo Hover JS -->
+<script>
+  function hover(element) {
+  element.setAttribute('src', 'images/icons/edav_resource_url.png');
+}
+
+function unhover(element) {
+  element.setAttribute('src', 'images/icons/edav_resource_url_no_smile.png');
+}
+</script>
+
+<!-- URL Logo -->
+<center>
+<!--<a href="index.html"><img src="images/icons/edav_resource_url.png"></a>-->
+<br><br>
+<a href="index.html"><img src="images/icons/edav_resource_url_no_smile.png" onmouseover="hover(this);" onmouseout="unhover(this);" /></a>
+</center>
+<div id="basics" class="section level1">
+<h1><span class="header-section-number">2</span> R Basics</h1>
+<div class="figure">
+<img src="images/banners/banner_basics.png" />
+
+</div>
+<p>So…there is soooo much to the world of R. Textbooks, cheatsheets, exercises, and other buzzwords full of resources you could go through. There are over 12700 packages on <a href="https://cran.r-project.org" target="_blank">CRAN</a>, the network through which R code and packages are distributed. It can be overwhelming. However, bear in mind that R is being used for a lot of different things, not all of which are relevant to EDAV.</p>
+<p>To help you navigate the landscape, here we provide a collection of resources that you should be familiar with in the context of this course. This is not to say that any of these resources are prerequisites, but they will come up in the course and we want to give you places to learn about them.</p>
+<p>Since people come with a variety of backgrounds, we will try to provide the essentials as well as some resources for more advanced users. Do not feel you have to go through all of these resources, but know that they are here if/when you need them. :)</p>
+<div id="essentials-checklist" class="section level2">
+<h2><span class="header-section-number">2.1</span> Essentials Checklist</h2>
+<p>In an effort to get everyone on the same page, here is a checklist of essentials so you can get up and running with this course. It will echo/reference a lot of info said below, but we want to make sure everything mentioned is clear and understood.</p>
+<p>Okay, then. Here are the essentials, in checklist form:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Download R and RStudio</strong>: This is the biggest thing to do by far. Make sure to download both R and RStudio, as mentioned in <a href="basics.html#setting-up-r-and-rstudio">Setting up R and RStudio</a>.</li>
+<li><strong>Learn your way around RStudio</strong>: RStudio is powerful…if you know how to use it. Take the time to look through the <a href="https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1" target="_blank">DataCamp sections on the RStudio IDE</a> so you feel comfortable (see <a href="basics.html#use-rstudio-like-a-pro">Use RStudio Like a Pro</a> section).</li>
+<li><strong>Try something!</strong>: Getting comfortable with an IDE is all about practice. So while the DataCamp vids are great, don’t solely rely on them. Try things out for yourself! Here are some things to play around with:
+<ul>
+<li>Create an R Script file, paste in <code>print(&quot;Hello, World!&quot;)</code>, and run it</li>
+<li>Create an R Markdown file and have it generate an HTML page</li>
+<li>Download a package like <code>tidyverse</code> or <code>MASS</code></li>
+<li>Do some math in the console</li>
+</ul></li>
+<li><strong>Learn how to get help</strong>: Make sure you are comfortable searching for answers when you get stuck. See the above section on <a href="basics.html#getting-help">getting help</a> for some…help.</li>
+<li><strong>Get the Textbook</strong>: This course uses <em>Graphical Data Analysis with R</em> as its textbook. Here is an <a href="https://www.amazon.com/Graphical-Data-Analysis-Chapman-Hall/dp/1498715230" target="_blank">Amazon Link for a physical copy</a> and a link to the <a href="http://www.gradaanwr.net/" target="_blank">book’s website</a>.</li>
+<li><strong>Setup DataCamp Account</strong>: A lot of the references and support materials discussed in edav.info/ are from <a href="https://www.datacamp.com/" target="_blank">DataCamp</a>, an online collection of courses/articles on data science. Some of the sections are free, but most are behind a paywall. If you are enrolled in this course, you should receive an invitation to create an account that will allow you full-access to the site.</li>
+</ol>
+</div>
+<div id="getting-started" class="section level2">
+<h2><span class="header-section-number">2.2</span> Getting Started</h2>
+<div id="setting-up-r-and-rstudio" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Setting up R and RStudio</h3>
+<p>It is super important to get up and running with R and RStudio as soon as you can.</p>
+<ul>
+<li><a href="https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/orientation?ex=3" target="_blank">This video</a> from DataCamp pretty much covers it. Know that you will be downloading two separate things: <a href="https://cran.r-project.org/" target="_blank">R</a>, which is a programming language; and <a href="https://www.rstudio.com/download/" target="_blank">RStudio</a>, which is an IDE (integrated development environment…fancy tool for working with R) that will make working with R a lot more enjoyable.</li>
+</ul>
+</div>
+<div id="use-rstudio-like-a-pro" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Use RStudio Like a Pro</h3>
+<p>Great! RStudio is up and running on your computer! Now make sure you get comfy with what it can do.</p>
+<ul>
+<li>Don’t know your way around the RStudio IDE? I highly recommend <a href="https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1" target="_blank">this DataCamp course</a>. Sections from Part 1 (Orientation, Programming, and Projects) are the most relevant for this course. They include videos about all the regions in RStudio, how to program efficiently/effectively in the IDE (gotta love those keyboard shortcuts), and the benefits of setting up R projects. A little hazy on that last sentence? The course will help.</li>
+</ul>
+<p><em>More Advanced</em>: Another option <a href="https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-part-1/" target="_blank">is this RStudio webinar</a>. Just want a quick reference to brush up with? Take a look at the <a href="https://www.rstudio.com/resources/cheatsheets/" target="_blank">RStudio Cheatsheets page</a>.</p>
+<p><em>More Advanced</em>: Want to make the RStudio IDE your own? Look into <a href="https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio" target="_blank">modifying the preferences</a>. You can customize the look of the IDE like default colors and typefaces, tweak default behaviors like clearing the environment on load, and integrate a session with a git repository. If something about the IDE bugs you, chances are you can make it more to your liking.</p>
+</div>
+<div id="learning-about-r" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Learning About R</h3>
+<p>R is just like any language, programming or otherwise: you need to <em>use</em> it to get <em>used</em> to it.</p>
+<ul>
+<li>Just starting out in R? Check out <a href="https://www.datacamp.com/courses/free-introduction-to-r" target="_blank">this DataCamp course</a> for a quick introduction. For this course, you can skim/mostly ignore matrices and lists (Parts 3 &amp; 6).</li>
+</ul>
+<p><em>More Advanced</em>: Want to curl up with a good book about R? We recommend <a href="http://r4ds.had.co.nz/" target="_blank">R for Data Science</a>. It jumps right in, but is quite extensive. Focus less on Part IV (Model).</p>
+</div>
+</div>
+<div id="getting-more-specific" class="section level2">
+<h2><span class="header-section-number">2.3</span> Getting More Specific</h2>
+<div id="installing-packages" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Installing Packages</h3>
+<p>A lot of the cool stuff comes from installing packages into R.</p>
+<ul>
+<li><p>How do you install packages? The main function we use is <code>install.packages(&quot;&lt;package_name&gt;&quot;)</code>, which installs from <a href="https://cran.r-project.org" target="_blank">CRAN</a>, a well-known place where packages are stored. Then, once installed, you can use packages by calling them within <code>library()</code>.</p></li>
+<li><p>Still confused? <a href="https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=16" target="_blank">This DataCamp video</a> should help explain the process. Also be sure to try the <a href="https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=17" target="_blank">accompanying exercise</a> to make sure you have a feel for loading a package.</p></li>
+</ul>
+<p><em>More Advanced</em>: Want more info? Check out this <a href="https://www.datacamp.com/community/tutorials/r-packages-guide" target="_blank">DataCamp article on everything about installing packages in R</a>. As well as covering the basics, this article shows you how to install packages that are not located on CRAN using <code>devtools</code>, as well as ways to monitor the status/health of your installed packages.</p>
+</div>
+<div id="tidyverse" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Tidyverse</h3>
+<p>Don’t know what the <a href="https://www.tidyverse.org/" target="_blank">tidyverse</a> is? It’s great and we use it throughout this course. Specifically, <code>ggplot2</code> and <code>dplyr</code>, two packages within the Tidyverse.</p>
+<ul>
+<li><p>What’s ggplot? Check out <a href="https://www.datacamp.com/courses/data-visualization-with-ggplot2-1" target="_blank">this DataCamp course</a>. This course is split up into three parts and it is quite long, but it does go over pretty much everything ggplot has to offer. If you are starting out, stick with <a href="https://www.datacamp.com/courses/data-visualization-with-ggplot2-1" target="_blank">Part 1</a>.</p></li>
+<li><p>What’s dplyr? Make friends with <a href="https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial" target="_blank">this DataCamp course</a>. It goes through the main dplyr verbs: select, mutate, filter, arrange, summarise; as well as the <a href="https://www.datacamp.com/community/tutorials/pipe-r-tutorial" target="_blank">lovely pipe operator</a>.</p></li>
+</ul>
+<p><em>More Advanced</em>: Want case studies to go through? Try <a href="https://campus.datacamp.com/courses/data-visualization-with-ggplot2-2/chapter-5-case-study?ex=1" target="_blank">this one</a> or <a href="https://campus.datacamp.com/courses/data-visualization-with-ggplot2-part-3/data-munging-and-visualization-case-study?ex=1" target="_blank">this one</a>.</p>
+</div>
+<div id="importing-data" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Importing Data</h3>
+<p>We often will need to pull data into RStudio to work with it.</p>
+<ul>
+<li>“Pull data”? I’m already confused. But wait! Here’s a <a href="https://www.datacamp.com/courses/importing-data-in-r-part-1" target="_blank">DataCamp course on importing data using <code>dplyr</code></a>. <strong>Note</strong>: This course explains how to import every kind of data format under the sun…all you need to be familiar with for this course (mostly) is pulling in CSV files using <code>read_csv</code>. So, if you are overwhelmed, just stick to the <a href="https://campus.datacamp.com/courses/importing-data-in-r-part-1/importing-data-from-flat-files-with-utils?ex=1" target="_blank">read_csv stuff</a>.</li>
+</ul>
+<p><em>More Advanced</em>: Importing every data format under the sun you say? I want to know how to do that. Here’s <a href="https://www.datacamp.com/courses/importing-data-in-r-part-1" target="_blank">Part 1</a>, as well as <a href="https://www.datacamp.com/courses/importing-data-in-r-part-2" target="_blank">Part 2</a>, which focuses on databases and HTTP requests. Go nuts.</p>
+</div>
+<div id="r-markdown" class="section level3">
+<h3><span class="header-section-number">2.3.4</span> R Markdown</h3>
+<p>R Markdown is how you will be submitting assignments for this course. In general, it is a great way to communicate your findings to others.</p>
+<ul>
+<li>Don’t know about R Markdown? <a href="https://www.datacamp.com/courses/reporting-with-r-markdown" target="_blank">DataCamp course</a> to the rescue! We will be using html formatting so focus on that. There is also an <a href="https://www.rstudio.com/resources/webinars/getting-started-with-r-%20markdown/" target="_blank">RStudio webinar</a> about it.</li>
+</ul>
+<p><em>More Advanced</em>: The <a href="https://rmarkdown.rstudio.com/" target="_blank">R Markdown page</a> from RStudio has <a href="https://rmarkdown.rstudio.com/lesson-1.html" target="_blank">lessons</a> with extensive info. Also, more cheatsheets.</p>
+<p><em>More Advanced</em>: Want to jump right in? Open a new R Markdown file (File &gt; New File &gt; R Markdown…), and set its <em>Default Output Format</em> to HTML. You will get a R Markdown template you can tinker with. Try knitting the document to see what everything does.</p>
+</div>
+</div>
+<div id="getting-help" class="section level2">
+<h2><span class="header-section-number">2.4</span> Getting Help</h2>
+<div class="figure">
+<img src="images/halp_me_orly.png" alt="via https://dev.to/rly" />
+<p class="caption">via <a href="https://dev.to/rly" class="uri">https://dev.to/rly</a></p>
+</div>
+<p>First off…breeeeeathe. We can fix this. There are a bunch of resources out there that can help you.</p>
+<div id="things-to-try" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> Things to Try</h3>
+<ul>
+<li><p>Remember: Always try to help yourself! <a href="https://www.r-project.org/help.html" target="_blank">This article</a> has a great list of tools to help you learn about anything you may be confused by. This includes learning about functions and packages as well as searching for info about a function/package/problem/etc. This is the perfect place to learn how to get the info you need.</p></li>
+<li><p>The RStudio Help menu (in the top toolbar) is a fantastic place to go for understanding/fixing any problems. There are links to documentation and manuals as well as cheatsheets and a lovely collection of keyboard shortcuts.</p></li>
+<li>Vignettes are a great way to learn about packages and how they work. Vignettes are like stylized manuals that can do a better job at explaining a package’s contents. For example, <code>ggplot2</code> has a vignette on aesthetics called <code>ggplot2-specs</code> that talks about different ways you can map data to different formats.
+<ul>
+<li>Typing <code>browseVignettes()</code> in the console will show you all the vignettes for all of the packages you have installed.</li>
+<li>You can also see vignettes by package by typing <code>vignette(package = &quot;&lt;package_name&gt;&quot;)</code> into the console.</li>
+<li>To run a specific vignette, use <code>vignette(&quot;&lt;vignette_name&gt;&quot;)</code>. If the vignette can’t be resolved, include the package name as well: <code>vignette(&quot;&lt;vignette_name&quot;, package = &quot;&lt;package_name&gt;&quot;)</code></li>
+</ul></li>
+<li><p>Don’t ignore errors. They are telling you so much! If you give up because red text showed up in your console, take the time to see what that red text is <em>saying</em>. Learn <a href="http://www.dummies.com/programming/r/how-to-read-errors-and-warnings-in-r/" target="_blank">how to read errors</a> and <a href="https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/programming?ex=18" target="_blank">what they are telling you</a>. They usually include where the problem happened and what R thinks the problem stems from.</p></li>
+</ul>
+<p><em>More Advanced</em>: Learn to love debugger mode. Debugging can have a steep learning curve, but huge payoffs. Take a look at these videos about <a href="https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/programming?ex=20" target="_blank">debugging with R</a>. Topics include running the debugger, setting breakpoints, customizing preferences, and more. <strong>Note</strong>: R Markdown files have some limitations for debugging, as discussed in <a href="https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio#debugging-in-r-markdown-documents" target="_blank">this article</a>. You could also consider working out your code in a <code>.R</code> file before including it in your R Markdown homework submission.</p>
+</div>
+<div id="help-me-r-community" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Help Me, R Community!</h3>
+<p>Relax. There are a bunch of people using the same tools you are.</p>
+<ul>
+<li><p>Your fellow classmates are a good place to start! Post questions to <a href="https://piazza.com/" target="_blank">Piazza</a> to see how they could help.</p></li>
+<li><p>There is a lot of great documentation on R and its functions/packages/etc. Get comfy with <a href="https://www.rdocumentation.org/" target="_blank">R Documentation</a> and it will help you immensely.</p></li>
+</ul>
+<p><em>More Advanced</em>: There is a vibrant <a href="https://community.rstudio.com/" target="_blank">RStudio Community page</a>. Also, R likes twitter. Check out <a href="https://twitter.com/search?q=%23rstats" target="_blank">#rstats</a> or maybe <a href="https://twitter.com/hadleywickham/status/952259891342794752" target="_blank">let Hadley Wickham know about a wonky error message</a>.</p>
+
+</div>
+</div>
+</div>
+<!-- 
+Footer 
+  - included at the end of every page
+  - EDAV logo back to index.html
+-->
+
+<center>
+<br><br>
+<a href="index.html"><img src="images/icons/edav_resource_small.png"></a>
+<br><br>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/jtr13/EDAV/edit/master/basics.Rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

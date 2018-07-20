@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>EDAV5_3</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+  </head>
+
+  <body>
+
+    <script id="s1">
+
+// Create svg and initial bars
+
+  var svg = d3.select("body")
+    .append("svg")
+      .attr("width", "500")
+      .attr("height", "400");
+
+  var bardata = [300, 100, 150, 225, 75, 275];
+
+  var bars = svg.selectAll("rect")
+      .data(bardata);
+
+  bars.enter().append("rect")
+      .attr("x", (d, i) => 50*i + 50)
+      .attr("y", d => 400 - d)
+      .attr("width", "35")
+      .attr("height", d => d)
+      .attr("fill", "lightgreen");
+
+// General Update Pattern
+
+  function update(data) {
+
+    var bars = svg.selectAll("rect")
+        .data(data);
+
+    bars.enter().append("rect")
+        .attr("x", (d, i) => 50*i + 50)
+        .attr("y", d => 400 - d)
+        .attr("width", "35")
+        .attr("height", d => d)
+        .attr("fill", "yellow")
+      .merge(bars)
+        .transition()
+        .duration(2000)
+        .attr("y", d => 400 - d)
+        .attr("height", d => d)
+        .attr("fill", "orange");
+
+    bars.exit().remove();
+
+  };
+
+    </script>
+
+<!-- NEW SECTION -->
+
+    <p id="add">Add an element.</p>
+
+    <p id="remove">Remove a element.</p>
+
+    <script id="s2">
+    d3.selectAll("p")
+        .on("click", function () {
+
+      var paraID = d3.select(this).attr("id");
+
+      if (paraID == "add") {
+          var newvalue = Math.floor(Math.random()*400);
+          bardata.push(newvalue);
+      } else {
+          bardata.pop();
+      };
+
+      update(bardata);
+
+      });
+
+    </script>
+
+  </body>
+
+</html>

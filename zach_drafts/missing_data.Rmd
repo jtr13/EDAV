@@ -1,0 +1,19 @@
+# Placeholder {#placeholder}
+
+![](images/banners/banner_placeholder_missing_data.png)
+
+## Notes
+
+- dealing with NAs (why they ruin things)
+- Options to deal with them
+- visualizing missing data
+
+- look at NA work from homework
+
+
+
+
+
+
+
+
