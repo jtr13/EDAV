@@ -32,7 +32,7 @@ Contributing directly works best if the change you are proposing is something sm
 
 In summary, fix small issues as often as you like!
 
-If what you want to improve is more substantial, read on.
+If what you want to improve is a little more substantial, read on.
 
 ### Submit A New Issue
 
