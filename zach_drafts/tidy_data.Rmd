@@ -1,0 +1,18 @@
+# Placeholder {#placeholder}
+
+![](images/banners/banner_placeholder_tidy_data.png)
+
+## Notes
+
+- original paper link (r4ds?)
+- example of bad data
+- example of good data
+
+- Previous test questions
+
+
+
+
+
+
+

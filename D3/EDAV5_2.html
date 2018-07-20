@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>EDAV5_2</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+  </head>
+
+  <body>
+
+    <script id="s1">
+
+// Create svg and initial bars
+
+  var svg = d3.select("body")
+    .append("svg")
+      .attr("width", "500")
+      .attr("height", "400");
+
+  var bardata = [300, 100, 150, 225, 75, 275];
+
+  var bars = svg.selectAll("rect")
+      .data(bardata);
+
+  bars.enter().append("rect")
+      .attr("x", (d, i) => 50*i + 50)   // CHANGE
+      .attr("y", d => 400 - d)          // CHANGE
+      .attr("width", "35")              // CHANGE
+      .attr("height", d => d)           // CHANGE
+      .attr("fill", "lightgreen");
+
+// General Update Pattern
+
+  function update(data) {
+
+    var bars = svg.selectAll("rect")
+        .data(data);
+
+
+    bars.enter().append("rect")
+      .attr("x", (d, i) => 50*i + 50)   // CHANGE
+      .attr("y", d => 400 - d)          // CHANGE
+      .attr("width", "35")              // CHANGE
+      .attr("height", d => d)           // CHANGE
+      .attr("fill", "yellow")
+    .merge(bars)
+      .transition()
+      .duration(2000)
+      .attr("y", d => 400 - d)          // CHANGE
+      .attr("height", d => d)           // CHANGE
+      .attr("fill", "orange");
+
+    bars.exit().remove();
+
+  };
+
+// Add add / remove buttons
+
+    </script>
+
+    <p id="add"></p>
+
+    <p id="remove"></p>
+
+  </body>
+
+</html>

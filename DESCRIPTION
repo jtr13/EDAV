@@ -1,0 +1,17 @@
+Package: placeholder
+Type: Book
+Title: Does not matter.
+Version: 0.0.1
+Imports: 
+  bookdown,
+  datasets,
+  GDAdata,
+  MASS,
+  Sleuth3,
+  svglite,
+  tidyverse,
+  visNetwork,
+  gridExtra,
+  likert
+Remotes: 
+  rstudio/bookdown
