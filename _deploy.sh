@@ -11,8 +11,6 @@ cd book-output
 git mv _book .b
 git rm -rf *
 git mv .b b
-git cp -r b/* ./
-git rm -rf b
 
 
 #git rm -rf . 
