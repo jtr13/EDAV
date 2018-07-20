@@ -10,9 +10,9 @@ cd book-output
 
 git mv _book .b
 git rm -rf *
-mv .b b
-cp -r b/* ./
-rm -rf b
+git mv .b b
+git cp -r b/* ./
+git rm -rf b
 
 
 #git rm -rf . 
