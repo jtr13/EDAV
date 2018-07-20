@@ -11,9 +11,9 @@ git rm -rf *
 cp -r ../docs/* ./
 mkdir docs
 git mv * docs
-git add --all *
-git commit -m "Update the book"
-git push -q origin gh-pages
+#git add --all *
+#git commit -m "Update the book"
+#git push -q origin gh-pages
 
 git checkout master 
 git merge gh-pages
