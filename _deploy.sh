@@ -13,6 +13,10 @@ git rm -rf *
 git mv .tmp tmp
 git mv tmp/* .
 git rm -rf tmp *.md search_index.json
+=======
+git mv .b b
+git cp -r b/* book-output
+git rm -rf b *.md search_index.json
 
 #git rm -rf . 
 
