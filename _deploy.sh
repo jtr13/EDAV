@@ -8,9 +8,10 @@ git clone -b gh-pages \
   book-output
 cd book-output
 
-git mv _book .tmp
-git rm -rf *
-git mv .tmp tmp
+git rm -rf *.md
+#git mv _book .tmp
+#git rm -rf *
+#git mv .tmp tmp
 
 
 #git rm -rf . 
