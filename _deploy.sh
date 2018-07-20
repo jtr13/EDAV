@@ -7,7 +7,18 @@ git clone -b gh-pages \
   https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git \
   book-output
 cd book-output
-git rm -rf .
+
+git mv _book .b
+git rm -rf *
+mv .b b
+cp -r b/* ./
+rm -rf b
+
+
+#git rm -rf .
+
+#git rm !(_book)
+
 #cp -r ../_book/* ./
 git add --all *
 git commit -m "Update the book"
