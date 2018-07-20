@@ -12,7 +12,7 @@ git mkdir docs
 cp -r ../docs/* docs
 git add docs
 git commit -m "Update the book"
-git push -q origin gh-pages
+git push -q origin master
 
 
 
