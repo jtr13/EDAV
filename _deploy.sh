@@ -11,8 +11,7 @@ cd book-output
 git mv _book .tmp
 git rm -rf *
 git mv .tmp tmp
-git mv tmp/* .
-git rm -rf tmp *.md search_index.json
+
 
 #git rm -rf . 
 
