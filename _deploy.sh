@@ -8,11 +8,11 @@ git clone -b gh-pages \
   book-output
 cd book-output
 
-git mv _book .b
+git mv _book .tmp
 git rm -rf *
-git mv .b b
-git cp -r b/* book-output
-git rm -rf b
+git mv .tmp tmp
+git mv tmp/* .
+git rm -rf tmp *.md search_index.json
 
 #git rm -rf . 
 
