@@ -7,10 +7,13 @@ git clone -b gh-pages \
   https://${GITHUB_PAT}@github.com/${TRAVIS_REPO_SLUG}.git \
   book-output
 cd book-output
-git rm -R docs
+git rm -rf *
+cp -r ../docs/* ./
 mkdir docs
-cp -r ../docs/* ./docs
-rm -rf docs/*.md docs/CNAME docs/search_index.json 
-git add docs
-git commit -m "Update the book thru Travis"
+git mv * docs
+git add --all *
+git commit -m "Update the book"
 git push -q origin gh-pages
+
+
+
