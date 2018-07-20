@@ -12,6 +12,7 @@ rmd_files: [
   
   "intro.Rmd",
   "basics.Rmd",
+  "contribute.Rmd",
   "final_presentation.Rmd",
   
   "histogram.Rmd",
@@ -20,7 +21,9 @@ rmd_files: [
   "network.Rmd",
   
   "iris.Rmd",
+  
   "publish_using_r.Rmd",
+  #"collaborate.Rmd",
   "general_resources.Rmd"
 
 ]

@@ -1,10 +1,10 @@
-# Collaborate in Teams {#collab}
+# GitHub Resources {#collab}
 
 ![](images/banners/banner_collab.png)
 
 ## Overview
 
-This section includes links to help GitHub and advice on collaborating in teams on coding projects.
+This section includes links for working with GitHub and advice on how to collaborate in teams on coding projects.
 
 ## Notes
 
@@ -15,6 +15,8 @@ This section includes links to help GitHub and advice on collaborating in teams 
 
 
 ## GitHub
+
+Don't know what GitHub is?
 
 Links:
 - setting up git with R

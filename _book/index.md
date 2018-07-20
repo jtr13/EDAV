@@ -56,6 +56,11 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 [![Final Project Notes](images/banners/banner_presentation.png)](project.html)
 </center>
 
+#### Improve this resource
+<center>
+[![Improve this resource](images/banners/banner_contribute.png)](contribute.html)
+</center>
+
 ### Green Pages
 **Green == DOC**: The green banners signal pages that contain more compact **documentation**.
 
@@ -94,6 +99,11 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 <center>
 [![Publishing with R](images/banners/banner_publish.png)](publish.html)
 </center>
+
+<!-- #### GitHub Resources -->
+<!-- <center> -->
+<!-- [![GitHub Resources](images/banners/banner_collab.png)](collab.html) -->
+<!-- </center> -->
 
 #### General Resources
 <center>

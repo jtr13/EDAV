@@ -34,13 +34,13 @@ The banners at the top of each page are an effort to improve your ability to nav
 
 **Yellow == REF**: The yellow banners signal pages that contain simple collections of  **references**. An example of a yellow page is the [external resources page](general.html), which is a list of materials that you can look through and learn from. Yellow pages have the least amount of hand-holding: they are collections of resources and references that will help you learn about new things. 
 
-## Improving this resource
+## Help Improve *edav.info/*
 
-Not finding what you are looking for? Think a section could be made clearer? Consider improving edav.info/ by submitting a pull request to the [github page](https://github.com/jtr13/EDAV){target="_blank"}.
+Not finding what you are looking for? Think a section could be made clearer? Consider helping improve *edav.info/* by submitting a pull request to the [github page](https://github.com/jtr13/EDAV){target="_blank"}. Don't understand that last sentence? We have a [page on how you can contribute to *edav.info/*](contribute.html).
 
 ## Fun Stuff: T-Shirts
 
-Zach Bogart has made a few tshirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy. 
+Zach Bogart has made a few t-shirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy. 
 
 *P.S. Designing a cool shirt or sticker is a great addition to your community contribution. It has to be cool, though :)*
 
