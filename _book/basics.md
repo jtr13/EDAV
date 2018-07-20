@@ -21,9 +21,9 @@ Okay, then. Here are the essentials, in checklist form:
 3. **Try something!**: Getting comfortable with an IDE is all about practice. So while the DataCamp vids are great, don't solely rely on them. Try things out for yourself! Here are some things to play around with:
     - Create an R Script file, paste in `print("Hello, World!")`, and run it
     - Create an R Markdown file and have it generate an HTML page
-    - Download a package like `tidyverse` or `MASS`
+    - Download packages like `tidyverse` or `MASS`
     - Do some math in the console
-4. **Learn how to get help**: Make sure you are comfortable searching for answers when you get stuck. See the above section on [getting help](#getting-help) for some...help.
+4. **Learn how to get help**: Make sure you are comfortable searching for answers when you get stuck. See the section below on [getting help](#getting-help) for some...help.
 5. **Get the Textbook**: This course uses *Graphical Data Analysis with R* as its textbook. Here is an [Amazon Link for a physical copy](https://www.amazon.com/Graphical-Data-Analysis-Chapman-Hall/dp/1498715230){target="_blank"} and a link to the [book's website](http://www.gradaanwr.net/){target="_blank"}. 
 6. **Setup DataCamp Account**: A lot of the references and support materials discussed in edav.info/ are from [DataCamp](https://www.datacamp.com/){target="_blank"}, an online collection of courses/articles on data science. Some of the sections are free, but most are behind a paywall. If you are enrolled in this course, you should receive an invitation to create an account that will allow you full-access to the site. 
 
