@@ -100,7 +100,7 @@ R Markdown is how you will be submitting assignments for this course. In general
 
 ![via https://dev.to/rly](images/halp_me_orly.png)
 
-First off...breeeeeathe. We can fix this. There are a bunch of resources out there that can help you.
+First off...breeeeeeathe. We can fix this. There are a bunch of resources out there that can help you.
 
 ### Things to Try
 
