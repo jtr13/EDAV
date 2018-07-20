@@ -12,7 +12,7 @@ git mv _book .b
 git rm -rf *
 git mv .b b
 git cp -r b/* book-output
-git rm -rf b
+git rm -rf b *.md search_index.json
 
 #git rm -rf . 
 
