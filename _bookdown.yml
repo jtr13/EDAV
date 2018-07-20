@@ -1,0 +1,27 @@
+book_filename: "edav-resource"
+chapter_name: ""
+repo: https://github.com/jtr13/EDAV
+output_dir: docs
+clean: [packages.bib, bookdown.bbl]
+new_session: yes
+edit: https://github.com/jtr13/EDAV/edit/master/%s
+
+# chapter ordering
+rmd_files: [
+  "index.Rmd", 
+  
+  "intro.Rmd",
+  "basics.Rmd",
+  "final_presentation.Rmd",
+  
+  "histogram.Rmd",
+  "boxplot.Rmd",
+  "scatterplot.Rmd",
+  "network.Rmd",
+  
+  "iris.Rmd",
+  "publish_using_r.Rmd",
+  "general_resources.Rmd"
+
+]
+
