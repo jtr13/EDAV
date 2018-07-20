@@ -117,38 +117,6 @@ Discuss limitations and future directions, lessons learned.
 
 4. **I spent 30 minutes looking at my data, and then 1000 hours building this super cool interactive app so users can analyze the data themselves. Can't you count the interactive part for 95% of my grade?** No. While skill sets overlap in the real world, and it's important to know something about building things, the assumption is that you are doing the work of the data scientist: actually analyzing the data rather than building tools for someone else to do it. The former (the data!) has been the main focus of this class and therefore is the primary focus of the final project.
 
-
-## Rubric
-
-1. Introduction (including choice of data, questions), Team description
-    + 10 points
-
-2. Description of Data
-    + 10 points
-
-3. Graphical Analysis of Data Quality
-    + 10 points
-
-4. Main Analysis (focus on quality of EDA choices / techniques)
-    + 20 points
-
-5. Executive Summary (focus on quality of presentation choices / techniques)
-    + 20 points
-
-6. Interactive Component 
-    + 20 points
-
-7. Conclusion
-    + 10 points
-    
-TOTAL = 100 points
-
-*   Points will be deducted for technical flaws (problems opening files, following links, etc.), for not citing sources, and for lack of reproducibility.
-
-*   **Late Submissions**: 10 points will be deducted per day.
-
-*   **Plagiarism of any kind will not be tolerated and will result in a grade of 0 for the project.**
-
 ## Executive Summary Notes
 
 The executive summary should be a well-formatted, presentable final product of your results. Here are some notes to consider when putting it together:
