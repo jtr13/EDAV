@@ -15,7 +15,7 @@ cp -r b/* ./
 rm -rf b
 
 
-#git rm -rf .
+#git rm -rf . 
 
 #git rm !(_book)
 
