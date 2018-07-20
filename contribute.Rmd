@@ -59,7 +59,7 @@ If you see an open issue that you think you can solve, by all means go for it! S
 
 ## Resources
 
-- [Our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"}: Link to the repository for *edav.info/*
+- [Our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"}: Link to the GitHub repository for *edav.info/*
 - [GitHub Resources](collab.html): Our page discussing GitHub resources and collaborating in teams
 - [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"}: Fantastic guide on how to contribute to projects like this one
 
