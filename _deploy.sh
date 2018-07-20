@@ -10,6 +10,7 @@ cd book-output
 git rm -rf *
 cp -r ../docs/* ./
 mv * docs
-git add --all *
+rm -rf docs/*.md docs/CNAME docs/search_index.json 
+git add docs/*
 git commit -m "Update the book thru Travis"
 git push -q origin gh-pages
