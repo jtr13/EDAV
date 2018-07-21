@@ -39,7 +39,7 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 - If you're wondering, here's an [explanation of what the banner colors mean](intro.html#what-the-banners-mean).
 
 ### Blue Pages
-**Blue == INFO**: The blue banners signal pages that contain basic **information**.
+The [blue banners](intro.html#blue-pages-1) signal pages that contain basic **information**.
 
 #### Introduction
 <center>
@@ -62,7 +62,7 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 </center>
 
 ### Green Pages
-**Green == DOC**: The green banners signal pages that contain more compact **documentation**.
+The [green banners](intro.html#green-pages-1) signal pages that contain more compact **documentation**.
 
 #### Chart: Histogram
 <center>
@@ -85,7 +85,7 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 </center>
 
 ### Red Pages
-**Red == WALK**: The red banners signal pages that contain more extensive **walkthroughs**.
+The [red banners](intro.html#red-pages-1) signal pages that contain more extensive **walkthroughs**.
 
 #### Walkthrough: Iris Example
 <center>
@@ -93,7 +93,7 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 </center>
 
 ### Yellow Pages
-**Yellow == REF**: The yellow banners signal pages that contain simple collections of  **references**.
+The [yellow banners](intro.html#yellow-pages-1) signal pages that contain simple collections of  **references**.
 
 #### Publishing with R
 <center>
