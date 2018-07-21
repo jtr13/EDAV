@@ -42,7 +42,9 @@ Below are some helpful references we used in creating *edav.info/*, which may be
     - **Make it clear that something went wrong**: Don't hide the fact that this page is because of some error.
     - **Other than that, have fun with it!**: There are [plenty of examples](https://www.canva.com/learn/404-page-design/){target="_blank"} of people making [excellent 404 pages](https://www.pagecloud.com/blog/best-404-pages){target="_blank"}. It should make a frustrating experience just a little bit more bearable.
 
+## Other Resources
 
+- [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/){target="_blank"}: Textbook on the `blogdown`package, another option for generating websites with R.
 
 
 
