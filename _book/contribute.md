@@ -1,4 +1,4 @@
-# Improve this resource {#contribute}
+# Contribute to this resource {#contribute}
 
 ![](images/banners/banner_contribute.png)
 
@@ -65,4 +65,3 @@ If you see an open issue that you think you can solve, by all means go for it! S
 - [GitHub Resources](collab.html): Our page discussing GitHub resources and collaborating in teams
 - [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"}: Fantastic guide on how to contribute to projects like this one
 - [Our Page of GitHub Resources](collab.html): Confused about the GitHub basics? *Checkout* our page of resources (once you learn more about git, you'll realize that was a joke).
-

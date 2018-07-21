@@ -58,9 +58,9 @@ The [blue banners](intro.html#blue-pages-1) signal pages that contain basic **in
 [![Final Project Notes](images/banners/banner_presentation.png)](project.html)
 </center>
 
-#### Improve this resource
+#### Contribute to this resource
 <center>
-[![Improve this resource](images/banners/banner_contribute.png)](contribute.html)
+[![Contribute to this resource](images/banners/banner_contribute.png)](contribute.html)
 </center>
 
 <!-- Green Pages -->
