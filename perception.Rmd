@@ -1,6 +1,6 @@
-# Placeholder {#placeholder}
+# Perception/Color Resources {#percept}
 
-![](images/banners/banner_color.png)
+![](images/banners/banner_percept.png)
 
 ## Overview
 
@@ -10,7 +10,7 @@ This section has resources for choosing colors and keeping perception rules in m
 
 Color is very subjective. It is important to choose the right ones so everyone can understand your work accurately.
 
-
+## Perception
 
 
 
