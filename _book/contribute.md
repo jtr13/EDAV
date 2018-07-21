@@ -38,7 +38,7 @@ If what you want to improve is a little more substantial, read on.
 
 If your proposed change is more complex, consider letting us know by **submitting an issue**. Say some links are broken, or a graph example is inaccurate or misleading. It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
 
-Issues are tasks you can post to a GitHub repo that people can then take on and fix. They can be small ("this link is broken" / "add this resource") or complex ("I would love to have a chapter on..." / "reformat this code chunk in this way"). Once posted, issues can be taken on by anyone.
+[Issues](https://guides.github.com/features/issues/){target="_blank"} are tasks you can post to a GitHub repo that people can then take on and fix. They can be small ("this link is broken" / "add this resource") or complex ("I would love to have a chapter on..." / "reformat this code chunk in this way"). Once posted, issues can be taken on by anyone.
 
 You do *not* have to know how to code up your issue; from fixing a bug to proposing a resource we should link to, we appreciate any feedback you have and will take it all into consideration.
 
