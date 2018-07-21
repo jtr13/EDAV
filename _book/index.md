@@ -34,10 +34,12 @@ Our answer is to provide you with **edav.info/**. This site is one of the best w
 
 This resource is specifically tailored to the Exploratory Data Analysis and Visualization course offered at [Columbia University](https://www.columbia.edu/){target="_blank"}. However, anyone interested in working with data in R will benefit from perusing these pages.
 
+<!-- toc -->
 ## Table of Contents
 - Click on a banner to go to the desired page.
 - If you're wondering, here's an [explanation of what the banner colors mean](intro.html#what-the-banners-mean).
 
+<!-- Blue Pages -->
 ### Blue Pages
 The [blue banners](intro.html#blue-pages-1) signal pages that contain basic **information**.
 
@@ -61,6 +63,7 @@ The [blue banners](intro.html#blue-pages-1) signal pages that contain basic **in
 [![Improve this resource](images/banners/banner_contribute.png)](contribute.html)
 </center>
 
+<!-- Green Pages -->
 ### Green Pages
 The [green banners](intro.html#green-pages-1) signal pages that contain more compact **documentation**.
 
@@ -84,6 +87,7 @@ The [green banners](intro.html#green-pages-1) signal pages that contain more com
 [![Networks](images/banners/banner_network.png)](network.html)
 </center>
 
+<!-- Red Pages -->
 ### Red Pages
 The [red banners](intro.html#red-pages-1) signal pages that contain more extensive **walkthroughs**.
 
@@ -92,6 +96,7 @@ The [red banners](intro.html#red-pages-1) signal pages that contain more extensi
 [![Walkthrough: Iris Example](images/banners/banner_iris.png)](iris.html)
 </center>
 
+<!-- Yellow Pages -->
 ### Yellow Pages
 The [yellow banners](intro.html#yellow-pages-1) signal pages that contain simple collections of  **references**.
 
@@ -105,11 +110,17 @@ The [yellow banners](intro.html#yellow-pages-1) signal pages that contain simple
 [![GitHub Resources](images/banners/banner_collab.png)](collab.html)
 </center>
 
+#### Perception/Color Resources
+<center>
+[![Perception/Color Resources](images/banners/banner_percept.png)](percept.html)
+</center>
+
 #### General Resources
 <center>
 [![General Resources](images/banners/banner_resources.png)](general.html)
 </center>
 
+<!-- Contact -->
 ## Contact
 
 Zach Bogart: 

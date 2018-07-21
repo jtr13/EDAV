@@ -46,7 +46,10 @@ For the [nerds in the room](https://getyarn.io/yarn-clip/64bbb001-ed8a-450a-8826
     - `git config --global alias.adog "log --all --decorate --oneline --graph"`
 - [`add` and `commit` with one command](https://stackoverflow.com/questions/4298960/git-add-and-commit-in-one-command){target="_blank"}: Another (even more) helpful alias command:
     - `git config --global alias.add-commit '!git add -A && git commit'`
+- [Git Aware Prompt](https://github.com/jimeh/git-aware-prompt){target="_blank"}: An excellent add-on to the Terminal that informs you which branch you have checked out. Someone also made [an even spiffier version](https://github.com/udondan/git-aware-prompt){target="_blank"} where it will inform you of your git status using helpful emojis.
 
+
+<!-- Add Link to branch in Temrinal -->
 
 
 
