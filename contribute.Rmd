@@ -1,4 +1,4 @@
-# Improve this resource {#contribute}
+# Contribute to this resource {#contribute}
 
 ![](images/banners/banner_contribute.png)
 
