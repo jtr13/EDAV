@@ -24,6 +24,7 @@ rmd_files: [
   
   "publish_using_r.Rmd",
   "collaborate.Rmd",
+  "perception.Rmd",
   "general_resources.Rmd"
 
 ]
