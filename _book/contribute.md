@@ -16,7 +16,7 @@ Below are different ways you can contribute to *edav.info/*. We welcome all inpu
 
 ### Contribute Directly
 
-The simplest way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown on [GitHub](https://github.com/jtr13/EDAV){target="_blank"} for that page and submit your change as a pull request. Essentially, you will make a copy of our repo, make your desired change, and suggest to us that we fix it. If we approve it, your fix will be rendered and published to the site.
+The simplest way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will make a copy of our repo, make your desired change, and suggest to us that we fix it. If we approve it, your fix will be rendered and published to the site.
 
 Contributing directly works best if the change you are proposing is something small, such as:
 
@@ -44,7 +44,7 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 
 **How to Submit Issues**:
 
-1. Go to the [GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and click on the [Issues Tab](https://github.com/jtr13/EDAV/issues){target="_blank"}
+1. Go to [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and click on the [Issues Tab](https://github.com/jtr13/EDAV/issues){target="_blank"}
 2. Click on "[New Issue](https://github.com/jtr13/EDAV/issues/new){target="_blank"}"
 3. Propose your Issue and click "Submit new issue"
 4. That's it! We appreciate your input and will take your issue into account in improving *edav.info/* :)
