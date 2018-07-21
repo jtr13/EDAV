@@ -36,9 +36,11 @@ If what you want to improve is a little more substantial, read on.
 
 ### Submit A New Issue
 
-If your proposed change is more complex, consider letting us know by **submitting an issue**. Say some links are broken, or a graph example is inaccurate or misleading. What to do? Submit an issue, of course! Issues are tasks you can post to a GitHub repo that people can then take on and fix. They can be small ("this link is broken" / "add this resource") or complex ("I would love to have a chapter on..." / "reformat this code chunk in this way"). Once posted, issues can be taken on by anyone.
+If your proposed change is more complex, consider letting us know by **submitting an issue**. Say some links are broken, or a graph example is inaccurate or misleading. It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
 
-You do *not* have to know how to code up your issue; we appreciate any feedback you have and will take it all into consideration.
+Issues are tasks you can post to a GitHub repo that people can then take on and fix. They can be small ("this link is broken" / "add this resource") or complex ("I would love to have a chapter on..." / "reformat this code chunk in this way"). Once posted, issues can be taken on by anyone.
+
+You do *not* have to know how to code up your issue; from fixing a bug to proposing a resource we should link to, we appreciate any feedback you have and will take it all into consideration.
 
 **How to Submit Issues**:
 
@@ -51,7 +53,7 @@ You do *not* have to know how to code up your issue; we appreciate any feedback 
 
 - Make sure your changes are not already an open issue (so as not to have redundant issues)
 - Please thoroughly explain your proposed change when posting a new issue
-- For more info, please considering reading the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
+- For more info, please consider reading the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
 
 ### Solve an Open Issue
 
@@ -62,4 +64,5 @@ If you see an open issue that you think you can solve, by all means go for it! S
 - [Our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"}: Link to the GitHub repository for *edav.info/*
 - [GitHub Resources](collab.html): Our page discussing GitHub resources and collaborating in teams
 - [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"}: Fantastic guide on how to contribute to projects like this one
+- [Our Page of GitHub Resources](collab.html): Confused about the GitHub basics? *Checkout* our page of resources (once you learn more about git, you'll reaize that was a joke).
 

@@ -23,7 +23,7 @@ rmd_files: [
   "iris.Rmd",
   
   "publish_using_r.Rmd",
-  #"collaborate.Rmd",
+  "collaborate.Rmd",
   "general_resources.Rmd"
 
 ]
