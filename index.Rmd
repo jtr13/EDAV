@@ -100,10 +100,10 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 [![Publishing with R](images/banners/banner_publish.png)](publish.html)
 </center>
 
-<!-- #### GitHub Resources -->
-<!-- <center> -->
-<!-- [![GitHub Resources](images/banners/banner_collab.png)](collab.html) -->
-<!-- </center> -->
+#### GitHub Resources
+<center>
+[![GitHub Resources](images/banners/banner_collab.png)](collab.html)
+</center>
 
 #### General Resources
 <center>
