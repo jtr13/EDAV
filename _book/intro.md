@@ -4,7 +4,7 @@
 
 ## Everything you need for EDAV
 
-This resource has everything you need and more to be successful with R, this EDAV course, and beyond.
+This resource has everything you need and more to be successful with R, this EDAV course, and beyond. Let's get started!
 
 With this resource, we try to give you a **curated collection of tools and references** that will make it easier to learn how to work with data in R. 
 
@@ -12,7 +12,7 @@ In addition, we include sections on **basic chart types/tools** so you can learn
 
 There are also **several walkthroughs** where we work with data and discuss problems as well as some tips/tricks that will help you.
 
-We hope this resource serves you well.
+We hope this resource serves you well!
 
 ## What the Banners Mean
 

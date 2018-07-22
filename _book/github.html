@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="network.html">
-<link rel="next" href="publish.html">
+<link rel="prev" href="publish.html">
+<link rel="next" href="percept.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -360,284 +360,67 @@ function unhover(element) {
 <br><br>
 <a href="index.html"><img src="images/icons/edav_resource_url_no_smile.png" onmouseover="hover(this);" onmouseout="unhover(this);" /></a>
 </center>
-<div id="iris" class="section level1">
-<h1><span class="header-section-number">9</span> Walkthrough: Iris Example</h1>
+<div id="github" class="section level1">
+<h1><span class="header-section-number">11</span> GitHub Resources</h1>
 <div class="figure">
-<img src="images/banners/banner_iris.png" />
+<img src="images/banners/banner_github.png" />
 
 </div>
-<div id="overview-5" class="section level2">
-<h2><span class="header-section-number">9.1</span> Overview</h2>
-<p>This example goes through some work with the <code>iris</code> dataset to get to a finished scatterplot that is ready to present.</p>
-<div id="tldr-3" class="section level3">
-<h3><span class="header-section-number">9.1.1</span> tl;dr</h3>
-<p>Here’s what we end up with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
-base_plot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species), <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">position =</span> <span class="st">&quot;jitter&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Sepal Length (cm)&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Sepal Width (cm)&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Sepal Dimensions in Different Species of Iris Flowers&quot;</span>)
-
-base_plot <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</code></pre></div>
-<p><img src="iris_files/figure-html/goal-1.png" width="672" /></p>
-<p>Wondering how we got there? Read on.</p>
+<div id="overview-7" class="section level2">
+<h2><span class="header-section-number">11.1</span> Overview</h2>
+<p>This section includes links for working with GitHub and advice on how to collaborate in teams on coding projects.</p>
 </div>
-<div id="packages" class="section level3">
-<h3><span class="header-section-number">9.1.2</span> Packages</h3>
+<div id="on-github" class="section level2">
+<h2><span class="header-section-number">11.2</span> On GitHub</h2>
+<p>In this course, you will be working on a <a href="project.html">project</a> in teams. Because of this, you probably want to be able to share code and work on different parts of the project simultaneously. This is where Git and GitHub comes in.</p>
+<p><a href="https://github.com/" target="_blank">GitHub</a> is a way to work on projects and keep track of their status easily and efficiently. It is built off of <a href="https://git-scm.com/" target="_blank">Git</a>, a type of <a href="https://en.wikipedia.org/wiki/Version_control" target="_blank">version control</a> software. It is super useful and powerful, but people also find it quite annoying and <a href="https://xkcd.com/1597/" target="_blank">difficult to understand</a>. So, in an effort to help you, we have collected some resources to learn about GitHub and how you can use it to work on projects.</p>
+</div>
+<div id="getting-started-1" class="section level2">
+<h2><span class="header-section-number">11.3</span> Getting Started</h2>
+<p>What’s GitHub? Start here.</p>
 <ul>
-<li><a href="https://www.rdocumentation.org/packages/ggplot2" target="_blank"><code>ggplot2</code></a></li>
-<li><a href="https://www.rdocumentation.org/packages/dplyr" target="_blank"><code>dplyr</code></a></li>
-<li><a href="https://www.rdocumentation.org/packages/stats" target="_blank"><code>stats</code></a></li>
-<li><a href="https://www.rdocumentation.org/packages/base" target="_blank"><code>Base</code></a></li>
-<li><a href="https://www.rdocumentation.org/packages/datasets" target="_blank"><code>datasets</code></a></li>
-<li><a href="https://www.rdocumentation.org/packages/gridExtra" target="_blank">(<code>gridExtra</code>)</a></li>
+<li><a href="https://guides.github.com/activities/hello-world/" target="_blank">Hello World</a>: GitHub’s take on the “Hello World” program. Great starting point to learn how GitHub works.</li>
+<li><a href="https://www.youtube.com/githubguides" target="_blank">Github Training &amp; Guides</a>: This YouTube Channel has a lot of info about what GitHub can do. The first line of the opening video is, “Okay. You signed up for GitHub. What do you do now?”. If you are asking that very question, this channel will serve you well.</li>
 </ul>
 </div>
-<div id="techniques" class="section level3">
-<h3><span class="header-section-number">9.1.3</span> Techniques</h3>
+<div id="getting-help-1" class="section level2">
+<h2><span class="header-section-number">11.4</span> Getting Help</h2>
+<p>If you’re lost, these might help.</p>
 <ul>
-<li>Keyboard Shortcuts</li>
-<li>Viewing Data Structure/Dimensions/etc.</li>
-<li>Accessing Documentation</li>
-<li>Plotting with <code>ggplot2</code></li>
-<li>Layered Nature of <code>ggplot2</code>/Grammar of Graphics</li>
-<li>Mapping aesthetics in <code>ggplot2</code></li>
-<li>Overlapping Data: alpha and jitter</li>
-<li>Presenting Graphics</li>
-<li>Themes</li>
-</ul>
-<hr />
-</div>
-</div>
-<div id="quick-note-on-doing-it-the-lazy-way" class="section level2">
-<h2><span class="header-section-number">9.2</span> Quick Note on Doing it the Lazy Way</h2>
-<p>Shortcuts are your best friend to get work done faster. And they are easy to find.</p>
-<p>In the toolbar: <code>Tools &gt; Keyboard Shortcuts Help</code> OR <code>⌥⇧K</code></p>
-<p>Some good ones:</p>
+<li><a href="https://guides.github.com/" target="_blank">GitHub Guides</a>: This is a phenomenal collection of short articles from GitHub to help you learn about the fundamentals around their product. They are so great, we have already listed their Hello World article. Here are some other important ones:
 <ul>
-<li>Insert assignment operator (<code>&lt;-</code>): Alt/Option+-</li>
-<li>Insert pipe (<code>%&gt;%</code>): Ctrl/Cmd+Shift+M</li>
-<li>Comment Code: Ctrl/Cmd+Shift+C</li>
-<li>Run current line/selection: Ctrl/Cmd+Enter</li>
-<li>Re-run previous region: Ctrl/Cmd+Shift+P</li>
+<li><a href="https://guides.github.com/introduction/flow/" target="_blank">Understanding the GitHub Flow</a>: Explains how working with GitHub generally goes.</li>
+<li><a href="https://guides.github.com/introduction/git-handbook/" target="_blank">Git Handbook</a>: Explains what version control is.</li>
+</ul></li>
+<li><a href="https://help.github.com/" target="_blank">GitHub Help</a>: This is the yellow-pages of GitHub. Ask a question and it will try to <em>push</em> you in the right direction. <a href="https://getyarn.io/yarn-clip/6e7f4795-b65b-4fad-b1fb-c5c9161a95fa" target="_blank">Get it?</a></li>
 </ul>
-<p>Be on the lookout for things you do often and try to see if there is a faster way to do them.</p>
-<p>Additionally, the RStudio IDE can be a little daunting, but it is full of useful tools that you can read about in <a href="https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf" target="_blank">this cheatsheet</a> or go through with this DataCamp course: <a href="https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1" target="_blank">Part 1</a>, <a href="https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-2" target="_blank">Part 2</a>.</p>
-<p>Okay, now let’s get to it…</p>
-<hr />
 </div>
-<div id="viewing-data" class="section level2">
-<h2><span class="header-section-number">9.3</span> Viewing Data</h2>
-<p>Let’s start with loading the package so we can get the data as a dataframe.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(datasets)
+<div id="branching-out" class="section level2">
+<h2><span class="header-section-number">11.5</span> Branching Out</h2>
+<p>GitHub is super social. Learn how to <em>git</em> involved! <a href="https://getyarn.io/yarn-clip/c5de0e9e-6122-48f9-87ed-337aeb2e9ae4" target="_blank">:)</a></p>
+<ul>
+<li><a href="https://opensource.guide/how-to-contribute/" target="_blank">Open Source Guide</a>: Info on how to contribute to open source projects. Great links to the GitHub skills involved as well as good GitHub etiquette to adopt.</li>
+<li><a href="https://guides.github.com/activities/forking/" target="_blank">Forking Projects</a>: Quick read from GitHub on how to fork a repo so you can contribute to it.</li>
+<li><a href="https://guides.github.com/features/issues/" target="_blank">Mastering Issues</a>: On what Issues are in GitHub and how they can help get things done.</li>
+<li><a href="contribute.html">Our Page on Contributing</a>: You can contribute to <em>edav.info/</em> with your new-found GitHub skills! Checkout our page on how to contribute through pull requests and/or issues.</li>
+</ul>
+</div>
+<div id="going-deeper-1" class="section level2">
+<h2><span class="header-section-number">11.6</span> Going Deeper</h2>
+<p>For the <a href="https://getyarn.io/yarn-clip/64bbb001-ed8a-450a-8826-b939f653b969" target="_blank">nerds in the room</a>…</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=3m7BgIvC-uQ" target="_blank">Git For Ages 4 And Up</a>: There’s a lot going on under the hood. This talk will help explain how it all works…with kids toys!</li>
+<li><a href="https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs" target="_blank">Make pretty git logs</a>: Always remember <a href="https://i.stack.imgur.com/ElVkf.jpg" target="_blank">(A DOG)</a>. Also, this alias command is nice to have around:
+<ul>
+<li><code>git config --global alias.adog &quot;log --all --decorate --oneline --graph&quot;</code></li>
+</ul></li>
+<li><a href="https://stackoverflow.com/questions/4298960/git-add-and-commit-in-one-command" target="_blank"><code>add</code> and <code>commit</code> with one command</a>: Another (even more) helpful alias command:
+<ul>
+<li><code>git config --global alias.add-commit '!git add -A &amp;&amp; git commit'</code></li>
+</ul></li>
+<li><a href="https://github.com/jimeh/git-aware-prompt" target="_blank">Git Aware Prompt</a>: An excellent add-on to the Terminal that informs you which branch you have checked out. Someone also made <a href="https://github.com/udondan/git-aware-prompt" target="_blank">an even spiffier version</a> where it will inform you of your git status using helpful emojis.</li>
+</ul>
 
-<span class="kw">class</span>(iris)</code></pre></div>
-<pre><code>## [1] &quot;data.frame&quot;</code></pre>
-<p>This is not a huge dataset, but it is helpful to get into the habit of treating datasets as large no matter what. Because of this, make sure you inspect the size and structure of your dataset before going and printing it to the console.</p>
-<p>Here we can see that we have 150 observations across 5 different variables.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(iris)</code></pre></div>
-<pre><code>## [1] 150   5</code></pre>
-<p>There are a bunch of ways to get information on your dataset. Here are a few:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(iris)</code></pre></div>
-<pre><code>## &#39;data.frame&#39;:    150 obs. of  5 variables:
-##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
-##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
-##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
-##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
-##  $ Species     : Factor w/ 3 levels &quot;setosa&quot;,&quot;versicolor&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(iris)</code></pre></div>
-<pre><code>##   Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
-##  Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
-##  1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
-##  Median :5.800   Median :3.000   Median :4.350   Median :1.300  
-##  Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
-##  3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
-##  Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
-##        Species  
-##  setosa    :50  
-##  versicolor:50  
-##  virginica :50  
-##                 
-##                 
-## </code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This one requires dplyr, but it&#39;s worth it :)</span>
-<span class="kw">library</span>(dplyr)
-<span class="kw">glimpse</span>(iris)</code></pre></div>
-<pre><code>## Observations: 150
-## Variables: 5
-## $ Sepal.Length &lt;dbl&gt; 5.1, 4.9, 4.7, 4.6, 5.0, 5.4, 4.6, 5.0, 4.4, 4.9,...
-## $ Sepal.Width  &lt;dbl&gt; 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1,...
-## $ Petal.Length &lt;dbl&gt; 1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5,...
-## $ Petal.Width  &lt;dbl&gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1,...
-## $ Species      &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, s...</code></pre>
-<p>Plotting the data by calling <code>iris</code> to the console will print the whole thing. Go ahead and try it in this case, but this is not recommended for larger datasets. Instead, use <code>head()</code> in the console or <code>View()</code>.</p>
-<p>If you want to learn more about these commands, or anything for that matter, just type <code>?&lt;command&gt;</code> into the console. <code>?head</code>, for example, will reveal that there is an additional argument to <code>head</code> called <code>n</code> for the number of lines printed, which defaults to 6. Also, you may notice there is something called <code>tail</code>. I wonder what that does? :)</p>
-</div>
-<div id="plotting-data" class="section level2">
-<h2><span class="header-section-number">9.4</span> Plotting data</h2>
-<p>Let’s plot something!</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Something&#39;s missing</span>
-<span class="kw">library</span>(ggplot2)
-<span class="kw">ggplot</span>(iris)</code></pre></div>
-<p><img src="iris_files/figure-html/blank_plot-1.png" width="672" /></p>
-<p>Where is it? Maybe if we add some aesthetics. I remember that was an important word that came up somewhere:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Still not working...</span>
-<span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width))</code></pre></div>
-<p><img src="iris_files/figure-html/blank_plot_aes-1.png" width="672" /></p>
-<p>Still nothing. Remember, you have to add a <code>geom</code> for something to show up.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># There we go!</span>
-<span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
-<p><img src="iris_files/figure-html/first_ggplot-1.png" width="672" /></p>
-<p>Yay! Something showed up! Notice where we put the <code>data</code>, inside of <code>ggplot()</code>. ggplot is built on layers. Here we put it in the main call to <code>ggplot</code>. The <code>data</code> argument is also available in <code>geom_point()</code>, but in that case it would only apply to that layer. Here, we are saying, for all layers, unless specified, make the <code>data</code> be <code>iris</code>.</p>
-<p>Now let’s add a color mapping by <code>Species</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species))</code></pre></div>
-<p><img src="iris_files/figure-html/ggplot_colored-1.png" width="672" /></p>
-<p>Usually it is helpful to store the main portion of the plot in a variable and add on the layers. The code below achieves the same output as above:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sepal_plot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width))
-
-sepal_plot <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species))</code></pre></div>
-</div>
-<div id="markdown-etiquette" class="section level2">
-<h2><span class="header-section-number">9.5</span> Markdown Etiquette</h2>
-<p>I’m seeing that my R Markdown file is getting a little messy. Working with markdown and chunks can get out of hand, but there are some helpful tricks. First, consider naming your chunks as you go. If you combine this with headers, your work will be much more organized. Specifically, the little line at the bottom of the editor becomes much more useful.</p>
-<p>From this: <img src="images/03-iris-jumpbar.png" alt="Pic" /></p>
-<p>To this: <img src="images/03-iris-jumpbar-formatted.png" alt="Pic" /></p>
-<p>Just add a name to the start of each chunk: <code>{r &lt;cool-code-chunk-name&gt;, &lt;chunk_option&gt; = TRUE}</code></p>
-<p>Now you can see what the chunks were about as well as get a sense of where you are in the document. Just don’t forget, it is a space after the <code>r</code> and commas for the other chunk options you may have like <code>eval</code> or <code>echo</code>.</p>
-</div>
-<div id="overlapping-data-1" class="section level2">
-<h2><span class="header-section-number">9.6</span> Overlapping Data</h2>
-<p>Eagle-eyed viewers may notice that we seem to be a few points short. We should be seeing 150 points, but we only see 117 (yes, I counted). Where are those 33 missing points? They are actually hiding behind other points. This dataset rounds to the nearest tenth of a centimeter, which is what is giving us those regular placings of the points. How did I know the data was in centimeters? Running <code>?iris</code> in the console of course! <a href="https://youtu.be/UIKGV2cTgqA?t=3m10s" target="_blank">Ah, you ask a silly question, you get a silly answer</a>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This plot hides some of the points</span>
-<span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species))</code></pre></div>
-<p><img src="iris_files/figure-html/overlapping_data_repeated-1.png" width="672" /></p>
-<p>What’s the culprit? The <code>color</code> aesthetic. The color by default is opaque and will hide any points that are behind it. As a rule, it is always beneficial to reduce the opacity a little no matter what to avoid this problem. To do this, change the <code>alpha</code> value to something other than it’s default <code>1</code>, like <code>0.5</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species, <span class="dt">alpha =</span> <span class="fl">0.5</span>))</code></pre></div>
-<p><img src="iris_files/figure-html/overlap_alpha-1.png" width="672" /></p>
-<p>Okay…a couple things with this.</p>
-<div id="first-the-legend" class="section level3">
-<h3><span class="header-section-number">9.6.1</span> First: The Legend</h3>
-<p><strong>First</strong>, did you notice the new addition to the legend? That looks silly! Why did that show up? Well, when we added the <code>alpha</code> into <code>aes()</code>, we got a new legend. Let’s look at what we are doing with <code>geom_point()</code>. Specifically, this is saying how we should map the <code>color</code> and <code>alpha</code>:</p>
-<p><code>geom_point(mapping = aes(color = Species, alpha = 0.5))</code></p>
-<p>So, we are mapping these given <em>aesthetics</em>, <code>color</code> and <code>alpha</code>, to certain values. <code>ggplot</code> knows that usually the aesthetic mapping will vary since you are probably passing in data that varies, so it will create a legend for each mapping. However, we don’t need a legend for the <code>alpha</code>: we explicitly set it to be 0.5. To fix this, we can pull <code>alpha</code> out of <code>aes</code> and instead treat it like an <em>attribute</em>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species), <span class="dt">alpha =</span> <span class="fl">0.5</span>)</code></pre></div>
-<p><img src="iris_files/figure-html/overlap_alpha_fix1-1.png" width="672" /></p>
-<p>No more legend. So, in ggplot, there is a difference between where an aesthetic is placed. It is also called MAPPING an aesthetic (making it vary with data inside <code>aes</code>) or SETTING an aesthetic (make it a constant attribute across all datapoints outside of <code>aes</code>).</p>
-</div>
-<div id="second-jittering" class="section level3">
-<h3><span class="header-section-number">9.6.2</span> Second: Jittering</h3>
-<p><strong>Secondly</strong>, did this alpha trick <em>really</em> help us? Are we able to see anything in the plot in an easier way? Not really. Since the points perfectly overlap, the opacity difference doesn’t help us much. Usually, opacity will work, but here the data is so regular that we don’t gain anything in the perception department.</p>
-<p>We can fix this by introducing some <em>jitter</em> to the datapoints. Jitter adds a little random noise and moves the datapoints so that they don’t fully overlap:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species), <span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">position =</span> <span class="st">&quot;jitter&quot;</span>)</code></pre></div>
-<p><img src="iris_files/figure-html/overlap-jitter-fix1-1.png" width="672" /></p>
-<p>Consider your motives when using jittering. You are by definition altering the data, but it may be beneficial in some situations.</p>
-<hr />
-</div>
-<div id="aside-example-where-alpha-blending-works" class="section level3">
-<h3><span class="header-section-number">9.6.3</span> <em>Aside</em>: Example Where Alpha Blending Works</h3>
-<p>We are dealing with a case where jittering works best to see the data, while changing the <code>alpha</code> doesn’t help us much. Here’s a quick example where opacity using <code>alpha</code> might be more directly helpful.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># lib for arranging plots side by side</span>
-<span class="kw">library</span>(gridExtra)
-
-<span class="co"># make some normally distributed data</span>
-x_points &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dt">n =</span> <span class="dv">10000</span>, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">2</span>)
-y_points &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dt">n =</span> <span class="dv">10000</span>, <span class="dt">mean =</span> <span class="dv">6</span>, <span class="dt">sd =</span> <span class="dv">2</span>)
-df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(x_points, y_points)
-
-<span class="co"># plot with/without changed alpha</span>
-plt1 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(df, <span class="kw">aes</span>(x_points, y_points)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Before (alpha = 1)&quot;</span>)
-plt2 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(df, <span class="kw">aes</span>(x_points, y_points)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">alpha =</span> <span class="fl">0.1</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;After (alpha = 0.1)&quot;</span>)
-
-<span class="co"># arrange plots</span>
-gridExtra<span class="op">::</span><span class="kw">grid.arrange</span>(plt1, plt2, 
-                        <span class="dt">ncol =</span> <span class="dv">2</span>, <span class="dt">nrow =</span> <span class="dv">1</span>)</code></pre></div>
-<p><img src="iris_files/figure-html/opacity-useful-aside-1.png" width="672" /></p>
-<p>Here it is much easier to see where the dataset is concentrated.</p>
-<hr />
-</div>
-</div>
-<div id="formatting-for-presentation" class="section level2">
-<h2><span class="header-section-number">9.7</span> Formatting for presentation</h2>
-<p>Let’s say we have finished this plot and we are ready to present it to other people: <img src="iris_files/figure-html/present-plot-1.png" width="672" /></p>
-<p>We should clean it up a bit so it can stand on its own.</p>
-</div>
-<div id="alter-appearance" class="section level2">
-<h2><span class="header-section-number">9.8</span> Alter Appearance</h2>
-<p>First, let’s make the <code>x</code>/<code>y</code> labels a little cleaner and more descriptive:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species), <span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">position =</span> <span class="st">&quot;jitter&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Sepal Length (cm)&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Sepal Width (cm)&quot;</span>)</code></pre></div>
-<p><img src="iris_files/figure-html/clean-xy-labels-1.png" width="672" /></p>
-<p>Next, add a title that encapsulates the plot:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species), <span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">position =</span> <span class="st">&quot;jitter&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Sepal Length (cm)&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Sepal Width (cm)&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Sepal Dimensions in Different Species of Iris Flowers&quot;</span>)</code></pre></div>
-<p><img src="iris_files/figure-html/title_added-1.png" width="672" /></p>
-<p>And make the points a little bigger:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species), <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">position =</span> <span class="st">&quot;jitter&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Sepal Length (cm)&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Sepal Width (cm)&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Sepal Dimensions in Different Species of Iris Flowers&quot;</span>)</code></pre></div>
-<p><img src="iris_files/figure-html/size_fixed-1.png" width="672" /></p>
-<p>Now it’s looking presentable.</p>
-</div>
-<div id="consider-themes" class="section level2">
-<h2><span class="header-section-number">9.9</span> Consider Themes</h2>
-<p>It may be better for your situation to change the theme of the plot (the background, axes, etc.; the “accessories” of the plot). Explore what different themes can offer and pick one that is right for you.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_plot &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> iris, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> Sepal.Length, <span class="dt">y =</span> Sepal.Width)) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> Species), <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">alpha =</span> <span class="fl">0.5</span>, <span class="dt">position =</span> <span class="st">&quot;jitter&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Sepal Length (cm)&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Sepal Width (cm)&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Sepal Dimensions in Different Species of Iris Flowers&quot;</span>)
-
-base_plot</code></pre></div>
-<p><img src="iris_files/figure-html/themes-1.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_plot <span class="op">+</span><span class="st"> </span><span class="kw">theme_light</span>()</code></pre></div>
-<p><img src="iris_files/figure-html/themes-2.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_plot <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</code></pre></div>
-<p><img src="iris_files/figure-html/themes-3.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_plot <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>()</code></pre></div>
-<p><img src="iris_files/figure-html/themes-4.png" width="672" /></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">base_plot <span class="op">+</span><span class="st"> </span><span class="kw">theme_void</span>()</code></pre></div>
-<p><img src="iris_files/figure-html/themes-5.png" width="672" /></p>
-<p>I’m going to go with <code>theme_minimal()</code> this time.</p>
-<hr />
-<p>So here we are! We got a lovely scatterplot ready to show the world!</p>
-<p><img src="iris_files/figure-html/final-result-1.png" width="672" /></p>
-</div>
-<div id="going-deeper" class="section level2">
-<h2><span class="header-section-number">9.10</span> Going Deeper</h2>
-<p>We have just touched the surface of ggplot and dipped our toes into grammar of graphics. If you want to go deeper, I highly recommend the DataCamp <span class="citation">(DataCamp <a href="#ref-datacamp">2018</a>)</span> courses on <em>Data Visualization with ggplot2</em> with <a href="https://www.datacamp.com/instructors/rickscavetta" target="_blank">Rick Scavetta</a>. There are three parts and they are quite dense, but the <a href="https://www.datacamp.com/courses/data-visualization-with-ggplot2-1" target="_blank">first part</a> is definitely worth checking out.</p>
-</div>
-<div id="helpful-links" class="section level2">
-<h2><span class="header-section-number">9.11</span> Helpful links</h2>
-<p><a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" target="_blank">RStudio ggplot2 Cheat Sheet</a></p>
-<p><a href="https://campus.datacamp.com/courses/data-visualization-with-ggplot2-1/chapter-3-aesthetics?ex=1" target="_blank">DataCamp: Mapping aesthetics to things in ggplot</a></p>
-<p><a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf" target="_blank">R Markdown Reference Guide</a></p>
-<p><a href="http://r4ds.had.co.nz/" target="_blank">R for Data Science</a></p>
-
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-datacamp">
-<p>DataCamp. 2018. “DataCamp.” <a href="https://www.datacamp.com/" class="uri">https://www.datacamp.com/</a>.</p>
 </div>
 </div>
 <!-- 
@@ -659,8 +442,8 @@ Footer
           </div>
         </div>
       </div>
-<a href="network.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="publish.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="publish.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="percept.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -690,7 +473,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jtr13/EDAV/edit/master/iris.Rmd",
+"link": "https://github.com/jtr13/EDAV/edit/master/github_resources.Rmd",
 "text": "Edit"
 },
 "download": null,
