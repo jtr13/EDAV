@@ -1,6 +1,6 @@
-# GitHub Resources {#collab}
+# GitHub Resources {#github}
 
-![](images/banners/banner_collab.png)
+![](images/banners/banner_github.png)
 
 ## Overview
 

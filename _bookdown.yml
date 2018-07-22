@@ -23,7 +23,7 @@ rmd_files: [
   "iris.Rmd",
   
   "publish_using_r.Rmd",
-  "collaborate.Rmd",
+  "github_resources.Rmd",
   "perception.Rmd",
   "general_resources.Rmd"
 

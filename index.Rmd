@@ -112,7 +112,7 @@ The [yellow banners](intro.html#yellow-pages-1) signal pages that contain simple
 
 #### GitHub Resources
 <center>
-[![GitHub Resources](images/banners/banner_collab.png)](collab.html){class="active-banner"}
+[![GitHub Resources](images/banners/banner_github.png)](github.html){class="active-banner"}
 </center>
 
 #### Perception/Color Resources
