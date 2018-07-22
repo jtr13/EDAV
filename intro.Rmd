@@ -12,7 +12,7 @@ In addition, we include sections on **basic chart types/tools** so you can learn
 
 There are also **several walkthroughs** where we work with data and discuss problems as well as some tips/tricks that will help you.
 
-We hope this resource serves you well.
+We hope this resource serves you well!
 
 ## What the Banners Mean
 
