@@ -17,7 +17,7 @@ In this course, you will be working on a [project](project.html) in teams. Becau
 What's GitHub? Start here.
 
 - [Hello World](https://guides.github.com/activities/hello-world/){target="_blank"}: GitHub's take on the "Hello World" program. Great starting point to learn how GitHub works.
-- [Github Training & Guides](https://www.youtube.com/githubguides){target="_blank"}: This YouTube Channel has a lot of info about what GitHub can do. The first like of the opening video is, "Okay. You signed up for GitHub.  What do you do now?". If you are asking that very question, this channel will serve you well.
+- [Github Training & Guides](https://www.youtube.com/githubguides){target="_blank"}: This YouTube Channel has a lot of info about what GitHub can do. The first line of the opening video is, "Okay. You signed up for GitHub.  What do you do now?". If you are asking that very question, this channel will serve you well.
 
 ## Getting Help
 
