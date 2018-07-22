@@ -54,14 +54,14 @@ Zach Bogart has made a few t-shirts available on [Teespring](https://teespring.c
 
 <center>
 
-[![White EDAV Logo Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-info){target="_blank"}
+[![White EDAV Logo Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-info){target="_blank" class="active-banner"}
 <br>
-[![R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-hex-edav){target="_blank"}
-[![Tidyverse R Shirt](images/black-tidyverse-r-shirt.png)](https://teespring.com/edav-tidyverse){target="_blank"}
+[![R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-hex-edav){target="_blank" class="active-banner"}
+[![Tidyverse R Shirt](images/black-tidyverse-r-shirt.png)](https://teespring.com/edav-tidyverse){target="_blank" class="active-banner"}
 
-[EDAV Logo Shirt](https://teespring.com/edav-single){target="_blank"}</br>
-[R Shirt](https://teespring.com/r-hex-edav){target="_blank"}</br>
-[Tidyverse R Shirt](https://teespring.com/edav-tidyverse){target="_blank"}</br>
+<!-- [EDAV Logo Shirt](https://teespring.com/edav-single){target="_blank"}</br> -->
+<!-- [R Shirt](https://teespring.com/r-hex-edav){target="_blank"}</br> -->
+<!-- [Tidyverse R Shirt](https://teespring.com/edav-tidyverse){target="_blank"}</br> -->
 </center>
 
 

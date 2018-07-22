@@ -39,28 +39,33 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 - Click on a banner to go to the desired page.
 - If you're wondering, here's an [explanation of what the banner colors mean](intro.html#what-the-banners-mean).
 
+<!-- #### Header -->
+<!-- <center> -->
+<!-- [![Header](images/banners/banner_TITLE.png)](TITLE.html){class="active-banner"} -->
+<!-- </center> -->
+
 <!-- Blue Pages -->
 ### Blue Pages
 The [blue banners](intro.html#blue-pages-1) signal pages that contain basic **information**.
 
 #### Introduction
 <center>
-[![Introduction](images/banners/banner_intro.png)](intro.html)
+[![Introduction](images/banners/banner_intro.png)](intro.html){class="active-banner"}
 </center>
 
 #### R Basics
 <center>
-[![R Basics](images/banners/banner_basics.png)](basics.html)
+[![R Basics](images/banners/banner_basics.png)](basics.html){class="active-banner"}
 </center>
 
 #### Final Project Notes
 <center>
-[![Final Project Notes](images/banners/banner_presentation.png)](project.html)
+[![Final Project Notes](images/banners/banner_presentation.png)](project.html){class="active-banner"}
 </center>
 
 #### Contribute to this resource
 <center>
-[![Contribute to this resource](images/banners/banner_contribute.png)](contribute.html)
+[![Contribute to this resource](images/banners/banner_contribute.png)](contribute.html){class="active-banner"}
 </center>
 
 <!-- Green Pages -->
@@ -69,22 +74,22 @@ The [green banners](intro.html#green-pages-1) signal pages that contain more com
 
 #### Chart: Histogram
 <center>
-[![Chart: Histogram](images/banners/banner_histogram.png)](histo.html)
+[![Chart: Histogram](images/banners/banner_histogram.png)](histo.html){class="active-banner"}
 </center>
 
 #### Chart: Boxplot
 <center>
-[![Chart: Boxplot](images/banners/banner_boxplot.png)](box.html)
+[![Chart: Boxplot](images/banners/banner_boxplot.png)](box.html){class="active-banner"}
 </center>
 
 #### Chart: Scatterplot
 <center>
-[![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatter.html)
+[![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatter.html){class="active-banner"}
 </center>
 
 #### Networks
 <center>
-[![Networks](images/banners/banner_network.png)](network.html)
+[![Networks](images/banners/banner_network.png)](network.html){class="active-banner"}
 </center>
 
 <!-- Red Pages -->
@@ -93,7 +98,7 @@ The [red banners](intro.html#red-pages-1) signal pages that contain more extensi
 
 #### Walkthrough: Iris Example
 <center>
-[![Walkthrough: Iris Example](images/banners/banner_iris.png)](iris.html)
+[![Walkthrough: Iris Example](images/banners/banner_iris.png)](iris.html){class="active-banner"}
 </center>
 
 <!-- Yellow Pages -->
@@ -102,22 +107,22 @@ The [yellow banners](intro.html#yellow-pages-1) signal pages that contain simple
 
 #### Publishing with R
 <center>
-[![Publishing with R](images/banners/banner_publish.png)](publish.html)
+[![Publishing with R](images/banners/banner_publish.png)](publish.html){class="active-banner"}
 </center>
 
 #### GitHub Resources
 <center>
-[![GitHub Resources](images/banners/banner_collab.png)](collab.html)
+[![GitHub Resources](images/banners/banner_collab.png)](collab.html){class="active-banner"}
 </center>
 
 #### Perception/Color Resources
 <center>
-[![Perception/Color Resources](images/banners/banner_percept.png)](percept.html)
+[![Perception/Color Resources](images/banners/banner_percept.png)](percept.html){class="active-banner"}
 </center>
 
 #### General Resources
 <center>
-[![General Resources](images/banners/banner_resources.png)](general.html)
+[![General Resources](images/banners/banner_resources.png)](general.html){class="active-banner"}
 </center>
 
 <!-- Contact -->
