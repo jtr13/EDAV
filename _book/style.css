@@ -14,7 +14,11 @@ pre code {
 }
 
 img + em {
-  color: #cccccc;
+  color: #aaa;
+}
+
+caption {
+  color: #aaa;
 }
 
 .active-banner {
