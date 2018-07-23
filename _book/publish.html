@@ -287,8 +287,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="10.1" data-path="publish.html"><a href="publish.html#overview-6"><i class="fa fa-check"></i><b>10.1</b> Overview</a></li>
 <li class="chapter" data-level="10.2" data-path="publish.html"><a href="publish.html#bookdown"><i class="fa fa-check"></i><b>10.2</b> Bookdown</a></li>
 <li class="chapter" data-level="10.3" data-path="publish.html"><a href="publish.html#essentials"><i class="fa fa-check"></i><b>10.3</b> Essentials</a></li>
-<li class="chapter" data-level="10.4" data-path="publish.html"><a href="publish.html#trimmings"><i class="fa fa-check"></i><b>10.4</b> Trimmings</a></li>
-<li class="chapter" data-level="10.5" data-path="publish.html"><a href="publish.html#other-resources"><i class="fa fa-check"></i><b>10.5</b> Other Resources</a></li>
+<li class="chapter" data-level="10.4" data-path="publish.html"><a href="publish.html#adding-a-custom-domain-name"><i class="fa fa-check"></i><b>10.4</b> Adding a custom domain name</a></li>
+<li class="chapter" data-level="10.5" data-path="publish.html"><a href="publish.html#make-a-custom-404-page"><i class="fa fa-check"></i><b>10.5</b> Make a custom 404 page</a></li>
+<li class="chapter" data-level="10.6" data-path="publish.html"><a href="publish.html#hooking-up-travis"><i class="fa fa-check"></i><b>10.6</b> Hooking Up Travis</a><ul>
+<li class="chapter" data-level="10.6.1" data-path="publish.html"><a href="publish.html#add-travis-files-to-github-repo"><i class="fa fa-check"></i><b>10.6.1</b> Add Travis files to GitHub repo</a></li>
+<li class="chapter" data-level="10.6.2" data-path="publish.html"><a href="publish.html#add-travis-service"><i class="fa fa-check"></i><b>10.6.2</b> Add Travis service</a></li>
+</ul></li>
+<li class="chapter" data-level="10.7" data-path="publish.html"><a href="publish.html#other-resources"><i class="fa fa-check"></i><b>10.7</b> Other Resources</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>11</b> GitHub Resources</a><ul>
 <li class="chapter" data-level="11.1" data-path="github.html"><a href="github.html#overview-7"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
@@ -392,21 +397,99 @@ function unhover(element) {
 <li><p><a href="http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html" target="_blank">Creating Websites in R</a>: This tutorial, written by <a href="http://www.emilyzabor.com/" target="_blank">Emily Zabor</a> (a Columbia alum), provides a thorough walkthrough for creating websites using different R tools. She discusses how to make different kinds of sites (personal, package, project, blog) as well as GitHub integration and step-by-step instructions for getting setup with templates and hosting. Very detailed and worth perusing if interested in making your own site.</p></li>
 </ul>
 </div>
-<div id="trimmings" class="section level2">
-<h2><span class="header-section-number">10.4</span> Trimmings</h2>
-<ul>
-<li><p><strong>Custom Domain Names</strong>: GitHub integration with custom domain names is easy to setup. GitHub has an article on <a href="https://help.github.com/articles/using-a-custom-domain-with-github-pages/" target="_blank">how to setup a custom domain with GitHub Pages</a> that will help to get your desired URL hooked up (custom domain names: the vanity plates of the internet). <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> supports free hosting, which makes the whole process a lot easier. Also, if you are in the market for a cool domain name, <a href="https://domains.google/#/" target="_blank">Google Domains</a> is a great place to get the one of your dreams.</p></li>
-<li><p><strong>Custom 404 Page</strong>: Your site may be lovely, but a default 404 page is always a let down. Not <em>if</em> but <em>when</em> someone types part of your URL incorrectly or a link gets broken, you should make sure there is something to see other than a boring backend page you had no input in designing. <a href="https://mycyberuniverse.com/developing/custom-404-page-for-website-hosted-on-github.html" target="_blank">This article</a> explains the process, but all you have to do is make a file called <code>404.html</code> in your root directory and GitHub will use it rather than the default. Because of this, there is really no excuse for not having one. Here’s a look at <a href="404.html">our 404 page</a>. Hopefully you aren’t seeing it that often. :)</p>
-Some considerations:
+<div id="adding-a-custom-domain-name" class="section level2">
+<h2><span class="header-section-number">10.4</span> Adding a custom domain name</h2>
+<p>There are several parts to adding a custom domain name.</p>
+<ol style="list-style-type: decimal">
+<li>Buy a domain name and edit DNS settings</li>
+</ol>
+<p>We used <a href="https://domains.google.com/" target="_blank">Google domains</a>. In <a href="https://domains.google.com/registrar" target="_blank">the registrar page</a>, click the DNS icon and add the following to Custom resource records:</p>
+<table>
+<thead>
+<tr class="header">
+<th>NAME</th>
+<th>TYPE</th>
+<th>TTL</th>
+<th>DATA</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>@</td>
+<td>A</td>
+<td>1h</td>
+<td>185.199.108.153</td>
+</tr>
+<tr class="even">
+<td>www</td>
+<td>CNAME</td>
+<td>1h</td>
+<td>@</td>
+</tr>
+</tbody>
+</table>
+<p>Note that some tutorials list older IP addresses. Check <a href="https://help.github.com/articles/troubleshooting-custom-domains/#dns-configuration-errors" target="_blank">here</a> for the recommended ones.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Change settings in your repo</li>
+</ol>
+<p>In Settings, add your custom domain name in the GitHub Pages section.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Add a CNAME file to the <code>gh-pages</code> branch</li>
+</ol>
+<p>This is a very simple text file named CNAME (all caps). The contents should be one line with the custom domain name.</p>
+<p>For more detail on steps 2 and 3, see: <a href="http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html#custom_domains" target="_blank">Emily Zabor’s Tutorial on Custom Domains</a></p>
+</div>
+<div id="make-a-custom-404-page" class="section level2">
+<h2><span class="header-section-number">10.5</span> Make a custom 404 page</h2>
+<p>Your site may be lovely, but a default 404 page is always a let down. Not <em>if</em> but <em>when</em> someone types part of your URL incorrectly or a link gets broken, you should make sure there is something to see other than a boring backend page you had no input in designing. <a href="https://mycyberuniverse.com/developing/custom-404-page-for-website-hosted-on-github.html" target="_blank">This article</a> explains the process, but all you have to do is make a file called <code>404.html</code> in your root directory and GitHub will use it rather than the default. Because of this, there is really no excuse for not having one. Here’s a look at <a href="404.html">our 404 page</a>. Hopefully you aren’t seeing it that often. :)</p>
+<p>Some considerations:</p>
 <ul>
 <li><strong>Always include a link back to the site</strong>: Throw the user a life-saver.</li>
 <li><strong>Make it clear that something went wrong</strong>: Don’t hide the fact that this page is because of some error.</li>
 <li><strong>Other than that, have fun with it!</strong>: There are <a href="https://www.canva.com/learn/404-page-design/" target="_blank">plenty of examples</a> of people making <a href="https://www.pagecloud.com/blog/best-404-pages" target="_blank">excellent 404 pages</a>. It should make a frustrating experience just a little bit more bearable.</li>
-</ul></li>
 </ul>
 </div>
+<div id="hooking-up-travis" class="section level2">
+<h2><span class="header-section-number">10.6</span> Hooking Up Travis</h2>
+<p>This tutorial is designed to help you add Travis to your GitHub Pages bookdown web site. It assumes you already have a working web site, with pages stored in a <code>gh-pages</code> branch. We also provide a bonus section on custom domain names, which doesn’t have to do with Travis, because what the heck.</p>
+<p>We’re not necessarily recommending the <code>gh-pages</code> route; we chose it since we found examples that worked for us using this method. Since the <code>/docs</code> folder is a newer and cleaner approach, it is certainly possible that it provides a better way to organize the repo.</p>
+<p>That said, there are various tutorials for how to set up the <code>gh-pages</code> branch; it appears that the best way to do so is to create an orphan branch, as explained <a href="https://www.bruttin.com/2017/12/22/github-ghpages-worktree.html" target="&quot;_blank">here</a>.</p>
+<p>We should note that this makes it all seem very easy to add Travis, which actually was not the case at all for us. I guess everything looks easy in retrospect. If you run into trouble, let us know by <a href="https://github.com/jtr13/edav/issues" target="_blank">filing an issue</a> or <a href="https://github.com/jtr13/edav/pulls" target="&quot;_blank">submitting a pull request</a>. More info on all the contribution stuff can be found on our <a href="contribute.html">contribute page</a>.</p>
+<div id="add-travis-files-to-github-repo" class="section level3">
+<h3><span class="header-section-number">10.6.1</span> Add Travis files to GitHub repo</h3>
+<p><strong>Add these files</strong> to your repo:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://github.com/rstudio/bookdown-demo/blob/master/.travis.yml" class="uri" target="&quot;_blank">https://github.com/rstudio/bookdown-demo/blob/master/.travis.yml</a>
+<ul>
+<li>No changes</li>
+</ul></li>
+<li><a href="https://github.com/rstudio/bookdown-demo/blob/master/_build.sh" class="uri" target="&quot;_blank">https://github.com/rstudio/bookdown-demo/blob/master/_build.sh</a>
+<ul>
+<li>Remove the last two lines if you’re only interested in a GitHub Pages book.</li>
+</ul></li>
+<li><a href="https://github.com/rstudio/bookdown-demo/blob/master/_deploy.sh" class="uri" target="&quot;_blank">https://github.com/rstudio/bookdown-demo/blob/master/_deploy.sh</a>
+<ul>
+<li>The only changes you need to make are to the <code>git config</code> lines. You need to use your GitHub email, but the username can be anything.</li>
+</ul></li>
+</ol>
+</div>
+<div id="add-travis-service" class="section level3">
+<h3><span class="header-section-number">10.6.2</span> Add Travis service</h3>
+<ol style="list-style-type: decimal">
+<li><p><strong>Create a Travis account</strong> on www.travis-ci.org by clicking on “Sign in with GitHub” on the top right. Click Authorize to allow Travis to have proper access to GitHub.</p></li>
+<li><p>Go back to GitHub and <strong>create a personal access token (PAT)</strong> if you don’t have one already. You can do so <a href="https://github.com/settings/tokens">here</a>. Note that you must save your PAT somewhere because you can’t access it once it’s created. Also note that the PAT provides a means to access your GitHub repo through an API, an alternative means to logging in with your username/password (There is an API Token in Travis but this is <em>not</em> the one to use).</p></li>
+<li><p><strong>Return to your Travis profile</strong> (travis-ci.org/profile/[GITHUB username]) and click the button next to the appropriate repo to <strong>toggle it on</strong>. Click on Settings next to the button and <strong>add your saved GITHUB_PAT</strong> under Environmental Variables: set “Name” to “GITHUB_PAT” and “Value” to the value of the token.</p></li>
+</ol>
+<p>If all goes well, you can sit back, relax, and watch Travis do the work for you.</p>
+<center>
+<iframe src="https://giphy.com/embed/lPdn5MOabkgCY" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen>
+</iframe>
+<br /><a href="https://giphy.com/gifs/the-simpsons-homer-simpson-exercise-lPdn5MOabkgCY">via GIPHY</a>
+</center>
+</div>
+</div>
 <div id="other-resources" class="section level2">
-<h2><span class="header-section-number">10.5</span> Other Resources</h2>
+<h2><span class="header-section-number">10.7</span> Other Resources</h2>
 <ul>
 <li><a href="https://bookdown.org/yihui/blogdown/" target="_blank">blogdown: Creating Websites with R Markdown</a>: Textbook on the <code>blogdown</code>package, another option for generating websites with R.</li>
 <li><a href="https://guides.github.com/features/pages/" target="_blank">Getting Started with GitHub Pages</a>: Short article from <a href="https://guides.github.com/" target="_blank">GitHub Guides</a> on creating/hosting a website using <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</li>

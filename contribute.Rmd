@@ -48,7 +48,7 @@ This is a full walkthough example of proposing a change to *edav.info/*. It's a 
 ![](images/excited_student/directly-05.png)
 *Make your edits, include a quick explanation, and hit the big green button.*
 
-6. Now GitHub is once again helping out by letting us review the changes we made. On this page we can **review our proposed changes** by scrolling down and looking at the [diffs](https://git-scm.com/docs/git-diff){target="_blank"}. Our fix is very simple so there isn't much to see. Once again, we are going to **push the big green button**, this time labeled **Create pull request**. This will start the process of letting the *edav.info/* people know that we would like them to incude our changes (in git-speak, we are *requesting* that when the *edav.info/* people do a `git pull`, they *pull* in our changes as well. Hence, a pull request).
+6. Now GitHub is once again helping out by letting us review the changes we made. On this page we can **review our proposed changes** by scrolling down and looking at the [diffs](https://git-scm.com/docs/git-diff){target="_blank"}. Our fix is very simple so there isn't much to see. Once again, we are going to **push the big green button**, this time labeled **Create pull request**. This will start the process of letting the *edav.info/* people know that we would like them to include our changes (in git-speak, we are *requesting* that when the *edav.info/* people do a `git pull`, they *pull* in our changes as well. Hence, a pull request).
 ![](images/excited_student/directly-06.png)
 *Chance to review your changes. Once satisfied, hit the big green button to start a pull request.*
 
@@ -56,14 +56,14 @@ This is a full walkthough example of proposing a change to *edav.info/*. It's a 
 ![](images/excited_student/directly-14.png)
 *Explain your pull request and hit the big green button.*
 
-8. **Congratulations** are in order! We have **successfully opened a pull request on a GitHub repo!** Now one of the repo owners (like the guy writing this tutorial, for example <i class="fas fa-grin-beam"></i>) has to decide if they want to include your pull request or not. In this case they'll certainly approve it, but know that they may decide against adding your changes. For more info, read the section of the Open Source Guides on [what happens after you submit a contribution](https://opensource.guide/how-to-contribute/#what-happens-after-you-submit-a-contribution){target="_blank"}.<br> **Note**: Be aware that the icon shown below may initially be yellow to signal that some tests are being performed to check the conficts of your proposal with the original repo. It should turn green if everything passes.
+8. **Congratulations** are in order! We have **successfully opened a pull request on a GitHub repo!** Now one of the repo owners (like the guy writing this tutorial, for example <i class="fas fa-grin-beam"></i>) has to decide if they want to include your pull request or not. In this case they'll certainly approve it, but know that they may decide against adding your changes. For more info, read the section of the Open Source Guides on [what happens after you submit a contribution](https://opensource.guide/how-to-contribute/#what-happens-after-you-submit-a-contribution){target="_blank"}.<br> **Note**: Be aware that the icon shown below may initially be yellow to signal that some tests are being performed to check the conflicts of your proposal with the original repo. It should turn green if everything passes.
 ![](images/excited_student/directly-07.png)
 *We did it! Now the maintainers will review our changes and get back to us...*
 
 And now we wait...
 
 <center>
-<iframe src="https://giphy.com/embed/l0MYOUI5XfRk4LLWM" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/warnerarchive-classic-film-warner-archive-l0MYOUI5XfRk4LLWM">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/l0MYOUI5XfRk4LLWM" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br /><a href="https://giphy.com/gifs/warnerarchive-classic-film-warner-archive-l0MYOUI5XfRk4LLWM">via GIPHY</a>
 </center>
 
 9. What's this!? We have received **an email from one of the repo owners**, Zach Bogart. And it says that they merged the change! Huzzah! We **click on the number** to take us back to the pull request we opened.
@@ -82,7 +82,7 @@ And now we wait...
 ![](images/excited_student/directly-12.png)
 *And the edits we made to github_resources.Rmd!*
 
-12. There it is! We go back to the page we edited and now **our typo has been included!**<br>**Note**: The changes will take about four to five minutes to appear on the site after notification of a successful merge. This is because we use [Travis CI](https://travis-ci.org/){target="_blank"} on the backend of our repo and it takes a little time for it to re-render the site pages. If you want to learn more about Travis CI and how it auto-magically generates the site, checkout [our section on adding Travis to a GitHub bookdown book](not_ready_yet.html) in the [Publishing with R page](publish.html).
+12. There it is! We go back to the page we edited and now **our typo has been included!**<br>**Note**: The changes will take about four to five minutes to appear on the site after notification of a successful merge. This is because we use [Travis CI](https://travis-ci.org/){target="_blank"} on the backend of our repo and it takes a little time for it to re-render the site pages. If you want to learn more about how you can use Travis CI to auto-magically generate your work, checkout [our section on adding Travis to a GitHub bookdown book](publish.html#hooking-up-travis) in the [Publishing with R page](publish.html).
 ![](images/excited_student/directly-13.png)
 *Look at that! It's published! So many exclamation points!!!*
 
