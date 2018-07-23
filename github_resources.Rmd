@@ -4,7 +4,7 @@
 
 ## Overview
 
-This section includes links for working with GitHub and advice on how to collaborate in teams on coding projects.
+This section includes links for working with GitHub and advice on how to collaborate in teams on large coding projects.
 
 ## On GitHub
 
