@@ -12,29 +12,90 @@ We don't want *edav.info/* to be just another resource. Rather, we want it to be
 
 ## Ways You Can Contribute
 
-Below are different ways you can contribute to *edav.info/*. We welcome all input.
+Below are some different ways you can contribute to *edav.info/*. We welcome all input.
 
 ### Contribute Directly
 
-The simplest way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will make a copy of our repo, make your desired change, and suggest to us that we fix it. If we approve it, your fix will be rendered and published to the site.
+One way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
 
-Contributing directly works best if the change you are proposing is something small, such as:
+Contributing directly works best if the change you are proposing is something relatively small, such as:
 
 - A typo/grammatical error
 - An unclear phrasing/explanation
+- A quick code fix
 
-**How to Contribute Directly**:
+#### Direct Contribution Walkthrough
 
-1. Click the <i class="fas fa-edit"></i> icon at the top of the page you would like to edit
-2. Follow the instructions from GitHub (you may need to fork the repo)
-3. Propose your file change
-4. That's it! We will review your proposed change and respond as soon as we can :)
+This is a full walkthough example of proposing a change to *edav.info/*. It's a little long, but don't get scared; it's a great way to learn about GitHub and it's almost entirely hitting big green buttons!
 
-In summary, fix small issues as often as you like!
+1. Let's **find something to change**. For example, I'm pretty sure they meant to write "repository" here. Oops. Let's fix it for them!
+![](images/excited_student/directly-01.png)
+*That's not how you spell "repository"! Let's fix it.*
 
-If what you want to improve is a little more substantial, read on.
+2. To make the fix, we **click on the edit icon**, <i class="fas fa-edit"></i>, at the top of the page. This will take us to their GitHub repo, where all the code for this resource is stored. <br> **Note**: You need to have a valid GitHub account to contribute. In this example, we are using a dummy account called **excited-student** so if you see it in a screenshot, know that it would be replaced by your own username.
+![](images/excited_student/directly-02.png)
+*Hit this icon to go to GitHub.*
 
-### Submit A New Issue
+3. We haven't forked the repo yet, so GitHub shows us a page like the one below. No worries! We just **hit the big green button** labeled **<i class="fas fa-code-branch"></i> Fork this repository and propose changes** and we'll be good to go (as you will see, big green buttons are our friends). For more info on forking repos, the [GitHub Guide on Forking Projects](https://guides.github.com/activities/forking/){target="_blank"} is very informative.
+![](images/excited_student/directly-03.png)
+*Haven't forked the repo before? No worries; the big green button will solve everything.*
+
+4. Now that we have successfully forked the repo, we can **see the code** for the page we want to edit. <br>**Note**: That little blue blurb at the top is spelling out what is happening/going to happen: we have made a copy of a repo because we don't have write access to it . So, after we make our change on this page, we will inform the owners of the repo about our edits by using a pull request. GitHub can be super overwhelming, but it will try its darndest to inform you what will happen along the way.
+![](images/excited_student/directly-04.png)
+*Ready to edit the code. The blue blurb is worth reading.*
+
+5. Let's fix that embarrassing typo! We **update the code** right in this editor, **include an explanation** for what we changed/why we made the change, and then **hit the big green button** labeled **Propose file change**. Gotta love those big green buttons!
+![](images/excited_student/directly-05.png)
+*Make your edits, include a quick explanation, and hit the big green button.*
+
+6. Now GitHub is once again helping out by letting us review the changes we made. On this page we can **review our proposed changes** by scrolling down and looking at the [diffs](https://git-scm.com/docs/git-diff){target="_blank"}. Our fix is very simple so there isn't much to see. Once again, we are going to **push the big green button**, this time labeled **Create pull request**. This will start the process of letting the *edav.info/* people know that we would like them to incude our changes (in git-speak, we are *requesting* that when the *edav.info/* people do a `git pull`, they *pull* in our changes as well. Hence, a pull request).
+![](images/excited_student/directly-06.png)
+*Chance to review your changes. Once satisfied, hit the big green button to start a pull request.*
+
+7. Here we are at the pull request page. Notice the green checkmark that says "*Able to merge*" (a good sign that everything is going smoothly). Now we **explain our pull request** with some comments and, once again, **hit the big green button** labeled **Create pull request**. <br>**Note**: You may be asking, "Why do I have to type this explanation in again?". This is because the explanation we wrote in Step 5 (where we edited the file) is a *commit*. We could have had *multiple* commits at once that we wanted to bundle into *one* pull request. This step is a way to explain the pull request as a whole. It is redundant for us because our change is so small and only has one commit. Still totally lost? This [GitHub Guide on Understanding the GitHub Flow](https://guides.github.com/introduction/flow/){target="_blank"} is an incredibly helpful read and [our GitHub Resources page](github.html) also has a lot of helpful links.
+![](images/excited_student/directly-14.png)
+*Explain your pull request and hit the big green button.*
+
+8. **Congratulations** are in order! We have **successfully opened a pull request on a GitHub repo!** Now one of the repo owners (like the guy writing this tutorial, for example <i class="fas fa-grin-beam"></i>) has to decide if they want to include your pull request or not. In this case they'll certainly approve it, but know that they may decide against adding your changes. For more info, read the section of the Open Source Guides on [what happens after you submit a contribution](https://opensource.guide/how-to-contribute/#what-happens-after-you-submit-a-contribution){target="_blank"}.<br> **Note**: Be aware that the icon shown below may initially be yellow to signal that some tests are being performed to check the conficts of your proposal with the original repo. It should turn green if everything passes.
+![](images/excited_student/directly-07.png)
+*We did it! Now the maintainers will review our changes and get back to us...*
+
+And now we wait...
+
+<center>
+<iframe src="https://giphy.com/embed/l0MYOUI5XfRk4LLWM" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/warnerarchive-classic-film-warner-archive-l0MYOUI5XfRk4LLWM">via GIPHY</a></p>
+</center>
+
+9. What's this!? We have received **an email from one of the repo owners**, Zach Bogart. And it says that they merged the change! Huzzah! We **click on the number** to take us back to the pull request we opened.
+![](images/excited_student/directly-08.png)
+*We got an email! And it says they merged! Click that number to see the updated pull request.*
+
+10. Here we are at the updated pull request page. Notice that **everything has turned purple**. Purple is the best color to see on GitHub; it's the color of victory. It signals that our pull request was merged with the repo, meaning our change has become part of the repo! Also, notice the button that says **Delete branch**. Since all the work on our branch was merged with the repo, it has served its purpose and can be deleted safely.
+![](images/excited_student/directly-10.png)
+*Everything is purple! Woot!*
+![](images/excited_student/directly-09.png)
+*Can safely delete our branch*
+
+11. Now if we go back to the main page of the repo, we can **see our merge** was the most recent addition. And, if we scroll down, we will see that `github_resources.Rmd`, the file we edited, has been updated recently and it shows our commit message "fix typo". We did it! Let's check out the site to see our change published for the whole internet to see!
+![](images/excited_student/directly-11.png)
+*Look! There's our merged pull request added to the repo!*
+![](images/excited_student/directly-12.png)
+*And the edits we made to github_resources.Rmd!*
+
+12. There it is! We go back to the page we edited and now **our typo has been included!**<br>**Note**: The changes will take about four to five minutes to appear on the site after notification of a successful merge. This is because we use [Travis CI](https://travis-ci.org/){target="_blank"} on the backend of our repo and it takes a little time for it to re-render the site pages. If you want to learn more about Travis CI and how it auto-magically generates the site, checkout [our section on adding Travis to a GitHub bookdown book](not_ready_yet.html) in the [Publishing with R page](publish.html).
+![](images/excited_student/directly-13.png)
+*Look at that! It's published! So many exclamation points!!!*
+
+We contributed to a GitHub repo! Hooray! Time to celebrate!
+
+<center>
+<iframe src="https://giphy.com/embed/nxscd2YGVf6xi" width="480" height="369" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br />
+<a href="https://giphy.com/gifs/reaction-food-simpsons-nxscd2YGVf6xi">via GIPHY</a>
+</center>
+<br>
+If what you want to improve is a little more substantial (too difficult to contribute directly), read on.
+
+### Submit An Issue
 
 If your proposed change is more complex, consider letting us know by **submitting an issue**. Say some links are broken, or a graph example is inaccurate or misleading. It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
 
@@ -53,6 +114,7 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 
 - Make sure your changes are not already an open issue (so as not to have redundant issues)
 - Please thoroughly explain your proposed change when posting a new issue
+- Consider [using labels](https://help.github.com/articles/applying-labels-to-issues-and-pull-requests/){target="_blank"} to specify the kind of issue, such as "bug", "enhancement", "help wanted", "question", or [create your own](https://help.github.com/articles/creating-a-label/){target="_blank"}.
 - For more info, please consider reading the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
 
 ### Solve an Open Issue
