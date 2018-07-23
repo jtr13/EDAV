@@ -285,15 +285,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="10" data-path="publish.html"><a href="publish.html"><i class="fa fa-check"></i><b>10</b> Publishing Resources</a><ul>
 <li class="chapter" data-level="10.1" data-path="publish.html"><a href="publish.html#overview-6"><i class="fa fa-check"></i><b>10.1</b> Overview</a></li>
-<li class="chapter" data-level="10.2" data-path="publish.html"><a href="publish.html#bookdown"><i class="fa fa-check"></i><b>10.2</b> Bookdown</a></li>
-<li class="chapter" data-level="10.3" data-path="publish.html"><a href="publish.html#essentials"><i class="fa fa-check"></i><b>10.3</b> Essentials</a></li>
-<li class="chapter" data-level="10.4" data-path="publish.html"><a href="publish.html#adding-a-custom-domain-name"><i class="fa fa-check"></i><b>10.4</b> Adding a custom domain name</a></li>
-<li class="chapter" data-level="10.5" data-path="publish.html"><a href="publish.html#make-a-custom-404-page"><i class="fa fa-check"></i><b>10.5</b> Make a custom 404 page</a></li>
-<li class="chapter" data-level="10.6" data-path="publish.html"><a href="publish.html#hooking-up-travis"><i class="fa fa-check"></i><b>10.6</b> Hooking Up Travis</a><ul>
-<li class="chapter" data-level="10.6.1" data-path="publish.html"><a href="publish.html#add-travis-files-to-github-repo"><i class="fa fa-check"></i><b>10.6.1</b> Add Travis files to GitHub repo</a></li>
-<li class="chapter" data-level="10.6.2" data-path="publish.html"><a href="publish.html#add-travis-service"><i class="fa fa-check"></i><b>10.6.2</b> Add Travis service</a></li>
+<li class="chapter" data-level="10.2" data-path="publish.html"><a href="publish.html#tldr-4"><i class="fa fa-check"></i><b>10.2</b> tl;dr</a></li>
+<li class="chapter" data-level="10.3" data-path="publish.html"><a href="publish.html#bookdown"><i class="fa fa-check"></i><b>10.3</b> Bookdown</a></li>
+<li class="chapter" data-level="10.4" data-path="publish.html"><a href="publish.html#essentials"><i class="fa fa-check"></i><b>10.4</b> Essentials</a></li>
+<li class="chapter" data-level="10.5" data-path="publish.html"><a href="publish.html#adding-a-custom-domain-name"><i class="fa fa-check"></i><b>10.5</b> Adding a custom domain name</a></li>
+<li class="chapter" data-level="10.6" data-path="publish.html"><a href="publish.html#make-a-custom-404-page"><i class="fa fa-check"></i><b>10.6</b> Make a custom 404 page</a></li>
+<li class="chapter" data-level="10.7" data-path="publish.html"><a href="publish.html#hooking-up-travis"><i class="fa fa-check"></i><b>10.7</b> Hooking Up Travis</a><ul>
+<li class="chapter" data-level="10.7.1" data-path="publish.html"><a href="publish.html#add-travis-files-to-github-repo"><i class="fa fa-check"></i><b>10.7.1</b> Add Travis files to GitHub repo</a></li>
+<li class="chapter" data-level="10.7.2" data-path="publish.html"><a href="publish.html#add-travis-service"><i class="fa fa-check"></i><b>10.7.2</b> Add Travis service</a></li>
 </ul></li>
-<li class="chapter" data-level="10.7" data-path="publish.html"><a href="publish.html#other-resources"><i class="fa fa-check"></i><b>10.7</b> Other Resources</a></li>
+<li class="chapter" data-level="10.8" data-path="publish.html"><a href="publish.html#other-resources"><i class="fa fa-check"></i><b>10.8</b> Other Resources</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>11</b> GitHub Resources</a><ul>
 <li class="chapter" data-level="11.1" data-path="github.html"><a href="github.html#overview-7"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
@@ -375,15 +376,20 @@ function unhover(element) {
 <h2><span class="header-section-number">10.1</span> Overview</h2>
 <p>This section discusses how we built <em>edav.info/</em> and includes references for building sites/books of your own using R.</p>
 </div>
+<div id="tldr-4" class="section level2">
+<h2><span class="header-section-number">10.2</span> tl;dr</h2>
+<p>Want to get started making a site complete with Travis CI like this one? Zach Bogart has created <a href="https://github.com/zachbogart/bookdown-template" target="_blank">a bookdown-template</a> you can clone and build off of to create your own site. For instructions, consult the README file.</p>
+<p>Totally lost? For more info about how this all works, read on.</p>
+</div>
 <div id="bookdown" class="section level2">
-<h2><span class="header-section-number">10.2</span> Bookdown</h2>
+<h2><span class="header-section-number">10.3</span> Bookdown</h2>
 <p><em>edav.info/</em> is built using <a href="https://bookdown.org/" target="_blank">Bookdown</a>, “a free and open-source R package built on top of <a href="https://rmarkdown.rstudio.com/" target="_blank">R Markdown</a> to make it really easy to write books and long-form articles/reports.”</p>
 <p>The biggest selling-point for <code>bookdown</code> is that it allows you to make content that is both professional and adaptable. If you want to update a regular book, you need to issue another edition and go through a lot of hassle. With <code>bookdown</code>, you can publish it in different formats (including print, if desired) and be able to change things easily when needed.</p>
 <p>We chose <code>bookdown</code> for <em>edav.info/</em> because it allows us to present a lot of content in a compact, searchable manner, while also letting students suggest updates and contribute to its structure. Again, it is professional <em>and</em> adaptable (The default <code>bookdown</code> output is essentially just an online book, but we tried to liven it up by adding a lot of helpful icons, logos, and banners to improve navigation).</p>
 <p>Below are some helpful references we used in creating <em>edav.info/</em>, which may be helpful if you are interested in creating your own website or online resource with R.</p>
 </div>
 <div id="essentials" class="section level2">
-<h2><span class="header-section-number">10.3</span> Essentials</h2>
+<h2><span class="header-section-number">10.4</span> Essentials</h2>
 <ul>
 <li><p><a href="http://seankross.com/2016/11/17/How-to-Start-a-Bookdown-Book.html" target="_blank">How to Start a Bookdown Book</a>: The hardest part about <code>bookdown</code> is getting it up and running. <a href="http://seankross.com/about/" target="_blank">Sean Kross</a> has the best template instructions we found. We started this project by cloning his template repo and building off of it. Excellent descriptions on what all the files do and what is essential to start your project.</p></li>
 <li><p><a href="https://bookdown.org/yihui/bookdown/" target="_blank">bookdown: Authoring Books and Technical Documents with R Markdown</a>: This textbook by <a href="https://yihui.name/en/" target="_blank">Yihui Xie</a>, author of the <code>bookdown</code> package, explains everything <code>bookdown</code> is able to accomplish (published using <code>bookdown</code>…because of course it is). An incredible informative reference which we always kept close by. Author’s blurb:</p></li>
@@ -398,7 +404,7 @@ function unhover(element) {
 </ul>
 </div>
 <div id="adding-a-custom-domain-name" class="section level2">
-<h2><span class="header-section-number">10.4</span> Adding a custom domain name</h2>
+<h2><span class="header-section-number">10.5</span> Adding a custom domain name</h2>
 <p>There are several parts to adding a custom domain name.</p>
 <ol style="list-style-type: decimal">
 <li>Buy a domain name and edit DNS settings</li>
@@ -440,7 +446,7 @@ function unhover(element) {
 <p>For more detail on steps 2 and 3, see: <a href="http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html#custom_domains" target="_blank">Emily Zabor’s Tutorial on Custom Domains</a></p>
 </div>
 <div id="make-a-custom-404-page" class="section level2">
-<h2><span class="header-section-number">10.5</span> Make a custom 404 page</h2>
+<h2><span class="header-section-number">10.6</span> Make a custom 404 page</h2>
 <p>Your site may be lovely, but a default 404 page is always a let down. Not <em>if</em> but <em>when</em> someone types part of your URL incorrectly or a link gets broken, you should make sure there is something to see other than a boring backend page you had no input in designing. <a href="https://mycyberuniverse.com/developing/custom-404-page-for-website-hosted-on-github.html" target="_blank">This article</a> explains the process, but all you have to do is make a file called <code>404.html</code> in your root directory and GitHub will use it rather than the default. Because of this, there is really no excuse for not having one. Here’s a look at <a href="404.html">our 404 page</a>. Hopefully you aren’t seeing it that often. :)</p>
 <p>Some considerations:</p>
 <ul>
@@ -450,13 +456,13 @@ function unhover(element) {
 </ul>
 </div>
 <div id="hooking-up-travis" class="section level2">
-<h2><span class="header-section-number">10.6</span> Hooking Up Travis</h2>
+<h2><span class="header-section-number">10.7</span> Hooking Up Travis</h2>
 <p>This tutorial is designed to help you add Travis to your GitHub Pages bookdown web site. It assumes you already have a working web site, with pages stored in a <code>gh-pages</code> branch.</p>
 <p>We’re not necessarily recommending the <code>gh-pages</code> route; we chose it since we found examples that worked for us using this method. Since the <code>/docs</code> folder is a newer and cleaner approach, it is certainly possible that it provides a better way to organize the repo.</p>
 <p>That said, there are various tutorials for how to set up the <code>gh-pages</code> branch; it appears that the best way to do so is to create an orphan branch, as explained <a href="https://www.bruttin.com/2017/12/22/github-ghpages-worktree.html" target="&quot;_blank">here</a>.</p>
 <p>We should note that this makes it all seem very easy to add Travis, which actually was not the case at all for us. I guess everything looks easy in retrospect. If you run into trouble, let us know by <a href="https://github.com/jtr13/edav/issues" target="_blank">filing an issue</a> or <a href="https://github.com/jtr13/edav/pulls" target="&quot;_blank">submitting a pull request</a>. More info on all the contribution stuff can be found on our <a href="contribute.html">contribute page</a>.</p>
 <div id="add-travis-files-to-github-repo" class="section level3">
-<h3><span class="header-section-number">10.6.1</span> Add Travis files to GitHub repo</h3>
+<h3><span class="header-section-number">10.7.1</span> Add Travis files to GitHub repo</h3>
 <p><strong>Add these files</strong> to your repo:</p>
 <ol style="list-style-type: decimal">
 <li><a href="https://github.com/rstudio/bookdown-demo/blob/master/.travis.yml" class="uri" target="&quot;_blank">https://github.com/rstudio/bookdown-demo/blob/master/.travis.yml</a>
@@ -474,7 +480,7 @@ function unhover(element) {
 </ol>
 </div>
 <div id="add-travis-service" class="section level3">
-<h3><span class="header-section-number">10.6.2</span> Add Travis service</h3>
+<h3><span class="header-section-number">10.7.2</span> Add Travis service</h3>
 <ol style="list-style-type: decimal">
 <li><p><strong>Create a Travis account</strong> on www.travis-ci.org by clicking on “Sign in with GitHub” on the top right. Click Authorize to allow Travis to have proper access to GitHub.</p></li>
 <li><p>Go back to GitHub and <strong>create a personal access token (PAT)</strong> if you don’t have one already. You can do so <a href="https://github.com/settings/tokens">here</a>. Note that you must save your PAT somewhere because you can’t access it once it’s created. Also note that the PAT provides a means to access your GitHub repo through an API, an alternative means to logging in with your username/password (There is an API Token in Travis but this is <em>not</em> the one to use).</p></li>
@@ -489,7 +495,7 @@ function unhover(element) {
 </div>
 </div>
 <div id="other-resources" class="section level2">
-<h2><span class="header-section-number">10.7</span> Other Resources</h2>
+<h2><span class="header-section-number">10.8</span> Other Resources</h2>
 <ul>
 <li><a href="https://bookdown.org/yihui/blogdown/" target="_blank">blogdown: Creating Websites with R Markdown</a>: Textbook on the <code>blogdown</code>package, another option for generating websites with R.</li>
 <li><a href="https://guides.github.com/features/pages/" target="_blank">Getting Started with GitHub Pages</a>: Short article from <a href="https://guides.github.com/" target="_blank">GitHub Guides</a> on creating/hosting a website using <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</li>
