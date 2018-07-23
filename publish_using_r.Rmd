@@ -6,6 +6,12 @@
 
 This section discusses how we built *edav.info/* and includes references for building sites/books of your own using R.
 
+## tl;dr
+
+Want to get started making a site complete with Travis CI like this one? Zach Bogart has created [a bookdown-template](https://github.com/zachbogart/bookdown-template){target="_blank"} you can clone and build off of to create your own site. For instructions, consult the README file. 
+
+Totally lost? For more info about how this all works, read on.
+
 ## Bookdown
 
 *edav.info/* is built using [Bookdown](https://bookdown.org/){target="_blank"}, "a free and open-source R package built on top of [R Markdown](https://rmarkdown.rstudio.com/){target="_blank"} to make it really easy to write books and long-form articles/reports."
