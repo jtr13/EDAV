@@ -30,26 +30,82 @@ Below are some helpful references we used in creating *edav.info/*, which may be
 - [bookdown.org](https://bookdown.org/home/about.html){target="_blank"}: Site for the `bookdown` package. Has a bunch of popular books published using `bookdown` and some info about how to get started using the package.
 
 - [Creating Websites in R](http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html){target="_blank"}: This tutorial, written by [Emily Zabor](http://www.emilyzabor.com/){target="_blank"} (a Columbia alum), provides a thorough walkthrough for creating websites using different R tools. She discusses how to make different kinds of sites (personal, package, project, blog) as well as GitHub integration and step-by-step instructions for getting setup with templates and hosting. Very detailed and worth perusing if interested in making your own site.
+    
+## Adding a custom domain name
 
-## Trimmings
+There are several parts to adding a custom domain name.
 
-- **Custom Domain Names**: GitHub integration with custom domain names is easy to setup. GitHub has an article on [how to setup a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/){target="_blank"} that will help to get your desired URL hooked up (custom domain names: the vanity plates of the internet). [GitHub Pages](https://pages.github.com/){target="_blank"} supports free hosting, which makes the whole process a lot easier. Also, if you are in the market for a cool domain name, [Google Domains](https://domains.google/#/){target="_blank"} is a great place to get the one of your dreams.
+1. Buy a domain name and edit DNS settings
 
-- **Custom 404 Page**: Your site may be lovely, but a default 404 page is always a let down. Not *if* but *when* someone types part of your URL incorrectly or a link gets broken, you should make sure there is something to see other than a boring backend page you had no input in designing. [This article](https://mycyberuniverse.com/developing/custom-404-page-for-website-hosted-on-github.html){target="_blank"} explains the process, but all you have to do is make a file called `404.html` in your root directory and GitHub will use it rather than the default. Because of this, there is really no excuse for not having one. Here's a look at [our 404 page](404.html). Hopefully you aren't seeing it that often. :)
+We used [Google domains](https://domains.google.com/){target="_blank"}. In [the registrar page](https://domains.google.com/registrar){target="_blank"}, click the DNS icon and add the following to Custom resource records:
 
-    Some considerations:
-    - **Always include a link back to the site**: Throw the user a life-saver.
-    - **Make it clear that something went wrong**: Don't hide the fact that this page is because of some error.
-    - **Other than that, have fun with it!**: There are [plenty of examples](https://www.canva.com/learn/404-page-design/){target="_blank"} of people making [excellent 404 pages](https://www.pagecloud.com/blog/best-404-pages){target="_blank"}. It should make a frustrating experience just a little bit more bearable.
+|NAME|TYPE|TTL|DATA|
+|----|----|---|----|
+|@|A|1h|185.199.108.153|
+|www|CNAME|1h|@|
+
+Note that some tutorials list older IP addresses.  Check [here](https://help.github.com/articles/troubleshooting-custom-domains/#dns-configuration-errors){target="_blank"} for the recommended ones.
+
+2. Change settings in your repo
+
+In Settings, add your custom domain name in the GitHub Pages section.
+
+3. Add a CNAME file to the `gh-pages` branch
+
+This is a very simple text file named CNAME (all caps). The contents should be one line with the custom domain name. 
+
+For more detail on steps 2 and 3, see: [Emily Zabor's Tutorial on Custom Domains](http://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html#custom_domains){target="_blank"}
+
+## Make a custom 404 page
+
+Your site may be lovely, but a default 404 page is always a let down. Not *if* but *when* someone types part of your URL incorrectly or a link gets broken, you should make sure there is something to see other than a boring backend page you had no input in designing. [This article](https://mycyberuniverse.com/developing/custom-404-page-for-website-hosted-on-github.html){target="_blank"} explains the process, but all you have to do is make a file called `404.html` in your root directory and GitHub will use it rather than the default. Because of this, there is really no excuse for not having one. Here's a look at [our 404 page](404.html). Hopefully you aren't seeing it that often. :)
+
+Some considerations:
+
+- **Always include a link back to the site**: Throw the user a life-saver.
+- **Make it clear that something went wrong**: Don't hide the fact that this page is because of some error.
+- **Other than that, have fun with it!**: There are [plenty of examples](https://www.canva.com/learn/404-page-design/){target="_blank"} of people making [excellent 404 pages](https://www.pagecloud.com/blog/best-404-pages){target="_blank"}. It should make a frustrating experience just a little bit more bearable.
+    
+## Hooking Up Travis
+
+This tutorial is designed to help you add Travis to your GitHub Pages bookdown web site.  It assumes you already have a working web site, with pages stored in a `gh-pages` branch.  We also provide a bonus section on custom domain names, which doesn't have to do with Travis, because what the heck.
+
+We're not necessarily recommending the `gh-pages` route; we chose it since we found examples that worked for us using this method.  Since the `/docs` folder is a newer and cleaner approach, it is certainly possible that it provides a better way to organize the repo.
+
+That said, there are various tutorials for how to set up the `gh-pages` branch; it appears that the best way to do so is to create an orphan branch, as explained [here](https://www.bruttin.com/2017/12/22/github-ghpages-worktree.html){target="_blank}.
+
+We should note that this makes it all seem very easy to add Travis, which actually was not the case at all for us.  I guess everything looks easy in retrospect. If you run into trouble, let us know by [filing an issue](https://github.com/jtr13/edav/issues){target="_blank"} or [submitting a pull request](https://github.com/jtr13/edav/pulls){target="_blank}. More info on all the contribution stuff can be found on our [contribute page](contribute.html).
+
+### Add Travis files to GitHub repo
+
+**Add these files** to your repo:
+
+1. [https://github.com/rstudio/bookdown-demo/blob/master/.travis.yml](https://github.com/rstudio/bookdown-demo/blob/master/.travis.yml){target="_blank}
+    - No changes
+
+2. [https://github.com/rstudio/bookdown-demo/blob/master/_build.sh](https://github.com/rstudio/bookdown-demo/blob/master/_build.sh){target="_blank}
+    - Remove the last two lines if you're only interested in a GitHub Pages book.
+
+3. [https://github.com/rstudio/bookdown-demo/blob/master/_deploy.sh](https://github.com/rstudio/bookdown-demo/blob/master/_deploy.sh){target="_blank}
+    - The only changes you need to make are to the `git config` lines. You need to use your GitHub email, but the username can be anything.
+
+### Add Travis service
+
+1. **Create a Travis account** on www.travis-ci.org by clicking on "Sign in with GitHub" on the top right.  Click Authorize to allow Travis to have proper access to GitHub.
+
+2. Go back to GitHub and **create a personal access token (PAT)** if you don't have one already.  You can do so [here](https://github.com/settings/tokens). Note that you must save your PAT somewhere because you can't access it once it's created.  Also note that the PAT provides a means to access your GitHub repo through an API, an alternative means to logging in with your username/password (There is an API Token in Travis but this is *not* the one to use).
+
+3. **Return to your Travis profile** (travis-ci.org/profile/[GITHUB username]) and click the button next to the appropriate repo to **toggle it on**.  Click on Settings next to the button and **add your saved GITHUB_PAT** under Environmental Variables: set "Name" to "GITHUB_PAT" and "Value" to the value of the token.
+
+If all goes well, you can sit back, relax, and watch Travis do the work for you.
+
+<center>
+<iframe src="https://giphy.com/embed/lPdn5MOabkgCY" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br /><a href="https://giphy.com/gifs/the-simpsons-homer-simpson-exercise-lPdn5MOabkgCY">via GIPHY</a>
+</center>
 
 ## Other Resources
 
 - [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/){target="_blank"}: Textbook on the `blogdown`package, another option for generating websites with R.
 - [Getting Started with GitHub Pages](https://guides.github.com/features/pages/){target="_blank"}: Short article from [GitHub Guides](https://guides.github.com/){target="_blank"} on creating/hosting a website using [GitHub Pages](https://pages.github.com/){target="_blank"}.
-
-
-
-
-
 
 
