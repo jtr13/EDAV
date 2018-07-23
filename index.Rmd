@@ -105,7 +105,7 @@ The [red banners](intro.html#red-pages-1) signal pages that contain more extensi
 ### Yellow Pages
 The [yellow banners](intro.html#yellow-pages-1) signal pages that contain simple collections of  **references**.
 
-#### Publishing with R
+#### Publishing Resources
 <center>
 [![Publishing with R](images/banners/banner_publish.png)](publish.html){class="active-banner"}
 </center>
