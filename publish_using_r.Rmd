@@ -68,7 +68,7 @@ Some considerations:
     
 ## Hooking Up Travis
 
-This tutorial is designed to help you add Travis to your GitHub Pages bookdown web site.  It assumes you already have a working web site, with pages stored in a `gh-pages` branch.  We also provide a bonus section on custom domain names, which doesn't have to do with Travis, because what the heck.
+This tutorial is designed to help you add Travis to your GitHub Pages bookdown web site.  It assumes you already have a working web site, with pages stored in a `gh-pages` branch. 
 
 We're not necessarily recommending the `gh-pages` route; we chose it since we found examples that worked for us using this method.  Since the `/docs` folder is a newer and cleaner approach, it is certainly possible that it provides a better way to organize the repo.
 
