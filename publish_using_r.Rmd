@@ -1,4 +1,4 @@
-# Publishing with R {#publish}
+# Publishing Resources {#publish}
 
 ![](images/banners/banner_publish.png)
 
