@@ -20,7 +20,7 @@ description: "Everything you need to do well in EDAV"
 ![](images/banners/edav_banner.png)
 </center>
 
-Students often want to know how they can excel in a course and we understand that desire. The standard answer given is usually something like: 
+Students often want to know how they can excel in a course. The standard answer given is usually something like: 
 
 > Just read the syllabus, focus on the topics discussed therein, and be able to understand their nuances.
 >
