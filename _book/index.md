@@ -20,7 +20,7 @@ description: "Everything you need to do well in EDAV"
 ![](images/banners/edav_banner.png)
 </center>
 
-Students often want to know how they can excel in a course and we understand that desire. The standard answer given is usually something like: 
+Students often want to know how they can excel in a course. The standard answer given is usually something like: 
 
 > Just read the syllabus, focus on the topics discussed therein, and be able to understand their nuances.
 >
@@ -132,6 +132,8 @@ Zach Bogart:
 [Website](https://zachbogart.com/){target="_blank"}
 /
 [Twitter](https://twitter.com/zachbogart){target="_blank"}
+/
+[GitHub](https://github.com/zachbogart){target="_blank"}
 
 Joyce Robbins: 
 [Columbia Profile](http://stat.columbia.edu/department-directory/name/joyce-robbins/){target="_blank"}
@@ -140,5 +142,5 @@ Joyce Robbins:
 /
 [Twitter](https://twitter.com/jtrnyc){target="_blank"}
 /
-[Github](https://github.com/jtr13){target="_blank"}
+[GitHub](https://github.com/jtr13){target="_blank"}
 
