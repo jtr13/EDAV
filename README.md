@@ -8,6 +8,6 @@ Visit [our contribute page](http://edav.info/contribute.html) to learn more abou
 
 ## Contact
 
-Zach Bogart: [Website](https://zachbogart.com/) / [Twitter](https://twitter.com/zachbogart)
+Zach Bogart: [Website](https://zachbogart.com/) / [Twitter](https://twitter.com/zachbogart) / [GitHub](https://github.com/zachbogart)
 
 Joyce Robbins: [Columbia Profile](http://stat.columbia.edu/department-directory/name/joyce-robbins/) / [Website](http://www.joyce-robbins.com/) / [Twitter](https://twitter.com/jtrnyc) / [Github](https://github.com/jtr13)

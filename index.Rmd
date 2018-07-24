@@ -132,6 +132,8 @@ Zach Bogart:
 [Website](https://zachbogart.com/){target="_blank"}
 /
 [Twitter](https://twitter.com/zachbogart){target="_blank"}
+/
+[GitHub](https://github.com/zachbogart){target="_blank"}
 
 Joyce Robbins: 
 [Columbia Profile](http://stat.columbia.edu/department-directory/name/joyce-robbins/){target="_blank"}
@@ -140,5 +142,5 @@ Joyce Robbins:
 /
 [Twitter](https://twitter.com/jtrnyc){target="_blank"}
 /
-[Github](https://github.com/jtr13){target="_blank"}
+[GitHub](https://github.com/jtr13){target="_blank"}
 
