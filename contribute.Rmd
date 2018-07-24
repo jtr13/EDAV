@@ -26,9 +26,9 @@ Contributing directly works best if the change you are proposing is something re
 
 #### Direct Contribution Walkthrough
 
-This is a full walkthough example of proposing a change to *edav.info/*. It's a little long, but don't get scared; it's a great way to learn about GitHub and it's almost entirely hitting big green buttons!
+This is a full walkthough on proposing a change to *edav.info/*. It follows a hypothetical student that spots a typo and uses a pull request to fix it. It's a little long, but don't get scared; it's a great way to learn about GitHub and it's almost entirely hitting big green buttons!
 
-1. Let's **find something to change**. For example, I'm pretty sure they meant to write "repository" here. Oops. Let's fix it for them!
+1. Let's **find something to change**. I'm pretty sure they meant to write "repository" here. Oops. Let's fix it for them!
 ![](images/excited_student/directly-01.png)
 *That's not how you spell "repository"! Let's fix it.*
 
