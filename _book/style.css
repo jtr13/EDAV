@@ -60,8 +60,8 @@ caption {
 
 #scroll-top {
     position: fixed;
-    bottom: 50px;
-    right: 17%;
+    bottom: 40px;
+    right: 7%;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.17);
     width: 50px;
