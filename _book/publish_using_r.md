@@ -70,7 +70,7 @@ Some considerations:
 - **Make it clear that something went wrong**: Don't hide the fact that this page is because of some error.
 - **Other than that, have fun with it!**: There are [plenty of examples](https://www.canva.com/learn/404-page-design/){target="_blank"} of people making [excellent 404 pages](https://www.pagecloud.com/blog/best-404-pages){target="_blank"}. It should make a frustrating experience just a little bit more bearable.
     
-## Hooking Up Travis
+## Hooking up Travis
 
 This tutorial is designed to help you add Travis to your GitHub Pages bookdown web site.  It assumes you already have a working web site, with pages stored in a `gh-pages` branch. 
 
@@ -107,7 +107,7 @@ If all goes well, you can sit back, relax, and watch Travis do the work for you.
 <iframe src="https://giphy.com/embed/lPdn5MOabkgCY" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br /><a href="https://giphy.com/gifs/the-simpsons-homer-simpson-exercise-lPdn5MOabkgCY">via GIPHY</a>
 </center>
 
-## Other Resources
+## Other resources
 
 - [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/){target="_blank"}: Textbook on the `blogdown`package, another option for generating websites with R.
 - [Getting Started with GitHub Pages](https://guides.github.com/features/pages/){target="_blank"}: Short article from [GitHub Guides](https://guides.github.com/){target="_blank"} on creating/hosting a website using [GitHub Pages](https://pages.github.com/){target="_blank"}.

@@ -38,7 +38,7 @@ ggplot(finches, aes(x = Depth, y = ..density..)) +
 
 For more info on this dataset, type `?Sleuth3::case0201` into the console.
 
-## Simple Examples
+## Simple examples
 Whoa whoa whoa! Much simpler please!
 
 Let's use a very simple dataset:
@@ -48,7 +48,7 @@ Let's use a very simple dataset:
 x <- c(50, 51, 53, 55, 56, 60, 65, 65, 68)
 ```
 
-### Histogram using Base R
+### Histogram using base R
 
 ```r
 # plot data
@@ -94,7 +94,7 @@ Use a histogram to show the distribution of *one continuous variable*. The y-sca
 
 ## Considerations
 
-### Bin Boundaries
+### Bin boundaries
 Be mindful of the boundaries of the bins and whether a point will fall into the left or right bin if it is on a boundary.
 
 ```r
@@ -111,7 +111,7 @@ hist(x, col = "lightblue", right = FALSE, ylim = c(0, 4),
 
 <img src="histogram_files/figure-html/bin-boundaries-1.png" width="672" />
 
-### Bin Number
+### Bin number
 The default bin number of 30 in ggplot2 is not always ideal, so consider altering it if things are looking strange. You can specify the width explicitly with `binwidth` or provide the desired number of bins with `bins`.
 
 ```r
@@ -147,7 +147,7 @@ grid.arrange(p1, p2, ncol = 2)
 <img src="histogram_files/figure-html/fixed-histograms-binwidth-1.png" width="672" />
 
 
-### Bin Alignment
+### Bin alignment
 Make sure the axes reflect the true boundaries of the histogram. You can use `boundary` to specify the endpoint of any bin or `center` to specify the center of any bin. `ggplot2` will be able to calculate where to place the rest of the bins (Also, notice that when the boundary was changed, the number of bins got smaller by one. This is because by default the bins are centered and go over/under the range of the data.)
 
 ```r
@@ -189,7 +189,7 @@ grid.arrange(p3, p4, ncol = 2)
 
 *   For more info about histograms and continuous variables, check out [Chapter 3](http://www.gradaanwr.net/content/03-examining-continuous-variables/){target="_blank"} of the textbook. 
 
-## External Resources
+## External resources
 
 - [DataCamp ggplot2 Histograms Exercise](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-1/chapter-4-geometries?ex=5){target="_blank"}: Simple interactive example of histograms with ggplot2
 - [DataCamp Histogram with Basic R](https://www.datacamp.com/community/tutorials/make-histogram-basic-r){target="_blank"}: "Tutorial for new R users whom need an accessible and easy-to-understand resource on how to create their own histogram with basic R.

@@ -8,7 +8,7 @@ This section goes over what's expected for the final project.
 
 **General Note**: Please note that this sheet cannot possibly cover all the "do's and don'ts" of data analysis and visualization. You are expected to follow all of the best practices discussed in class throughout the semester.
 
-## General Info
+## General info
 
 ### Goal
 
@@ -39,19 +39,19 @@ You have a lot of freedom to choose what to do, as long as you restrict yourselv
 
 At any point, you may ask the head TA or the instructor (jtr13) for advice. Our primary role in this regard will be to provide general guidance on your choice of data / topic / direction. As always, you are encouraged to post specific questions to [Piazza](https://piazza.com/){target="_blank"}, particularly coding questions and issues. You may also volunteer to discuss your project with the class in order to get feedback--if you'd like to do this, [email the instructor](http://stat.columbia.edu/department-directory/name/joyce-robbins/){target="_blank"} to schedule a date.
 
-### Peer Review
+### Peer review
 
 A portion of your grade is based on the feedback *you* give to other groups. After the due date, each individual will be assigned two project groups to review, and instructions will be provided.
 
 **Note**: part of the grade you receive for the class is based on the quality of review that you *write*, not on the feedback that your project *receives.* Your grade for the project (as for all other assignments for the class) will be determined solely by the instructor and TAs.
 
-### Report Format
+### Report format
 
 With the exception of the interactive part, your project should be submitted to CourseWorks in the same manner as homework assignments, as **.Rmd** and **.html** files, with graphs / output rendered. You will lose points if we have trouble reading your file, need to ask you to resubmit with graphs visible, if links are broken, or if we have other difficulties accessing your materials. It's ok if code is in different files and different places, just make sure there are working links in your report to these locations. **Note**: Using Markdown + code chunks is supposed to make combining code, text and graphs easier. If it is making it more difficult, you are probably trying to do something that isn't well suited to the tool set. Focus on the text and graphs, not the formatting. If you're not sure if something is important to focus on or not, please ask.
 
 *Advice*: don't wait to start writing.  Your overall project will undoubtedly be better if you give up trying to get that last graph perfect or the last bit of analysis done and get to the *writing*!
 
-### A Note on Style
+### A note on style
 
 You are encouraged to be as intellectually honest as possible. That means pointing out flaws in your work, detailing obstacles, disagreements, decision points, etc. -- the kinds of "behind-the-scene" things that are important but often left out of reports. You may use the first person ("I"/"We") or specific team members' names, as relevant.
 
@@ -65,25 +65,25 @@ Explain why you chose this topic, and the questions you are interested in studyi
 
 List team members and a description of how each contributed to the project.
 
-### Description of Data
+### Description of data
 
 Describe how the data was collected, how you accessed it, and any other noteworthy features.
 
-### Analysis of Data Quality
+### Analysis of data quality
 
 Provide a detailed, well-organized description of data quality, including textual description, graphs, and code.
 
-### Main Analysis (Exploratory Data Analysis)
+### Main analysis (Exploratory Data Analysis)
 
 Provide a detailed, well-organized description of your findings, including textual description, graphs, and code.  Your focus should be on both the results and the process. Include, as reasonable and relevant, approaches that didn't work, challenges, the data cleaning process, etc.
 
-### Executive Summary (Presentation-style)
+### Executive summary (Presentation-style)
 
 Provide a short nontechnical summary of the most revealing findings of your analysis  written for a nontechnical audience. The length should be approximately two pages (if we were using pages...) Take extra care to clean up your graphs, ensuring that best practices for presentation are followed.
 
 **Note**: "Presentation" here refers to the style of graph, that is, graphs that are cleaned up for presentation, as opposed to the rough ones we often use for exploratory data analysis. You do not have to present your work to the class! However, you may choose to present your work as your community contribution, in which case you need to email me to set a date before the community contribution due date. (The presentation itself may be later.)
 
-### Interactive Component
+### Interactive component
 
 Select one (or more) of your key findings to present in an interactive format. Be selective in the choices that you present to the user; the idea is that in 5-10 minutes, users should have a good sense of the question(s) that you are interested in and the trends you've identified in the data. In other words, they should understand the value of the analysis, be it business value, scientific value, general knowledge, etc.
 
@@ -117,7 +117,7 @@ Discuss limitations and future directions, lessons learned.
 
 4. **I spent 30 minutes looking at my data, and then 1000 hours building this super cool interactive app so users can analyze the data themselves. Can't you count the interactive part for 95% of my grade?** No. While skill sets overlap in the real world, and it's important to know something about building things, the assumption is that you are doing the work of the data scientist: actually analyzing the data rather than building tools for someone else to do it. The former (the data!) has been the main focus of this class and therefore is the primary focus of the final project.
 
-## Executive Summary Notes
+## Executive summary notes
 
 The executive summary should be a well-formatted, presentable final product of your results. Here are some notes to consider when putting it together:
 

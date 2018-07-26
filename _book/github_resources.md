@@ -18,14 +18,14 @@ In this course, you will be working on a [project](project.html) in teams. Becau
 
 [GitHub](https://github.com/){target="_blank"} is a way to work on projects and keep track of their status easily and efficiently. It is built off of [Git](https://git-scm.com/){target="_blank"}, a type of [version control](https://en.wikipedia.org/wiki/Version_control){target="_blank"} software. It is super useful and powerful, but people also find it quite annoying and [difficult to understand](https://xkcd.com/1597/){target="_blank"}. So, in an effort to help you, we have collected some resources to learn about GitHub and how you can use it to work on projects.
 
-## Getting Started
+## Getting started
 
 What's GitHub? Start here.
 
 - [Hello World](https://guides.github.com/activities/hello-world/){target="_blank"}: GitHub's take on the "Hello World" program. Great starting point to learn how GitHub works.
 - [Github Training & Guides](https://www.youtube.com/githubguides){target="_blank"}: This YouTube Channel has a lot of info about what GitHub can do. The first line of the opening video is, "Okay. You signed up for GitHub.  What do you do now?". If you are asking that very question, this channel will serve you well.
 
-## Getting Help
+## Getting help
 
 If you're lost, these might help.
 
@@ -34,7 +34,7 @@ If you're lost, these might help.
     - [Git Handbook](https://guides.github.com/introduction/git-handbook/){target="_blank"}: Explains what version control is.
 - [GitHub Help](https://help.github.com/){target="_blank"}: This is the yellow-pages of GitHub. Ask a question and it will try to *push* you in the right direction. [Get it?](https://getyarn.io/yarn-clip/6e7f4795-b65b-4fad-b1fb-c5c9161a95fa){target="_blank"}
 
-## Branching Out
+## Branching out
 
 GitHub is super social. Learn how to *git* involved! [:)](https://getyarn.io/yarn-clip/c5de0e9e-6122-48f9-87ed-337aeb2e9ae4){target="_blank"}
 
@@ -43,7 +43,7 @@ GitHub is super social. Learn how to *git* involved! [:)](https://getyarn.io/yar
 - [Mastering Issues](https://guides.github.com/features/issues/){target="_blank"}: On what Issues are in GitHub and how they can help get things done.
 - [Our Page on Contributing](contribute.html): You can contribute to *edav.info/* with your new-found GitHub skills! Checkout our page on how to contribute through pull requests and/or issues.
 
-## Going Deeper
+## Going deeper
 
 For the [nerds in the room](https://getyarn.io/yarn-clip/64bbb001-ed8a-450a-8826-b939f653b969){target="_blank"}...
 

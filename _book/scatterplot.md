@@ -60,7 +60,7 @@ For more info on this dataset, type `?MASS::mammals` into the console.
 
 And if you are going crazy not knowing what species is in the top right corner, it's another elephant. Specifically, it's the African elephant. It also never forgets how big a brain it has. :)
 
-## Simple Examples
+## Simple examples
 <!-- Simplify Note -->
 That was *too* fancy! Much simpler please!
  
@@ -92,7 +92,7 @@ head(SpeedSki, n = 7)
 ## 7          4
 ```
 
-### Scatterplot using Base R
+### Scatterplot using base R
 
 ```r
 x <- SpeedSki$Year
@@ -134,7 +134,7 @@ Scatterplots are great for exploring relationships between variables. Basically,
 TODO
 
 <!-- *   List of things to pay attention to with examples -->
-### Overlapping Data
+### Overlapping data
 Data with similar values will overlap in a scatterplot and may lead to problems. Consider exploring [alpha blending](iris.html#aside-example-where-alpha-blending-works) or [jittering](iris.html#second-jittering) as remedies (links from [Overlapping Data](iris.html#overlapping-data) section of [Iris Walkthrough](iris.html)).
 
 ### Scaling
@@ -153,7 +153,7 @@ TODO
 <!-- *Link to textbook -->
 *   For more info about adding lines/contours, comparing groups, and plotting continuous variables check out [Chapter 5](http://www.gradaanwr.net/content/ch05/){target="_blank"} of the textbook. 
 
-## External Resources
+## External resources
 <!-- - []](){target="_blank"}: Links to resources with quick blurb -->
 - [Quick-R article](https://www.statmethods.net/graphs/scatterplot.html){target="_blank"} about scatterplots using Base R. Goes from the simple into the very fancy, with Matrices, High Density, and 3D versions. 
 - [STHDA Base R](http://www.sthda.com/english/wiki/scatter-plots-r-base-graphs){target="_blank"}: article on scatterplots in Base R. More examples of how to enhance the humble graph.

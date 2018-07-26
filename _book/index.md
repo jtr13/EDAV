@@ -35,7 +35,7 @@ Our answer is to provide you with **edav.info/**. This site is one of the best w
 This resource is specifically tailored to the Exploratory Data Analysis and Visualization course offered at [Columbia University](https://www.columbia.edu/){target="_blank"}. However, anyone interested in working with data in R will benefit from perusing these pages.
 
 <!-- toc -->
-## Table of Contents
+## Table of contents
 - Click on a banner to go to the desired page.
 - If you're wondering, here's an [explanation of what the banner colors mean](intro.html#what-the-banners-mean).
 
@@ -45,7 +45,7 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 <!-- </center> -->
 
 <!-- Blue Pages -->
-### Blue Pages
+### Blue pages
 The [blue banners](intro.html#blue-pages-1) signal pages that contain basic **information**.
 
 #### Introduction
@@ -63,13 +63,13 @@ The [blue banners](intro.html#blue-pages-1) signal pages that contain basic **in
 [![Final Project Notes](images/banners/banner_presentation.png)](project.html){class="active-banner"}
 </center>
 
-#### Contribute to this resource
+#### Contribute to this Resource
 <center>
 [![Contribute to this resource](images/banners/banner_contribute.png)](contribute.html){class="active-banner"}
 </center>
 
 <!-- Green Pages -->
-### Green Pages
+### Green pages
 The [green banners](intro.html#green-pages-1) signal pages that contain more compact **documentation**.
 
 #### Chart: Histogram
@@ -93,7 +93,7 @@ The [green banners](intro.html#green-pages-1) signal pages that contain more com
 </center>
 
 <!-- Red Pages -->
-### Red Pages
+### Red pages
 The [red banners](intro.html#red-pages-1) signal pages that contain more extensive **walkthroughs**.
 
 #### Walkthrough: Iris Example
@@ -102,7 +102,7 @@ The [red banners](intro.html#red-pages-1) signal pages that contain more extensi
 </center>
 
 <!-- Yellow Pages -->
-### Yellow Pages
+### Yellow pages
 The [yellow banners](intro.html#yellow-pages-1) signal pages that contain simple collections of  **references**.
 
 #### Publishing Resources

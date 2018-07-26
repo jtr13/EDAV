@@ -49,7 +49,7 @@ Wondering how we got there? Read on.
 
 ***
 
-## Quick Note on Doing it the Lazy Way
+## Quick note on doing it the lazy way
 
 Shortcuts are your best friend to get work done faster. And they are easy to find.
 
@@ -72,7 +72,7 @@ Okay, now let's get to it...
 
 ***
 
-## Viewing Data
+## Viewing data
 
 Let's start with loading the package so we can get the data as a dataframe.
 
@@ -205,7 +205,7 @@ sepal_plot +
   geom_point(aes(color = Species))
 ```
 
-## Markdown Etiquette
+## Markdown etiquette
 
 I'm seeing that my R Markdown file is getting a little messy. Working with markdown and chunks can get out of hand, but there are some helpful tricks. First, consider naming your chunks as you go. If you combine this with headers, your work will be much more organized. Specifically, the little line at the bottom of the editor becomes much more useful.
 
@@ -220,7 +220,7 @@ Just add a name to the start of each chunk:
 
 Now you can see what the chunks were about as well as get a sense of where you are in the document. Just don't forget, it is a space after the `r` and commas for the other chunk options you may have like `eval` or `echo`.
 
-## Overlapping Data
+## Overlapping data
 
 Eagle-eyed viewers may notice that we seem to be a few points short. We should be seeing 150 points, but we only see 117 (yes, I counted). Where are those 33 missing points? They are actually hiding behind other points. This dataset rounds to the nearest tenth of a centimeter, which is what is giving us those regular placings of the points. How did I know the data was in centimeters? Running `?iris` in the console of course! [Ah, you ask a silly question, you get a silly answer](https://youtu.be/UIKGV2cTgqA?t=3m10s){target="_blank"}.
 
@@ -245,7 +245,7 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
 
 Okay...a couple things with this. 
 
-### First: The Legend
+### First: the legend
 
 **First**, did you notice the new addition to the legend? That looks silly! Why did that show up? Well, when we added the `alpha` into `aes()`, we got a new legend. Let's look at what we are doing with `geom_point()`. Specifically, this is saying how we should map the `color` and `alpha`:
 
@@ -263,7 +263,7 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
 
 No more legend. So, in ggplot, there is a difference between where an aesthetic is placed. It is also called MAPPING an aesthetic (making it vary with data inside `aes`) or SETTING an aesthetic (make it a constant attribute across all datapoints outside of `aes`).
 
-### Second: Jittering
+### Second: jittering
 
 **Secondly**, did this alpha trick *really* help us? Are we able to see anything in the plot in an easier way? Not really. Since the points perfectly overlap, the opacity difference doesn't help us much. Usually, opacity will work, but here the data is so regular that we don't gain anything in the perception department.
 
@@ -279,7 +279,7 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
 Consider your motives when using jittering. You are by definition altering the data, but it may be beneficial in some situations.
 
 ***
-###*Aside*: Example Where Alpha Blending Works
+###*Aside*: example where alpha blending works
 
 We are dealing with a case where jittering works best to see the data, while changing the `alpha` doesn't help us much. Here's a quick example where opacity using `alpha` might be more directly helpful.
 
@@ -318,7 +318,7 @@ Let's say we have finished this plot and we are ready to present it to other peo
 
 We should clean it up a bit so it can stand on its own. 
 
-## Alter Appearance
+## Alter appearance
 
 First, let's make the `x`/`y` labels a little cleaner and more descriptive:
 
@@ -357,7 +357,7 @@ ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Sepal.Width)) +
 
 Now it's looking presentable.
 
-## Consider Themes
+## Consider themes
 
 It may be better for your situation to change the theme of the plot (the background, axes, etc.; the "accessories" of the plot). Explore what different themes can offer and pick one that is right for you.
 
@@ -405,7 +405,7 @@ So here we are! We got a lovely scatterplot ready to show the world!
 
 <img src="iris_files/figure-html/final-result-1.png" width="672" />
 
-## Going Deeper
+## Going deeper
 
 We have just touched the surface of ggplot and dipped our toes into grammar of graphics. If you want to go deeper, I highly recommend the DataCamp [@datacamp] courses on *Data Visualization with ggplot2* with [Rick Scavetta](https://www.datacamp.com/instructors/rickscavetta){target="_blank"}. There are three parts and they are quite dense, but the [first part](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"} is definitely worth checking out. 
 
