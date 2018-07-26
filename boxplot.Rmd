@@ -58,7 +58,7 @@ ggplot(chickwts, aes(x = factor(feed, levels = supps),
 
 For more info on this dataset, type `?datasets::chickwts` into the console.
 
-## Simple Examples
+## Simple examples
 Okay...*much* simpler please.
  
 Let's use the `airquality` dataset from the `datasets` package:
@@ -67,7 +67,7 @@ library(datasets)
 head(airquality, n = 5)
 ```
 
-### Boxplot using Base R
+### Boxplot using base R
 ```{r base-r}
 # plot data
 boxplot(airquality, col = 'lightBlue', main = "Base R Boxplots of airquality")
@@ -99,7 +99,7 @@ Boxplots should be used to display *continuous variables*. They are particularly
 
 ## Considerations
 
-### Flipping Orientation
+### Flipping orientation
 Often you want boxplots to be horizontal. Super easy to do: just tack on `coord_flip()`:
 ```{r flip-boxplot}
 # g1 plot from above (5.3.2)
@@ -140,7 +140,7 @@ plot + theme
 
 *   For more info about boxplots and continuous variables, check out [Chapter 3](http://www.gradaanwr.net/content/03-examining-continuous-variables/){target="_blank"} of the textbook. 
 
-## External Resources
+## External resources
 
 - [DataCamp: Quick Exercise on Boxplots](https://campus.datacamp.com/courses/helsinki-open-data-science/logistic-regression?ex=7){target="_blank"}: a simple example of making boxplots from a dataset.
 - [Article on boxplots with ggplot2](http://t-redactyl.io/blog/2016/04/creating-plots-in-r-using-ggplot2-part-10-boxplots.html){target="_blank"}: An excellent collection of code examples on how to make boxplots with `ggplot2`. Covers layering, working with legends, faceting, formatting, and more. If you want a boxplot to look a certain way, this article will help.

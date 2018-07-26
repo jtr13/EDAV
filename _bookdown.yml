@@ -12,8 +12,8 @@ rmd_files: [
   
   "intro.Rmd",
   "basics.Rmd",
-  "contribute.Rmd",
   "final_presentation.Rmd",
+  "contribute.Rmd",
   
   "histogram.Rmd",
   "boxplot.Rmd",

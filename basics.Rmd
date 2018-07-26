@@ -13,24 +13,24 @@ To help you navigate the landscape, here we provide a collection of resources th
 
 Since people come with a variety of backgrounds, we will try to provide the essentials as well as some resources for more advanced users. Do not feel you have to go through all of these resources, but know that they are here if/when you need them. :)
 
-## Essentials Checklist
+## Essentials checklist
 
 In an effort to get everyone on the same page, here is a checklist of essentials so you can get up and running with this course. It will echo/reference a lot of info said below, but we want to make sure everything mentioned is clear and understood.
 
 Okay, then. Here are the essentials, in checklist form:
 
 1. **Download R and RStudio**: This is the biggest thing to do by far. Make sure to download both R and RStudio, as mentioned in [Setting up R and RStudio](#setting-up-r-and-rstudio).
-2. **Learn your way around RStudio**: RStudio is powerful...if you know how to use it. Take the time to look through the [DataCamp sections on the RStudio IDE](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1){target="_blank"} so you feel comfortable (see [Use RStudio Like a Pro](#use-rstudio-like-a-pro) section).
+2. **Learn your way around RStudio**: RStudio is powerful...if you know how to use it. Take the time to look through the [DataCamp sections on the RStudio IDE](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1){target="_blank"} so you feel comfortable (see [Use RStudio like a pro](#use-rstudio-like-a-pro) section).
 3. **Try something!**: Getting comfortable with an IDE is all about practice. So while the DataCamp vids are great, don't solely rely on them. Try things out for yourself! Here are some things to play around with:
     - Create an R Script file, paste in `print("Hello, World!")`, and run it
     - Create an R Markdown file and have it generate an HTML page
     - Download some packages like `tidyverse` or `MASS`
     - Do some math in the console
 4. **Learn how to get help**: Make sure you are comfortable searching for answers when you get stuck. See the section below on [getting help](#getting-help) for some...help.
-5. **Get the Textbook**: This course uses *Graphical Data Analysis with R* as its textbook. Here is an [Amazon Link for a physical copy](https://www.amazon.com/Graphical-Data-Analysis-Chapman-Hall/dp/1498715230){target="_blank"} and a link to the [book's website](http://www.gradaanwr.net/){target="_blank"}. 
+5. **Get the Textbook**: This course uses *Graphical Data Analysis with R* as its textbook. Here is an [Amazon link for a physical copy](https://www.amazon.com/Graphical-Data-Analysis-Chapman-Hall/dp/1498715230){target="_blank"} and a link to the [book's website](http://www.gradaanwr.net/){target="_blank"}. 
 6. **Setup DataCamp Account**: A lot of the references and support materials discussed in edav.info/ are from [DataCamp](https://www.datacamp.com/){target="_blank"}, an online collection of courses/articles on data science. Some of the sections are free, but most are behind a paywall. If you are enrolled in this course, you should receive an invitation to create an account that will allow you full-access to the site. 
 
-## Getting Started
+## Getting started
 
 ### Setting up R and RStudio
 
@@ -38,7 +38,7 @@ It is super important to get up and running with R and RStudio as soon as you ca
 
 * [This video](https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/orientation?ex=3){target="_blank"} from DataCamp pretty much covers it. Know that you will be downloading two separate things: [R](https://cran.r-project.org/){target="_blank"}, which is a programming language; and [RStudio](https://www.rstudio.com/download/){target="_blank"}, which is an IDE (integrated development environment...fancy tool for working with R) that will make working with R a lot more enjoyable.
 
-### Use RStudio Like a Pro
+### Use RStudio like a pro
 
 Great! RStudio is up and running on your computer! Now make sure you get comfy with what it can do.
 
@@ -48,7 +48,7 @@ Great! RStudio is up and running on your computer! Now make sure you get comfy w
 
 *More Advanced*: Want to make the RStudio IDE your own? Look into [modifying the preferences](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio){target="_blank"}. You can customize the look of the IDE like default colors and typefaces, tweak default behaviors like clearing the environment on load, and integrate a session with a git repository. If something about the IDE bugs you, chances are you can make it more to your liking.
 
-### Learning About R
+### Learning about R
 
 R is just like any language, programming or otherwise: you need to *use* it to get *used* to it.
 
@@ -56,9 +56,9 @@ R is just like any language, programming or otherwise: you need to *use* it to g
 
 *More Advanced*: Want to curl up with a good book about R? We recommend [R for Data Science](http://r4ds.had.co.nz/){target="_blank"}. It jumps right in, but is quite extensive. Focus less on Part IV (Model).
 
-## Getting More Specific
+## Getting more specific
 
-### Installing Packages
+### Installing packages
 
 A lot of the cool stuff comes from installing packages into R. 
 
@@ -78,7 +78,7 @@ Don't know what the [tidyverse](https://www.tidyverse.org/){target="_blank"} is?
 
 *More Advanced*: Want case studies to go through? Try [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-2/chapter-5-case-study?ex=1){target="_blank"} or [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-part-3/data-munging-and-visualization-case-study?ex=1){target="_blank"}.
 
-### Importing Data
+### Importing data
 
 We often will need to pull data into RStudio to work with it. 
 
@@ -96,13 +96,13 @@ R Markdown is how you will be submitting assignments for this course. In general
 
 *More Advanced*: Want to jump right in? Open a new R Markdown file (File > New File > R Markdown...), and set its *Default Output Format* to HTML. You will get a R Markdown template you can tinker with. Try knitting the document to see what everything does.
 
-## Getting Help
+## Getting help
 
 ![via https://dev.to/rly](images/halp_me_orly.png)
 
 First off...breeeeeeathe. We can fix this. There are a bunch of resources out there that can help you.
 
-### Things to Try
+### Things to try
 
 * Remember: Always try to help yourself! [This article](https://www.r-project.org/help.html){target="_blank"} has a great list of tools to help you learn about anything you may be confused by. This includes learning about functions and packages as well as searching for info about a function/package/problem/etc. This is the perfect place to learn how to get the info you need.
 
@@ -117,7 +117,7 @@ First off...breeeeeeathe. We can fix this. There are a bunch of resources out th
 
 *More Advanced*: Learn to love debugger mode. Debugging can have a steep learning curve, but huge payoffs. Take a look at these videos about [debugging with R](https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/programming?ex=20){target="_blank"}. Topics include running the debugger, setting breakpoints, customizing preferences, and more. **Note**: R Markdown files have some limitations for debugging, as discussed in [this article](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio#debugging-in-r-markdown-documents){target="_blank"}. You could also consider working out your code in a `.R` file before including it in your R Markdown homework submission.
 
-### Help Me, R Community!
+### Help me, R community!
 
 Relax. There are a bunch of people using the same tools you are.
 

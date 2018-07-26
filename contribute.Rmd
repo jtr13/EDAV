@@ -1,4 +1,4 @@
-# Contribute to this resource {#contribute}
+# Contribute to this Resource {#contribute}
 
 ![](images/banners/banner_contribute.png)
 
@@ -6,11 +6,11 @@
 
 This page explains how to contribute to *edav.info/*.
 
-## Why Contribute?
+## Why contribute?
 
 We don't want *edav.info/* to be just another resource. Rather, we want it to be *your* resource. If there are things that trip you up or cause you frustration, chances are you're not alone. Everyone comes to this course with different backgrounds and expertise. Being able to collect all that knowledge in one place is this resource's mission and you can help move that mission forward.
 
-## Ways You Can Contribute
+## Ways you can contribute
 
 There are **three main ways** to contribute:
 
@@ -22,7 +22,7 @@ Below you'll find more detail on each option.
 
 Happy coding! <i class="fas fa-heart"></i>
 
-### Contribute Directly
+### Contribute directly
 
 One way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
 
@@ -32,7 +32,7 @@ Contributing directly works best if the change you are proposing is something re
 - An unclear phrasing/explanation
 - A quick code fix
 
-#### Direct Contribution Walkthrough
+#### Direct contribution walkthrough
 
 This is a full walkthough on proposing a change to *edav.info/*. It follows a hypothetical student that spots a typo and uses a pull request to fix it. It's a little long, but don't get scared; it's a great way to learn about GitHub and it's almost entirely hitting big green buttons!
 
@@ -103,7 +103,7 @@ We contributed to a GitHub repo! Hooray! Time to celebrate!
 <br>
 If what you want to improve is a little more substantial (too difficult to contribute directly), read on.
 
-### Submit An Issue
+### Submit an issue
 
 If your proposed change is more complex, consider letting us know by **submitting an issue**. Say some links are broken, or a graph example is inaccurate or misleading. It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
 
@@ -111,7 +111,7 @@ If your proposed change is more complex, consider letting us know by **submittin
 
 You do *not* have to know how to code up your issue; from fixing a bug to proposing a resource we should link to, we appreciate any feedback you have and will take it all into consideration.
 
-**How to Submit Issues**:
+**How to submit issues**:
 
 1. Go to [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and click on the [Issues Tab](https://github.com/jtr13/EDAV/issues){target="_blank"}
 2. Click on "[New Issue](https://github.com/jtr13/EDAV/issues/new){target="_blank"}"
@@ -125,7 +125,7 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 - Consider [using labels](https://help.github.com/articles/applying-labels-to-issues-and-pull-requests/){target="_blank"} to specify the kind of issue, such as "bug", "enhancement", "help wanted", "question", or [create your own](https://help.github.com/articles/creating-a-label/){target="_blank"}.
 - For more info, please consider reading the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
 
-### Solve an Open Issue
+### Solve an open issue
 
 If you see an open issue that you think you can solve, by all means go for it! Simply fork our repo, add to the code base, and submit your work as a pull request. We appreciate any input you may have. For more info, please consider reading the [GitHub Guide on Forking Projects](https://guides.github.com/activities/forking/){target="_blank"} and the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
 
