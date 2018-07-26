@@ -6,6 +6,12 @@
 
 This section includes links for working with GitHub and advice on how to collaborate in teams on large coding projects.
 
+## tl;dr
+
+I don't wanna just *read* about GitHub; I wanna learn by *doing*!
+
+We love your enthusiasm. To hit the ground running, checkout [GitHub Learning Lab](https://lab.github.com/){target="_blank"}. This application will teach you how to use GitHub with hands-on courses using actual repos. Its the perfect way to understand what using GitHub looks like.
+
 ## On GitHub
 
 In this course, you will be working on a [project](project.html) in teams. Because of this, you probably want to be able to share code and work on different parts of the project simultaneously. This is where Git and GitHub comes in. 
