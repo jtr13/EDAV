@@ -22,7 +22,7 @@ Color is very subjective. It is important to choose the right ones so that your 
 
 - [Color Brewer](http://colorbrewer2.org/){target="_blank"}: Excellent resource for getting effective color palettes for different projects. Its main focus is on cartography, but it is super useful for any project involving color. You can choose between different types of data (sequential, diverging, qualitative), ensure your chosen palette is effective for colorblind users (or print friendly or photocopy safe), and easily export the color palette to different formats (Adobe, GIMP/Inkscape, JS, CSS). The best go-to for effective color palettes. 
 - [Color Blindness Simulator](http://colorbrewer2.org/){target="_blank"}: Not sure how effective your project will be to a colorblind user? This tool can help. You can upload an image to see how it will look with different color vision handicaps.
-
+- [ColorPick Eyedropper](https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg?hl=en){target="_blank"}: This Chrome extension allows you to copy hex color values from webpages. Simple and intuitive, it will make creating your awesome color palettes a lot easier.
 
 
 
