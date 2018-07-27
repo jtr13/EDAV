@@ -50,12 +50,9 @@ Not finding what you are looking for? Think a section could be made clearer? Con
 
 Zach Bogart has made a few t-shirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy. 
 
-<center>
-
-[![White EDAV Logo Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-info){target="_blank" class="active-banner"}
-[![R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-hex-edav){target="_blank" class="active-banner"}
-
-</center>
+[![White EDAV Logo Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-info){target="_blank" class="active-banner center-img"}
+<div class="center-text"><a href="">blah blah</a></div>
+[![R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-hex-edav){target="_blank" class="active-banner center-img"}
 
 *P.S. Designing a cool shirt or sticker is a great addition to your community contribution. It has to be cool, though :)*
 

@@ -16,9 +16,7 @@ description: "Everything you need to do well in EDAV"
 
 # About {-}
 
-<center>
 ![](images/banners/edav_banner.png)
-</center>
 
 Students often want to know how they can excel in a course. The standard answer given is usually something like: 
 
@@ -40,90 +38,62 @@ This resource is specifically tailored to the Exploratory Data Analysis and Visu
 - If you're wondering, here's an [explanation of what the banner colors mean](intro.html#what-the-banners-mean).
 
 <!-- #### Header -->
-<!-- <center> -->
 <!-- [![Header](images/banners/banner_TITLE.png)](TITLE.html){class="active-banner"} -->
-<!-- </center> -->
 
 <!-- Blue Pages -->
 ### Blue pages
 The [blue banners](intro.html#blue-pages-1) signal pages that contain basic **information**.
 
 #### Introduction
-<center>
 [![Introduction](images/banners/banner_intro.png)](intro.html){class="active-banner"}
-</center>
 
 #### R Basics
-<center>
 [![R Basics](images/banners/banner_basics.png)](basics.html){class="active-banner"}
-</center>
 
 #### Final Project Notes
-<center>
 [![Final Project Notes](images/banners/banner_presentation.png)](project.html){class="active-banner"}
-</center>
 
 #### Contribute to this Resource
-<center>
 [![Contribute to this resource](images/banners/banner_contribute.png)](contribute.html){class="active-banner"}
-</center>
 
 <!-- Green Pages -->
 ### Green pages
 The [green banners](intro.html#green-pages-1) signal pages that contain more compact **documentation**.
 
 #### Chart: Histogram
-<center>
 [![Chart: Histogram](images/banners/banner_histogram.png)](histo.html){class="active-banner"}
-</center>
 
 #### Chart: Boxplot
-<center>
 [![Chart: Boxplot](images/banners/banner_boxplot.png)](box.html){class="active-banner"}
-</center>
 
 #### Chart: Scatterplot
-<center>
 [![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatter.html){class="active-banner"}
-</center>
 
 #### Networks
-<center>
 [![Networks](images/banners/banner_network.png)](network.html){class="active-banner"}
-</center>
 
 <!-- Red Pages -->
 ### Red pages
 The [red banners](intro.html#red-pages-1) signal pages that contain more extensive **walkthroughs**.
 
 #### Walkthrough: Iris Example
-<center>
 [![Walkthrough: Iris Example](images/banners/banner_iris.png)](iris.html){class="active-banner"}
-</center>
 
 <!-- Yellow Pages -->
 ### Yellow pages
 The [yellow banners](intro.html#yellow-pages-1) signal pages that contain simple collections of  **references**.
 
 #### Publishing Resources
-<center>
 [![Publishing with R](images/banners/banner_publish.png)](publish.html){class="active-banner"}
-</center>
 
 #### GitHub Resources
-<center>
 [![GitHub Resources](images/banners/banner_github.png)](github.html){class="active-banner"}
-</center>
 
 #### Perception/Color Resources
-<center>
 [![Perception/Color Resources](images/banners/banner_percept.png)](percept.html){class="active-banner"}
-</center>
 
 #### General Resources
-<center>
 [![General Resources](images/banners/banner_resources.png)](general.html){class="active-banner"}
-</center>
 
 <!-- Contact -->
 ## Contact
