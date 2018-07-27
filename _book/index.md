@@ -7,9 +7,10 @@ documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: jtr13/EDAV
+github-repo: "jtr13/EDAV"
 url: 'edav.info/'
 description: "Everything you need to do well in EDAV"
+cover-image: "images/blue_edav_shirt.png"
 ---
 
 
