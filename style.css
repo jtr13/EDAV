@@ -21,6 +21,17 @@ caption {
   color: #aaa;
 }
 
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.center-text {
+  text-align: center;
+}
+
 .active-banner {
   opacity: 1.0;
   filter: alpha(opacity=100); /* For IE8 and earlier */
