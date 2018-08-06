@@ -61,6 +61,9 @@ The [blue banners](intro.html#blue-pages-1) signal pages that contain basic **in
 ### Green pages
 The [green banners](intro.html#green-pages-1) signal pages that contain more compact **documentation**.
 
+#### Chart: Bar Graph
+[![Chart: Bar Graph](images/banners/banner_bargraph.png)](bar.html){class="active-banner"}
+
 #### Chart: Histogram
 [![Chart: Histogram](images/banners/banner_histogram.png)](histo.html){class="active-banner"}
 
