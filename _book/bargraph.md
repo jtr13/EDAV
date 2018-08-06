@@ -47,39 +47,127 @@ For more info on this dataset, type `?datasets::Titanic` into the console.
 
 ## Simple examples
 <!-- Simplify Note -->
+My eyes were bigger than my stomach. Much simpler please!
 
 <!-- Simple Explanation of Data: -->
+Let's use the `HairEyeColor` dataset. To start, we will just look at the different categories of hair color among females:
 
+```r
+colors <- as.data.frame(HairEyeColor)
+
+# just female hair color, using dplyr
+colors_female_hair <- colors %>%
+  filter(Sex == "Female") %>%
+  group_by(Hair) %>%
+  summarise(Total = sum(Freq))
+
+# take a look at data
+head(colors_female_hair)
+```
+
+```
+## # A tibble: 4 x 2
+##   Hair  Total
+##   <fct> <dbl>
+## 1 Black    52
+## 2 Brown   143
+## 3 Red      37
+## 4 Blond    81
+```
+
+Now let's make some graphs with this data.
 
 ### Bar graph using base R
 
+```r
+barplot(colors_female_hair[["Total"]], 
+        names.arg = colors_female_hair[["Hair"]],
+        main = "Bar Graph Using Base R")
+```
+
+<img src="bargraph_files/figure-html/base-r-1.png" width="672" />
 
 <!-- Base R Plot Explanation -->
-Base R scatterplots are easy to make. All you need are the two variables you want to plot. Although scatterplots can be made with categorical data, the variables you are plotting will usually be continuous.
+We recommend using Base R only for simple bar graphs for yourself. Like all of Base R, it is simple to setup. **Note**: Base R expects a vector or matrix, hence the double brackets in the barplot call (gets columns as lists).
 
 ### Bar graph using ggplot2
 
 ```r
 library(ggplot2) # plotting
+
+ggplot(colors_female_hair, aes(x = Hair, y = Total)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Bar Graph Using ggplot2")
 ```
 
+<img src="bargraph_files/figure-html/ggplot-1.png" width="672" />
+
 <!-- ggplot2 explanation -->
+Bar plots are very easy in `ggplot2`. You pass in a dataframe and let it know which parts you want to map to different aesthetics. **Note**: In this case, we have a table of values and want to plot them as explicit bar heights. Because of this, we specify the y aesthetic as the `Total` column, but we also have to specify `stat = "identity"` in `geom_bar()` so it knows to plot them correctly. Often you will have datasets where each row is one observation and you want to group them into bars. In that case, the y aesthetic and `stat = "identity"` do not have to be specified.
 
 ## When to use
 <!-- Quick Note on When to use this plot -->
+Bar Charts are best for *categorical data*. Often you will have a collection of factors that you want to split into different groups. 
 
 ## Considerations
 
 <!-- *   List of things to pay attention to with examples -->
-### Example
+### Not for continuous data
+If you are finding that your bar graphs aren't looking right, make sure your data is categorical and not continuous. If you want to plot continuous data using bars, that is what [histograms](histo.html) are for!
 
 ## Modifications
 <!-- Things to add on -->
+<!--
+- Flip bars
+- Facet Wrap
+-->
+These modifications assume you are using `ggplot2`.
+
+### Flip Bars
+To flip the orientation, just tack on `coord_flip()`:
+
+```r
+ggplot(colors_female_hair, aes(x = Hair, y = Total)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Bar Graph Using ggplot2") +
+  coord_flip()
+```
+
+<img src="bargraph_files/figure-html/coord-flip-1.png" width="672" />
+
+### Reorder Factor
+One way to reorder bar graphs is to reorder the factor:
+
+```r
+reordered <- colors_female_hair
+reordered$Hair <- ordered(reordered$Hair, levels = c("Black", "Blond", "Brown", "Red"))
+
+ggplot(reordered, aes(x = Hair, y = Total)) +
+  geom_bar(stat = "identity") +
+  ggtitle("Bar Graph Using ggplot2")
+```
+
+<img src="bargraph_files/figure-html/reordering-1.png" width="672" />
+
+### Facet Wrap
+You can split the graph into small multiples using `facet_wrap()` (don't forget the tilde, ~):
+
+```r
+ggplot(colors, aes(x = Sex, y = Freq)) +
+  geom_bar(stat = "identity") +
+  facet_wrap(~Hair)
+```
+
+<img src="bargraph_files/figure-html/small-multiples-1.png" width="672" />
 
 ## Theory
 <!-- *Link to textbook -->
-<!--*   For more info about adding lines/contours, comparing groups, and plotting continuous variables check out [Chapter 5](http://www.gradaanwr.net/content/ch05/){target="_blank"} of the textbook.-->
+*   For more info about plotting categorical data, check out [Chapter 4](http://www.gradaanwr.net/content/04-displaying-categorial-data/){target="_blank"} of the textbook.
 
 ## External resources
-<!-- - []](){target="_blank"}: Links to resources with quick blurb -->
+<!-- - [](){target="_blank"}: Links to resources with quick blurb -->
+- [Cookbook for R](http://www.cookbook-r.com/Manipulating_data/Changing_the_order_of_levels_of_a_factor/){target="_blank"}: Discussion on reordering the levels of a factor.
+- [DataCamp Exercise](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-2/chapter-4-best-practices?ex=4#skiponboarding){target="_blank"}: Simple exercise on making bar graphs with `ggplot2`.
+- [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf){target="_blank"}: Always good to have close by.
+
 

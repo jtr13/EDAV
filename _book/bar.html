@@ -214,9 +214,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="bar.html"><a href="bar.html#when-to-use"><i class="fa fa-check"></i><b>5.4</b> When to use</a></li>
 <li class="chapter" data-level="5.5" data-path="bar.html"><a href="bar.html#considerations"><i class="fa fa-check"></i><b>5.5</b> Considerations</a><ul>
-<li class="chapter" data-level="5.5.1" data-path="bar.html"><a href="bar.html#example"><i class="fa fa-check"></i><b>5.5.1</b> Example</a></li>
+<li class="chapter" data-level="5.5.1" data-path="bar.html"><a href="bar.html#not-for-continuous-data"><i class="fa fa-check"></i><b>5.5.1</b> Not for continuous data</a></li>
 </ul></li>
-<li class="chapter" data-level="5.6" data-path="bar.html"><a href="bar.html#modifications"><i class="fa fa-check"></i><b>5.6</b> Modifications</a></li>
+<li class="chapter" data-level="5.6" data-path="bar.html"><a href="bar.html#modifications"><i class="fa fa-check"></i><b>5.6</b> Modifications</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="bar.html"><a href="bar.html#flip-bars"><i class="fa fa-check"></i><b>5.6.1</b> Flip Bars</a></li>
+<li class="chapter" data-level="5.6.2" data-path="bar.html"><a href="bar.html#reorder-factor"><i class="fa fa-check"></i><b>5.6.2</b> Reorder Factor</a></li>
+<li class="chapter" data-level="5.6.3" data-path="bar.html"><a href="bar.html#facet-wrap"><i class="fa fa-check"></i><b>5.6.3</b> Facet Wrap</a></li>
+</ul></li>
 <li class="chapter" data-level="5.7" data-path="bar.html"><a href="bar.html#theory"><i class="fa fa-check"></i><b>5.7</b> Theory</a></li>
 <li class="chapter" data-level="5.8" data-path="bar.html"><a href="bar.html#external-resources"><i class="fa fa-check"></i><b>5.8</b> External resources</a></li>
 </ul></li>
@@ -495,41 +499,113 @@ ship_grouped &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>
 <div id="simple-examples" class="section level2">
 <h2><span class="header-section-number">5.3</span> Simple examples</h2>
 <!-- Simplify Note -->
+<p>My eyes were bigger than my stomach. Much simpler please!</p>
 <!-- Simple Explanation of Data: -->
+<p>Let’s use the <code>HairEyeColor</code> dataset. To start, we will just look at the different categories of hair color among females:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">colors &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(HairEyeColor)
+
+<span class="co"># just female hair color, using dplyr</span>
+colors_female_hair &lt;-<span class="st"> </span>colors <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(Sex <span class="op">==</span><span class="st"> &quot;Female&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">group_by</span>(Hair) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">Total =</span> <span class="kw">sum</span>(Freq))
+
+<span class="co"># take a look at data</span>
+<span class="kw">head</span>(colors_female_hair)</code></pre></div>
+<pre><code>## # A tibble: 4 x 2
+##   Hair  Total
+##   &lt;fct&gt; &lt;dbl&gt;
+## 1 Black    52
+## 2 Brown   143
+## 3 Red      37
+## 4 Blond    81</code></pre>
+<p>Now let’s make some graphs with this data.</p>
 <div id="bar-graph-using-base-r" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Bar graph using base R</h3>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">barplot</span>(colors_female_hair[[<span class="st">&quot;Total&quot;</span>]], 
+        <span class="dt">names.arg =</span> colors_female_hair[[<span class="st">&quot;Hair&quot;</span>]],
+        <span class="dt">main =</span> <span class="st">&quot;Bar Graph Using Base R&quot;</span>)</code></pre></div>
+<p><img src="bargraph_files/figure-html/base-r-1.png" width="672" /></p>
 <!-- Base R Plot Explanation -->
-<p>Base R scatterplots are easy to make. All you need are the two variables you want to plot. Although scatterplots can be made with categorical data, the variables you are plotting will usually be continuous.</p>
+<p>We recommend using Base R only for simple bar graphs for yourself. Like all of Base R, it is simple to setup. <strong>Note</strong>: Base R expects a vector or matrix, hence the double brackets in the barplot call (gets columns as lists).</p>
 </div>
 <div id="bar-graph-using-ggplot2" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Bar graph using ggplot2</h3>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2) <span class="co"># plotting</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2) <span class="co"># plotting</span>
+
+<span class="kw">ggplot</span>(colors_female_hair, <span class="kw">aes</span>(<span class="dt">x =</span> Hair, <span class="dt">y =</span> Total)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Bar Graph Using ggplot2&quot;</span>)</code></pre></div>
+<p><img src="bargraph_files/figure-html/ggplot-1.png" width="672" /></p>
 <!-- ggplot2 explanation -->
+<p>Bar plots are very easy in <code>ggplot2</code>. You pass in a dataframe and let it know which parts you want to map to different aesthetics. <strong>Note</strong>: In this case, we have a table of values and want to plot them as explicit bar heights. Because of this, we specify the y aesthetic as the <code>Total</code> column, but we also have to specify <code>stat = &quot;identity&quot;</code> in <code>geom_bar()</code> so it knows to plot them correctly. Often you will have datasets where each row is one observation and you want to group them into bars. In that case, the y aesthetic and <code>stat = &quot;identity&quot;</code> do not have to be specified.</p>
 </div>
 </div>
 <div id="when-to-use" class="section level2">
 <h2><span class="header-section-number">5.4</span> When to use</h2>
 <!-- Quick Note on When to use this plot -->
+<p>Bar Charts are best for <em>categorical data</em>. Often you will have a collection of factors that you want to split into different groups.</p>
 </div>
 <div id="considerations" class="section level2">
 <h2><span class="header-section-number">5.5</span> Considerations</h2>
 <!-- *   List of things to pay attention to with examples -->
-<div id="example" class="section level3">
-<h3><span class="header-section-number">5.5.1</span> Example</h3>
+<div id="not-for-continuous-data" class="section level3">
+<h3><span class="header-section-number">5.5.1</span> Not for continuous data</h3>
+<p>If you are finding that your bar graphs aren’t looking right, make sure your data is categorical and not continuous. If you want to plot continuous data using bars, that is what <a href="histo.html">histograms</a> are for!</p>
 </div>
 </div>
 <div id="modifications" class="section level2">
 <h2><span class="header-section-number">5.6</span> Modifications</h2>
 <!-- Things to add on -->
+<!--
+- Flip bars
+- Facet Wrap
+-->
+<p>These modifications assume you are using <code>ggplot2</code>.</p>
+<div id="flip-bars" class="section level3">
+<h3><span class="header-section-number">5.6.1</span> Flip Bars</h3>
+<p>To flip the orientation, just tack on <code>coord_flip()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(colors_female_hair, <span class="kw">aes</span>(<span class="dt">x =</span> Hair, <span class="dt">y =</span> Total)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Bar Graph Using ggplot2&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">coord_flip</span>()</code></pre></div>
+<p><img src="bargraph_files/figure-html/coord-flip-1.png" width="672" /></p>
+</div>
+<div id="reorder-factor" class="section level3">
+<h3><span class="header-section-number">5.6.2</span> Reorder Factor</h3>
+<p>One way to reorder bar graphs is to reorder the factor:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">reordered &lt;-<span class="st"> </span>colors_female_hair
+reordered<span class="op">$</span>Hair &lt;-<span class="st"> </span><span class="kw">ordered</span>(reordered<span class="op">$</span>Hair, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;Black&quot;</span>, <span class="st">&quot;Blond&quot;</span>, <span class="st">&quot;Brown&quot;</span>, <span class="st">&quot;Red&quot;</span>))
+
+<span class="kw">ggplot</span>(reordered, <span class="kw">aes</span>(<span class="dt">x =</span> Hair, <span class="dt">y =</span> Total)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Bar Graph Using ggplot2&quot;</span>)</code></pre></div>
+<p><img src="bargraph_files/figure-html/reordering-1.png" width="672" /></p>
+</div>
+<div id="facet-wrap" class="section level3">
+<h3><span class="header-section-number">5.6.3</span> Facet Wrap</h3>
+<p>You can split the graph into small multiples using <code>facet_wrap()</code> (don’t forget the tilde, ~):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(colors, <span class="kw">aes</span>(<span class="dt">x =</span> Sex, <span class="dt">y =</span> Freq)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>Hair)</code></pre></div>
+<p><img src="bargraph_files/figure-html/small-multiples-1.png" width="672" /></p>
+</div>
 </div>
 <div id="theory" class="section level2">
 <h2><span class="header-section-number">5.7</span> Theory</h2>
 <!-- *Link to textbook -->
-<!--*   For more info about adding lines/contours, comparing groups, and plotting continuous variables check out [Chapter 5](http://www.gradaanwr.net/content/ch05/){target="_blank"} of the textbook.-->
+<ul>
+<li>For more info about plotting categorical data, check out <a href="http://www.gradaanwr.net/content/04-displaying-categorial-data/" target="_blank">Chapter 4</a> of the textbook.</li>
+</ul>
 </div>
 <div id="external-resources" class="section level2">
 <h2><span class="header-section-number">5.8</span> External resources</h2>
-<!-- - []](){target="_blank"}: Links to resources with quick blurb -->
+<!-- - [](){target="_blank"}: Links to resources with quick blurb -->
+<ul>
+<li><a href="http://www.cookbook-r.com/Manipulating_data/Changing_the_order_of_levels_of_a_factor/" target="_blank">Cookbook for R</a>: Discussion on reordering the levels of a factor.</li>
+<li><a href="https://campus.datacamp.com/courses/data-visualization-with-ggplot2-2/chapter-4-best-practices?ex=4#skiponboarding" target="_blank">DataCamp Exercise</a>: Simple exercise on making bar graphs with <code>ggplot2</code>.</li>
+<li><a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf" target="_blank">ggplot2 cheatsheet</a>: Always good to have close by.</li>
+</ul>
 
 </div>
 </div>
