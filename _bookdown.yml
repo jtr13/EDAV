@@ -15,6 +15,7 @@ rmd_files: [
   "final_presentation.Rmd",
   "contribute.Rmd",
   
+  "bargraph.Rmd",
   "histogram.Rmd",
   "boxplot.Rmd",
   "scatterplot.Rmd",
