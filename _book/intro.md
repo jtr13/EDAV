@@ -52,7 +52,7 @@ Zach Bogart has made a few t-shirts available on [Teespring](https://teespring.c
 
 <center>
 [![White EDAV Logo Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-info){target="_blank" class="active-banner"}
-[![R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-hex-edav){target="_blank" class="active-banner"}
+[![R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-edav-info){target="_blank" class="active-banner"}
 </center>
 
 *P.S. Designing a cool shirt or sticker is a great addition to your community contribution. It has to be cool, though :)*
