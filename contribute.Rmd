@@ -91,7 +91,7 @@ And now we wait...
 ![](images/excited_student/directly-12.png)
 *And the edits we made to github_resources.Rmd!*
 
-12. There it is! We go back to the page we edited and now **our typo has been included!**<br>**Note**: The changes will take about four to five minutes to appear on the site after notification of a successful merge. This is because we use [Travis CI](https://travis-ci.org/){target="_blank"} on the backend of our repo and it takes a little time for it to re-render the site pages. If you want to learn more about how you can use Travis CI to auto-magically generate your work, checkout [our section on Hooking Up Travis to a GitHub bookdown book](publish.html#hooking-up-travis) in the [Publishing Resources page](publish.html).
+12. There it is! We go back to the page we edited and now **our typo has been included!**<br>**Note**: The changes will take several minutes to appear on the site after notification of a successful merge. This is because we use [Travis CI](https://travis-ci.org/){target="_blank"} on the backend of our repo and it takes a little time for it to re-render the site pages. If you want to learn more about how you can use Travis CI to auto-magically generate your work, checkout [our section on Hooking Up Travis to a GitHub bookdown book](publish.html#hooking-up-travis) in the [Publishing Resources page](publish.html).
 ![](images/excited_student/directly-13.png)
 *Look at that! It's published! So many exclamation points!!!*
 
