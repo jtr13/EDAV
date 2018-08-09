@@ -16,6 +16,7 @@ Imports:
   viridis,
   viridisLite,
   lattice,
-  ggplot2movies
+  ggplot2movies,
+  hexbin
 Remotes: 
   rstudio/bookdown
