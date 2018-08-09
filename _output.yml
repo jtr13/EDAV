@@ -9,7 +9,7 @@ bookdown::gitbook:
     
   config:
     toc:
-      collapse: subsection
+      collapse: section
       before: |
         <li><a href="index.html"><b>edav.info/</b></a></li>
       after: |
