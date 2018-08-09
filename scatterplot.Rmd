@@ -144,23 +144,133 @@ scatter +
 Scatterplots are great for exploring relationships between variables. Basically, if you are interested in how variables relate to each other, the scatterplot is a great place to start.
 
 ## Considerations
-TODO
 
 <!-- *   List of things to pay attention to with examples -->
 ### Overlapping data
 Data with similar values will overlap in a scatterplot and may lead to problems. Consider exploring [alpha blending](iris.html#aside-example-where-alpha-blending-works) or [jittering](iris.html#second-jittering) as remedies (links from [Overlapping Data](iris.html#overlapping-data) section of [Iris Walkthrough](iris.html)).
 
 ### Scaling
-Modify the scales to make it more legible
+Consider how scaling can modify how your data will be perceived:
+```{r scaling-fix}
+library(ggplot2)
+num_points <- 100
+wide_x <- c(rnorm(n = 50, mean = 100, sd = 2), 
+            rnorm(n = 50, mean = 10, sd = 2))
+wide_y <- rnorm(n = num_points, mean = 5, sd = 2)
+df <- data.frame(wide_x, wide_y)
+  
+ggplot(df, aes(wide_x, wide_y)) +
+  geom_point() +
+  ggtitle("Linear X-Axis")
+
+ggplot(df, aes(wide_x, wide_y)) +
+  geom_point() +
+  ggtitle("Log-10 X-Axis") +
+  scale_x_log10()
+
+```
 
 ## Modifications
 
-TODO
+### Heat maps
 
-- Scatterplot matrices
+Heat maps are like a combination of scatterplots and [histograms](histo.html): they allow you to compare different parameters while also seeing their relative distributions.
 
-- Contour Lines
+For these heat maps, we will use the `SpeedSki` dataset.
 
+#### Heat map: default
+To create a heat map, simply substitute `geom_point()` with `geom_bin2d()`:
+```{r heat-map-default}
+ggplot(SpeedSki, aes(Year, Speed)) + 
+  geom_bin2d()
+```
+
+#### Heat map: modify color/bin width
+You can change the color palette by specifying it explicitly in your chain of `ggplot` function calls. The bin width can be added inside the `geom_bin2d()` function call:
+```{r heat-map-color-bin-width, message=FALSE}
+library(viridis) # viridis color palette
+
+# create plot
+g1 <- ggplot(SpeedSki, aes(Year, Speed)) + 
+  scale_fill_viridis() # modify color
+
+# show plot
+g1 + geom_bin2d(binwidth = c(5, 5)) # modify bin width
+```
+
+Here are some other examples:
+```{r}
+# larger bin width
+g1 + geom_bin2d(binwidth = c(10, 10)) 
+```
+
+```{r}
+# hexagonal bins
+library(hexbin)
+g1 + geom_hex(binwidth = c(5, 5))
+```
+
+```{r}
+# hexagonal bins + scatterplot layer
+library(hexbin)
+g1 + geom_hex(binwidth = c(5, 5), alpha = .4) + 
+  geom_point(size = 2, alpha = 0.8)
+```
+
+```{r}
+# hexagonal bins with custom color gradient/bin count
+library(hexbin)
+ggplot(SpeedSki, aes(Year, Speed)) + 
+  scale_fill_gradient(low = "#cccccc", high = "#09005F") + # color
+  geom_hex(bins = 10) # number of bins horizontally/vertically
+```
+
+### Contour lines
+<!-- blurb -->
+Contour lines let get a sense of the density of the data at a glance.
+
+For these contour maps, we will use the `SpeedSki` dataset.
+
+Contour lines can be added to the plot call using `geom_density_2d()`:
+```{r}
+ggplot(SpeedSki, aes(Year, Speed)) + 
+  geom_density_2d() 
+```
+
+Contour lines work best when combined with other layers:
+```{r}
+ggplot(SpeedSki, aes(Year, Speed)) + 
+  geom_point() + 
+  geom_density_2d(bins = 5)
+```
+
+### Scatterplot matrices
+If you want to compare multiple parameters to each other, consider using a scatterplot matrix. This will allow you to show many comparisons in a compact and efficient manner.
+
+For these scatterplot matrices, we will use the `movies` dataset from the `ggplot2movies` package.
+
+As a default, the base R `plot()` function will create a scatterplot matrix when given multiple variables:
+```{r message=FALSE, fig.width=7, fig.height=7}
+library(ggplot2movies) # data
+library(dplyr) # manipulation
+
+index <- sample(nrow(movies), 500) #sample data
+moviedf <- movies[index,] # data frame
+
+splomvar <- moviedf %>% 
+  dplyr::select(length, budget, votes, rating, year)
+
+plot(splomvar)
+```
+
+While this is quite useful for personal exploration of a datset, it is **not** recommended for presentation purposes. Something called the [Hermann grid illusion](https://en.wikipedia.org/wiki/Grid_illusion){target="_blank"} makes this plot very difficult to examine.
+
+To remove this problem, consider using the `splom()` function from the `lattice` package:
+```{r, fig.width=7, fig.height=7}
+library(lattice) #sploms
+
+splom(splomvar)
+```
 
 ## Theory
 <!-- *Link to textbook -->

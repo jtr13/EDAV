@@ -12,6 +12,10 @@ Imports:
   tidyverse,
   visNetwork,
   gridExtra,
-  likert
+  likert,
+  viridis,
+  viridisLite,
+  lattice,
+  ggplot2movies
 Remotes: 
   rstudio/bookdown
