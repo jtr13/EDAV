@@ -29,7 +29,7 @@ We don't like this answer.
 
 Our answer is to provide you with **edav.info/**. This site is one of the best ways to help you with this course. We hope that you find the confidence to dive in and explore this resource and its examples.
 
-This resource is specifically tailored to the GR5702 Exploratory Data Analysis and Visualization course offered at [Columbia University](https://www.columbia.edu/){target="_blank"}. However, anyone interested in working with data in R will benefit from perusing these pages.
+This resource is specifically tailored to the GR5702 Exploratory Data Analysis and Visualization course offered at the Data Science Institute at [Columbia University](https://www.columbia.edu/){target="_blank"}. However, anyone interested in working with data in R will benefit from perusing these pages.
 
 <!-- toc -->
 ## Table of contents
