@@ -4,8 +4,8 @@ author: "Zach Bogart, Joyce Robbins"
 date: '2018-08-15'
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib]
-biblio-style: apalike
+#bibliography: [book.bib]
+#biblio-style: apalike
 link-citations: yes
 github-repo: "jtr13/EDAV"
 url: 'edav.info/'
@@ -14,89 +14,68 @@ description: "This book is a collaborative collection of resources designed to h
 cover-image: "images/blue_edav_shirt.png"
 ---
 
-# About {-}
+# (PART) Information (Blue) {-}
 
-![](images/banners/edav_banner.png)
+# Introduction {-}
 
-Students often want to know how they can excel in a course. The standard answer given is usually something like: 
+![](images/banners/banner_intro.png)
 
-> Just read the syllabus, focus on the topics discussed therein, and be able to understand their nuances.
->
-> --- Typical Prof 
+## Everything you need for EDAV
 
-This answer is often given after a quick sigh and delivered in a surprisingly condescending tone.
+This resource has everything you need and more to be successful with R, this EDAV course, and beyond. Let's get started!
 
-We don't like this answer.
+With this resource, we try to give you a **curated collection of tools and references** that will make it easier to learn how to work with data in R. 
 
-Our answer is to provide you with **edav.info/**. This site is one of the best ways to help you with this course. We hope that you find the confidence to dive in and explore this resource and its examples.
+In addition, we include sections on **basic chart types/tools** so you can learn by doing.
+
+There are also **several walkthroughs** where we work with data and discuss problems as well as some tips/tricks that will help you.
+
+We hope this resource serves you well!
 
 This resource is specifically tailored to the GR5702 Exploratory Data Analysis and Visualization course offered at [Columbia University](https://www.columbia.edu/){target="_blank"}. However, anyone interested in working with data in R will benefit from perusing these pages.
 
-<!-- toc -->
-## Table of contents
-- Click on a banner to go to the desired page.
-- If you're wondering, here's an [explanation of what the banner colors mean](intro.html#what-the-banners-mean).
+## How this book is structured
 
-<!-- #### Header -->
-<!-- [![Header](images/banners/banner_TITLE.png)](TITLE.html){class="active-banner"} -->
+This resource is split into four color-coded sections, each of which provides different kinds of assistance. Below is an explanation of each section:
 
-<!-- Blue Pages -->
-### Blue pages
-The [blue banners](intro.html#blue-pages-1) signal pages that contain basic **information**.
+### Section I: Information (Blue)
 
-#### Introduction
-[![Introduction](images/banners/banner_intro.png)](intro.html){class="active-banner"}
+![](images/banners/banner_blue.png)
 
-#### R Basics
-[![R Basics](images/banners/banner_basics.png)](basics.html){class="active-banner"}
+Pages in the **blue section** contain basic **information**. Examples of blue pages include this introduction page and the [basics page](basics.html), which explains how to setup R/RStudio as well as ways to get help if you need it. Blue pages are the help desk of this resource: look to them if you are lost and need to find your way.
 
-#### Final Project Notes
-[![Final Project Notes](images/banners/banner_presentation.png)](project.html){class="active-banner"}
+### Section II: Walkthroughs (Red)
 
-#### Contribute to this Resource
-[![Contribute to this resource](images/banners/banner_contribute.png)](contribute.html){class="active-banner"}
+![](images/banners/banner_red.png)
 
-<!-- Green Pages -->
-### Green pages
-The [green banners](intro.html#green-pages-1) signal pages that contain more compact **documentation**.
+Pages in the **red section** contain more extensive **walkthroughs**. An example of a red page is the [iris walkthrough](iris.html), where a well-known dataset is presented as a pretty scatterplot and steps are shown from start to finish. This page type is the most thorough: it trys to provide full documentation, explanations of design choices, and advice on best practices. It's like going to office hours and having a great clarifying chat with a course assistant...in article form. If you would like to see a fully-worked-through example of something with a lot of guidance along the way, check out the red pages.
 
-#### Chart: Bar Graph
-[![Chart: Bar Graph](images/banners/banner_bargraph.png)](bar.html){class="active-banner"}
+### Section III: Documentation (Green)
 
-#### Chart: Histogram
-[![Chart: Histogram](images/banners/banner_histogram.png)](histo.html){class="active-banner"}
+![](images/banners/banner_green.png)
 
-#### Chart: Boxplot
-[![Chart: Boxplot](images/banners/banner_boxplot.png)](box.html){class="active-banner"}
+Pages in the **green section** contain more compact **documentation**. An example of a green page is the [histogram page](histo.html), which includes simple examples of how to create histograms, when to use them, and things to be aware of/watch out for. The green pages hold your hand much less than the red pages: they explain how to use a chart/tool using examples and simple terms. If you have an idea in mind and are just wondering how to execute it, the green pages will help fill in those gaps.
 
-#### Chart: Scatterplot
-[![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatter.html){class="active-banner"}
+### Section IV: References (Yellow)
 
-#### Networks
-[![Networks](images/banners/banner_network.png)](network.html){class="active-banner"}
+![](images/banners/banner_yellow.png)
 
-<!-- Red Pages -->
-### Red pages
-The [red banners](intro.html#red-pages-1) signal pages that contain more extensive **walkthroughs**.
+Pages in the **yellow section** contain simple collections of  **references**. An example of a yellow page is the [external resources page](general.html), which is a list of materials that you can look through and learn from. Yellow pages have the least amount of hand-holding: they are collections of resources and bare-boned tutorials that will help you learn about new things. 
 
-#### Walkthrough: Iris Example
-[![Walkthrough: Iris Example](images/banners/banner_iris.png)](iris.html){class="active-banner"}
+## Help improve *edav.info/*
 
-<!-- Yellow Pages -->
-### Yellow pages
-The [yellow banners](intro.html#yellow-pages-1) signal pages that contain simple collections of  **references**.
+Not finding what you are looking for? Think a section could be made clearer? Consider helping improve *edav.info/* by submitting a pull request to the [github page](https://github.com/jtr13/EDAV){target="_blank"}. Don't understand that last sentence? We have a [page on how you can contribute to *edav.info/*](contribute.html).
 
-#### Publishing Resources
-[![Publishing with R](images/banners/banner_publish.png)](publish.html){class="active-banner"}
+## Fun stuff: t-shirts
 
-#### GitHub Resources
-[![GitHub Resources](images/banners/banner_github.png)](github.html){class="active-banner"}
+Zach Bogart has made a few t-shirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy. 
 
-#### Perception/Color Resources
-[![Perception/Color Resources](images/banners/banner_percept.png)](percept.html){class="active-banner"}
+<center>
+[![White EDAV Logo Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-info){target="_blank" class="active-banner"}
+[![R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-edav-info){target="_blank" class="active-banner"}
+</center>
 
-#### General Resources
-[![General Resources](images/banners/banner_resources.png)](general.html){class="active-banner"}
+*P.S. Designing a cool shirt or sticker is a great addition to your community contribution. It has to be cool, though :)*
 
 <!-- Contact -->
 ## Contact
