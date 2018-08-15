@@ -10,10 +10,11 @@ edit: https://github.com/jtr13/EDAV/edit/master/%s
 rmd_files: [
   "index.Rmd", 
   
-  "intro.Rmd",
   "basics.Rmd",
   "final_presentation.Rmd",
   "contribute.Rmd",
+  
+  "iris.Rmd",
   
   "bargraph.Rmd",
   "histogram.Rmd",
@@ -21,12 +22,10 @@ rmd_files: [
   "scatterplot.Rmd",
   "network.Rmd",
   
-  "iris.Rmd",
-  
+  "general_resources.Rmd",
+  "perception.Rmd",
   "publish_using_r.Rmd",
   "github_resources.Rmd",
-  "perception.Rmd",
-  "general_resources.Rmd"
-
+  "chapter_index.Rmd"
 ]
 
