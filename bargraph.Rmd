@@ -1,3 +1,5 @@
+# (PART) Documentation (Green) {-}
+
 # Chart: Bar Graph {#bar}
 
 ![](images/banners/banner_bargraph.png)
