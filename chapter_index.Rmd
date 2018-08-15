@@ -1,0 +1,51 @@
+# Chapter Index {#chapter-index}
+
+![](images/banners/banner_chapter_index.png)
+
+<!-- toc -->
+## Overview
+This page includes links to every chapter in *edav.info/*
+
+- Click on a banner to go to the desired page.
+- If you're wondering, here's an [explanation of what the banner colors mean](index.html#how-this-book-is-structured).
+
+## Index
+<!-- [![Header](images/banners/banner_TITLE.png)](TITLE.html){class="active-banner"} -->
+
+<!-- Blue Pages -->
+
+[![Introduction](images/banners/banner_intro.png)](intro.html){class="active-banner"}
+
+[![R Basics](images/banners/banner_basics.png)](basics.html){class="active-banner"}
+
+[![Final Project Notes](images/banners/banner_presentation.png)](project.html){class="active-banner"}
+
+[![Contribute to this resource](images/banners/banner_contribute.png)](contribute.html){class="active-banner"}
+
+<!-- Red Pages -->
+
+[![Walkthrough: Iris Example](images/banners/banner_iris.png)](iris.html){class="active-banner"}
+
+<!-- Green Pages -->
+
+[![Chart: Bar Graph](images/banners/banner_bargraph.png)](bar.html){class="active-banner"}
+
+[![Chart: Histogram](images/banners/banner_histogram.png)](histo.html){class="active-banner"}
+
+[![Chart: Boxplot](images/banners/banner_boxplot.png)](box.html){class="active-banner"}
+
+[![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatter.html){class="active-banner"}
+
+[![Networks](images/banners/banner_network.png)](network.html){class="active-banner"}
+
+<!-- Yellow Pages -->
+
+[![General Resources](images/banners/banner_resources.png)](general.html){class="active-banner"}
+
+[![Perception/Color Resources](images/banners/banner_percept.png)](percept.html){class="active-banner"}
+
+[![Publishing with R](images/banners/banner_publish.png)](publish.html){class="active-banner"}
+
+[![GitHub Resources](images/banners/banner_github.png)](github.html){class="active-banner"}
+
+[![Chapter Index](images/banners/banner_chapter_index.png)](chapter-index.html){class="active-banner"}
