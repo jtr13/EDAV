@@ -19,6 +19,8 @@ In an effort to get everyone on the same page, here is a checklist of essentials
 
 Okay, then. Here are the essentials, in checklist form:
 
+### Learn R
+
 1. **Download R and RStudio**: This is the biggest thing to do by far. Make sure to download both R and RStudio, as mentioned in [Setting up R and RStudio](#setting-up-r-and-rstudio).
 2. **Learn your way around RStudio**: RStudio is powerful...if you know how to use it. Take the time to look through the [DataCamp sections on the RStudio IDE](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1){target="_blank"} so you feel comfortable (see [Use RStudio like a pro](#use-rstudio-like-a-pro) section).
 3. **Try something!**: Getting comfortable with an IDE is all about practice. So while the DataCamp vids are great, don't solely rely on them. Try things out for yourself! Here are some things to play around with:
@@ -26,9 +28,14 @@ Okay, then. Here are the essentials, in checklist form:
     - Create an R Markdown file and have it generate an HTML page
     - Download some packages like `tidyverse` or `MASS`
     - Do some math in the console
-4. **Learn how to get help**: Make sure you are comfortable searching for answers when you get stuck. See the section below on [getting help](#getting-help) for some...help.
-5. **Get the Textbook**: This course uses *Graphical Data Analysis with R* as its textbook. Here is an [Amazon link for a physical copy](https://www.amazon.com/Graphical-Data-Analysis-Chapman-Hall/dp/1498715230){target="_blank"} and a link to the [book's website](http://www.gradaanwr.net/){target="_blank"}. 
-6. **Setup DataCamp Account**: A lot of the references and support materials discussed in edav.info/ are from [DataCamp](https://www.datacamp.com/){target="_blank"}, an online collection of courses/articles on data science. Some of the sections are free, but most are behind a paywall. If you are enrolled in this course, you should receive an invitation to create an account that will allow you full-access to the site. 
+4. **Study R**: See [Learning about R](#learning-about-r) below.
+5. **Learn how to get help**: Make sure you are comfortable searching for answers when you get stuck. See the section below on [getting help](#getting-help) for some...help.
+
+
+### Prepare for class
+
+1. **Get the Textbook**: This course uses *Graphical Data Analysis with R* as its textbook. Here is an [Amazon link for a physical copy](https://www.amazon.com/Graphical-Data-Analysis-Chapman-Hall/dp/1498715230){target="_blank"} and a link to the [book's website](http://www.gradaanwr.net/){target="_blank"}. 
+2. **Setup DataCamp Account**: A lot of the references and support materials discussed in edav.info/ are from [DataCamp](https://www.datacamp.com/){target="_blank"}, an online collection of courses/articles on data science. Some of the sections are free, but most are behind a paywall. However since on request by a professor, DataCamp currently provides full access to the site for students with .edu email addresses, if you are enrolled in this course, during the first week of class you will receive an invitation to create an account using your columbia.edu email address to gain full access. 
 
 ## Getting started
 
@@ -52,9 +59,17 @@ Great! RStudio is up and running on your computer! Now make sure you get comfy w
 
 R is just like any language, programming or otherwise: you need to *use* it to get *used* to it.
 
-* Just starting out in R? Check out [this DataCamp course](https://www.datacamp.com/courses/free-introduction-to-r){target="_blank"} for a quick introduction. For this course, you can skim/mostly ignore matrices and lists (Parts 3 & 6).
+* Just starting out in R? Check out this free [DataCamp course](https://www.datacamp.com/courses/free-introduction-to-r){target="_blank"} for a quick introduction. For this course, you can skim/mostly ignore matrices and lists (Parts 3 & 6).
 
-*More Advanced*: Want to curl up with a good book about R? We recommend [R for Data Science](http://r4ds.had.co.nz/){target="_blank"}. It jumps right in, but is quite extensive. Focus less on Part IV (Model).
+* Next cover the material in the first section of [R for Data Science](http://r4ds.had.co.nz) It is based on the tidyverse, a group of packages which, among other things, make it easier to code in R:
+    - [Data Visualization](http://r4ds.had.co.nz/data-visualisation.html)
+    - [Workflow: basics](http://r4ds.had.co.nz/workflow-basics.html)
+    - [Data transformation](http://r4ds.had.co.nz/transform.html)
+    - [Workflow: scripts](http://r4ds.had.co.nz/workflow-scripts.html)
+    - [Exploratory Data Analysis](http://r4ds.had.co.nz/exploratory-data-analysis.html)
+    - [Workflow: projects](http://r4ds.had.co.nz/workflow-projects.html)
+    
+General advice: don't get caught up in the details.  Keep a list of questions and move on. 
 
 ## Getting more specific
 
