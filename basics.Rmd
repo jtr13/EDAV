@@ -35,7 +35,7 @@ Okay, then. Here are the essentials, in checklist form:
 ### Prepare for class
 
 1. **Get the Textbook**: This course uses *Graphical Data Analysis with R* as its textbook. Here is an [Amazon link for a physical copy](https://www.amazon.com/Graphical-Data-Analysis-Chapman-Hall/dp/1498715230){target="_blank"} and a link to the [book's website](http://www.gradaanwr.net/){target="_blank"}. 
-2. **Setup DataCamp Account**: A lot of the references and support materials discussed in edav.info/ are from [DataCamp](https://www.datacamp.com/){target="_blank"}, an online collection of courses/articles on data science. Some of the sections are free, but most are behind a paywall. However since on request by a professor, DataCamp currently provides full access to the site for students with .edu email addresses, if you are enrolled in this course, during the first week of class you will receive an invitation to create an account using your columbia.edu email address to gain full access. 
+2. **Setup DataCamp Account**: A lot of the references and support materials discussed in edav.info/ are from [DataCamp](https://www.datacamp.com/){target="_blank"}, an online collection of courses/articles on data science. Some of the sections are free, but most are behind a paywall. However, DataCamp currently provides full access to the site for students with .edu email addresses. If you are enrolled in this course, during the first week of class you will receive an invitation to create an account using your columbia.edu email address, which will grant you full access. 
 
 ## Getting started
 
