@@ -203,7 +203,7 @@ Consider your motives when using jittering. You are by definition altering the d
 
 ***
 
-###*Aside*: example where alpha blending works
+### *Aside*: example where alpha blending works
 
 We are dealing with a case where jittering works best to see the data, while changing the `alpha` doesn't help us much. Here's a quick example where opacity using `alpha` might be more directly helpful.
 ```{r opacity-useful-aside, message=FALSE}
