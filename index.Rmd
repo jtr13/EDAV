@@ -48,7 +48,7 @@ Pages in the **blue section** contain basic **information**. Examples of blue pa
 
 ![](images/banners/banner_red.png)
 
-Pages in the **red section** contain more extensive **walkthroughs**. An example of a red page is the [iris walkthrough](iris.html), where a well-known dataset is presented as a pretty scatterplot and steps are shown from start to finish. This page type is the most thorough: it trys to provide full documentation, explanations of design choices, and advice on best practices. It's like going to office hours and having a great clarifying chat with a course assistant...in article form. If you would like to see a fully-worked-through example of something with a lot of guidance along the way, check out the red pages.
+Pages in the **red section** contain more extensive **walkthroughs**. An example of a red page is the [iris walkthrough](iris.html), where a well-known dataset is presented as a pretty scatterplot and steps are shown from start to finish. This page type is the most thorough: it tries to provide full documentation, explanations of design choices, and advice on best practices. It's like going to office hours and having a great clarifying chat with a course assistant...in article form. If you would like to see a fully-worked-through example of something with a lot of guidance along the way, check out the red pages.
 
 ### Section III: Documentation (Green)
 
