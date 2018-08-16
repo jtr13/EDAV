@@ -2,6 +2,8 @@
 
 This is code and text behind the [edav.info/](https://jtr13.github.io/EDAV/) resource.
 
+![Cover Image](https://jtr13.github.io/EDAV/images/cover.png)
+
 ## I wanna help!
 
 Visit [our contribute page](http://edav.info/contribute.html) to learn more about how you can contribute to *edav.info/*
