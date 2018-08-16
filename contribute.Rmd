@@ -64,7 +64,7 @@ This is a full walkthough on proposing a change to *edav.info/*. It follows a hy
 ![](images/excited_student/directly-14.png)
 *Explain your pull request and hit the big green button.*
 
-8. **Congratulations** are in order! We have **successfully opened a pull request on a GitHub repo!** Now one of the repo owners (like the guy writing this tutorial, for example <i class="fas fa-grin-beam"></i>) has to decide if they want to include your pull request or not. In this case they'll certainly approve it, but know that they may decide against adding your changes. For more info, read the section of the Open Source Guides on [what happens after you submit a contribution](https://opensource.guide/how-to-contribute/#what-happens-after-you-submit-a-contribution){target="_blank"}.<br> **Note**: Be aware that the icon shown below may initially be yellow to signal that some tests are being performed to check the conflicts of your proposal with the original repo. It should turn green if everything passes.
+8. **Congratulations** are in order! We have **successfully opened a pull request on a GitHub repo!** Now one of the repo owners (like the guy writing this tutorial, for example <i class="far fa-smile-beam"></i>) has to decide if they want to include your pull request or not. In this case they'll certainly approve it, but know that they may decide against adding your changes. For more info, read the section of the Open Source Guides on [what happens after you submit a contribution](https://opensource.guide/how-to-contribute/#what-happens-after-you-submit-a-contribution){target="_blank"}.<br> **Note**: Be aware that the icon shown below may initially be yellow to signal that some tests are being performed to check the conflicts of your proposal with the original repo. It should turn green if everything passes.
 ![](images/excited_student/directly-07.png)
 *We did it! Now the maintainers will review our changes and get back to us...*
 
@@ -117,7 +117,7 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 1. Go to [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and click on the [Issues Tab](https://github.com/jtr13/EDAV/issues){target="_blank"}
 2. Click on "[New Issue](https://github.com/jtr13/EDAV/issues/new){target="_blank"}"
 3. Propose your Issue and click "Submit new issue"
-4. That's it! We appreciate your input and will take your issue into account in improving *edav.info/* :)
+4. That's it! We appreciate your input and will take your issue into account in improving *edav.info/* <i class="far fa-smile"></i>
 
 **Notes about submitting issues**:
 

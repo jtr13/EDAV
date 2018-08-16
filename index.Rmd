@@ -75,7 +75,7 @@ Zach Bogart has made a few t-shirts available on [Teespring](https://teespring.c
 [![R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-edav-info){target="_blank" class="active-banner"}
 </center>
 
-*P.S. Designing a cool shirt or sticker is a great addition to your community contribution. It has to be cool, though :)*
+*P.S. Designing a cool shirt or sticker is a great addition to your community contribution. It has to be cool, though <i class="far fa-smile"></i>*
 
 <!-- Contact -->
 ## Contact

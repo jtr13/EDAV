@@ -62,7 +62,7 @@ For more detail on steps 2 and 3, see: [Emily Zabor's Tutorial on Custom Domains
 
 ## Make a custom 404 page
 
-Your site may be lovely, but a default 404 page is always a let down. Not *if* but *when* someone types part of your URL incorrectly or a link gets broken, you should make sure there is something to see other than a boring backend page you had no input in designing. [This article](https://mycyberuniverse.com/developing/custom-404-page-for-website-hosted-on-github.html){target="_blank"} explains the process, but all you have to do is make a file called `404.html` in your root directory and GitHub will use it rather than the default. Because of this, there is really no excuse for not having one. Here's a look at [our 404 page](404.html). Hopefully you aren't seeing it that often. :)
+Your site may be lovely, but a default 404 page is always a let down. Not *if* but *when* someone types part of your URL incorrectly or a link gets broken, you should make sure there is something to see other than a boring backend page you had no input in designing. [This article](https://mycyberuniverse.com/developing/custom-404-page-for-website-hosted-on-github.html){target="_blank"} explains the process, but all you have to do is make a file called `404.html` in your root directory and GitHub will use it rather than the default. Because of this, there is really no excuse for not having one. Here's a look at [our 404 page](404.html). Hopefully you aren't seeing it that often. <i class="far fa-smile"></i>
 
 Some considerations:
 
