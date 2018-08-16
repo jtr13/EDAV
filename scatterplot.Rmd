@@ -227,7 +227,7 @@ ggplot(SpeedSki, aes(Year, Speed)) +
 
 ### Contour lines
 <!-- blurb -->
-Contour lines let get a sense of the density of the data at a glance.
+Contour lines give a sense of the density of the data at a glance.
 
 For these contour maps, we will use the `SpeedSki` dataset.
 
