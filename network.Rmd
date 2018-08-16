@@ -44,7 +44,7 @@ visNetwork(boroughs, connections)
 
 Add labels by adding a label column to `nodes`:
 
-```{r}
+```{r message=FALSE}
 library(dplyr)
 boroughs <- boroughs %>% mutate(label = id)
 visNetwork(boroughs, connections)
