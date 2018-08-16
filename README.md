@@ -1,6 +1,8 @@
 # edav.info/
 
-This is code and text behind the [edav.info/](https://jtr13.github.io/EDAV/) resource.
+This is code and text behind the [edav.info/](https://jtr13.github.io/EDAV/) resource. 
+
+![Cover Image](https://jtr13.github.io/EDAV/images/cover.png)
 
 ## I wanna help!
 
