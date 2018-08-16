@@ -68,6 +68,7 @@ Some considerations:
 
 - **Always include a link back to the site**: Throw the user a life-saver.
 - **Make it clear that something went wrong**: Don't hide the fact that this page is because of some error.
+- **Use absolute paths**: The URL that throws the 404 error may be nested within unexpected folders. Make sure if you have any images or links, they work regardless of the file path (use "/images/..." rather than "images/...", maybe link directly to css/homepage, etc.)
 - **Other than that, have fun with it!**: There are [plenty of examples](https://www.canva.com/learn/404-page-design/){target="_blank"} of people making [excellent 404 pages](https://www.pagecloud.com/blog/best-404-pages){target="_blank"}. It should make a frustrating experience just a little bit more bearable.
     
 ## Hooking up Travis
