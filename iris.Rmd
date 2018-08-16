@@ -100,7 +100,7 @@ glimpse(iris)
 
 Plotting the data by calling `iris` to the console will print the whole thing. Go ahead and try it in this case, but this is not recommended for larger datasets. Instead, use `head()` in the console or `View()`.
 
-If you want to learn more about these commands, or anything for that matter, just type `?<command>` into the console. `?head`, for example, will reveal that there is an additional argument to `head` called `n` for the number of lines printed, which defaults to 6. Also, you may notice there is something called `tail`. I wonder what that does? :)
+If you want to learn more about these commands, or anything for that matter, just type `?<command>` into the console. `?head`, for example, will reveal that there is an additional argument to `head` called `n` for the number of lines printed, which defaults to 6. Also, you may notice there is something called `tail`. I wonder what that does? <i class="far fa-smile"></i>
 
 ## Plotting data
 

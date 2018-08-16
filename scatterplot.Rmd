@@ -96,7 +96,7 @@ ggplot(mammals, aes(x = body, y = brain)) +
 
 For more info on this dataset, type `?MASS::mammals` into the console. 
 
-And if you are going crazy not knowing what species is in the top right corner, it's another elephant. Specifically, it's the African elephant. It also never forgets how big a brain it has. :)
+And if you are going crazy not knowing what species is in the top right corner, it's another elephant. Specifically, it's the African elephant. It also never forgets how big a brain it has. <i class="far fa-smile-beam"></i>
 
 ## Simple examples
 <!-- Simplify Note -->

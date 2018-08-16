@@ -132,4 +132,4 @@ The executive summary should be a well-formatted, presentable final product of y
 *   Err on the side of simplicity. Don't, for example, overuse color when it's not necessary. Ask yourself: does color make this graph any clearer? If it doesn't, leave it out.
 *   Test your graphs on nontechnical friends and family and ask for feedback.
 
-Above all, have fun with it :)
+Above all, have fun with it <i class="far fa-smile-beam"></i>
