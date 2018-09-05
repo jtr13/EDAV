@@ -61,13 +61,13 @@ R is just like any language, programming or otherwise: you need to *use* it to g
 
 * Just starting out in R? Check out this free [DataCamp course](https://www.datacamp.com/courses/free-introduction-to-r){target="_blank"} for a quick introduction. For this course, you can skim/mostly ignore matrices and lists (Parts 3 & 6).
 
-* Next cover the material in the first section of [R for Data Science](http://r4ds.had.co.nz) It is based on the tidyverse, a group of packages which, among other things, make it easier to code in R:
-    - [Data Visualization](http://r4ds.had.co.nz/data-visualisation.html)
-    - [Workflow: basics](http://r4ds.had.co.nz/workflow-basics.html)
-    - [Data transformation](http://r4ds.had.co.nz/transform.html)
-    - [Workflow: scripts](http://r4ds.had.co.nz/workflow-scripts.html)
-    - [Exploratory Data Analysis](http://r4ds.had.co.nz/exploratory-data-analysis.html)
-    - [Workflow: projects](http://r4ds.had.co.nz/workflow-projects.html)
+* Next cover the material in the first section of [R for Data Science](http://r4ds.had.co.nz){target="_blank"} It is based on the tidyverse, a group of packages which, among other things, make it easier to code in R:
+    - [Data Visualization](http://r4ds.had.co.nz/data-visualisation.html){target="_blank"}
+    - [Workflow: basics](http://r4ds.had.co.nz/workflow-basics.html){target="_blank"}
+    - [Data transformation](http://r4ds.had.co.nz/transform.html){target="_blank"}
+    - [Workflow: scripts](http://r4ds.had.co.nz/workflow-scripts.html){target="_blank"}
+    - [Exploratory Data Analysis](http://r4ds.had.co.nz/exploratory-data-analysis.html){target="_blank"}
+    - [Workflow: projects](http://r4ds.had.co.nz/workflow-projects.html){target="_blank"}
     
 General advice: don't get caught up in the details.  Keep a list of questions and move on. 
 
