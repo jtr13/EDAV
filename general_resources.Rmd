@@ -24,7 +24,9 @@ A lot of these are available for students through [Columbia Libraries](http://li
 
 - [Ten Simple Rules for Better Figures](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833){target="_blank"}: A helpful article discussing how to make the best figures possible by following ten basic rules such as "Avoid 'chartjunk'" and "Know Your Audience". Good to keep these rules in mind.
 
+## Meetups
 
+- [New York Open Statistical Programming Meetup](https://www.meetup.com/nyhackr/): Meetups hosted by R afficionados on a variety of topics in statistical programming, but with a focus on the R language. Past speakers have included J.J. Allaire (founder of RStudio) and Hadley Wickham (core tidyverse developer). The other attendees are generally eager to welcome newcomers and all of their talks are available on the Lander Analytics Youtube channel.
 
 
 
