@@ -14,6 +14,8 @@ A lot of these are available for students through [Columbia Libraries](http://li
 
 - [R for Data Science](http://r4ds.had.co.nz/){target="_blank"}: The classic. Everything from data types, programming, modeling, communicating, and those keyboard shortcuts you keep forgetting. To quote the book, "this book will teach you how to do data science with R." Nuff said.
 
+- [R Base Graphics Cheatsheet](https://github.com/jtr13/codehelp/blob/master/R/BaseGraphicsCheatsheet.pdf){target="_blank"}: Oddly enough, despite the length of time it's been around, it's hard to find a base graphics cheatsheet. Joyce put this one together to help you out if you're using base graphics.
+
 ## Cheatsheets
 
 - [Cheatsheet of cheatsheets](https://paulvanderlaken.com/author/lakenp/){target="_blank"}: Paul van der Laken has put together a large collection of R resource links, including cheat sheets, style guides, package info, blogs, and other helpful resources. 
