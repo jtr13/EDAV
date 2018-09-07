@@ -65,8 +65,9 @@ Pages in the **yellow section** contain simple collections of  **references**. A
 
 Not finding what you are looking for? Think a section could be made clearer? Consider helping improve *edav.info/* by submitting a pull request to the [github page](https://github.com/jtr13/EDAV){target="_blank"}. Don't understand that last sentence? We have a [page on how you can contribute to *edav.info/*](contribute.html).
 
-## Fun stuff: t-shirts
+## Fun stuff
 
+### T-shirts
 Zach Bogart has made a few t-shirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy. 
 
 <center>
