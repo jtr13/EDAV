@@ -95,15 +95,28 @@ The ggplot version is a little more complicated on the surface, but you get more
 
 make sure you are using a dataframe.
 
-## When to use
+## Types of histrograms
+
 Use a histogram to show the distribution of *one continuous variable*. The y-scale can be represented in a variety of ways to express different results:
 
-*   **Count**: Number of points that fall in each bin
-*   **Relative frequency**: (**Count**) / (Total Number of datapoints)
-*   **Cumulative Frequency**: Accumulation of all previous **Relative frequencies**
-*   **Density**: (**Relative Frequency**) / (binwidth)
+### Frequency or count
 
-## Considerations
+y = number of values that fall in each bin
+
+### Relative frequency historgram
+
+y = number of values that fall in each bin / total number of values
+
+### Cumulative frequency histogram
+
+y = total number of values <= (or <) right boundary of bin
+
+### Density
+
+y = relative frequency / binwidth
+
+
+## Parameters
 
 ### Bin boundaries
 Be mindful of the boundaries of the bins and whether a point will fall into the left or right bin if it is on a boundary.
