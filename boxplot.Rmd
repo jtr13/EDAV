@@ -142,7 +142,7 @@ plot + theme
 
 ## External resources
 
-- Tukey, John W. 1977. *Exploratory Data Analysis.* Addison-Wesley. (Chapter 2)
+- Tukey, John W. 1977. [*Exploratory Data Analysis.*](https://clio.columbia.edu/catalog/136422){target="_blank"} Addison-Wesley. (Chapter 2): the primary source in which boxplots are first presented. 
 - [DataCamp: Quick Exercise on Boxplots](https://campus.datacamp.com/courses/helsinki-open-data-science/logistic-regression?ex=7){target="_blank"}: a simple example of making boxplots from a dataset.
 - [Article on boxplots with ggplot2](http://t-redactyl.io/blog/2016/04/creating-plots-in-r-using-ggplot2-part-10-boxplots.html){target="_blank"}: An excellent collection of code examples on how to make boxplots with `ggplot2`. Covers layering, working with legends, faceting, formatting, and more. If you want a boxplot to look a certain way, this article will help.
 - [Boxplots with plotly package](https://plot.ly/ggplot2/box-plots/){target="_blank"}: boxplot examples using the `plotly` package. These allow for a little interactivity on hover, which might better explain the underlying statistics of your plot.
