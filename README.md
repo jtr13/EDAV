@@ -6,7 +6,7 @@ This is code and text behind the [edav.info/](https://jtr13.github.io/EDAV/) res
 
 ## I wanna help!
 
-Visit [our contribute page](http://edav.info/contribute.html) to learn more about how you can contribute to *edav.info/*
+Visit [our contribute page](http://edav.info/contribute.html) to learn more about how you can contribute to *edav.info/*.
 
 ## Contact
 
