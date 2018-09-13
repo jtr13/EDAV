@@ -6,7 +6,7 @@
 
 This section goes over what's expected for the final project.
 
-**General Note**: Please note that this sheet cannot possibly cover all the "do's and don'ts" of data analysis & visualization. You are expected to follow all of the best practices discussed in class throughout the semester.
+**General Note**: Please note that this sheet cannot possibly cover all the "do's and don'ts" of data analysis and visualization. You are expected to follow all of the best practices discussed in class throughout the semester.
 
 ## General info
 
