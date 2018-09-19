@@ -101,11 +101,13 @@ We often will need to pull data into RStudio to work with it.
 
 *More Advanced*: Importing every data format under the sun you say? I want to know how to do that. Here's [Part 1](https://www.datacamp.com/courses/importing-data-in-r-part-1){target="_blank"}, as well as [Part 2](https://www.datacamp.com/courses/importing-data-in-r-part-2){target="_blank"}, which focuses on databases and HTTP requests. Go nuts.
 
-### R Markdown
+### R Markdown & Knitr
 
-R Markdown is how you will be submitting assignments for this course. In general, it is a great way to communicate your findings to others.
+R Markdown is how you will be writing assignments for this course and Knitr is how to generate an output file for submission. In general, they're a great way to communicate your findings to others.
 
 * Don't know about R Markdown? [DataCamp course](https://www.datacamp.com/courses/reporting-with-r-markdown){target="_blank"} to the rescue! We will be using html formatting so focus on that. There is also an [RStudio webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r- markdown/){target="_blank"} about it.
+
+* Don't know about Knitr? Here's [the specific section on Knitr](){target="_blank"} from the DataCamp course cited above. With this package, you can generate output documents from R Markdown files. 
 
 *More Advanced*: The [R Markdown page](https://rmarkdown.rstudio.com/){target="_blank"} from RStudio has [lessons](https://rmarkdown.rstudio.com/lesson-1.html){target="_blank"} with extensive info. Also, more cheatsheets.
 
