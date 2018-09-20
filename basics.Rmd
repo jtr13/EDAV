@@ -125,7 +125,7 @@ Here's a quick run-down of how to submit your assignments using [R Markdown and 
 
 ![](images/pdf_output_info.png)
 
-- Make sure you download TeX for your machine. Here are some Medium articles on the process of creating PDF reports (they cover starting from scratch with no installs at all, but you can skip over to installing TeX only):
+- Make sure you download TeX for your machine. Here are some Medium articles on the process of creating PDF reports (the articles cover starting from scratch with no installs at all, but you can skip over to installing TeX only):
     + [**Mac OS**](https://medium.com/@sorenlind/create-pdf-reports-using-r-r-markdown-latex-and-knitr-on-macos-high-sierra-e7b5705c9fd){target="_blank"}
     + [**Windows**](https://medium.com/@sorenlind/create-pdf-reports-using-r-r-markdown-latex-and-knitr-on-windows-10-952b0c48bfa9){target="_blank"}
 
