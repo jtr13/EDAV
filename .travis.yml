@@ -3,6 +3,11 @@ cache: packages
 
 sudo: false
 
+# safelist
+branches:
+  only:
+  - master
+
 cache:
   packages: yes
   directories:
@@ -15,8 +20,3 @@ before_script:
 script:
   - ./_build.sh
   - ./_deploy.sh
-  
-# safelist
-branches:
-  only:
-  - master
