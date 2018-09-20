@@ -103,15 +103,35 @@ We often will need to pull data into RStudio to work with it.
 
 ### R Markdown & Knitr
 
-R Markdown is how you will be writing assignments for this course and Knitr is how you will generate an output file for submission. In general, they're a great way to communicate your findings to others.
+R Markdown is how you will be writing assignments for this course and Knitr is how you will generate an output file for submission. In general, they're a great way to communicate your findings to others (for the python-lovers among you, this is the [Jupyter Notebook](http://jupyter.org/){target="_blank"} of the R world)
 
 * Don't know about R Markdown? [DataCamp course](https://www.datacamp.com/courses/reporting-with-r-markdown){target="_blank"} to the rescue! We will be using html formatting so focus on that. There is also an [RStudio webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r- markdown/){target="_blank"} about it.
 
-* Don't know about Knitr? Here's [the specific section on Knitr](){target="_blank"} from the DataCamp course cited above. With this package, you can generate output documents from R Markdown files. 
+* Don't know about Knitr? Here's [the specific section on Knitr](https://campus.datacamp.com/courses/reporting-with-r-markdown/chapter-two-embedding-code?ex=1){target="_blank"} from the DataCamp course cited above. With this package, you can embed code directly into your R Markdown files and generate output documents. Make sure to go through the later exercises to learn about [code chunks](https://rmarkdown.rstudio.com/lesson-3.html){target="_blank"} and [chunk options](http://yihui.name/knitr/options/){target="_blank"} so you can fine-tune your final output document with ease.
 
 *More Advanced*: The [R Markdown page](https://rmarkdown.rstudio.com/){target="_blank"} from RStudio has [lessons](https://rmarkdown.rstudio.com/lesson-1.html){target="_blank"} with extensive info. Also, more cheatsheets.
 
-*More Advanced*: Want to jump right in? Open a new R Markdown file (File > New File > R Markdown...), and set its *Default Output Format* to HTML. You will get a R Markdown template you can tinker with. Try knitting the document to see what everything does.
+*More Advanced*: Want to jump right in? Open a new R Markdown file (*File > New File > R Markdown...*), and set its `Default Output Format` to `HTML`. You will get a R Markdown template you can tinker with. Try knitting the document to see what everything does.
+
+## Submitting Assignments
+
+Here's a quick run-down of how to submit your assignments using [R Markdown and Knitr](#r-markdown-knitr).
+
+- **Create R Markdown file with PDF output format**: We will often provide you with a template, and feel free to add on to it directly, but **make sure its output format is set to `pdf_document`**. Write out your explanations and insert code chunks to answer the questions provided. If you want to make a new file, go to *File > New File > R Markdown...* and set the `Default Output Format` to `PDF`. Either way, the header of the `.Rmd` file should look something like this:
+
+![](images/markdown_meta_header_example.png)
+
+- **Add PDF Dependencies**: As stated when you create a new R Markdown file, the PDF output format requires TeX:
+
+![](images/pdf_output_info.png)
+
+- Make sure you download TeX for your machine. Here are some Medium articles on the process of creating PDF reports (they cover starting from scratch with no installs at all, but you can skip over to installing TeX only):
+    + [**Mac OS**](https://medium.com/@sorenlind/create-pdf-reports-using-r-r-markdown-latex-and-knitr-on-macos-high-sierra-e7b5705c9fd){target="_blank"}
+    + [**Windows**](https://medium.com/@sorenlind/create-pdf-reports-using-r-r-markdown-latex-and-knitr-on-windows-10-952b0c48bfa9){target="_blank"}
+
+This can be a little complicated, but it will make that Knit button near the top of the IDE magically generate a PDF for you. 
+
+If you are in a rush and want a shortcut, you can instead set the `Default Output Format` to `HTML`. when you open the file in your browser, you can save it as a PDF. It will not be as nicely formatted, but it will still work.
 
 ## Getting help
 
