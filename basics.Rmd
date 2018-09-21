@@ -71,7 +71,7 @@ R is just like any language, programming or otherwise: you need to *use* it to g
     
 General advice: don't get caught up in the details.  Keep a list of questions and move on. 
 
-## Getting more specific
+## Packages and imports
 
 ### Installing packages
 
@@ -101,6 +101,8 @@ We often will need to pull data into RStudio to work with it.
 
 *More Advanced*: Importing every data format under the sun you say? I want to know how to do that. Here's [Part 1](https://www.datacamp.com/courses/importing-data-in-r-part-1){target="_blank"}, as well as [Part 2](https://www.datacamp.com/courses/importing-data-in-r-part-2){target="_blank"}, which focuses on databases and HTTP requests. Go nuts.
 
+## Communicating Results
+
 ### R Markdown & Knitr
 
 R Markdown is how you will be writing assignments for this course and Knitr is how you will generate an output file for submission. In general, they're a great way to communicate your findings to others (for the python-lovers among you, this is the [Jupyter Notebook](http://jupyter.org/){target="_blank"} of the R world).
@@ -115,7 +117,7 @@ R Markdown is how you will be writing assignments for this course and Knitr is h
 
 *More Advanced*: Want to jump right in? Open a new R Markdown file (*File > New File > R Markdown...*), and set its `Default Output Format` to `HTML`. You will get a R Markdown template you can tinker with. Try knitting the document to see what everything does. For more info on what is happening behind the scenes, checkout this [R Markdown Quick Tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html){target="_blank"}.
 
-## Submitting Assignments
+### Submitting Assignments
 
 Here's a quick run-down of how to submit your assignments using [R Markdown and Knitr](#r-markdown-knitr).
 
