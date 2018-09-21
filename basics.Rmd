@@ -113,9 +113,7 @@ R Markdown is how you will be writing assignments for this course and Knitr is h
 
 *More Advanced*: The [R Markdown page](https://rmarkdown.rstudio.com/){target="_blank"} from RStudio has [lessons](https://rmarkdown.rstudio.com/lesson-1.html){target="_blank"} with extensive info. Also, more cheatsheets.
 
-*More Advanced*: Want to jump right in? Open a new R Markdown file (*File > New File > R Markdown...*), and set its `Default Output Format` to `HTML`. You will get a R Markdown template you can tinker with. Try knitting the document to see what everything does.
-
-(If you're wondering about the difference, `rmarkdown` is the package that converts your text to HTML, while `knitr` runs the R code. In practice the distinction is murky: for example, clicking the "Knit" button in RStudio called the `rmarkdown::render()` function. For more info on what is happening behind the scenes, see [here](https://rmarkdown.rstudio.com/authoring_quick_tour.html){target="_blank"}.
+*More Advanced*: Want to jump right in? Open a new R Markdown file (*File > New File > R Markdown...*), and set its `Default Output Format` to `HTML`. You will get a R Markdown template you can tinker with. Try knitting the document to see what everything does. For more info on what is happening behind the scenes, checkout this [R Markdown Quick Tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html){target="_blank"}.
 
 ## Submitting Assignments
 
