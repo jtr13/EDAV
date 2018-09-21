@@ -131,7 +131,7 @@ Here's a quick run-down of how to submit your assignments using [R Markdown and 
 
 This can be a little complicated, but it will make that Knit button near the top of the IDE magically generate a PDF for you. 
 
-If you are in a rush and want a shortcut, you can instead set the `Default Output Format` to `HTML`. when you open the file in your browser, you can save it as a PDF. It will not be as nicely formatted, but it will still work.
+If you are in a rush and want a shortcut, you can instead set the `Default Output Format` to `HTML`. When you open the file in your browser, you can save it as a PDF. It will not be as nicely formatted, but it will still work.
 
 ## Getting help
 
