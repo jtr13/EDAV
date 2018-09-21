@@ -105,9 +105,9 @@ We often will need to pull data into RStudio to work with it.
 
 R Markdown is how you will be writing assignments for this course and Knitr is how you will generate an output file for submission. In general, they're a great way to communicate your findings to others (for the python-lovers among you, this is the [Jupyter Notebook](http://jupyter.org/){target="_blank"} of the R world)
 
-* Want a simple description of R Markdown? See [here](https://rmarkdown.rstudio.com/articles_intro.html){target="_blank"} for a description from RStudio on how to combine text, source code, and output into one document.
+* Want a simple description of R Markdown? Checkout [this RStudio article](https://rmarkdown.rstudio.com/articles_intro.html){target="_blank"} for a description on how to combine text, source code, and output into one document.
 
-* Prefer videos? [DataCamp course](https://www.datacamp.com/courses/reporting-with-r-markdown){target="_blank"} to the rescue! We will be using html formatting so focus on that. There is also an [RStudio webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r- markdown/){target="_blank"} about it.
+* Prefer videos? [DataCamp course](https://www.datacamp.com/courses/reporting-with-r-markdown){target="_blank"} to the rescue! There is also an [RStudio webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r- markdown/){target="_blank"} about it.
 
 * Don't know about Knitr? Here's [the specific section on Knitr](https://campus.datacamp.com/courses/reporting-with-r-markdown/chapter-two-embedding-code?ex=1){target="_blank"} from the DataCamp course cited above. With this package, you can embed code directly into your R Markdown files and generate output documents. Make sure to go through the later exercises to learn about [code chunks](https://rmarkdown.rstudio.com/lesson-3.html){target="_blank"} and [chunk options](http://yihui.name/knitr/options/){target="_blank"} so you can fine-tune your final output document with ease.
 
