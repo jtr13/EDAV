@@ -112,6 +112,10 @@ ggplot(colors_female_hair, aes(x = Hair, y = Total)) +
 <!-- ggplot2 explanation -->
 Bar plots are very easy in `ggplot2`. You pass in a dataframe and let it know which parts you want to map to different aesthetics. **Note**: In this case, we have a table of values and want to plot them as explicit bar heights. Because of this, we specify the y aesthetic as the `Total` column, but we also have to specify `stat = "identity"` in `geom_bar()` so it knows to plot them correctly. Often you will have datasets where each row is one observation and you want to group them into bars. In that case, the y aesthetic and `stat = "identity"` do not have to be specified.
 
+## Theory
+<!-- *Link to textbook -->
+*   For more info about plotting categorical data, check out [Chapter 4](http://www.gradaanwr.net/content/04-displaying-categorial-data/){target="_blank"} of the textbook.
+
 ## When to use
 <!-- Quick Note on When to use this plot -->
 Bar Charts are best for *categorical data*. Often you will have a collection of factors that you want to split into different groups. 
@@ -157,10 +161,6 @@ ggplot(colors, aes(x = Sex, y = Freq)) +
   geom_bar(stat = "identity") +
   facet_wrap(~Hair)
 ```
-
-## Theory
-<!-- *Link to textbook -->
-*   For more info about plotting categorical data, check out [Chapter 4](http://www.gradaanwr.net/content/04-displaying-categorial-data/){target="_blank"} of the textbook.
 
 ## External resources
 <!-- - [](){target="_blank"}: Links to resources with quick blurb -->
