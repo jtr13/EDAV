@@ -103,7 +103,7 @@ We often will need to pull data into RStudio to work with it.
 
 ### R Markdown & Knitr
 
-R Markdown is how you will be writing assignments for this course and Knitr is how you will generate an output file for submission. In general, they're a great way to communicate your findings to others (for the python-lovers among you, this is the [Jupyter Notebook](http://jupyter.org/){target="_blank"} of the R world)
+R Markdown is how you will be writing assignments for this course and Knitr is how you will generate an output file for submission. In general, they're a great way to communicate your findings to others (for the python-lovers among you, this is the [Jupyter Notebook](http://jupyter.org/){target="_blank"} of the R world).
 
 * Don't know about R Markdown? [DataCamp course](https://www.datacamp.com/courses/reporting-with-r-markdown){target="_blank"} to the rescue! There is also an [RStudio webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r- markdown/){target="_blank"} about it.
 
