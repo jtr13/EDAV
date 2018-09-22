@@ -106,7 +106,7 @@ If what you want to improve is a little more substantial (too difficult to contr
 
 ### Submit an issue
 
-If your proposed change is more complex, consider letting us know by **submitting an issue**. Say some links are broken, or a graph example is inaccurate or misleading. It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
+If your proposed change is more complex, consider letting us know by **submitting an issue**. Maybe you have a great idea for a brand new chapter, something we have not covered but would like to see here in this resource (a new chart page, say; or a walkthrough using a specific tool/package). It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
 
 [Issues](https://guides.github.com/features/issues/){target="_blank"} are tasks you can post to a GitHub repo that people can then take on and fix. They can be small ("this link is broken" / "add this resource") or complex ("I would love to have a chapter on..." / "reformat this code chunk in this way"). Once posted, issues can be taken on by anyone.
 
