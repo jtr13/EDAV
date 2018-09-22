@@ -128,7 +128,7 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 
 ### Solve an open issue
 
-If you see an open issue that you think you can solve, by all means go for it! Simply fork our repo, add to the code base, and submit your work as a pull request. Checkout [our open issues](https://github.com/jtr13/EDAV/issues){target="_blank"} to see what needs doing. We appreciate any input you may have. 
+If you see an open issue that you think you can solve, by all means go for it! Simply fork our repo, add to the code base, and submit your work as a pull request. Checkout [our open issues](https://github.com/jtr13/EDAV/issues){target="_blank"} to see what needs doing. We appreciate any input you may have. **Note**: before getting too far into changing something, let us know in the github issue that you are working on solving it. This makes sure we are all on the same page.
 
 Confused how to actually do what was mentioned above? We have [a thorough walkthrough example](#contribute-directly) that should help and make sure to checkout [our GitHub references page](github.html) for links to learn about GitHub.
 
