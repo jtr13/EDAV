@@ -7,6 +7,7 @@ output: pdf_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(aliases = c(h = 'fig.height', w = 'fig.width'))
 ```
 
 ## Code Chunks
@@ -108,7 +109,17 @@ If you find your document takes a long time to generate and you keep tweaking sm
 Annoyed by writing out `fig.height` and `fig.width`? You can use `fig.dim`, which specifies both. For example, `fig.dim = c(5, 6)` is the same as `fig.width = 5, fig.height = 7`.
 
 ### aliases
-Annoyed writing out chunk options in general? You can name aliases for chunk options as a global: `aliases = c(h = 'fig.height', w = 'fig.width')`. Now you can use `h` and `w` as you would `fig.height` and `fig.weight`, respectively.
+Annoyed writing out chunk options in general? You can name aliases for chunk options as a global. This is a package option, so you specify it using `knitr::opts_knit$set()` Here's an example: `knitr::opts_knit$set(aliases = c(h = 'fig.height', w = 'fig.width'))` Now you can use `h` and `w` as you would `fig.height` and `fig.weight`, respectively.
+
+## A Global Setting Example
+```{r eval=FALSE}
+knitr::opts_chunk$set(fig.align='center',
+               cache=TRUE, message = FALSE, 
+               warning = FALSE)
+knitr::opts_knit$set(aliases = c(h = 'fig.height', w = 'fig.width'))
+```
+
+This is an example of a way to setup global chunk options for a R Markdown file. In this case, every chunk will be cached (speed up re-rendering), messages and warnings will be suppressed, and all figures will be centered. This setup also sets aliases for height and width chunk options for ease of use.
 
 ## Explore
 There are a bunch of chunk options to explore. This showcase is just a small selection. Checkout the [the knitr options page](){target="_blank"} for documentation of every chunk option. I know I have referenced this several times now, but it deserves multiple mentions. It is the first thing I go to when I need to explore or try out a chunk option.
