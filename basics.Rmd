@@ -49,17 +49,17 @@ It is super important to get up and running with R and RStudio as soon as you ca
 
 Great! RStudio is up and running on your computer! Now make sure you get comfy with what it can do.
 
-* Don't know your way around the RStudio IDE? I highly recommend [this DataCamp course](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1){target="_blank"}. Sections from Part 1 (Orientation, Programming, and Projects) are the most relevant for this course. They include videos about all the regions in RStudio, how to program efficiently/effectively in the IDE (gotta love those keyboard shortcuts), and the benefits of setting up R projects. A little hazy on that last sentence? The course will help.
+* **Don't know your way around the RStudio IDE?** I highly recommend [this DataCamp course](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1){target="_blank"}. Sections from Part 1 (Orientation, Programming, and Projects) are the most relevant for this course. They include videos about all the regions in RStudio, how to program efficiently/effectively in the IDE (gotta love those keyboard shortcuts), and the benefits of setting up R projects. A little hazy on that last sentence? The course will help.
 
-*More Advanced*: Another option [is this RStudio webinar](https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-part-1/){target="_blank"}. Just want a quick reference to brush up with? Take a look at the [RStudio Cheatsheets page](https://www.rstudio.com/resources/cheatsheets/){target="_blank"}.
+* **Just want a quick reference to brush up with?** Take a look at the [RStudio Cheatsheets page](https://www.rstudio.com/resources/cheatsheets/){target="_blank"}. Another option [is this RStudio webinar](https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-part-1/){target="_blank"}. 
 
-*More Advanced*: Want to make the RStudio IDE your own? Look into [modifying the preferences](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio){target="_blank"}. You can customize the look of the IDE like default colors and typefaces, tweak default behaviors like clearing the environment on load, and integrate a session with a git repository. If something about the IDE bugs you, chances are you can make it more to your liking.
+* **Want to make the RStudio IDE your own?** Look into [modifying the preferences](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio){target="_blank"}. You can customize the look of the IDE like default colors and typefaces, tweak default behaviors like clearing the environment on load, and integrate a session with a git repository. If something about the IDE bugs you, chances are you can make it more to your liking.
 
 ### Learning about R
 
 R is just like any language, programming or otherwise: you need to *use* it to get *used* to it.
 
-* Just starting out in R? Check out this free [DataCamp course](https://www.datacamp.com/courses/free-introduction-to-r){target="_blank"} for a quick introduction. For this course, you can skim/mostly ignore matrices and lists (Parts 3 & 6).
+* **Just starting out in R?** Check out this free [DataCamp course](https://www.datacamp.com/courses/free-introduction-to-r){target="_blank"} for a quick introduction. For this course, you can skim/mostly ignore matrices and lists (Parts 3 & 6).
 
 * Next cover the material in the first section of [R for Data Science](http://r4ds.had.co.nz){target="_blank"} It is based on the tidyverse, a group of packages which, among other things, make it easier to code in R:
     - [Data Visualization](http://r4ds.had.co.nz/data-visualisation.html){target="_blank"}
@@ -77,29 +77,29 @@ General advice: don't get caught up in the details.  Keep a list of questions an
 
 A lot of the cool stuff comes from installing packages into R. 
 
-* How do you install packages? The main function we use is `install.packages("<package_name>")`, which installs from [CRAN](https://cran.r-project.org){target="_blank"}, a well-known place where packages are stored. Then, once installed, you can use packages by calling them within `library()`. 
+* **How do you install packages?** The main function we use is `install.packages("<package_name>")`, which installs from [CRAN](https://cran.r-project.org){target="_blank"}, a well-known place where packages are stored. Then, once installed, you can use packages by calling them within `library()`. 
 
-* Still confused? [This DataCamp video](https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=16){target="_blank"} should help explain the process. Also be sure to try the [accompanying exercise](https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=17){target="_blank"} to make sure you have a feel for loading a package.
+* **Still confused?** [This DataCamp video](https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=16){target="_blank"} should help explain the process. Also be sure to try the [accompanying exercise](https://campus.datacamp.com/courses/intermediate-r/chapter-3-functions?ex=17){target="_blank"} to make sure you have a feel for loading a package.
 
-*More Advanced*: Want more info? Check out this [DataCamp article on everything about installing packages in R](https://www.datacamp.com/community/tutorials/r-packages-guide){target="_blank"}. As well as covering the basics, this article shows you how to install packages that are not located on CRAN using `devtools`, as well as ways to monitor the status/health of your installed packages.
+* **Want more info?** Check out this [DataCamp article on everything about installing packages in R](https://www.datacamp.com/community/tutorials/r-packages-guide){target="_blank"}. As well as covering the basics, this article shows you how to install packages that are not located on CRAN using `devtools`, as well as ways to monitor the status/health of your installed packages.
 
 ### Tidyverse
 
 Don't know what the [tidyverse](https://www.tidyverse.org/){target="_blank"} is? It's great and we use it throughout this course. Specifically, `ggplot2` and `dplyr`, two packages within the Tidyverse. 
 
-* What's ggplot? Check out [this DataCamp course](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}. This course is split up into three parts and it is quite long, but it does go over pretty much everything ggplot has to offer. If you are starting out, stick with [Part 1](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}.
+* **What's ggplot?** Check out [this DataCamp course](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}. This course is split up into three parts and it is quite long, but it does go over pretty much everything ggplot has to offer. If you are starting out, stick with [Part 1](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"}.
 
-* What's dplyr? Make friends with [this DataCamp course](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial){target="_blank"}. It goes through the main dplyr verbs: select, mutate, filter, arrange, summarise; as well as the [lovely pipe operator](https://www.datacamp.com/community/tutorials/pipe-r-tutorial){target="_blank"}.
+* **What's dplyr?** Make friends with [this DataCamp course](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial){target="_blank"}. It goes through the main dplyr verbs: select, mutate, filter, arrange, summarise; as well as the [lovely pipe operator](https://www.datacamp.com/community/tutorials/pipe-r-tutorial){target="_blank"}.
 
-*More Advanced*: Want case studies to go through? Try [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-2/chapter-5-case-study?ex=1){target="_blank"} or [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-part-3/data-munging-and-visualization-case-study?ex=1){target="_blank"}.
+* **Want case studies to go through?** Try [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-2/chapter-5-case-study?ex=1){target="_blank"} or [this one](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-part-3/data-munging-and-visualization-case-study?ex=1){target="_blank"}.
 
 ### Importing data
 
 We often will need to pull data into RStudio to work with it. 
 
-* "Pull data"? I'm already confused. But wait! Here's a [DataCamp course on importing data using `dplyr`](https://www.datacamp.com/courses/importing-data-in-r-part-1){target="_blank"}. **Note**: This course explains how to import every kind of data format under the sun...all you need to be familiar with for this course (mostly) is pulling in CSV files using `read_csv`. So, if you are overwhelmed, just stick to the [read_csv stuff](https://campus.datacamp.com/courses/importing-data-in-r-part-1/importing-data-from-flat-files-with-utils?ex=1){target="_blank"}.
+* **"Pull data"? I'm already confused.** But wait! Here's a [DataCamp course on importing data using `dplyr`](https://www.datacamp.com/courses/importing-data-in-r-part-1){target="_blank"}. **Note**: This course explains how to import every kind of data format under the sun...all you need to be familiar with for this course (mostly) is pulling in CSV files using `read_csv`. So, if you are overwhelmed, just stick to the [read_csv stuff](https://campus.datacamp.com/courses/importing-data-in-r-part-1/importing-data-from-flat-files-with-utils?ex=1){target="_blank"}.
 
-*More Advanced*: Importing every data format under the sun you say? I want to know how to do that. Here's [Part 1](https://www.datacamp.com/courses/importing-data-in-r-part-1){target="_blank"}, as well as [Part 2](https://www.datacamp.com/courses/importing-data-in-r-part-2){target="_blank"}, which focuses on databases and HTTP requests. Go nuts.
+* **Importing every data format under the sun you say?** I want to know how to do that. Here's [Part 1](https://www.datacamp.com/courses/importing-data-in-r-part-1){target="_blank"}, as well as [Part 2](https://www.datacamp.com/courses/importing-data-in-r-part-2){target="_blank"}, which focuses on databases and HTTP requests. Go nuts.
 
 ## Communicating Results
 
@@ -107,15 +107,15 @@ We often will need to pull data into RStudio to work with it.
 
 R Markdown is how you will be writing assignments for this course and Knitr is how you will generate an output file for submission. In general, they're a great way to communicate your findings to others (for the python-lovers among you, this is the [Jupyter Notebook](http://jupyter.org/){target="_blank"} of the R world).
 
-* Want a simple description of R Markdown? Checkout [this RStudio article](https://rmarkdown.rstudio.com/articles_intro.html){target="_blank"} for a description on how to combine text, source code, and output into one document.
+* **Want to jump right in?** Open a new R Markdown file (*File > New File > R Markdown...*), and set its `Default Output Format` to `HTML`. You will get a R Markdown template you can tinker with. Try knitting the document to see what everything does. For more info on what is happening behind the scenes, checkout this [R Markdown Quick Tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html){target="_blank"}.
 
-* Prefer videos? [DataCamp course](https://www.datacamp.com/courses/reporting-with-r-markdown){target="_blank"} to the rescue! There is also an [RStudio webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r- markdown/){target="_blank"} about it.
+* **Want a simple description of R Markdown?** Checkout [this RStudio article](https://rmarkdown.rstudio.com/articles_intro.html){target="_blank"} for a description on how to combine text, source code, and output into one document.
 
-* Don't know about Knitr? Here's [the specific section on Knitr](https://campus.datacamp.com/courses/reporting-with-r-markdown/chapter-two-embedding-code?ex=1){target="_blank"} from the DataCamp course cited above. With this package, you can embed code directly into your R Markdown files and generate output documents. Make sure to go through the later exercises to learn about [code chunks](https://rmarkdown.rstudio.com/lesson-3.html){target="_blank"} and [chunk options](http://yihui.name/knitr/options/){target="_blank"} so you can fine-tune your final output document with ease.
+* **Prefer videos?** [DataCamp course](https://www.datacamp.com/courses/reporting-with-r-markdown){target="_blank"} to the rescue! There is also an [RStudio webinar](https://www.rstudio.com/resources/webinars/getting-started-with-r- markdown/){target="_blank"} about it.
 
-*More Advanced*: The [R Markdown page](https://rmarkdown.rstudio.com/){target="_blank"} from RStudio has [lessons](https://rmarkdown.rstudio.com/lesson-1.html){target="_blank"} with extensive info. Also, more cheatsheets.
+* **Don't know about Knitr?** Here's [the specific section on Knitr](https://campus.datacamp.com/courses/reporting-with-r-markdown/chapter-two-embedding-code?ex=1){target="_blank"} from the DataCamp course cited above. With this package, you can embed code directly into your R Markdown files and generate output documents. Make sure to go through the later exercises to learn about [code chunks](https://rmarkdown.rstudio.com/lesson-3.html){target="_blank"} and [chunk options](http://yihui.name/knitr/options/){target="_blank"} so you can fine-tune your final output document with ease.
 
-*More Advanced*: Want to jump right in? Open a new R Markdown file (*File > New File > R Markdown...*), and set its `Default Output Format` to `HTML`. You will get a R Markdown template you can tinker with. Try knitting the document to see what everything does. For more info on what is happening behind the scenes, checkout this [R Markdown Quick Tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html){target="_blank"}.
+* The [R Markdown page](https://rmarkdown.rstudio.com/){target="_blank"} from RStudio has [lessons](https://rmarkdown.rstudio.com/lesson-1.html){target="_blank"} with extensive info. Also, more cheatsheets.
 
 ### Submitting Assignments
 
@@ -166,7 +166,7 @@ Relax. There are a bunch of people using the same tools you are.
 
 * There is a lot of great documentation on R and its functions/packages/etc. Get comfy with [R Documentation](https://www.rdocumentation.org/){target="_blank"} and it will help you immensely.
 
-*More Advanced*: There is a vibrant [RStudio Community page](https://community.rstudio.com/){target="_blank"}. Also, R likes twitter. Check out [#rstats](https://twitter.com/search?q=%23rstats){target="_blank"} or maybe [let Hadley Wickham know about a wonky error message](https://twitter.com/hadleywickham/status/952259891342794752){target="_blank"}.
+* There is a vibrant [RStudio Community page](https://community.rstudio.com/){target="_blank"}. Also, R likes twitter. Check out [#rstats](https://twitter.com/search?q=%23rstats){target="_blank"} or maybe [let Hadley Wickham know about a wonky error message](https://twitter.com/hadleywickham/status/952259891342794752){target="_blank"}.
 
 
 
