@@ -12,6 +12,8 @@ I don't wanna just *read* about GitHub; I wanna learn by *doing*!
 
 We love your enthusiasm. To hit the ground running, checkout [GitHub Learning Lab](https://lab.github.com/){target="_blank"}. This application will teach you how to use GitHub with hands-on courses using actual repos. Its the perfect way to understand what using GitHub looks like.
 
+**Want a little reading as well?**: [Resources to learn Git](https://try.github.io/){target="_blank"} is a simple site split into two main sections: *Learn by reading* and *Learn by doing*. Take your pick. <i class= "far fa-smile"></i>
+
 ## On GitHub
 
 In this course, you will be working on a [project](project.html) in teams. Because of this, you probably want to be able to share code and work on different parts of the project simultaneously. This is where Git and GitHub comes in. 
