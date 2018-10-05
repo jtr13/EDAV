@@ -1,0 +1,18 @@
+# Chapter Template {#template}
+
+<!-- Chapter Banner -->
+<!-- ![](images/banners/banner_histogram.png) -->
+
+
+<!-- Under Construction Section
+----------------------------------------------------------------------------- -->
+![Under Construction](images/banners/banner_under_construction.png)
+*If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- 
+Some possible headers:
+- Overview
+- tl;dr
+- Theory
+-->
