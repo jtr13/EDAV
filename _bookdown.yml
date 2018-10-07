@@ -17,10 +17,11 @@ rmd_files: [
   "iris.Rmd",
   
   "bargraph.Rmd",
-  "histogram.Rmd",
   "boxplot.Rmd",
-  "scatterplot.Rmd",
+  "heatmap.Rmd",
+  "histogram.Rmd",
   "network.Rmd",
+  "scatterplot.Rmd", 
   
   "general_resources.Rmd",
   "perception.Rmd",
