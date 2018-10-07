@@ -7,7 +7,7 @@
 <!-- Under Construction Section
 ----------------------------------------------------------------------------- -->
 ![Under Construction](images/banners/banner_under_construction.png)
-*If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
 <!-- ------------------------------------------------------------------------ -->
 
 <!-- 
