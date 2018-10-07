@@ -20,8 +20,8 @@ rmd_files: [
   "boxplot.Rmd",
   "heatmap.Rmd",
   "histogram.Rmd",
-  "network.Rmd",
   "scatterplot.Rmd", 
+  "network.Rmd",
   
   "general_resources.Rmd",
   "perception.Rmd",
