@@ -26,6 +26,8 @@ A lot of these are available for students through [Columbia Libraries](http://li
 
 - [Ten Simple Rules for Better Figures](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833){target="_blank"}: A helpful article discussing how to make the best figures possible by following ten basic rules such as "Avoid 'chartjunk'" and "Know Your Audience". Good to keep these rules in mind.
 
+- [The Simpsons by the Data](http://toddwschneider.com/posts/the-simpsons-by-the-data/){target="_blank"}: Nice example of telling a story with data (histograms, scatterplots, etc.). Also, it's subject is everybody's favorite TV family.
+
 ## Meetups
 
 - [New York Open Statistical Programming Meetup](https://www.meetup.com/nyhackr/){target="_blank"}: Meetups hosted by [Jared Lander](https://www.jaredlander.com/about/){target="_blank"} and [Wes McKinney](http://wesmckinney.com/){target="_blank"} on a variety of topics in statistical programming, but with a focus on the R language. Past speakers have included [J.J. Allaire](https://en.wikipedia.org/wiki/Joseph_J._Allaire){target="_blank"} (founder of RStudio) and [Hadley Wickham](http://hadley.nz/){target="_blank"} (core tidyverse developer). Other attendees are generally eager to welcome newcomers and all of their talks are available on the [Lander Analytics Youtube channel](https://www.youtube.com/channel/UC2-hKemnrmVCH_29duyJ26A){target="_blank"}.
