@@ -1,0 +1,32 @@
+# Chart: Mosaic Plot {#mosaic}
+
+<!-- Chapter Banner -->
+![](images/banners/banner_mosaic.png)
+
+
+<!-- Under Construction Section
+----------------------------------------------------------------------------- -->
+![Under Construction](images/banners/banner_under_construction.png)
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+<!-- ------------------------------------------------------------------------ -->
+
+## Overview
+
+This section covers how to make mosaic plots.
+
+## tl;dr
+
+Coming soon <i class="far fa-smile-beam"></i>
+
+## Simple examples
+
+## Theory
+
+## External resources
+
+
+
+
+
+
+
