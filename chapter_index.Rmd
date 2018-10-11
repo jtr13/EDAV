@@ -51,25 +51,3 @@ This page includes links to every chapter in *edav.info/*
 [![GitHub Resources](images/banners/banner_github.png)](github.html){class="active-banner"}
 
 [![Chapter Index](images/banners/banner_chapter_index.png)](chapter-index.html){class="active-banner"}
-
-
-"index.Rmd", 
-  
-  "basics.Rmd",
-  "final_presentation.Rmd",
-  "contribute.Rmd",
-  
-  "iris.Rmd",
-  
-  "bargraph.Rmd",
-  "boxplot.Rmd",
-  "heatmap.Rmd",
-  "histogram.Rmd",
-  "scatterplot.Rmd", 
-  "network.Rmd",
-  
-  "general_resources.Rmd",
-  "perception.Rmd",
-  "publish_using_r.Rmd",
-  "github_resources.Rmd",
-  "chapter_index.Rmd"
