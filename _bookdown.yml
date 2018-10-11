@@ -18,14 +18,11 @@ rmd_files: [
 
   "bargraph.Rmd",
   "boxplot.Rmd",
-<<<<<<< HEAD
   "scatterplot.Rmd",
   "cleveland.Rmd",
-=======
   "heatmap.Rmd",
   "histogram.Rmd",
   "scatterplot.Rmd", 
->>>>>>> 9e2ef1e01c1ad3eb27b998406f6e0f96d4924c4e
   "network.Rmd",
 
   "general_resources.Rmd",
