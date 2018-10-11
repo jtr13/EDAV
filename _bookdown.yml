@@ -19,7 +19,6 @@ rmd_files: [
   "bargraph.Rmd",
   "boxplot.Rmd",
   "scatterplot.Rmd",
-  "cleveland.Rmd",
   "heatmap.Rmd",
   "histogram.Rmd",
   "scatterplot.Rmd", 
