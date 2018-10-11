@@ -1,0 +1,69 @@
+# Chart: Cleveland Dot Plot {#cleveland}
+
+![](images/banners/banner_cleveland.png)
+
+## Overview
+
+This section covers how to make Cleveland dot plots. Cleveland dot plots are a great alternative to a simple bar chart, particularly if you have more than a few items. It doesn’t take much for a bar chart to look cluttered. In the same amount of space, many more values can be included in a dot plot, and it’s easier to read as well. R has a built-in base function, `dotchart()`, but since it’s such an easy graph to draw, doing it “from scratch” in *ggplot2* or base allows for more customization.
+
+## tl;dr
+<!-- Nice Example Joke -->
+A clever joke about Swiss fertility in French-speaking provinces in 1888? Where's that HALP MEEE button???
+
+Here we show fertility rates from the built-in `swiss` dataset:
+
+
+
+```{r ggdot, fig.height = 6, fig.width = 5, echo = FALSE, warning = FALSE, message = FALSE} 
+library(ggplot2)
+library(dplyr)
+
+
+# create a theme for dot plots, which can be reused
+theme_dotplot <- theme_bw(14) +
+    theme(axis.text.y = element_text(size = rel(.75)),
+    	axis.ticks.y = element_blank(),
+        axis.title.x = element_text(size = rel(.75)),
+        panel.grid.major.x = element_blank(),
+        panel.grid.major.y = element_line(size = 0.5),
+        panel.grid.minor.x = element_blank())
+        
+# move row names to a dataframe column        
+df <-  swiss %>% tibble::rownames_to_column("Province")
+
+# create the plot
+ggplot(df, aes(x = Fertility, y = reorder(Province, Fertility))) +
+	geom_point(color = "blue") +
+	scale_x_continuous(limits = c(35, 95),
+		breaks = seq(40, 90, 10)) +
+	theme_dotplot +
+	xlab("\nannual live births per 1,000 women aged 15-44") +
+	ylab("French-speaking provinces\n") +
+	ggtitle("Standardized Fertility Measure\nSwitzerland, 1888")
+```
+
+And here's the code:
+```{r ref.label='ggdot', eval=FALSE}
+```
+
+For more info on this dataset, type `?datasets::chickwts` into the console.
+
+## Simple Examples
+Okay...*much* simpler please.
+ 
+
+
+### Boxplot using Base R
+
+
+
+### Boxplot using ggplot2
+
+## When to use
+
+
+## Considerations
+
+
+## External Resources
+
