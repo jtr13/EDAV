@@ -44,7 +44,7 @@ This is a full walkthough on proposing a change to *edav.info/*. It follows a hy
 ![](images/excited_student/directly-02.png)
 *Hit this icon to go to GitHub.*
 
-3. We haven't forked the repo yet, so GitHub shows us a page like the one below. No worries! We just **hit the big green button** labeled **<i class="fas fa-code-branch"></i> Fork this repository and propose changes** and we'll be good to go (as you will see, big green buttons are our friends). For more info on forking repos, the [GitHub Guide on Forking Projects](https://guides.github.com/activities/forking/){target="_blank"} is very informative.
+3. We haven't forked the repo yet, so GitHub shows us a page like the one below. No worries! We just **hit the big green button** labeled **<i class="fas fa-code-branch"></i> Fork this repository and propose changes** and we'll be good to go (as you will see, big green buttons are our friends). For more info on forking repos, the [GitHub Guide on Forking Projects](https://guides.github.com/activities/forking/){target="_blank"} is very informative. **Note**: you will not have to fork the repo every time. If you propose another change in the future, the edit icon, <i class="fas fa-edit"></i>, will jump you directly to this point of the walkthrough.
 ![](images/excited_student/directly-03.png)
 *Haven't forked the repo before? No worries; the big green button will solve everything.*
 
@@ -106,7 +106,7 @@ If what you want to improve is a little more substantial (too difficult to contr
 
 ### Submit an issue
 
-If your proposed change is more complex, consider letting us know by **submitting an issue**. Say some links are broken, or a graph example is inaccurate or misleading. It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
+If your proposed change is more complex, consider letting us know by **submitting an issue**. Maybe you have a great idea for a brand new chapter, something we have not covered but would like to see here in this resource (a new chart page, say; or a walkthrough using a specific tool/package). It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
 
 [Issues](https://guides.github.com/features/issues/){target="_blank"} are tasks you can post to a GitHub repo that people can then take on and fix. They can be small ("this link is broken" / "add this resource") or complex ("I would love to have a chapter on..." / "reformat this code chunk in this way"). Once posted, issues can be taken on by anyone.
 
@@ -128,7 +128,7 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 
 ### Solve an open issue
 
-If you see an open issue that you think you can solve, by all means go for it! Simply fork our repo, add to the code base, and submit your work as a pull request. Checkout [our open issues](https://github.com/jtr13/EDAV/issues){target="_blank"} to see what needs doing. We appreciate any input you may have. 
+If you see an open issue that you think you can solve, by all means go for it! Simply fork our repo, add to the code base, and submit your work as a pull request. Checkout [our open issues](https://github.com/jtr13/EDAV/issues){target="_blank"} to see what needs doing. We appreciate any input you may have. **Note**: before getting too far into changing something, let us know in the github issue that you are working on solving it. This makes sure we are all on the same page.
 
 Confused how to actually do what was mentioned above? We have [a thorough walkthrough example](#contribute-directly) that should help and make sure to checkout [our GitHub references page](github.html) for links to learn about GitHub.
 

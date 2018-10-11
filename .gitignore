@@ -2,7 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
-.gitignore
 *.Rproj
 edav-resource.rds
 search_index.json
