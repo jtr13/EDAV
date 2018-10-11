@@ -1,6 +1,0 @@
-# More Resources
-#
-
-## Package Development
-
-https://github.com/r-lib/usethis/blob/master/vignettes/articles/usethis-setup.Rmd
