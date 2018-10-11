@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+edav-resource.rds
+search_index.json
+_book/
+_bookdown_files/
+joyce_drafts/
