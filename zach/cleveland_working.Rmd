@@ -1,0 +1,107 @@
+# Chart: Cleveland Dot Plot
+
+## Overview
+Cleveland dot plots are a convenient alternative to bar plots, particularly for datasets with large numbers of categories.
+With `ggplot2`, it's helpful to create a dot plot theme, which can be reused:
+```{r CDPtheme}
+## Cleveland Dot Plot theme
+library(tidyverse)
+theme_dotplot <- theme_bw(18) +
+    theme(axis.text.y = element_text(size = rel(.75)),
+          axis.ticks.y = element_blank(),
+          axis.title.x = element_text(size = rel(.75)),
+          panel.grid.major.x = element_blank(),
+          panel.grid.major.y = element_line(size = 0.5),
+          panel.grid.minor.x = element_blank())
+```
+Cleveland dot plot
+```{r, fig.height = 8}
+world <-  read_csv("https://raw.githubusercontent.com/jtr13/codehelp/master/data/countries2012.csv")
+ africa <- world %>% filter(CONTINENT == "Africa")
+ ggplot(africa, aes(x = GDP, y = fct_reorder(COUNTRY, GDP))) +
+    geom_point(color = "blue") + ylab("") +
+    theme_dotplot + ggtitle("Africa: GDP per capita, 2012")
+```
+## Multiple dots
+```{r, fig.height=8, message=FALSE}
+library(AER)
+data("USSeatBelts")
+belts <- USSeatBelts %>% 
+    filter(year %in% c(1983, 1997)) %>% 
+    select(state, year, fatalities) 
+ 
+ggplot(belts, aes(x = fatalities, 
+                  y = fct_reorder2(state, year, -fatalities), 
+                  color = year)) + 
+    geom_point() + ylab("") + theme_dotplot + 
+    ggtitle("Number of fatalities per million traffic miles")
+```
+## Large number of categories 
+Scroll
+In chunk options: `{r fig.height = 20}`
+```{r ggdot, fig.height = 20}
+ g <- ggplot(world, aes(x = GDP, y = fct_reorder(COUNTRY, GDP))) +
+    geom_point(color = "blue") + ylab("") +
+    theme_dotplot
+g
+```
+## Interactive Cleveland dot plot
+```{r, echo = TRUE}
+library(plotly)
+ggplotly(g)
+```
+## 
+```{r}
+library(ggplot2)
+# create dot plot theme
+theme_dotplot <- theme_bw(18) +
+    theme(axis.text.y = element_text(size = rel(.8)),
+          axis.ticks.y = element_blank(),
+          axis.title.x = element_text(),
+          axis.text = element_text(face = "bold"),
+          plot.background = element_rect(fill = "lightcyan2"),
+          panel.background = element_rect(fill = "moccasin"),
+          panel.grid.major.x = 
+              element_line(size = 0.5),
+          panel.grid.major.y = 
+              element_line(size = 0.5, color = "lightblue"),
+          panel.grid.minor.x = element_blank(),
+          strip.text = element_text(size = rel(.7)),
+          legend.position = "top")
+```
+```{r}
+# data source:
+# NYT, How Much People in the Trump Administration Are Worth
+# https://www.nytimes.com/interactive/2017/04/01/us/politics/how-much-people-in-the-trump-administration-are-worth-financial-disclosure.html
+df <-  read_csv("https://raw.githubusercontent.com/jtr13/codehelp/master/data/Assets.csv")
+ # change units to millions
+df$Assets <- df$Assets / 1000000
+ # sort names by assets
+df$Name <- reorder(df$Name, df$Assets)
+```
+```{r fig.width = 7, fig.height = 8}
+# Cleveland Dot Plot
+ ggplot(df, aes(x = Assets, y = Name)) +
+    geom_point() + 
+    ggtitle("How Much People in the Trump\nAdministration Are Worth") +
+    ylab("") + xlab("Assets in Millions $") +
+    theme_dotplot
+```
+## 
+```{r fig.width = 7, fig.height = 9}
+# Cleveland Dot Plot with Four Panels
+ # create Panel column
+df$Panel <- rep(1:4, each = 9)
+df$Panel <- factor(df$Panel, levels = 1:4, 
+                   labels = c("$18 Million+",
+                                        "$4 - 12 Million",
+                                        "$1 - 3.5 Million",
+                                        "$66k - $604k"))
+                                        
+ggplot(df, aes(x = Assets, y = Name)) +
+    geom_point() + facet_wrap(~Panel, scales = "free", 
+                              ncol = 1) +
+    ggtitle("How Much People in the Trump\nAdministration Are Worth") +
+    ylab("") + xlab("Assets in Millions $") +
+    theme_dotplot
+```
