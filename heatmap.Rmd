@@ -22,13 +22,13 @@ This section covers how to make heatmaps.
 
 Too complicated! [Simplify, man!](https://www.youtube.com/watch?v=PlsW2hd06R0){target="_blank"}
 
-For these heat maps, we will use the `SpeedSki` dataset.
+### Heatmap of two-dimensional bin counts
 
-### Heat map of two-dimensional bin counts
+For this heatmap, we will use the `SpeedSki` dataset.
 
-Only two variables, `x` and `y` are needed for two-dimensional bin count heat maps. The third variable--i.e., the color--represents the bin count of points in the region it covers. Think of it as a two-dimensional histogram.
+Only two variables, `x` and `y` are needed for two-dimensional bin count heatmaps. The third variable--i.e., the color--represents the bin count of points in the region it covers. Think of it as a two-dimensional histogram.
 
-To create a heat map, simply substitute `geom_point()` with `geom_bin2d()`:
+To create a heatmap, simply substitute `geom_point()` with `geom_bin2d()`:
 ```{r heat-map-default}
 library(ggplot2) # plotting 
 library(GDAdata) # data (SpeedSki)
@@ -39,7 +39,7 @@ ggplot(SpeedSki, aes(Year, Speed)) +
 
 ### Heat map of dataframe
 
-To get a visual sense of the dataframe, you can use a heatmap. You can also look into normalizing columns to get a sense of your data on a common scale. In this example, we use `geom_tile` to graph all cells in the dataframe and color them by their value:
+To get a visual sense of the dataframe, you can use a heatmap. You can also look into [scaling the columns](https://stackoverflow.com/questions/15215457/standardize-data-columns-in-r){target="_blank"} to get a sense of your data on a common scale. In this example, we use `geom_tile` to graph all cells in the dataframe and color them by their value:
 ```{r heat-map-wine, message=FALSE}
 library(pgmm) # data
 library(tidyverse) # processing/graphing
