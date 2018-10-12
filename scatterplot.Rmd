@@ -176,56 +176,6 @@ ggplot(df, aes(wide_x, wide_y)) +
 
 ## Modifications
 
-### Heat maps
-
-Heat maps are like a combination of scatterplots and [histograms](histo.html): they allow you to compare different parameters while also seeing their relative distributions.
-
-For these heat maps, we will use the `SpeedSki` dataset.
-
-#### Heat map: default
-To create a heat map, simply substitute `geom_point()` with `geom_bin2d()`:
-```{r heat-map-default}
-ggplot(SpeedSki, aes(Year, Speed)) + 
-  geom_bin2d()
-```
-
-#### Heat map: modify color/bin width
-You can change the color palette by specifying it explicitly in your chain of `ggplot` function calls. The bin width can be added inside the `geom_bin2d()` function call:
-```{r heat-map-color-bin-width, message=FALSE}
-library(viridis) # viridis color palette
-
-# create plot
-g1 <- ggplot(SpeedSki, aes(Year, Speed)) + 
-  scale_fill_viridis() # modify color
-
-# show plot
-g1 + geom_bin2d(binwidth = c(5, 5)) # modify bin width
-```
-
-Here are some other examples:
-```{r}
-# larger bin width
-g1 + geom_bin2d(binwidth = c(10, 10)) 
-```
-
-```{r}
-# hexagonal bins
-g1 + geom_hex(binwidth = c(5, 5))
-```
-
-```{r}
-# hexagonal bins + scatterplot layer
-g1 + geom_hex(binwidth = c(5, 5), alpha = .4) + 
-  geom_point(size = 2, alpha = 0.8)
-```
-
-```{r}
-# hexagonal bins with custom color gradient/bin count
-ggplot(SpeedSki, aes(Year, Speed)) + 
-  scale_fill_gradient(low = "#cccccc", high = "#09005F") + # color
-  geom_hex(bins = 10) # number of bins horizontally/vertically
-```
-
 ### Contour lines
 <!-- blurb -->
 Contour lines give a sense of the density of the data at a glance.
