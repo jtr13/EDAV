@@ -37,6 +37,37 @@ ggplot(SpeedSki, aes(Year, Speed)) +
   geom_bin2d()
 ```
 
+### Heat map of dataframe
+
+To get a visual sense of the dataframe, you can use a heatmap. You can also look into normalizing columns to get a sense of your data on a common scale. In this example, we use `geom_tile` to graph all cells in the dataframe and color them by their value:
+```{r heat-map-wine, message=FALSE}
+library(pgmm) # data
+library(tidyverse) # processing/graphing
+library(viridis) # color palette
+
+data(wine)
+
+# convert to column, value
+wine_new <- wine %>%
+  rownames_to_column() %>%
+  gather(colname, value, -rowname)
+
+ggplot(wine_new, aes(x = rowname, y = colname, fill = value)) +
+  geom_tile() + scale_fill_viridis() +
+  ggtitle("Italian Wine Dataframe")
+```
+
+```{r}
+# only difference from above is scaling
+wine_scaled <- data.frame(scale(wine)) %>%
+  rownames_to_column() %>%
+  gather(colname, value, -rowname)
+
+ggplot(wine_scaled, aes(x = rowname, y = colname, fill = value)) +
+  geom_tile() + scale_fill_viridis() +
+  ggtitle("Italian Wine Dataframe, Scaled")
+```
+
 ### Modifications
 
 You can change the color palette by specifying it explicitly in your chain of `ggplot` function calls. The bin width can be added inside the `geom_bin2d()` function call:
