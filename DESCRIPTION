@@ -18,6 +18,7 @@ Imports:
   lattice,
   ggplot2movies,
   hexbin,
-  vcdExtra
+  vcdExtra,
+  pgmm
 Remotes: 
   rstudio/bookdown
