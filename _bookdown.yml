@@ -22,8 +22,8 @@ rmd_files: [
   "heatmap.Rmd",
   "histogram.Rmd",
   "scatterplot.Rmd",
-  "network.Rmd",
   "dates.Rmd",
+  "network.Rmd",
 
   "general_resources.Rmd",
   "perception.Rmd",
