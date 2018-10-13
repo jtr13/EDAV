@@ -38,6 +38,8 @@ This page includes links to every chapter in *edav.info/*
 
 [![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatter.html){class="active-banner"}
 
+[![Dates in R](images/banners/banner_dates.png)](dates.html){class="active-banner"}
+
 [![Networks](images/banners/banner_network.png)](network.html){class="active-banner"}
 
 <!-- Yellow Pages -->

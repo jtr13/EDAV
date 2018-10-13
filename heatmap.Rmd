@@ -3,20 +3,105 @@
 <!-- Chapter Banner -->
 ![](images/banners/banner_heatmap.png)
 
-
-<!-- Under Construction Section
------------------------------------------------------------------------------ -->
-![Under Construction](images/banners/banner_under_construction.png)
-*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
-<!-- ------------------------------------------------------------------------ -->
-
 ## Overview
 
 This section covers how to make heatmaps.
 
 ## tl;dr
 
-[Coming soon <i class="far fa-smile-beam"></i>](https://www.youtube.com/watch?v=7kdV8VmD76w){target="_blank"}
+Enough with these simple examples! I want [a complicated one](https://www.youtube.com/watch?v=tl8WjoE79Wo){target="_blank"}!
+
+Here's a heatmap of occupational categories of sons and fathers in the US, UK, and Japan:
+```{r message=FALSE, echo=FALSE, fig.width=9}
+library(vcdExtra) # dataset
+library(dplyr) # manipulation
+library(ggplot2) # plotting
+library(viridis) # color palette
+
+# format data
+orderedclasses <- c("Farm", "LoM", "UpM", "LoNM", "UpNM")
+mydata <- Yamaguchi87
+mydata$Son <- factor(mydata$Son, levels = orderedclasses)
+mydata$Father <- factor(mydata$Father,
+                        levels = orderedclasses)
+japan <- mydata %>% filter(Country == "Japan")
+uk <- mydata %>% filter(Country == "UK")
+us <- mydata %>% filter(Country == "US")
+
+# convert to % of country and class total
+mydata_new <- mydata %>% group_by(Country, Father) %>% 
+  mutate(Total = sum(Freq)) %>% ungroup()
+
+# make custom theme
+theme_heat <- theme_classic() +
+  theme(axis.line = element_blank(),
+        axis.ticks = element_blank())
+
+# basic plot
+plot <- ggplot(mydata_new, aes(x = Father, y = Son)) +
+  geom_tile(aes(fill = Freq/Total), color = "white") +
+  coord_fixed() + facet_wrap(~Country) + theme_heat
+
+# plot with text overlay and viridis color palette
+plot + geom_text(aes(label = round(Freq/Total, 1)), 
+                 color = "white") +
+      scale_fill_viridis() +
+      # formatting
+      ggtitle("Like Father, Like Son",
+              subtitle = "Heatmaps of occupational categories for fathers and sons, by country") +
+      labs(caption = "Source: vcdExtra::Yamaguchi87") +
+      theme(plot.title = element_text(face = "bold")) +
+      theme(plot.subtitle = element_text(face = "bold", color = "grey35")) +
+      theme(plot.caption = element_text(color = "grey68"))
+  
+```
+
+And here's the code:
+```{r message=FALSE, eval=FALSE, fig.width=9}
+library(vcdExtra) # dataset
+library(dplyr) # manipulation
+library(ggplot2) # plotting
+library(viridis) # color palette
+
+# format data
+orderedclasses <- c("Farm", "LoM", "UpM", "LoNM", "UpNM")
+mydata <- Yamaguchi87
+mydata$Son <- factor(mydata$Son, levels = orderedclasses)
+mydata$Father <- factor(mydata$Father,
+                        levels = orderedclasses)
+japan <- mydata %>% filter(Country == "Japan")
+uk <- mydata %>% filter(Country == "UK")
+us <- mydata %>% filter(Country == "US")
+
+# convert to % of country and class total
+mydata_new <- mydata %>% group_by(Country, Father) %>% 
+  mutate(Total = sum(Freq)) %>% ungroup()
+
+# make custom theme
+theme_heat <- theme_classic() +
+  theme(axis.line = element_blank(),
+        axis.ticks = element_blank())
+
+# basic plot
+plot <- ggplot(mydata_new, aes(x = Father, y = Son)) +
+  geom_tile(aes(fill = Freq/Total), color = "white") +
+  coord_fixed() + facet_wrap(~Country) + theme_heat
+
+# plot with text overlay and viridis color palette
+plot + geom_text(aes(label = round(Freq/Total, 1)), 
+                 color = "white") +
+      scale_fill_viridis() +
+      # formatting
+      ggtitle("Like Father, Like Son",
+              subtitle = "Heatmaps of occupational categories for fathers and sons, by country") +
+      labs(caption = "Source: vcdExtra::Yamaguchi87") +
+      theme(plot.title = element_text(face = "bold")) +
+      theme(plot.subtitle = element_text(face = "bold", color = "grey35")) +
+      theme(plot.caption = element_text(color = "grey68"))
+  
+```
+
+For more info on this dataset, type `?vcdExtra::Yamaguchi87` into the console.
 
 ## Simple examples
 
