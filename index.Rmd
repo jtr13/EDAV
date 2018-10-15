@@ -8,7 +8,7 @@ documentclass: book
 #biblio-style: apalike
 link-citations: yes
 github-repo: "jtr13/EDAV"
-url: 'edav.info/'
+url: 'https://edav.info/'
 description: "This resource is a collaborative collection of resources designed to help students succeed in GR5702 Exploratory Data Analysis and Visualization, a course offered at Columbia University. While the course lectures and textbook focus on theoretical issues, this resource, in contrast, provides coding tips and examples to assist students as they create their own analyses and visualizations. It is our hope that students will contribute to edav.info and it will grow with the course."
 cover-image: "images/edav_link_logo.png"
 ---
