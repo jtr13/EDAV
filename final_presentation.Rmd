@@ -20,16 +20,20 @@ You must work in teams of 2-4 people. (If you have specific interests you should
 
 ### Topics
 
-Start with a topic / question that interests you and *then* look for data!
+The topic you choose is open-ended... choose something that you are intereted in and genuinely curious about! Think of some questions that you don't know the answer to. Next look for data that might help you answer those questions.  
 
 ### Data
 
-Choose data from the original source: that is, one that is not included in R (or similar), nor used in Kaggle (or similar) competitions, nor relatively well-known/well-trodden through some other forum. If in doubt, *ask*! 
+The data can be pulled from multiple sources; it does not need to be a single dataset. Be sure to get data from the original source. For example, if you wish to work with data collected and distributed by the [Centers for Disease Control](https://www.cdc.gov/DataStatistics/){target = "_blank"}, that is where you should go to access the data, not a third party that has posted the data. Avoid overused datasets (think `Titanic`) as well as those used in Kaggle (or similar) competitions. 
 
 A few examples are:
 
 - [NYC Open Data](https://opendata.cityofnewyork.us/){target="_blank"}
 - [US Bureau of Labor Statistics](https://www.bls.gov/){target="_blank"}
+
+### Code
+
+All of your code should be stored on GitHub. In your report, include a link to the repo, as well as links to specific files as relevant. The static visualizations should be done in R, but other pieces, such as data importation and cleaning do not. 
 
 ### Analysis
 
@@ -37,7 +41,7 @@ You have a lot of freedom to choose what to do, as long as you restrict yourselv
 
 ### Feedback
 
-At any point, you may ask the head TA or the instructor (jtr13) for advice. Our primary role in this regard will be to provide general guidance on your choice of data / topic / direction. As always, you are encouraged to post specific questions to [Piazza](https://piazza.com/){target="_blank"}, particularly coding questions and issues. You may also volunteer to discuss your project with the class in order to get feedback--if you'd like to do this, [email the instructor](http://stat.columbia.edu/department-directory/name/joyce-robbins/){target="_blank"} to schedule a date.
+At any point, you may ask the TAs (Bridget and Zach) or the instructor (Joyce) for advice. Our primary role in this regard will be to provide general guidance on your choice of data / topic / direction. As always, you are encouraged to post specific questions to [Piazza](https://piazza.com/){target="_blank"}, particularly coding questions and issues. You may also volunteer to discuss your project with the class in order to get feedback--if you'd like to do this, [email the instructor](http://stat.columbia.edu/department-directory/name/joyce-robbins/){target="_blank"} to schedule a date.
 
 ### Peer review
 
@@ -47,7 +51,9 @@ A portion of your grade is based on the feedback *you* give to other groups. Aft
 
 ### Report format
 
-With the exception of the interactive part, your project should be submitted to CourseWorks in the same manner as homework assignments, as **.Rmd** and **.html** files, with graphs / output rendered. You will lose points if we have trouble reading your file, need to ask you to resubmit with graphs visible, if links are broken, or if we have other difficulties accessing your materials. It's ok if code is in different files and different places, just make sure there are working links in your report to these locations. **Note**: Using Markdown + code chunks is supposed to make combining code, text and graphs easier. If it is making it more difficult, you are probably trying to do something that isn't well suited to the tool set. Focus on the text and graphs, not the formatting. If you're not sure if something is important to focus on or not, please ask.
+With the exception of the interactive part, your project should be submitted to CourseWorks as an **.Rmd** and **.html** or **pdf** file, with graphs / output rendered. If it's not feasible to include certain portions of your material in the report, make those parts available online (for example, GitHub), and provide links to them in the report.
+
+You will lose points if we have trouble reading your file, need to ask you to resubmit with graphs visible, if links are broken, or if we have other difficulties accessing your materials. It's ok if code is in different files and different places, just make sure there are working links in your report to these locations. **Note**: Using Markdown + code chunks is supposed to make combining code, text and graphs easier. If it is making it more difficult, you are probably trying to do something that isn't well suited to the tool set. Focus on the text and graphs, not the formatting. If you're not sure if something is important to focus on or not, please ask. 
 
 *Advice*: don't wait to start writing.  Your overall project will undoubtedly be better if you give up trying to get that last graph perfect or the last bit of analysis done and get to the *writing*!
 
