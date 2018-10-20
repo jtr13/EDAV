@@ -1,4 +1,4 @@
-# Final Project Notes {#project}
+# Final Project Assignment {#project}
 
 ![](images/banners/banner_presentation.png)
 
