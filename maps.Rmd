@@ -1,0 +1,53 @@
+# Spatial Data {#maps}
+
+<!-- Under Construction Section
+----------------------------------------------------------------------------- -->
+![Maps](images/banners/banner_maps.png)
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+<!-- ------------------------------------------------------------------------ -->
+
+
+## Choropleth maps
+
+Cloropleth maps use color to indicate the value of a variable within a defined region, generally political boundaries.  The **choroplethr** package makes it simple to draw choropleth maps of [U.S. states, countries, and census tracts, as well as countries of the world](https://arilamstein.com/documentation/choroplethr/reference/){target="_blank"}; **choroplethrZip** provides data for [zip code level choropleths](https://arilamstein.com/creating-zip-code-choropleths-choroplethrzip/){target="_blank"}; **choroplethrAdmin1** draws choropleths for administrative regions of [world countries](https://rdrr.io/cran/choroplethrAdmin1/man/get_admin1_countries.html){target="_blank"}.
+
+We'll the `state.x77` dataset for this example:
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+library(choroplethr)
+
+# data frame must contain "region" and "value" columns
+
+df_illiteracy <- state.x77 %>% as.data.frame() %>% 
+  rownames_to_column("state") %>% 
+  transmute(region = tolower(`state`), value = Illiteracy)
+
+state_choropleth(df_illiteracy,
+                 title = "State Illiteracy Rates, 1977",
+                 legend = "Percent Illiterate")
+```
+
+Note: the **choroplethr** "free course" that you may come across arrives one lesson at a time by email over an extended period so not the best option unless you have a few weeks to spare.
+
+## Square bins
+
+Package such as `statebins` create choropleth style maps with equal size regions that roughly represent the location of the region, but not the size or shape.
+
+**Important**:  Don't install **statebins** from CRAN; use the [dev version](https://github.com/hrbrmstr/statebins){target="_blank"} -- it contains many improvements, which are detailed in ["Statebins Reimagined"](https://rud.is/b/2017/11/18/statebins-reimagined/#comment-19346){target="_blank"}.
+
+```{r}
+# devtools::install_github("hrbrmstr/statebins")
+library(statebins)
+df_illit <- state.x77 %>% as.data.frame() %>% 
+  rownames_to_column("state") %>% 
+  select(state, Illiteracy)
+
+# Note: direction = 1 switches the order of the fill scale 
+# so darker shades represent higher illiteracy rates
+# (The default is -1).
+
+statebins(df_illit, value_col="Illiteracy",
+          name = "%", direction = 1) +
+  ggtitle("State Illiteracy Rates, 1977") +
+  theme_statebins()
