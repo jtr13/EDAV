@@ -11,7 +11,10 @@
 
 Cloropleth maps use color to indicate the value of a variable within a defined region, generally political boundaries.  The **choroplethr** package makes it simple to draw choropleth maps of [U.S. states, countries, and census tracts, as well as countries of the world](https://arilamstein.com/documentation/choroplethr/reference/){target="_blank"}; **choroplethrZip** provides data for [zip code level choropleths](https://arilamstein.com/creating-zip-code-choropleths-choroplethrzip/){target="_blank"}; **choroplethrAdmin1** draws choropleths for administrative regions of [world countries](https://rdrr.io/cran/choroplethrAdmin1/man/get_admin1_countries.html){target="_blank"}.
 
-We'll the `state.x77` dataset for this example:
+Note: You must install also install **choroplethrMaps** for **choroplethr** to work.  In addition, **choroplethr** requires a number of other dependencies which should be installed automatically, but if they aren't, you can manually install the missing packages that you are notified about when you call `library(choroplethr)`: **maptools**, and **rgdal**, **sp**.
+
+
+We'll use the `state.x77` dataset for this example:
 
 ```{r, warning=FALSE, message=FALSE}
 library(tidyverse)
@@ -51,3 +54,7 @@ statebins(df_illit, value_col="Illiteracy",
           name = "%", direction = 1) +
   ggtitle("State Illiteracy Rates, 1977") +
   theme_statebins()
+```
+
+
+
