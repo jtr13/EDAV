@@ -23,5 +23,5 @@ Imports:
   visNetwork
   
 Remotes: 
-  rstudio/bookdown
+  rstudio/bookdown,
   hrbrmstr/statebins
