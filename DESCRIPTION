@@ -4,8 +4,6 @@ Title: Does not matter.
 Version: 0.0.1
 Imports: 
   bookdown,
-  #choroplethr,
-  #choroplethrMaps,
   datasets,
   GDAdata,
   ggplot2movies,
@@ -24,4 +22,3 @@ Imports:
   
 Remotes: 
   rstudio/bookdown
-  #hrbrmstr/statebins
