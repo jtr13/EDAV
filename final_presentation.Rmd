@@ -1,4 +1,4 @@
-# Final Project Notes {#project}
+# Final Project Assignment {#project}
 
 ![](images/banners/banner_presentation.png)
 
@@ -24,7 +24,7 @@ The topic you choose is open-ended... choose something that you are intereted in
 
 ### Data
 
-The data can be pulled from multiple sources; it does not need to be a single dataset. Be sure to get data from the original source. For example, if you wish to work with data collected and distributed by the [Centers for Disease Control](https://www.cdc.gov/DataStatistics/){target = "_blank"}, that is where you should go to access the data, not a third party that has posted the data. Avoid overused datasets (think `Titanic`) as well as those used in Kaggle (or similar) competitions. 
+The data can be pulled from multiple sources; it does not need to be a single dataset. Be sure to get data from the original source. For example, if you wish to work with data collected and distributed by the [Centers for Disease Control](https://www.cdc.gov/DataStatistics/){target="_blank"}, that is where you should go to access the data, not a third party that has posted the data. Avoid overused datasets (think `Titanic`) as well as those used in Kaggle (or similar) competitions. 
 
 A few examples are:
 
