@@ -12,7 +12,7 @@ We don't want *edav.info/* to be just another resource. Rather, we want it to be
 
 ## Ways you can contribute
 
-There are **three main ways** to contribute:
+There are **three main ways** you can contribute:
 
 - <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute directly**](#contribute-directly) (we got a full walkthrough on how to do this)
 - <i class="fas fa-sticky-note"></i> For **bigger/more abstract suggestions** <i class="fas fa-arrow-right"></i> [**submit an issue**](#submit-an-issue) (very simple, much appreciated)
