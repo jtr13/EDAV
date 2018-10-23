@@ -19,6 +19,3 @@ Imports:
   viridis,
   viridisLite,
   visNetwork
-  
-Remotes: 
-  rstudio/bookdown
