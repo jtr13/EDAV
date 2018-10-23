@@ -20,4 +20,5 @@ before_script:
 script:
 #  - ./_build.sh
 #  - ./_deploy.sh
-  - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && ./_build.sh ./_deploy.sh || ./_build.sh'
+  -  ./_build.sh
+  -  '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && ./_deploy.sh || [ "${TRAVIS_PULL_REQUEST}" = "true" ]'
