@@ -5,6 +5,8 @@ Version: 0.0.1
 Imports: 
   bookdown,
   datasets,
+  choroplethr,
+  choroplethrMaps,
   GDAdata,
   ggplot2movies,
   gridExtra,
@@ -13,6 +15,7 @@ Imports:
   MASS,
   pgmm,
   Sleuth3,
+  statebins,
   svglite,
   tidyverse,
   vcdExtra,
