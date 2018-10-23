@@ -18,6 +18,18 @@ The goal of this project is to perform an exploratory data analysis / create vis
 
 You must work in teams of 2-4 people. (If you have specific interests you should try to find partners on [Piazza](https://piazza.com/){target="_blank"} first as we will not be able to match on specific criteria -- we will simply assign groups in the order in which responses come in.)
 
+### Signup
+
+Please create a group by clicking on the People tab in CourseWorks, and then Student Groups. Next add the members of your group by dragging the names into the group.  
+
+Please use the following naming convention for your group name: Columbia UNIs in *alphabetical order*, with underscores separating names, for example:  **jtr13_rar3010_sw2934**.  Remember that final project groups may have between 2 and 4 members.
+
+Once you do so, we will create a copy of your group as a Final Project Group, which appears as a separate tab in the People section of CourseWorks. (If you're wondering, this is necessary since Student Groups cannot be used for graded assignments due to the way CourseWorks is designed.)
+
+If you don't sign up by the November 1 deadline, you will be assigned to a group randomly on November 2. That is not a bad option, and more realistic in terms of preparing yourself for a work environment. 
+
+Once the groups are set up, we will ask for a short description of your project ideas, so start planning!
+
 ### Topics
 
 The topic you choose is open-ended... choose something that you are intereted in and genuinely curious about! Think of some questions that you don't know the answer to. Next look for data that might help you answer those questions.  
