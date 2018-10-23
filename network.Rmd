@@ -1,6 +1,7 @@
 # Networks {#network}
 
 ![](images/banners/banner_network.png)
+This is a bad idea.
 
 <!--## ggnetwork (static)-->
 
