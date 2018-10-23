@@ -52,18 +52,3 @@ For more info on this dataset, type `?datasets::chickwts` into the console.
 Okay...*much* simpler please.
  
 
-
-### Boxplot using Base R
-
-
-
-### Boxplot using ggplot2
-
-## When to use
-
-
-## Considerations
-
-
-## External Resources
-
