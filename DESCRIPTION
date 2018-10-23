@@ -4,8 +4,8 @@ Title: Does not matter.
 Version: 0.0.1
 Imports: 
   bookdown,
-  choroplethr,
-  choroplethrMaps,
+  #choroplethr,
+  #choroplethrMaps,
   datasets,
   GDAdata,
   ggplot2movies,
@@ -16,7 +16,7 @@ Imports:
   pgmm,
   Sleuth3,
   svglite,
-  statebins,
+  #sstatebins,
   tidyverse,
   vcdExtra,
   viridis,
