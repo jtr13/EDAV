@@ -4,7 +4,7 @@
 
 ## Overview
 
-This section discusses how we built *edav.info/* and includes references for building sites/books of your own using R.
+This section discusses how we built *edav.info/* and includes references for building sites and books of your own using R.
 
 ## tl;dr
 
