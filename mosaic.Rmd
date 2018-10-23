@@ -1,0 +1,34 @@
+# Chart: Mosaic (
+<!-- Chapter Banner -->
+![](images/banners/banner_mosaic.png)
+
+## Overview
+
+
+## tl;dr
+
+
+## Simple Example
+
+
+
+
+## Mosaic using base R
+
+
+
+
+
+<!-- Under Construction Section
+----------------------------------------------------------------------------- -->
+![Under Construction](images/banners/banner_under_construction.png)
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- 
+Some possible headers:
+- Overview
+- tl;dr
+[Coming soon <i class="far fa-smile-beam"></i>](https://www.youtube.com/watch?v=7kdV8VmD76w){target="_blank"}
+- Theory
+-->
