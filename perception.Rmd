@@ -1,6 +1,7 @@
 # Perception/Color Resources {#percept}
 
 ![](images/banners/banner_percept.png)
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
 
 ## Overview
 
