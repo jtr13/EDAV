@@ -4,31 +4,62 @@
 
 ## Overview
 
+This section covers how to make Mosaic plots
+
+We will be using the `alligator` dataset from *vcdExtra* package as a primary dataset to give examples of mosaic plot in this section.
+
+```{r include=False}
+head(Alligator)
+```
+```{r include=False}
+str(Alligator)
+```
+
 
 ## tl;dr
 
+And here's the code
+
+```{r}
+library(vcdExtra)
+head(Alligator)
+
+vcd::mosaic(xtabs(count ~ food + lake + size, data = Alligator),
+            gp = gpar(fill=c('blue', 'lightblue'))
+            )
+```
 
 ## Simple Example
 
+Mosaic plot can be tricky to read, as such it is useful to see how it was constructed step by step.
+Continuting with the alligator dataset.
+
+```{r}
+vcd::mosaic(xtabs(count ~ lake, data=Alligator))
+vcd::mosaic(xtabs(count ~ lake + food, data=Alligator), )
+```
 
 
 
 ## Mosaic using base R
 
+```{r}
+mosaicplot(xtabs(count ~ lake + sex + size + food, data=Alligator), main="")
+```
+
+## Theory
+
+## When to use
+
+When you want to see the relationships in Multivariate Categorical Data
+
+## Considerations
+
+- length are easier to judge than area, so try to use rectangle with same width or height
+
+## Tips
 
 
 
 
-<!-- Under Construction Section
------------------------------------------------------------------------------ -->
-![Under Construction](images/banners/banner_under_construction.png)
-*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
-<!-- ------------------------------------------------------------------------ -->
-
-<!-- 
-Some possible headers:
-- Overview
-- tl;dr
-[Coming soon <i class="far fa-smile-beam"></i>](https://www.youtube.com/watch?v=7kdV8VmD76w){target="_blank"}
-- Theory
--->
+## External resources
