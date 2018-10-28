@@ -33,13 +33,13 @@ ggplot(Theoph_data, aes(x=Dose,y=Subject,fill=Subject))+
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-For more info on this dataset, type ?datasets::Theoph into the console.
+For more info on this dataset, type `?datasets::Theoph` into the console.
 
 ## Simple examples
 
-Okay..much simpler please.
+Okay...much simpler please.
 
-Let's use the 'Orange' dataset from the datasets package
+Let's use the `Orange` dataset from the `datasets` package:
 
 ```{r}
 library("datasets")
@@ -59,7 +59,7 @@ ggplot(Orange, aes(x=circumference,y=Tree,fill = Tree))+
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-ggridge uses two main geoms: "geom_density_ridges" and "geom_ridgeline" to plot the ridgeline density plots. They are used to plot the densities of various factors of a categorical variable on the y-axis to see its distribution over a continuous scale.
+`ggridge` uses two main geoms to plot the ridgeline density plots: "geom_density_ridges" and "geom_ridgeline". They are used to plot the densities of categorical variable factors and see their distribution over a continuous scale.
 
 One more example:
 
@@ -76,9 +76,9 @@ ggplot(OrchardSprays_data, aes(x=decrease,y=treatment,fill=treatment))+
 
 ## When to Use
 
-Ridgeline plots can be used when a number of data segments have to be plotted on a same horizontal scale. It is presented with slight overlap. Ridgeline plots are very useful to visualize the distribution of a categorical variable over time or space.
+Ridgeline plots can be used when a number of data segments have to be plotted on the same horizontal scale. It is presented with slight overlap. Ridgeline plots are very useful to visualize the distribution of a categorical variable over time or space.
 
-A good example where ridgeline plots will be a great example is visualizing the distribution of salary over different departments in a company.
+A good example using ridgeline plots will be a great example is visualizing the distribution of salary over different departments in a company.
 
 ## Considerations
 
