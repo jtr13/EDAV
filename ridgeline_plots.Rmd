@@ -6,19 +6,17 @@ library("tidyverse")
 library("cluster")
 ```
 
-# (PART) Documentation (Green) {-}
-
-# Chart : Ridgeline Plots
+# Chart : Ridgeline Plots {ridgeline}
 
 ## Overview
 
 This section covers how to make ridgeline plots.
 
-##tl;dr
+## tl;dr
 
 I want a nice example and I want it NOW!
 
-Here's a look at the dose of theophylline administered orally to the subject on which the concentration of theophylline is obsereved:
+Here's a look at the dose of theophylline administered orally to the subject on which the concentration of theophylline is observed:
 
 Here is the code:
 
