@@ -6,7 +6,7 @@ sudo: false
 addons:
   apt:
     packages:
-      - udunits2-dev
+      - udunits2-devel
 
 # safelist
 branches:
