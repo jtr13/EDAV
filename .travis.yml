@@ -3,6 +3,9 @@ cache: packages
 
 sudo: false
 
+r_github_packages:
+ - hrbrmstr/statebins
+
 addons:
   apt:
     packages:
