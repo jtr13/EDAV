@@ -15,12 +15,13 @@ Imports:
   MASS,
   pgmm,
   Sleuth3,
-  statebins,
   svglite,
   tidyverse,
+  units,
   vcdExtra,
   viridis,
   viridisLite,
   visNetwork
 Remotes: 
-  rstudio/bookdown
+  rstudio/bookdown,
+  hrbrmstr/statebins
