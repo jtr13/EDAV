@@ -2,49 +2,214 @@
 <!-- Chapter Banner -->
 ![](images/banners/banner_mosaic.png)
 
+```{r include=False}
+df = read.csv("data/MusicIcecream.csv")
+```
+
+
 ## Overview
 
 This section covers how to make Mosaic plots
-
-We will be using the `alligator` dataset from *vcdExtra* package as a primary dataset to give examples of mosaic plot in this section.
-
-```{r include=False}
-head(Alligator)
-```
-```{r include=False}
-str(Alligator)
-```
-
 
 ## tl;dr
 
 And here's the code
 
 ```{r}
-library(vcdExtra)
-head(Alligator)
 
-vcd::mosaic(xtabs(count ~ food + lake + size, data = Alligator),
-            gp = gpar(fill=c('blue', 'lightblue'))
-            )
+mosaic(Favorite ~ Age + Music, 
+       labeling = labeling_border(
+         abbreviate_labs = c(3, 10, 6),
+         rot_labels=c(0,0,90)
+       ),
+       gp = gpar(fill=c('lightblue', 'gray')),
+       df)
 ```
 
 ## Simple Example
 
-Mosaic plot can be tricky to read, as such it is useful to see how it was constructed step by step.
-Continuting with the alligator dataset.
+### Order of splits
 
-```{r}
-vcd::mosaic(xtabs(count ~ lake, data=Alligator))
-vcd::mosaic(xtabs(count ~ lake + food, data=Alligator), )
+It is best to draw mosaic plots incrementally: start with splitting on one variable and then add additional variables one at a time. The full mosaic plot will have one split per variable.
+
+Important: if your data is in a data frame (see above), **the count column must be called `Freq`**.
+
+Split on `Age` only:
+
+``` r
+library(vcd)
+mosaic(~Age, df)
 ```
 
+``` {r}
+library(vcd)
+mosaic(~Age, df)
+```
+
+Split on `Age`, then `Music`:
+
+``` r
+mosaic(Music ~ Age, df)
+```
+
+```{r}
+mosaic(Music ~ Age, df)
+```
+
+Note that the *first* split is between "young" and "old", while the second set of splits divides each age group into "classical" and "rock".
+
+Split on `Age`, then `Music`, then `Favorite`:
+
+``` r
+mosaic(Favorite ~ Age + Music, df)
+```
+
+```{r}
+mosaic(Favorite ~ Age + Music, df)
+```
+
+### Direction of splits
+
+Note that in the previous example, the direction of the splits is as follows:
+
+1.  `Age` -- horizontal split
+
+2.  `Music` -- vertical split
+
+3.  `Favorite` -- horizontal split
+
+This is the default direction pattern: alternating directions beginning with horizontal. Therefore we get the same plot with the following:
+
+``` r
+mosaic(Favorite ~ Age + Music, 
+       direction = c("h", "v", "h"), df)
+```
+
+```{r}
+mosaic(Favorite ~ Age + Music, 
+       direction = c("h", "v", "h"), df)
+```
+
+The directions can be altered as desired. For example, to create a doubledecker plot, make all splits vertical except the last one:
+
+``` r
+mosaic(Favorite ~ Age + Music,
+       direction = c("v", "v", "h"), df)
+```
+
+```{r}
+mosaic(Favorite ~ Age + Music,
+       direction = c("v", "v", "h"), df)
+```
+
+Note that the direction vector is in order of splits (`Age`, `Music`, `Favorite`), not in the order in which the variables appear in the formula, where the last variable to be split is listed first, before the "~".
+
+### Options
+
+#### Fill color:
+
+``` r
+library(grid) # needed for gpar
+mosaic(Favorite ~ Age + Music, 
+       gp = gpar(fill = c("lightblue", "blue")),
+       df)
+```
+
+```{r}
+library(grid) # needed for gpar
+mosaic(Favorite ~ Age + Music, 
+       gp = gpar(fill = c("lightblue", "blue")),
+       df)
+```
+
+#### Rotate labels:
+
+``` r
+mosaic(Favorite ~ Age + Music, 
+       labeling = labeling_border(rot_labels = c(45, -45, 0, 0)),
+       df)
+```
+
+```{r}
+mosaic(Favorite ~ Age + Music, 
+       labeling = labeling_border(rot_labels = c(45, -45, 0, 0)),
+       df)
+```
+
+The `rot_labels =` vector sets the rotation in degrees on the four sides of the plot in this order: *top, right, bottom, left*. (Different from the typical base graphics order!) The default is `rot_labels = c(0, 90, 0, 90)`.
+
+#### Abbreviate labels:
+
+``` r
+mosaic(Favorite ~ Age + Music, 
+       labeling = labeling_border(abbreviate_labs = c(3, 1, 6)), 
+       df)
+```
+
+```{r}
+mosaic(Favorite ~ Age + Music, 
+       labeling = labeling_border(abbreviate_labs = c(3, 1, 6)), 
+       df)
+```
+
+Labels are abbreviated in the order of the splits (as for `direction =`). The abbreviation algorithm appears to return the specified number of characters after vowels are eliminated (if necessary).
+
+For more formatting options, see `>?vcd::labeling_border`.
+
+#### Remove spacing between cells
+
+```r
+mosaic(Favorite ~ Age + Music,
+       spacing = spacing_equal(sp = unit(0, "lines")),
+       df)
+```
+
+```{r}
+mosaic(Favorite ~ Age + Music,
+       spacing = spacing_equal(sp = unit(0, "lines")),
+       df)
+```
+
+For more details, see `>?vcd::spacings`
+
+#### Change border color (must also set fill(?))
+
+``` r
+mosaic(Favorite ~ Age + Music,
+       gp = gpar(fill = c("lightblue", "blue"),
+                 col = "white"),
+       spacing = spacing_equal(sp = unit(0, "lines")),
+       df)
+```
+
+```{r}
+mosaic(Favorite ~ Age + Music,
+       gp = gpar(fill = c("lightblue", "blue"),
+                 col = "white"),
+       spacing = spacing_equal(sp = unit(0, "lines")),
+       df)
+```
+
+
+## Variations
+
+### Doubledecker
+
+```{r}
+data(Arthritis)
+Arthritis <- within(Arthritis,
+Treatment1 <- factor(Treatment,
+levels=levels(Treatment)[c(2,1)]))
+mosaic(Improved ~ Treatment1 + Sex, data = Arthritis,
+direction = c("v", "v", "h"), zero_size = 0)
+```
 
 
 ## Mosaic using base R
 
 ```{r}
 mosaicplot(xtabs(count ~ lake + sex + size + food, data=Alligator), main="")
+doubledecker(Improved ~ Treatment1 + Sex, data=Arthritis)
 ```
 
 ## Theory
@@ -55,11 +220,23 @@ When you want to see the relationships in Multivariate Categorical Data
 
 ## Considerations
 
+### Labels
+- Abbreviate names to help with legibility
+
+### Aspect Ratio
 - length are easier to judge than area, so try to use rectangle with same width or height
+- Taller thinner rectangles are better (we are better at distinguishing length than area)
 
-## Tips
+### Gaps between rectangles
+- No gap = most efficient
+- Can have gap at splits
+- Can Vary gap size down the heirarchy
 
-
-
+### Color
+- good for rates in subgroup
+- displaying residual
+- emphasizing particular subgroup
 
 ## External resources
+
+- Graphical data analysis with R - Everett, Monae - Chapter 7
