@@ -24,5 +24,6 @@ Imports:
   vcdExtra,
   viridis,
   viridisLite,
-  visNetwork
+  visNetwork,
+  knitr
 
