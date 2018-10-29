@@ -2,7 +2,7 @@
 <!-- Chapter Banner -->
 ![](images/banners/banner_mosaic.png)
 
-```{r include=False}
+```{r include=FALSE}
 df = read.csv("data/MusicIcecream.csv")
 ```
 
