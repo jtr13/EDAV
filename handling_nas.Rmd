@@ -1,7 +1,6 @@
-# Handling Missing Data {#NAs}
+# Handling Missing Data {#missing}
 
-<!-- Chapter Banner -->
-<!-- ![](images/banners/banner_histogram.png) -->
+![](images/banners/banner_missing.png)
 
 
 <!-- Under Construction Section
@@ -10,20 +9,11 @@
 *This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
 <!-- ------------------------------------------------------------------------ -->
 
-<!-- 
-Some possible headers:
-- Overview
-- tl;dr
-[Coming soon <i class="far fa-smile-beam"></i>](https://www.youtube.com/watch?v=7kdV8VmD76w){target="_blank"}
-- Theory
--->
-
-
 ## Overview
 This section covers what kinds of missing values are encountered in data and how to handle them.
 
 ## tl;dr
-It's difficult to handle missing data! If your data has some missing values (which it most probably will have) you can either remove such rows, such columns, or impute them.
+It's difficult to handle missing data! If your data has some missing values, which it most likely will, you can either remove such rows, such columns, or impute them.
 
 ## What are NAs?
 
