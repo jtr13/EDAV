@@ -40,6 +40,8 @@ This page includes links to every chapter in *edav.info/*
 
 [![Dates in R](images/banners/banner_dates.png)](dates.html){class="active-banner"}
 
+[![Spatial Data](images/banners/banner_maps.png)](maps.html){class="active-banner"}
+
 [![Networks](images/banners/banner_network.png)](network.html){class="active-banner"}
 
 <!-- Yellow Pages -->
