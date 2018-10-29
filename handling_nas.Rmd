@@ -20,6 +20,7 @@ It's difficult to handle missing data! If your data has some missing values, whi
 Whenever data in some row or column in your data is missing, it comes up as NA. Let's have a look at some data, shall we?
 ```{r echo = FALSE}
 library(tidyverse)
+library(scales)
 Name <- c("Melissa", "Peter", "Aang", "Drake", "Bruce", "Gwen", "Ash",NA)
 Sex <- c("Female", NA, "Male", "Male", NA, "Female", "Male",NA)
 Age <- c(27, NA, 110, NA, 45, 28, NA, NA)
@@ -90,7 +91,7 @@ And we can also add a scale to check the numerical values available in the datas
 numeric_col_names <- colnames(select_if(data, is.numeric))
 filtered_for_numeric <- tidy_names[tidy_names$key %in% numeric_col_names,]
 filtered_for_numeric$value <- as.integer(filtered_for_numeric$value)
-
+# Use label=comma to remove scientific notation
 ggplot(data = filtered_for_numeric, aes(x = key, y = fct_rev(Name), fill = value)) +
   geom_tile(color = "white") + 
   scale_fill_gradient(low = "grey80", high = "red", na.value = "black", label=comma) + 
