@@ -24,7 +24,7 @@ rmd_files: [
   "scatterplot.Rmd",
   "mosaic.Rmd",
   "dates.Rmd",
-  #"maps.Rmd",
+  "maps.Rmd",
   "network.Rmd",
 
   "general_resources.Rmd",
