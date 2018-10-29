@@ -27,7 +27,8 @@ data <- data.frame(Name, Sex, Age, E_mail, Education, Income)
 ```
 
 ```{r echo = FALSE}
-knitr::kable(data)
+library(knitr)
+kable(data)
 ```
 
 We can see the number of NAs in each column and row:
