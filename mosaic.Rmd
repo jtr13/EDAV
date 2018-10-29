@@ -16,12 +16,13 @@ This section covers how to make Mosaic plots
 And here's the code
 
 ```{r}
-
+library(vcd)
 mosaic(Favorite ~ Age + Music, 
        labeling = labeling_border(
          abbreviate_labs = c(3, 10, 6),
-         rot_labels=c(0,0,90)
+         rot_labels=c(0,0,-45)
        ),
+       direction=c('v','v','h'), # Age = Vertical, Music = Vertical, Favoriate = Horizonal (a.k.a DoubleDecker)
        gp = gpar(fill=c('lightblue', 'gray')),
        df)
 ```
@@ -191,26 +192,78 @@ mosaic(Favorite ~ Age + Music,
 ```
 
 
-## Variations
-
-### Doubledecker
-
-```{r}
-data(Arthritis)
-Arthritis <- within(Arthritis,
-Treatment1 <- factor(Treatment,
-levels=levels(Treatment)[c(2,1)]))
-mosaic(Improved ~ Treatment1 + Sex, data = Arthritis,
-direction = c("v", "v", "h"), zero_size = 0)
-```
-
 
 ## Mosaic using base R
+```r
+mosaicplot(xtabs(count ~ lake + sex + size + food, data=Alligator), main="")
+```
 
 ```{r}
-mosaicplot(xtabs(count ~ lake + sex + size + food, data=Alligator), main="")
-doubledecker(Improved ~ Treatment1 + Sex, data=Arthritis)
+mosaicplot(xtabs(count ~ lake + sex, data=Alligator), main="")
 ```
+
+```r
+mosaicplot(xtabs(Freq ~ Favorite + Age + Music, data=df), main="",
+           dir=c('h', 'v', 'v'))
+```
+```{r}
+mosaicplot(xtabs(Freq ~ Favorite + Age + Music, data=df), main="",
+           dir=c('h', 'v', 'v'))
+```
+
+### Mosaic using vcd::doubledecker
+
+```r
+vcd::doubledecker(Improved ~ Treatment1 + Sex, data=Arthritis)
+```
+
+```{r}
+vcd::doubledecker(Improved ~ Treatment1 + Sex, data=Arthritis)
+```
+
+```r
+vcd::doubledecker(Music ~ Favorite + Age, 
+                  xtabs(Freq ~ Age + Music + Favorite, df))
+```
+
+```{r}
+vcd::doubledecker(Music ~ Favorite + Age, 
+                  xtabs(Freq ~ Age + Music + Favorite, df))
+```
+
+## Mosaic using ggplot
+
+For a comprehensive overview of mosaic plot in ggplot check out the link below.
+https://cran.r-project.org/web/packages/ggmosaic/vignettes/ggmosaic.html
+
+```r
+library(ggmosaic)
+
+# equivalent to doing Favorite ~ Age + Music in vcd::mosaic with doubledecker style cut
+ggplot(df) + 
+  geom_mosaic(
+    aes(x=product(Favorite, Age, Music), # cut from right to left 
+        weight=Freq,
+        fill=Favorite
+        ),
+    divider=c("vspine" , "hspine", "hspine") # equivalent to divider=ddecker()
+  ) 
+```
+
+```{r}
+library(ggmosaic)
+
+# equivalent to doing Favorite ~ Age + Music in vcd::mosaic with doubledecker style cut
+ggplot(df) + 
+  geom_mosaic(
+    aes(x=product(Favorite, Age, Music), # cut from right to left 
+        weight=Freq,
+        fill=Favorite
+        ),
+    divider=c("vspine" , "hspine", "hspine") # equivalent to divider=ddecker()
+  ) 
+```
+
 
 ## Theory
 
@@ -221,22 +274,30 @@ When you want to see the relationships in Multivariate Categorical Data
 ## Considerations
 
 ### Labels
-- Abbreviate names to help with legibility
+
+Legibility of the labels is problematic in mosaic plot especially when there are a lot of dimensions. This can be alleviated by
+- Abbreviate names
+- Rotating the labels
 
 ### Aspect Ratio
-- length are easier to judge than area, so try to use rectangle with same width or height
+- lengths are easier to judge than area, so try to use rectangles with same width or height
 - Taller thinner rectangles are better (we are better at distinguishing length than area)
 
 ### Gaps between rectangles
 - No gap = most efficient
-- Can have gap at splits
-- Can Vary gap size down the heirarchy
+
+However, a gap can help improve legibility, so try out different combinations
+
+- Can have a gap at splits
+- Can Vary gap size down the hierarchy
 
 ### Color
-- good for rates in subgroup
+- good for rates in the subgroup
 - displaying residual
 - emphasizing particular subgroup
 
 ## External resources
 
-- Graphical data analysis with R - Everett, Monae - Chapter 7
+- Chapter 7 of [Graphical data analysis with R by Anthony Unwin](https://www.crcpress.com/Graphical-Data-Analysis-with-R/Unwin/p/book/9781498715232){target="_blank"}
+
+- [Link](https://cran.r-project.org/web/packages/ggmosaic/vignettes/ggmosaic.html){target="_blank"}: A comprehensive overview of mosaic plot in ggplot check out the link below.
