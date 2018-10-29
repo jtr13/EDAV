@@ -31,13 +31,13 @@ state_choropleth(df_illiteracy,
                  legend = "Percent Illiterate")
 ```
 
-Note: the **choroplethr** "free course" that you may come across arrives one lesson at a time by email over an extended period so not the best option unless you have a few weeks to spare.
+**Note**: the `choroplethr` "free course" that you may come across arrives one lesson at a time by email over an extended period so not the best option unless you have a few weeks to spare.
 
 ## Square bins
 
 Packages such as `statebins` create choropleth style maps with equal size regions that roughly represent the location of the region, but not the size or shape.
 
-**Important**:  Don't install **statebins** from CRAN; use the [dev version](https://github.com/hrbrmstr/statebins){target="_blank"} -- it contains many improvements, which are detailed in ["Statebins Reimagined"](https://rud.is/b/2017/11/18/statebins-reimagined/#comment-19346){target="_blank"}.
+**Important**:  Don't install `statebins` from CRAN; use the [dev version](https://github.com/hrbrmstr/statebins){target="_blank"} -- it contains many improvements, which are detailed in ["Statebins Reimagined"](https://rud.is/b/2017/11/18/statebins-reimagined/#comment-19346){target="_blank"}.
 
 ```{r}
 # devtools::install_github("hrbrmstr/statebins")

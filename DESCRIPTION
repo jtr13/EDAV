@@ -5,6 +5,8 @@ Version: 0.0.1
 Imports: 
   bookdown,
   datasets,
+  choroplethr,
+  choroplethrMaps,
   GDAdata,
   ggplot2movies,
   gridExtra,
@@ -15,9 +17,9 @@ Imports:
   Sleuth3,
   svglite,
   tidyverse,
+  units,
   vcdExtra,
   viridis,
   viridisLite,
   visNetwork
-Remotes: 
-  rstudio/bookdown
+
