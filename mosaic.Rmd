@@ -199,6 +199,7 @@ mosaicplot(xtabs(count ~ lake + sex + size + food, data=Alligator), main="")
 ```
 
 ```{r}
+library(vcdExtra)
 mosaicplot(xtabs(count ~ lake + sex, data=Alligator), main="")
 ```
 
@@ -214,11 +215,12 @@ mosaicplot(xtabs(Freq ~ Favorite + Age + Music, data=df), main="",
 ### Mosaic using vcd::doubledecker
 
 ```r
-vcd::doubledecker(Improved ~ Treatment1 + Sex, data=Arthritis)
+vcd::doubledecker(Improved ~ Treatment + Sex, data=Arthritis)
 ```
 
 ```{r}
-vcd::doubledecker(Improved ~ Treatment1 + Sex, data=Arthritis)
+data(Arthritis)
+vcd::doubledecker(Improved ~ Treatment + Sex, data=Arthritis)
 ```
 
 ```r
