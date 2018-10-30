@@ -7,13 +7,16 @@ Imports:
   datasets,
   choroplethr,
   choroplethrMaps,
+  extracat,
   GDAdata,
   ggplot2movies,
   gridExtra,
   lattice,
   likert,
   MASS,
+  mi,
   pgmm,
+  scales,
   Sleuth3,
   svglite,
   tidyverse,
@@ -23,4 +26,4 @@ Imports:
   viridisLite,
   visNetwork,
   ggmosaic
-
+  knitr

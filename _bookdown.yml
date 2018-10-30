@@ -25,6 +25,7 @@ rmd_files: [
   "mosaic.Rmd",
   "dates.Rmd",
   "maps.Rmd",
+  "missing_data.Rmd",
   "network.Rmd",
 
   "general_resources.Rmd",
