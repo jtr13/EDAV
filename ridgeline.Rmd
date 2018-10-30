@@ -1,10 +1,16 @@
+# Chart: Ridgeline Plots {#ridgeline}
+
+![](images/banners/banner_ridgeline.png)
+*This chapter originated as a community contribtuion proposed by [nehasaraf1994](https://github.com/nehasaraf1994){target="_blank"}*
+
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library("ggridges")
 library("tidyverse")
 library("cluster")
 ```
-# Chart : Ridgeline Plots {#ridgeline}
  
 ## Overview
  
@@ -16,31 +22,31 @@ I want a nice example and I want it NOW!
  
 Here's a look at the dose of theophylline administered orally to the subject on which the concentration of theophylline is observed:
 
-```{r tldr-show-plot, echo=FALSE}
+```{r tldr-show-plot, echo=FALSE, message=FALSE}
 library("ggridges")
 library("tidyverse")
 Theoph_data <- Theoph
 ggplot(Theoph_data, aes(x=Dose,y=Subject,fill=Subject))+
-  geom_density_ridges_gradient(scale=4) + theme_ridges()+
+  geom_density_ridges_gradient(scale = 4, show.legend = FALSE) + theme_ridges() +
   scale_y_discrete(expand = c(0.01, 0)) +
-  scale_x_continuous(expand = c(0.01, 0))+
-  labs(x="Dose of theophylline(mg/kg)",y="Subject of experimentation")+
-  ggtitle("Density estimation of dosage given to various subjects under observation")+
+  scale_x_continuous(expand = c(0.01, 0)) +
+  labs(x = "Dose of theophylline(mg/kg)",y = "Subject #") +
+  ggtitle("Density estimation of dosage given to various subjects") +
   theme(plot.title = element_text(hjust = 0.5))
 ```
  
 Here is the code:
 
-```{r tldr-code, eval=FALSE, fig.width=12}
+```{r tldr-code, eval=FALSE}
 library("ggridges")
 library("tidyverse")
 Theoph_data <- Theoph
 ggplot(Theoph_data, aes(x=Dose,y=Subject,fill=Subject))+
-  geom_density_ridges_gradient(scale=4) + theme_ridges()+
+  geom_density_ridges_gradient(scale = 4, show.legend = FALSE) + theme_ridges() +
   scale_y_discrete(expand = c(0.01, 0)) +
-  scale_x_continuous(expand = c(0.01, 0))+
-  labs(x="Dose of theophylline(mg/kg)",y="Subject of experimentation")+
-  ggtitle("Density estimation of dosage given to various subjects under observation")+
+  scale_x_continuous(expand = c(0.01, 0)) +
+  labs(x = "Dose of theophylline(mg/kg)",y = "Subject #") +
+  ggtitle("Density estimation of dosage given to various subjects") +
   theme(plot.title = element_text(hjust = 0.5))
 ```
  
@@ -60,7 +66,7 @@ head(Orange, n=5)
 
 ## Ridgeline Plots using ggridge
 
-```{r}
+```{r message=FALSE}
 library("ggridges")
 library("tidyverse")
 ggplot(Orange, aes(x=circumference,y=Tree,fill = Tree))+
@@ -85,7 +91,7 @@ A good example using ridgeline plots will be a great example is visualizing the 
  
 The overlapping of the density plot can be controlled by adjusting the value of scale. Scale defines how much the peak of the lower curve touches the curve above.
 
-```{r, fig.width=10}
+```{r, fig.width=10, message=FALSE}
 library("ggridges")
 library("tidyverse")
 OrchardSprays_data <- OrchardSprays
@@ -117,7 +123,7 @@ ggplot(InsectSprays, aes(x = count, y = spray, height = ..density.., fill = spra
 
 If the same thing is done in ridgeline plots, it gives better results.
 
-```{r}
+```{r message=FALSE}
 library("ggridges")
 library("tidyverse")
 ggplot(InsectSprays, aes(x=count,y=spray,fill=spray))+
