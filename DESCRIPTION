@@ -21,5 +21,6 @@ Imports:
   vcdExtra,
   viridis,
   viridisLite,
-  visNetwork
+  visNetwork,
+  ggmosaic
 
