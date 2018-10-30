@@ -56,7 +56,7 @@ This is a full walkthough on proposing a change to *edav.info/*. It follows a hy
 ![](images/excited_student/directly-05.png)
 *Make your edits, include a quick explanation, and hit the big green button.*
 
-6. Now GitHub is once again helping out by letting us review the changes we made. On this page we can **review our proposed changes** by scrolling down and looking at the [diffs](https://git-scm.com/docs/git-diff){target="_blank"}. Our fix is very simple so there isn't much to see. Once again, we are going to **push the big green button**, this time labeled **Create pull request**. This will start the process of letting the *edav.info/* people know that we would like them to include our changes (in git-speak, we are *requesting* that when the *edav.info/* people do a `git pull`, they *pull* in our changes as well. Hence, a pull request).
+6. Now GitHub is once again helping out by letting us review the changes we made. On this page we can **review our proposed changes** by scrolling down and looking at the [diffs](https://git-scm.com/docs/git-diff){target="_blank"}. Our fix is very simple so there isn't much to see. Once again, we are going to **push the big green button**, this time labeled **Create pull request**. This will start the process of letting the *edav.info/* people know that we would like them to include our changes (in git-speak, we are *requesting* that the *edav.info/* people do a `git merge` to update their files with our proposed changes.)
 ![](images/excited_student/directly-06.png)
 *Chance to review your changes. Once satisfied, hit the big green button to start a pull request.*
 
