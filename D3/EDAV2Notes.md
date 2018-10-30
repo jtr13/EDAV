@@ -1,6 +1,8 @@
 EDAV2 Notes
 ================
 
+Read: IDVB, Chapter 3
+
 Framework of an .html file
 ==========================
 
