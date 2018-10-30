@@ -25,5 +25,5 @@ Imports:
   viridis,
   viridisLite,
   visNetwork,
-  ggmosaic
+  ggmosaic,
   knitr
