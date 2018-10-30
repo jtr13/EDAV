@@ -3,7 +3,7 @@ EDAV6 Notes
 
 Scales
 =======
-[Scales.pdf](Scales.pdf)
+[EDAV6Lect-Scales.pdf](EDAV6Lect-Scales.pdf)
 
 Ordinal scale for x-axis [EDAV5_4_scaleBand.html](EDAV5_4_scaleBand.html)
 
@@ -12,7 +12,7 @@ Linear scale for y-axis
 
 Axes
 =======
-[Axes.pdf](Axes.pdf)
+[EDAV6Lect-Axes.pdf](EDAV6Lect-Axes.pdf)
 
 Margins [EDAV6_1_margins.html](EDAV6_1_margins.html)
 
