@@ -6,7 +6,7 @@ This section covers how to make violin plots.
 
 ## Some Examples in R
 
-Let’s use the chickwts dataset from the datasets package to plot a violin plot using ggplot. 
+Let’s use the `chickwts` dataset from the `datasets` package to plot a violin plot using `ggplot2`. 
 
 ```{r}
 # import ggplot and the Datasets Package
