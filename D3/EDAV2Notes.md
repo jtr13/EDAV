@@ -171,11 +171,11 @@ d3.select("circle").transition().duration(2000)
   .attr("r", "50");
 ```
 
-1.  Chaining
+1.  Chaining  (IDVW, Chapter 5, pp. 70-72)
 
-2.  Selections
+2.  Selections  (IDVW, Chapter 5, pp. 79-80)
 
-3.  Modifying elements
+3.  Modifying elements (IDVW, Chapter 6, 90-93 & elsewhere)
 
 Chaining methods
 ================
