@@ -23,7 +23,8 @@ rmd_files: [
   "histogram.Rmd",
   "scatterplot.Rmd",
   "dates.Rmd",
-  #"maps.Rmd",
+  "maps.Rmd",
+  "missing_data.Rmd",
   "network.Rmd",
 
   "general_resources.Rmd",
