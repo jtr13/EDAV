@@ -1,0 +1,167 @@
+# Dates in R {#dates}
+
+![](images/banners/banner_dates.png)
+
+## Introduction
+
+Working with dates and time can be very frustrating.  In general, work with the least cumbersome class. That means if your variable is *years*, store it as an integer; there's no reason to use a date or date-time class. If your variable does not involve time, use the `Date` class in R.
+
+## Converting to `Date` class
+
+ You can convert character data to `Date` class with `as.Date()`:
+
+```{r}
+dchar <- "2018-10-12"
+ddate <- as.Date(dchar)
+```
+
+Note that the two appear the same, although the class is different:
+
+```{r}
+dchar
+ddate
+class(dchar)
+class(ddate)
+```
+
+If the date is not in YYYY-MM-DD or YYYY/MM/DD form, you will need to specify the format to convert to `Date` class, using conversion specifications that begin with `%`, such as:
+
+```{r}
+as.Date("Thursday, January 6, 2005", format = "%A, %B %d, %Y")
+```
+
+For a list of the conversion specifications available in R, see `?strptime`.
+
+The tidyverse **lubridate** makes it easy to convert dates that are not in standard format with `ymd()`, `ydm()`, `mdy()`, `myd()`, `dmy()`, and `dym()` (among many other useful date-time functions):
+
+```{r}
+lubridate::mdy("April 13, 1907")
+```
+
+Try `as.Date("April 13, 1907")` and you will see the benefit of using a **lubridate** function.
+
+## Working with `Date` Class
+
+It is well worth the effort to convert to `Date` class, because there's a lot you can do with dates in a `Date` class that you can't do if you store the dates as character data.
+
+Number of days between dates:
+
+```{r}
+as.Date("2017-11-02") - as.Date("2017-01-01")
+```
+
+Compare dates:
+```{r}
+as.Date("2017-11-12") > as.Date("2017-3-3")
+```
+
+Note that `Sys.Date()` returns today's date as a `Date` class:
+
+```{r}
+Sys.Date()
+class(Sys.Date())
+```
+
+R has functions to pull particular pieces of information from a date:
+
+```{r}
+today <- Sys.Date()
+weekdays(today)
+weekdays(today, abbreviate = TRUE)
+months(today)
+months(today, abbreviate = TRUE)
+quarters(today)
+```
+
+The **lubridate** package provides additional functions to extract information from a date:
+
+```{r}
+today <- Sys.Date()
+lubridate::year(today)
+lubridate::yday(today)
+lubridate::month(today)
+lubridate::month(today, label = TRUE)
+lubridate::mday(today)
+lubridate::week(today)
+lubridate::wday(today)
+```
+
+## Plotting with a `Date` class variable
+
+Both base R graphics and **ggplot2** "know" how to work with a `Date` class variable, and label the axes properly:
+
+### base R
+
+```{r}
+df <- read.csv("mortgage.csv")
+df$DATE <- as.Date(df$DATE)
+plot(df$DATE, df$X5.1.ARM, type = "l") # on the order of years
+plot(df$DATE[1:30], df$X5.1.ARM[1:30], type = "l") # switch to months
+```
+
+Note the the change in x-axis labels in the second graph.
+
+### ggplot2
+
+```{r, message=FALSE}
+# readr 
+library(tidyverse)
+```
+
+Note that unlike base R`read.csv()`, `readr::read_csv()` automatically reads DATE in as a `Date` class since it's in YYYY-MM-DD format:
+
+```{r}
+df <- readr::read_csv("mortgage.csv")
+
+g <- ggplot(df, aes(DATE, `30 YR FIXED`)) + 
+  geom_line() + 
+  theme_grey(14)
+
+g
+
+ggplot(df %>% filter(DATE < as.Date("2006-01-01")), 
+       aes(DATE, `30 YR FIXED`)) + 
+  geom_line() + 
+  theme_grey(14)
+
+```
+
+Again, when the data is filtered, the x-axis labels switch from years to months.
+
+#### Breaks, limits, labels
+
+We can control the x-axis breaks, limits, and labels with `scale_x_date()`:
+
+
+```{r, message = FALSE, warning=FALSE}
+library(lubridate)
+g + scale_x_date(limits = c(ymd("2008-01-01"), ymd("2008-12-31"))) +
+  ggtitle("limits = c(ymd(\"2008-01-01\"), ymd(\"2008-12-31\"))")
+
+g + scale_x_date(date_breaks = "4 years") +
+  ggtitle("scale_x_date(date_breaks = \"4 years\")")
+
+g + scale_x_date(date_labels = "%Y-%m") +
+  ggtitle("scale_x_date(date_labels = \"%Y-%m\")")
+```
+
+(Yes, even in the tidyverse we cannot completely escape the `%` conversion specification notation.  Remember `?strptime` for help.)
+
+#### Annotations
+
+We can use `geom_vline()` with `annotate()` to mark specific events in a time series:
+
+```{r, warning=FALSE}
+ggplot(df, aes(DATE, `30 YR FIXED`)) + 
+  geom_line() +
+  geom_vline(xintercept = ymd("2008-09-29"), color = "blue") +
+  annotate("text", x = ymd("2008-09-29"), y = 3.75, 
+           label = " Market crash\n 9/29/08", color = "blue", 
+           hjust = 0) +
+  scale_x_date(limits = c(ymd("2008-01-01"), ymd("2009-12-31")),
+               date_breaks = "1 year", 
+               date_labels = "%Y") + 
+  theme_grey(16) +
+  ggtitle("`geom_vline()` with `annotate()`")
+```
+

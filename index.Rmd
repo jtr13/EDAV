@@ -1,16 +1,16 @@
 --- 
 title: "edav.info/"
 author: "Zach Bogart, Joyce Robbins"
-date: '2018-08-15'
+date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 #bibliography: [book.bib]
 #biblio-style: apalike
 link-citations: yes
 github-repo: "jtr13/EDAV"
-url: 'edav.info/'
+url: 'https://edav.info/'
 description: "This resource is a collaborative collection of resources designed to help students succeed in GR5702 Exploratory Data Analysis and Visualization, a course offered at Columbia University. While the course lectures and textbook focus on theoretical issues, this resource, in contrast, provides coding tips and examples to assist students as they create their own analyses and visualizations. It is our hope that students will contribute to edav.info and it will grow with the course."
-cover-image: "images/cover.png"
+cover-image: "images/edav_link_logo.png"
 ---
 
 # (PART) Information (Blue) {-}
@@ -68,7 +68,7 @@ Not finding what you are looking for? Think a section could be made clearer? Con
 ## Fun stuff
 
 ### T-shirts
-Zach Bogart has made a few t-shirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy. 
+Zach Bogart has made a few t-shirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy! 
 
 <center>
 [![White EDAV Logo Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-info){target="_blank" class="active-banner"}
@@ -99,4 +99,4 @@ Joyce Robbins:
 <!-- License -->
 ## License
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.

@@ -1,0 +1,211 @@
+# Missing Data {#missing}
+
+![](images/banners/banner_missing.png)
+*This chapter originated as a community contribtuion proposed by [ujjwal95](https://github.com/ujjwal95){target="_blank"}*
+
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+
+## Overview
+This section covers what kinds of missing values are encountered in data and how to handle them.
+
+## tl;dr
+It's difficult to handle missing data! If your data has some missing values, which it most likely will, you can either remove such rows, such columns, or impute them.
+
+## What are NAs?
+
+Whenever data in some row or column in your data is missing, it comes up as NA. Let's have a look at some data, shall we?
+```{r echo = FALSE, message=FALSE}
+library(tidyverse)
+library(scales)
+Name <- c("Melissa", "Peter", "Aang", "Drake", "Bruce", "Gwen", "Ash",NA)
+Sex <- c("Female", NA, "Male", "Male", NA, "Female", "Male",NA)
+Age <- c(27, NA, 110, NA, 45, 28, NA, NA)
+E_mail <- c(NA, "peter.parker@esu.edu", "aang@avatars.com", NA, "bruce.wayne@wayne.org", "gwen.stacy@esu.edu", "ash.ketchum@pokemon.com", NA)
+Education <- c(NA, NA, NA, NA, NA, NA, NA, NA)
+Income <- c(10000, 7500, 1000, 50000, 10000000, 23000, NA, NA)
+data <- data.frame(Name, Sex, Age, E_mail, Education, Income)
+```
+
+```{r echo = FALSE}
+library(knitr)
+kable(data)
+```
+
+We can see the number of NAs in each column and row:
+```{r}
+colSums(is.na(data))
+```
+
+```{r}
+rowSums(is.na(data))
+```
+
+We can also see the ratio of the number of NAs in each column and row:
+```{r}
+colMeans(is.na(data))
+```
+
+```{r}
+rowMeans(is.na(data))
+```
+
+## Types of Missing Data
+
+- **Missing Completely at Random (MCAR)**: These are missing data values which are not related to any missing or non-missing values in other columns in the data.
+
+- **Missing at Random (MAR)**: These are missing data which are linked to one or more groups in the data. The great thing about MAR is that MAR values can be predicted using other features. For example, it may be observed that people older than 70 generally do not enter their income. 
+Most of the data we encounter is MAR.
+
+- **Missing Not at Random (MNAR)**: Generally, data which is not MAR is MNAR. A big problem is that there is not a huge distinction between MAR and MNAR. We generally assume MAR, unless otherwise known by an outside source.
+
+## Missing Patterns 
+
+### Missing Patterns by columns
+
+We can see some missing patterns in data by columns,
+```{r echo = FALSE, warning=FALSE}
+tidy_names <- data %>% 
+  gather(key, value, -Name) %>% 
+  mutate(missing = ifelse(is.na(value), "yes", "no"))
+```
+
+```{r}
+ggplot(tidy_names, aes(x = key, y = fct_rev(Name), fill = missing)) +
+  geom_tile(color = "white") + 
+  ggtitle("Names dataset with NAs added") +
+  scale_fill_viridis_d() +
+  theme_bw()
+```
+
+And we can also add a scale to check the numerical values available in the dataset and look for any trends:
+```{r message=FALSE}
+library(scales) # for legend
+# Select columns having numeric values
+numeric_col_names <- colnames(select_if(data, is.numeric))
+filtered_for_numeric <- tidy_names[tidy_names$key %in% numeric_col_names,]
+filtered_for_numeric$value <- as.integer(filtered_for_numeric$value)
+# Use label=comma to remove scientific notation
+ggplot(data = filtered_for_numeric, aes(x = key, y = fct_rev(Name), fill = value)) +
+  geom_tile(color = "white") + 
+  scale_fill_gradient(low = "grey80", high = "red", na.value = "black", label=comma) + 
+  theme_bw()
+```
+
+Can you see the problem with the above graph? Notice that the scale is for *all* the variables, hence it cannot show the variable level differences!
+To solve this problem, we can standarize the variables:
+```{r}
+filtered_for_numeric <- filtered_for_numeric %>% 
+  group_by(key) %>% 
+  mutate(Std = (value-mean(value, na.rm = TRUE))/sd(value, na.rm = TRUE)) %>% 
+  ungroup()
+
+ggplot(filtered_for_numeric, aes(x = key, y = fct_rev(Name), fill = Std)) +
+  geom_tile(color = "white") + 
+  scale_fill_gradient2(low = "blue", mid = "white", high ="yellow", na.value = "black") + theme_bw()
+
+```
+
+Now, we can see the missing trends better! Let us sort them by the number missing by each row and column:
+```{r}
+# convert missing to numeric so it can be summed up
+filtered_for_numeric <- filtered_for_numeric %>% 
+  mutate(missing2 = ifelse(missing == "yes", 1, 0))
+
+ggplot(filtered_for_numeric, aes(x = fct_reorder(key, -missing2, sum), y = fct_reorder(Name, -missing2, sum), fill = Std)) +
+  geom_tile(color = "white") + 
+  scale_fill_gradient2(low = "blue", mid = "white", high ="yellow", na.value = "black") + theme_bw()
+
+```
+
+### Missing Patterns by rows
+
+We can also see missing patterns in data by rows using the `mi` package:
+```{r message=FALSE}
+library(mi)
+x <- missing_data.frame(data)
+image(x)
+```
+
+Did you notice that the `Education` variable has been skipped? That is because the whole column is missing.
+Let us try to see some patterns in the missing data:
+```{r}
+x@patterns
+```
+
+
+```{r}
+levels(x@patterns)
+```
+
+```{r}
+summary(x@patterns)
+```
+
+We can visualize missing patterns using the `visna` (VISualize NA) function in the `extracat` package:
+```{r}
+extracat::visna(data)
+```
+
+Here, the rows represent a missing pattern and the columns represent the column level missing values. The advantage of this graph is that it shows you only the missing patterns available in the data, not all the possible combinations of data (which will be 2^6 = 64), so that you can focus on the pattern in the data itself. 
+
+We can sort the graph by most to least common missing pattern (i.e., by row):
+```{r}
+extracat::visna(data, sort = "r")
+```
+
+Or, by most to least missing values (i.e., by column):
+```{r}
+extracat::visna(data, sort = "c")
+```
+
+Or, by both row and column sort:
+```{r}
+extracat::visna(data, sort = "b")
+```
+
+## Handling Missing values
+
+There are multiple methods to deal with missing values.
+
+### Deletion of rows containing NAs
+
+Often we would delete rows that contain NAs when we are handling Missing Completely at Random data.
+We can delete the rows having NAs as below:
+```{r}
+na.omit(data)
+```
+
+This method is called *list-wise deletion*. It removes all the rows having NAs. But we can see that the Education column is only NAs, so we can remove that column itself:
+```{r}
+edu_data <- data[, !(colnames(data) %in% c("Education"))]
+na.omit(edu_data)
+```
+
+Another method is *pair-wise deletion*, in which only the rows having missing values in the variable of interest are removed.
+
+### Imputation Techniques
+
+Imputation means to replace missing data with substituted values. These techniques are generally used with MAR data.
+
+#### Mean/Median/Mode Imputation
+
+We can replace missing data in continuous variables with their mean/median and missing data in discrete/categorical variables with their mode.
+
+Either we can replace all the values in the missing variable directly, for example, if "Income" has a median of 15000, we can replace all the missing values in "Income" with 15000, in a technique known as *Generalized Imputation*.
+
+Or, we can replace all values on a similar case basis. For example, we notice that the income of people with `Age > 60` is much less than those with `Age < 60`, on average, and hence we calculate the median income of each `Age` group seperately, and impute values separately for each group.
+
+The problem with these methods is that they disturb the underlying distribution of the data.
+
+### Model Imputation
+There are several model based approaches for imputation of data, and several packages, like [mice](https://cran.r-project.org/web/packages/mice/index.html){target="_blank"}, [Hmisc](https://cran.r-project.org/web/packages/Hmisc/index.html){target="_blank"}, and [Amelia II](https://cran.r-project.org/web/packages/Amelia/index.html){target="_blank"}, which deal with this.
+
+For more info, checkout [this blog on DataScience+ about imputing missing data with the R mice package](https://datascienceplus.com/imputing-missing-data-with-r-mice-package/){target="_blank"}.
+
+## External Resources
+- [Missing Data Imputation](http://www.stat.columbia.edu/~gelman/arm/missing.pdf){target="_blank"} - A PDF by the Stats Department at Columbia University regarding Missing-data Imputation
+- [How to deal with missing data in R](https://datascienceplus.com/missing-values-in-r/){target="_blank"} - A 2 min read blogpost in missing data handling in R
+- [Imputing Missing Data in R; MICE package](https://datascienceplus.com/imputing-missing-data-with-r-mice-package/){target="_blank"} - A 9 min read on how to use the `mice` package to impute missing values in R
+- [How to Handle Missing Data](https://towardsdatascience.com/how-to-handle-missing-data-8646b18db0d4){target="_blank"} - A great blogpost on how to handle missing data.
+
+

@@ -4,7 +4,7 @@
 
 ## Overview
 
-This section has resources for learning about graphical perception and using colors effectively. 
+This section has resources for learning about graphical perception and how to use colors effectively. 
 
 ## Perception
 
@@ -24,5 +24,44 @@ Color is very subjective. It is important to choose the right ones so that your 
 - [Color Blindness Simulator](http://colorbrewer2.org/){target="_blank"}: Not sure how effective your project will be to a colorblind user? This tool can help. You can upload an image to see how it will look with different color vision handicaps.
 - [ColorPick Eyedropper](https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg?hl=en){target="_blank"}: This Chrome extension allows you to copy hex color values from webpages. Simple and intuitive, it will make creating your awesome color palettes a lot easier.
 
+## Quick tips on using color with `ggplot2`
 
+One of the most common problems is confusing `color` and `fill`. `geom_point()` and `geom_line` use `color`, many of the other geoms use `fill`. Some use both, such as `geom_tile()` in which case `color` is the border color and `fill` is the fill color.
+
+### Continuous data
+
+#### ColorBrewer
+
++ `scale_color_distiller(palette = "PuBu")` or `scale_fill_distiller(palette = "PuBu")`
+
+(What *doesn't* work: `scale_color_brewer(palette = "PuBu")`)
+
+#### Viridis
+
++ `scale_color_viridis_c()` or `scale_fill...`  (the c stands for continuous)
+
+#### Create your own
+
+`+ scale_color_gradient(low = "white", high = "red")` or `+ scale_fill...`
+
+`+ scale_color_gradient2(low = "red", mid = "white", high = "blue", midpoint = 50)` or `+ scale_fill...`
+
+`+ scale_color_gradientn(colours = c("red", "pink", "lightblue", "blue"))` or `scale_fill...`
+
+
+### Discrete data
+
+#### ColorBrewer
+
++ `scale_color_brewer(palette = "PuBu")` or `scale_fill...`
+
+#### Viridis
+
++ `scale_color_viridis_d()` or `scale_fill...` (the d stands for discrete)
+
+#### Create your own
+
+`+ scale_color_manual(values = c("red", "yellow", "blue"))` or `scale_fill...`
+
+`+ scale_fill_manual(values = c("red", "yellow", "blue"))` or `scale_fill...`
 

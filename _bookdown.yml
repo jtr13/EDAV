@@ -8,20 +8,25 @@ edit: https://github.com/jtr13/EDAV/edit/master/%s
 
 # chapter ordering
 rmd_files: [
-  "index.Rmd", 
-  
+  "index.Rmd",
+
   "basics.Rmd",
   "final_presentation.Rmd",
   "contribute.Rmd",
-  
+
   "iris.Rmd",
-  
+
   "bargraph.Rmd",
-  "histogram.Rmd",
   "boxplot.Rmd",
   "scatterplot.Rmd",
+  "heatmap.Rmd",
+  "histogram.Rmd",
+  "scatterplot.Rmd",
+  "dates.Rmd",
+  "maps.Rmd",
+  "missing_data.Rmd",
   "network.Rmd",
-  
+
   "general_resources.Rmd",
   "perception.Rmd",
   "publish_using_r.Rmd",

@@ -139,6 +139,10 @@ scatter +
 <!-- ggplot2 explanation -->
 `ggplot2` makes it very easy to create scatterplots. Using `geom_point()`, you can easily plot two different aesthetics in one graph. It also is simple to add on extra formatting to make your plots look nice (All that is really necessary is the data, the aesthetics, and the geom).
 
+## Theory
+<!-- *Link to textbook -->
+*   For more info about adding lines/contours, comparing groups, and plotting continuous variables check out [Chapter 5](http://www.gradaanwr.net/content/ch05/){target="_blank"} of the textbook.
+
 ## When to use
 <!-- Quick Note on When to use this plot -->
 Scatterplots are great for exploring relationships between variables. Basically, if you are interested in how variables relate to each other, the scatterplot is a great place to start.
@@ -171,59 +175,6 @@ ggplot(df, aes(wide_x, wide_y)) +
 ```
 
 ## Modifications
-
-### Heat maps
-
-Heat maps are like a combination of scatterplots and [histograms](histo.html): they allow you to compare different parameters while also seeing their relative distributions.
-
-For these heat maps, we will use the `SpeedSki` dataset.
-
-#### Heat map: default
-To create a heat map, simply substitute `geom_point()` with `geom_bin2d()`:
-```{r heat-map-default}
-ggplot(SpeedSki, aes(Year, Speed)) + 
-  geom_bin2d()
-```
-
-#### Heat map: modify color/bin width
-You can change the color palette by specifying it explicitly in your chain of `ggplot` function calls. The bin width can be added inside the `geom_bin2d()` function call:
-```{r heat-map-color-bin-width, message=FALSE}
-library(viridis) # viridis color palette
-
-# create plot
-g1 <- ggplot(SpeedSki, aes(Year, Speed)) + 
-  scale_fill_viridis() # modify color
-
-# show plot
-g1 + geom_bin2d(binwidth = c(5, 5)) # modify bin width
-```
-
-Here are some other examples:
-```{r}
-# larger bin width
-g1 + geom_bin2d(binwidth = c(10, 10)) 
-```
-
-```{r}
-# hexagonal bins
-library(hexbin)
-g1 + geom_hex(binwidth = c(5, 5))
-```
-
-```{r}
-# hexagonal bins + scatterplot layer
-library(hexbin)
-g1 + geom_hex(binwidth = c(5, 5), alpha = .4) + 
-  geom_point(size = 2, alpha = 0.8)
-```
-
-```{r}
-# hexagonal bins with custom color gradient/bin count
-library(hexbin)
-ggplot(SpeedSki, aes(Year, Speed)) + 
-  scale_fill_gradient(low = "#cccccc", high = "#09005F") + # color
-  geom_hex(bins = 10) # number of bins horizontally/vertically
-```
 
 ### Contour lines
 <!-- blurb -->
@@ -271,10 +222,6 @@ library(lattice) #sploms
 
 splom(splomvar)
 ```
-
-## Theory
-<!-- *Link to textbook -->
-*   For more info about adding lines/contours, comparing groups, and plotting continuous variables check out [Chapter 5](http://www.gradaanwr.net/content/ch05/){target="_blank"} of the textbook. 
 
 ## External resources
 <!-- - []](){target="_blank"}: Links to resources with quick blurb -->

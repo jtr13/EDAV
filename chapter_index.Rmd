@@ -30,11 +30,19 @@ This page includes links to every chapter in *edav.info/*
 
 [![Chart: Bar Graph](images/banners/banner_bargraph.png)](bar.html){class="active-banner"}
 
-[![Chart: Histogram](images/banners/banner_histogram.png)](histo.html){class="active-banner"}
-
 [![Chart: Boxplot](images/banners/banner_boxplot.png)](box.html){class="active-banner"}
 
+[![Chart: Heatmap](images/banners/banner_heatmap.png)](heatmap.html){class="active-banner"}
+
+[![Chart: Histogram](images/banners/banner_histogram.png)](histo.html){class="active-banner"}
+
 [![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatter.html){class="active-banner"}
+
+[![Dates in R](images/banners/banner_dates.png)](dates.html){class="active-banner"}
+
+[![Spatial Data](images/banners/banner_maps.png)](maps.html){class="active-banner"}
+
+[![Missing Data](images/banners/banner_missing.png)](maps.html){class="active-banner"}
 
 [![Networks](images/banners/banner_network.png)](network.html){class="active-banner"}
 
