@@ -1,0 +1,84 @@
+---
+title: "qqplot"
+author: "Bingquan Wu"
+date: "October 30, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message = FALSE,
+                      warning = FALSE)
+```
+
+
+## qqplot introduction
+In statistics, a Q-Q (quantile-quantile) plot is a probability plot, which is a graphical method for comparing two probability distributions by plotting their quantiles against each other.[1]A point (x, y) on the plot corresponds to one of the quantiles of the second distribution (y-coordinate) plotted against the same quantile of the first distribution (x-coordinate). Thus the line is a parametric curve with the parameter which is the number of the interval for the quantile.[2]
+
+
+## qqplot interpreting
+
+## normal or not (examples using qqnorm)
+Examples of a normal qqplot
+```{r}
+x <- rnorm(1000, 50, 10)
+qqnorm(x)
+qqline(x, col = "red")
+```
+The points seem to fall about a straight line. Notice the x-axis plots the theoretical quantiles. Those are the quantiles from the standard Normal distribution with mean 0 and standard deviation 1.[3]
+
+Examples of a not normal qqplot
+```{r}
+x <- rexp(1000, 5)
+qqnorm(x)
+qqline(x, col = "red")
+```
+Notice the points form a curve instead of a straight line. Normal Q-Q plots that look like this usually mean your sample data are skewed.[3]
+
+## different kinds of qqplot
+```{r pressure, echo=FALSE, fig.cap="Different kinds of qqplot", out.width = '100%'}
+knitr::include_graphics("d:/columbia/EDAV/project/ZXRKL.png")
+```
+
+The following graph[4] is a conclusion of all the kinds of qqplot.\
+
+Normal qqplot: The normal distribution is symmetric, so it has no skew (the mean is equal to the median).[5]\
+
+Right skewed qqplot: Right-skew is also known as positive skew.\
+
+Left skewed qqplotL: Left-skew is also known as negative skew.\
+
+light tailed qqplot: meaning that compared to the normal distribution there is little more data located at the extremes of the distribution and less data in the center of the distribution.[6]\
+
+heavy tailed qqplot: meaning that compared to the normal distribution there is much more data located at the extremes of the distribution and less data in the center of the distribution.[6]\
+
+biomodel qqplot: illustrate a bimodal distribution.
+
+
+## qqplot using ggplot
+
+```{r}
+library(ggplot2)
+x <- rnorm(1000, 50, 10)
+x <- data.frame(x)
+ggplot(x, aes(sample = x)) +
+  stat_qq() +
+  stat_qq_line()
+```
+In order to use ggplot2 to plot qqplot, we must use a dataframe, so here we conert it to the dataframe\
+We can see that using ggplot to plot a ggplot has a similar outcome as using qqnorm
+
+```{r}
+library(ggplot2)
+ggplot(mtcars, aes(sample = mpg, colour = factor(cyl))) +
+  stat_qq() +
+  stat_qq_line()
+```
+However when we need to plot different group, ggplot will be very helpful, with different color by factor.
+
+##reference
+[1] Wilk, M.B.; Gnanadesikan, R. (1968), "Probability plotting methods for the analysis of data", Biometrika, Biometrika Trust\
+[2] Wiki, QQplot - https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot#cite_note-1\
+[3] Understanding Q-Q Plots https://data.library.virginia.edu/understanding-q-q-plots/\
+[4] How to interpret a QQ plot https://stats.stackexchange.com/questions/101274/how-to-interpret-a-qq-plot\
+[5] modules BIOL30030, BIOL40390 and ENVB40370 Dr Jon Yearsley (School of Biology and Environmental Science, UCD) \
+[6] A QQ Plot Dissection Kithttp://seankross.com/2016/02/29/A-Q-Q-Plot-Dissection-Kit.html\
