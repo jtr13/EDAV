@@ -60,6 +60,6 @@ statebins(df_illit, value_col="Illiteracy",
 
 Note that the options above work with *political boundaries*, based on the names of the regions that you provide. If you have longitude / latitude data, **ggmap** is a good choice.  It is straight-forward to plot lon/lat data on a Cartestian coordinate system, with the x-axis representation longitude and the y-axis latitude -- just be careful not to mix them up. The **ggmap** package provides a variety of maps that can serve as the backdrop for the long/lat points. 
 
-**ggmap** offers a number of different map sources.  Google Maps API was the go-to, but they now [require you to enable billing through Google Cloud Platorm](https://cloud.google.com/free/).  You get $300 in free credit, but if providing a credit card isn't your thing, you may consider using Stamen Maps instead, with the `get_stamenmap()` function. Use the development version of the package; instructions and extensive examples are available on the package's [GitHub page](https://github.com/dkahle/ggmap).
+**ggmap** offers a number of different map sources.  Google Maps API was the go-to, but they now [require you to enable billing through Google Cloud Platorm](https://cloud.google.com/free/){target="_blank"}.  You get $300 in free credit, but if providing a credit card isn't your thing, you may consider using Stamen Maps instead, with the `get_stamenmap()` function. Use the development version of the package; instructions and extensive examples are available on the package's [GitHub page](https://github.com/dkahle/ggmap){target="_blank"}.
 
 
