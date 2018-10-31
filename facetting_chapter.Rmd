@@ -1,0 +1,69 @@
+# Chapter Template {#template}
+
+<!-- Chapter Banner -->
+<!-- ![](images/banners/banner_histogram.png) -->
+
+
+<!-- Under Construction Section
+----------------------------------------------------------------------------- -->
+![Under Construction](images/banners/banner_under_construction.png)
+## Overview
+
+This section talks about facetting and what are the best practices for facetting.
+
+
+## tl;dr
+<!-- Gimme example -->
+I want a nice example. Not tomorrow, not *after breakfast*. NOW! 
+
+<!-- Explanation: -->
+Here's a point chart showing tip/bill by gender (Male/Female):
+
+```{r}
+library(reshape2)
+library(plotly)
+
+sp <- ggplot(tips, aes(x=total_bill, y=tip/total_bill)) + geom_point(shape=1) + ggtitle("Point chart for tip group by gender")
+
+sp + facet_grid(sex ~ .)
+
+```
+
+
+
+## the same plot with vertical facetting
+
+```{r}
+
+sp + facet_grid(. ~ sex)
+
+```
+
+# Divide by day, going horizontally and wrapping with 2 columns
+
+```{r}
+sp + facet_wrap( ~ day, ncol=2)
+
+```
+
+
+
+## Skip to histograms
+
+```{r}
+hp <- ggplot(tips, aes(x=total_bill)) + geom_histogram(binwidth=2,colour="white")
+hp + facet_grid(sex ~ smoker)
+
+
+```
+
+
+## Example of free y scales
+
+```{r}
+hp + facet_grid(sex ~ smoker, scales="free_y")
+
+
+```
+This is useful only when you want compare Yes and No across individual genders.
+Comparing values of No in Female and No in Male is not a good idea in this plot
