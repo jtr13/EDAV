@@ -1,7 +1,7 @@
 # Missing Data {#missing}
 
 ![](images/banners/banner_missing.png)
-*This chapter originated as a community contribtuion proposed by [ujjwal95](https://github.com/ujjwal95){target="_blank"}*
+*This chapter originated as a community contribution created by [ujjwal95](https://github.com/ujjwal95){target="_blank"}*
 
 *This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
 
@@ -92,7 +92,7 @@ ggplot(data = filtered_for_numeric, aes(x = key, y = fct_rev(Name), fill = value
 ```
 
 Can you see the problem with the above graph? Notice that the scale is for *all* the variables, hence it cannot show the variable level differences!
-To solve this problem, we can standarize the variables:
+To solve this problem, we can standardize the variables:
 ```{r}
 filtered_for_numeric <- filtered_for_numeric %>% 
   group_by(key) %>% 
@@ -193,7 +193,7 @@ We can replace missing data in continuous variables with their mean/median and m
 
 Either we can replace all the values in the missing variable directly, for example, if "Income" has a median of 15000, we can replace all the missing values in "Income" with 15000, in a technique known as *Generalized Imputation*.
 
-Or, we can replace all values on a similar case basis. For example, we notice that the income of people with `Age > 60` is much less than those with `Age < 60`, on average, and hence we calculate the median income of each `Age` group seperately, and impute values separately for each group.
+Or, we can replace all values on a similar case basis. For example, we notice that the income of people with `Age > 60` is much less than those with `Age < 60`, on average, and hence we calculate the median income of each `Age` group separately, and impute values separately for each group.
 
 The problem with these methods is that they disturb the underlying distribution of the data.
 

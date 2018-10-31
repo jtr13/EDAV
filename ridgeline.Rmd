@@ -1,7 +1,7 @@
 # Chart: Ridgeline Plots {#ridgeline}
 
 ![](images/banners/banner_ridgeline.png)
-*This chapter originated as a community contribtuion proposed by [nehasaraf1994](https://github.com/nehasaraf1994){target="_blank"}*
+*This chapter originated as a community contribution created by [nehasaraf1994](https://github.com/nehasaraf1994){target="_blank"}*
 
 *This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
 
