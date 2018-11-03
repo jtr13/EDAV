@@ -1,0 +1,290 @@
+---
+title: "Tidying Data And Dplyr Functions"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(MASS)
+class(biopsy)
+
+library(dplyr)
+```
+
+# (PART) Walkthroughs (Red) {-}
+
+# Walkthrough: Tidy Data/Dplyr Functions
+
+## Overview
+
+This example goes through some work with the `biopsy` dataset using dplyr functions and get to a tidy dataset.
+
+### Packages 
+
+* [`dplyr`](https://www.rdocumentation.org/packages/dplyr){target="_blank"}
+* [`MASS`](https://www.rdocumentation.org/packages/MASS/versions/7.3-51.1){target="_blank"}
+* [`tidyr`](https://www.rdocumentation.org/packages/tidyr/versions/0.8.2){target="_blank"}
+
+
+## Installing package
+Write the following statements in the console.
+
+* install.packages('dplyr')
+* install.packages('MASS') 
+* install.packages('ggplot2')
+* install.packages('tidyr') 
+
+dplyr is used for data wrangling and data transformation in data frames. d in dplyr stands for data frames which is the most used data type for storing datasets in R.
+
+## Viewing the data
+Let's start with loading the package so we can get the data as a dataframe.
+```{r, include=TRUE}
+#loading the dplyr library
+library(dplyr)
+
+#loading data from MASS:biopsy
+library(MASS)
+class(biopsy)
+```
+
+```{r import_data}
+#glimpse is a part of the dplyr package
+glimpse(biopsy)
+
+head(biopsy)
+```
+
+##What is Tidy data?
+What does it mean for your data to be tidy?
+
+Tidy data has a standardized format and it is a consistent way to organise your data in R. 
+
+Definition of Tidy Data given by Hadley Wickham :
+
+A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. In tidy data:
+
+* Each variable forms a column.
+
+* Each observation forms a row.
+
+* Each observational unit forms a value in the table.
+
+![Image from: https://r4ds.had.co.nz/tidy-data.html](images/tidydata.png)
+
+
+What are the advantages of tidy data?
+
+* Uniformity : It is easier to learn the tools that work with the data because they have consistent way of storing data.
+
+* Most built-in R functions work with vector of values. Thus, having variables as columns/vectors allows R’s vectorised nature to shine.
+
+Can you observe and tell why this data is messy?
+
+* The names of the columns such as V1, V2 are not intuitive in what they contain.
+
+* They are not different variables, but are values of a common variable.
+
+Now, we will see the how to transform our data using dplyr functions and then look at how to tidy our transformed data.
+
+##Tibble
+
+A tibble is a modern reimagining of the data frame.
+
+It is particularly useful for large datasets because it only prints the first few rows. It helps you confront problems earlier leading to a cleaner code.
+
+```{r, include=TRUE}
+# Converting a df to a tibble
+biopsy<-tbl_df(biopsy)
+biopsy
+```
+
+
+## Test for missing Values
+
+```{r, include=TRUE}
+# Number of missing values in each column in the data frame
+colSums(is.na(biopsy))
+```
+
+The dataset contains missing values which need to be addressed.
+
+## Recode the missing Values
+One way to deal with missing values is to recode them with the average of all the other values in that column
+```{r, include=TRUE}
+#change all the NAs to mean of the column
+biopsy$V6[is.na(biopsy$V6)] <- mean(biopsy$V6, na.rm = TRUE)
+colSums(is.na(biopsy))
+```
+
+
+## Data Wrangling verbs
+Most commonly used functions that help wrangle and summarize data include:
+
+* Rename
+* Select
+* Mutate
+* Filter
+* Arrange
+* Summarize
+* Group_by
+
+Select and mutate functions manipulate the variable,i.e. the columns of the data frame. Filter and arrange functions manipulate the observations,i.e. the rows of the data,whereas the summarize function manipulates groups of observations.
+
+All the dplyr functions work on a copy of the data and return the modified copy. They do not change the original data frame. We need to save the modified copy if we want to access it afterwards.
+
+##Rename
+
+The names of the columns in our data are very vague and do not give us the meaning of the values in that column. We need to change the names of the column so that the viewer gets a sense of the values it is referring to.
+
+```{r, include=TRUE}
+rename(biopsy,thickness=V1,cell_size=V2,cell_shape=V3,marg_adhesion=V4,epithelial_cell_size=V5,bare_nuclei=V6,chromatin=V7,norm_nucleoli=V8,mitoses=V9)
+```
+The tibble shown above is not saved and cannot be used further. To use it afterwards we save it as a new tibble.
+```{r, include=TRUE}
+#saving the rename function output
+biopsy_n<-rename(biopsy,thickness=V1,cell_size=V2,cell_shape=V3,marg_adhesion=V4,epithelial_cell_size=V5,bare_nuclei=V6,chromatin=V7,norm_nucleoli=V8,mitoses=V9)
+
+head(biopsy_n,5)
+```
+biopsy_new data frame can now be used for further manipulation.
+
+##Select
+It returns a subset of the data. Only shows those columns that are specified in the arguments of the function. 
+In the biopsy data, we do not require the variables chromatin and mitoses.
+```{r, include=TRUE}
+#selecting all except the columns chromatin and mitoses
+biopsy_new<-select(biopsy_n,-chromatin,-mitoses)
+
+head(biopsy_new,5)
+```
+
+##Mutate
+The mutate function computes new varibales from the already existing variables and adds it to the dataset. It gives information that the data already contained but was never displayed.
+
+The V6 varibale contains the values of the bare nucleis from 1.00 to 10.00. If we wish to normalize the variable, we can use the mutate function.
+```{r, include=TRUE}
+#normalize the bare nuclei values 
+maximum_bare_nuclei<-max(biopsy_new$bare_nuclei,na.rm=TRUE)
+biopsy_new<-mutate(biopsy_new,bare_nuclei=bare_nuclei/maximum_bare_nuclei)
+
+head(biopsy_new,5)
+```
+
+##Filter
+It is the row equivalent of select.
+This function filters rows based on the content and the conditions supplied in its argument. It returns the modified copy that contains only certain rows.
+The filter function takes the data frame as the first argument. The next argument contains one or more logical tests. The rows/observations that pass these logical tests are returned in the result of the filter function.
+
+ We only want the data of those tumor cells that have clump thickness greater than 6 as most of the malign tumors have this range of thickness as seen from the plot of clump thickness Vs tumor cell size grouped by class.
+```{r, include=TRUE}
+library(ggplot2)
+
+ggplot(biopsy_new)+
+  geom_point(aes(x=thickness,y=cell_size,color=class))+
+  ggtitle("Plot of Clump Thickness Vs Tumor Cell Size")
+
+```
+
+```{r, include=TRUE}
+#normalize the bare nuclei values 
+biopsy_new<-filter(biopsy_new,thickness>5.5)
+
+head(biopsy_new,5)
+```
+
+
+##Arrange
+It reorders the rows of the data based on their contents in the ascending order by default.
+
+The doctors would want to view the data in the order of the cell size of the tumor.
+```{r, include=TRUE}
+#arrange in the order of V2:cell size
+arrange(biopsy_new,cell_size)
+```
+
+This shows the data in increasing order of the cell size.
+
+To arrange the rows in decreasing order of V2, we add the desc() function to the variable before passing it to the arrange() function.
+
+```{r, include=TRUE}
+#arrange in the order of V2:cell size in decreasing order
+arrange(biopsy_new,desc(cell_size))
+```
+
+As you can see, there are a number of rows with the same value of V2:cell_size. To break the tie, you can add another varaible to be used for ordering when the first variable has the same value.
+
+Here, we use the tie breaker as the order of variable V3:the cell shape and next as ID.
+
+```{r, include=TRUE}
+#arrange in the order of V2:cell size
+biopsy_new<-arrange(biopsy_new,desc(cell_size),desc(cell_shape),ID)
+
+head(biopsy_new,5)
+```
+
+##Summarize & Group By
+It uses the data to create a new data frame with the summary statistics such as minimum, maximum, average, and so on. These statistical functions must be aggregate functions which take a vector of values as input and output a single value.
+
+The group_by function groups the data by the values of the variables. This, along with summarize, makes observations about groups of rows of the dataset.
+
+The doctors would want to see the maximum cell size and the thickness for each of the class:benign and malignant. This can be done by grouping the data based on class and finding the maximum of the required variables.
+```{r, include=TRUE}
+biopsy_grouped<-group_by(biopsy_new,class)
+summarize(biopsy_grouped,max(thickness),mean(cell_size),var(norm_nucleoli))
+```
+
+##Pipe Operator
+What if we want to use the various data wrangling verbs together in conjunction?
+
+This can be done by saving the result of each wrangling function in a new variable and using it for the next function as we did above.
+
+This is not recommended as:
+
+1) It requires extra typing and longer code.
+
+2) Unnecessary space is used up to save the various variables. If the data is large, this method slows down the analysis.
+
+The pipe operator can be used instead for the same purpose. The operator is placed between and object and the function. The pipe takes the object on its left and passes it as the first argument to the function to its right.
+
+The pipe operator is a part of the magrittr package. This package need not be loaded as the dplyr package makes life simpler and imports the pipe operator for us.
+
+```{r, include=TRUE}
+biopsy_grouped<-biopsy_new %>% group_by(class) %>% summarize(max(thickness),mean(cell_size),var(norm_nucleoli))
+
+head(biopsy_grouped)
+```
+
+
+#Tidying the transformed data
+
+Have a look again at the messy data:
+
+```{r, include=TRUE}
+# Messy Data
+head(biopsy_new,5)
+```
+
+Planning is required to decide which columns we need to keep unchanged, which ones to change and what names are to be given to the new columns. 
+The columns to keep are the ones that are already tidy.
+The ones to change are the ones that aren't true variables but in fact are levels of another variable.
+
+The ID and the class columns are already tidy. These are kept as it is in the data.
+
+The columns V1:thickness, V2:cell_size, V3:cell_shape, V4:marg_adhesion, V5:epithelial_cell_size, V6:bare_nuclei, V8:norm_nucleoli are not true variable but are values of the variable Tumor_attributes.
+
+function: tidyr::gather(), which is used to convert data from messy to tidy. The gather function takes the data frame which we want to tidy as input. The next two parameters are the names of the key and the value columns in the tidy dataset.
+
+In our example, key="Tumor_Atrributes" and value='Score'. You can also specify the columns that you do not want to be tidied, i.e. ID and class.
+
+```{r, include=TRUE}
+#Tidy Data
+library(tidyr)
+tidy_df <- biopsy_new %>% gather(key = "Tumor_Attributes", value = "Score", -ID, -class)
+
+tidy_df
+```
+
+
+
