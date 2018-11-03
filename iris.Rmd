@@ -311,7 +311,7 @@ base_plot + theme_minimal()
 
 ## Going deeper
 
-We have just touched the surface of ggplot and dipped our toes into grammar of graphics. If you want to go deeper, I highly recommend the DataCamp courses on *Data Visualization with ggplot2* with [Rick Scavetta](https://www.datacamp.com/instructors/rickscavetta){target="_blank"}. There are three parts and they are quite dense, but the [first part](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"} is definitely worth checking out. 
+We have just touched the surface of ggplot and dipped our toes into grammar of graphics. If you want to go deeper, I highly recommend the DataCamp courses on *Data Visualization with ggplot2* with Rick Scavetta. There are three parts and they are quite dense, but the [first part](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1){target="_blank"} is definitely worth checking out. 
 
 ## Helpful links
 
