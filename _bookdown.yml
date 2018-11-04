@@ -18,9 +18,9 @@ rmd_files: [
 
   "bargraph.Rmd",
   "boxplot.Rmd",
-  "scatterplot.Rmd",
   "heatmap.Rmd",
   "histogram.Rmd",
+  "mosaic.Rmd",
   "ridgeline.Rmd",
   "scatterplot.Rmd",
   "dates.Rmd",
