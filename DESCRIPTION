@@ -10,6 +10,7 @@ Imports:
   extracat,
   GDAdata,
   ggplot2movies,
+  ggridges,
   gridExtra,
   lattice,
   likert,

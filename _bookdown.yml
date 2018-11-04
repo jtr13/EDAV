@@ -21,6 +21,7 @@ rmd_files: [
   "heatmap.Rmd",
   "histogram.Rmd",
   "mosaic.Rmd",
+  "ridgeline.Rmd",
   "scatterplot.Rmd",
   "dates.Rmd",
   "maps.Rmd",
