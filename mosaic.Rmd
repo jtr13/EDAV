@@ -2,7 +2,7 @@
 
 <!-- Chapter Banner -->
 ![](images/banners/banner_mosaic.png)
-*This chapter originated as a community contribtuion proposed by [harin](https://github.com/harin){target="_blank"}*
+*This chapter originated as a community contribution created by [harin](https://github.com/harin){target="_blank"}*
 
 *This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
 
