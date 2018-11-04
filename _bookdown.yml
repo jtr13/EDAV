@@ -18,11 +18,10 @@ rmd_files: [
 
   "bargraph.Rmd",
   "boxplot.Rmd",
-  "scatterplot.Rmd",
   "heatmap.Rmd",
   "histogram.Rmd",
-  "scatterplot.Rmd",
   "mosaic.Rmd",
+  "scatterplot.Rmd",
   "dates.Rmd",
   "maps.Rmd",
   "missing_data.Rmd",

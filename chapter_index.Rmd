@@ -36,6 +36,8 @@ This page includes links to every chapter in *edav.info/*
 
 [![Chart: Histogram](images/banners/banner_histogram.png)](histo.html){class="active-banner"}
 
+[![Chart: Mosaic](images/banners/banner_mosaic.png)](mosaic.html){class="active-banner"}
+
 [![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatter.html){class="active-banner"}
 
 [![Dates in R](images/banners/banner_dates.png)](dates.html){class="active-banner"}
