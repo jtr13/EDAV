@@ -1,0 +1,81 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+This section describes how to get multiple independent plots into one window so that it is easier to compare and contrast between graphs. Many a times, we want to draw comparisons and it would be helpful to have all the plots on a single window/page to help draw conclusions
+
+The packages that help us achieve this are
+1) ggpubr
+2) cowplot
+3) par
+4) gridExtra
+5) grid
+
+In this tutorial, I will use one or two packages from the above to demonstrate the idea. Each package has its own capabilities.
+
+## Installing packages
+
+Install package "ggpubr" and load it.
+
+```{r}
+install.packages("ggpubr")
+library(ggpubr)
+```
+
+## Multiple plots on one window
+
+In order to get multiple independent plots on the same window, use ggarrange function as follows.
+
+```{r}
+qq <- ggplot(beaver1,aes(sample=temp))+geom_qq_line()+geom_qq()+ggtitle("qq plot beaver1 temp")
+
+hist <- ggplot(beaver1,aes(x=temp))+geom_histogram(color="black",fill="lightblue")+ggtitle("Histogram of the temperatures")
+
+box <- ggplot(beaver1,aes(x=temp,y=time))+geom_boxplot()+ggtitle("boxplot of temperatures")
+
+scatter <- ggscatter(beaver1,x="temp",y="time")+ggtitle("scatterplot of temperature with time")
+
+ggarrange(qq,hist,box,scatter,ncol=2,nrow=2,widths = c(1, 1.25))
+```
+
+
+We can create and arrange how many ever plots we want on a single window. The function takes in a list of plots as argument and allows us to alter the width of each column in the plot. In the above code, widths=c(1,1.25) would make the second column is 1.25 times as wide as the first column. There are a lot of other options available in this function to improve the aesthetics of the graph. Please go through them to make your plot look best.
+
+
+Here is another example where you want to visualize two different types of plots for the same data in one window.
+
+```{r}
+bp <- ggboxplot(beaver1,x="day",y="temp",color="day")+ggtitle("Boxplot of temperature on each day")
+dp <- ggdotplot(beaver1,x="day",y="temp",color="day")+ggtitle("dot plot of temperature on each day")
+ggarrange(bp,dp,ncol=2,nrow=1)
+```
+
+## Cowplot package
+
+The cowplot package helps us to specify locations for our individual plots and also the size with which they should be plotted.
+
+ggdraw() function gives the layout of the window. The height and width of the window can be set using arguments xlim and ylim. Default is "x" axis ranges from 0 to 1 and "y" axis ranges from 0 to 1. 
+
+COnsidering (0.5,0.5) as the center of the window, the following code plots the graphs in the specified coordinates in the window.
+
+```{r}
+install.packages("cowplot")
+library(cowplot)
+
+ggdraw()+draw_plot(dp, x = 0, y = 0, width = 1, height = 0.5)+draw_plot(bp,x=0.5,y=0.5,width = 0.5,height = 0.5)+draw_plot(qq,x=0,y=0.5,width = 0.5,height = 0.5)
+```
+
+A lot more amazing visualizations are available in the following referencec links. I recommend taking a look at them.
+
+## References
+
+http://www.sthda.com/english/articles/24-ggpubr-publication-ready-plots/81-ggplot2-easy-way-to-mix-multiple-graphs-on-the-same-page/
+
+https://cran.r-project.org/web/packages/gridExtra/vignettes/arrangeGrob.html
