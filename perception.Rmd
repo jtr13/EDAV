@@ -14,7 +14,7 @@ Here are some links to some key books/articles on perception:
 - [The Elements of Graphing Data](https://clio.columbia.edu/catalog/SCSB-8519758){target="_blank"}: Textbook by William Cleveland
 - [
 Visualizing Data](https://clio.columbia.edu/catalog/SCSB-1389825){target="_blank"}: Textbook by William Cleveland
-- [Creating More Effective Graphs](https://clio.columbia.edu/catalog/SCSB-8519758){target="_blank"}: Textbook by Naomi Robbins
+- [Creating More Effective Graphs](https://clio.columbia.edu/catalog/5291007){target="_blank"}: Textbook by Naomi Robbins
 
 ## Color
 
