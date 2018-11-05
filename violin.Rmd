@@ -1,0 +1,95 @@
+# Chart: Violin Plot {#violin}
+
+![](images/banners/banner_violin.png)
+*This chapter originated as a community contribution created by [	AshwinJay101](https://github.com/AshwinJay101){target="_blank"}*
+
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+
+## Overview
+
+This section covers how to make violin plots.
+
+## Some Examples in R
+
+Let’s use the `chickwts` dataset from the `datasets` package to plot a violin plot using `ggplot2`. 
+
+```{r echo=FALSE}
+# import ggplot and the Datasets Package
+library(datasets)
+library(ggplot2)
+
+supps <- c("horsebean", "linseed", "soybean", "meatmeal", "sunflower", "casein")
+
+# plot data
+
+ggplot(chickwts, aes(x = factor(feed, levels = supps), 
+                     y = weight)) + 
+  # plotting
+  geom_violin(fill = "lightBlue", color = "#473e2c") + 
+  labs(x = "Feed Supplement", y = "Chick Weight (g)")
+
+```
+
+Here's the code for that: 
+```{r, eval=FALSE}
+# import ggplot and the Datasets Package
+library(datasets)
+library(ggplot2)
+
+supps <- c("horsebean", "linseed", "soybean", "meatmeal", "sunflower", "casein")
+
+# plot data
+
+ggplot(chickwts, aes(x = factor(feed, levels = supps), 
+                     y = weight)) + 
+  # plotting
+  geom_violin(fill = "lightBlue", color = "#473e2c") + 
+  labs(x = "Feed Supplement", y = "Chick Weight (g)")
+
+```
+
+## Adding Statistics to the Violin Plot 
+
+### Adding the median and the interquartile range
+We can add the median and the interquartile range to the violin plot 
+
+```{r}
+ggplot(chickwts, aes(x = factor(feed, levels = supps), 
+                     y = weight)) + 
+  # plotting
+  geom_violin(fill = "lightBlue", color = "#473e2c") + 
+  labs(x = "Feed Supplement", y = "Chick Weight (g)") + 
+   geom_boxplot(width=0.1)
+```
+
+To get the result, we just add a boxplot geom.
+
+### Displaying data as dots
+
+```{r message=FALSE, warning=FALSE}
+ggplot(chickwts, aes(x = factor(feed, levels = supps), 
+                     y = weight)) + 
+  # plotting
+  geom_violin(fill = "lightBlue", color = "#473e2c") + 
+  labs(x = "Feed Supplement", y = "Chick Weight (g)") + 
+  geom_dotplot(binaxis='y', dotsize=0.5, stackdir='center')
+```
+
+
+## Description 
+
+Violin plots are similar to box plots. The advantage they have over box plots is that they allow us to visualize the distribution of the data *and* the probability density. We can think of violin plots as a combination of [boxplots](box.html) and density plots. 
+
+This plot type allows us to see whether the data is unimodal, bimodal or multimodal. These simple details will be hidden in the boxplot. The distribution can be seen through the width of the violin plot. 
+
+## When to use 
+Violin plots should be used to display continuous variables only. 
+
+## External Resources 
+- [ggplot2 Violin Plot](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization){target="_blank"}: Excellent resource for showing the various customizations that can be added to the violin plot. 
+
+
+
+
+
+
