@@ -38,7 +38,7 @@ qq <- ggplot(beaver1,aes(sample=temp))+geom_qq_line()+geom_qq()+ggtitle("qq plot
 
 hist <- ggplot(beaver1,aes(x=temp))+geom_histogram(color="black",fill="lightblue")+ggtitle("Histogram of the temperatures")
 
-box <- ggplot(beaver1,aes(x=temp,y=time))+geom_boxplot()+ggtitle("boxplot of temperatures")
+box <- ggboxplot(beaver1,x="day",y="temp",color="day")+ggtitle("Boxplot of temperature on each day")
 
 scatter <- ggscatter(beaver1,x="temp",y="time")+ggtitle("scatterplot of temperature with time")
 

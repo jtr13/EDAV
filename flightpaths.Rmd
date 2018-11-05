@@ -1,0 +1,72 @@
+---
+title: "Flight_Paths"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Plotting Flight Paths
+
+Here is the guide to plot the paths of flights on a map to visualize the flight traffic. All that you need is the latitude and longitude of the origin and destination endpoints.
+
+There are various packages available but in this tutorial plotly is used.
+
+```{r}
+library(plotly)
+
+airports <- read.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_february_us_airport_traffic.csv')
+
+flights <- read.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_february_aa_flight_paths.csv')
+head(flights)
+
+# create a template of how the map looks like
+
+geo <- list(
+  scope = 'north america',
+  projection = list(type = 'azimuthal equal area'),
+  showland = TRUE,
+  landcolor = toRGB("gray95"),
+  countrycolor = toRGB("gray80")
+)
+
+p <- plot_geo(locationmode = 'USA-states', color = I("red")) %>%
+  
+  # mark various airports on the map using the latitude, longitude and airport names found in airports dataset
+  
+  add_markers(
+    data = airports, x = ~long, y = ~lat, text = ~airport,
+    size = ~cnt, hoverinfo = "text", alpha = 0.5
+  ) %>%
+  
+  # From the flights data, plot the paths between origin and destination using their latitudes and longitudes
+  
+  add_segments(
+    data = flights,
+    x = ~start_lon, xend = ~end_lon,
+    y = ~start_lat, yend = ~end_lat,
+    alpha = 0.3, size = I(1), hoverinfo = "none"
+  ) %>%
+  
+  # plot the flight paths on the layout north america as specified in the object geo
+  layout(
+    title = 'Feb. 2011 American Airline flight paths<br>(Hover for airport names)',
+    geo = geo, showlegend = FALSE, height=800
+  )
+p
+```
+
+
+
+In the map, the lines going out of north america indicate that the destinations are other countries which we are not showing in this map.
+
+This is just an introduction and you can find more in the references below.
+
+## References
+
+https://www.r-bloggers.com/create-air-travel-route-maps-in-ggplot-a-visual-travel-diary/
+
+http://strimas.com/spatial/long-flights/
+
+https://www.gis-blog.com/flight-connection-map-with-r/
