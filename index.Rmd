@@ -29,6 +29,9 @@ In addition, we include sections on **basic chart types/tools** so you can learn
 
 There are also **several walkthroughs** where we work with data and discuss problems as well as some tips/tricks that will help you.
 
+What makes edav.info the best resource for learning R?
+We give the reasons **why**! Many resources walk you through the code and visualization but skimp on the explanation. We want to tell you **why** a bar graph is better than a pie chart for a given data set in addition to the **how**. Ultimately, you will need to decide which visualization best expresses your findings we want to inform that decision.
+
 We hope this resource serves you well!
 
 This resource is specifically tailored to the GR5702 Exploratory Data Analysis and Visualization course offered at [Columbia University](https://www.columbia.edu/){target="_blank"}. However, anyone interested in working with data in R will benefit from perusing these pages.
