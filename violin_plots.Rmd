@@ -1,4 +1,4 @@
-# Chart: Violinplot {#violin}
+# Chart: Violin Plot {#violin}
 
 ## Overview
 
@@ -93,7 +93,7 @@ This allows us to see whether the data is unimodal, bimodal or multimodal. These
 Violin plots should be used to display continuous variables only. 
 
 ## External Resources 
-- [ggplot2 Violin Plot](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization) Excellant resource for showing the various customizations that can be added to the violin plot. 
+- [ggplot2 Violin Plot](http://www.sthda.com/english/wiki/ggplot2-violin-plot-quick-start-guide-r-software-and-data-visualization) Excellent resource for showing the various customizations that can be added to the violin plot. 
 
 
 
