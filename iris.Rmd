@@ -153,7 +153,7 @@ To this:
 Just add a name to the start of each chunk:
 `{r <cool-code-chunk-name>, <chunk_option> = TRUE}`
 
-Now you can see what the chunks were about as well as get a sense of where you are in the document. Just don't forget, it is a space after the `r` and commas for the other chunk options you may have like `eval` or `echo`. For more info, see [our section on communicating results](basics.html#communicating-results){target="_blank"}.
+Now you can see what the chunks were about as well as get a sense of where you are in the document. Just don't forget, it is a space after the `r` and commas for the other chunk options you may have like `eval` or `echo`. For more info, see [our section on communicating results](basics.html#communicating-results).
 
 ## Overlapping data
 
