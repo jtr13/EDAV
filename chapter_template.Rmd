@@ -1,6 +1,8 @@
 # Chapter Template {#template}
 
 <!-- Chapter Banner -->
+[A sweet banner is coming soon <i class="far fa-smile-beam"></i>](https://www.youtube.com/watch?v=7kdV8VmD76w){target="_blank"}
+
 <!-- ![](images/banners/) -->
 *This chapter originated as a community contribution created by [YOUR_GITHUB_HANDLE](https://github.com/YOUR_GITHUB_HANDLE){target="_blank"}*
 

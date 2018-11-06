@@ -24,6 +24,7 @@ rmd_files: [
   "mosaic.Rmd",
   "ridgeline.Rmd",
   "scatterplot.Rmd",
+  "qqplot.Rmd",
   "violin.Rmd",
   "dates.Rmd",
   "maps.Rmd",
