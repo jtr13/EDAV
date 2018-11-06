@@ -8,10 +8,12 @@ Imports:
   choroplethr,
   choroplethrMaps,
   extracat,
+  fpp,
   GDAdata,
   ggplot2movies,
   ggridges,
   gridExtra,
+  imputeTS,
   lattice,
   likert,
   MASS,
@@ -26,5 +28,5 @@ Imports:
   viridis,
   viridisLite,
   visNetwork,
+  ggmosaic,
   knitr
-

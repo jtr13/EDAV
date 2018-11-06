@@ -63,7 +63,7 @@ Pages in the **yellow section** contain simple collections of  **references**. A
 
 ## Help improve *edav.info/*
 
-Not finding what you are looking for? Think a section could be made clearer? Consider helping improve *edav.info/* by submitting a pull request to the [github page](https://github.com/jtr13/EDAV){target="_blank"}. Don't understand that last sentence? We have a [page on how you can contribute to *edav.info/*](contribute.html).
+This resource is an ongoing creation made by students, for students. We welcome you to help make it better. Not finding what you are looking for? Think a section could be made clearer? Consider helping improve *edav.info/* by submitting a pull request to the [github page](https://github.com/jtr13/EDAV){target="_blank"}. Don't understand that last sentence? We have a [page on how you can contribute to *edav.info/*](contribute.html).
 
 ## Fun stuff
 

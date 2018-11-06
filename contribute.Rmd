@@ -71,7 +71,7 @@ This is a full walkthough on proposing a change to *edav.info/*. It follows a hy
 And now we wait...
 
 <center>
-<iframe src="https://giphy.com/embed/l0MYOUI5XfRk4LLWM" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br /><a href="https://giphy.com/gifs/warnerarchive-classic-film-warner-archive-l0MYOUI5XfRk4LLWM">via GIPHY</a>
+<iframe src="https://giphy.com/embed/l0MYOUI5XfRk4LLWM" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br /><a href="https://giphy.com/gifs/warnerarchive-classic-film-warner-archive-l0MYOUI5XfRk4LLWM" target="_blank">via GIPHY</a>
 </center>
 <br />
 
@@ -99,7 +99,7 @@ We contributed to a GitHub repo! Hooray! Time to celebrate!
 
 <center>
 <iframe src="https://giphy.com/embed/nxscd2YGVf6xi" width="480" height="369" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br />
-<a href="https://giphy.com/gifs/reaction-food-simpsons-nxscd2YGVf6xi">via GIPHY</a>
+<a href="https://giphy.com/gifs/reaction-food-simpsons-nxscd2YGVf6xi" target="_blank">via GIPHY</a>
 </center>
 <br>
 If what you want to improve is a little more substantial (too difficult to contribute directly), read on.

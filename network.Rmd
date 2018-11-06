@@ -6,7 +6,7 @@
 
 ## visNetwork (interactive)
 
-`visNetwork` is a powerful R implementation of the interactive JavaScript `vis.js` library; it uses `tidyverse` piping: https://datastorm-open.github.io/visNetwork/
+`visNetwork` is a powerful R implementation of the interactive JavaScript `vis.js` library; it uses `tidyverse` piping: [VisNetwork Docs](https://datastorm-open.github.io/visNetwork/){target="_blank"}.
 
 --> The Vignette has clear worked-out examples: https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html
 

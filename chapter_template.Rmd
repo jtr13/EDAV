@@ -1,12 +1,13 @@
 # Chapter Template {#template}
 
 <!-- Chapter Banner -->
-<!-- ![](images/banners/banner_histogram.png) -->
+[A sweet banner is coming soon <i class="far fa-smile-beam"></i>](https://www.youtube.com/watch?v=7kdV8VmD76w){target="_blank"}
 
+<!-- ![](images/banners/) -->
+*This chapter originated as a community contribution created by [YOUR_GITHUB_HANDLE](https://github.com/YOUR_GITHUB_HANDLE){target="_blank"}*
 
 <!-- Under Construction Section
 ----------------------------------------------------------------------------- -->
-![Under Construction](images/banners/banner_under_construction.png)
 *This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
 <!-- ------------------------------------------------------------------------ -->
 
