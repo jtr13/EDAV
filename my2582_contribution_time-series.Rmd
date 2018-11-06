@@ -1,0 +1,95 @@
+---
+title: "my2582_contribution_time-series"
+author: "Minsu Yeom"
+date: "11/6/2018"
+output: pdf_document
+---
+
+
+
+# Chapter Template {#template}
+
+<!-- Chapter Banner -->
+<!-- ![](images/banners/) -->
+*This chapter originated as a community contribution created by [my2582](https://github.com/my2582){target="_blank"}*
+
+
+
+<!-- Under Construction Section
+----------------------------------------------------------------------------- -->
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- 
+Some possible headers:
+- Overview
+- tl;dr
+[Coming soon <i class="far fa-smile-beam"></i>](https://www.youtube.com/watch?v=7kdV8VmD76w){target="_blank"}
+- Theory
+-->
+
+
+## Overview
+
+This section covers how to make time-series data. As time-series data are widely used in economy analysis and financial analysis, data sets from these fields will be used.
+
+
+## tl;dr
+
+Take a look at this chart below. The red line is an indicator that U.S. economy may enter into recession after it is below zero. Recession periods are shaded.
+
+Source: Federal Reserve Bank of St. Louis, 10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity [T10Y2Y], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/graph/?g=lV63
+
+
+```{r}
+library(tidyverse)
+library(readr)
+
+# Read a csv file into a tibble, a tidyverse's data frame.
+df_10y2y <- read_csv("T10Y2Y.csv")
+
+start_date = as.Date("1976-06-01")
+end_date = as.Date("2018-10-01")
+
+
+# Plot a 10-year - 2-year yield curve.
+ggplot(data = df_10y2y, aes( x = DATE, y = T10Y2Y, color = "red" )) + 
+  geom_line() +
+  ggtitle("US 10-year Treasury yield - 2-year treasury yield and past ression periods",
+          subtitle = "Ression periods are shaded") +
+  ylab("10-year - 2-year yield (%p)") +
+  xlab("Date") +
+  annotate( "rect", xmin=as.Date("1980-02-01"), xmax=as.Date("1980-07-31"),
+            ymin=-Inf, ymax=Inf, fill="grey", alpha=0.5) +
+  annotate( "rect", xmin=as.Date("1981-08-01"), xmax=as.Date("1982-11-30"),
+            ymin=-Inf, ymax=Inf, fill="grey", alpha=0.5) + 
+  annotate( "rect", xmin=as.Date("1990-08-01"), xmax=as.Date("1991-03-31"),
+            ymin=-Inf, ymax=Inf, fill="grey", alpha=0.5) + 
+  annotate( "rect", xmin=as.Date("2000-04-01"), xmax=as.Date("2000-11-30"),
+            ymin=-Inf, ymax=Inf, fill="grey", alpha=0.5) +
+  annotate( "rect", xmin=as.Date("2008-01-01"), xmax=as.Date("2009-06-30"),
+            ymin=-Inf, ymax=Inf, fill="grey", alpha=0.5) + 
+  theme_bw(13) %+replace% 
+  theme(legend.position="none") +
+  theme(plot.title = element_text(color="black", size=13, face="bold")) +
+  theme(plot.subtitle = element_text( color="darkgrey", size=11, face="italic"))
+
+```
+
+There is an elegant way of obtaining this kind of data and annotating different areas without hard-coding, i.e., manually typing repeated ression periods, but we will get it back later. This is just a beginning.
+
+
+## Line Charts for most cases in time-series data
+
+
+## Bar Charts, when do you want to use them?
+
+
+## Annotate it
+
+
+## Seaonality
+
+
+
+
