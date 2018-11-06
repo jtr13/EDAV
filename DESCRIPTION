@@ -5,19 +5,28 @@ Version: 0.0.1
 Imports: 
   bookdown,
   datasets,
+  choroplethr,
+  choroplethrMaps,
+  extracat,
+  fpp,
   GDAdata,
   ggplot2movies,
+  ggridges,
   gridExtra,
+  imputeTS,
   lattice,
   likert,
   MASS,
+  mi,
   pgmm,
+  scales,
   Sleuth3,
   svglite,
   tidyverse,
+  units,
   vcdExtra,
   viridis,
   viridisLite,
-  visNetwork
-Remotes: 
-  rstudio/bookdown
+  visNetwork,
+  ggmosaic,
+  knitr

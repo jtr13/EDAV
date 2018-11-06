@@ -93,7 +93,7 @@ Both base R graphics and **ggplot2** "know" how to work with a `Date` class vari
 ### base R
 
 ```{r}
-df <- read.csv("mortgage.csv")
+df <- read.csv("data/mortgage.csv")
 df$DATE <- as.Date(df$DATE)
 plot(df$DATE, df$X5.1.ARM, type = "l") # on the order of years
 plot(df$DATE[1:30], df$X5.1.ARM[1:30], type = "l") # switch to months
@@ -111,7 +111,7 @@ library(tidyverse)
 Note that unlike base R`read.csv()`, `readr::read_csv()` automatically reads DATE in as a `Date` class since it's in YYYY-MM-DD format:
 
 ```{r}
-df <- readr::read_csv("mortgage.csv")
+df <- readr::read_csv("data/mortgage.csv")
 
 g <- ggplot(df, aes(DATE, `30 YR FIXED`)) + 
   geom_line() + 

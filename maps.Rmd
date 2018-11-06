@@ -31,13 +31,13 @@ state_choropleth(df_illiteracy,
                  legend = "Percent Illiterate")
 ```
 
-Note: the **choroplethr** "free course" that you may come across arrives one lesson at a time by email over an extended period so not the best option unless you have a few weeks to spare.
+**Note**: the `choroplethr` "free course" that you may come across arrives one lesson at a time by email over an extended period so not the best option unless you have a few weeks to spare.
 
 ## Square bins
 
 Packages such as `statebins` create choropleth style maps with equal size regions that roughly represent the location of the region, but not the size or shape.
 
-**Important**:  Don't install **statebins** from CRAN; use the [dev version](https://github.com/hrbrmstr/statebins){target="_blank"} -- it contains many improvements, which are detailed in ["Statebins Reimagined"](https://rud.is/b/2017/11/18/statebins-reimagined/#comment-19346){target="_blank"}.
+**Important**:  Don't install `statebins` from CRAN; use the [dev version](https://github.com/hrbrmstr/statebins){target="_blank"} -- it contains many improvements, which are detailed in ["Statebins Reimagined"](https://rud.is/b/2017/11/18/statebins-reimagined/#comment-19346){target="_blank"}.
 
 ```{r}
 # devtools::install_github("hrbrmstr/statebins")
@@ -56,5 +56,12 @@ statebins(df_illit, value_col="Illiteracy",
   theme_statebins()
 ```
 
+## Longitude / Latitude data 
 
+Note that the options above work with *political boundaries*, based on the names of the regions that you provide. If you have longitude / latitude data, **ggmap** is a good choice.  It is straight-forward to plot lon/lat data on a Cartestian coordinate system, with the x-axis representation longitude and the y-axis latitude -- just be careful not to mix them up. The **ggmap** package provides a variety of maps that can serve as the backdrop for the long/lat points. 
 
+**ggmap** offers a number of different map sources.  Google Maps API was the go-to, but they now [require you to enable billing through Google Cloud Platorm](https://cloud.google.com/free/){target="_blank"}.  You get $300 in free credit, but if providing a credit card isn't your thing, you may consider using Stamen Maps instead, with the `get_stamenmap()` function. Use the development version of the package; instructions and extensive examples are available on the package's [GitHub page](https://github.com/dkahle/ggmap){target="_blank"}.
+
+## Resources
+
+["Getting started Stamen maps with ggmap"](https://statisticaloddsandends.wordpress.com/2018/10/25/getting-started-stamen-maps-with-ggmap/){target="_blank"} -- A short tutorial on using **ggmap** with Stamen maps using the Sacramento dataset in the **caret** package.

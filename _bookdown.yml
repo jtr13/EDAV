@@ -15,15 +15,19 @@ rmd_files: [
   "contribute.Rmd",
 
   "iris.Rmd",
+  "timeseries.Rmd",
 
   "bargraph.Rmd",
   "boxplot.Rmd",
-  "scatterplot.Rmd",
   "heatmap.Rmd",
   "histogram.Rmd",
+  "mosaic.Rmd",
+  "ridgeline.Rmd",
   "scatterplot.Rmd",
+  "violin.Rmd",
   "dates.Rmd",
-  #"maps.Rmd",
+  "maps.Rmd",
+  "missing_data.Rmd",
   "network.Rmd",
 
   "general_resources.Rmd",
