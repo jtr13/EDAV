@@ -8,9 +8,9 @@ This section covers how to import data source from R built-in source, local file
 
 ## Import built-in dataset
 
-R comes with quite a lot of built-in datasets, which R user can play around with R functions and do analysis. Many of those built-in datasets are those we are very familiar with, like `iris`, `mtcars`, `beavers`, `dataset`, etc. Those datasets are preloaded, so you can manipulate them directly. To see a full list of r built-in dataset and their description, please refer to [The R Datasets Package](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html). we can also run `data()` to view the full list.
+R comes with quite a lot of built-in datasets, which R users can play with R functions. We are very familiar with many of those built-in datasets are those, like `iris`, `mtcars`, `beavers`, `dataset`, etc. Since datasets are preloaded, we can manipulate them directly. To see a full list of r built-in dataset and their description, please refer to [The R Datasets Package](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html). We can also run `data()` to view the full list.
 
-After we find the dataset we want, we can use the function data(package_name) to load the built-in dataset into our workspace. For example, we want to load `iris` data.
+After we find the dataset we want, we can use the function `data(package_name)` to load the built-in dataset into our workspace. For example, we want to load `iris` data.
 
 ```{r}
 # load data
@@ -18,7 +18,7 @@ data("iris")
 head(iris)
 ```
 
-Besides the data sets above, there are other datasets along with the specific R packages. To see a full list of data in various packages, run command `??datasets` in the RStudio Console.
+Besides the datasets above, there are other datasets along with the specific R packages. To see a full list of data in various packages, run command `??datasets` in the RStudio console.
 Now, we want to load the `diamonds` dataset from the `ggplot2` package. To load `diamonds` data, first we need to load `ggplot2` library.
 
 ```{r}
@@ -32,7 +32,7 @@ head(diamonds)
 
 ### Import .txt file
 
-The function `read.table()` is the mostly general used function for reading text files. To use this function, we need to specify on how we read this file. In other words, we need to specify some basic parameters like `sep`, `header`, etc. `sep` represent the seperator and `header` is set to `TRUE` if we want to regard the first line as the header information. Other parameters are also useful in different case. For example, `na.strings` indicate the strings to be regarded as NA value.
+The function `read.table()` is the most general used function for reading text files. To use this function, we need to specify how we read this file. In other words, we need to specify some basic parameters like `sep`, `header`, etc. `sep` represents the separator, and `header` is set to `TRUE` if we want to read the first line as the header information. Other parameters are also useful in different cases. For example, `na.strings` indicates the strings to be regarded as NA value.
 
 ```{r}
 df <- read.table("data/MusicIcecream.csv", sep=",", header=TRUE)
@@ -40,11 +40,11 @@ head(df)
 ```
 
 ### Import .CSV file
-A comma-separated values file (CSV) is a delimited text file that uses a comma to separate values. We can easily read a CSV file with R built-in functions. 
+A Comma-Separated Values file (CSV) is a delimited text file that uses a comma to separate values. We can easily read a CSV file with R built-in functions. 
 
-`read.csv()` function provides two useful paramters. One is `header`, which could be set to `FALSE` if there is no header. The other is `sep`, which specifies the seperator. For example, we can specify the seperator to be like `sep="\t` if the CSV file value is seperated by tab character. The default value of `header` and `sep` are `TRUE` and `","`, respectively. 
+`read.csv()` function provides two useful parameters. One is `header`, which could be set to `FALSE` if there is no header. The other is `sep`, which specifies the separator. For example, we can specify the separator to be like `sep="\t` if the CSV file value is seperated by the tab character. The default value of `header` and `sep` are `TRUE` and `","`, respectively. 
 
-`read.csv2()` is another function for reading CSV file. The difference between `read.csv()` and `read.csv2` is that, the former use the tab `"\t"` as the seperator, while the latter one use the semicolon `";"`. 
+`read.csv2()` is another function for reading CSV file. The difference between `read.csv()` and `read.csv2` is that, the former uses the tab `"\t"` as the separator, while the latter one uses the semicolon `";"`. 
 
 Let's see an example on reading a standard CSV file. 
 ```{r}
@@ -52,13 +52,13 @@ df <- read.csv("data/MusicIcecream.csv")
 head(df)
 ```
 
-A tiny skill while reading multiple files, is to let R know your current directory by using `setwd()`. Then you can read any file in this directory by directly set filename parameter to be the name of the file, without specifying the location. 
+A small skill while reading multiple files is to let R know your current directory by using `setwd()`. Then, you can read any file in this directory by directly using the name of the file, without specifying the location. 
 
 ### Import .JSON file
 
-A JSON file is a file that stores simple data structures and objects in JavaScript Object Notation (JSON) format, which is a standard data interchange format. For example, `{"name":"Vince", "age":23, "city":"New York"}` is an object with JSON format. In recent years, JSON become the mainstream format to tranfer data on the website. 
+A JSON file is a file that stores simple data structures and objects in JavaScript Object Notation (JSON) format, which is a standard data interchange format. For example, `{"name":"Vince", "age":23, "city":"New York"}` is an object with JSON format. In recent years, JSON becomes the mainstream format to transfer data on the website. 
 
-To read a JSON file, we can use `jsonlite` package. The `jsonlite` package is a JSON parser/generator optimized for the web. Its main strength is that it implements a bidirectional mapping between JSON data and the most important R data types. In the example below, the argument `simplifyDataFrame = TRUE` will directly transform list of JSON object into Data Frame. Besides, if you want to know the argument `simplifyVector` and `simplifyMatrix` which have flexible control on other R data formats to transfrom, please refer to [Getting started with JSON and jsonlite](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-aaquickstart.html).
+To read a JSON file, we can use `jsonlite` package. The `jsonlite` package is a JSON parser/generator optimized for the web. Its main strength is that it implements a bidirectional mapping between JSON data and the most important R data types. In the example below, the argument `simplifyDataFrame = TRUE` will directly transform a list of JSON object into Data Frame. Besides, if you want to know more about the arguments `simplifyVector` and `simplifyMatrix`, which provide flexible control on other R data formats to transform to, please refer to [Getting started with JSON and jsonlite](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-aaquickstart.html).
 
 ```{r}
 library(jsonlite)
@@ -73,13 +73,13 @@ head(df)
 
 ## Import web data
 
-We can import data from the web, as long as we have the link to the dataset. Basically, there are two ways to import web data. One way is to scratch the dataset with the link before we import that data into the R workspace. The other way is to directly import the dataset from the web to our workspace. 
+We can import data from the web, as long as we have the link to the dataset. Basically, there are two ways to import web data. One way is to scratch the dataset with the link before we import that data into the R workspace. The other way is to import the dataset from the web to our workspace directly. 
 
 Let's take the `Water Consumption In The New York City` for example, which is on the [NYC Open Data website](https://data.cityofnewyork.us/Environment/Water-Consumption-In-The-New-York-City/ia2d-e54m). 
 
 ### Scrape web data to local space/memory before importing it
 
-To securely access the web data, we can use `RCurl` package. More resources on [The RCurl Package](http://www.omegahat.net/RCurl/). More flexibly, we can first download the data to local hard drive and then read them as local files. To download the file, we can use the commands like `curl` : [Downloading files with curl](http://www.compciv.org/recipes/cli/downloading-with-curl/), `wget` : [Wget Command Examples](https://www.rosehosting.com/blog/wget-command-examples/), or just download it with browser.
+To securely access the web data, we can use `RCurl` package. More resources on [The RCurl Package](http://www.omegahat.net/RCurl/). To be more flexible, we can first download the data to local hard drive and then read them as local files. To download the file, we can use the commands like `curl` : [Downloading files with curl](http://www.compciv.org/recipes/cli/downloading-with-curl/), `wget` : [Wget Command Examples](https://www.rosehosting.com/blog/wget-command-examples/). You can also download it with browser.
 
 ```{r, echo=FALSE, message=FALSE}
 library('RCurl')
@@ -98,13 +98,13 @@ head(df)
 
 ### Directly read web source into the workspace
 
-We still take the water consumption data as example. We specify the correct data url, and then read the data just like reading the local dataset.
+We still use the water consumption data as an example. First We specify the correct data URL, and then read the data just like reading the local dataset. 
 
 ```{r}
-# specify the url link to the data source
+# specify the URL link to the data source
 url <- "https://data.cityofnewyork.us/api/views/ia2d-e54m/rows.csv"
 
-# read the url
+# read the URL
 df <- read.table(url, sep = ",", header = TRUE)
 head(df)
 
@@ -112,11 +112,11 @@ head(df)
 
 ## Import data from database
 
-R provide packages to manipulate data from relational database like PostgreSQL, MySQL, etc. One of those packages is `odbc` package, which is one database interface for communication between R and relational database management systems. More resources on package [odbc](https://db.rstudio.com/odbc/). 
+R provides packages to manipulate data from the relational database like PostgreSQL, MySQL, etc. One of those packages is `odbc` package, which is one database interface for communication between R and relational database management systems. More resources on package [odbc](https://db.rstudio.com/odbc/). 
 
-Before we connect to local database, we must satify the requirement of ODBC driver, through which our R package can communicate with database. To get a help on how to install ODBC driver on systems like Windows, Linux, MacOS, please refer to this document: [Install ODBC Driver](https://cran.r-project.org/web/packages/odbc/readme/README.html).
+Before we connect to a local database, we must satisfy the requirement of ODBC driver, through which our R package can communicate with the database. To get help on how to install ODBC driver on systems like Windows, Linux, MacOS, please refer to this document: [Install ODBC Driver](https://cran.r-project.org/web/packages/odbc/readme/README.html).
 
-After we installed the ODBC driver, with `odbc` package, we are able to manipulate database. To read a table in the database, we usually take steps as follows. First, we build the connection to the database with connection parameters specified. Then, we can do some exploratory operation like listing all tables in the database. To query the data we want, we can send a SQL query into the database and retrive the wanted data. 
+After we installed the ODBC driver, with `odbc` and `DBI` packages, we are able to manipulate the database. To read a table in the database, we usually take steps as follows. First, we build the connection to the database using `dbConnect()` function. Then, we can do some exploratory operations like listing all tables in the database. To query the data we want, we can send a SQL query into the database. Then we can retrieve the desired data and `dfFetch()` provides control on how many records to retrieve at a time. Finally, we finish reading and close the connection. 
 
 ```{r, eval=FALSE}
 if(!require('odbc')) install.packages('odbc')
