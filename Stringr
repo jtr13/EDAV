@@ -1,0 +1,102 @@
+---
+title: "Contribution to R"
+author: "Zhejin Dong(zd2221)"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction Stringr 
+
+The first step before data visualization is data preprocessing, such as replacing missing data, splitting strings. Here I would like to introduce a useful package 'Stringr'
+
+## Removing whitespace
+```{r}
+library(stringr)
+x1 <- c("10   ", " 149   ",  " 984  ")
+x2<-str_trim(x1)
+max(x1)
+max(x2)
+```
+
+'str_trim()' is a very useful function to remove white space. There may be many white spaces in raw data which messes our calculation. As shown above, if we don't delete the space of strings, the returned max value is wrong. 
+
+## Pattern matching
+
+When processing text data, a common tricky problem is the input data is a sentence, and much useful information is mixed together. Besides, some format of string cannot be accepted by functions in R without transforming. Under such situations, we can turn to ‘stringr’.
+
+### str_split()
+
+```{r}
+string <-"Name: Jane;Phone: 219 733 8965;Mobile: 329-293-8753;Work: 579-499-7527;Home: 543.355.3679;Name: Tom;Phone: 419 733 8965;Mobile: 399-293-8783;Work: 579-499-7527;Home: 563.355.3679"
+strings<-str_split(string, ";")
+strings<-c(unlist(strings))
+strings
+```
+
+As shown above, the input is a whole string which contains five parts information separated by ';'. To extract the information and store them into columns, we need to split the string by ';' and the function str_split() will help. The result will be a list of character vectors.
+
+
+### Regular expressions and str_detect()
+```{r}
+phone <- "([2-9][0-9]{2})[- .]([0-9]{3})[- .]([0-9]{4})"
+name <-"^Name"
+Name<-str_detect(strings,name)
+Phone<-str_detect(strings,phone)
+Name
+Phone
+Names<-c(strings[Name])
+Phones<-strings[Phone]
+Names
+Phones
+```
+
+
+The first step, we split a string into a vector, and the next step is grouping different information, for example, name and phone number. At beginning we need to recognize the structure of useful strings and create regular expression for them. For instance, all the information about name will in the strings start with 'Name:', so the regular expression is "^Name:" which means all string starts with ‘Name:’. Similarly, we can write down the pattern for phone numbers which is "([2-9][0-9]{2})[- .]([0-9]{3})[- .]([0-9]{4})".
+For more information about regular expression, please refer to https://stringr.tidyverse.org/articles/regular-expressions.html
+
+After we created the patterns, we can use 'str_detect()' to select the position where patterns occur, and the returned result as shown is a list of logic variables.
+
+
+```{r}
+Names
+Names<-unlist(str_split(Names, ":"))
+Names
+Names<-Names[str_detect(Names,name)==FALSE]
+Names<-str_trim(Names)
+```
+
+Using the method above, we can extract the names and transform them into a vector. 
+
+### str_replace_all()
+
+```{r}
+Phones
+Phones<-unlist(str_extract_all(Phones, phone, simplify = TRUE))
+Phones
+pattern<-"[. ]"
+str_replace_all(Phones, pattern, "-")
+```
+
+We notice the format of phone numbers are not consistent, because of the ‘. ‘and ' ', and to replace them into '-', we can turn to function str_extract_all(). Similarly, we write down the pattern of '.' and ' ', and replace them with '-'.
+
+# Control Structures in R: Using If-Else Statements and Loops
+
+When programming with R, it is necessary know how to write a loop and control statements. 
+
+The grammar is very concise. We can use 'if-else' to realize judgement and 'for' statement to finish a loop. Here is a simple example: 
+
+
+```{r}
+
+for (name in Names){
+  if (name=='Jane')
+    print ('Jane is Here!')
+  else {print('Not Jane')}
+}
+```
+
