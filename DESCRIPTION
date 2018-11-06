@@ -8,6 +8,7 @@ Imports:
   GDAdata,
   ggplot2movies,
   gridExtra,
+  HH,
   lattice,
   likert,
   MASS,
