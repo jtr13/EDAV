@@ -15,6 +15,7 @@ rmd_files: [
   "contribute.Rmd",
 
   "iris.Rmd",
+  "timeseries.Rmd",
 
   "bargraph.Rmd",
   "boxplot.Rmd",
