@@ -1,0 +1,142 @@
+# Chart: Ridgeline Plots {#ridgeline}
+
+![](images/banners/banner_ridgeline.png)
+*This chapter originated as a community contribution created by [nehasaraf1994](https://github.com/nehasaraf1994){target="_blank"}*
+
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library("ggridges")
+library("tidyverse")
+library("cluster")
+```
+ 
+## Overview
+ 
+This section covers how to make ridgeline plots.
+ 
+## tl;dr
+ 
+I want a nice example and I want it NOW!
+ 
+Here's a look at the dose of theophylline administered orally to the subject on which the concentration of theophylline is observed:
+
+```{r tldr-show-plot, echo=FALSE, message=FALSE}
+library("ggridges")
+library("tidyverse")
+Theoph_data <- Theoph
+ggplot(Theoph_data, aes(x=Dose,y=Subject,fill=Subject))+
+  geom_density_ridges_gradient(scale = 4, show.legend = FALSE) + theme_ridges() +
+  scale_y_discrete(expand = c(0.01, 0)) +
+  scale_x_continuous(expand = c(0.01, 0)) +
+  labs(x = "Dose of theophylline(mg/kg)",y = "Subject #") +
+  ggtitle("Density estimation of dosage given to various subjects") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+ 
+Here is the code:
+
+```{r tldr-code, eval=FALSE}
+library("ggridges")
+library("tidyverse")
+Theoph_data <- Theoph
+ggplot(Theoph_data, aes(x=Dose,y=Subject,fill=Subject))+
+  geom_density_ridges_gradient(scale = 4, show.legend = FALSE) + theme_ridges() +
+  scale_y_discrete(expand = c(0.01, 0)) +
+  scale_x_continuous(expand = c(0.01, 0)) +
+  labs(x = "Dose of theophylline(mg/kg)",y = "Subject #") +
+  ggtitle("Density estimation of dosage given to various subjects") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+ 
+
+For more info on this dataset, type `?datasets::Theoph` into the console.
+ 
+## Simple examples
+ 
+Okay...much simpler please.
+ 
+Let's use the `Orange` dataset from the `datasets` package:
+
+```{r}
+library("datasets")
+head(Orange, n=5)
+```
+
+## Ridgeline Plots using ggridge
+
+```{r message=FALSE}
+library("ggridges")
+library("tidyverse")
+ggplot(Orange, aes(x=circumference,y=Tree,fill = Tree))+
+  geom_density_ridges(scale = 2, alpha=0.5) + theme_ridges()+
+  scale_fill_brewer(palette = 4)+
+  scale_y_discrete(expand = c(0.8, 0)) +
+  scale_x_continuous(expand = c(0.01, 0))+
+  labs(x="Circumference at Breast Height", y="Tree with ordering of max diameter")+
+  ggtitle("Density estimation of circumference of different types of Trees")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+`ggridge` uses two main geoms to plot the ridgeline density plots: "geom_density_ridges" and "geom_ridgeline". They are used to plot the densities of categorical variable factors and see their distribution over a continuous scale.
+
+## When to Use
+ 
+Ridgeline plots can be used when a number of data segments have to be plotted on the same horizontal scale. It is presented with slight overlap. Ridgeline plots are very useful to visualize the distribution of a categorical variable over time or space.
+
+A good example using ridgeline plots will be a great example is visualizing the distribution of salary over different departments in a company.
+
+## Considerations
+ 
+The overlapping of the density plot can be controlled by adjusting the value of scale. Scale defines how much the peak of the lower curve touches the curve above.
+
+```{r, fig.width=10, message=FALSE}
+library("ggridges")
+library("tidyverse")
+OrchardSprays_data <- OrchardSprays
+ggplot(OrchardSprays_data, aes(x=decrease,y=treatment,fill=treatment))+
+  geom_density_ridges_gradient(scale=3) + theme_ridges()+
+  scale_y_discrete(expand = c(0.3, 0)) +
+  scale_x_continuous(expand = c(0.01, 0))+
+  labs(x="Response in repelling honeybees",y="Treatment")+
+  ggtitle("Density estimation of response by honeybees to a treatment for scale=3")+
+  theme(plot.title = element_text(hjust = 0.5))
+
+ggplot(OrchardSprays_data, aes(x=decrease,y=treatment,fill=treatment))+
+  geom_density_ridges_gradient(scale=5) + theme_ridges()+
+  scale_y_discrete(expand = c(0.3, 0)) +
+  scale_x_continuous(expand = c(0.01, 0))+
+  labs(x="Response in repelling honeybees",y="Treatment")+
+  ggtitle("Density estimation of response by honeybees to a treatment for scale=5")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+Ridgeline plots can also be used to plot histograms on the common horizontal axis rather than density plots. But doing that may not give us any valuable results.
+
+```{r}
+library("ggridges")
+library("tidyverse")
+ggplot(InsectSprays, aes(x = count, y = spray, height = ..density.., fill = spray)) + 
+  geom_density_ridges(stat = "binline", bins = 20, scale = 0.7, draw_baseline = FALSE)
+```
+
+If the same thing is done in ridgeline plots, it gives better results.
+
+```{r message=FALSE}
+library("ggridges")
+library("tidyverse")
+ggplot(InsectSprays, aes(x=count,y=spray,fill=spray))+
+  geom_density_ridges_gradient() + theme_ridges()+
+  labs(x="Count of Insects",y="Types of Spray")+
+  ggtitle("The counts of insects treated with different insecticides.")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+## External Resources
+
+- [Introduction to ggridges](https://cran.r-project.org/web/packages/ggridges/vignettes/introduction.html){target="_blank"}: An excellent collection of code examples on how to make ridgeline plots with `ggplot2`. Covers every parameter of ggridges and how to modify them for better visualization. If you want a ridgeline plot to look a certain way, this article will help.
+
+- [Article on ridgeline plots with ggplot2](https://rdrr.io/cran/ggridges/man/geom_density_ridges.html){target="_blank"}: Few examples using different examples. Great for starting with ridgeline plots.
+
+- [History of Ridgeline plots](https://blog.revolutionanalytics.com/2017/07/joyplots.html){target="_blank"}: To refer to the theory of ridgeline plots.
