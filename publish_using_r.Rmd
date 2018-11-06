@@ -98,7 +98,7 @@ We should note that this makes it all seem very easy to add Travis, which actual
 
 1. **Create a Travis account** on www.travis-ci.org by clicking on "Sign in with GitHub" on the top right.  Click Authorize to allow Travis to have proper access to GitHub.
 
-2. Go back to GitHub and **create a personal access token (PAT)** if you don't have one already.  You can do so [here](https://github.com/settings/tokens). Note that you must save your PAT somewhere because you can't access it once it's created.  Also note that the PAT provides a means to access your GitHub repo through an API, an alternative means to logging in with your username/password (There is an API Token in Travis but this is *not* the one to use).
+2. Go back to GitHub and **create a personal access token (PAT)** if you don't have one already.  You can do so [here](https://github.com/settings/tokens){target="_blank"}. Note that you must save your PAT somewhere because you can't access it once it's created.  Also note that the PAT provides a means to access your GitHub repo through an API, an alternative means to logging in with your username/password (There is an API Token in Travis but this is *not* the one to use).
 
 3. **Return to your Travis profile** (travis-ci.org/profile/[GITHUB username]) and click the button next to the appropriate repo to **toggle it on**.  Click on Settings next to the button and **add your saved GITHUB_PAT** under Environmental Variables: set "Name" to "GITHUB_PAT" and "Value" to the value of the token.
 

@@ -73,7 +73,7 @@ head(airquality, n = 5)
 boxplot(airquality, col = 'lightBlue', main = "Base R Boxplots of airquality")
 ```
 
-Boxplots with Base R are super easy. Like [histograms](histogram.html), boxplots only need the data. In this case, we passed a dataframe with six variables, so it made separate boxplots for each variable. You may not want to create boxplots for every variable, in which case you could specify the variables individually or use [`filter`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.5/topics/filter){target="_blank"} from the [`dplyr`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.5){target="_blank"} package.
+Boxplots with Base R are super easy. Like [histograms](histo.html), boxplots only need the data. In this case, we passed a dataframe with six variables, so it made separate boxplots for each variable. You may not want to create boxplots for every variable, in which case you could specify the variables individually or use [`filter`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.5/topics/filter){target="_blank"} from the [`dplyr`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.5){target="_blank"} package.
 
 ### Boxplot using ggplot2
 ```{r ggplot}
