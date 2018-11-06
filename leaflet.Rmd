@@ -1,0 +1,250 @@
+---
+date: "11/4/2018"
+output: html_document
+---
+
+# Interactive Geographic Data: Leaflet in R 
+
+<!-- Insert Image here -->
+
+## Overview
+
+You would have already seen different libraries that can help one in beautifully displaying geographic data like ggmap and choroplethr. Eventhough these libraries provide lots of interesting features to better express information through 2 dimensional graphs, they still lack in one feature- interactivity. Here, comes leaflet - a library written in javascript to handle interactive maps. Fun Fact: It's actively used by a lot of leading newspapers like New York Times to Washington Post. So let's dive in.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Brief Description about Dataset
+We are using NYC Open Data about schools in the New York City area in 2016 for our analysis. [You can find more about it here.](https://www.kaggle.com/passnyc/data-science-for-good/home) We will be focusing on the the distriubtion of different variables as a factor of geographical positions.
+
+```{r load library, eval=TRUE, message=FALSE}
+library(tidyverse)
+library(leaflet)
+library(htmltools)
+library(leaflet.extras)
+library(viridis)
+schools <- read_csv('Data/school/2016 School Explorer.csv')
+```
+
+## Plotting Markers
+Here we can see that all the Private schools in the NYC have been plotted on a map that allows one to zoom in and out. The Markers are used to donate the location of each individual school. If we hover over the marker, it displays us the name of the school. Isn't that cool! 
+
+```{r fig1-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
+lat<-median(schools$Latitude)
+lon<-median(schools$Longitude)
+
+schools %>% 
+  filter(`Community School?`=="Yes") %>%
+  leaflet(options = leafletOptions(dragging = TRUE))  %>%
+  addTiles() %>%
+  addMarkers(label=~`School Name`) %>%
+  setView(lng=lon,lat=lat, zoom = 10)
+```
+Here is the code for it.
+
+```{r fig1, eval=FALSE, message=FALSE}
+lat<-median(schools$Latitude)
+lon<-median(schools$Longitude)
+
+schools %>% 
+  filter(`Community School?`=="Yes") %>%
+  leaflet(options = leafletOptions(dragging = TRUE))  %>%
+  addTiles() %>%
+  addMarkers(label=~`School Name`) %>%
+  setView(lng=lon,lat=lat, zoom = 10)
+```
+
+## Dynamic Heatmaps
+Heatmaps are really useful tools for visualising the distubution of a particular variable over a certain region. In this example, we see how leaflet is able to dynamically calculate the number of schools in a given region from just latitude and longitude data. You can experience this by zooming in and out of the graph.
+
+```{r fig2-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
+lat<-mean(schools$Latitude)
+lon<-mean(schools$Longitude)
+
+leaflet(schools) %>% 
+  addProviderTiles(providers$CartoDB.DarkMatterNoLabels) %>%
+  addWebGLHeatmap(size=15,units="px")  %>%
+  setView(lng=lon,lat=lat, zoom = 10)
+```
+Here is the code for it.
+
+```{r fig2, eval=FALSE, message=FALSE}
+lat<-mean(schools$Latitude)
+lon<-mean(schools$Longitude)
+
+leaflet(schools) %>% 
+  addProviderTiles(providers$CartoDB.DarkMatterNoLabels) %>%
+  addWebGLHeatmap(size=15,units="px")  %>%
+  setView(lng=lon,lat=lat, zoom = 10)
+```
+## Dynamic Clustering
+Here we can see how leaflet allows one to dynamically cluster data based on its geographic distanc based on the given zoom level.
+
+```{r fig3-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
+schools %>% 
+  leaflet() %>% 
+  addTiles() %>%
+  addCircleMarkers(radius = 2, label = ~htmlEscape(`School Name`),
+                         clusterOptions = markerClusterOptions()) 
+```
+Here is the code for it.
+
+```{r fig3, eval=FALSE, message=FALSE}
+schools %>% 
+  leaflet() %>% 
+  addTiles() %>%
+  addCircleMarkers(radius = 2, label = ~htmlEscape(`School Name`),
+                         clusterOptions = markerClusterOptions()) 
+```
+## Plotting Groups
+
+```{r fig4-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
+top<- schools %>%
+  group_by(District)%>%
+  summarise(top=length(unique(`School Name`)),lon=mean(Longitude),lat=mean(Latitude))%>%
+  arrange(desc(top))%>%
+  head(10)
+
+pal <- colorFactor(viridis(100),levels=top$District )
+
+top %>%
+  leaflet(options = leafletOptions(dragging = TRUE))  %>%
+  addProviderTiles(providers$CartoDB.DarkMatterNoLabels) %>%
+  addCircleMarkers(radius=~top/10,label=~paste0("District ", District," - ", top," Schools"),color=~pal(District),opacity = 1) %>%
+  setView(lng=lon,lat=lat, zoom = 10) %>%
+  addLegend("topright", pal = pal, 
+            values = ~District,
+            title = "District",
+            opacity = 0.8)
+```
+Here is the code for it.
+
+```{r fig4, eval=FALSE, message=FALSE}
+top<- schools %>%
+  group_by(District)%>%
+  summarise(top=length(unique(`School Name`)),lon=mean(Longitude),lat=mean(Latitude))%>%
+  arrange(desc(top))%>%
+  head(10)
+
+pal <- colorFactor(viridis(100),levels=top$District )
+
+top %>%
+  leaflet(options = leafletOptions(dragging = TRUE))  %>%
+  addProviderTiles(providers$CartoDB.DarkMatterNoLabels) %>%
+  addCircleMarkers(radius=~top/10,label=~paste0("District ", District," - ", top," Schools"),color=~pal(District),opacity = 1) %>%
+  setView(lng=lon,lat=lat, zoom = 10) %>%
+  addLegend("topright", pal = pal, 
+            values = ~District,
+            title = "District",
+            opacity = 0.8)
+```
+## Plotting Categorical Data
+If one wants to neatly visualise the distribution of a particular class over the common map. It can be achieved through an interactive widget provided on the top right that allows one to choose a particular or multiple category. I have provided an example of how schools in different neighborhoods are racially segregated.
+
+```{r fig5-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
+ss <- schools %>% dplyr::select(`School Name`,Latitude, Longitude,`Percent White`, `Percent Black`, `Percent Asian`, `Percent Hispanic`)
+
+segregation <- function(x){
+ majority = c()
+ w <- gsub("%","",x$`Percent White`)
+ b <- gsub("%","",x$`Percent Black`)
+ a <- gsub("%","",x$`Percent Asian`)
+ h <- gsub("%","",x$`Percent Hispanic`)
+ 
+ for (i in seq(1,nrow(ss))){
+   if (max(w[i],b[i],a[i],h[i]) == w[i])
+     {majority <- c(majority,'White')}
+   else if (max(w[i],b[i],a[i],h[i]) == b[i])
+     {majority <- c(majority,'Black')}
+   else if (max(w[i],b[i],a[i],h[i]) == a[i])
+     {majority <- c(majority,'Asian')}
+   else if (max(w[i],b[i],a[i],h[i]) == h[i])
+     {majority <- c(majority,'Hispanic')}  
+  }
+ return(majority)
+}
+ 
+ss$race <- segregation(ss)
+  
+white <- ss %>% filter(race == "White")
+black <- ss %>% filter(race == "Black")
+hispanic <- ss %>% filter(race == "Hispanic")
+asian <- ss %>% filter(race =="Asian")
+
+lng <- median(ss$Longitude)
+lat <- median(ss$Latitude)
+
+pal_sector <- colorFactor( viridis(4), levels = ss$race)
+
+m3 <- leaflet() %>% addProviderTiles("CartoDB") %>% 
+        addCircleMarkers(data = white, radius = 2, label = ~htmlEscape(`School Name`),
+                         color = ~pal_sector(race), group = "White")
+
+m3 %>% addCircleMarkers(data = black, radius = 2, label = ~htmlEscape(`School Name`),
+                         color = ~pal_sector(race), group = "Black")  %>% 
+        addCircleMarkers(data = hispanic, radius = 2, label = ~htmlEscape(`School Name`),
+                         color = ~pal_sector(race), group = "Hispanic") %>% 
+        addCircleMarkers(data = asian, radius = 2, label = ~htmlEscape(`School Name`),
+                        color = ~pal_sector(race), group = "Asian") %>% 
+        addLayersControl(overlayGroups = c("White", "Black","Hispanic","Asian")) %>%
+        setView(lng=lng,lat=lat,zoom=10)
+
+```
+
+Here is the code for it.
+
+```{r fig5, eval=FALSE, message=FALSE}
+ss <- schools %>% dplyr::select(`School Name`,Latitude, Longitude,`Percent White`, `Percent Black`, `Percent Asian`, `Percent Hispanic`)
+
+segregation <- function(x){
+ majority = c()
+ w <- gsub("%","",x$`Percent White`)
+ b <- gsub("%","",x$`Percent Black`)
+ a <- gsub("%","",x$`Percent Asian`)
+ h <- gsub("%","",x$`Percent Hispanic`)
+ 
+ for (i in seq(1,nrow(ss))){
+   if (max(w[i],b[i],a[i],h[i]) == w[i])
+     {majority <- c(majority,'White')}
+   else if (max(w[i],b[i],a[i],h[i]) == b[i])
+     {majority <- c(majority,'Black')}
+   else if (max(w[i],b[i],a[i],h[i]) == a[i])
+     {majority <- c(majority,'Asian')}
+   else if (max(w[i],b[i],a[i],h[i]) == h[i])
+     {majority <- c(majority,'Hispanic')}  
+  }
+ return(majority)
+}
+
+ss$race <- segregation(ss)
+
+white <- ss %>% filter(race == "White")
+black <- ss %>% filter(race == "Black")
+hispanic <- ss %>% filter(race == "Hispanic")
+asian <- ss %>% filter(race =="Asian")
+
+lng <- median(ss$Longitude)
+lat <- median(ss$Latitude)
+
+pal_sector <- colorFactor( viridis(4), levels = ss$race)
+
+m3 <- leaflet() %>% addProviderTiles("CartoDB") %>% 
+        addCircleMarkers(data = white, radius = 2, label = ~htmlEscape(`School Name`),
+                         color = ~pal_sector(race), group = "White")
+
+m3 %>% addCircleMarkers(data = black, radius = 2, label = ~htmlEscape(`School Name`),
+                         color = ~pal_sector(race), group = "Black")  %>% 
+        addCircleMarkers(data = hispanic, radius = 2, label = ~htmlEscape(`School Name`),
+                         color = ~pal_sector(race), group = "Hispanic") %>% 
+        addCircleMarkers(data = asian, radius = 2, label = ~htmlEscape(`School Name`),
+                        color = ~pal_sector(race), group = "Asian") %>% 
+        addLayersControl(overlayGroups = c("White", "Black","Hispanic","Asian")) %>%
+        setView(lng=lng,lat=lat,zoom=10)
+``` 
+These examples provide only a glimpse to what is truly possible with this library. If you want to explore more features and use cases, check out the links listed in External Resources section.
+ 
+## External Resources 
+- [Leaflet in R Documentation](https://rstudio.github.io/leaflet/)
+- [Basic leaflet maps in R](https://rpubs.com/mattdray/basic-leaflet-maps)
+- [Interesting Kaggle Kernel visulising Earthquake Data using Leflet in R ](https://www.kaggle.com/verawe/earthquakes-leaflet-highcharter-visualizations)
