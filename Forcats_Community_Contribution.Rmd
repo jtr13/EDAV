@@ -1,0 +1,321 @@
+---
+title: "Forcats introduction"
+output:
+  html_document: default
+  pdf_document: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message = FALSE,
+                      warning = FALSE)
+```
+
+
+## R Markdown
+
+# (PART) Walkthroughs (Red) {-}
+
+# Walkthrough: Forcats {#Forcats}
+
+
+## Overview
+
+The forcats package comes with the tidyverse package; it contains a bunch of tools to solve common problems with factor variables. This introduction gives a basic tutorial on how to use the forcats package for reordering and modifying factor levels.
+
+Functions for reordering factor levels include
+
+* [`fct_inorder and fct_infreq`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_inorder){target="_blank"} for reordering factor levels by first appearance or frequency.
+* [`fct_relevel`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_relevel){target="_blank"} for reordering factor levels by hand
+* [`fct_reorder`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_reorder){target="_blank"} for reorderin factor levels by sorting along another variable
+* [`fct_rev`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_rev){target="_blank"} for reversing the order of factor levels
+* [`fct_shift`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_shift){target="_blank"} for shifting factor levels left or right and wrapping around at end
+* [`fct_shuffle`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_shuffle){target="_blank"} for randomly permuting factor levels
+
+Functions for modifying factor levels include
+
+* [`fct_collapse`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_collapse){target="_blank"} for collapsing factor levels into manually defined groups
+* [`fct_drop`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_drop){target="_blank"} for dropping unused levels
+* [`fct_expand`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_expand){target="_blank"} for adding additional levels to a factor
+* [`fct_lump`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_lump){target="_blank"} for Lumping together least/most common factor levels into "other"
+* [`fct_other`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_other){target="_blank"} for replacing some levels with "other"
+* [`fct_recode`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_collapse){target="_blank"} for changing factor levels by hand
+
+Other functions include
+
+* [`as_factor`](https://www.rdocumentation.org/packages/haven/versions/1.1.2/topics/as_factor){target="_blank"} for converting input to a factor
+* [`fct_c`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_c){target="_blank"} for concatenating factors and combining levels from multiple sources that should have the same levels
+* [`fct_count`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_count){target="_blank"} for counting entries in a fator
+* [`fct_explicit_na`](https://www.rdocumentation.org/packages/forcats/versions/0.3.0/topics/fct_explicit_na){target="_blank"} for giving missing value an explicit factor level
+* [`Low-level functions`](https://forcats.tidyverse.org/reference/lvls.html){target="_blank"} for manipulating levels
+
+***
+## Categorical variables
+
+A categorical variable is a variable that can take a finite number of possible values. Those possible values are categories where measured data can be grouped. For example, race, gender, Likert scale, Powerball numbers are categorical variables.
+
+A categorical variable can be classified into ordinal variable and nominal variable. An ordinal variable implies a logical order among its categories. For example, a Likert scale is an ordinal variable because there is a logical order among “disagree,” “neutral,” and “agree.” On the other hand, a nominal variable doesn’t have the logical order. For example, gender is a nominal variable because there isn’t a logical order between “male” and “female.”
+
+A categorical variable can also be discrete. For example, Powerball numbers is a categorical variable whose categories are integers that range from 1 to 69. Note that although the numbers seem to possess a logical order, they are not because 1 is the same as 69. Hence, Powerball numbers is a nominal variable.
+
+In R, categorical variables are stored as factors. A factor is a vector of integer values with a corresponding set of character values associated with it. The set of character values represent the categories, which is stored in the factor levels. Since a categorical variable can be ordinal or nominal, a factor can be ordered or unordered; the factor level is ordered for ordinal variables, and unordered for nominal variables.
+
+***
+## Functions for reordering factor levels
+
+We can start by loading the tidyverse package, selecting the **esoph** dataset, and examining its structure. We will use the **agegp** column as an example for demonstrating the functions in the forcats package.
+
+```{r import_data}
+library(tidyverse)
+df <- esoph
+str(df)
+agegp <- df$agegp
+```
+
+**fct_shuffle(f)** is a function for randomly permuting the factor levels. The input of **fct_shuffle** is a factor. The output is a factor whose factor levels are randomly permuted. Note that **fct_shuffle** preserves the existing "ordered" status of the factor; the output is ordered if the input is ordered, and the output is unordered if the input is not. We can observe how it changes the factor level in the following example.
+
+```{r fct_shuffle}
+agegp %>% levels()
+agegp %>% fct_shuffle() %>% levels()
+```
+
+**fct_shift(f, n = 1L)** is a function for shifting factor levels left or right and wrapping around at end. It's useful in working with cyclical factor levels such as weekdays and weekends. The input arugments are 
+
+* **f** is a factor
+* **n** is a number that determines how to shift; if **n** is positive, the function shifts the factor level to the left, if **n** is negative, the function shifts the factor level to the right.
+
+We can observe how the factor levels have been shifted in the following example.
+
+```{r fct_shift}
+agegp %>% levels()
+agegp %>% fct_shift(1) %>% levels()
+agegp %>% fct_shift(-2) %>% levels()
+```
+
+**fct_inorder(f, ordered = NA)** is a function for reordering factor levels by first appearance. The input arguments are 
+
+* **f** is a factor 
+* **ordered** is a logical argument which determines the "ordered" status of the output factor. If **ordered = NA**, then it preserves the "ordered" status. If **ordered = TRUE** or **FALSE**, then the output will be "ordered" and "unordered," respectively.
+
+Following is an example of changing the factor level by the first appearance.
+
+```{r fct_inorder}
+agegp %>% levels()
+agegp %>% fct_inorder() %>% levels()
+```
+
+**fct_relevel(.f, ..., after = 0L)** is a function for reordering factor levels by hand. The input arguments are
+
+* **.f** is a factor
+* **...** is a character vector of levels
+* **after** determines where the new values should be placed
+
+In the following examples, we first show the original factor levels of **agegp**, and then we move two factor levels ("65-74" and "45-54") to the front. We then insert the two factor levels after the first level. Lastly, we insert the two factor levels to the end.
+
+```{r fct_relevel}
+agegp %>% levels()
+agegp %>% fct_relevel('65-74', '45-54') %>% levels()
+agegp %>% fct_relevel('65-74', '45-54', after = 1) %>% levels()
+agegp %>% fct_relevel('65-74', '45-54', after = Inf) %>% levels()
+```
+
+**fct_infreq(f, ordered = NA)** is a function for reordering factor levels by frequency. The input arguments are
+
+* **f** is a factor
+* **ordered** is a logical argument which determines the "ordered" status of the output factor. If **ordered = NA**, then it preserves the "ordered" status. If **ordered = TRUE** or **FALSE**, then the output will be "ordered" and "unordered," respectively.
+
+**fct_rev(f)** is a function for reversing the order of factor levels.
+
+The following examples show the usages of **fct_infreq** and **fct_rev** in reordering the sequence of barplots based on frequency.
+
+```{r fct_infreq and fct_rev}
+library(gridExtra)
+g1_1 <- df %>% ggplot(aes(agegp)) + geom_bar(fill = 'lightblue')
+g1_2 <- df %>% ggplot(aes(fct_infreq(agegp))) + geom_bar(fill = 'lightgreen')
+g1_3 <- df %>% ggplot(aes(fct_rev(fct_infreq(agegp)))) + geom_bar(fill = 'lightpink')
+grid.arrange(g1_1, g1_2, g1_3)
+```
+
+**fct_reorder(.f, .x, .fun = median, ..., .desc = FALSE)** is for reorderin factor levels by sorting along another variable. The input arguments are
+
+* **.f** is a factor (or character vector)
+* **.x** is the variable based on which **.f** is sorted
+* **.fun** is the summary function
+* **...** are other arguments passed on to
+* **.desc** determines if the factor is sorted in descending order
+
+The following examples show the usages of **fct_reorder** in reordering the sequence of boxplots based on median and maximum value.
+
+```{r fct_reorder}
+g2_1 <- df %>% ggplot(aes(agegp, ncontrols)) + geom_boxplot()
+g2_2 <- df %>% ggplot(aes(fct_reorder(agegp, ncontrols), ncontrols)) + geom_boxplot()
+g2_3 <- df %>% ggplot(aes(fct_reorder(agegp, ncontrols, .desc = TRUE), ncontrols)) + geom_boxplot()
+g2_4 <- df %>% ggplot(aes(fct_reorder(agegp, ncontrols, .fun = max), ncontrols)) + geom_boxplot()
+grid.arrange(g2_1, g2_2, g2_3, g2_4)
+```
+
+***
+## Functions for modifying factor levels
+
+**fct_expand(f, ...)** is for adding additional levels to a factor. The input arguments are
+
+* **f** is a factor (or character vector)
+* **...** are the additional levels to add to the factor
+
+**fct_drop(f, only)** is for dropping unused levels. The input arguments are
+
+* **f** is a factor (or character vector)
+* **only** is a character vector restricting the set of levels to be dropped; only levels that have no entries and appear in this vector will be removed
+
+In the following examples, we add two more factor levels to the original factor levels. And then, we shift the factor levels so that it can stay in a proper logical order. Lastly, we drop the added factor levels.
+
+```{r fct_expand and fct_drop}
+agegp %>% levels()
+agegp_extension <- c('5-14', '15-24')
+agegp %>% fct_expand(agegp_extension) %>% levels()
+agegp %>% fct_expand(agegp_extension) %>% fct_shift(-2) %>% levels()
+agegp %>% fct_expand(agegp_extension) %>% fct_drop() %>% levels()
+```
+
+**fct_collapse(.f, ...)** is for collapsing factor levels into manually defined groups. The input arguments are
+
+* **f** is a factor (or character vector).
+* **...** is a series of named vectors. The levels in each vector will be replaced with the name.
+
+In the following example, we collapse the factor levels of **agegp** into three manualy defined groups as "young," "middle-aged," and "old."
+
+```{r fct_collapse}
+agegp %>% levels()
+agegp %>% fct_collapse(young = c('25-34'),
+                       middle_aged = c('35-44', '45-54', '55-64'),
+                       old = c('65-74', '75+')) %>% levels()
+```
+
+**fct_recode(.f, ...)** is for changing factor levels by hand. The input arguments are
+
+* **.f** is a factor (or character vector).
+* **...** is a sequence of named character vectors where the name gives the new level, and the value gives the old level.
+
+We recode the factor levels in the following example.
+
+```{r fct_recode}
+agegp %>% levels()
+agegp %>% fct_recode(young = '25-34',
+                     middle_aged = '35-44',
+                     middle_aged = '45-54',
+                     middle_aged = '55-64',
+                     old = '65-74',
+                     old = '75+') %>% levels()
+```
+
+**fct_other(f, keep, drop, other_level = 'Other')** is for replacing some levels with "other". The input arguments are
+
+* **f** is a factor (or character vector).
+* **keep** preserves listed levels, replacing all others with other_level.
+* **keep** replaces listed levels with other_level, keeping all others as they are.
+
+In the following examples, we keep two levels of **agegp** and replace all other levels with other_level. And then, we replace two levels of **agegp** with other_level and keep all other levels.
+
+```{r fct_other}
+agegp %>% levels()
+agegp %>% fct_other(keep = c('25-34', '35-44')) %>% levels()
+agegp %>% fct_other(drop = c('25-34', '35-44')) %>% levels()
+```
+
+**fct_lump(f, n, prop, w = NULL, other_level = "Other", ties.method = c("min", "average", "first", "last", "random", "max"))** is for Lumping together least/most common factor levels into "other". The input arguments are
+
+* **f** is a factor (or character vector).
+* **n** determines how many levels to preserve. A positive **n** preserves the most common **n** values. A negative **n** preserves the least common **-n** values. It there are ties, we will get at least **abs(n)** values.
+* **prop** determines which levels to preserve based on frequency. A positive **prop** preserves values that appear at least **prop** of the time. A negative **prop** preserves values that appear at most **-prop** of the time. If both **n** and **prop** are missing, **fct_lump** lumps together the least frequent levels into "other", while ensuring that "other" is still the smallest level.
+* **w** is an optional numeric vector giving weights for frequency of each value (not level) in f.
+* **other_level** is the value of level used for "other" values. It's always placed at end of levels.
+* **ties.method** is a character string specifying how ties are treated.
+
+In the following examples, we created a new factor (**agegp_2**) by concatenating **agegp** and **agegp_1** for better showing the usages of **fct_lump**. We lump together factor levels by changing the values of **n** and **prop**.
+
+```{r fct_lump}
+agegp %>% table()
+agegp_1 <- factor(c('5-14', '15-24', '15-24', '55-64'),
+                  levels = c('5-14', '15-24', '55-64'), ordered = TRUE)
+agegp_2 <- agegp %>% fct_expand(levels(agegp_1)) %>% fct_c(agegp_1) %>%
+  fct_shift(-2) %>% ordered()
+agegp_2 %>% table()
+agegp_2 %>% fct_lump() %>% table()
+agegp_2 %>% fct_lump(n = 2) %>% table()
+agegp_2 %>% fct_lump(n = -2) %>% table()
+agegp_2 %>% fct_lump(prop = 0.1) %>% table()
+agegp_2 %>% fct_lump(prop = -0.1) %>% table()
+```
+
+***
+## Other functions
+
+**af_factor(x, ...)** is for Converting input to a factor.The input arguments are
+
+* **x** is an object to coerce a factor.
+* **...** are Other arguments passed down to method.
+
+Note the difference between **as_factor** and **as.factor** in the following example. **as_factor** creates levels in the order in which they appear, **as.factor** creates levels in the alphabetical order.
+
+```{r as_factor}
+x <- c('c', 'b', 'a', 'b', 'c', 'd')
+as.factor(x)
+as_factor(x)
+```
+
+**fct_c(...)** is for concatenating factors and combining levels. The input argument **...** are the individual factors. In the following example, we concatenate two factors. In reality, **fct_c** can be used to concatenate factors from multiple sources that should have the same levels. 
+
+```{r fct_c}
+x <- as_factor(c('c', 'b', 'a', 'b', 'c', 'd'))
+y <- as_factor(c('c', 'a', 'a', 'd', 'e'))
+xy <- fct_c(x, y)
+print(xy)
+```
+
+**fct_count(f, sort = FALSE)** is for counting entries in a factor. The input arguments are
+
+* **f** is a factor (or character vector).
+* **sort** determines if we sort the result so that the most common values float to the top.
+
+```{r fct_count}
+fct_count(agegp)
+fct_count(agegp, sort = TRUE)
+```
+
+**fct_explicit_na(f, na_level = '(Missing)')** is for making missing values explicit. The input arguments are
+
+* **f** is a factor (or character vector).
+* **na_level** is the level used to represent missing values.
+
+In the following example, we see that the new "missing" level is placed at the end of the factor levels. **fct_explicit_na** gives missing value an explicit factor level, ensuring that they appear in summaries and on plots.
+
+```{r fct_explicit_na}
+x <- ordered(as_factor(c('a', 'a', 'd', NA, 'c', 'b', 'b', 'a', NA)))
+g3_1 <- plot(x)
+x_explict <- fct_explicit_na(x, na_level = 'missing')
+g3_2 <- plot(x_explict)
+```
+
+**low-level functions** are for manipulating levels. The funtions are
+
+* **lvls_reorder(f, idx, ordered = NA)** leaves values as they are, but changes the order.
+* **lvls_revalue(f, new_levels)** changes the values of existing levels; there must be one new level for each old level.
+* **lvls_expand(f, new_levels)** expands the set of levels; the new levels must include the old levels.
+
+The input arguments are
+
+* **f** is a factor (or character vector).
+* **idx** is an integer index, with one integer for each existing level.
+* **ordered** determines the "ordered" status of the output factor. NA preserves the existing status of the factor.
+* **new_levels** is a character vector of new levels.
+
+These functions are less helpful than the higher-level **fct_** functions, but are safer than manipulating levels directly, because they are more specific, and hence can more carefully check their arguments.
+
+The usage examples are
+
+```{r low-level functions}
+agegp %>% levels()
+agegp %>% lvls_reorder(c(1, 3, 5, 6, 2, 4)) %>% levels()
+agegp %>% lvls_revalue(c('25', '35', '45', '55', '65', '75')) %>% levels()
+agegp %>% lvls_expand(c('15-24', '25-34', '35-44', '45-54', '55-64',
+                        '65-74', '75+')) %>% levels()
+```
+
