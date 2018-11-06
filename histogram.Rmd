@@ -97,6 +97,10 @@ make sure you are using a dataframe.
 
 ## Theory
 
+Generally speaking, the histogram is one of many options for displaying continuous data. So why use a histogram when we could use a boxplot, dotplot, or some other graph? 
+
+The histogram is clear, quick, and dirty. Histograms are relatively self explanatory - they show your data's empirical distribution within a set of intervals. Histograms can be employed on raw data to quickly show the distibution without much manipulation.  Use a histogram to get a basic sense of the distribution with minimal processing necessary.
+
 *   For more info about histograms and continuous variables, check out [Chapter 3](http://www.gradaanwr.net/content/03-examining-continuous-variables/){target="_blank"} of the textbook. 
 
 ## Types of histrograms
