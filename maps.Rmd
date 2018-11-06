@@ -6,6 +6,9 @@
 *This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
 <!-- ------------------------------------------------------------------------ -->
 
+## Overview
+
+This section covers the detail and examples about how to create plots from spatial data such as data with states, zip code, and latitude/longtitude data. The most suitable case for mapping spatial data is when geography matters!
 
 ## Choropleth maps
 
@@ -13,8 +16,9 @@ Cloropleth maps use color to indicate the value of a variable within a defined r
 
 Note: You must install also install **choroplethrMaps** for **choroplethr** to work.  In addition, **choroplethr** requires a number of other dependencies which should be installed automatically, but if they aren't, you can manually install the missing packages that you are notified about when you call `library(choroplethr)`: **maptools**, and **rgdal**, **sp**.
 
+### Choroplethr
 
-We'll use the `state.x77` dataset for this example:
+We'll use the `state.x77` dataset for this example to visualize the level of illiteracy among states:
 
 ```{r, warning=FALSE, message=FALSE}
 library(tidyverse)
@@ -32,6 +36,55 @@ state_choropleth(df_illiteracy,
 ```
 
 **Note**: the `choroplethr` "free course" that you may come across arrives one lesson at a time by email over an extended period so not the best option unless you have a few weeks to spare.
+
+### ChoroplethrZip
+
+When we are dealing with zip code level. We have few more options to show the area that we are interested. In this example, we use `nyc_spayed_dog_pct` dataset which is a manipualted data from the original ["Dogs of NYC"](https://fusiontables.google.com/data?docid=1pKcxc8kzJbBVzLu_kgzoAMzqYhZyUhtScXjB0BQ#rows:id=1){target="_blank"}.
+
+Similar to choroplethr package, for zip_choropleth, dataframe must contain "region" and "value" columns, where region contains zip code as characters and value contains numeric values.
+
+ Note: Because of the package size, it's not currently hosted in CRAN. We can install the package from github using the command below.
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github('arilamstein/choroplethrZip@v1.5.0')
+library(choroplethrZip)
+
+dog_zip_spayed <- read.csv("data/nyc_spayed_dog_pct.csv")
+
+zip_choropleth(dog_zip_spayed %>% transmute(region = as.character(zip_code), value = spayed_percentage),
+               state_zoom = "new york",
+               title      = "Percentage of spayed or neutered dogs by zip code",
+               legend     = "Percentage")
+```
+
+But wait, the data is dogs of NYC, noy New York state. However, as you can see, if you include the areas those are not in your data, their value will automatically be NA. Let's zoom in the data to see just NYC using ["county FIPS codes"](https://www.nrcs.usda.gov/wps/portal/nrcs/detail/?cid=nrcs143_013697){target="_blank"} for the five boroughs of NYC: Brooklyn, Queens, Manhattan, The Bronx, and Staten Island.
+
+```{r, warning=FALSE, message=FALSE}
+
+nyc_fips = c(36005, 36047, 36061, 36081, 36085)
+zip_choropleth(dog_zip_spayed %>% transmute(region = as.character(zip_code), value = spayed_percentage),
+               county_zoom = nyc_fips,
+               title      = "Percentage of spayed or neutered dogs by zip code",
+               legend     = "Percentage")
+```
+
+We can compare a subset of data point of our interest even more in the level of zip code using zip_zoom.
+
+```{r, warning=FALSE, message=FALSE}
+
+zips = c(10001:10007)
+zip_choropleth(dog_zip_spayed %>% transmute(region = as.character(zip_code), value = spayed_percentage),
+               zip_zoom = zips,
+               title      = "Percentage of spayed or neutered dogs by zip code",
+               legend     = "Percentage")
+```
+
+We can check the list of valid zip codes, counties, ans states of choroplethrZip by looking at the zip.regions table because there real zip codes which are not valid for this library.
+
+```{r, warning=FALSE, message=FALSE}
+data(zip.regions)
+head(zip.regions)
+```
 
 ## Square bins
 
@@ -60,8 +113,78 @@ statebins(df_illit, value_col="Illiteracy",
 
 Note that the options above work with *political boundaries*, based on the names of the regions that you provide. If you have longitude / latitude data, **ggmap** is a good choice.  It is straight-forward to plot lon/lat data on a Cartestian coordinate system, with the x-axis representation longitude and the y-axis latitude -- just be careful not to mix them up. The **ggmap** package provides a variety of maps that can serve as the backdrop for the long/lat points. 
 
+### ggmap
+
 **ggmap** offers a number of different map sources.  Google Maps API was the go-to, but they now [require you to enable billing through Google Cloud Platorm](https://cloud.google.com/free/){target="_blank"}.  You get $300 in free credit, but if providing a credit card isn't your thing, you may consider using Stamen Maps instead, with the `get_stamenmap()` function. Use the development version of the package; instructions and extensive examples are available on the package's [GitHub page](https://github.com/dkahle/ggmap){target="_blank"}.
+
+In this example we use ["NYC_Transit_Subway_Entrance_And_Exit_Data"](https://data.ny.gov/Transportation/NYC-Transit-Subway-Entrance-And-Exit-Data/i9wp-a4ja){target="_blank"} to visualize the subway entrances and exits from their longtitude and latitude.
+
+'get_googlemap' method use longtitude and latitude of center to get the map data. The default zoom value is 10. To zoom in, we increase the number for it. Note that only an integer is allowed. You also need to provide 'key' which is a Google map API key to get the map. Finally the map can be shown using 'ggmap' method.
+
+```{r echo=FALSE}
+library("ggmap")
+nyc_center <- c(lon = -73.94, lat = 40.73)
+nyc_map <- get_googlemap(center = nyc_center, zoom = 11, key = "AIzaSyCI4RTjfaWuMiXIWuGDVZbaSvJGSWEmOes")
+```
+
+```{r}
+library("ggmap")
+subway <- read.csv("data/NYC_Transit_Subway_Entrance_And_Exit_Data_subset.csv")
+nyc_center <- c(lon = -73.94, lat = 40.73)
+#nyc_map <- get_googlemap(center = nyc_center, zoom = 11, key = "???")
+ggmap(nyc_map)
+```
+
+ We can work on the plot of data similarly on how we work on scatter plot just adding it over the map as a background.
+ 
+```{r}
+ ggmap(nyc_map) +
+   geom_point(data = subway, 
+             aes(x = Station.Longitude, y = Station.Latitude), 
+             fill = "coral3", col = "coral3", alpha = 0.2, size = 2, shape = 21) +
+  xlab("longtitude") + 
+  ylab("latitude") 
+```
+
+We can also use the plot that we learned earlier to get the different insight from the data such as density plot.
+
+```{r}
+ ggmap(nyc_map) + 
+  geom_density2d(data = subway, aes(x = Station.Longitude, y = Station.Latitude), size = 0.3) +
+  stat_density2d(data = subway, 
+                 aes(x = Station.Longitude, y = Station.Latitude, 
+                     fill = ..level.., alpha = ..level..), 
+                 size = 0.01, bins = 16, geom = "polygon") + 
+  scale_fill_gradient(low = "green", high = "red", name = "density") + 
+  scale_alpha(range = c(0, 0.3), guide = FALSE) +
+  xlab("longtitude") + 
+  ylab("latitude")
+```
+
+This is another quick example for *quakes* data from *datasets* package which contain not only longtitude and latitude, but also magnitude of quakes at certain positions.
+
+```{r echo=FALSE}
+fiji_center <- c(lon = 178.00, lat = -24.00)
+fiji_map <- get_googlemap(center = fiji_center, zoom = 4, key = "AIzaSyCI4RTjfaWuMiXIWuGDVZbaSvJGSWEmOes")
+```
+
+```{r}
+fiji_center <- c(lon = 178.00, lat = -24.00)
+#fiji_map <- get_googlemap(center = fiji_center, zoom = 4, key = "???")
+scaling_amount = 0.3
+ggmap(fiji_map)+
+  geom_point(data = quakes, 
+             aes(x = long, y = lat, color = mag), 
+             alpha = 0.3, size = quakes$mag*scaling_amount) +
+  scale_color_gradient(low="gold1", high="red") +
+  xlab("longtitude") + 
+  ylab("latitude") 
+```
 
 ## Resources
 
 ["Getting started Stamen maps with ggmap"](https://statisticaloddsandends.wordpress.com/2018/10/25/getting-started-stamen-maps-with-ggmap/){target="_blank"} -- A short tutorial on using **ggmap** with Stamen maps using the Sacramento dataset in the **caret** package.
+
+["ggmap tutorial"](https://cfss.uchicago.edu/geoviz_ggmap.html){target="_blank"} -- Another tutorial of **ggmap** that includes various plots over the map from scatter plots to density maps.
+
+["longitude/latitude coordinates finder"](http://bboxfinder.com/){target="_blank"} -- Apart from Google, this is a useful website to find exact coordinates of your center or bounding boxes. 
