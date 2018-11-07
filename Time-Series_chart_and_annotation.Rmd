@@ -2,7 +2,10 @@
 title: "Charts and Annotation for Time-Series"
 author: "Minsu Yeom"
 date: "11/6/2018"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
 ---
 
 
@@ -36,12 +39,12 @@ This section covers how to make time-series data. As time-series data are widely
 
 ## tl;dr
 
-Take a look at this chart below. The red line is an indicator that U.S. economy may enter into recession after it is below zero. Recession periods are shaded.
+Take a look at a chart below. The red line is an indicator that U.S. economy may enter into recession after it is below zero. Recession periods are shaded.
 
 Source: Federal Reserve Bank of St. Louis, 10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity [T10Y2Y], retrieved from FRED, Federal Reserve Bank of St. Louis; https://fred.stlouisfed.org/graph/?g=lV63
 
 
-```{r}
+```{r message=FALSE}
 library(tidyverse)
 library(readr)
 
@@ -50,7 +53,6 @@ df_10y2y <- read_csv("T10Y2Y.csv")
 
 start_date = as.Date("1976-06-01")
 end_date = as.Date("2018-10-01")
-
 
 # Plot a 10-year - 2-year yield curve.
 ggplot(data = df_10y2y, aes( x = DATE, y = T10Y2Y, color = "red" )) + 
@@ -76,20 +78,170 @@ ggplot(data = df_10y2y, aes( x = DATE, y = T10Y2Y, color = "red" )) +
 
 ```
 
-There is an elegant way of obtaining this kind of data and annotating different areas without hard-coding, i.e., manually typing repeated ression periods, but we will get it back later. This is just a beginning.
 
 
-## Line Charts for most cases in time-series data
+## A simple line chart
+
+Let's begin with a simple example. We need some time-series data. Here is a simple one:
+
+```{r message=FALSE}
+library(tidyverse)
+library(lubridate)
+
+my_forecast <- tibble(
+  x_date = lubridate::today() + c(0:6)*days(1),
+  y_value = c(54, 48, 47, 43, 45, 48, 50)
+)
+
+my_forecast
+```
+
+Let's take a closer look at the core of this simple example.
+
+```{r message=FALSE}
+lubridate::today() + c(0:6)*days(1)
+class(lubridate::today() + c(0:6)*days(1))
+```
+
+See? It produces a sequence of dates. It is *x_date* that makes this data a time-series one.
+Obviously and unfortunately, its type is $date$, which is tricky to handle. *lubridate* package is used for easier handling dates.
+
+
+If you want to know more about how to use lubridate, visit [Date and Times Made Easy with lubridate](https://vita.had.co.nz/papers/lubridate.pdf){target="_blank"}.
+
+Now, let's plot a chart. It's my weather forecast.
+
+```{r message=FALSE}
+ggplot(data = my_forecast, aes(x = x_date, y = y_value )) +
+  geom_line( color = "red", size = 1)
+
+```
+
+
+You should have *lubridate* installed already because it is a part of *tidyverse*. That being said, if you see an error message like "Error in library(lubridate) : there is no package called ‘lubridate’", you can get *lubridate* simply by
+
+- install.packages("lubridate")
+
+on you R console.
+
+
+
+## Line charts for most cases in time-series data with annotations
+
+It's time to use real time-series data now. We have two points to learn here.
+
+- Data source: [FRED](https://fred.stlouisfed.org){target="_blank"}. This is a huge set of economic data provided by Federal Reserve Bank of St. Louis. This is very trustful since it's from FRB.
+
+- A way of obtaining it: We use [tidyquant](https://cran.r-project.org/web/packages/tidyquant/index.html){target="_blank"} library to download time-series data from FRED here. You may want to [quandmod](https://www.quantmod.com){target="_blank"} package as well. In fact, tidyquant provides a *wrapping* function tq_get() to quantmod*.
+
+\* Source: [Package ‘tidyquant’](https://cran.r-project.org/web/packages/tidyquant/tidyquant.pdf){target="_blank"}
+
+
+```{r message=FALSE}
+library(tidyquant)
+
+init_claim <- tq_get("ICSA", get = "economic.data")
+head(init_claim)
+
+```
+
+Just one line of code brings a credited data set. *ICSA* as a parameter in *tq_get()* is an identifier to which FRED assigned. You can explore the big database, probably the world-best economic DB, at the link above. Once you have an identifier, just call tq_get(*identifier*, get = "economic.data"). This returns you desired data.
+
+The beauty of directly downloading time-series data from FRED is that it gives you dates in the right format. Dates are stored in date type!
+
+Plotting it as a line chart is the same, but at this time we have some aesthetics on it.
+
+```{r message=FALSE}
+init_claim <- init_claim %>% filter(date < as.Date("2017-09-07"))
+
+g1 <- ggplot() +
+  geom_ma(data = init_claim, n = 4, size = 0.5, aes(x = date, y = price), alpha=0.8, color="red") +
+  ggtitle("US Unemployment Insurnace Initial Claims", subtitle="4 weeks moving average") +
+  ylab("Numbers") +
+  xlab("Date") +
+  
+  # Add an arrow
+  annotate("segment", x = as.Date("2010-01-01"), xend = as.Date("2017-09-30"),
+           y = 600000, yend = 300000, color = "pink", size=2, alpha=0.6, arrow=arrow()) +
+  theme_bw() %+replace% 
+  theme(legend.position="none") +
+  theme(plot.title = element_text(color="black", size=13, face="bold")) +
+  theme(plot.subtitle = element_text( color="darkgrey", size=11, face="italic"))
+
+g1
+```
+
+Here red dash lines are 4-week moving averages (called SMA) of initial claims. The less this number is, the better US job market is. An annotated-arrow indicates a downtrend. So, it's a good signal. This chart is indeed wiedely watched and plotted with its 4-week moving averages in practice.
+
+However, what if we remove this SMA feature? Putting an economic argument against this aside for a purpose of this tutorial, let me remove it.
+
+
+```{r message=FALSE}
+
+g2 <- ggplot() +
+  geom_line(data = init_claim, aes(x = date, y = price), alpha=0.8, color="red") +
+  ggtitle("US Unemployment Insurnace Initial Claims", subtitle="the number of initial claims") +
+  ylab("Numbers") +
+  xlab("Date") +
+  
+  # Add an arrow
+  annotate("segment", x = as.Date("2010-01-01"), xend = as.Date("2017-07-31"),
+           y = 600000, yend = 300000, color = "pink", size=2, alpha=0.6, arrow=arrow()) +
+  theme_bw() %+replace% 
+  theme(legend.position="none") +
+  theme(plot.title = element_text(color="black", size=13, face="bold")) +
+  theme(plot.subtitle = element_text( color="darkgrey", size=11, face="italic")) +
+
+  # Add a shading area
+  annotate( "rect", xmin=as.Date("2017-08-24"), xmax=as.Date("2017-10-21"),
+            ymin=-Inf, ymax=Inf, fill="grey", alpha=0.5) 
+
+g2
+```
+
+Can you see the last data point? What do you think of it? Ignorable over the big and strong down trend?
+Even though you pick one graph to present, you may want to keep your own graphs more than just own.
+To better see changes not revealed in a line chart, a bar chart could be a complement.
 
 
 ## Bar Charts, when do you want to use them?
 
+A line chart is good to observe an *overall trend*. This is why line charts are widely used to plot time-series data. However, it may lose small, but important changes. Do you want to find out what's going on recent data? Your colleague may have the same thoughts as you. So, plot a bar chart with your line chart both w/ and w/o the SMA feature.
 
-## Annotate it
+```{r message=FALSE}
+library(scales)
+library(gridExtra)
+
+recent_init_claim <- init_claim %>% filter(date > as.Date("2017-04-01"))
+
+g3 <- ggplot() +
+  geom_bar(data = recent_init_claim, mapping = aes(x = date, y = price), stat='identity', alpha=0.8, color="red") +
+  ggtitle("US Unemployment Insurnace Initial Claims", subtitle="the number of initial claims") +
+  ylab("Numbers") +
+  xlab("Date") +
+  scale_x_date(date_breaks ="8 week", labels = date_format("%Y-%m")) +
+  theme_bw() %+replace% 
+  theme(legend.position="none") +
+  theme(plot.title = element_text(color="black", size=13, face="bold")) +
+  theme(plot.subtitle = element_text( color="darkgrey", size=11, face="italic"))
 
 
-## Seaonality
+grid.arrange(g1, g2, g3, nrow=1, widths=c(5,5,5))
+
+
+```
+
+I intentionally did not adjust the y-axis on the right bar chart to the same as the others, because this bar plot is your own reference to take a closer look at recent changes.
 
 
 
+## External Resources
+
+- [FRED](https://fred.stlouisfed.org){target="_blank"} - A huge set of economic data provided by Federal Reserve Bank of St. Louis.
+
+- [Date and Times Made Easy with lubridate](https://vita.had.co.nz/papers/lubridate.pdf){target="_blank"} - A good tutorial of *lubridate* and comparisions between *lubridate* and *Date*
+
+- [tidyquant](https://cran.r-project.org/web/packages/tidyquant/index.html){target="_blank"} - A package having functions to analyze financial data.
+
+- [quandmod](https://www.quantmod.com){target="_blank"} - An original source that provides functions for downloading FRED data.
 
