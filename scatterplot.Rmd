@@ -140,6 +140,11 @@ scatter +
 `ggplot2` makes it very easy to create scatterplots. Using `geom_point()`, you can easily plot two different aesthetics in one graph. It also is simple to add on extra formatting to make your plots look nice (All that is really necessary is the data, the aesthetics, and the geom).
 
 ## Theory
+
+Scatterplots are very useful in understanding the correlation (or lack thereof) between variables.  For example, in section 13.1 notice the positive relationship between brain and body weight in species of land mammals. The scatterplot gives a good idea of whether that relationship is positive or negative and if there is correlation.  Don't mistake correlation in a scatterplot for causation! 
+
+Below we show variations on the scatterplot which can be used to enhance interpretability.
+
 <!-- *Link to textbook -->
 *   For more info about adding lines/contours, comparing groups, and plotting continuous variables check out [Chapter 5](http://www.gradaanwr.net/content/ch05/){target="_blank"} of the textbook.
 
