@@ -141,7 +141,7 @@ scatter +
 
 ## Theory
 
-Scatterplots are very useful in understanding the correlation (or lack thereof) between variables.  For example, in section 13.1 notice the positive relationship between brain and body weight in species of land mammals. The scatterplot gives a good idea of whether that relationship is positive or negative and if there is correlation.  Don't mistake correlation in a scatterplot for causation! 
+Scatterplots are very useful in understanding the correlation (or lack thereof) between variables.  For example, in [section 13.2](scatter.html#tldr-7) notice the positive relationship between brain and body weight in species of land mammals. The scatterplot gives a good idea of whether that relationship is positive or negative and if there's a correlation.  However, don't mistake correlation in a scatterplot for causation! 
 
 Below we show variations on the scatterplot which can be used to enhance interpretability.
 
