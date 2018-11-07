@@ -1,4 +1,4 @@
-# Walkthrough: Tidy Data & dplyr
+# Walkthrough: Tidy Data & dplyr {#tidy}
 
 ![](images/banners/banner_tidy_data_dplyr.png)
 *This chapter originated as a community contribution created by [akshatapatel](https://github.com/akshatapatel){target="_blank"}*
