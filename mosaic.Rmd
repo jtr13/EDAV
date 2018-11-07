@@ -185,9 +185,20 @@ ggplot(df) +
 
 ## Theory
 
+Make sure to follow these best practices for mosaic plots to ensure that your graph is readable. 
+- Dependant variables should be the last mapped variables
+- Decide between ordering the data by natural hierarchy or by data driven ordering
+- Ordinal variable categories must be kept in correct chronology
+- Coloring should be consistent throughout the plot, an particularly bright category can distract from the important parts of the graph
+
+*   For more info about mosaic plots and multivariate categorical data, check out [Chapter 7](http://www.gradaanwr.net/content/ch07/){target="_blank"} of the textbook. 
 ## When to use
 
-When you want to see the relationships in Multivariate Categorical Data
+When you want to see the relationships in Multivariate Categorical Data. 
+
+Please note that there are a few different types of mosaic plots to choose from. Use the classic mosaic plot for regular multivariate categorical data. Alternatively, use the double decker mosaic when "comparing rates for a binary dependent variable across all possible groupings." 
+
+There are many variations and modifications to mosaic plots. Check them out at 
 
 ## Considerations
 
