@@ -291,4 +291,5 @@ tidy_df
 
 ## Helpful Links
 - [r4ds on tidy data](https://r4ds.had.co.nz/tidy-data.html){target="_blank"}: It is always best to learn from the source, so a textbook written by Hadley Wickham is perfect.
+- [DataCamp dplyr course](https://www.datacamp.com/courses/dplyr-data-manipulation-r-tutorial){target="_blank"}: This course covers the different fucntions in dplyr and how they manipulate data.
 
