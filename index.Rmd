@@ -63,19 +63,16 @@ Pages in the **yellow section** contain simple collections of  **references**. A
 
 ## Help improve *edav.info/*
 
-Not finding what you are looking for? Think a section could be made clearer? Consider helping improve *edav.info/* by submitting a pull request to the [github page](https://github.com/jtr13/EDAV){target="_blank"}. Don't understand that last sentence? We have a [page on how you can contribute to *edav.info/*](contribute.html).
+This resource is an ongoing creation made by students, for students. We welcome you to help make it better. Not finding what you are looking for? Think a section could be made clearer? Consider helping improve *edav.info/* by submitting a pull request to the [github page](https://github.com/jtr13/EDAV){target="_blank"}. Don't understand that last sentence? We have a [page on how you can contribute to *edav.info/*](contribute.html).
 
 ## Fun stuff
 
 ### T-shirts
-Zach Bogart has made a few t-shirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy! 
+Zach Bogart has made a few t-shirts available on [Teespring](https://teespring.com/stores/edav){target="_blank"} so you can show your love for EDAV and R. Hope you enjoy! <i class="far fa-smile"></i>
 
-<center>
-[![White EDAV Logo Shirt](images/blue_edav_shirt.png)](https://teespring.com/edav-info){target="_blank" class="active-banner"}
-[![R Shirt](images/blue-r-shirt.png)](https://teespring.com/r-edav-info){target="_blank" class="active-banner"}
-</center>
-
-*P.S. Designing a cool shirt or sticker is a great addition to your community contribution. It has to be cool, though <i class="far fa-smile"></i>*
+<!-- <center> -->
+<!-- [![EDAV Store](images/edav_shirt.png)](https://teespring.com/stores/edav){target="_blank" class="active-banner"} -->
+<!-- </center> -->
 
 <!-- Contact -->
 ## Contact

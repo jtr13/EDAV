@@ -141,7 +141,8 @@ If you are in a rush and want a shortcut, you can instead set the `Default Outpu
 
 ## Getting help
 
-![via https://dev.to/rly](images/halp_me_orly.png)
+![](images/halp_me_orly.png)
+*via [https://dev.to/rly](https://dev.to/rly){target="_blank"}*
 
 First off...breeeeeeathe. We can fix this. There are a bunch of resources out there that can help you.
 
