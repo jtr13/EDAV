@@ -15,6 +15,7 @@ rmd_files: [
   "contribute.Rmd",
 
   "iris.Rmd",
+  "tidy_data_dplyr.Rmd",
   "timeseries.Rmd",
 
   "bargraph.Rmd",

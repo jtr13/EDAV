@@ -24,7 +24,11 @@ This page includes links to every chapter in *edav.info/*
 
 <!-- Red Pages -->
 
-[![Walkthrough: Iris Example](images/banners/banner_iris.png)](iris.html){class="active-banner"}
+[![Walkthrough: Iris Scatterplot](images/banners/banner_iris.png)](iris.html){class="active-banner"}
+
+[![Walkthrough: Tidy Data & dplyr](images/banners/banner_tidy_data_dplyr.png)](tidy.html){class="active-banner"}
+
+[![Time Series with Missing Data](images/banners/banner_missing_time_series.png)](missingTS.html){class="active-banner"}
 
 <!-- Green Pages -->
 
