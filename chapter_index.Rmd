@@ -7,7 +7,7 @@
 This page includes links to every chapter in *edav.info/*
 
 - Click on a banner to go to the desired page.
-- If you're wondering, here's an [explanation of what the banner colors mean](index.html#how-this-book-is-structured).
+- If you're wondering, here's an [explanation of what the banner colors mean](index.html#how-this-resource-is-structured).
 
 ## Index
 <!-- [![Header](images/banners/banner_TITLE.png)](TITLE.html){class="active-banner"} -->
