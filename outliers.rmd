@@ -144,7 +144,7 @@ ggplot(d2, aes(y, z)) +
 
 ## External Resources
 
-- [Identify, describe, plot, and remove the outliers from the dataset](https://www.r-bloggers.com/identify-describe-plot-and-remove-the-outliers-from-the-dataset/){target="_blank"}: Plotting and removing outliers from the dataset
+- [Identify, describe, plot, and remove the outliers from the dataset](https://www.r-bloggers.com/identify-describe-plot-and-remove-the-outliers-from-the-dataset/){target="_blank"}: Plotting and removing outliers from a dataset
 
 - [A Brief Overview of Outlier Detection Techniques](https://towardsdatascience.com/a-brief-overview-of-outlier-detection-techniques-1e0b2c19e561){target="_blank"}: Discussion of the theoretical aspect of outlier detection
 
