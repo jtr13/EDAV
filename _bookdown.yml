@@ -30,6 +30,7 @@ rmd_files: [
   "dates.Rmd",
   "maps.Rmd",
   "missing_data.Rmd",
+  "outliers.Rmd",
   "network.Rmd",
 
   "general_resources.Rmd",
