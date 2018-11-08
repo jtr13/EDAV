@@ -28,6 +28,7 @@ rmd_files: [
   "qqplot.Rmd",
   "violin.Rmd",
   "dates.Rmd",
+  "import_data.Rmd",
   "maps.Rmd",
   "missing_data.Rmd",
   "outliers.Rmd",
