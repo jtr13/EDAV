@@ -56,6 +56,8 @@ This page includes links to every chapter in *edav.info/*
 
 [![Missing Data](images/banners/banner_missing.png)](missing.html){class="active-banner"}
 
+[![Outliers](images/banners/banner_outliers.png)](outliers.html){class="active-banner"}
+
 [![Networks](images/banners/banner_network.png)](network.html){class="active-banner"}
 
 <!-- Yellow Pages -->
