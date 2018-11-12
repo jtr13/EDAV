@@ -42,6 +42,8 @@ This page includes links to every chapter in *edav.info/*
 
 [![Chart: Mosaic](images/banners/banner_mosaic.png)](mosaic.html){class="active-banner"}
 
+[![Chart: Mosaic](images/banners/banner_parallel_coordinates.png](parallelcoordinates.html){class="active-banner"}
+
 [![Chart: Ridgeline Plots](images/banners/banner_ridgeline.png)](ridgeline.html){class="active-banner"}
 
 [![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatter.html){class="active-banner"}
