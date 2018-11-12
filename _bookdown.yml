@@ -23,10 +23,12 @@ rmd_files: [
   "heatmap.Rmd",
   "histogram.Rmd",
   "mosaic.Rmd",
+  "parallel_coordinates.Rmd",
   "ridgeline.Rmd",
   "scatterplot.Rmd",
   "qqplot.Rmd",
   "violin.Rmd",
+  
   "dates.Rmd",
   "import_data.Rmd",
   "maps.Rmd",
