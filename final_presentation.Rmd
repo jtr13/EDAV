@@ -151,3 +151,7 @@ The executive summary should be a well-formatted, presentable final product of y
 *   Test your graphs on nontechnical friends and family and ask for feedback.
 
 Above all, have fun with it <i class="far fa-smile-beam"></i>
+
+## Resources
+
+["Tidy Tuesday Screencast: analyzing college major & income data in R"](https://www.youtube.com/watch?v=nx5yhXAQLxw){target="_blank"} David Robinson explores a dataset in R live, without looking at the data in advance.

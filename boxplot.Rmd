@@ -73,7 +73,7 @@ head(airquality, n = 5)
 boxplot(airquality, col = 'lightBlue', main = "Base R Boxplots of airquality")
 ```
 
-Boxplots with Base R are super easy. Like [histograms](histogram.html), boxplots only need the data. In this case, we passed a dataframe with six variables, so it made separate boxplots for each variable. You may not want to create boxplots for every variable, in which case you could specify the variables individually or use [`filter`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.5/topics/filter){target="_blank"} from the [`dplyr`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.5){target="_blank"} package.
+Boxplots with Base R are super easy. Like [histograms](histo.html), boxplots only need the data. In this case, we passed a dataframe with six variables, so it made separate boxplots for each variable. You may not want to create boxplots for every variable, in which case you could specify the variables individually or use [`filter`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.5/topics/filter){target="_blank"} from the [`dplyr`](https://www.rdocumentation.org/packages/dplyr/versions/0.7.5){target="_blank"} package.
 
 ### Boxplot using ggplot2
 ```{r ggplot}
@@ -94,7 +94,12 @@ g1
 
 ## Theory
 
-<!-- *   TODO Outliers  -->
+Here's a quote by Hadley Wickham  that sums up boxplots nicely:
+
+>The boxplot is a compact distributional summary, displaying less detail than a histogram or kernel density, but also taking up less space. Boxplots use robust summary statistics that are always located at actual data points, are quickly computable (originally by hand), and have no tuning parameters. They are particularly useful for comparing distributions across groups. - Hadley Wickham
+>
+
+Another important use of the boxplot is in showing outliers. A boxplot shows how much of an outlier a data point is with quartiles and fences. Use the boxplot when you have data with outliers so that they can be exposed. What it lacks in specificity it makes up with its ability to clearly summarize large data sets.
 
 *   For more info about boxplots and continuous variables, check out [Chapter 3](http://www.gradaanwr.net/content/03-examining-continuous-variables/){target="_blank"} of the textbook. 
 
@@ -148,6 +153,7 @@ plot + theme
 - [Boxplots with plotly package](https://plot.ly/ggplot2/box-plots/){target="_blank"}: boxplot examples using the `plotly` package. These allow for a little interactivity on hover, which might better explain the underlying statistics of your plot.
 - [ggplot2 Boxplot: Quick Start Guide](http://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization){target="_blank"}: Article from [STHDA](http://www.sthda.com/english/){target="_blank"} on making boxplots using ggplot2. Excellent starting point for getting immediate results and custom formatting.
 - [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf){target="_blank"}: Always good to have close by.
+- [Hadley Wickhan and Lisa Stryjewski on boxplots](http://vita.had.co.nz/papers/boxplots.pdf){target="_blank"}: good for understanding basics of more complex boxplots and some of the history behind them.
 
 
 
