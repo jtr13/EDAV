@@ -9,6 +9,7 @@ edit: https://github.com/jtr13/EDAV/edit/master/%s
 # chapter ordering
 rmd_files: [
   "index.Rmd",
+  "intro.Rmd",
 
   "basics.Rmd",
   "final_presentation.Rmd",
