@@ -1,5 +1,6 @@
 # reads in contributors and updates contributor csv
 # this script is adapted from r4ds (https://r4ds.had.co.nz/)
+# relevant file: (https://github.com/hadley/r4ds/blob/master/contributors.R)
 
 library(tidyverse)
 
