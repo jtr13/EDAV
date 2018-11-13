@@ -1,6 +1,6 @@
 # (PART) Information (Blue) {-}
 
-# Introduction {-}
+# Introduction {#intro}
 
 ![](images/banners/banner_intro.png)
 
