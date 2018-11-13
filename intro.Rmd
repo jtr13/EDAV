@@ -64,7 +64,8 @@ contributors <- contributors %>%
   mutate(
     link = glue::glue("[\\@{login}](https://github.com/{login}){new_tab}"),
     desc = ifelse(is.na(name), link, glue::glue("{name} ({link})"))
-  )
+  ) %>%
+  filter(!login %in% c('zachbogart', 'jtr13'))
 
 cat(paste0(contributors$desc, collapse = ", "))
 ```
