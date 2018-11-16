@@ -98,7 +98,7 @@ We should note that this makes it all seem very easy to add Travis, which actual
 
 1. **Create a Travis account** on www.travis-ci.org by clicking on "Sign in with GitHub" on the top right.  Click Authorize to allow Travis to have proper access to GitHub.
 
-2. Go back to GitHub and **create a personal access token (PAT)** if you don't have one already.  You can do so [here](https://github.com/settings/tokens). Note that you must save your PAT somewhere because you can't access it once it's created.  Also note that the PAT provides a means to access your GitHub repo through an API, an alternative means to logging in with your username/password (There is an API Token in Travis but this is *not* the one to use).
+2. Go back to GitHub and **create a personal access token (PAT)** if you don't have one already.  You can do so [here](https://github.com/settings/tokens){target="_blank"}. Note that you must save your PAT somewhere because you can't access it once it's created.  Also note that the PAT provides a means to access your GitHub repo through an API, an alternative means to logging in with your username/password (There is an API Token in Travis but this is *not* the one to use).
 
 3. **Return to your Travis profile** (travis-ci.org/profile/[GITHUB username]) and click the button next to the appropriate repo to **toggle it on**.  Click on Settings next to the button and **add your saved GITHUB_PAT** under Environmental Variables: set "Name" to "GITHUB_PAT" and "Value" to the value of the token.
 
@@ -112,5 +112,5 @@ If all goes well, you can sit back, relax, and watch Travis do the work for you.
 
 - [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/){target="_blank"}: Textbook on the `blogdown`package, another option for generating websites with R.
 - [Getting Started with GitHub Pages](https://guides.github.com/features/pages/){target="_blank"}: Short article from [GitHub Guides](https://guides.github.com/){target="_blank"} on creating/hosting a website using [GitHub Pages](https://pages.github.com/){target="_blank"}.
-
+- [A Beginner's Guide to Travis CI for R](https://juliasilge.com/blog/beginners-guide-to-travis/){target="_blank"}: Fantastic blog post by [Julia Silge](https://juliasilge.com/){target="_blank"}, includes debugging advice that helped us solve a problem involving installing packages with system requirements.
 

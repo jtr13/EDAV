@@ -7,7 +7,7 @@
 This page includes links to every chapter in *edav.info/*
 
 - Click on a banner to go to the desired page.
-- If you're wondering, here's an [explanation of what the banner colors mean](index.html#how-this-book-is-structured).
+- If you're wondering, here's an [explanation of what the banner colors mean](intro.html#how-this-resource-is-structured).
 
 ## Index
 <!-- [![Header](images/banners/banner_TITLE.png)](TITLE.html){class="active-banner"} -->
@@ -24,7 +24,11 @@ This page includes links to every chapter in *edav.info/*
 
 <!-- Red Pages -->
 
-[![Walkthrough: Iris Example](images/banners/banner_iris.png)](iris.html){class="active-banner"}
+[![Walkthrough: Iris Scatterplot](images/banners/banner_iris.png)](iris.html){class="active-banner"}
+
+[![Walkthrough: Tidy Data & dplyr](images/banners/banner_tidy_data_dplyr.png)](tidy.html){class="active-banner"}
+
+[![Time Series with Missing Data](images/banners/banner_missing_time_series.png)](missingTS.html){class="active-banner"}
 
 <!-- Green Pages -->
 
@@ -36,9 +40,25 @@ This page includes links to every chapter in *edav.info/*
 
 [![Chart: Histogram](images/banners/banner_histogram.png)](histo.html){class="active-banner"}
 
+[![Chart: Mosaic](images/banners/banner_mosaic.png)](mosaic.html){class="active-banner"}
+
+[![Chart: Mosaic](images/banners/banner_parallel_coordinates.png](parallelcoordinates.html){class="active-banner"}
+
+[![Chart: Ridgeline Plots](images/banners/banner_ridgeline.png)](ridgeline.html){class="active-banner"}
+
 [![Chart: Scatterplot](images/banners/banner_scatterplot.png)](scatter.html){class="active-banner"}
 
+[![Chart: QQ-Plot](images/banners/banner_qqplot.png)](qqplot.html){class="active-banner"}
+
+[![Chart: Violin Plot](images/banners/banner_violin.png)](violin.html){class="active-banner"}
+
 [![Dates in R](images/banners/banner_dates.png)](dates.html){class="active-banner"}
+
+[![Spatial Data](images/banners/banner_maps.png)](maps.html){class="active-banner"}
+
+[![Missing Data](images/banners/banner_missing.png)](missing.html){class="active-banner"}
+
+[![Outliers](images/banners/banner_outliers.png)](outliers.html){class="active-banner"}
 
 [![Networks](images/banners/banner_network.png)](network.html){class="active-banner"}
 

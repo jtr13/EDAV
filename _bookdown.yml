@@ -9,21 +9,32 @@ edit: https://github.com/jtr13/EDAV/edit/master/%s
 # chapter ordering
 rmd_files: [
   "index.Rmd",
+  "intro.Rmd",
 
   "basics.Rmd",
   "final_presentation.Rmd",
   "contribute.Rmd",
 
   "iris.Rmd",
+  "tidy_data_dplyr.Rmd",
+  "timeseries.Rmd",
 
   "bargraph.Rmd",
   "boxplot.Rmd",
-  "scatterplot.Rmd",
   "heatmap.Rmd",
   "histogram.Rmd",
+  "mosaic.Rmd",
+  "parallel_coordinates.Rmd",
+  "ridgeline.Rmd",
   "scatterplot.Rmd",
+  "qqplot.Rmd",
+  "violin.Rmd",
+  
   "dates.Rmd",
-  #"maps.Rmd",
+  "import_data.Rmd",
+  "maps.Rmd",
+  "missing_data.Rmd",
+  "outliers.Rmd",
   "network.Rmd",
 
   "general_resources.Rmd",

@@ -2,6 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.DS_Store
 *.Rproj
 edav-resource.rds
 search_index.json
