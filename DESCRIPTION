@@ -11,11 +11,15 @@ Imports:
   fpp,
   GDAdata,
   GGally,
+  ggmosaic,
   ggplot2movies,
   ggridges,
+  ggsci,
+  ggthemes,
   gridExtra,
   imputeTS,
   jsonlite,
+  knitr,
   lattice,
   likert,
   MASS,
@@ -30,6 +34,4 @@ Imports:
   vcdExtra,
   viridis,
   viridisLite,
-  visNetwork,
-  ggmosaic,
-  knitr
+  visNetwork
