@@ -52,8 +52,6 @@ This page includes links to every chapter in *edav.info/*
 
 [![Chart: Violin Plot](images/banners/banner_violin.png)](violin.html){class="active-banner"}
 
-[![Themes and Palettes](images/banners/banner_themes.png)](themes.html){class="active-banner"}
-
 [![Dates in R](images/banners/banner_dates.png)](dates.html){class="active-banner"}
 
 [![Spatial Data](images/banners/banner_maps.png)](maps.html){class="active-banner"}
@@ -63,6 +61,8 @@ This page includes links to every chapter in *edav.info/*
 [![Outliers](images/banners/banner_outliers.png)](outliers.html){class="active-banner"}
 
 [![Networks](images/banners/banner_network.png)](network.html){class="active-banner"}
+
+[![Themes and Palettes](images/banners/banner_themes.png)](themes.html){class="active-banner"}
 
 <!-- Yellow Pages -->
 
