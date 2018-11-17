@@ -1,20 +1,19 @@
-# Colors and Themes {#Colors and Themes}
+# Themes and Palettes {#themes}
 
-![]()
+![](images/banners/banner_themes.png)
 *This chapter originated as a community contribution created by [ar3879](https://github.com/Akanksha1Raj){target="_blank"}*
   
   *This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
-  
 
 ```{r echo = FALSE, message=FALSE}
   library(tidyverse)
-  library("ggsci")
-  library("ggplot2")
-  library("gridExtra")
+  library(ggsci)
+  library(ggplot2)
+  library(gridExtra)
   library(knitr)
   library(ggthemes)
   library(scales)
- library(ggthemr)
+  library(ggthemr)
   subset <- diamonds[ sample(nrow(diamonds), 20000), ]
 ```
 
@@ -22,33 +21,37 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-  
 
-
- ## Overview
-  Our graphs have to be informative and attractive to the audience to get their attention. Themes and colors plays important role in making the graphs attractive. 
-  This section covers how we can set different palettes and themes according to the context, and to make them look cool.
-  In ggplot2, we do have a set of themes, which we can set. A brief description of them is as follows.
+## Overview
+ 
+  Our graphs have to be informative and attractive to the audience to get their attention. Themes and colors play an important role in making the graphs attractive.
   
-  * theme_gray() – signature ggplot2 theme
-  * theme_bw() – dark on light ggplot2 theme
-  * theme_linedraw() -uses black lines on white backgrounds only
-  * theme_light() – similar to linedraw() but with grey lines aswell
-  * theme_dark() – lines on a dark background instead of light
-  * theme_minimal() – no background annotations, minimal feel.
-  * theme_classic() – theme with no grid lines.
-  * theme_void() – empty theme with no elements
+  This section covers how we can set different palettes and themes to suit the context and to make them look cool.
   
-  Example:
+## ggplot2 themes
+  
+  In `ggplot2`, we do have a set of themes, which we can set. A brief description of them is as follows:
+  
+  * `theme_gray()`: signature `ggplot2` theme
+  * `theme_bw()`: dark on light `ggplot2` theme
+  * `theme_linedraw()`: uses black lines on white backgrounds only
+  * `theme_light()`: similar to `linedraw()` but with grey lines as well
+  * `theme_dark()`: lines on a dark background instead of light
+  * `theme_minimal()`: no background annotations, minimal feel
+  * `theme_classic()`: theme with no grid lines
+  * `theme_void()`: empty theme with no elements
+  
+### ggplot2 theme example
   
 ```{r}
-q<-ggplot(subset, aes(x = clarity, y = carat, color = cut)) +
-  geom_point(size=2.5,alpha=0.75) 
-q+theme_minimal()
+q <- ggplot(subset, aes(x = clarity, y = carat, color = cut)) +
+  geom_point(size = 2.5,alpha = 0.75) 
+
+q + theme_minimal()
 ```
   
   
-  There are several other packages avaialble to set the themes and colors in many forms. We will discuss 4 of them.
+  There are several other packages available that set the themes and colors in many ways. We will discuss 4 of them.
   
   1. RColorBrewer
   2. ggthemes
@@ -59,147 +62,136 @@ q+theme_minimal()
 ## RColorBrewer 
 
 Often, we find ourselves looking for the colors which make our graph look clear and cool.  
-RColorBrewer offers a number of palettes, which we can use based on the context of our graph.There are three categories of these palettes :Sequential, Diverging,Qualitative
 
-Sequential Palette : It represents the shade of the color from light to dark. It is usually used to represent the interval data where low values can be shown with a light color and high value can be shown with a dark color. For instance --Blues,BuPu, YlGn, Reds, OrRd
-Diverging Palette: It has darker colors of contrasting hues on both the ends, and lighter color in the middle. For instance --Spectral, RdGy, PuOr
-Qualitative Palette : It is usually used when we want to highlight the differences in the classes(categorial variables). For instance --set1,set2,set3, pastel1, pastel2 , dark2
+RColorBrewer offers a number of palettes, which we can use based on the context of our graph. There are **three** categories of these palettes: *Sequential*, *Diverging*, and *Qualitative*
 
-Examples :
+```{r}
+q <- ggplot(subset, aes(x = clarity, y = carat, color = cut)) +
+  geom_point(size = 2.5, alpha = 0.75) 
+```
+
+- **Sequential Palette**: It represents the shade of the color from light to dark. It is usually used to represent interval data where low values can be shown with a light color and high values can be shown with a dark color. For instance --Blues, BuPu, YlGn, Reds, OrRd
+
+```{r}
+q + scale_colour_brewer(palette = "Blues")
+```
+
+- **Diverging Palette**: It has darker colors of contrasting hues on both the ends, and lighter color in the middle. For instance --Spectral, RdGy, PuOr
+
+```{r}
+q + scale_colour_brewer(palette = "PuOr")
+```
+
+- **Qualitative Palette**: It is usually used when we want to highlight the differences in the classes (categorial variables). For instance --set1, set2, set3, pastel1, pastel2 , dark2
   
 ```{r}
-q<-ggplot(subset, aes(x = clarity, y = carat, color = cut)) +
-  geom_point(size=2.5,alpha=0.75) 
-q+ scale_colour_brewer(palette = "PuOr")
-
-
-```
-```{r}
-
-q+ scale_colour_brewer(palette = "Pastel1")
-
-
-```
-
-```{r}
-
-q+ scale_colour_brewer(palette = "Blues")
-
-```
-
+q + scale_colour_brewer(palette = "Pastel1")
+```  
 
 ## ggthemes
 
-It provides some additionl geoms, scales, and themes to ggplot2. Some of them are really cool ! We can change the theme and color of a graph based on the context.
-
-Examples:-
+**ggthemes** provides additional geoms, scales, and themes to `ggplot2`. Some of them are really cool! We can change the theme and color of a graph based on the context.
 
 ```{r}
-g1<-ggplot(subset, aes(x = clarity, y = carat, color = cut)) +
-  geom_point(size=2.5,alpha=0.75) 
-g1+theme_economist() + scale_colour_economist()
-
+g1 <- ggplot(subset, aes(x = clarity, y = carat, color = cut)) +
+  geom_point(size = 2.5,alpha = 0.75) 
 ```
 
+### ggthemes examples
 
 ```{r}
-g1 +theme_igray() + scale_colour_tableau()
-```
-```{r}
-g1+ theme_wsj() +scale_color_wsj()
-
+g1 + theme_economist() + scale_colour_economist()
 ```
 
-
-
 ```{r}
-
-g1+theme_igray()+scale_colour_colorblind()
+g1 + theme_igray() + scale_colour_tableau()
 ```
 
-If we would like to use these colors in the graphs, which does not support using ggthemes, we can use package Scale to know what all colors are represented with tha palette used. For example - 
+```{r}
+g1 + theme_wsj() + scale_color_wsj()
+```
 
 ```{r}
+g1 + theme_igray() + scale_colour_colorblind()
+```
 
+If we would like to use these colors in the graphs, which may not support using `ggthemes`, we can use the `scales` package to know what colors were used for a given palette. For example:
+
+```{r}
 show_col(colorblind_pal()(6))
 ```
 
 ## ggthemr
-It is used to set the theme of ggplot graphs. It has 17 different themes to change the way ggplot graphs look. Use of ggthemr is different from other other packages. We set the theme before using it. 
 
+**ggthemr** is used to set the theme of ggplot graphs. It has 17 different themes to change the way ggplot graphs look. Use of ggthemr is different from other other packages. We set the theme *before* using it. 
 
-Examples:
+### ggthemr examples
 
 ```{r}
-
 ggthemr("sky")
+
 ggplot(subset, aes(x = clarity, y = carat, color = cut)) +
-  geom_point(size=2.5,alpha=0.75)
+  geom_point(size = 2.5, alpha = 0.75)
 ```
 
 ```{r}
-
 ggthemr("flat")
+
 ggplot(subset, aes(x = clarity, y = carat, color = cut)) +
-  geom_point(size=2.5,alpha=0.75)
+  geom_point(size = 2.5, alpha = 0.75)
 ```
 
-Interesting, we can set more parameters to change the themes.
+Interestingly, we can set more parameters to change the themes:
 
-```{r}
+```{r} 
+ggthemr("lilac", type = "outer", layout = "scientific", spacing = 2)
 
-ggthemr("lilac", type="outer", layout="scientific", spacing=2)
 ggplot(subset, aes(x = clarity, y = carat, color = cut)) +
-  geom_point(size=2.5,alpha=0.75)
+  geom_point(size = 2.5, alpha = 0.75)
 ```
-
-
 
 ## ggsci
 
-It offers a number of palettes inspired by colors used in scientific journals, science fiction movies, and TV shows. For continous data, scale_fill_material(colname) is used, and for discrete data, scale_color_palname() or scale_fill_palname() are used. 
+**ggsci** offers a number of palettes inspired by colors used in scientific journals, science fiction movies, and TV shows. For continous data, `scale_fill_material(colname)` is used, and for discrete data, `scale_color_palname()` or `scale_fill_palname()` are used. 
 
-Examples:
-
-For Discrete Data :
+## ggsci for discrete data
 
 ```{r}
 # we need to remove the theme set previously if we don't want to use it anymore
 ggthemr_reset()
 
-g1<-ggplot(subset, aes(x = clarity, y = carat, color = cut)) +
-  geom_point(size=2.5,alpha=0.75)
-  g1+scale_color_startrek()
-```
+g1 <- ggplot(subset, aes(x = clarity, y = carat, color = cut)) +
+  geom_point(size = 2.5, alpha = 0.75)
 
+g1 + scale_color_startrek()
+```
 
 ```{r}
-g1+ scale_color_jama()
+g1 + scale_color_jama()
 ```
+
 ```{r}
-
-g1+scale_color_locuszoom()
+g1 + scale_color_locuszoom()
 ```
 
-For continuous Data :
+## ggsci for continuous data
 
 ```{r}
 ggplot(diamonds, aes(carat, price)) +
-  geom_hex(bins = 20, color = "red")+
+  geom_hex(bins = 20, color = "red") +
   scale_fill_material("orange")
 ```
-We can also find out the color used, so that we can use them in some other graphs created in Basic R
+
+We can also find out the color used, so that we can use them in some other graphs created in base R:
 
 ```{r}
 palette = pal_lancet("lanonc", alpha = 0.7)(9)
 show_col(palette)
 ```
 
-
 ## External Resources 
 
-For more information on the above packages, check the below links
-- [RColorBrewer](https://data.library.virginia.edu/setting-up-color-palettes-in-r/){target="_blank"} -Setting up Color Palettes in R
-- [ggthemes](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/){target="_blank"} - Github page containing more examples 
-- [ggthemr](https://github.com/cttobin/ggthemr){target="_blank"} - Github Repository of the package
-- [ggsci](https://cran.r-project.org/web/packages/ggsci/vignettes/ggsci.html){target="_blank"} - Scientific Journal and Sci-Fi Themed Color Palettes for ggplot2
+- [RColorBrewer](https://data.library.virginia.edu/setting-up-color-palettes-in-r/){target="_blank"}: Setting up Color Palettes in R
+- [ggthemes](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/){target="_blank"}: Github page containing more examples 
+- [ggthemr](https://github.com/cttobin/ggthemr){target="_blank"}: Github Repository of the package
+- [ggsci](https://cran.r-project.org/web/packages/ggsci/vignettes/ggsci.html){target="_blank"}: Scientific Journal and Sci-Fi Themed Color Palettes for ggplot2
