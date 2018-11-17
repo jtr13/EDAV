@@ -35,6 +35,3 @@ Imports:
   viridis,
   viridisLite,
   visNetwork
-  
-Remotes:
-  cttobin/ggthemr
