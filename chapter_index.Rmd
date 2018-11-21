@@ -54,6 +54,8 @@ This page includes links to every chapter in *edav.info/*
 
 [![Dates in R](images/banners/banner_dates.png)](dates.html){class="active-banner"}
 
+[![Importing Data](images/banners/banner_import.png)](import.html){class="active-banner"}
+
 [![Spatial Data](images/banners/banner_maps.png)](maps.html){class="active-banner"}
 
 [![Missing Data](images/banners/banner_missing.png)](missing.html){class="active-banner"}
