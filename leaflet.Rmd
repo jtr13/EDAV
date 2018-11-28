@@ -1,22 +1,22 @@
----
-date: "11/4/2018"
-output: html_document
----
+# Interactive Geographic Data {#leaflet}
 
-# Interactive Geographic Data: Leaflet in R 
+![](images/banners/banner_leaflet.png)
+*This chapter originated as a community contribution created by [	AkhilPunia](https://github.com/AkhilPunia){target="_blank"}*
 
-<!-- Insert Image here -->
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
 
 ## Overview
 
-You would have already seen different libraries that can help one in beautifully displaying geographic data like ggmap and choroplethr. Eventhough these libraries provide lots of interesting features to better express information through 2 dimensional graphs, they still lack in one feature- interactivity. Here, comes leaflet - a library written in javascript to handle interactive maps. Fun Fact: It's actively used by a lot of leading newspapers like New York Times to Washington Post. So let's dive in.
+You would have already seen different libraries that can help one in beautifully displaying geographic data like `ggmap` and `choroplethr`. Even though these libraries provide lots of interesting features to better express information through 2-dimensional graphs, they still lack one feature: interactivity. Here comes `leaflet`---a library written in javascript to handle interactive maps. Fun Fact: It's actively used by a lot of leading newspapers like The New York Times and The Washington Post. 
+
+Let's dive in.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Brief Description about Dataset
-We are using NYC Open Data about schools in the New York City area in 2016 for our analysis. [You can find more about it here.](https://www.kaggle.com/passnyc/data-science-for-good/home) We will be focusing on the the distriubtion of different variables as a factor of geographical positions.
+For our analysis, we are using NYC Open Data about schools in New York City in 2016. [You can find more about it on the Kaggle page.](https://www.kaggle.com/passnyc/data-science-for-good/home){target="_blank"} We will be focusing on the the distriubtion of different variables as a factor of geographical positions.
 
 ```{r load library, eval=TRUE, message=FALSE}
 library(tidyverse)
@@ -24,11 +24,11 @@ library(leaflet)
 library(htmltools)
 library(leaflet.extras)
 library(viridis)
-schools <- read_csv('Data/school/2016 School Explorer.csv')
+schools <- read_csv('data/2016_school_explorer.csv')
 ```
 
 ## Plotting Markers
-Here we can see that all the Private schools in the NYC have been plotted on a map that allows one to zoom in and out. The Markers are used to donate the location of each individual school. If we hover over the marker, it displays us the name of the school. Isn't that cool! 
+Here we can see that all the Private schools in NYC have been plotted on a map that allows one to zoom in and out. The markers are used to denote the location of each individual school. If we hover over a marker, it displays the name of the school. Isn't that cool! 
 
 ```{r fig1-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
 lat<-median(schools$Latitude)
@@ -41,7 +41,8 @@ schools %>%
   addMarkers(label=~`School Name`) %>%
   setView(lng=lon,lat=lat, zoom = 10)
 ```
-Here is the code for it.
+
+Here's the code for it:
 
 ```{r fig1, eval=FALSE, message=FALSE}
 lat<-median(schools$Latitude)
@@ -56,7 +57,7 @@ schools %>%
 ```
 
 ## Dynamic Heatmaps
-Heatmaps are really useful tools for visualising the distubution of a particular variable over a certain region. In this example, we see how leaflet is able to dynamically calculate the number of schools in a given region from just latitude and longitude data. You can experience this by zooming in and out of the graph.
+Heatmaps are really useful tools for visualising the distubution of a particular variable over a certain region (they are so useful, [we got a page on 'em](heatmap.html)). In this example, we see how `leaflet` is able to dynamically calculate the number of schools in a given region from just latitude and longitude data. You can experience this by zooming in and out of the graph.
 
 ```{r fig2-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
 lat<-mean(schools$Latitude)
@@ -67,7 +68,8 @@ leaflet(schools) %>%
   addWebGLHeatmap(size=15,units="px")  %>%
   setView(lng=lon,lat=lat, zoom = 10)
 ```
-Here is the code for it.
+
+Here's the code for it:
 
 ```{r fig2, eval=FALSE, message=FALSE}
 lat<-mean(schools$Latitude)
@@ -78,8 +80,9 @@ leaflet(schools) %>%
   addWebGLHeatmap(size=15,units="px")  %>%
   setView(lng=lon,lat=lat, zoom = 10)
 ```
+
 ## Dynamic Clustering
-Here we can see how leaflet allows one to dynamically cluster data based on its geographic distanc based on the given zoom level.
+Here we can see how `leaflet` allows one to dynamically cluster data based on its geographic distanc based on the given zoom level.
 
 ```{r fig3-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
 schools %>% 
@@ -88,7 +91,8 @@ schools %>%
   addCircleMarkers(radius = 2, label = ~htmlEscape(`School Name`),
                          clusterOptions = markerClusterOptions()) 
 ```
-Here is the code for it.
+
+Here's the code for it:
 
 ```{r fig3, eval=FALSE, message=FALSE}
 schools %>% 
@@ -97,6 +101,7 @@ schools %>%
   addCircleMarkers(radius = 2, label = ~htmlEscape(`School Name`),
                          clusterOptions = markerClusterOptions()) 
 ```
+
 ## Plotting Groups
 
 ```{r fig4-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
@@ -118,7 +123,8 @@ top %>%
             title = "District",
             opacity = 0.8)
 ```
-Here is the code for it.
+
+Here's the code for it:
 
 ```{r fig4, eval=FALSE, message=FALSE}
 top<- schools %>%
@@ -139,8 +145,9 @@ top %>%
             title = "District",
             opacity = 0.8)
 ```
+
 ## Plotting Categorical Data
-If one wants to neatly visualise the distribution of a particular class over the common map. It can be achieved through an interactive widget provided on the top right that allows one to choose a particular or multiple category. I have provided an example of how schools in different neighborhoods are racially segregated.
+We can visualise the distribution of a particular class over the common map. This is achieved through an interactive widget provided on the top right that allows one to choose a particular category or multiple categories. The example below explores how schools in different neighborhoods are racially segregated.
 
 ```{r fig5-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
 ss <- schools %>% dplyr::select(`School Name`,Latitude, Longitude,`Percent White`, `Percent Black`, `Percent Asian`, `Percent Hispanic`)
@@ -192,7 +199,7 @@ m3 %>% addCircleMarkers(data = black, radius = 2, label = ~htmlEscape(`School Na
 
 ```
 
-Here is the code for it.
+Here's the code for it:
 
 ```{r fig5, eval=FALSE, message=FALSE}
 ss <- schools %>% dplyr::select(`School Name`,Latitude, Longitude,`Percent White`, `Percent Black`, `Percent Asian`, `Percent Hispanic`)
@@ -242,9 +249,10 @@ m3 %>% addCircleMarkers(data = black, radius = 2, label = ~htmlEscape(`School Na
         addLayersControl(overlayGroups = c("White", "Black","Hispanic","Asian")) %>%
         setView(lng=lng,lat=lat,zoom=10)
 ``` 
-These examples provide only a glimpse to what is truly possible with this library. If you want to explore more features and use cases, check out the links listed in External Resources section.
+
+These examples provide only a glimpse to what is truly possible with this library. If you want to explore more features and use-cases, check out the links listed below.
  
 ## External Resources 
-- [Leaflet in R Documentation](https://rstudio.github.io/leaflet/)
-- [Basic leaflet maps in R](https://rpubs.com/mattdray/basic-leaflet-maps)
-- [Interesting Kaggle Kernel visulising Earthquake Data using Leflet in R ](https://www.kaggle.com/verawe/earthquakes-leaflet-highcharter-visualizations)
+- [Leaflet in R Documentation](https://rstudio.github.io/leaflet/){target="_blank"}: main documentation of the package.
+- [Basic leaflet maps in R](https://rpubs.com/mattdray/basic-leaflet-maps){target="_blank"}: tutorial with examples.
+- [Interesting Kaggle Kernel visualizing earthquake data using leaflet in R ](https://www.kaggle.com/verawe/earthquakes-leaflet-highcharter-visualizations){target="_blank"}: another use-case to explore.

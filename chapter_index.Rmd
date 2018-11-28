@@ -58,6 +58,8 @@ This page includes links to every chapter in *edav.info/*
 
 [![Spatial Data](images/banners/banner_maps.png)](maps.html){class="active-banner"}
 
+[![Interactive Geographic Data](images/banners/banner_leaflet.png)](leaflet.html){class="active-banner"}
+
 [![Missing Data](images/banners/banner_missing.png)](missing.html){class="active-banner"}
 
 [![Outliers](images/banners/banner_outliers.png)](outliers.html){class="active-banner"}
