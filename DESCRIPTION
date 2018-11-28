@@ -21,6 +21,8 @@ Imports:
   jsonlite,
   knitr,
   lattice,
+  leaflet,
+  leaflet.extras,
   likert,
   MASS,
   mi,

@@ -33,6 +33,7 @@ rmd_files: [
   "dates.Rmd",
   "import_data.Rmd",
   "maps.Rmd",
+  "leaflet.Rmd",
   "missing_data.Rmd",
   "outliers.Rmd",
   "network.Rmd",
