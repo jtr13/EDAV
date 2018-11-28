@@ -1,4 +1,4 @@
-# Networks {#network}
+# Interactive Networks {#network}
 
 ![](images/banners/banner_network.png)
 
