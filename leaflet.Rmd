@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Brief Description about Dataset
-For our analysis, we are using NYC Open Data about schools in New York City in 2016. [You can find more about it on the Kaggle page.](https://www.kaggle.com/passnyc/data-science-for-good/home){target="_blank"} We will be focusing on the the distriubtion of different variables as a factor of geographical positions.
+For our analysis, we are using NYC Open Data about schools in New York City in 2016. [You can find more about it on the Kaggle page.](https://www.kaggle.com/passnyc/data-science-for-good/home){target="_blank"} We will be focusing on the the distribution of different variables as a factor of geographical positions.
 
 ```{r load library, eval=TRUE, message=FALSE}
 library(tidyverse)
@@ -57,7 +57,7 @@ schools %>%
 ```
 
 ## Dynamic Heatmaps
-Heatmaps are really useful tools for visualising the distubution of a particular variable over a certain region (they are so useful, [we got a page on 'em](heatmap.html)). In this example, we see how `leaflet` is able to dynamically calculate the number of schools in a given region from just latitude and longitude data. You can experience this by zooming in and out of the graph.
+Heatmaps are really useful tools for visualizing the distribution of a particular variable over a certain region (they are so useful, [we got a page on 'em](heatmap.html)). In this example, we see how `leaflet` is able to dynamically calculate the number of schools in a given region from just latitude and longitude data. You can experience this by zooming in and out of the graph.
 
 ```{r fig2-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
 lat<-mean(schools$Latitude)
@@ -82,7 +82,7 @@ leaflet(schools) %>%
 ```
 
 ## Dynamic Clustering
-Here we can see how `leaflet` allows one to dynamically cluster data based on its geographic distanc based on the given zoom level.
+Here we can see how `leaflet` allows one to dynamically cluster data based on its geographic distance at a given zoom level.
 
 ```{r fig3-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
 schools %>% 
@@ -147,7 +147,7 @@ top %>%
 ```
 
 ## Plotting Categorical Data
-We can visualise the distribution of a particular class over the common map. This is achieved through an interactive widget provided on the top right that allows one to choose a particular category or multiple categories. The example below explores how schools in different neighborhoods are racially segregated.
+We can visualize the distribution of a particular class over the common map. This is achieved through an interactive widget provided on the top right that allows one to choose a particular category or multiple categories. The example below explores how schools in different neighborhoods are racially segregated.
 
 ```{r fig5-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
 ss <- schools %>% dplyr::select(`School Name`,Latitude, Longitude,`Percent White`, `Percent Black`, `Percent Asian`, `Percent Hispanic`)
