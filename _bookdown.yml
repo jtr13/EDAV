@@ -37,6 +37,7 @@ rmd_files: [
   "missing_data.Rmd",
   "outliers.Rmd",
   "network.Rmd",
+  "tidyquant.Rmd",
   "themes_and_colors.Rmd",
 
   "general_resources.Rmd",
