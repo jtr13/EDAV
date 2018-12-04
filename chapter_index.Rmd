@@ -66,6 +66,8 @@ This page includes links to every chapter in *edav.info/*
 
 [![Networks](images/banners/banner_network.png)](network.html){class="active-banner"}
 
+[![Timeseries with tidyquant](images/banners/banner_tidyquant.png)](tidyquant.html){class="active-banner"}
+
 [![Themes and Palettes](images/banners/banner_themes.png)](themes.html){class="active-banner"}
 
 <!-- Yellow Pages -->

@@ -1,0 +1,124 @@
+# Timeseries with tidyquant {#tidyquant}
+
+![](images/banners/banner_tidyquant.png)
+*This chapter originated as a community contribution created by [	naotominakawa](https://github.com/naotominakawa){target="_blank"}*
+
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+This section covers how to use the `tidyquant` package to conduct timeseries analysis.
+
+## What is tidyquant?
+
+`tidyquant` is an one-stop shop for financial analysis. It is suitable for analyzing timeseries data, such as financial and economic data. `tidyquant` connects to various data sources such as Yahoo! Finance, Morning Star, Bloomberg market data, etc. It also behaves well with other `Tidyverse` packages.
+
+## Installing tidyquant
+To install `tidyquant`, you can run the following code:
+```{r message=FALSE}
+# install.packages("tidyquant")
+library(tidyquant)
+```
+
+If you want to see which functions are available, you can run the following:
+```{r}
+# to see which functions are available
+tq_transmute_fun_options()
+```
+
+## Single timeseries
+Obtain historical data for single stock (for example, Google):
+```{r}
+# get historical data for single stock. e.g. google
+tq_get("GOOGL", get="stock.prices")
+```
+
+Calculate monthly return of single stock:
+```{r}
+# calculate monthly return of single stock
+tq_get(c("GOOGL"), get="stock.prices") %>%
+  tq_transmute(select=adjusted,
+               mutate_fun=periodReturn,
+               period="monthly",
+               col_rename = "monthly_return")
+```
+
+Create a line chart of the *closing price* for single stock:
+```{r}
+# showing closing price for single stock
+tq_get(c("GOOGL"), get="stock.prices") %>%
+  ggplot(aes(date, close)) +
+  geom_line()
+```
+
+Create a line chart of the *monthly return* for single stock:
+```{r}
+# showing monthly return for single stock
+tq_get(c("GOOGL"), get="stock.prices") %>%
+  tq_transmute(select=adjusted,
+               mutate_fun=periodReturn,
+               period="monthly",
+               col_rename = "monthly_return") %>%
+  ggplot(aes(date, monthly_return)) +
+  geom_line()
+```
+
+## Multiple timeseries
+Obtain historical data for multiple stocks (for example, GAFA):
+```{r}
+# get historical data for multiple stocks. e.g. GAFA
+tq_get(c("GOOGL","AMZN","FB","AAPL"), get="stock.prices")
+```
+
+Create a multiple line chart of the closing prices of multiple stocks (again, GAFA). We can show each stock in a different color on the same graph:
+```{r}
+# Create a multiple line chart of the closing prices of the four stocks,
+# showing each stock in a different color on the same graph.
+tq_get(c("GOOGL","AMZN","FB","AAPL"), get="stock.prices") %>%
+  ggplot(aes(date, close, color=symbol)) +
+  geom_line()
+```
+
+Transform the data so each stock begins at 100 and replot (Standardize the data so that we can compare timeseries):
+```{r}
+# Create a multiple line chart of the closing prices of the four stocks,
+# showing each stock in a different color on the same graph.
+# Transform the data so each stock begins at 100 and replot.
+tq_get(c("GOOGL","AMZN","FB","AAPL"), get="stock.prices") %>%
+  group_by(symbol) %>%
+  mutate(close = 100*close/first(close)) %>%
+  ggplot(aes(date, close, color=symbol)) +
+  geom_line()
+```
+
+Calculate *monthly return* of multiple stocks (again, GAFA):
+```{r}
+# calculate monthly return of multiple stocks
+tq_get(c("GOOGL","AMZN","FB","AAPL"), get="stock.prices") %>%
+  group_by(symbol) %>%
+  tq_transmute(select=adjusted,
+               mutate_fun=periodReturn,
+               period="monthly",
+               col_rename = "monthly_return")
+```
+
+Create a multiple line chart of monthly return of the four stocks. Again, we can show each stock in a different color on the same graph:
+```{r}
+# Create a multiple line chart of monthly return of the four stocks,
+# showing each stock in a different color on the same graph
+tq_get(c("GOOGL","AMZN","FB","AAPL"), get="stock.prices") %>%
+  group_by(symbol) %>%
+  tq_transmute(select=adjusted,
+               mutate_fun=periodReturn,
+               period="monthly",
+               col_rename = "monthly_return") %>%
+  ggplot(aes(date, monthly_return, color=symbol)) +
+  geom_line()
+```
+
+## External Resources
+- [tidyquant CRAN doc](https://cran.r-project.org/web/packages/tidyquant/vignettes/TQ00-introduction-to-tidyquant.html){target="_blank"}: formal documentation on the package
+- [tidyquant Github repo](https://github.com/business-science/tidyquant){target="_blank"}: Github repository for the `tidyquant` package with a great README
