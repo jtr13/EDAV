@@ -9,7 +9,7 @@ This chapter introduces how this resource is organized, explains how you can add
 
 ## How this resource is structured
 
-This resource is split into four **color-coded sections**, each of which provides different kinds of assistance. Below is an explanation of each section:
+This resource is split into four color-coded sections, each of which provides different kinds of assistance. Below is an explanation of each section:
 
 ### Section I: Information (Blue)
 
