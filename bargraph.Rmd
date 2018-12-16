@@ -154,6 +154,174 @@ ggplot(colors, aes(x = Sex, y = Freq)) +
   facet_wrap(~Hair)
 ```
 
+
+## Other types of bar-graphs
+
+Now suppose you want to compare frequency of hair colour between male and female. Follow along in the coming sections, to visualize this scenario!
+
+First things first!! Lets get our data ready for this.
+
+```{r}
+# Hair color frequency for female and male.
+colors_sex_hair <- colors %>%
+  group_by(.dots=c("Sex","Hair")) %>%
+  summarise(Total = sum(Freq))
+
+# take a look at data
+head(colors_sex_hair)
+
+```
+
+There are several ways to visualize the comparison between male and female hair colors, one way is to use Grouped Bar Chart.
+
+### Grouped Bar Graph
+
+```{r}
+library(ggplot2)
+
+ggplot(colors_sex_hair, aes(x = Hair, y = Total)) +
+  geom_bar(stat = "identity",aes(fill=Sex), position="dodge", color="white") +
+  scale_fill_manual(values = c("#3399FF","#FF6666")) +
+  ggtitle("Grouped Bar Graph Using ggplot2")
+```
+Note how position="dodge" and fill="Sex" changes the bar graph to grouped bar graph.
+Group bar charts are helpful to visualize sub-groups(here male and female) one besides each other.
+
+
+When you have lot of categories in X Axis, other way to visualize this is using stacked bar graphs.
+
+### Stacked Bar graph using ggplot
+
+#### The usual way
+```{r}
+library(ggplot2)
+
+ggplot(colors_sex_hair, aes(x = Hair, y = Total)) +
+  geom_bar(stat = "identity",aes(fill=Sex)) +
+  scale_fill_manual(values = c("#3399FF","#FF6666")) +
+  ggtitle("Stacked Bar Graph Using ggplot2")
+```
+
+Here, sub-groups(here male and female) are stacked onto same bar. Notice, how fill="Sex" adds color to the stacked bar to help differentiate the boundaries.
+
+
+#### 100% Stacked Bar Charts
+#####You can view sub-groups as proportion of total.
+
+```{r}
+library(ggplot2)
+
+ggplot(colors_sex_hair, aes(x = Hair, y = Total)) +
+  geom_bar(stat = "identity",aes(fill=Sex), position="fill") +
+  ggtitle("Proportion Stacked Bar Graph Using ggplot2") +
+  scale_fill_manual(values = c("#3399FF","#FF6666")) +
+  ylab("Proportion")
+```
+
+Notice in the code, position="fill", which sets the proportion of subgroups (here female and male) for each groups( here Black,Brown, Red, Blond).
+
+
+You can visualize this better if you set the sacle of y to percent. See below
+
+##### You can view sub-groups as percentage of total.
+```{r}
+library(ggplot2)
+library(scales)
+
+ggplot(colors_sex_hair, aes(x = Hair, y = Total)) +
+  geom_bar(stat = "identity",aes(fill=Sex), position="fill") +
+  ggtitle("Percentage Stacked Bar Graph Using ggplot2") +
+  scale_fill_manual(values = c("#3399FF","#FF6666")) +
+  scale_y_continuous(labels=percent) +
+  ylab("Proportion")
+
+```
+
+Notice in the code,scale_y_continuous(labels=percent) along with position="fill" sets the proportion of subgroups (female and male) for each group(Black,Brown, Red, Blond) as percentage.
+
+Before we move forward, let us see an example of stacked bar chart with co-ordinate flip. Why? Well it will help us relate to diverging stacked bar char better (next section). Wait what? Don't worry, just stay along, you have almost made it to the end!!
+
+
+#### Stacked bar graph with coord_flip
+
+```{r}
+library(ggplot2)
+library(scales)
+
+ggplot(colors_sex_hair, aes(x = Hair, y = Total)) +
+  geom_bar(stat = "identity",aes(fill=Sex), position="fill") +
+   coord_flip() + scale_fill_manual(values = c("#3399FF","#FF6666")) +
+   scale_y_continuous(labels=percent) + ylab("Percentage") +
+  ggtitle("Stacked Bar Graph with co-ordinate flip")
+```
+
+The graph above is 100% stacked bar graph chart, with its co-rodinate flipped. The percentage in X Axis help us read and compare the percenatage values of male and female group better.
+
+
+## Likert Data
+So far so good!!! Now let us look at something very different. What is likert data? Have you ever taken a survey. I am sure, your answer is Yes!!. Sometime we come across questions where we have to choose from - "strongly agree", "agree", "don’t know", "disagree", "strongly disagree" or may be options like - "strongly like" to  "strongly dislike" etc. Thus likert data is usually a 5-7 point scale on ordinal values scale ranging from positive to negative values.
+
+Let us look at a data set which has a likert data.
+
+```{r }
+library(vcd)
+head(JointSports)
+
+```
+```{r }
+
+print(levels(JointSports$opinion))
+
+```
+
+As you can see, the opinion column in JointSports dataset takes 5 ordinal values ranging from strongly positive to strongly negative. This type of data can be cassified as likert data. 
+
+OK, great!! How do we visualize this now??
+
+Let us first get our data in the right format to able to plot it. To plot the likert data, we will first have to make it "messy", which is, we will have to convert the "long" data to "wide" data. 
+
+```{r}
+library(dplyr)
+library(tidyverse)
+
+#using the function spread from dplyr package to convert to "wide" data
+
+ldata <- spread(JointSports, key = opinion, value = Freq) %>%
+    mutate(group = paste(gender,"s about",grade,"grade in year", year))
+head(ldata)
+```
+
+Note the column which conatins likert data (here opinion column in JointSports dataset) will be used to spread the dataset and make it messy. Also we have grouped the remaining columns gender, grade and year into one column. This helps us visualize and compare the opinion column(likert data) with other columns better. See below to help understand better.
+
+
+### Plot Likert Data
+
+```{r fig.width=12}
+library(HH)
+likert(group~., ldata,
+       main = "Opinions of boys and girl on joint sport with opposite gender during their 1st and 3rd grade. (Year of study~ 1983,1985) ",
+       xlab = "Count", ylab = "")
+
+```
+
+### Plot Likert Data without neutral field.
+
+It is sometimes easier to compare positive opinions with negative opinions. To do so ,
+we can omit the neutral field and visualize the comparison better.
+
+```{r fig.width=15}
+library(HH)
+
+#using select function to only select columns we want to compare.
+ldata2 <- ldata %>% dplyr::select(`very good`,good,bad,`very bad`,group)
+head(ldata2)
+
+likert(group~., ldata2,
+       main = "Opinions of boys and girl on joint sport with opposite gender during their 1st and 3rd grade, without neutral opinions. (Year of study~ 1983,1985)",
+       xlab = "Count", ylab = "")
+
+```
+
 ## External resources
 <!-- - [](){target="_blank"}: Links to resources with quick blurb -->
 - [Cookbook for R](http://www.cookbook-r.com/Manipulating_data/Changing_the_order_of_levels_of_a_factor/){target="_blank"}: Discussion on reordering the levels of a factor.
