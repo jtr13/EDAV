@@ -57,7 +57,7 @@ At any point, you may ask the TAs (Bridget and Zach) or the instructor (Joyce) f
 
 ### Peer review
 
-A portion of your grade is based on the feedback *you* give to other groups. After the due date, each individual will be assigned two project groups to review, and instructions will be provided.
+After final projects are turned in, you will be asked write peer reviews of other projects. Each individual will be assigned two project groups to review, and instructions will be provided.
 
 **Note**: part of the grade you receive for the class is based on the quality of review that you *write*, not on the feedback that your project *receives.* Your grade for the project (as for all other assignments for the class) will be determined solely by the instructor and TAs.
 
