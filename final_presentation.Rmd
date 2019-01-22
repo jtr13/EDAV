@@ -4,7 +4,7 @@
 
 ## Overview
 
-This section goes over what's expected for the final project.
+This section goes over what's expected for the final project, Fall 2018.
 
 **General Note**: Please note that this sheet cannot possibly cover all the "do's and don'ts" of data analysis and visualization. You are expected to follow all of the best practices discussed in class throughout the semester.
 
@@ -53,7 +53,7 @@ You have a lot of freedom to choose what to do, as long as you restrict yourselv
 
 ### Feedback
 
-At any point, you may ask the TAs (Bridget and Zach) or the instructor (Joyce) for advice. Our primary role in this regard will be to provide general guidance on your choice of data / topic / direction. As always, you are encouraged to post specific questions to [Piazza](https://piazza.com/){target="_blank"}, particularly coding questions and issues. You may also volunteer to discuss your project with the class in order to get feedback--if you'd like to do this, [email the instructor](http://stat.columbia.edu/department-directory/name/joyce-robbins/){target="_blank"} to schedule a date.
+At any point, you may ask the TAs or the instructor (Joyce) for advice. Our primary role in this regard will be to provide general guidance on your choice of data / topic / direction. As always, you are encouraged to post specific questions to [Piazza](https://piazza.com/){target="_blank"}, particularly coding questions and issues. You may also volunteer to discuss your project with the class in order to get feedback--if you'd like to do this, [email the instructor](http://stat.columbia.edu/department-directory/name/joyce-robbins/){target="_blank"} to schedule a date.
 
 ### Peer review
 
