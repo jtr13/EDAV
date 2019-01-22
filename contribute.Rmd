@@ -102,7 +102,12 @@ We contributed to a GitHub repo! Hooray! Time to celebrate!
 <a href="https://giphy.com/gifs/reaction-food-simpsons-nxscd2YGVf6xi" target="_blank">via GIPHY</a>
 </center>
 <br>
+
+13. Bear in mind that as time goes on, the code in your fork will fall behind that of the main project. If it's a project that you contribute to on a regular basis, you'll want to learn how to [keep your fork up to date.](https://help.github.com/articles/syncing-a-fork/). This unfortunately is a little more complex than it should be. An alternative is to delete your fork and start over. This may be the best option for infrequent contributions to the same project.
+
 If what you want to improve is a little more substantial (too difficult to contribute directly), read on.
+
+
 
 ### Submit an issue
 
