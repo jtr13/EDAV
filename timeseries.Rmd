@@ -1,3 +1,5 @@
+# (PART) Special Data Types {-}
+
 # Time Series with Missing Data {#missingTS}
 
 ![](images/banners/banner_missing_time_series.png)

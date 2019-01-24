@@ -8,40 +8,50 @@ edit: https://github.com/jtr13/EDAV/edit/master/%s
 
 # chapter ordering
 rmd_files: [
+  # part 1 getting started
   "index.Rmd",
   "intro.Rmd",
-
   "basics.Rmd",
   "final_presentation.Rmd",
   "contribute.Rmd",
 
-  "iris.Rmd",
-  "tidy_data_dplyr.Rmd",
-  "timeseries.Rmd",
-
-  "bargraph.Rmd",
-  "boxplot.Rmd",
-  "heatmap.Rmd",
+# part 2 continuous variables
   "histogram.Rmd",
-  "mosaic.Rmd",
-  "parallel_coordinates.Rmd",
-  "ridgeline.Rmd",
-  "scatterplot.Rmd",
-  "qqplot.Rmd",
+  "boxplot.Rmd",
   "violin.Rmd",
-  
-  "dates.Rmd",
-  "import_data.Rmd",
+  "ridgeline.Rmd",
+  "qqplot.Rmd",
+  "parallel_coordinates.Rmd",
+
+# part 3 categorical
+  "bargraph.Rmd",
+
+# part 4 multivariate continuous
+  "scatterplot.Rmd",
+  "iris.Rmd",
+
+# part 5 multivariate categorical
+  "mosaic.Rmd",
+  "heatmap.Rmd",
+
+# part 6 special data types
+  "timeseries.Rmd",
   "maps.Rmd",
   "leaflet.Rmd",
-  "missing_data.Rmd",
-  "outliers.Rmd",
   "network.Rmd",
   "tidyquant.Rmd",
-  "themes_and_colors.Rmd",
 
+# part 7 working with data
+  "import_data.Rmd",
+  "tidy_data_dplyr.Rmd",
+  "missing_data.Rmd",
+  "outliers.Rmd",
+  "dates.Rmd",
+
+# part 8 other topics
   "general_resources.Rmd",
   "perception.Rmd",
+  "themes_and_colors.Rmd",
   "publish_using_r.Rmd",
   "github_resources.Rmd",
   "chapter_index.Rmd"

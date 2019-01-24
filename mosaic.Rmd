@@ -1,3 +1,5 @@
+# (PART) Multivariate Categorical {-}
+
 # Chart: Mosaic {#mosaic}
 
 <!-- Chapter Banner -->
