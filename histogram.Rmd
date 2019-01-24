@@ -105,7 +105,7 @@ The histogram is clear and quick to make. Histograms are relatively self-explana
 
 *   For more info about histograms and continuous variables, check out [Chapter 3](http://www.gradaanwr.net/content/03-examining-continuous-variables/){target="_blank"} of the textbook. 
 
-## Types of histrograms
+## Types of histograms
 
 Use a histogram to show the distribution of *one continuous variable*. The y-scale can be represented in a variety of ways to express different results:
 
@@ -199,6 +199,66 @@ grid.arrange(p3, p4, ncol = 2)
 ```
 
 **Note**: Don't use both `boundary` *and* `center` for bin alignment. Just pick one.
+
+## Interactive histograms with `ggvis`
+
+The `ggvis` package is not currently in development, but does certain things very well, such as adjusting parameters of a histogram interactively while coding.
+
+Since images cannot be shared by knitting (as with other packages, such as `plotly`), we present the code here, but not the output. To try them out, copy and paste into an R session.
+
+###  Change binwidth interactively
+```{r, eval = FALSE}
+library(tidyverse)
+library(ggvis)
+faithful %>% ggvis(~eruptions) %>% 
+    layer_histograms(fill := "lightblue", 
+        width = input_slider(0.1, 2, value = .1, 
+                             step = .1, label = "width"))
+```
+
+### GDP example
+```{r, eval = FALSE}
+df <-read.csv("countries2012.csv")
+df %>% ggvis(~GDP) %>% 
+    layer_histograms(fill := "green", 
+        width = input_slider(500, 10000, value = 5000, 
+        step = 500, label = "width"))
+```
+
+### Change center interactively 
+```{r, eval = FALSE}
+df <- data.frame(x = c(50, 51, 53, 55, 56, 60, 65, 65, 68))
+df %>% ggvis(~x) %>% 
+    layer_histograms(fill := "red", 
+        width = input_slider(1, 10, value = 5, step = 1, label = "width"),
+        center = input_slider(50, 55, value = 52.5, step = .5, label = "center"))
+```
+
+### Change center (with data values shown)
+```{r, eval = FALSE}
+df <- data.frame(x = c(50, 51, 53, 55, 56, 60, 65, 65, 68), 
+                 y = c(.5, .5, .5, .5, .5, .5, .5, 1.5, .5))
+df %>% ggvis(~x, ~y) %>% 
+    layer_histograms(fill := "lightcyan", width = 5,
+                     center = input_slider(45, 55, value = 45, 
+                                           step = 1, label = "center")) %>% 
+  layer_points(fill := "blue", size := 200) %>% 
+  add_axis("x", properties = axis_props(labels = list(fontSize = 20))) %>% 
+  scale_numeric("x", domain = c(46, 72)) %>% 
+  add_axis("y", values = 0:3, 
+           properties = axis_props(labels = list(fontSize = 20)))
+```
+
+### Change boundary interactively
+```{r, eval = FALSE}
+df %>% ggvis(~x) %>% 
+    layer_histograms(fill := "red", 
+        width = input_slider(1, 10, value = 5, 
+                             step = 1, label = "width"),
+        boundary = input_slider(47.5, 50, value = 50,
+                                step = .5, label = "boundary"))
+```
+
 
 ## External resources
 
