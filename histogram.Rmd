@@ -1,3 +1,5 @@
+# (PART) Continuous Variables {-}
+
 # Chart: Histogram {#histo}
 
 ![](images/banners/banner_histogram.png)

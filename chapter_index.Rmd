@@ -1,4 +1,4 @@
-# Chapter Index {#chapter-index}
+# Chapter Index by Resource Type {#chapter-index}
 
 ![](images/banners/banner_chapter_index.png)
 

@@ -1,4 +1,4 @@
-# (PART) Information (Blue) {-}
+# (PART) Getting Started {-}
 
 # Introduction {#intro}
 

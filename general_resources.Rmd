@@ -1,4 +1,4 @@
-# (PART) References (Yellow) {-}
+# (PART) Other Topics {-}
 
 # General Resources {#general}
 

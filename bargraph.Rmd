@@ -1,4 +1,4 @@
-# (PART) Documentation (Green) {-}
+# (PART) Categorical Variables {-}
 
 # Chart: Bar Chart {#bar}
 

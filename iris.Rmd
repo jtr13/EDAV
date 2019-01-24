@@ -1,5 +1,3 @@
-# (PART) Walkthroughs (Red) {-}
-
 # Walkthrough: Iris Scatterplot {#iris}
 
 ![](images/banners/banner_iris.png)

@@ -108,6 +108,10 @@ If all goes well, you can sit back, relax, and watch Travis do the work for you.
 <iframe src="https://giphy.com/embed/lPdn5MOabkgCY" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br /><a href="https://giphy.com/gifs/the-simpsons-homer-simpson-exercise-lPdn5MOabkgCY">via GIPHY</a>
 </center>
 
+## Notes on our workflow
+
+### 
+
 ## Other resources
 
 - [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/){target="_blank"}: Textbook on the `blogdown`package, another option for generating websites with R.
