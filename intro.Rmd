@@ -7,33 +7,33 @@
 ## Overview
 This chapter introduces how this resource is organized, explains how you can add to this resource, and includes some general acknowledgments.  
 
-## How this resource is structured
+## Types of Assistance
 
-This resource is split into four color-coded sections, each of which provides different kinds of assistance. Below is an explanation of each section:
+Chapters in this resources are color-coded to indicate the type of assistance the chapter provides. Below is an explanation of each type:
 
-### Section I: Information (Blue)
+### Information (Blue)
 
 ![](images/banners/banner_blue.png)
 
-Pages in the **blue section** contain basic **information**. Examples of blue pages include this introduction page and the [basics page](basics.html), which explains how to setup R/RStudio as well as ways to get help if you need it. Blue pages are the help desk of this resource: look to them if you are lost and need to find your way.
+Blue pages contain basic **information**. Examples of blue pages include this introduction page and the [basics page](basics.html), which explains how to setup R/RStudio as well as ways to get help if you need it. Blue pages are the help desk of this resource: look to them if you are lost and need to find your way.
 
-### Section II: Walkthroughs (Red)
+### Walkthroughs (Red)
 
 ![](images/banners/banner_red.png)
 
-Pages in the **red section** contain more extensive **walkthroughs**. An example of a red page is the [iris walkthrough](iris.html), where a well-known dataset is presented as a pretty scatterplot and steps are shown from start to finish. This page type is the most thorough: it tries to provide full documentation, explanations of design choices, and advice on best practices. It's like going to office hours and having a great clarifying chat with a course assistant...in article form. If you would like to see a fully-worked-through example of something with a lot of guidance along the way, check out the red pages.
+Red pages contain more extensive **walkthroughs**. An example of a red page is the [iris walkthrough](iris.html), where a well-known dataset is presented as a pretty scatterplot and steps are shown from start to finish. This page type is the most thorough: it tries to provide full documentation, explanations of design choices, and advice on best practices. It's like going to office hours and having a great clarifying chat with a course assistant...in article form. If you would like to see a fully-worked-through example of something with a lot of guidance along the way, check out the red pages.
 
-### Section III: Documentation (Green)
+### Documentation (Green)
 
 ![](images/banners/banner_green.png)
 
-Pages in the **green section** contain more compact **documentation**. An example of a green page is the [histogram page](histo.html), which includes simple examples of how to create histograms, when to use them, and things to be aware of/watch out for. The green pages hold your hand much less than the red pages: they explain how to use a chart/tool using examples and simple terms. If you have an idea in mind and are just wondering how to execute it, the green pages will help fill in those gaps.
+Green pages contain more compact **documentation**. An example of a green page is the [histogram page](histo.html), which includes simple examples of how to create histograms, when to use them, and things to be aware of/watch out for. The green pages hold your hand much less than the red pages: they explain how to use a chart/tool using examples and simple terms. If you have an idea in mind and are just wondering how to execute it, the green pages will help fill in those gaps.
 
-### Section IV: References (Yellow)
+### References (Yellow)
 
 ![](images/banners/banner_yellow.png)
 
-Pages in the **yellow section** contain simple collections of  **references**. An example of a yellow page is the [external resources page](general.html), which is a list of materials that you can look through and learn from. Yellow pages have the least amount of hand-holding: they are collections of resources and bare-boned tutorials that will help you learn about new things. 
+Yellow pages contain simple collections of  **references**. An example of a yellow page is the [external resources page](general.html), which is a list of materials that you can look through and learn from. Yellow pages have the least amount of hand-holding: they are collections of resources and bare-boned tutorials that will help you learn about new things. 
 
 ## Help improve *edav.info/*
 
