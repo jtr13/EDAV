@@ -24,8 +24,8 @@ library(tidyquant)
 ```
 
 If you want to see which functions are available, you can run the following:
-```{r}
-# to see which functions are available
+```{r, eval = FALSE}
+# to see which functions are available (not run)
 tq_transmute_fun_options()
 ```
 
