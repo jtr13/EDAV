@@ -54,6 +54,7 @@ rmd_files: [
   "themes_and_colors.Rmd",
   "publish_using_r.Rmd",
   "github_resources.Rmd",
+  "workflow_notes.Rmd",
   "chapter_index.Rmd"
 ]
 
