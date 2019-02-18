@@ -139,6 +139,16 @@ Confused how to actually do what was mentioned above? We have [a thorough walkth
 
 For more info, please consider reading the [GitHub Guide on Forking Projects](https://guides.github.com/activities/forking/){target="_blank"} and the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
 
+## Ways you can contribute (need to use Git)
+
+For more involved changes including R code, using Github only is not enough. In this case, one needs to install Git and follow the workflow described below. For detailed description on each step in the workflow, please refer to workflow 4 in the Git slides [Git/Github Workflow](https://github.com/jtr13/codehelp/blob/master/GitHubWorkflowPt2.pdf){target="_blank"}
+
+1. Install Git. We have [a chapter](github_resources.html) that helps you get familiar with Git.
+2. Fork [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and clone to create a local repository.
+3. Create a new branch and do your work.
+4. After your work is done, commit and push the changes to Github origin (the repo you forked on Github).
+5. Submit a pull request to the upstream (the original repo of the project that your forked) and wait for you changes to be merged!
+
 ## Resources
 
 - [Our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"}: Link to the GitHub repository for *edav.info/*
