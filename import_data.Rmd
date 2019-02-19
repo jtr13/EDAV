@@ -86,7 +86,9 @@ Let's take the example of `Water Consumption In The New York City`, which is on 
 
 To securely access the web data, we can use the `RCurl` package (for more resources, see [The RCurl Package](http://www.omegahat.net/RCurl/){target="_blank"}. To be more flexible, we can first download the data to local hard drive and then read them as local files. To download the file, we can use the commands like `curl` : [Downloading files with curl](http://www.compciv.org/recipes/cli/downloading-with-curl/){target="_blank"}, `wget` : [Wget Command Examples](https://www.rosehosting.com/blog/wget-command-examples/){target="_blank"}. You can also download it with the browser.
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=TRUE, message=FALSE, eval = FALSE}
+# not run {eval = FALSE} not working on some machines
+
 library('RCurl')
 
 # specify the url link to the data source
@@ -96,9 +98,8 @@ url <- "https://data.cityofnewyork.us/api/views/ia2d-e54m/rows.csv"
 url_data <- getURI(url)
 
 # we use textConnection to tell R to read data in text format
-df <- read.table(textConnection(url_data), sep = ",", header = TRUE)
+df <- read.csv(textConnection(url_data), sep = ",", header = TRUE)
 head(df)
-
 ```
 
 ### Directly read web source into the workspace
