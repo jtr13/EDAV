@@ -39,19 +39,16 @@ The code:
 ```{r ref.label='ggdot', eval=FALSE}
 ```
 
-## Multiple dots (using `forcats::fct_reorder2`)
+## Multiple dots
 
+For this example we'll use 2010 data on SAT mean scores for a sample of New York City public schools:
 
-`School Name` is sorted by factor level, which by default is alphabetical:
 
 ```{r}
 df <- read_csv("https://raw.githubusercontent.com/jtr13/StatGraph5293/master/data/SAT2010.csv",
                na = "s")
 
-head(df)
-
-levels(factor(df$`School Name`))
-
+set.seed(5293)
 tidydf <- df %>%
   filter(!is.na(`Critical Reading Mean`)) %>%
   sample_n(20) %>%
@@ -59,34 +56,50 @@ tidydf <- df %>%
          Writing = "Writing Mean") %>%
   gather(key = "Test", value = "Mean", "Reading", "Math", "Writing")
 
-head(tidydf)
-
 ggplot(tidydf, aes(Mean, `School Name`, color = Test)) +
-  geom_point() + theme_dotplot
+  geom_point() + theme_dotplot +
+  ggtitle("Schools are sorted alphabetically", sub = "not the best option")
 ```
 
-We use `fct_reorder2()` here to sort `School Name` in ascending order (`.desc = FALSE`) by the *last* factor level of `Test` (Writing):
+
+Note that `School Name` is sorted by factor level, which by default is alphabetical. A better choice is to sort by one of the levels of `Test`. It's usually best to try sorting on different factor levels and observe the patterns that appear.
+
+To perform the double sort, that is, sorting `School Name` by `Test` *and then* `Mean`, we use `forcats::fct_reorder2()`. This function sorts `.f` (a factor or character vector) by two sorting vectors, `.x` and `.y`. For this type of plot, `.x` is the variable represented by the colored dots and `.y` is the continuous variable mapped to the y-axis. 
+
+Suppose we wish to sort the schools by mean reading score. We can do this by limiting the `Test` variable to "Reading" when sorting on `Mean`:
+
 
 ```{r}
-head(levels(factor(tidydf$Test)))
+ggplot(tidydf, 
+       aes(Mean, fct_reorder2(`School Name`, Test=="Reading", Mean, .desc = FALSE),
+           color = Test)) +
+  geom_point() + ggtitle("Schools sorted by Reading mean") +
+  theme_dotplot 
+```
 
+(Thanks to ___ ___ for suggesting this simple method, which does not require the reordering of factor levels.)
+
+While this is the go-to method, there may be cases in which it's easier to specify that you wish to sort by the first or the last factor level of the first sorting variable (`Test`), without spelling it out. 
+
+If a factor level is not specified, `fct_reorder2()` by default will sort on the *last* factor level of `.x`. In this case, "Writing" is the last factor level of `Test`:
+
+```{r}
 ggplot(tidydf, 
        aes(Mean, fct_reorder2(`School Name`, Test, Mean, .desc = FALSE),
            color = Test)) +
-  geom_point() + theme_dotplot
+  geom_point() + ggtitle("Schools sorted by Writing mean") + theme_dotplot
 ```
 
-To sort by the *first* factor level of `Test` (Math), install the development version of **forcats**:
+If you desire to sort by the *first* factor level of `.x`, "Math" in this case, you'll need the development version of **forcats**, which you can install with:
 
 `devtools::install_github("tidyverse/forcats")`
 
-and change the default sorting function (`last2()`) to (`first2()`):
-
+Change the default sorting function, `last2()`, to `first2()`:
 
 ```{r}
 ggplot(tidydf, 
        aes(Mean, fct_reorder2(`School Name`, Test, Mean, .fun = first2, .desc = FALSE),
            color = Test)) +
-  geom_point() + theme_dotplot
+  geom_point() + ggtitle("Schools sorted by Math mean") + 
+  theme_dotplot
 ```
-
