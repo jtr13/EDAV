@@ -3,8 +3,6 @@
 ![](images/banners/banner_parallel_coordinates.png)
 *This chapter originated as a community contribution created by [	aashnakanuga](https://github.com/aashnakanuga){target="_blank"}*
 
-*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
-
 
 ## Overview
 
