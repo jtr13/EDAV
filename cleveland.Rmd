@@ -2,23 +2,15 @@
 
 ![](images/banners/banner_cleveland.png)
 
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+
 ## Overview
 
 This section covers how to make Cleveland dot plots. Cleveland dot plots are a great alternative to a simple bar chart, particularly if you have more than a few items. It doesn’t take much for a bar chart to look cluttered. In the same amount of space, many more values can be included in a dot plot, and it’s easier to read as well. R has a built-in base function, `dotchart()`, but since it’s such an easy graph to draw, doing it “from scratch” in *ggplot2* or base allows for more customization.
 
-## tl;dr
-<!-- Nice Example Joke -->
-A clever joke about Swiss fertility in French-speaking provinces in 1888? Where's that HALP MEEE button???
-
-Here we show fertility rates from the built-in `swiss` dataset:
-
-
 
 ```{r ggdot, fig.height = 6, fig.width = 5, echo = FALSE, warning = FALSE, message = FALSE} 
-library(ggplot2)
-library(dplyr)
-
-
+library(tidyverse)
 # create a theme for dot plots, which can be reused
 theme_dotplot <- theme_bw(14) +
     theme(axis.text.y = element_text(size = rel(.75)),
@@ -42,28 +34,72 @@ ggplot(df, aes(x = Fertility, y = reorder(Province, Fertility))) +
 	ggtitle("Standardized Fertility Measure\nSwitzerland, 1888")
 ```
 
-And here's the code:
+The code:
+
 ```{r ref.label='ggdot', eval=FALSE}
 ```
 
-For more info on this dataset, type `?datasets::chickwts` into the console.
+## Multiple dots
 
-## Simple Examples
-Okay...*much* simpler please.
- 
+For this example we'll use 2010 data on SAT mean scores for a sample of New York City public schools:
 
 
-### Boxplot using Base R
+```{r}
+df <- read_csv("https://raw.githubusercontent.com/jtr13/StatGraph5293/master/data/SAT2010.csv",
+               na = "s")
+
+set.seed(5293)
+tidydf <- df %>%
+  filter(!is.na(`Critical Reading Mean`)) %>%
+  sample_n(20) %>%
+  rename(Reading = "Critical Reading Mean", Math = "Mathematics Mean",
+         Writing = "Writing Mean") %>%
+  gather(key = "Test", value = "Mean", "Reading", "Math", "Writing")
+
+ggplot(tidydf, aes(Mean, `School Name`, color = Test)) +
+  geom_point() + theme_dotplot +
+  ggtitle("Schools are sorted alphabetically", sub = "not the best option")
+```
 
 
+Note that `School Name` is sorted by factor level, which by default is alphabetical. A better choice is to sort by one of the levels of `Test`. It's usually best to try sorting on different factor levels and observe the patterns that appear.
 
-### Boxplot using ggplot2
+To perform the double sort, that is, sorting `School Name` by `Test` *and then* `Mean`, we use `forcats::fct_reorder2()`. This function sorts `.f` (a factor or character vector) by two sorting vectors, `.x` and `.y`. For this type of plot, `.x` is the variable represented by the colored dots and `.y` is the continuous variable mapped to the y-axis. 
 
-## When to use
-
-
-## Considerations
+Suppose we wish to sort the schools by mean reading score. We can do this by limiting the `Test` variable to "Reading" when sorting on `Mean`:
 
 
-## External Resources
+```{r}
+ggplot(tidydf, 
+       aes(Mean, fct_reorder2(`School Name`, Test=="Reading", Mean, .desc = FALSE),
+           color = Test)) +
+  geom_point() + ggtitle("Schools sorted by Reading mean") +
+  theme_dotplot 
+```
 
+(Thanks to ___ ___ for suggesting this simple method, which does not require the reordering of factor levels.)
+
+While this is the go-to method, there may be cases in which it's easier to specify that you wish to sort by the first or the last factor level of the first sorting variable (`Test`), without spelling it out. 
+
+If a factor level is not specified, `fct_reorder2()` by default will sort on the *last* factor level of `.x`. In this case, "Writing" is the last factor level of `Test`:
+
+```{r}
+ggplot(tidydf, 
+       aes(Mean, fct_reorder2(`School Name`, Test, Mean, .desc = FALSE),
+           color = Test)) +
+  geom_point() + ggtitle("Schools sorted by Writing mean") + theme_dotplot
+```
+
+If you desire to sort by the *first* factor level of `.x`, "Math" in this case, you'll need the development version of **forcats**, which you can install with:
+
+`devtools::install_github("tidyverse/forcats")`
+
+Change the default sorting function, `last2()`, to `first2()`:
+
+```{r}
+ggplot(tidydf, 
+       aes(Mean, fct_reorder2(`School Name`, Test, Mean, .fun = first2, .desc = FALSE),
+           color = Test)) +
+  geom_point() + ggtitle("Schools sorted by Math mean") + 
+  theme_dotplot
+```

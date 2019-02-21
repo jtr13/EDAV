@@ -25,6 +25,7 @@ rmd_files: [
 
 # part 3 categorical
   "bargraph.Rmd",
+  "cleveland.Rmd",
 
 # part 4 multivariate continuous
   "scatterplot.Rmd",
