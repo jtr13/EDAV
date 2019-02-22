@@ -6,7 +6,7 @@
 
 ## Overview
 
-This section covers how to create parallel coordinate plots
+This section covers how to create parallel coordinate plots with the `GGally` package.
 
 ## tl;dr
 I want a Fancy Example! Not tomorrow, not after breakfast, NOW!
@@ -207,6 +207,14 @@ grid.arrange(g7,g8)
 
 ### Adding boxplots to the graph
 You can add boxplots to your graph, which can be useful for observing the trend of median values. Generally, they are added to data with a lot of variables - for example, if we plot time series data.
+
+## Other Packages
+There are a number of packages that have functions for creating parallel coordinate plots: [to do: add links]
+
+- [`parcoords::parcoords()`](http://www.buildingwidgets.com/blog/2015/1/30/week-04-interactive-parallel-coordinates-1) -- great interactive option <br> use `devtools::install_github(“timelyportfolio/parcoords”)` <br>
+- `ggplot2::geom_line()` -- not specific to parallel coordinate plots but easy to create with the `group=` parameter.
+- `lattice::parallelplot()`
+- `MASS::parcoord()`
 
 ## External Resources 
 - [Introduction to parallel coordinate plots](https://www.rdocumentation.org/packages/GGally/versions/1.4.0/topics/ggparcoord){target="_blank"}: An excellent resource giving details of all attributes and possible values. Also has some good examples. 
