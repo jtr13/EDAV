@@ -40,4 +40,9 @@ R likes Twitter. Here are some cool people doing work with [#rstats](https://twi
 - [David Robinson](https://twitter.com/drob){target="_blank"}
 - [Julia Silge](https://twitter.com/juliasilge){target="_blank"}
 
+## Data
+
+(Perhaps this should be a new chapter)
+
+Members of the United States Congress (1789-Present) with lots of biographical information https://github.com/unitedstates/congress-legislators
 
