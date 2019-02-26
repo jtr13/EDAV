@@ -45,7 +45,11 @@ GitHub is super social. Learn how to *git* involved! [<i class="far fa-smile"></
 - [Mastering Issues](https://guides.github.com/features/issues/){target="_blank"}: On what Issues are in GitHub and how they can help get things done.
 - [Our Page on Contributing](contribute.html): You can contribute to *edav.info/* with your new-found GitHub skills! Checkout our page on how to contribute through pull requests and/or issues.
 
-## Going deeper
+## Other Resources
+
+### General {-}
+
+**General**
 
 For the [nerds in the room](https://getyarn.io/yarn-clip/64bbb001-ed8a-450a-8826-b939f653b969){target="_blank"}...
 
