@@ -143,7 +143,7 @@ For more info, please consider reading the [GitHub Guide on Forking Projects](ht
 
 For more involved changes including modifying R code, using Github only is not enough. In this case, one needs to first [install Git](https://happygitwithr.com/install-git.html){target="_blank"} and then [connect Git to your Github account](https://happygitwithr.com/hello-git.html){target="_blank"}. 
 
-The next step would be [connecting RStudio to Git and Github](https://happygitwithr.com/rstudio-git-github.html). Once connected, we can issue Git commands in the **Terminal** section of RStudio. There shall also be a **Git** tab in RStudio as well.
+The next step is to [connect RStudio to Git and Github](https://happygitwithr.com/rstudio-git-github.html). Once connected, we can issue Git commands in the **Terminal** section of RStudio. There shall also be a **Git** tab in RStudio as well.
 
 Now we have completed all the setup work and it's time to see the workflow of contributing to someone else's repo!
 
