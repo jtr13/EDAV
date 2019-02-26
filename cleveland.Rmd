@@ -98,7 +98,7 @@ If you desire to sort by the *first* factor level of `.x`, "Math" in this case, 
 
 Change the default sorting function, `last2()`, to `first2()`:
 
-```{r, eval=FALSE}
+```{r}
 ggplot(tidydf, 
        aes(Mean, fct_reorder2(`School Name`, Test, Mean, .fun = first2, .desc = FALSE),
            color = Test)) +
