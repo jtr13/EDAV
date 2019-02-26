@@ -21,7 +21,6 @@ rmd_files: [
   "violin.Rmd",
   "ridgeline.Rmd",
   "qqplot.Rmd",
-  "parallel_coordinates.Rmd",
 
 # part 3 categorical
   "bargraph.Rmd",
@@ -30,6 +29,7 @@ rmd_files: [
 # part 4 multivariate continuous
   "scatterplot.Rmd",
   "iris.Rmd",
+  "parallel_coordinates.Rmd",
 
 # part 5 multivariate categorical
   "mosaic.Rmd",
