@@ -50,12 +50,12 @@ rmd_files: [
   "dates.Rmd",
 
 # part 8 other topics
-  "general_resources.Rmd",
   "perception.Rmd",
   "themes_and_colors.Rmd",
-  "publish_using_r.Rmd",
   "github_resources.Rmd",
+  "publish_using_r.Rmd",
   "workflow_notes.Rmd",
+  "general_resources.Rmd",
   "chapter_index.Rmd"
 ]
 
