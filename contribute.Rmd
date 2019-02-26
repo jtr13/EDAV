@@ -154,7 +154,7 @@ Fork [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and then 
 
 ### Step 2: Clone origin and create a local repository (once)
 
-A **local repository** is the repo that resides on your computer. Since we always do work on computers, we need to create a local repository, which is an exact copy of the remote reposiotry.
+A **local repository** is the repo that resides on your computer. In order to be able to work locally, we need to create a local copy of the remote reposiotry.
 
 Since we have already connected Git with RStudio, we can create a local repo in the following way. In RStudio, click **File** -> **New Project** -> **Version Control** -> **Git**. Now you can fill in the url of the **origin** repo and click **Create Project** to create a local repository.
 
