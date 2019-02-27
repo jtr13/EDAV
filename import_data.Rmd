@@ -15,25 +15,29 @@ This section covers how to import data from built-in R sources, local files, web
 
 R comes with quite a lot of built-in datasets, which R users can play around with. You are probably familiar with many of the built-in datasets like `iris`, `mtcars`, `beavers`, `dataset`, etc. Since datasets are preloaded, we can manipulate them directly. To see a full list of built-in R datasets and their descriptions, please refer to [The R Datasets Package](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html){target="_blank"}. We can also run `data()` to view the full list.
 
-After we find the dataset we want, we can use the function `data(package_name)` to load the built-in dataset into our workspace. For example, here we want to load the `iris` dataset:
+Most datasets are [lazy-loaded](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Data-in-packages), which means that although they don't appear as objects in the global environment, they are there when you reference them:
 
 ```{r}
-# load data
-data("iris")
-head(iris)
+str(iris)
 ```
+
+However there are some packages that do not use lazy loading, and therefore you must use `data()` to access them:
+
+```{r, error=TRUE, message=FALSE, warning=FALSE}
+library(lawstat)
+str(zuni)
+data(zuni)
+str(zuni)
+```
+
+Packages that we use that fall in this category include: `lawstat`, `pgmm`, and others. (Submit a PR to add to this list.)
 
 Besides the datasets above, there are other datasets within specific R packages. To see a full list of data in various packages, run `??datasets` in the RStudio console.
-For exmaple, say we want to load the `diamonds` dataset from the `ggplot2` package. To load the `diamonds` data, first we need to load the `ggplot2` library:
 
-```{r}
-library(ggplot2)
-
-data("diamonds")
-head(diamonds)
-```
 
 ## Import local data
+
+This section covers base R functions for reading data. For tidyverse versions (`read_csv`, `read_delim`, `read_table`, etc.) see the [Data Import chapter](https://r4ds.had.co.nz/data-import.html) of *R for Data Science.)
 
 ### Import text file
 
@@ -65,7 +69,7 @@ A JSON file is a file that stores simple data structures and objects in JavaScri
 
 To read a JSON file, we can use the `jsonlite` package. The `jsonlite` package is a JSON parser/generator optimized for the web. Its main strength is that it implements a bidirectional mapping between JSON data and the most important R data types. In the example below, the argument `simplifyDataFrame = TRUE` will directly transform a list of JSON objects into a dataframe. If you want to know more about the arguments `simplifyVector` and `simplifyMatrix`, which provide flexible control on other R data formats to transform to, please refer to [Getting started with JSON and jsonlite](https://cran.r-project.org/web/packages/jsonlite/vignettes/json-aaquickstart.html){target="_blank"}.
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 library(jsonlite)
 
 # read JSON data
@@ -78,43 +82,80 @@ head(df)
 
 ## Import web data
 
-We can import data from the web, as long as we have the link to the dataset. Basically, there are two ways to import web data. One way is to scrape the dataset with the link before we import that data into the R workspace. The other way is to import the dataset from the web to our workspace directly. 
+### Read a data file directly into the workspace
 
 Let's take the example of `Water Consumption In The New York City`, which is on the [NYC Open Data website](https://data.cityofnewyork.us/Environment/Water-Consumption-In-The-New-York-City/ia2d-e54m){target="_blank}. 
 
-### Scrape web data to local space/memory before importing it
+We can import data from a URL just as we do with local data files.
 
-To securely access the web data, we can use the `RCurl` package (for more resources, see [The RCurl Package](http://www.omegahat.net/RCurl/){target="_blank"}. To be more flexible, we can first download the data to local hard drive and then read them as local files. To download the file, we can use the commands like `curl` : [Downloading files with curl](http://www.compciv.org/recipes/cli/downloading-with-curl/){target="_blank"}, `wget` : [Wget Command Examples](https://www.rosehosting.com/blog/wget-command-examples/){target="_blank"}. You can also download it with the browser.
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
 
-```{r, echo=TRUE, message=FALSE, eval = FALSE}
-# not run {eval = FALSE} not working on some machines
-
-library('RCurl')
-
-# specify the url link to the data source
-url <- "https://data.cityofnewyork.us/api/views/ia2d-e54m/rows.csv"
-
-# read the data to memory
-url_data <- getURI(url)
-
-# we use textConnection to tell R to read data in text format
-df <- read.csv(textConnection(url_data), sep = ",", header = TRUE)
-head(df)
-```
-
-### Directly read web source into the workspace
-
-We still use the water consumption data as an example. First, we specify the correct data URL, and then read the data just like reading the local dataset:
-
-```{r}
 # specify the URL link to the data source
 url <- "https://data.cityofnewyork.us/api/views/ia2d-e54m/rows.csv"
 
 # read the URL
-df <- read.table(url, sep = ",", header = TRUE)
+df <- read_csv(url)
 head(df)
 
 ```
+
+### Scrape an HTML table using `rvest`
+
+Sometimes we wish to import data that appears as an HTML table on a web page. It might be a little messy, so best to first check if there's another means for importing the data before moving forward. If not, `rvest` makes the process as painless as possible.
+
+Here's a simple example. Suppose we wish to work with the borough data found on Wikipedia's [Boroughs of New York City](https://en.wikipedia.org/wiki/Boroughs_of_New_York_City) page.
+
+First we read the page, find the tables, and then parse them with `html_table`:
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(rvest)
+nyctables <- read_html("https://en.wikipedia.org/wiki/Boroughs_of_New_York_City") %>% 
+  html_nodes("table") %>% 
+  html_table(fill = TRUE)
+```
+
+`nyctables` is a list with three elements, one for each table on the page.
+
+Next we can check each list item until we find what we want, consulting the original web page to get a sense of where our table is located. (There are other methods for identifying what you need from a web page in more complex situations.)
+
+It turns out that the table we want is the first list element:
+
+```{r}
+mytable <- nyctables[[1]]
+head(mytable, 3)
+```
+
+We can see that the column names are all the same due to the merged header in the original. We'll fix the column names and remove the rows we don't need:
+
+```{r}
+colnames(mytable) <- c("borough", "county", "population", "gdp_total", "gdp_per_capita",
+                       "land_sq_miles", "land_sq_km", "density_sq_miles", "density_sq_km")
+
+# remove unneeded rows 
+mytable <- mytable %>% slice(-c(1, 2, 10))
+
+# convert character to numeric data where appropriate
+mytable <- mytable %>%
+  mutate_at(vars(population:density_sq_km), parse_number)
+```
+
+Now we're good to go. Let's draw a plot!
+
+```{r, warning=FALSE, message=FALSE}
+options(scipen = 999) # turn off scientific notation
+mytable %>% 
+  slice(1:5) %>% 
+  select(borough, gdp_per_capita, land_sq_miles, population) %>% 
+  gather(var, value, -borough) %>% 
+  ggplot(aes(value, fct_reorder2(borough, var=="gdp_per_capita", value, .desc = FALSE),
+             color = borough)) + geom_point() + ylab("") +
+  facet_wrap(~var, ncol = 1, scales = "free_x") +
+  guides(color = FALSE)
+```
+
+
 
 ## Import data from database
 
