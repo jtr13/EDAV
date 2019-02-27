@@ -15,24 +15,16 @@ This section covers how to import data from built-in R sources, local files, web
 
 R comes with quite a lot of built-in datasets, which R users can play around with. You are probably familiar with many of the built-in datasets like `iris`, `mtcars`, `beavers`, `dataset`, etc. Since datasets are preloaded, we can manipulate them directly. To see a full list of built-in R datasets and their descriptions, please refer to [The R Datasets Package](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html){target="_blank"}. We can also run `data()` to view the full list.
 
-Most datasets are [lazy-loaded](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Data-in-packages), which means that although they don't appear as objects in the global environment, they are there when you reference them:
+The most convenient option for viewing is `??datasets` since provides a list of datasets in the Help pane. Clicking on a dataset will bring up its help file. There's lots of important information about the sources of the data and the meaning of the variables in these help files, so be sure to check them out.
 
-```{r}
-str(iris)
+Most datasets are [lazy-loaded](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Data-in-packages), which means that although they don't appear as objects in the global environment, they are there when you reference them. However, for some packages, you must use `data()` to access the datasets, as follows:
+
+```{r, eval=FALSE}
+library(pgmm)
+data(wine)
 ```
 
-However there are some packages that do not use lazy loading, and therefore you must use `data()` to access them:
-
-```{r, error=TRUE, message=FALSE, warning=FALSE}
-library(lawstat)
-str(zuni)
-data(zuni)
-str(zuni)
-```
-
-Packages that we use that fall in this category include: `lawstat`, `pgmm`, and others. (Submit a PR to add to this list.)
-
-Besides the datasets above, there are other datasets within specific R packages. To see a full list of data in various packages, run `??datasets` in the RStudio console.
+This is a common source of frustration for students: "I installed the library and loaded the package but the data's not there!" Forewarned is forearmed. Packages that we use that fall in this category include: `lawstat`, `pgmm`, and others. (Submit a PR to add to this list.)
 
 
 ## Import local data
