@@ -1,3 +1,5 @@
+# (PART) Other Topics {-}
+
 # Perception/Color Resources {#percept}
 
 ![](images/banners/banner_percept.png)
