@@ -97,7 +97,7 @@ Don't know what the [tidyverse](https://www.tidyverse.org/){target="_blank"} is?
 
 We often will need to pull data into RStudio to work with it. 
 
-* **"Pull data"? I'm already confused.** But wait! Here's a [DataCamp course on importing data using `dplyr`](https://www.datacamp.com/courses/importing-data-in-r-part-1){target="_blank"}. **Note**: This course explains how to import every kind of data format under the sun...all you need to be familiar with for this course (mostly) is pulling in CSV files using `read_csv`. So, if you are overwhelmed, just stick to the [read_csv stuff](https://campus.datacamp.com/courses/importing-data-in-r-part-1/importing-data-from-flat-files-with-utils?ex=1){target="_blank"}.
+* **"Pull data"? I'm already confused.** But wait! Here's a [DataCamp course on importing data](https://www.datacamp.com/courses/importing-data-in-r-part-1){target="_blank"}. **Note**: This course explains how to import every kind of data format under the sun...all you need to be familiar with for this course (mostly) is pulling in CSV files using `read_csv`. So, if you are overwhelmed, just stick to the [read_csv stuff](https://r4ds.had.co.nz/data-import.html){target="_blank"}.
 
 * **Importing every data format under the sun you say?** I want to know how to do that. Here's [Part 1](https://www.datacamp.com/courses/importing-data-in-r-part-1){target="_blank"}, as well as [Part 2](https://www.datacamp.com/courses/importing-data-in-r-part-2){target="_blank"}, which focuses on databases and HTTP requests. Go nuts.
 
