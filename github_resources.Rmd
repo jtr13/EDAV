@@ -6,7 +6,7 @@
 
 This section includes links for working with GitHub/Git and advice on how to collaborate in teams on large coding projects.
 
-## Overview
+## Introduction
 
 I don't wanna just *read* about GitHub/Git; I wanna learn by *doing*!
 
