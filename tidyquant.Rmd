@@ -1,4 +1,4 @@
-# Timeseries with tidyquant {#tidyquant}
+# Stock data with tidyquant {#tidyquant}
 
 ![](images/banners/banner_tidyquant.png)
 *This chapter originated as a community contribution created by [	naotominakawa](https://github.com/naotominakawa){target="_blank"}*
