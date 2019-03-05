@@ -21,7 +21,6 @@ rmd_files: [
   "violin.Rmd",
   "ridgeline.Rmd",
   "qqplot.Rmd",
-  "parallel_coordinates.Rmd",
 
 # part 3 categorical
   "bargraph.Rmd",
@@ -30,13 +29,13 @@ rmd_files: [
 # part 4 multivariate continuous
   "scatterplot.Rmd",
   "iris.Rmd",
+  "parallel_coordinates.Rmd",
 
 # part 5 multivariate categorical
   "mosaic.Rmd",
   "heatmap.Rmd",
 
 # part 6 special data types
-  "timeseries.Rmd",
   "maps.Rmd",
   "leaflet.Rmd",
   "network.Rmd",
@@ -50,12 +49,12 @@ rmd_files: [
   "dates.Rmd",
 
 # part 8 other topics
-  "general_resources.Rmd",
   "perception.Rmd",
   "themes_and_colors.Rmd",
-  "publish_using_r.Rmd",
   "github_resources.Rmd",
+  "publish_using_r.Rmd",
   "workflow_notes.Rmd",
+  "general_resources.Rmd",
   "chapter_index.Rmd"
 ]
 

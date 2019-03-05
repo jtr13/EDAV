@@ -1,5 +1,3 @@
-# (PART) Other Topics {-}
-
 # General Resources {#general}
 
 ![](images/banners/banner_resources.png)
