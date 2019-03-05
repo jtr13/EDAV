@@ -1,3 +1,5 @@
+# (PART) Special Data Types {-}
+
 # Spatial Data {#maps}
 
 <!-- Under Construction Section
