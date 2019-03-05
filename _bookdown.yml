@@ -36,7 +36,6 @@ rmd_files: [
   "heatmap.Rmd",
 
 # part 6 special data types
-  "timeseries.Rmd",
   "maps.Rmd",
   "leaflet.Rmd",
   "network.Rmd",
