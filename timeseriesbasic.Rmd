@@ -23,7 +23,8 @@ ggplot(data = economics, aes(x = date, y = pop))+
   labs(x = "year", y = "population")
 ```
 
-We can also draw multiple time series on one plot for comparison purpose.
+We can also draw multiple time series on one plot for comparison purpose:
+
 ```{r, message = FALSE}
 library(tidyverse)
 df <- read_csv("data/mortgage.csv")
@@ -39,29 +40,47 @@ g <- ggplot(df, aes(DATE, RATE, color = TYPE)) + geom_line() +
 g
 ```
 
-Sometimes we need to scale data to compare trends with different units. This is very common when analyzing GDP, salary level and stock price. The following exmaple shows the closing price for four big technology companies in the US. We rescaled the data to make sure these four stocks have a price of 100 on Jan 2013. 
+
+The following exmaple shows the closing price for four big technology companies in the US. When analyzing GDP, salary level and stock prices, it is often difficult to compare trends since the scales are so different. For example, since AAPL and MSFT prices per share are so much lower than GOOG's price per share, it's hard to discern the trends:
+
 ```{r}
-library(quantmod); library(reshape2)
-sh13 <- getSymbols(Symbols = c("AAPL", "GOOG", "IBM", "MSFT"), src = "yahoo", from = as.Date("2013-01-01"), to = as.Date("2013-12-31")) 
-SH13 <- data.frame(date = as.Date(index(AAPL)),
-                              Apple = AAPL$AAPL.Close, 
-                              Google = GOOG$GOOG.Close,
-                              IBM = IBM$IBM.Close,
-                              Microsoft = MSFT$MSFT.Close)
-SH13a <- lapply(select(SH13, -date), function(x) 100*x/x[1])
-SH13a <- cbind(date = SH13$date, as.data.frame(SH13a))
-SH13am <- melt(SH13a, id = "date", variable.name = "share",
-               value.name = "price")
-ggplot(SH13am, aes(date, y=price, colour=share, group [ share])) + geom_line() + xlab("") + ylab("") +
-  theme(legend.position="bottom")+
-  theme(legend.title=element_blank())
+library(tidyquant)
+stocks <- c("AAPL", "GOOG", "IBM", "MSFT")
+df <- tq_get(stocks, from = as.Date("2013-01-01"),
+             to = as.Date("2013-12-31"))
+
+ggplot(df, aes(date, y = close, 
+               color = fct_reorder2(symbol, date, close))) +
+  geom_line() + xlab("") + ylab("") +
+  theme(legend.title = element_blank())
 ```
+
+In such a case, it can be helpful to rescale the data. We rescaled the data to make sure these four stocks have a price of 100 on Jan 2013:
+
+```{r}
+df <- df %>% group_by(symbol) %>% 
+  mutate(rescaled_close = 100*close / close[1])
+
+ggplot(df, aes(date, y = rescaled_close, 
+               color = fct_reorder2(symbol, date, rescaled_close))) +
+  geom_line() + xlab("") + ylab("") +
+  theme(legend.title = element_blank())
+```
+
+
+
 
 ## Secular Trend
 Instead of looking at observations over time, we often want to ovserve overall long-term trend in our time series data. In this case, we can use geom_smooth(). Here we will show secular trend using the [Loess Smoother](https://en.wikipedia.org/wiki/Local_regression){target="_blank"}.
 ```{r}
-g <- ggplot(AAPL, aes(as.Date(index(AAPL)), AAPL.Close)) + geom_point()
-g + geom_line(color = "grey50") +geom_smooth(method = "loess", se = FALSE, lwd =1.5) + ggtitle("Loess Smoother for Apple Stock Price") + labs(x = "Date", y = "Price")
+AAPL <- df %>% filter(symbol == "AAPL")
+
+g <- ggplot(AAPL, aes(date, close)) + geom_point()
+  
+g + geom_line(color = "grey50") + 
+    geom_smooth(method = "loess", se = FALSE, lwd = 1.5) +
+    ggtitle("Loess Smoother for Apple Stock Price") + 
+    labs(x = "Date", y = "Price")
 ```
 
 Experiment with different smoothing parameters.
