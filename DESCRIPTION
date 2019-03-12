@@ -28,6 +28,7 @@ Imports:
   mi,
   pgmm,
   RCurl,
+  rgdal,
   scales,
   Sleuth3,
   svglite,
