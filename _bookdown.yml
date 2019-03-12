@@ -39,6 +39,7 @@ rmd_files: [
   "maps.Rmd",
   "leaflet.Rmd",
   "network.Rmd",
+  "timeseriesbasic.Rmd",
   "tidyquant.Rmd",
 
 # part 7 working with data
