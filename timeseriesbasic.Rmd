@@ -1,0 +1,126 @@
+# Time Series {#timeseriesbasic}
+
+![](images/banners/banner_timeseriesbasic.png)
+*This chapter originated as a community contribution created by [	HaiqingXu](https://github.com/xhqkatrina){target="_blank"}*
+
+*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+This section discusses drawing graphics for time series data.
+
+## Single/Multiple Time Series
+We can draw time series using **geom_line()** with time on the x-axis. X-axis should be an object in the [Date class](date.html), assuming there is no hour/minute/second data.
+```{r}
+library(ggplot2)
+
+ggplot(data = economics, aes(x = date, y = pop))+
+  geom_line(color = "blue") +
+  ggtitle("US Population, in Thousands") +
+  labs(x = "year", y = "population")
+```
+
+We can also draw multiple time series on one plot for comparison purpose.
+```{r, message = FALSE}
+library(tidyverse)
+df <- read_csv("data/mortgage.csv")
+df <- df %>% gather(key = TYPE, value = RATE, -DATE) %>% 
+  mutate(TYPE = forcats::fct_reorder2(TYPE, DATE, RATE)) # puts legend in correct order
+
+
+g <- ggplot(df, aes(DATE, RATE, color = TYPE)) + geom_line() +
+    ggtitle("U.S. Mortgage Rates") +
+    labs (x = "", y = "percent") +
+    theme_grey(16) +
+    theme(legend.title = element_blank())
+g
+```
+
+Sometimes we need to scale data to compare trends with different units. This is very common when analyzing GDP, salary level and stock price. The following exmaple shows the closing price for four big technology companies in the US. We rescaled the data to make sure these four stocks have a price of 100 on Jan 2013. 
+```{r}
+library(quantmod); library(reshape2)
+sh13 <- getSymbols(Symbols = c("AAPL", "GOOG", "IBM", "MSFT"), src = "yahoo", from = as.Date("2013-01-01"), to = as.Date("2013-12-31")) 
+SH13 <- data.frame(date = as.Date(index(AAPL)),
+                              Apple = AAPL$AAPL.Close, 
+                              Google = GOOG$GOOG.Close,
+                              IBM = IBM$IBM.Close,
+                              Microsoft = MSFT$MSFT.Close)
+SH13a <- lapply(select(SH13, -date), function(x) 100*x/x[1])
+SH13a <- cbind(date = SH13$date, as.data.frame(SH13a))
+SH13am <- melt(SH13a, id = "date", variable.name = "share",
+               value.name = "price")
+ggplot(SH13am, aes(date, y=price, colour=share, group [ share])) + geom_line() + xlab("") + ylab("") +
+  theme(legend.position="bottom")+
+  theme(legend.title=element_blank())
+```
+
+## Secular Trend
+Instead of looking at observations over time, we often want to ovserve overall long-term trend in our time series data. In this case, we can use geom_smooth(). Here we will show secular trend using the [Loess Smoother](https://en.wikipedia.org/wiki/Local_regression){target="_blank"}.
+```{r}
+g <- ggplot(AAPL, aes(as.Date(index(AAPL)), AAPL.Close)) + geom_point()
+g + geom_line(color = "grey50") +geom_smooth(method = "loess", se = FALSE, lwd =1.5) + ggtitle("Loess Smoother for Apple Stock Price") + labs(x = "Date", y = "Price")
+```
+
+Experiment with different smoothing parameters.
+```{r}
+g + geom_smooth(method = "loess", span = .5, se = FALSE)
+```
+
+## Seasonal Trends
+In addition to secular trends, there are also seasonal trends in time series data. One way is to visualize seasonal trends is to use fact on season(day of month, day of week etc.).
+```{r, message = FALSE}
+library(lubridate)
+dfman <- read_csv("data/ManchesterByTheSea.csv")
+ggplot(dfman, aes(Date, Gross)) +
+  geom_line() +
+  facet_grid(wday(Date, label = TRUE)~.)
+```
+
+Or, let us create a monthly plot.
+```{r}
+monthplot(AirPassengers)
+```
+
+## Frequency of Data
+What if you want to observe the frequency of time series data? A simple answer: use **geom_point()** in addition to **geom_line()**.
+```{r, message = FALSE}
+# read file
+mydat <- read_csv("data/WA_Sales_Products_2012-14.csv") %>% 
+  mutate(Revenue = Revenue/1000000)
+
+# convert Quarter to a single numeric value Q
+mydat$Q <- as.numeric(substr(mydat$Quarter, 2, 2))
+
+# convert Q to end-of-quarter date
+mydat$Date <- as.Date(paste0(mydat$Year, "-",
+                             as.character(mydat$Q*3),
+                             "-30"))
+
+Methoddata <- mydat %>% group_by(Date, `Order method type`) %>%
+    summarize(Revenue = sum(Revenue))
+
+g <- ggplot(Methoddata, aes(Date, Revenue,
+                            color = `Order method type`)) +
+    geom_line(aes(group = `Order method type`)) +
+    scale_x_date(limits = c(as.Date("2012-02-01"), as.Date("2014-12-31")),
+        date_breaks = "6 months", date_labels = "%b %Y") +
+  ylab("Revenue in mil $")
+g + geom_point()
+```
+
+There could be NA values in time series data. Using **geom_point()** with **geom_line()** is one way to detect missing values. Here we introduce another option: leave gaps.
+```{r}
+Methoddata$Date[year(Methoddata$Date)==2013] <- NA
+g <- ggplot(Methoddata, aes(Date, Revenue,
+                            color = `Order method type`)) + 
+    geom_path(aes(group = `Order method type`)) +
+    scale_x_date(limits = c(as.Date("2012-02-01"), as.Date("2014-12-31")),
+        date_breaks = "6 months", date_labels = "%b %Y") +
+  ylab("Revenue in mil $")
+g
+```
+
+
