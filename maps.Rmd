@@ -11,7 +11,7 @@
 
 ## Choropleth maps
 
-Cloropleth maps use color to indicate the value of a variable within a defined region, generally political boundaries. ["Mapping in R just got a whole lot easier"](https://www.computerworld.com/article/3175623/mapping-in-r-just-got-a-whole-lot-easier.html) by Sharon Machlis (2017-03-03) offers a tutorial on using the **tmap**, **tmaptools**, and **tigris** packages to create choropleth maps. Note that with this approach, you will need to merge geographic shape files with your data files, and then map. 
+Choropleth maps use color to indicate the value of a variable within a defined region, generally political boundaries. ["Mapping in R just got a whole lot easier"](https://www.computerworld.com/article/3175623/mapping-in-r-just-got-a-whole-lot-easier.html) by Sharon Machlis (2017-03-03) offers a tutorial on using the **tmap**, **tmaptools**, and **tigris** packages to create choropleth maps. Note that with this approach, you will need to merge geographic shape files with your data files, and then map. 
 
 
 The **choroplethr** package makes it simple to draw choropleth maps of [U.S. states, countries, and census tracts, as well as countries of the world](https://arilamstein.com/documentation/choroplethr/reference/){target="_blank"} without dealing directly with shape files. The companion package, **choroplethrZip**, provides data for [zip code level choropleths](https://arilamstein.com/creating-zip-code-choropleths-choroplethrzip/){target="_blank"}; **choroplethrAdmin1** draws choropleths for administrative regions of [world countries](https://rdrr.io/cran/choroplethrAdmin1/man/get_admin1_countries.html){target="_blank"}. The following is a brief tutorial on using these packages.
