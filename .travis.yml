@@ -4,8 +4,8 @@ cache: packages
 sudo: false
 
 repos:
-  rforge: http://R-Forge.R-project.org
   cran: http://cran.rstudio.com
+  rforge: http://R-Forge.R-project.org
 
 r_github_packages:
  - hrbrmstr/statebins
