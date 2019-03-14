@@ -14,8 +14,8 @@ This section discusses drawing graphics for time series data.
 
 ## Single/Multiple Time Series
 We can draw time series using **geom_line()** with time on the x-axis. X-axis should be an object in the [Date class](date.html), assuming there is no hour/minute/second data.
-```{r}
-library(ggplot2)
+```{r, message = FALSE, warning = FALSE}
+library(tidyverse)
 
 ggplot(data = economics, aes(x = date, y = pop))+
   geom_line(color = "blue") +
@@ -25,8 +25,8 @@ ggplot(data = economics, aes(x = date, y = pop))+
 
 We can also draw multiple time series on one plot for comparison purpose:
 
-```{r, message = FALSE}
-library(tidyverse)
+```{r}
+
 df <- read_csv("data/mortgage.csv")
 df <- df %>% gather(key = TYPE, value = RATE, -DATE) %>% 
   mutate(TYPE = forcats::fct_reorder2(TYPE, DATE, RATE)) # puts legend in correct order
@@ -43,7 +43,7 @@ g
 
 The following exmaple shows the closing price for four big technology companies in the US. When analyzing GDP, salary level and stock prices, it is often difficult to compare trends since the scales are so different. For example, since AAPL and MSFT prices per share are so much lower than GOOG's price per share, it's hard to discern the trends:
 
-```{r}
+```{r, message = FALSE, warning = FALSE}
 library(tidyquant)
 stocks <- c("AAPL", "GOOG", "IBM", "MSFT")
 df <- tq_get(stocks, from = as.Date("2013-01-01"),
