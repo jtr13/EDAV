@@ -10,19 +10,46 @@ This page explains how to contribute to *edav.info/*.
 
 We don't want *edav.info/* to be just another resource. Rather, we want it to be *your* resource. If there are things that trip you up or cause you frustration, chances are you're not alone. Everyone comes to this course with different backgrounds and expertise. Being able to collect all that knowledge in one place is this resource's mission and you can help move that mission forward.
 
-## Ways you can contribute (Github only)
+## Ways you can contribute (using GitHub.com only)
 
-There are **three main ways** you can contribute:
+There are many ways you can contribute:
 
-- <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute directly**](#contribute-directly) (we got a full walkthrough on how to do this)
-- <i class="fas fa-sticky-note"></i> For **bigger/more abstract suggestions** <i class="fas fa-arrow-right"></i> [**submit an issue**](#submit-an-issue) (very simple, much appreciated)
-- <i class="fas fa-code-branch"></i> For **adventurous/social GitHub users** <i class="fas fa-arrow-right"></i> [**solve an open issue**](#solve-an-open-issue) (more advanced/open-ended, also much appreciated)
+- <i class="fas fa-exclamation-circle"></i> For **large or small ideas, without providing the code** <i class="fas fa-arrow-right"></i> [**submit an issue**](#submit-an-issue) (very simple, much appreciated)
+
+- <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute online**](#contribute-online) (this can all be done on GitHub.com... we got a full walkthrough explaining how)
+
+- <i class="fas fa-code-branch"></i> For **more complex changes** <i class="fas fa-arrow-right"></i> [**work locally**](#contribute-code) (the next level, also much appreciated)
+
+- <i class="fas fa-code-branch"></i> For **adventurous git/GitHub users** <i class="fas fa-arrow-right"></i> [**solve an open issue**](#solve-an-open-issue) (more advanced/open-ended)
 
 Below you'll find more detail on each option.
 
 Happy coding! <i class="fas fa-heart"></i>
 
-### Contribute directly
+### Submit an issue
+
+If your proposed change is more complex, consider letting us know by **submitting an issue**. Maybe you have a great idea for a brand new chapter, something we have not covered but would like to see here in this resource (a new chart page, say; or a walkthrough using a specific tool/package). It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
+
+[Issues](https://guides.github.com/features/issues/){target="_blank"} are tasks you can post to a GitHub repo that people can then take on and fix. They can be small ("this link is broken" / "add this resource") or complex ("I would love to have a chapter on..." / "reformat this code chunk in this way"). Once posted, issues can be taken on by anyone.
+
+You do *not* have to know how to code up your issue; from fixing a bug to proposing a resource we should link to, we appreciate any feedback you have and will take it all into consideration.
+
+**How to submit issues**:
+
+1. Go to [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and click on the [Issues Tab](https://github.com/jtr13/EDAV/issues){target="_blank"}
+2. Click on "[New Issue](https://github.com/jtr13/EDAV/issues/new){target="_blank"}"
+3. Propose your Issue and click "Submit new issue"
+4. That's it! We appreciate your input and will take your issue into account in improving *edav.info/* <i class="far fa-smile"></i>
+
+**Notes about submitting issues**:
+
+- Make sure your changes are not already an open issue (so as not to have redundant issues)
+- Please thoroughly explain your proposed change when posting a new issue
+- Consider [using labels](https://help.github.com/articles/applying-labels-to-issues-and-pull-requests/){target="_blank"} to specify the kind of issue, such as "bug", "enhancement", "help wanted", "question", or [create your own](https://help.github.com/articles/creating-a-label/){target="_blank"}.
+- For more info, please consider reading the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
+
+
+### Contribute online
 
 One way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
 
@@ -108,28 +135,9 @@ We contributed to a GitHub repo! Hooray! Time to celebrate!
 If what you want to improve is a little more substantial (too difficult to contribute directly), read on.
 
 
+### Contribute code
 
-### Submit an issue
-
-If your proposed change is more complex, consider letting us know by **submitting an issue**. Maybe you have a great idea for a brand new chapter, something we have not covered but would like to see here in this resource (a new chart page, say; or a walkthrough using a specific tool/package). It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
-
-[Issues](https://guides.github.com/features/issues/){target="_blank"} are tasks you can post to a GitHub repo that people can then take on and fix. They can be small ("this link is broken" / "add this resource") or complex ("I would love to have a chapter on..." / "reformat this code chunk in this way"). Once posted, issues can be taken on by anyone.
-
-You do *not* have to know how to code up your issue; from fixing a bug to proposing a resource we should link to, we appreciate any feedback you have and will take it all into consideration.
-
-**How to submit issues**:
-
-1. Go to [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and click on the [Issues Tab](https://github.com/jtr13/EDAV/issues){target="_blank"}
-2. Click on "[New Issue](https://github.com/jtr13/EDAV/issues/new){target="_blank"}"
-3. Propose your Issue and click "Submit new issue"
-4. That's it! We appreciate your input and will take your issue into account in improving *edav.info/* <i class="far fa-smile"></i>
-
-**Notes about submitting issues**:
-
-- Make sure your changes are not already an open issue (so as not to have redundant issues)
-- Please thoroughly explain your proposed change when posting a new issue
-- Consider [using labels](https://help.github.com/articles/applying-labels-to-issues-and-pull-requests/){target="_blank"} to specify the kind of issue, such as "bug", "enhancement", "help wanted", "question", or [create your own](https://help.github.com/articles/creating-a-label/){target="_blank"}.
-- For more info, please consider reading the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
+For more involved changes including modifying R code, using GitHub.com only is not enough; you will need to install git, work locally, and then submit a pull request. We have a [guide on using git](github.html) that tells you how to contribute to others' work. Get prepared and contribute to EDAV!
 
 ### Solve an open issue
 
@@ -139,86 +147,8 @@ Confused how to actually do what was mentioned above? We have [a thorough walkth
 
 For more info, please consider reading the [GitHub Guide on Forking Projects](https://guides.github.com/activities/forking/){target="_blank"} and the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
 
-## Ways you can contribute (need to use Git)
-
-For more involved changes including modifying R code, using Github only is not enough. In this case, one needs to first [install Git](https://happygitwithr.com/install-git.html){target="_blank"} and then [connect Git to your Github account](https://happygitwithr.com/hello-git.html){target="_blank"}. 
-
-The next step is to [connect RStudio to Git and Github](https://happygitwithr.com/rstudio-git-github.html). Once connected, we can issue Git commands in the **Terminal** section of RStudio. There shall also be a **Git** tab in RStudio as well.
-
-Now we have completed all the setup work and it's time to see the workflow of contributing to someone else's repo!
-
-### Step 1: Fork the upstream repo (once)
-
-Fork [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and then on your own Github page, you will see a forked **EDAV** repo under the repositories section. Note, from now on, the term **upstream repository** refers to the original repo of the project that you forked and the term **origin repository** refers to the repo that you created or forked on Github. From your respective, both **upstream** and **origin** are remote repositories.
-![](images/contribute_Git_step1.png)
-
-### Step 2: Clone origin and create a local repository (once)
-
-A **local repository** is the repo that resides on your computer. In order to be able to work locally, we need to create a local copy of the remote reposiotry.
-
-Since we have already connected Git with RStudio, we can create a local repo in the following way. In RStudio, click **File** -> **New Project** -> **Version Control** -> **Git**. Now you can fill in the url of the **origin** repo and click **Create Project** to create a local repository.
-
-Once created, make sure you can see a **Terminal** section in RStudio because this is where we type in all the Git command lines.
-
-### Step 3: Configure remote that points to the upstream repository (once)
-
-The purpose of this step is to specify the location of the upstream repository. It may not make sense to you at this moment, but soon it will become clear.
-
-To complete this step, type in the following command line: 
-**git remote add upstream <upstream repo url>**
-![](images/contribute_Git_step3.png)
-
-### Step 4: Pull
-
-Under the Git tab in RStudio, you can see a pull button, which is represented by a downward pointing arrow. Clicking that button is equivalent to running a git pull command. The purpose of a pull command is to fetch and download content from a remote repository, and in this case we want to pull from the **origin master** and make sure **local master** is updated to match the content. 
-
-Now we can create a new branch and work on new features that we want to add into the **EDAV** project. Notice that steps 1, 2 and 3 only need to be done once when you start working on a new project. However, whenever you want to create a new branch, **pull command** is **always** the first step as you want to keep your local repository up to date. 
-
-Now you might have a question: what is a branch? Branching is the way to work on different parts of a repository at one time. It creates a snapshot of the original branch. Eventually, after you have finalized your work, you will merge your work into the upstream repository. 
-
-To create a branch, 
-
-![](images/contribute_Git_step4.png)
-
-Click the purple button under the Git tab, create a meaningful name for your branch. For example, if you hope to add more content into the histogram chapter in EDAV, name your branch "HistogramChapter". In this way, both a local branch and a remote branch under the origin repo will be created.
-
-### Step 5: Work, commit and push
-
-Be careful and make sure you are doing work under the local branch instead of the local master. Once you make some changes in your local repository (e.g. edit, add or delete a file), you will see the list of files that you have modified under the Git tab. 
-
-![](images/contribute_Git_step5_commit.png)
-
-This means, the changes you have made are in your working directory but not committed to local repository yet. You might feel confused about these terms, so let's look at a graphical illustration.
-
-![](images/contribute_Git_step5.png)
-
-We have already explained the relationship between local repo and remote repo. In addition, there are two extra layers between the working directory (the place where you store all these files on your computer) and the local repo. To keep your local repo updated with the working directory, you need to first **add** the changes to a **staging area** and then **commit** these changes to the local repo. Finally, you want to push your local branch to the remote repo.
-
-When you use Git with RStudio, you do not need to write Git commands to add, commit or push. To **add**, you simply check the checkbox for each file you have modified. To **commit**, you just click on the **commit** button under the Git tab. In fact, you can commit as many times as needed. Finally, you can click on the **push** button, which is represented by an upward pointing arrow.
-
-### Step 6: Submit a pull request
-
-Now you are able to see the branch you have created on the Github page. The next step is to submit a pull request and the process is exactly the same as in [Direct contribution walkthrough].
-
-### Last Step: Sync local master with upstream master
-
-Once the merge is accepted, you want to delete this branch since the upstream already contains all the changes you have made. To delete the branch on origin, you can simply use Github. To delete the branch locally, you need to type **git branch -d branchname**. 
-
-We also need to stop tracking the remote branch using the following Git command: **git fetch -p**. 
-
-Finally, let's sync local master with upstream master by running these commands:
-
-**git fetch upstream**
-
-**git checkout master**
-
-**git merge upstream/master**
-
-For more detailed description on each step in the Git workflow, please refer to workflow 4 in the Git slides [Git/Github Workflow](https://github.com/jtr13/codehelp/blob/master/GitHubWorkflowPt2.pdf){target="_blank"}.
 
 ## Resources
 
 - [Our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"}: Link to the GitHub repository for *edav.info/*
 - [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"}: Fantastic guide on how to contribute to projects like this one
-- [Our Page of GitHub Resources](github.html): Confused about the GitHub basics? *Checkout* our page of resources (once you learn more about git, you'll realize that was a joke).
-
