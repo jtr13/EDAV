@@ -10,19 +10,46 @@ This page explains how to contribute to *edav.info/*.
 
 We don't want *edav.info/* to be just another resource. Rather, we want it to be *your* resource. If there are things that trip you up or cause you frustration, chances are you're not alone. Everyone comes to this course with different backgrounds and expertise. Being able to collect all that knowledge in one place is this resource's mission and you can help move that mission forward.
 
-## Ways you can contribute (Github only)
+## Ways you can contribute (using GitHub.com only)
 
-There are **three main ways** you can contribute:
+There are many ways you can contribute:
 
-- <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute directly**](#contribute-directly) (we got a full walkthrough on how to do this)
-- <i class="fas fa-sticky-note"></i> For **bigger/more abstract suggestions** <i class="fas fa-arrow-right"></i> [**submit an issue**](#submit-an-issue) (very simple, much appreciated)
-- <i class="fas fa-code-branch"></i> For **adventurous/social GitHub users** <i class="fas fa-arrow-right"></i> [**solve an open issue**](#solve-an-open-issue) (more advanced/open-ended, also much appreciated)
+- <i class="fas fa-exclamation-circle"></i> For **large or small ideas, without providing the code** <i class="fas fa-arrow-right"></i> [**submit an issue**](#submit-an-issue) (very simple, much appreciated)
+
+- <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute online**](#contribute-online) (this can all be done on GitHub.com... we got a full walkthrough explaining how)
+
+- <i class="fas fa-code-branch"></i> For **more complex changes** <i class="fas fa-arrow-right"></i> [**work locally**](#contribute-code) (the next level, also much appreciated)
+
+- <i class="fas fa-code-branch"></i> For **adventurous git/GitHub users** <i class="fas fa-arrow-right"></i> [**solve an open issue**](#solve-an-open-issue) (more advanced/open-ended)
 
 Below you'll find more detail on each option.
 
 Happy coding! <i class="fas fa-heart"></i>
 
-### Contribute directly
+### Submit an issue
+
+If your proposed change is more complex, consider letting us know by **submitting an issue**. Maybe you have a great idea for a brand new chapter, something we have not covered but would like to see here in this resource (a new chart page, say; or a walkthrough using a specific tool/package). It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
+
+[Issues](https://guides.github.com/features/issues/){target="_blank"} are tasks you can post to a GitHub repo that people can then take on and fix. They can be small ("this link is broken" / "add this resource") or complex ("I would love to have a chapter on..." / "reformat this code chunk in this way"). Once posted, issues can be taken on by anyone.
+
+You do *not* have to know how to code up your issue; from fixing a bug to proposing a resource we should link to, we appreciate any feedback you have and will take it all into consideration.
+
+**How to submit issues**:
+
+1. Go to [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and click on the [Issues Tab](https://github.com/jtr13/EDAV/issues){target="_blank"}
+2. Click on "[New Issue](https://github.com/jtr13/EDAV/issues/new){target="_blank"}"
+3. Propose your Issue and click "Submit new issue"
+4. That's it! We appreciate your input and will take your issue into account in improving *edav.info/* <i class="far fa-smile"></i>
+
+**Notes about submitting issues**:
+
+- Make sure your changes are not already an open issue (so as not to have redundant issues)
+- Please thoroughly explain your proposed change when posting a new issue
+- Consider [using labels](https://help.github.com/articles/applying-labels-to-issues-and-pull-requests/){target="_blank"} to specify the kind of issue, such as "bug", "enhancement", "help wanted", "question", or [create your own](https://help.github.com/articles/creating-a-label/){target="_blank"}.
+- For more info, please consider reading the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
+
+
+### Contribute online
 
 One way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
 
@@ -108,28 +135,9 @@ We contributed to a GitHub repo! Hooray! Time to celebrate!
 If what you want to improve is a little more substantial (too difficult to contribute directly), read on.
 
 
+### Contribute code
 
-### Submit an issue
-
-If your proposed change is more complex, consider letting us know by **submitting an issue**. Maybe you have a great idea for a brand new chapter, something we have not covered but would like to see here in this resource (a new chart page, say; or a walkthrough using a specific tool/package). It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
-
-[Issues](https://guides.github.com/features/issues/){target="_blank"} are tasks you can post to a GitHub repo that people can then take on and fix. They can be small ("this link is broken" / "add this resource") or complex ("I would love to have a chapter on..." / "reformat this code chunk in this way"). Once posted, issues can be taken on by anyone.
-
-You do *not* have to know how to code up your issue; from fixing a bug to proposing a resource we should link to, we appreciate any feedback you have and will take it all into consideration.
-
-**How to submit issues**:
-
-1. Go to [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and click on the [Issues Tab](https://github.com/jtr13/EDAV/issues){target="_blank"}
-2. Click on "[New Issue](https://github.com/jtr13/EDAV/issues/new){target="_blank"}"
-3. Propose your Issue and click "Submit new issue"
-4. That's it! We appreciate your input and will take your issue into account in improving *edav.info/* <i class="far fa-smile"></i>
-
-**Notes about submitting issues**:
-
-- Make sure your changes are not already an open issue (so as not to have redundant issues)
-- Please thoroughly explain your proposed change when posting a new issue
-- Consider [using labels](https://help.github.com/articles/applying-labels-to-issues-and-pull-requests/){target="_blank"} to specify the kind of issue, such as "bug", "enhancement", "help wanted", "question", or [create your own](https://help.github.com/articles/creating-a-label/){target="_blank"}.
-- For more info, please consider reading the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
+For more involved changes including modifying R code, using GitHub.com only is not enough; you will need to install git, work locally, and then submit a pull request. We have a [guide on using git](github.html) that tells you how to contribute to others' work. Get prepared and contribute to EDAV!
 
 ### Solve an open issue
 
@@ -139,9 +147,6 @@ Confused how to actually do what was mentioned above? We have [a thorough walkth
 
 For more info, please consider reading the [GitHub Guide on Forking Projects](https://guides.github.com/activities/forking/){target="_blank"} and the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
 
-## Ways you can contribute (need to use Git)
-
-For more involved changes including modifying R code, using Github only is not enough. We have a [complete guide on using Git](github.html) that tells you how to contribute to others' work. Get prepared and contribute to EDAV!
 
 ## Resources
 
