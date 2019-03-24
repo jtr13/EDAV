@@ -16,7 +16,7 @@ In this course, you will be working on a [project](project.html) in teams. Becau
 
 [GitHub](https://github.com/){target="_blank"} is a way to work on projects and keep track of their status easily and efficiently. It is built off of [Git](https://git-scm.com/){target="_blank"}, a type of [version control](https://en.wikipedia.org/wiki/Version_control){target="_blank"} software. It is super useful and powerful, but people also find it quite annoying and [difficult to understand](https://xkcd.com/1597/){target="_blank"}. So, in an effort to help you, we have collected some resources to learn about GitHub and how you can use it to work on projects.
 
-## On Github
+## On GitHub
 
 What's GitHub? Start here.
 
