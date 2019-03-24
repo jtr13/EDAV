@@ -18,9 +18,7 @@ There are many ways you can contribute:
 
 - <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute online**](#contribute-online) (this can all be done on GitHub.com... we got a full walkthrough explaining how)
 
-- <i class="fas fa-code-branch"></i> For **more complex changes** <i class="fas fa-arrow-right"></i> [**work locally**](#contribute-code) (the next level, also much appreciated)
-
-- <i class="fas fa-code-branch"></i> For **adventurous git/GitHub users** <i class="fas fa-arrow-right"></i> [**solve an open issue**](#solve-an-open-issue) (more advanced/open-ended)
+- <i class="fas fa-code-branch"></i> For **more complex changes** <i class="fas fa-arrow-right"></i> [**work locally**](#contribute-code) (the next level, also much appreciated) -- adventurous users may [**solve an open issue**](#solve-an-open-issue) (more advanced/open-ended)
 
 Below you'll find more detail on each option.
 
