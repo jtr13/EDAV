@@ -10,15 +10,15 @@ This page explains how to contribute to *edav.info/*.
 
 We don't want *edav.info/* to be just another resource. Rather, we want it to be *your* resource. If there are things that trip you up or cause you frustration, chances are you're not alone. Everyone comes to this course with different backgrounds and expertise. Being able to collect all that knowledge in one place is this resource's mission and you can help move that mission forward.
 
-## Ways you can contribute (using GitHub.com only)
+## Ways you can contribute
 
 There are many ways you can contribute:
 
 - <i class="fas fa-exclamation-circle"></i> For **large or small ideas, without providing the code** <i class="fas fa-arrow-right"></i> [**submit an issue**](#submit-an-issue) (very simple, much appreciated)
 
-- <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute online**](#contribute-online) (this can all be done on GitHub.com... we got a full walkthrough explaining how)
+- <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute online**](#contribute-online) (this can all be done on **GitHub.com**... we got a full walkthrough explaining how)
 
-- <i class="fas fa-code-branch"></i> For **more complex changes** <i class="fas fa-arrow-right"></i> [**work locally**](#contribute-code) (the next level, also much appreciated) -- adventurous users may [**solve an open issue**](#solve-an-open-issue) (more advanced/open-ended)
+- <i class="fas fa-code-branch"></i> For **more complex changes** <i class="fas fa-arrow-right"></i> [**install Git and work locally**](#contribute-code) (the next level, also much appreciated) -- adventurous users may [**solve an open issue**](#solve-an-open-issue) (more advanced/open-ended)
 
 Below you'll find more detail on each option.
 
