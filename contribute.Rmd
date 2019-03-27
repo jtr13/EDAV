@@ -18,7 +18,9 @@ There are many ways you can contribute:
 
 - <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute online**](#contribute-online) (this can all be done on **GitHub.com**... we got a full walkthrough explaining how)
 
-- <i class="fas fa-code-branch"></i> For **more complex changes** <i class="fas fa-arrow-right"></i> [**install Git and work locally**](#contribute-code) (the next level, also much appreciated) -- adventurous users may [**solve an open issue**](#solve-an-open-issue) (more advanced/open-ended)
+- <i class="fas fa-code-branch"></i> For **more complex changes** <i class="fas fa-arrow-right"></i> **install Git and [work locally**](github.html) (the next level, also much appreciated) -- adventurous users may [**solve an open issue**](#solve-an-open-issue) (more advanced/open-ended)
+
+[guide on using git](github.html) 
 
 Below you'll find more detail on each option.
 
@@ -47,17 +49,15 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 - For more info, please consider reading the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
 
 
-### Contribute online
+### GitHub only contribution
+
+*What does that mean? That you do everything on github.com. You will need to create a github.com account if you don't have one, but that's it.*
 
 One way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
 
-Contributing directly works best if the change you are proposing is something relatively small, such as:
+Contributing directly in this manner works best if the change you are proposing is something relatively small, such as a typo/grammatical error or an unclear phrasing/explanation. In general, it doesn't work well to propose changes to code directly on GitHub.
 
-- A typo/grammatical error
-- An unclear phrasing/explanation
-- A quick code fix
-
-#### Direct contribution walkthrough
+#### GitHub only walkthrough
 
 This is a full walkthough on proposing a change to *edav.info/*, however the instructions are the same for making changes to any repo. It follows a hypothetical student that spots a typo and uses a pull request to fix it. It's a little long, but don't get scared; it's a great way to learn about GitHub and it's almost entirely hitting big green buttons! 
 
@@ -69,7 +69,7 @@ This is a full walkthough on proposing a change to *edav.info/*, however the ins
 ![](images/excited_student/directly-02.png)
 *Hit this icon to go to GitHub.*
 
-3. We haven't forked the repo yet, so GitHub shows us a page like the one below. No worries! We just **hit the big green button** labeled **<i class="fas fa-code-branch"></i> Fork this repository and propose changes** and we'll be good to go (as you will see, big green buttons are our friends). For more info on forking repos, the [GitHub Guide on Forking Projects](https://guides.github.com/activities/forking/){target="_blank"} is very informative. **Note**: you will not have to fork the repo every time. If you propose another change in the future, the edit icon, <i class="fas fa-edit"></i>, will jump you directly to this point of the walkthrough.
+3. This is our first edit to the repo, so GitHub shows us a page like the one below. No worries! We just **hit the big green button** labeled **<i class="fas fa-code-branch"></i> Fork this repository and propose changes** and we'll be good to go (as you will see, big green buttons are our friends). **Note**: you will not have to fork the repo every time. If you propose another change in the future, the edit icon, <i class="fas fa-edit"></i>, will jump you directly to this point of the walkthrough.
 ![](images/excited_student/directly-03.png)
 *Haven't forked the repo before? No worries; the big green button will solve everything.*
 
@@ -128,22 +128,9 @@ We contributed to a GitHub repo! Hooray! Time to celebrate!
 </center>
 <br>
 
-13. Bear in mind that as time goes on, the code in your fork will fall behind that of the main project. If it's a project that you contribute to on a regular basis, you'll want to learn how to [keep your fork up to date.](https://help.github.com/articles/syncing-a-fork/). This unfortunately is a little more complex than it should be. An alternative is to delete your fork and start over. This may be the best option for infrequent contributions to the same project.
+#### The next edit
 
-If what you want to improve is a little more substantial (too difficult to contribute directly), read on.
-
-
-### Contribute code
-
-For more involved changes including modifying R code, using GitHub.com only is not enough; you will need to install git, work locally, and then submit a pull request. We have a [guide on using git](github.html) that tells you how to contribute to others' work. Get prepared and contribute to EDAV!
-
-### Solve an open issue
-
-If you see an open issue that you think you can solve, by all means go for it! Simply fork our repo, add to the code base, and submit your work as a pull request. Checkout [our open issues](https://github.com/jtr13/EDAV/issues){target="_blank"} to see what needs doing. We appreciate any input you may have. **Note**: before getting too far into changing something, let us know in the github issue that you are working on solving it. This makes sure we are all on the same page.
-
-Confused how to actually do what was mentioned above? We have [a thorough walkthrough example](#contribute-directly) that should help and make sure to checkout [our GitHub references page](github.html) for links to learn about GitHub.
-
-For more info, please consider reading the [GitHub Guide on Forking Projects](https://guides.github.com/activities/forking/){target="_blank"} and the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
+13. **Looking ahead** If you have a second edit to propose, simply follow the instructions again. As noted above, the second time through you will not be asked to fork the repo again. If you look closely at the pull request for the second edit, the branch to be merged will be named **patch-2** instead of **patch-1**. Although GitHub keeps mentioning "your fork" as you proceed through the process, this is not really something that you have to concern yourself with.  In fact, you're better off not!  In fact, you should stay away from your fork -- that is, your copy of the `EDAV` repo in *your* GitHub account, because it will inevitably get behind the main one and cause you trouble if you work on the old version and then try to create a pull request.  So, the bottom line is, each time you have an edit to propose, go directly to either `edav.info` or `https://github.com/jtr13/EDAV` and start the editing process there, *not on your fork!*.
 
 
 ## Resources
