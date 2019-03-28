@@ -4,7 +4,7 @@
 
 ## Overview
 
-This section describes workflows for working with GitHub/Git and advice on how to collaborate in teams on large coding projects. If you're interested in learning how to propose changes to [edav.info](edav.info) (or any other repo) without leaving github.com, see our [Contributing](contributing.html) chapter.
+This section describes workflows for working with GitHub/Git and advice on how to collaborate in teams on large coding projects. If you're interested in learning how to propose changes to [edav.info](edav.info) (or any other repo) without leaving github.com, see our [Contributing to this Resource](contribute.html) chapter.
 
 Ok, not satisfied with fixing typos on GitHub? Ready to work locally and move code back and forth between your repositories (or someone else's) and your machine? For that you'll need Git, a widely used version control system. It is super useful and powerful, but people also find it quite annoying and [difficult to understand](https://xkcd.com/1597/){target="_blank"}. Rather than trying to master the whole system, we suggest beginning with some basic workflows, as outlined below.  You can derive great benefits from it without being an expert (trust me, I know!)
  
@@ -102,7 +102,7 @@ When you use Git with RStudio, you do not need to write Git commands to add, com
 
 ### Step 6: Submit a pull request {-}
 
-Now you are able to see the branch you have created on the GitHub page. The next step is to submit a pull request and the process is very similar to the process described in the [GitHub only walkthrough](contribute.html/github-only-walkthrough).
+Now you are able to see the branch you have created on the GitHub page. The next step is to submit a pull request and the process is very similar to the process described in the [GitHub only walkthrough](contribute.html#github-only-walkthrough).
 
 ### Step 7: Delete the branch {-}
 
