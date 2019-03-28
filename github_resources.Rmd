@@ -4,36 +4,45 @@
 
 ## Overview
 
-This section includes links for working with GitHub/Git and advice on how to collaborate in teams on large coding projects.
+This section describes workflows for working with GitHub/Git and advice on how to collaborate in teams on large coding projects. If you're interested in learning how to propose changes to [edav.info](edav.info) (or any other repo) without leaving github.com, see our [Contributing](contributing.html) chapter.
 
-## Introduction
+Ok, not satisfied with fixing typos on GitHub? Ready to work locally and move code back and forth between your repositories (or someone else's) and your machine? For that you'll need Git, a widely used version control system. It is super useful and powerful, but people also find it quite annoying and [difficult to understand](https://xkcd.com/1597/){target="_blank"}. Rather than trying to master the whole system, we suggest beginning with some basic workflows, as outlined below.  You can derive great benefits from it without being an expert (trust me, I know!)
+ 
+## First things first
 
-I don't wanna just *read* about GitHub/Git; I wanna learn by *doing*!
+1. *Install Git* To do so, follow the instructions in the [Install Git](https://happygitwithr.com/install-git.html){target="_blank"} chapter of *Happy Git with R*.
 
-We love your enthusiasm. To hit the ground running, checkout [GitHub Learning Lab](https://lab.github.com/){target="_blank"}. This application will teach you how to use GitHub with hands-on courses using actual repos. Its the perfect way to understand what using GitHub looks like.
+2. *Tell Git your name and email address.* [Introduce yourself to Git](https://happygitwithr.com/hello-git.html){target="_blank"} in *Happy Git* explains it all.
 
-In this course, you will be working on a [project](project.html) in teams. Because of this, you probably want to be able to share code and work on different parts of the project simultaneously. This is where Git and GitHub comes in. 
+3. (Optional) *Make sure that you can pull from and push to GitHub from your computer* [Connect to GitHub](https://happygitwithr.com/push-pull-github.html){target="_blank"} 
 
-[GitHub](https://github.com/){target="_blank"} is a way to work on projects and keep track of their status easily and efficiently. It is built off of [Git](https://git-scm.com/){target="_blank"}, a type of [version control](https://en.wikipedia.org/wiki/Version_control){target="_blank"} software. It is super useful and powerful, but people also find it quite annoying and [difficult to understand](https://xkcd.com/1597/){target="_blank"}. So, in an effort to help you, we have collected some resources to learn about GitHub and how you can use it to work on projects.
+## The no branch workflow, a.k.a master-to-master
 
-## On GitHub
+To get comfortable with Git, start with this basic workflow in which you will be pulling from and pushing to *your* repo on GitHub. Just you, no collaboration:
 
-What's GitHub? Start here.
+![](/images/git/no-branch.png)
 
-- [Hello World](https://guides.github.com/activities/hello-world/){target="_blank"}: GitHub's take on the "Hello World" program. Great starting point to learn how GitHub works.
-- [Github Training & Guides](https://www.youtube.com/githubguides){target="_blank"}: This YouTube Channel has a lot of info about what GitHub can do. The first line of the opening video is, "Okay. You signed up for GitHub.  What do you do now?". If you are asking that very question, this channel will serve you well.
+The [Connect RStudio to Git and GitHub](https://happygitwithr.com/rstudio-git-github.html){target="_blank"} chapter of *Happy Git* will get you set up: you will create a repo on GitHub, clone the repo into an RStudio project, and practice making changes.
 
-## On Git
+Once you're set up, your local workflow will be **pull, work, commit/push**. 
 
-What's Git? Git is a widely used version control system, which is especially useful in collaborative projects. Why use Git? For small changes such as typos, we can directly fix it on Github. However, when you want to modify code and more complicated stuff, using Git becomes necessary.
+**PULL** Each time you open RStudio and switch to the project, you will pull down any changes made to the repo on GitHub by clicking the **Down Arrow** in the Git pane of RStudio. You may think that no changes have been made to GitHub and there's nothing to pull, but you may forget the typos that you fixed online, so it's good practice to always start by pulling changes just in case.
 
-Before we go deeper into the matter, take a look at the [Git Hankbook](https://guides.github.com/introduction/git-handbook/){target="_blank"} to get started.
+**WORK** Do your stuff. Make changes to files. Add new files.  Keep an eye on the Git panel in RStudio; it will show you which files were changes.
 
-You also need to do some setup work. First [install Git](https://happygitwithr.com/install-git.html){target="_blank"} and then [connect Git to your Github account](https://happygitwithr.com/hello-git.html){target="_blank"}. There is an option to [connect RStudio to Git and Github](https://happygitwithr.com/rstudio-git-github.html). Once connected, we can issue Git commands in the **Terminal** section of RStudio. There shall also be a **Git** tab in RStudio as well. 
+**COMMIT/PUSH** When you're done working, you'll want to think about what to do with the files that have changed. I like to keep the Git panel clear, so when I'm done I do one of three things with each file: 1) click "Staged" to get it ready for a sendoff to GitHub, 2) delete it if it's not needed, 3) add it to `.gitignore` if it's a file I want to keep locally but not send to GitHub. (Keep in mind that files in .gitignore are not backed up unless you have another backup system.) If I have a file that belongs somewhere else, I will move it there, so the only files left are the ones to send to GitHub.
 
-Now let's walk you through a detailed workflow on contributing other's work. In this example, we will use Git with RStudio for illustration purpose.
+The next step is to click the **Commit** button and enter a commit message that meaningful describes what was done. Finally clicking the **Up Arrow** will send the commit to GitHub. 
+
+It's not considered good practice to commit too often, but as a beginner, it's useful to do so to learn how it all works.
+
+## Branching
+
+Once you've comfortable with the workflow described above, you're ready to start branching. The process is quite similar whether you're working on your own repo or someone else's. If it's *your* repo, you can skip Steps 1 and 3.
 
 ### Step 1: Fork the upstream repo (once) {-}
+
+*Skip this step if you're syncing with your own repo.*
 
 Let's say you want to contribute to EDAV! Fork [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and then on your own Github page, you will see a forked **EDAV** repo under the repositories section. Note, from now on, the term **upstream repository** refers to the original repo of the project that you forked and the term **origin repository** refers to the repo that you created or forked on Github. From your respective, both **upstream** and **origin** are remote repositories.
 ![](images/Git_step1.PNG)
@@ -48,15 +57,18 @@ Once created, make sure you can see a **Terminal** section in RStudio because th
 
 ### Step 3: Configure remote that points to the upstream repository (once) {-}
 
+*Skip this step if you're syncing with your own repo.*
+
 The purpose of this step is to specify the location of the upstream repository. It may not make sense to you at this moment, but soon it will become clear.
 
 To complete this step, type in the following command line: 
-**git remote add upstream <upstream repo url>**
-![](images/Git_step3.PNG)
+
+`> git remote add upstream <upstream repo url>`
+
 
 ### Step 4: Pull {-}
 
-Under the Git tab in RStudio, you can see a pull button, which is represented by a downward pointing arrow. Clicking that button is equivalent to running a git pull command. The purpose of a pull command is to fetch and download content from a remote repository, and in this case we want to pull from the **origin master** and make sure **local master** is updated to match the content. 
+Under the Git tab in RStudio, you can see a pull button, which is represented by a downward pointing arrow. Clicking that button is equivalent to running a git pull command. The purpose of a pull command is to fetch and download content from a remote repository, and in this case we want to pull from the `origin/master` and make sure `local/master` is updated to match the content. 
 
 Now we can create a new branch and work on new features that we want to add into the **EDAV** project. Notice that steps 1, 2 and 3 only need to be done once when you start working on a new project. However, whenever you want to create a new branch, **pull command** is **always** the first step as you want to keep your local repository up to date. 
 
@@ -84,21 +96,25 @@ When you use Git with RStudio, you do not need to write Git commands to add, com
 
 ### Step 6: Submit a pull request {-}
 
-Now you are able to see the branch you have created on the Github page. The next step is to submit a pull request and the process is exactly the same as in [Direct contribution walkthrough].
+Now you are able to see the branch you have created on the Github page. The next step is to submit a pull request and the process is very similar to the process described in the [GitHub only walkthrough](contribute.html/github-only-walkthrough).
 
 ### Last Step: Sync local master with upstream master {-}
 
-Once the merge is accepted, you want to delete this branch since the upstream already contains all the changes you have made. To delete the branch on origin, you can simply use Github. To delete the branch locally, you need to type **git branch -d branchname**. 
+Once the merge is accepted, you want to delete this branch since the upstream already contains all the changes you have made. To delete the branch on origin, you can simply use GitHub. To delete the branch locally, type the following in the terminal:
 
-We also need to stop tracking the remote branch using the following Git command: **git fetch -p**. 
+`> git branch -d branchname`
+
+We also need to stop tracking the remote branch using the following Git command: 
+
+`> git fetch -p`. 
 
 Finally, let's sync local master with upstream master by running these commands:
 
-**git fetch upstream**
+`> git fetch upstream`
 
-**git checkout master**
+`> git checkout master`
 
-**git merge upstream/master**
+`> git merge upstream/master`
 
 For more detailed description on each step in the Git workflow, please refer to workflow 4 in the Git slides [Git/Github Workflow](https://github.com/jtr13/codehelp/blob/master/GitHubWorkflowPt2.pdf){target="_blank"}.
 
@@ -124,9 +140,12 @@ GitHub is super social. Learn how to *git* involved! [<i class="far fa-smile"></
 
 ### More Resources {-}
 
+To hit the ground running, checkout [GitHub Learning Lab](https://lab.github.com/){target="_blank"}. This application will teach you how to use GitHub with hands-on courses using actual repos. Its the perfect way to understand what using GitHub looks like.
+
 For the [nerds in the room](https://getyarn.io/yarn-clip/64bbb001-ed8a-450a-8826-b939f653b969){target="_blank"}...
 
 - [Git For Ages 4 And Up](https://www.youtube.com/watch?v=3m7BgIvC-uQ){target="_blank"}: There's a lot going on under the hood. This talk will help explain how it all works...with kids toys!
+
 - [Make pretty git logs](https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs){target="_blank"}: Always remember [(A DOG)](https://i.stack.imgur.com/ElVkf.jpg){target="_blank"}. Also, this alias command is nice to have around:
     - `git config --global alias.adog "log --all --decorate --oneline --graph"`
 - [`add` and `commit` with one command](https://stackoverflow.com/questions/4298960/git-add-and-commit-in-one-command){target="_blank"}: Another (even more) helpful alias command:

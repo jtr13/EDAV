@@ -16,7 +16,7 @@ There are many ways you can contribute:
 
 - <i class="fas fa-exclamation-circle"></i> For **large or small ideas, without providing the code** <i class="fas fa-arrow-right"></i> [**submit an issue**](#submit-an-issue) (very simple, much appreciated)
 
-- <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute online**](#contribute-online) (this can all be done on **GitHub.com**... we got a full walkthrough explaining how)
+- <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute on GitHub**](#github-only-walkthrough) (this can all be done on **GitHub.com**... we've got a full walkthrough explaining how)
 
 - <i class="fas fa-code-branch"></i> For **more complex changes** <i class="fas fa-arrow-right"></i> **install Git and [work locally**](github.html) (the next level, also much appreciated) -- adventurous users may [**solve an open issue**](#solve-an-open-issue) (more advanced/open-ended)
 
@@ -26,7 +26,7 @@ Below you'll find more detail on each option.
 
 Happy coding! <i class="fas fa-heart"></i>
 
-### Submit an issue
+## Submit an issue
 
 If your proposed change is more complex, consider letting us know by **submitting an issue**. Maybe you have a great idea for a brand new chapter, something we have not covered but would like to see here in this resource (a new chart page, say; or a walkthrough using a specific tool/package). It may be a little too complicated to [contribute directly](#contribute-directly). What to do? Submit an issue, of course! 
 
@@ -49,15 +49,13 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 - For more info, please consider reading the [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"} on how to contribute.
 
 
-### GitHub only contribution
+## GitHub only walkthrough
 
 *What does that mean? That you do everything on github.com. You will need to create a github.com account if you don't have one, but that's it.*
 
-One way to contribute to *edav.info/* is to **contribute directly** by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
+One way to contribute to *edav.info/* is to contribute directly by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
 
 Contributing directly in this manner works best if the change you are proposing is something relatively small, such as a typo/grammatical error or an unclear phrasing/explanation. In general, it doesn't work well to propose changes to code directly on GitHub.
-
-#### GitHub only walkthrough
 
 This is a full walkthough on proposing a change to *edav.info/*, however the instructions are the same for making changes to any repo. It follows a hypothetical student that spots a typo and uses a pull request to fix it. It's a little long, but don't get scared; it's a great way to learn about GitHub and it's almost entirely hitting big green buttons! 
 
