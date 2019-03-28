@@ -16,11 +16,11 @@ Ok, not satisfied with fixing typos on GitHub? Ready to work locally and move co
 
 3. (Optional) *Make sure that you can pull from and push to GitHub from your computer* [Connect to GitHub](https://happygitwithr.com/push-pull-github.html){target="_blank"} 
 
-## The no branch workflow, a.k.a master-to-master
+## The no branch workflow
 
 To get comfortable with Git, start with this basic workflow in which you will be pulling from and pushing to *your* repo on GitHub. Just you, no collaboration:
 
-![](/images/git/no-branch.png)
+![](images/git/no-branch.png)
 
 The [Connect RStudio to Git and GitHub](https://happygitwithr.com/rstudio-git-github.html){target="_blank"} chapter of *Happy Git* will get you set up: you will create a repo on GitHub, clone the repo into an RStudio project, and practice making changes.
 
@@ -36,15 +36,19 @@ The next step is to click the **Commit** button and enter a commit message that 
 
 It's not considered good practice to commit too often, but as a beginner, it's useful to do so to learn how it all works.
 
-## Branching
+## Branching: your repo
 
-Once you've comfortable with the workflow described above, you're ready to start branching. The process is quite similar whether you're working on your own repo or someone else's. If it's *your* repo, you can skip Steps 1 and 3.
+Once you've comfortable with the workflow described above, you're ready to start branching. The process is quite similar whether you're working on your own repo or someone else's. 
+
+If it's *your* repo, you can follow the steps in [these slides](https://github.com/jtr13/EDAV/blob/master/pdfs/BranchingYourRepo.pdf){target="_blank"}, which provide step-by-step detail on creating a branch, doing work on the branch and then submitting a pull request to merge the changes into origin/master. Or you can follow the steps below, skipping steps 1 and 3.
+
+## Branching: someone else's repo
 
 ### Step 1: Fork the upstream repo (once) {-}
 
 *Skip this step if you're syncing with your own repo.*
 
-Let's say you want to contribute to EDAV! Fork [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and then on your own Github page, you will see a forked **EDAV** repo under the repositories section. Note, from now on, the term **upstream repository** refers to the original repo of the project that you forked and the term **origin repository** refers to the repo that you created or forked on Github. From your respective, both **upstream** and **origin** are remote repositories.
+Let's say you want to contribute to EDAV! Fork [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and then on your own GitHub page, you will see a forked **EDAV** repo under the repositories section. Note, from now on, the term **upstream repository** refers to the original repo of the project that you forked and the term **origin repository** refers to the repo that you created or forked on GitHub. From your respective, both **upstream** and **origin** are remote repositories.
 ![](images/Git_step1.PNG)
 
 ### Step 2: Clone origin and create a local repository (once) {-}
@@ -64,6 +68,8 @@ The purpose of this step is to specify the location of the upstream repository. 
 To complete this step, type in the following command line: 
 
 `> git remote add upstream <upstream repo url>`
+
+Source: [Configuring a remote for a fork](https://help.github.com/en/articles/configuring-a-remote-for-a-fork){target="_blank"}
 
 
 ### Step 4: Pull {-}
@@ -96,11 +102,11 @@ When you use Git with RStudio, you do not need to write Git commands to add, com
 
 ### Step 6: Submit a pull request {-}
 
-Now you are able to see the branch you have created on the Github page. The next step is to submit a pull request and the process is very similar to the process described in the [GitHub only walkthrough](contribute.html/github-only-walkthrough).
+Now you are able to see the branch you have created on the GitHub page. The next step is to submit a pull request and the process is very similar to the process described in the [GitHub only walkthrough](contribute.html/github-only-walkthrough).
 
-### Last Step: Sync local master with upstream master {-}
+### Step 7: Delete the branch {-}
 
-Once the merge is accepted, you want to delete this branch since the upstream already contains all the changes you have made. To delete the branch on origin, you can simply use GitHub. To delete the branch locally, type the following in the terminal:
+Once the merge is accepted, it's good practice to delete this branch since the upstream already contains all the changes you have made. To delete the branch on origin, you can simply use GitHub. To delete the branch locally, type the following in the terminal:
 
 `> git branch -d branchname`
 
@@ -108,7 +114,21 @@ We also need to stop tracking the remote branch using the following Git command:
 
 `> git fetch -p`. 
 
-Finally, let's sync local master with upstream master by running these commands:
+### Step 8: Sync your fork
+
+This should be done at the beginning of your next work session to make sure that the code you work on matches the version on GitHub.
+
+If it's your repo, you can bring down the changes that were merged into origin/master with:
+
+`> git pull`
+
+Note that the flow of new code is:
+
+**local branch --> origin/branch --> origin/master --> local master**
+
+It's important to remember to do this, because the next branch you create will be a copy of local master, and it needs to be up to date.
+
+If you're working on someone else's repo, make sure you've completed Step 3 above. Then, right before you start working again on the project, do the following to sync your fork:
 
 `> git fetch upstream`
 
@@ -116,7 +136,7 @@ Finally, let's sync local master with upstream master by running these commands:
 
 `> git merge upstream/master`
 
-For more detailed description on each step in the Git workflow, please refer to workflow 4 in the Git slides [Git/Github Workflow](https://github.com/jtr13/codehelp/blob/master/GitHubWorkflowPt2.pdf){target="_blank"}.
+Source: [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork){target="_blank"}
 
 ## Other resources
 
