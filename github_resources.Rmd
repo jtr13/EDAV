@@ -49,7 +49,8 @@ If it's *your* repo, you can follow the steps in [these slides](https://github.c
 *Skip this step if you're syncing with your own repo.*
 
 Let's say you want to contribute to EDAV! Fork [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and then on your own GitHub page, you will see a forked **EDAV** repo under the repositories section. Note, from now on, the term **upstream repository** refers to the original repo of the project that you forked and the term **origin repository** refers to the repo that you created or forked on GitHub. From your respective, both **upstream** and **origin** are remote repositories.
-![](images/Git_step1.PNG)
+![](images/git/fork.png)
+*A fork of jtr13/EDAV*
 
 ### Step 2: Clone origin and create a local repository (once) {-}
 
