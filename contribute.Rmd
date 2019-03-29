@@ -22,7 +22,7 @@ There are many ways you can contribute:
 
 - <i class="fas fa-edit"></i> For **simple changes** <i class="fas fa-arrow-right"></i> [**contribute on GitHub**](#github-only-walkthrough) (this can all be done on **GitHub.com**... we've got a full walkthrough explaining how)
 
-- <i class="fas fa-code-branch"></i> For **more complex changes** <i class="fas fa-arrow-right"></i> **install Git and [work locally**](github.html) (the next level, also much appreciated) -- adventurous users may solve [**an open issue**](https://github.com/jtr13/EDAV/issues) (more advanced/open-ended)
+- <i class="fas fa-code-branch"></i> For **more complex changes** <i class="fas fa-arrow-right"></i> install Git and and work locally. Detailed instructions can be found in our [Git/GitHub Resources chapter](github.html) (the next level, also much appreciated) -- adventurous users may solve [**an open issue**](https://github.com/jtr13/EDAV/issues) (more advanced/open-ended)
 
 ## Submit an issue
 
