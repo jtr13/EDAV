@@ -2,15 +2,19 @@
 
 ![](images/banners/banner_contribute.png)
 
-## Overview
-
-This page explains how to contribute to *edav.info/*.
-
 ## Why contribute?
 
 We don't want *edav.info/* to be just another resource. Rather, we want it to be *your* resource. If there are things that trip you up or cause you frustration, chances are you're not alone. Everyone comes to this course with different backgrounds and expertise. Being able to collect all that knowledge in one place is this resource's mission and you can help move that mission forward.
 
-## Ways you can contribute
+## What to contribute
+
+The focus of edav.info is the coding aspect of data visualization using R.  It is not meant to substitute for course lectures or provide much theory about exploratory data analysis and visualization.  We want to make it easy for students to find what they need quickly to produce a particular kind of graph. We are open to a wide range of contributions but we do have some ground rules:
+
+* We are happy to receive *original work* that will help someone else. For example, if you worked out how to use a function that is not documented well, or mastered a type of graph that was difficult to get right, please share! On the other hand, if good tutorials already exist, there's no need to repeat the work.  Just submit a link to the resource with a short description to the appropriate chapter.
+
+* And of course don't forget to cite your sources by providing links. 
+
+## Ways to contribute
 
 There are many ways you can contribute:
 
