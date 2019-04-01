@@ -49,7 +49,7 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 
 ## GitHub only walkthrough
 
-*What does that mean? That you do everything on github.com. You will need to create a github.com account if you don't have one, but that's it.*
+*Note: You will need to create a github.com account if you don't have one, but you do not need to install git locally.*
 
 One way to contribute to *edav.info/* is to contribute directly by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
 
@@ -124,9 +124,7 @@ We contributed to a GitHub repo! Hooray! Time to celebrate!
 </center>
 <br>
 
-#### The next edit
-
-13. **Looking ahead** If you have a second edit to propose, simply follow the instructions again. As noted above, the second time through you will not be asked to fork the repo again. If you look closely at the pull request for the second edit, the branch to be merged will be named **patch-2** instead of **patch-1**. Although GitHub keeps mentioning "your fork" as you proceed through the process, this is not really something that you have to concern yourself with.  In fact, you're better off not!  In fact, you should stay away from your fork -- that is, your copy of the `EDAV` repo in *your* GitHub account, because it will inevitably get behind the main one and cause you trouble if you work on the old version and then try to create a pull request.  So, the bottom line is, each time you have an edit to propose, go directly to either `edav.info` or `https://github.com/jtr13/EDAV` and start the editing process there, *not on your fork!*.
+13. **Looking ahead: the next edit** If you have a second edit to propose, simply follow the instructions again. As noted above, the second time through you will not be asked to fork the repo again. If you look closely at the pull request for the second edit, the branch to be merged will be named **patch-2** instead of **patch-1**. Although GitHub keeps mentioning "your fork" as you proceed through the process, this is not really something that you have to concern yourself with.  In fact, you're better off not!  In fact, you should stay away from your fork -- that is, your copy of the `EDAV` repo in *your* GitHub account, because it will inevitably get behind the main one and cause you trouble if you work on the old version and then try to create a pull request.  So, the bottom line is, each time you have an edit to propose, go directly to either `edav.info` or `https://github.com/jtr13/EDAV` and start the editing process there, *not on your fork!*.
 
 
 ## Resources
