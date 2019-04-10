@@ -11,6 +11,7 @@ r_github_packages:
  - hrbrmstr/statebins
  - cttobin/ggthemr
  - tidyverse/forcats
+ - cran/extracat
 
 addons:
   apt:
