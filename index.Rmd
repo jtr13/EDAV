@@ -19,7 +19,7 @@ cover-image: "images/edav_link_logo.png"
 ![](images/main_page.png)
 </center>
 
-## Everything you need for EDAV
+## Everything you need for Exploratory Data Analysis & Visualization
 
 This resource has everything you need and more to be successful with R, this EDAV course, and beyond. Let's get started!
 
