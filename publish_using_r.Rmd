@@ -105,7 +105,7 @@ We should note that this makes it all seem very easy to add Travis, which actual
 If all goes well, you can sit back, relax, and watch Travis do the work for you.
 
 <center>
-<iframe src="https://giphy.com/embed/lPdn5MOabkgCY" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br /><a href="https://giphy.com/gifs/the-simpsons-homer-simpson-exercise-lPdn5MOabkgCY">via GIPHY</a>
+<iframe src="https://giphy.com/embed/uLP5x8WzYVzP2" width="480" height="258" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/funny-the-simpsons-uLP5x8WzYVzP2">via GIPHY</a></p>
 </center>
 
 ## Notes on our workflow
