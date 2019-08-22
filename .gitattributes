@@ -1,0 +1,2 @@
+*.py linguist-detectable=false
+*.Rmd linguist-language=R
