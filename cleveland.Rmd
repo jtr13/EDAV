@@ -45,8 +45,7 @@ For this example we'll use 2010 data on SAT mean scores for a sample of New York
 
 
 ```{r}
-df <- read_csv("https://raw.githubusercontent.com/jtr13/StatGraph5293/master/data/SAT2010.csv",
-               na = "s")
+df <- read_csv("data/SAT2010.csv", na = "s")
 
 set.seed(5293)
 tidydf <- df %>%
