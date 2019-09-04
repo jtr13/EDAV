@@ -21,7 +21,7 @@ Okay, then. Here are the essentials, in checklist form:
 
 ### Learn R
 
-1. **Download R and RStudio**: This is the biggest thing to do by far. Make sure to download both R and RStudio, as mentioned in [Setting up R and RStudio](#setting-up-r-and-rstudio).
+1. **Download R and RStudio**: This is the biggest thing to do by far. Make sure to download *both* R and RStudio, as mentioned in [Setting up R and RStudio](#setting-up-r-and-rstudio).
 2. **Learn your way around RStudio**: RStudio is powerful...if you know how to use it. Take the time to look through the [DataCamp sections on the RStudio IDE](https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1){target="_blank"} so you feel comfortable (see [Use RStudio like a pro](#use-rstudio-like-a-pro) section).
 3. **Try something!**: Getting comfortable with an IDE is all about practice. So while the DataCamp vids are great, don't solely rely on them. Try things out for yourself! Here are some things to play around with:
     - Create an R Script file, paste in `print("Hello, World!")`, and run it
