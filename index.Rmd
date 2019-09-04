@@ -45,10 +45,6 @@ Zach Bogart:
 Joyce Robbins: 
 [Columbia Profile](http://stat.columbia.edu/department-directory/name/joyce-robbins/){target="_blank"}
 /
-[Website](http://www.joyce-robbins.com/){target="_blank"}
-/
-[Twitter](https://twitter.com/jtrnyc){target="_blank"}
-/
 [GitHub](https://github.com/jtr13){target="_blank"}
 
 <!-- License -->
