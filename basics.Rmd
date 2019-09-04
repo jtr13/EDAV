@@ -11,7 +11,7 @@ So...there is soooo much to the world of R. Textbooks, cheatsheets, exercises, a
 
 To help you navigate the landscape, here we provide a collection of resources that you should be familiar with in the context of this course. This is not to say that any of these resources are prerequisites, but they will come up in the course and we want to give you places to learn about them.
 
-Since people come with a variety of backgrounds, we will try to provide the essentials as well as some resources for more advanced users. Do not feel you have to go through all of these resources, but know that they are here if/when you need them. <i class="far fa-smile-beam"></i>
+Since people come with a variety of backgrounds, we'll try to provide the essentials as well as some resources for more advanced users. Do not feel you have to go through all of these resources, but know that they are here if/when you need them. <i class="far fa-smile-beam"></i>
 
 ## Essentials checklist
 
