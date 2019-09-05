@@ -57,5 +57,5 @@ Joyce Robbins:
 
 The EDAV Logo, the url/404 banners, and associated chapter icon designs are designed by Zach Bogart and published with permission. The url and 404 banners have been adapted into a typeface called [Koji](https://zachbogart.com/koji){target="_blank"}. Selected chapter icons can be accessed/purchased at [The Noun Project](https://thenounproject.com/zachbogart/){target="_blank"}. Please attribute the creator if using them for external purposes (see [their icon attribution guidelines](https://thenounproject.zendesk.com/hc/en-us/articles/200509928-How-do-I-give-creators-credit-in-my-work-){target="_blank"} for more information). 
 
-<img src="/images/icons/edav_resource_url_404.png" height="0" width = "0">
-<img src="/images/icons/edav_resource_url_404_no_smile.png" height="0" width="0">
+<img src="images/icons/edav_resource_url_404.png" height="0" width = "0">
+<img src="images/icons/edav_resource_url_404_no_smile.png" height="0" width="0">
