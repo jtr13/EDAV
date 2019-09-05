@@ -36,6 +36,7 @@ deploy:
   provider: pages
   local_dir: _book
   skip_cleanup: true
+  fqdn: edav.info
   github-token: $GITHUB_PAT    # Set in the settings page
   on:
     branch: master
