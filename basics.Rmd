@@ -43,6 +43,7 @@ Okay, then. Here are the essentials, in checklist form:
 
 It is super important to get up and running with R and RStudio as soon as you can.
 ```{r}
+library(dplyr)
 latest_version <- xml2::read_html("https://cran.r-project.org/bin/macosx/") %>% 
     rvest::html_node("body") %>% 
     rvest::html_node("h2") %>% 
