@@ -42,6 +42,15 @@ Okay, then. Here are the essentials, in checklist form:
 ### Setting up R and RStudio
 
 It is super important to get up and running with R and RStudio as soon as you can.
+```{r}
+latest_version <- xml2::read_html("https://cran.r-project.org/bin/macosx/") %>% 
+    rvest::html_node("body") %>% 
+    rvest::html_node("h2") %>% 
+    rvest::html_text()
+```
+
+
+If you already installed R, make sure you're current! The latest version of R is `r latest_version`.
 
 * [This video](https://campus.datacamp.com/courses/working-with-the-rstudio-ide-part-1/orientation?ex=3){target="_blank"} from DataCamp pretty much covers it. Know that you will be downloading two separate things: [R](https://cran.r-project.org/){target="_blank"}, which is a programming language; and [RStudio](https://www.rstudio.com/download/){target="_blank"}, which is an IDE (integrated development environment...fancy tool for working with R) that will make working with R a lot more enjoyable.
 
