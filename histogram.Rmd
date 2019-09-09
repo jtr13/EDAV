@@ -261,11 +261,6 @@ df %>% ggvis(~x) %>%
 
 
 ## External resources
-
-- [DataCamp ggplot2 Histograms Exercise](https://campus.datacamp.com/courses/data-visualization-with-ggplot2-1/chapter-4-geometries?ex=5){target="_blank"}: Simple interactive example of histograms with ggplot2
-- [DataCamp Histogram with Basic R](https://www.datacamp.com/community/tutorials/make-histogram-basic-r){target="_blank"}: "Tutorial for new R users whom need an accessible and easy-to-understand resource on how to create their own histogram with basic R.
-" 'Nuff said.
-- [DataCamp Histogram with ggplot2](https://www.datacamp.com/community/tutorials/make-histogram-ggplot2){target="_blank"}: Great article on making histograms with ggplot2.
 - [hist documentation](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist){target="_blank"}: base R histogram documentation page.
 - [ggplot2 cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf){target="_blank"}: Always good to have close by.
 
