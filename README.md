@@ -2,7 +2,7 @@
 
 This is code and text behind the [edav.info/](https://jtr13.github.io/EDAV/) resource. 
 
-![Cover Image](https://jtr13.github.io/EDAV/images/cover.png) 
+![Cover Image](https://github.com/jtr13/EDAV/blob/master/images/cover.png) 
 
 ## I wanna help!
 
