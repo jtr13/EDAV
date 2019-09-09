@@ -43,6 +43,7 @@ rstudio_latest_version <-
     - Create an R Markdown file (`.Rmd`) and render it to `.html`
     - Install some packages like `tidyverse` or `MASS`  
     
+    
     Another great option for learning the IDE: Watch [Writing Code in RStudio](https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-part-1/){target="_blank"} (*RStudio webinar*)
 
 4. Learn ["R Nuts and Bolts"](https://leanpub.com/rprogramming){target="_blank"} -- Roger Peng's chapter in *R Programming* will give you a solid foundation in the basic building blocks of R. It's worth making the investing in understanding how R objects work now so they don't cause you problems later. Focus on **vectors** and especially **data frames**; matrices and lists don't come up often in data visualization.  Get familiar with R classes: **integer, numeric, character,** and **logical**. Understand how **factors** work; they are very important for graphing.
