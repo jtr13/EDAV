@@ -100,7 +100,7 @@ ggplot(chickwts, aes(x = reorder(feed, -weight, median), y = weight)) +
 
 Data frames that contain a separate column of values for each desired boxplot must be tidied first. (For more detail on using `tidy::gather()`, see [this tutorial](https://github.com/jtr13/codehelp/blob/master/R/gather.md){target="_blank"}.)
 
-```{r}
+```{r, message=FALSE}
 library(tidyverse)
 head(attitude)
 tidyattitude <- attitude %>% gather(key = "question", value = "rating")
