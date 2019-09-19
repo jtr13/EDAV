@@ -59,8 +59,11 @@ Ok, we're good to go. Get ready to hit lots of big green buttons! One last thing
 
 **Note**: This is a full walkthough that follows a hypothetical student that spots a typo and uses a pull request to fix it. Although the instructions are written for proposing a change to *edav.info*, they apply to making changes to any repo. Navigate to the file you wish to edit, and click the pencil button:
 
+<center>
 ![](images/git/fork_repo_edit_file.png)
-*Do not click the fork button on the home page of the repo.* Then jump ahead to Step 4. below. 
+</center>
+
+*Do not click the fork button on the home page of the repo.* Then jump ahead to Step 4 below. 
 
 
 1. Let's **find something to change**. I'm pretty sure they meant to write "repository" here. Oops. Let's fix it for them!
