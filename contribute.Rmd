@@ -55,13 +55,13 @@ One way to contribute to *edav.info/* is to contribute directly by editing a cha
 
 Contributing directly in this manner works best if the change you are proposing is something relatively small, such as a typo/grammatical error or an unclear phrasing/explanation. In general, it doesn't work well to propose changes to code directly on GitHub.
 
-This is a full walkthough on proposing a change to *edav.info/*, however the instructions are the same for making changes to any repo. It follows a hypothetical student that spots a typo and uses a pull request to fix it. It's a little long, but don't get scared; it's a great way to learn about GitHub and it's almost entirely hitting big green buttons! 
+This is a full walkthough that follows a hypothetical student that spots a typo and uses a pull request to fix it. Although the instructions are written for proposing a change to *edav.info/*, they apply to making changes to any repo. Just be sure to begin on the repo that you wish to edit. *Do not click the fork button and edit the fork.* (If you don't know what that means, good!) Ok, we're good to go. Get ready to hit lots of big green buttons! One last thing: remember there's no way to make changes to someone else's repo unless you submit a pull request *and* the owner merges it. So don't be afraid to act like the repo owner and click to edit files. You will be editing a copy of the files; it's ok!
 
 1. Let's **find something to change**. I'm pretty sure they meant to write "repository" here. Oops. Let's fix it for them!
 ![](images/excited_student/directly-01.png)
 *That's not how you spell "repository"! Let's fix it.*
 
-2. To make the fix, we **click on the edit icon**, <i class="fas fa-edit"></i>, at the top of the page. This will take us to their GitHub repo, where all the code for this resource is stored. <br> **Note**: You need to have a valid GitHub account to contribute. In this example, we are using a dummy account called **excited-student** so if you see it in a screenshot, know that it would be replaced by your own username.
+2. To make the fix, we **click on the edit icon**, <i class="fas fa-edit"></i>, at the top of the page. This will take us to their GitHub repo, where all the code for this resource is stored. <br> **Note**: You need to have a valid GitHub account to contribute. In this example, we are using a dummy account called **excited-student** so if you see it in a screenshot, know that it would be replaced by your own username. 
 ![](images/excited_student/directly-02.png)
 *Hit this icon to go to GitHub.*
 
