@@ -1,3 +1,6 @@
+---
+output: html_document
+---
 # R Basics {#basics} 
 
 ![](images/banners/banner_basics.png)
@@ -64,6 +67,48 @@ rstudio_latest_version <-
 
 **General advice**: don't get caught up in the details.  Keep a list of questions and move on. 
 
+## Tips & Tricks
+
+### Knitr
+
+Up your game with chunk options: check out the full [list here](https://yihui.name/knitr/options/){target="_blank"} -- and bookmark it!
+
+
+### RStudio keyboard shortcuts
+
+- **option-command-i**  ("insert R chunk")
+
+```{r, echo = FALSE, comment=""}
+cat("```{r}\n```")
+```
+
+- **shift-command-M**  `%>%`   ("the pipe") 
+
+### Sizing figures
+
+Always use chunk options to size figures.  You can set a default size in the YAML at the beginning of the .Rmd file as so:
+
+```
+output: 
+  pdf_document: 
+    fig_height: 3
+    fig_width: 5
+```
+
+Another method is to click the gear `r emo::ji("gear")` next to the Knit button, then **Output Options...**, and finally the **Figures** tab.
+
+Then as needed override one or more defaults in particular chunks:
+
+`{r, fig.width=4, fig.height=2}`
+
+
+Figure related chunk options include `fig.width`, `fig.height`, `fig.asp`, and `fig.align`; there are [many more](https://yihui.name/knitr/options/#plots){target="_blank"}.
+
+### Viewing plots in plot window
+
+Would you like your plots to appear in the plot window instead of below each chunk in the `.Rmd` file? Click `r emo::ji("gear")` and then  **Chunk Output in Console**. 
+
+
 ```{r, echo = FALSE, eval = FALSE}
 Add this back later:
     * **Don't know about Knitr?** Here's [the specific section on Knitr](https://campus.datacamp.com/courses/reporting-with-r-markdown/chapter-two-embedding-code?ex=1){target="_blank"} from the DataCamp course cited above. With this package, you can embed code directly into your R Markdown files and generate output documents. Make sure to go through the later exercises to learn about [code chunks](https://rmarkdown.rstudio.com/lesson-3.html){target="_blank"} and [chunk options](http://yihui.name/knitr/options/){target="_blank"} so you can fine-tune your final output document with ease.
@@ -73,8 +118,7 @@ Add this back later:
 ```
 
 
-
-### Submitting Assignments
+## Submitting Assignments
 
 Here's a quick run-down of how to submit your assignments using [R Markdown and Knitr](#r-markdown-knitr).
 

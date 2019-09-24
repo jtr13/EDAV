@@ -148,6 +148,22 @@ Best practices in this area are evolving. My current recommendation is to use th
 
 Another great resource is ["Explore and extend a pull request"](https://happygitwithr.com/pr-extend.html) in *Happy Git with R*. This chapter describes two official GitHub versions of merging a pull request, as well as a workflow in development using `git2r`. 
 
+## Random git stuff that may be useful
+
+### Undo the last commit
+
+`git reset --soft HEAD~1`
+
+### Undo changes since the last commit
+
+`git reset HEAD --hard`
+
+### Forgot to branch (didn't commit)
+
+Just create the new branch and changes will be moved there... [changes in the working directory do not belong to a branch until they are committed](https://stackoverflow.com/a/1394804/5314416){target="_blank"} (It will appear that the changes are on master too, but once you commit the changes, they will be gone from master.)
+
+
+
 ## Other resources
 
 ### Getting Help {-}
