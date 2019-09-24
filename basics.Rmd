@@ -71,8 +71,17 @@ rstudio_latest_version <-
 
 ### Knitr
 
-Up your game with chunk options: check out the full [list here](https://yihui.name/knitr/options/){target="_blank"} -- and bookmark it!
+Up your game with chunk options: check out the [official list of options](https://yihui.name/knitr/options/){target="_blank"} -- and bookmark it!
 
+Some favorites are:
+
+`warning=FALSE`  
+
+`message=FALSE` -- especially useful when loading packages  
+
+`cache=TRUE` -- only changed chunks will be evaluated, be careful though since changes in dependencies will not be detected.
+
+`fig.`... options, [see below](#sizing-figures)
 
 ### RStudio keyboard shortcuts
 
@@ -84,7 +93,7 @@ cat("```{r}\n```")
 
 - **shift-command-M**  `%>%`   ("the pipe") 
 
-### Sizing figures
+### Sizing figures (and more)
 
 Always use chunk options to size figures.  You can set a default size in the YAML at the beginning of the .Rmd file as so:
 
