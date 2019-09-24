@@ -17,28 +17,30 @@ This section covers how to use the `tidyquant` package to conduct timeseries ana
 `tidyquant` is an one-stop shop for financial analysis. It is suitable for analyzing timeseries data, such as financial and economic data. `tidyquant` connects to various data sources such as Yahoo! Finance, Morning Star, Bloomberg market data, etc. It also behaves well with other `Tidyverse` packages.
 
 ## Installing tidyquant
-To install `tidyquant`, you can run the following code:
-```{r message=FALSE}
-# install.packages("tidyquant")
-library(ggplot2)
-library(tidyquant)
+You can install **tidyquant** from CRAN:
+
+```
+install.packages("tidyquant")
 ```
 
 If you want to see which functions are available, you can run the following:
 ```{r, eval = FALSE}
 # to see which functions are available (not run)
+library(tidyquant)
 tq_transmute_fun_options()
 ```
 
 ## Single timeseries
 Obtain historical data for single stock (for example, Google):
-```{r}
+```{r, message=FALSE}
 # get historical data for single stock. e.g. google
+library(tidyquant)
 tq_get("GOOGL", get="stock.prices")
 ```
 
 Calculate monthly return of single stock:
-```{r}
+```{r, message = FALSE}
+library(dplyr)
 # calculate monthly return of single stock
 tq_get(c("GOOGL"), get="stock.prices") %>%
   tq_transmute(select=adjusted,
@@ -48,8 +50,9 @@ tq_get(c("GOOGL"), get="stock.prices") %>%
 ```
 
 Create a line chart of the *closing price* for single stock:
-```{r}
+```{r, message=FALSE}
 # showing closing price for single stock
+library(ggplot2)
 tq_get(c("GOOGL"), get="stock.prices") %>%
   ggplot(aes(date, close)) +
   geom_line()
