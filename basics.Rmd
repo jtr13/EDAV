@@ -95,7 +95,7 @@ output:
     fig_width: 5
 ```
 
-Another method is to click the gear `r emo::ji("gear")` next to the Knit button, then **Output Options...**, and finally the **Figures** tab.
+Another method is to click the gear `r emo::ji("gear")` next to the Knit button, then  **Output Options...**, and finally the **Figures** tab.
 
 Then as needed override one or more defaults in particular chunks:
 
@@ -106,7 +106,7 @@ Figure related chunk options include `fig.width`, `fig.height`, `fig.asp`, and `
 
 ### Viewing plots in plot window
 
-Would you like your plots to appear in the plot window instead of below each chunk in the `.Rmd` file? Click `r emo::ji("gear")` and then  **Chunk Output in Console**. 
+Would you like your plots to appear in the plot window instead of below each chunk in the `.Rmd` file? Click `r emo::ji("gear")` and then  <i class="fas fa-check"></i> **Chunk Output in Console**. 
 
 
 ```{r, echo = FALSE, eval = FALSE}

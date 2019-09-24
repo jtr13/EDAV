@@ -20,6 +20,7 @@ This section covers how to use the `tidyquant` package to conduct timeseries ana
 To install `tidyquant`, you can run the following code:
 ```{r message=FALSE}
 # install.packages("tidyquant")
+library(ggplot2)
 library(tidyquant)
 ```
 
