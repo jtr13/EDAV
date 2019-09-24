@@ -8,10 +8,12 @@ repos:
   rforge: http://R-Forge.R-project.org
 
 r_github_packages:
- - hrbrmstr/statebins
- - cttobin/ggthemr
- - tidyverse/forcats
  - cran/extracat
+ - cttobin/ggthemr
+ - hadley/emo
+ - hrbrmstr/statebins
+ - tidyverse/forcats
+
 
 addons:
   apt:
