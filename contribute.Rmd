@@ -49,13 +49,7 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 
 ## GitHub only walkthrough
 
-*Note: You will need to create a github.com account if you don't have one, but you do not need to install git locally.*
-
-One way to contribute to *edav.info* is to contribute directly by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
-
-Contributing directly in this manner works best if the change you are proposing is something relatively small, such as a typo/grammatical error or an unclear phrasing/explanation. In general, it doesn't work well to propose changes to code directly on GitHub.
-
-Ok, we're good to go. Get ready to hit lots of big green buttons! One last thing: remember there's no way to make changes to someone else's repo unless you submit a pull request *and* the owner merges it. So don't be afraid to act like the repo owner and click to edit files. You will be editing a copy of the files; it's ok!
+*You will need to create a github.com account if you don't have one, but you do not need to install git locally.*
 
 **Note**: This is a full walkthough that follows a hypothetical student that spots a typo and uses a pull request to fix it. Although the instructions are written for proposing a change to *edav.info*, they apply to making changes to any repo. Navigate to the file you wish to edit, and click the pencil button:
 
@@ -63,7 +57,13 @@ Ok, we're good to go. Get ready to hit lots of big green buttons! One last thing
 ![](images/git/fork_repo_edit_file.png)
 </center>
 
-*Do not click the fork button on the home page of the repo.* Then jump ahead to Step 4 below. 
+**Do not click the fork button on the home page of the repo.** Then jump ahead to Step 4 below.
+
+One way to contribute to *edav.info* is to contribute directly by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
+
+Contributing directly in this manner works best if the change you are proposing is something relatively small, such as a typo/grammatical error or an unclear phrasing/explanation. In general, it doesn't work well to propose changes to code directly on GitHub.
+
+Ok, we're good to go. Get ready to hit lots of big green buttons! One last thing: remember there's no way to make changes to someone else's repo unless you submit a pull request *and* the owner merges it. So don't be afraid to act like the repo owner and click to edit files. You will be editing a copy of the files; it's ok!
 
 
 1. Let's **find something to change**. I'm pretty sure they meant to write "repository" here. Oops. Let's fix it for them!
