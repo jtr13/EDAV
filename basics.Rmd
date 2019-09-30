@@ -81,7 +81,7 @@ Some favorites are:
 
 `cache=TRUE` -- only changed chunks will be evaluated, be careful though since changes in dependencies will not be detected.
 
-`fig.`... options, [see below](#sizing-figures)
+`fig.`... options, [see below](#sizing-figures-and-more)
 
 ### RStudio keyboard shortcuts
 
