@@ -37,7 +37,14 @@ mosaic(Favorite ~ Age + Music,
 
 It is best to draw mosaic plots incrementally: start with splitting on one variable and then add additional variables one at a time. The full mosaic plot will have one split per variable.
 
-Important: if your data is in a data frame (see above), **the count column must be called `Freq`**.
+Important: if your data is in a data frame, as in the example below, **the count column must be called `Freq`**. (Tables and matrices also work, see `?vcd::structable` for more details.)
+
+Also note that all of these plots are drawn with `vcd::mosaic()` not the base R function, `mosaicplot()`.
+
+The data:
+``` {r}
+df
+```
 
 Split on `Age` only:
 
@@ -139,19 +146,6 @@ mosaic(Favorite ~ Age + Music,
        df)
 ```
 
-
-
-## Mosaic using base R
-
-```{r message=FALSE}
-library(vcdExtra)
-mosaicplot(xtabs(count ~ lake + sex, data=Alligator), main="")
-```
-
-```{r}
-mosaicplot(xtabs(Freq ~ Favorite + Age + Music, data=df), main="",
-           dir=c('h', 'v', 'v'))
-```
 
 ### Mosaic using vcd::doubledecker
 
