@@ -6,7 +6,9 @@
 
 ## Overview
 
-This section covers how to create parallel coordinate plots with the `GGally` package.
+This section covers how to create static parallel coordinate plots with the `GGally` package.
+
+For interactive parallel coordinate plots, see the [parcoords](https://cran.r-project.org/package=parcoords){target="_blank"}. The [package vignette](https://cran.r-project.org/web/packages/parcoords/vignettes/introduction-to-parcoords-.html) provides instructions on using this package.
 
 ## tl;dr
 I want a Fancy Example! Not tomorrow, not after breakfast, NOW!
@@ -211,7 +213,7 @@ You can add boxplots to your graph, which can be useful for observing the trend 
 ## Other Packages
 There are a number of packages that have functions for creating parallel coordinate plots: [to do: add links]
 
-- [`parcoords::parcoords()`](http://www.buildingwidgets.com/blog/2015/1/30/week-04-interactive-parallel-coordinates-1) -- great interactive option <br> use `devtools::install_github(“timelyportfolio/parcoords”)` <br>
+- [`parcoords::parcoords()`](https://CRAN.R-project.org/package=parcoords) -- great interactive option 
 - `ggplot2::geom_line()` -- not specific to parallel coordinate plots but easy to create with the `group=` parameter.
 - `lattice::parallelplot()`
 - `MASS::parcoord()`
