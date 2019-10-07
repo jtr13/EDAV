@@ -8,7 +8,7 @@
 
 This section covers how to create static parallel coordinate plots with the `GGally` package.
 
-For interactive parallel coordinate plots, see the [parcoords](https://cran.r-project.org/package=parcoords){target="_blank"}. The [package vignette](https://cran.r-project.org/web/packages/parcoords/vignettes/introduction-to-parcoords-.html) provides instructions on using this package.
+For interactive parallel coordinate plots, check out the [parcoords](https://cran.r-project.org/package=parcoords){target="_blank"} package. The [package vignette](https://cran.r-project.org/web/packages/parcoords/vignettes/introduction-to-parcoords-.html) provides instructions on using this package.
 
 ## tl;dr
 I want a Fancy Example! Not tomorrow, not after breakfast, NOW!
