@@ -138,5 +138,6 @@ We contributed to a GitHub repo! Hooray! Time to celebrate!
 
 ## Resources
 
-- [Our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"}: Link to the GitHub repository for *edav.info/*
+- [Our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"}: Link to the GitHub repositories for *edav.info/*
 - [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"}: Fantastic guide on how to contribute to projects like this one
+
