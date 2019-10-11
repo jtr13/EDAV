@@ -1,10 +1,10 @@
-# GitHub/Git Resources {#github}
+# GitHub/git Resources {#github}
 
 ![](images/banners/banner_github.png)
 
 ## Overview
 
-This section describes workflows for working with GitHub/Git and advice on how to collaborate in teams on large coding projects. If you're interested in learning how to propose changes to [edav.info](edav.info) (or any other repo) without leaving github.com, see our [Contributing to this Resource](contribute.html) chapter.
+This section describes workflows for working with GitHub/git and advice on how to collaborate in teams on large coding projects. If you're interested in learning how to propose changes to [edav.info](edav.info) (or any other repo) without leaving github.com, see our [Contributing to this Resource](contribute.html) chapter.
 
 Ok, not satisfied with fixing typos on GitHub? Ready to work locally and move code back and forth between your repositories (or someone else's) and your machine? For that you'll need Git, a widely used version control system. It is super useful and powerful, but people also find it quite annoying and [difficult to understand](https://xkcd.com/1597/){target="_blank"}. Rather than trying to master the whole system, we suggest beginning with some basic workflows, as outlined below.  You can derive great benefits from it without being an expert (trust me, I know!)
  
@@ -12,7 +12,7 @@ Ok, not satisfied with fixing typos on GitHub? Ready to work locally and move co
 
 1. *Install Git* To do so, follow the instructions in the [Install Git](https://happygitwithr.com/install-git.html){target="_blank"} chapter of *Happy Git with R*.
 
-2. *Tell Git your name and email address.* [Introduce yourself to Git](https://happygitwithr.com/hello-git.html){target="_blank"} in *Happy Git* explains it all.
+2. *Tell git your name and email address.* [Introduce yourself to Git](https://happygitwithr.com/hello-git.html){target="_blank"} in *Happy Git* explains it all.
 
 3. (Optional) *Make sure that you can pull from and push to GitHub from your computer* [Connect to GitHub](https://happygitwithr.com/push-pull-github.html){target="_blank"} 
 
@@ -46,7 +46,7 @@ If it's *your* repo, you can follow the steps in [these slides](https://github.c
 
 ### Step 1: Fork the upstream repo (once) {-}
 
-*Skip this step if you are syncing with your own repo.*
+*Skip this step if you are syncing with your own repo--that is, you created the repo, you're not cloning a fork of someone else's repo.*
 
 Let's say you want to contribute to EDAV! Fork [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and then on your own GitHub page, you will see a forked **EDAV** repo under the repositories section. Note, from now on, the term **upstream repository** refers to the original repo of the project that you forked and the term **origin repository** refers to the repo that you created or forked on GitHub. From your respective, both **upstream** and **origin** are remote repositories.
 
@@ -57,9 +57,9 @@ Let's say you want to contribute to EDAV! Fork [our GitHub repo](https://github.
 
 A **local repository** is the repo that resides on your computer. In order to be able to work locally, we need to create a local copy of the remote reposiotry.
 
-Since we have already connected Git with RStudio, we can create a local repo in the following way. In RStudio, click **File** -> **New Project** -> **Version Control** -> **Git**. Now you can fill in the url of the **origin** repo and click **Create Project** to create a local repository.
+Since we have already connected git with RStudio, we can create a local repo in the following way. In RStudio, click **File** -> **New Project** -> **Version Control** -> **Git**. Now you can fill in the url of the **origin** repo and click **Create Project** to create a local repository.
 
-Once created, make sure you can see a **Terminal** section in RStudio because this is where we type in all the Git command lines.
+Once created, make sure you can see a **Terminal** section in RStudio because this is where we type in all the git command lines.
 
 ### Step 3: Configure remote that points to the upstream repository (once) {-}
 
@@ -88,6 +88,8 @@ To create a branch,
 
 Click the purple button under the Git tab, create a meaningful name for your branch. For example, if you hope to add more content into the histogram chapter in EDAV, name your branch "HistogramChapter". In this way, both a local branch and a remote branch under the origin repo will be created.
 
+**Do not reuse branches. Each "fix" should get its own branch and be deleted after it's been merged.**
+
 ### Step 5: Work, commit and push {-}
 
 Be careful and make sure you are doing work under the local branch instead of the local master. Once you make some changes in your local repository (e.g. edit, add or delete a file), you will see the list of files that you have modified under the Git tab. 
@@ -100,7 +102,7 @@ This means, the changes you have made are in your working directory but not comm
 
 We have already explained the relationship between local repo and remote repo. In addition, there are two extra layers between the working directory (the place where you store all these files on your computer) and the local repo. To keep your local repo updated with the working directory, you need to first **add** the changes to a **staging area** and then **commit** these changes to the local repo. Finally, you want to push your local branch to the remote repo.
 
-When you use Git with RStudio, you do not need to write Git commands to add, commit or push. To **add**, you simply check the checkbox for each file you have modified. To **commit**, you just click on the **commit** button under the Git tab. In fact, you can commit as many times as needed. Finally, you can click on the **push** button, which is represented by an upward pointing arrow.
+When you use git with RStudio, you do not need to write git commands to add, commit or push. To **add**, you simply check the checkbox for each file you have modified. To **commit**, you just click on the **commit** button under the Git tab. In fact, you can commit as many times as needed. Finally, you can click on the **push** button, which is represented by an upward pointing arrow.
 
 ### Step 6: Submit a pull request {-}
 
@@ -108,13 +110,33 @@ Now you are able to see the branch you have created on the GitHub page. The next
 
 ### Step 7: Delete the branch {-}
 
-Once the merge is accepted, it's good practice to delete this branch since the upstream already contains all the changes you have made. To delete the branch on origin, you can simply use GitHub. To delete the branch locally, type the following in the terminal:
+Once the merge is accepted, it's good practice to delete this branch since the upstream already contains all the changes you have made. To fully delete a branch you will need to 1) delete the local branch, 2) delete the remote branch, 3) stop tracking the branch:
+
+1. The easiest way to delete the remote branch is to do so on GitHub. Once your branch is merged, the pull request dialogue will display the following message: "You’re all set—the `<branchname>` branch can be safely deleted." Simply click on the Delete branch button next to the message. If you prefer to work in the terminal instead, you can delete the remote branch with:
+
+`> git push origin --delete <branchname>`
+
+2. To delete the local branch, switch to the master branch in RStudio, **pull** changes, and then type the following in the terminal:
 
 `> git branch -d branchname`
 
-We also need to stop tracking the remote branch using the following Git command: 
+3. Take note that git doesn't stop tracking the remote branch even though it's gone in both places! To stop tracking deleted branches use the following:
 
-`> git fetch -p`. 
+`> git fetch -p`
+
+Otherwise you will still see the deleted branches listed in RStudio's Git pane, and they will still appear when you look at all of your branches with 
+
+`> git branch -a`  (* = checked out branch)
+
+Speaking of which, be aware that the Git pane doesn't tend to update in real time, so you'll likely still see branches listed that have been deleted. Be careful not to switch to them, or you will inadvertently recreate them. (Deleted branches have a habit of coming back.) Clicking on master (even though you're already on master) appears to trigger an update of the dropdown list. If that doesn't work, switching out of the project and back in will do so, if you want to be sure that the branches you deleted are really gone.
+
+#### Troubleshooting
+
+- Make sure you're not on the branch you're trying to delete.
+
+- Note that if you try to delete a branch that hasn't been fully merged, you'll get a warning, or perhaps an error depending on what's transpired. It's possible that it just *thinks* it hasn't been merged even though it has, since you're not up to date. This can be remedied with `git pull`. In other cases, you'll need to follow the instructions to use `-D` instead of `-d`, for example, if you decide to abandon and delete a branch without submitting a pull request.
+
+- If you have trouble getting rid of branches, rest assured, that you're not alone. [How do I delete a Git branch locally and remotely?](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely){target="_blank"} is the **[third most asked question](https://stackoverflow.com/questions?sort=votes){target="_blank"}** on StackOverflow!
 
 ### Step 8: Sync your fork
 
@@ -162,6 +184,13 @@ Another great resource is ["Explore and extend a pull request"](https://happygit
 
 Just create the new branch and changes will be moved there... [changes in the working directory do not belong to a branch until they are committed](https://stackoverflow.com/a/1394804/5314416){target="_blank"} (It will appear that the changes are on master too, but once you commit the changes, they will be gone from master.)
 
+### Undo deleted branch
+
+Look for the SHA (hash) returned when you deleted the branch. Then do:
+
+`git checkout -b <branch-name> <SHA>`   
+
+See also: [Git undo local branch delete](https://stackoverflow.com/a/39038276/5314416){target="_blank"}
 
 
 ## Other resources
