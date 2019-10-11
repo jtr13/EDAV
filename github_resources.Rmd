@@ -138,7 +138,7 @@ Speaking of which, be aware that the Git pane doesn't tend to update in real tim
 
 - If you have trouble getting rid of branches, rest assured, that you're not alone. [How do I delete a Git branch locally and remotely?](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely){target="_blank"} is the **[third most asked question](https://stackoverflow.com/questions?sort=votes){target="_blank"}** on StackOverflow!
 
-### Step 8: Sync your fork
+### Step 8: Sync your fork {-}
 
 This should be done at the beginning of your next work session to make sure that the code you work on matches the version on GitHub.
 
