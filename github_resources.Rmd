@@ -130,7 +130,7 @@ Otherwise you will still see the deleted branches listed in RStudio's Git pane, 
 
 Speaking of which, be aware that the Git pane doesn't tend to update in real time, so you'll likely still see branches listed that have been deleted. Be careful not to switch to them, or you will inadvertently recreate them. (Deleted branches have a habit of coming back.) Clicking on master (even though you're already on master) appears to trigger an update of the dropdown list. If that doesn't work, switching out of the project and back in will do so, if you want to be sure that the branches you deleted are really gone.
 
-#### Troubleshooting
+#### Troubleshooting {-}
 
 - Make sure you're not on the branch you're trying to delete.
 
