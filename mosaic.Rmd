@@ -31,9 +31,7 @@ mosaic(Favorite ~ Age + Music,
        df)
 ```
 
-## Simple Example Walkthrough
-
-### Order of splits
+## Order of splits
 
 It is best to draw mosaic plots incrementally: start with splitting on one variable and then add additional variables one at a time. The full mosaic plot will have one split per variable.
 
@@ -67,7 +65,7 @@ Split on `Age`, then `Music`, then `Favorite`:
 mosaic(Favorite ~ Age + Music, df)
 ```
 
-### Direction of splits
+## Direction of splits
 
 Note that in the previous example, the direction of the splits is as follows:
 
@@ -93,9 +91,9 @@ mosaic(Favorite ~ Age + Music,
 
 Note that the direction vector is in order of splits (`Age`, `Music`, `Favorite`), not in the order in which the variables appear in the formula, where the last variable to be split is listed first, before the "~".
 
-### Options
+## Color
 
-#### Fill color:
+### Fill color
 
 ```{r}
 library(grid) # needed for gpar
@@ -104,7 +102,22 @@ mosaic(Favorite ~ Age + Music,
        df)
 ```
 
-#### Rotate labels:
+### Border color (must also set fill(?))
+
+```{r}
+mosaic(Favorite ~ Age + Music,
+       gp = gpar(fill = c("lightblue", "blue"),
+                 col = "white"),
+       spacing = spacing_equal(sp = unit(0, "lines")),
+       df)
+```
+
+
+## Labels
+
+For official documentation on labeling options, see [Labeling in the Strucplot Framework](http://ftp.auckland.ac.nz/software/CRAN/doc/vignettes/vcd/labeling.pdf){target="_blank"}
+
+### Rotate labels
 
 ```{r}
 mosaic(Favorite ~ Age + Music, 
@@ -114,7 +127,7 @@ mosaic(Favorite ~ Age + Music,
 
 The `rot_labels =` vector sets the rotation in degrees on the four sides of the plot in this order: *top, right, bottom, left*. (Different from the typical base graphics order!) The default is `rot_labels = c(0, 90, 0, 90)`.
 
-#### Abbreviate labels:
+### Abbreviate labels
 
 ```{r}
 mosaic(Favorite ~ Age + Music, 
@@ -126,7 +139,7 @@ Labels are abbreviated in the order of the splits (as for `direction =`). The ab
 
 For more formatting options, see `>?vcd::labeling_border`.
 
-#### Remove spacing between cells
+## Cell spacing
 
 ```{r}
 mosaic(Favorite ~ Age + Music,
@@ -135,16 +148,6 @@ mosaic(Favorite ~ Age + Music,
 ```
 
 For more details, see `>?vcd::spacings`
-
-#### Change border color (must also set fill(?))
-
-```{r}
-mosaic(Favorite ~ Age + Music,
-       gp = gpar(fill = c("lightblue", "blue"),
-                 col = "white"),
-       spacing = spacing_equal(sp = unit(0, "lines")),
-       df)
-```
 
 
 ### Mosaic using vcd::doubledecker
