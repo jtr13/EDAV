@@ -119,25 +119,26 @@ For official documentation on labeling options, see [Labeling in the Strucplot F
 
 ### Rotate labels
 
+The `rot_labels =` vector sets the rotation in degrees on the four sides of the plot--not on variable split order--in this order: *top, right, bottom, left*. (Different from the typical base graphics order!) The default is `rot_labels = c(0, 90, 0, 90)`.
+
 ```{r}
 mosaic(Favorite ~ Age + Music, 
        labeling = labeling_border(rot_labels = c(45, -45, 0, 0)),
        df)
 ```
 
-The `rot_labels =` vector sets the rotation in degrees on the four sides of the plot in this order: *top, right, bottom, left*. (Different from the typical base graphics order!) The default is `rot_labels = c(0, 90, 0, 90)`.
 
 ### Abbreviate labels
+
+Labels are abbreviated in the order of the splits (as for `direction =`). The abbreviation algorithm appears to return the specified number of characters after vowels are eliminated (if necessary).
+
+For more formatting options, see `>?vcd::labeling_border`.
 
 ```{r}
 mosaic(Favorite ~ Age + Music, 
        labeling = labeling_border(abbreviate_labs = c(3, 1, 6)), 
        df)
 ```
-
-Labels are abbreviated in the order of the splits (as for `direction =`). The abbreviation algorithm appears to return the specified number of characters after vowels are eliminated (if necessary).
-
-For more formatting options, see `>?vcd::labeling_border`.
 
 ## Cell spacing
 
