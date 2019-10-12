@@ -67,6 +67,20 @@ rstudio_latest_version <-
 
 **General advice**: don't get caught up in the details.  Keep a list of questions and move on. 
 
+## Troubleshooting
+
+### Document doesn't knit
+
+Click "Session" "Restart R" and then run the chunks one by one from the top until you find the error.
+
+### Functions stop working
+
+Strange behavior from functions that previously worked are often caused by function conflicts. This can happen if you have two packages loaded with the same function names. To indicate the proper package, *namespace* it. Conflicts commonly occure with `select` and `filter` and `map`. If you intend the tidyverse ones use:
+
+`dplyr::select`, `dplyr::filter` and `purrr::map`. 
+
+(Run across other conflicts or have more troubleshooting tips? Submit an [issue](https://github.com/jtr13/edav/issues){target="_blank"}
+
 ## Tips & Tricks
 
 ### Knitr
