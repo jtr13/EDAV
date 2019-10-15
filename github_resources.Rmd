@@ -74,9 +74,38 @@ To complete this step, type in the following command line:
 Source: [Configuring a remote for a fork](https://help.github.com/en/articles/configuring-a-remote-for-a-fork){target="_blank"}
 
 
-### Step 4: Pull {-}
+### Step 4: Sync {-}
 
-Under the Git tab in RStudio, you can see a pull button, which is represented by a downward pointing arrow. Clicking that button is equivalent to running a git pull command. The purpose of a pull command is to fetch and download content from a remote repository, and in this case we want to pull from the `origin/master` and make sure `local/master` is updated to match the content. 
+I can't emphasize enough the importance of keeping your local copy up to date. How you do so depends on whether you are syncing with your own repo ("origin") or someone else's repo ("upstream"). This should be done at the beginning of every work session.
+
+**Your repo**
+
+Click the pull button (down arrow) in the Git pane in RStudio. Or you can type `git pull` in the Terminal. 
+This should be done at the beginning of your next work session to make sure that the code you work on matches the version on GitHub.
+
+If it's your repo, you can bring down the changes that were merged into origin/master with:
+
+`> git pull`
+
+If you're working on someone else's repo, make sure you've completed Step 3 above. Then, right before you start working again on the project, do the following to sync your fork:
+
+`> git fetch upstream`
+
+`> git checkout master`
+
+`> git merge upstream/master`
+
+Source: [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork){target="_blank"}
+
+### Step 5: Branch {-}
+
+
+Note that the flow of new code is:
+
+**local branch --> origin/branch --> origin/master --> local master**
+
+It's important to remember to do this, because the next branch you create will be a copy of local master, and it needs to be up to date.
+
 
 Now we can create a new branch and work on new features that we want to add into the **EDAV** project. Notice that steps 1, 2 and 3 only need to be done once when you start working on a new project. However, whenever you want to create a new branch, **pull command** is **always** the first step as you want to keep your local repository up to date. 
 
@@ -90,7 +119,7 @@ Click the purple button under the Git tab, create a meaningful name for your bra
 
 **Do not reuse branches. Each "fix" should get its own branch and be deleted after it's been merged.**
 
-### Step 5: Work, commit and push {-}
+### Step 6: Work, commit and push {-}
 
 Be careful and make sure you are doing work under the local branch instead of the local master. Once you make some changes in your local repository (e.g. edit, add or delete a file), you will see the list of files that you have modified under the Git tab. 
 
@@ -104,11 +133,11 @@ We have already explained the relationship between local repo and remote repo. I
 
 When you use git with RStudio, you do not need to write git commands to add, commit or push. To **add**, you simply check the checkbox for each file you have modified. To **commit**, you just click on the **commit** button under the Git tab. In fact, you can commit as many times as needed. Finally, you can click on the **push** button, which is represented by an upward pointing arrow.
 
-### Step 6: Submit a pull request {-}
+### Step 7: Submit a pull request {-}
 
 Now you are able to see the branch you have created on the GitHub page. The next step is to submit a pull request and the process is very similar to the process described in the [GitHub only walkthrough](contribute.html#github-only-walkthrough).
 
-### Step 7: Delete the branch {-}
+### Step 8: Delete the branch {-}
 
 Once the merge is accepted, it's good practice to delete this branch since the upstream already contains all the changes you have made. To fully delete a branch you will need to 1) delete the local branch, 2) delete the remote branch, 3) stop tracking the branch:
 
@@ -138,29 +167,6 @@ Speaking of which, be aware that the Git pane doesn't tend to update in real tim
 
 - If you have trouble getting rid of branches, rest assured, that you're not alone. [How do I delete a Git branch locally and remotely?](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely){target="_blank"} is the **[third most asked question](https://stackoverflow.com/questions?sort=votes){target="_blank"}** on StackOverflow!
 
-### Step 8: Sync your fork {-}
-
-This should be done at the beginning of your next work session to make sure that the code you work on matches the version on GitHub.
-
-If it's your repo, you can bring down the changes that were merged into origin/master with:
-
-`> git pull`
-
-Note that the flow of new code is:
-
-**local branch --> origin/branch --> origin/master --> local master**
-
-It's important to remember to do this, because the next branch you create will be a copy of local master, and it needs to be up to date.
-
-If you're working on someone else's repo, make sure you've completed Step 3 above. Then, right before you start working again on the project, do the following to sync your fork:
-
-`> git fetch upstream`
-
-`> git checkout master`
-
-`> git merge upstream/master`
-
-Source: [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork){target="_blank"}
 
 ## Merging a pull request
 
