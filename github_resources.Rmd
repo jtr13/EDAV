@@ -101,7 +101,7 @@ The [Repeated Amend chapter of Happy Git with R](https://happygitwithr.com/repea
 
 ### Step 6: Submit a pull request {-}
 
-Now you are able to see the branch you have created on the GitHub page. The next step is to submit a pull request and the process is very similar to the process described in the [GitHub only walkthrough](contribute.html#github-only-walkthrough), beginning with step 6.
+Now you are able to see the branch you have created on the GitHub page. The next step is to submit a pull request and the process is very similar to the process described in the [GitHub only walkthrough](contribute.html#step-5-comparing-changes), beginning with step 6.
 
 ### Step 7: Merge the pull request {-}
 
