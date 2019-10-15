@@ -123,7 +123,12 @@ How you sync depends on whether you are syncing with your own repo ("origin") or
 
 **Your repo**
 
-Click the pull button (down arrow) in the Git pane in RStudio. Or you can type `git pull` in the Terminal. So simple and so important. Make it a habit.
+Switch to the master branch, then click the pull button (down arrow) in the Git pane in RStudio. Or you can type the following in the Terminal:
+
+`> git checkout master`
+`> git pull`
+
+So simple and so important. Make it a habit.
 
 **Someone else's repo**
 
