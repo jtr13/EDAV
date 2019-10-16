@@ -114,7 +114,7 @@ Here we are at the pull request page. Notice the green checkmark that says "*Abl
 And now we wait...
 
 <center>
-<iframe src="https://giphy.com/embed/l0MYOUI5XfRk4LLWM" width="480" height="361" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><br /><a href="https://giphy.com/gifs/warnerarchive-classic-film-warner-archive-l0MYOUI5XfRk4LLWM" target="_blank">via GIPHY</a>
+<iframe src="https://giphy.com/embed/l2Jej6O5fbzxQ9PO0" width="480" height="366" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/thesimpsons-the-simpsons-3x23-l2Jej6O5fbzxQ9PO0">via GIPHY</a></p>
 </center>
 <br />
 
