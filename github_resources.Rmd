@@ -20,7 +20,9 @@ Ok, not satisfied with fixing typos on GitHub? Ready to work locally and move co
 
 To get comfortable with Git, start with this basic workflow in which you will be pulling from and pushing to *your* repo on GitHub. Just you, no collaboration:
 
+<center>
 ![](images/git/no-branch.png)
+</center>
 
 The [Connect RStudio to Git and GitHub](https://happygitwithr.com/rstudio-git-github.html){target="_blank"} chapter of *Happy Git* will get you set up: you will create a repo on GitHub, clone the repo into an RStudio project, and practice making changes.
 
@@ -40,9 +42,17 @@ It's not considered good practice to commit too often, but as a beginner, it's u
 
 Once you've comfortable with the workflow described above, you're ready to start branching. The process is quite similar whether you're working on your own repo or someone else's. 
 
+<center>
+![](images/git/your-repo.jpeg)
+</center>
+
 If it's *your* repo, you can follow the steps in [these slides](https://github.com/jtr13/EDAV/blob/master/pdfs/BranchingYourRepo.pdf){target="_blank"}, which provide step-by-step detail on creating a branch, doing work on the branch and then submitting a pull request to merge the changes into origin/master. Or you can follow the steps below, skipping steps 1 and 3.
 
 ## 1st PR on another repo with branching
+
+<center>
+![](images/git/pull-request-1.png)
+</center>
 
 ### Step 1: Fork the upstream repo (once) {-}
 
@@ -50,8 +60,10 @@ If it's *your* repo, you can follow the steps in [these slides](https://github.c
 
 Let's say you want to contribute to EDAV! Fork [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and then on your own GitHub page, you will see a forked **EDAV** repo under the repositories section. Note, from now on, the term **upstream repository** refers to the original repo of the project that you forked and the term **origin repository** refers to the repo that you created or forked on GitHub. From your respective, both **upstream** and **origin** are remote repositories.
 
+<center>
 ![](images/git/fork.png)
 *A fork of jtr13/EDAV*
+</center>
 
 ### Step 2: Clone origin and create a local repository (once) {-}
 
@@ -79,19 +91,35 @@ When you're ready to start working on something new, create a new branch. **Do n
 
 To create a branch, click on the button shown below:
 
-![](images/git/newbranch.png)
+<br>
 
+<center>
+![](images/git/newbranch.png)
+</center>
+
+<br>  
+  
 Give your new branch a meaningful name. For example, if you intend to add a faceting example to the histogram chapter, you might call your branch `add_hist_facet`. Leave the "Sync branch with remote" box checked. Thereby you will not only create a local branch but also a remote branch on origin, and the local branch will be set up to track the remote branch. In short, they will be linked and git will take note of any changes on the other.
 
 ### Step 5: Work, commit and push {-}
 
 When you create a branch following the method in Step 4, you will be automatically switched to the new branch. You can switch branches by clicking on the branch dropdown box to the right of the new branch button. However, be careful doing so. Work that isn't committed, even if it is saved, doesn't belong to a branch so it will move with you as you change branches. This makes it easy to accidentally be on the wrong branch. Check that you are in the right place and as you work keep an eye on changed files in the Git pane.
 
+<center>
 ![](images/git/gitpane.png)
+</center>
+  
+<br>
 
 Recall that there are three steps to moving saved work from your working directory to GitHub, represented by the git commands: `add`, `commit`, and `push`.
 
-![](images/Git_step5.png)
+<br>
+
+<center>
+![](images/git/add-commit-push.png)
+</center>
+
+<br>
 
 In RStudio, to **add**, you simply click the checkbox for each file you have modified in the "staged" column on the left of the Git pane. To **commit**, you just click on the **commit** button under the Git tab. Entering a commit message is mandatory; choose a meaningful description of the code changes. Finally, to push changes to GitHub, click on the **push** button, which is represented by an upward pointing arrow. You can combine multiple commits into one "push".
 
@@ -114,6 +142,11 @@ Best practices in this area are evolving. My current recommendation is to use th
 Another great resource is ["Explore and extend a pull request"](https://happygitwithr.com/pr-extend.html) in *Happy Git with R*. This chapter describes two official GitHub versions of merging a pull request, as well as a workflow in development using `git2r`. 
 
 ## 2nd-*n*th PR on another repo with branching
+
+<center>
+![](images/git/pull-request-2.png)
+
+</center>
 
 After the first pull request, the process changes a little. We no longer need to fork and clone the repo. What we do need to do though is make sure that our local copy of the repository is up to date with the GitHub version.  There is some other cleanup we need to do, so after the first pull request, we'll replace steps #1 - #3 above with the following:
 
@@ -186,7 +219,13 @@ Skip this step if there's no upstream repo.
 
 Yes, it's odd, but once you've forked and cloned the project repo, the copy on GitHub becomes fairly irrelevant. However it's not a bad idea to keep it up to date, if for no other reason than it's disturbing to see messages like the following in your Git pane:
 
+<br>
+
+<center>
 ![](images/git/your-branch-ahead.png)
+</center>
+
+<br>
 
 Thankfully, your fork on GitHub can be updated easily by clicking the green up arrow or entering `git push` in the Terminal.
 
