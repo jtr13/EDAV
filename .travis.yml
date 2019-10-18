@@ -20,6 +20,7 @@ addons:
     packages:
       - libudunits2-dev
       - libgdal-dev
+      - libmpfr-dev
 
 # safelist
 branches:
