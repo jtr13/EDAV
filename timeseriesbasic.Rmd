@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 This section discusses drawing graphics for time series data.
 
 ## Single/Multiple Time Series
-We can draw time series using **geom_line()** with time on the x-axis. X-axis should be an object in the [Date class](date.html), assuming there is no hour/minute/second data.
+We can draw time series using **geom_line()** with time on the x-axis. X-axis should be an object in the [Date class](dates.html), assuming there is no hour/minute/second data.
 ```{r, message = FALSE, warning = FALSE}
 library(tidyverse)
 
