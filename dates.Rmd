@@ -92,7 +92,7 @@ Both base R graphics and **ggplot2** "know" how to work with a `Date` class vari
 
 ### base R
 
-```{r}
+```{r, out.width='50%'}
 df <- read.csv("data/mortgage.csv")
 df$DATE <- as.Date(df$DATE)
 plot(df$DATE, df$X5.1.ARM, type = "l") # on the order of years
@@ -110,7 +110,7 @@ library(tidyverse)
 
 Note that unlike base R`read.csv()`, `readr::read_csv()` automatically reads DATE in as a `Date` class since it's in YYYY-MM-DD format:
 
-```{r}
+```{r, out.width='50%'}
 df <- readr::read_csv("data/mortgage.csv")
 
 g <- ggplot(df, aes(DATE, `30 YR FIXED`)) + 
@@ -133,7 +133,7 @@ Again, when the data is filtered, the x-axis labels switch from years to months.
 We can control the x-axis breaks, limits, and labels with `scale_x_date()`:
 
 
-```{r, message = FALSE, warning=FALSE}
+```{r, message = FALSE, warning=FALSE, out.width='50%'}
 library(lubridate)
 g + scale_x_date(limits = c(ymd("2008-01-01"), ymd("2008-12-31"))) +
   ggtitle("limits = c(ymd(\"2008-01-01\"), ymd(\"2008-12-31\"))")
@@ -151,7 +151,7 @@ g + scale_x_date(date_labels = "%Y-%m") +
 
 We can use `geom_vline()` with `annotate()` to mark specific events in a time series:
 
-```{r, warning=FALSE}
+```{r, warning=FALSE, out.width='50%'}
 ggplot(df, aes(DATE, `30 YR FIXED`)) + 
   geom_line() +
   geom_vline(xintercept = ymd("2008-09-29"), color = "blue") +
@@ -165,3 +165,10 @@ ggplot(df, aes(DATE, `30 YR FIXED`)) +
   ggtitle("`geom_vline()` with `annotate()`")
 ```
 
+## Date and time classes
+
+```{r}
+Sys.time()
+```
+
+*Considering submitting a pull request to expand this section.*
