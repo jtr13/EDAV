@@ -95,7 +95,7 @@ Great! We have the US map, now let’s use the US population data to see the pop
 
 ```{r data, message=FALSE, warning=FALSE}
 library(dplyr)
-df <- read.csv('data/uscities.csv')
+df <- read.csv(unz('data/uscities.zip', 'uscities.csv'))
 # Removing data of Alaska from dataset
 df <- df %>% filter(state_name != 'Alaska')
 ```
