@@ -233,7 +233,9 @@ Thankfully, your fork on GitHub can be updated easily by clicking the green up a
 
 Now we're ready to repeat the branch, work, commit, push, submit a pull request workflow. To do so, follow [Steps 4-7 above](#step-4-branch).
 
-## Random git stuff that may be useful
+## Fixing mistakes
+
+Mistakes happen. If they didn't, we wouldn't need version control!
 
 ### Undo the last commit
 
