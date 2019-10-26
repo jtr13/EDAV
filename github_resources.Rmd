@@ -205,13 +205,6 @@ Otherwise you will still see the deleted branches listed in RStudio's Git pane, 
 
 Speaking of which, be aware that the Git pane doesn't tend to update in real time, so you'll likely still see branches listed that have been deleted. Be careful not to switch to them, or you will inadvertently recreate them. (Deleted branches have a habit of coming back.) Clicking on master (even though you're already on master) appears to trigger an update of the dropdown list. If that doesn't work, switching out of the project and back in will do so, if you want to be sure that the branches you deleted are really gone.
 
-#### Troubleshooting {-}
-
-- Make sure you're not on the branch you're trying to delete.
-
-- Note that if you try to delete a branch that hasn't been fully merged, you'll get a warning, or perhaps an error depending on what's transpired. It's possible that it just *thinks* it hasn't been merged even though it has, since you're not up to date. This can be remedied with `git pull`. In other cases, you'll need to follow the instructions to use `-D` instead of `-d`, for example, if you decide to abandon and delete a branch without submitting a pull request.
-
-- If you have trouble getting rid of branches, rest assured, that you're not alone. [How do I delete a Git branch locally and remotely?](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely){target="_blank"} is the **[third most asked question](https://stackoverflow.com/questions?sort=votes){target="_blank"}** on StackOverflow!
 
 ### Step 3: Update your fork on GitHub {-}
 
@@ -235,27 +228,33 @@ Now we're ready to repeat the branch, work, commit, push, submit a pull request 
 
 ## Fixing mistakes
 
-Mistakes happen. If they didn't, we wouldn't need version control!
+Fixing things generally involves returning to an earlier point in git history. To do so we need a way of referring to the point we want to return to. There are [multiple ways](https://git-scm.com/docs/gitrevisions){target="_blank"} of referring to the past. Most of the examples below use `HEAD` (the last commit) or `HEAD~1` (the parent of the last commit, a.k.a. the 2nd to last commit).
 
-### Undo the last commit
+### Forgot to create a new branch
 
-`git reset --soft HEAD~1`
+ - **if you didn't commit anything yet**: <br> Just create the new branch and your work will be moved there, as [changes in the working directory do not belong to a branch until they are committed](https://stackoverflow.com/a/1394804/5314416){target="_blank"}.
+ 
+ - **if you committed but didn't push to GitHub**: <br> Undo the last commit with `git reset --soft HEAD~1` (i.e. return to the parent commit). `--soft` means your changes won't be erased. Then create the new branch. (Your work will move to it, see above.)
 
-### Undo changes since the last commit
+ - **if you committed and pushed to GitHub**: <br> Undo the last commit with `git reset --soft HEAD~1`, push to GitHub (you will need to use `git push --force` since the push will cause origin to lose commits, then create the new branch. (Your work will move to it, see above.) <br> Note: Be very, very careful with `--force` as it is a dangerous tool. However, since the stakes are lower if you are force pushing to a fork, as would be the case if you are [contributing to someone else's repo](#st-pr-on-another-repo-with-branching), it's ok to use it in this particular case.
 
-`git reset HEAD --hard`
+### Undoing stuff
 
-### Forgot to branch (didn't commit)
+ - Undo the last commit:  `git reset --soft HEAD~1` <br> (Fun fact: ["How do I undo the most recent local commits in Git?"](https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git){target="_blank"} has the second highest number of votes of any question on Stack Overflow, and over 8 million views.)
 
-Just create the new branch and changes will be moved there... [changes in the working directory do not belong to a branch until they are committed](https://stackoverflow.com/a/1394804/5314416){target="_blank"} (It will appear that the changes are on master too, but once you commit the changes, they will be gone from master.)
+ - Undo changes since the last commit: `git reset --hard HEAD`
 
-### Undo deleted branch
+ - Undo deleted branch: Look for the SHA (hash) returned when you deleted the branch. Then `git checkout -b <branch-name> <SHA>` <br> See also: [Git undo local branch delete](https://stackoverflow.com/a/39038276/5314416){target="_blank"}
 
-Look for the SHA (hash) returned when you deleted the branch. Then do:
+## Troubleshooting
 
-`git checkout -b <branch-name> <SHA>`   
+### Deleting a branch isn't working
 
-See also: [Git undo local branch delete](https://stackoverflow.com/a/39038276/5314416){target="_blank"}
+- Make sure you're not on the branch you're trying to delete.
+
+- Note that if you try to delete a branch that hasn't been fully merged, you'll get a warning, or perhaps an error depending on what's transpired. It's possible that it just *thinks* it hasn't been merged even though it has, since you're not up to date. This can be remedied with `git pull`. In other cases, you'll need to follow the instructions to use `-D` instead of `-d`, for example, if you decide to abandon and delete a branch without submitting a pull request.
+
+- If you have trouble getting rid of branches, rest assured, that you're not alone. [How do I delete a Git branch locally and remotely?](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely){target="_blank"} is the **[third most asked question](https://stackoverflow.com/questions?sort=votes){target="_blank"}** on StackOverflow!
 
 
 ## Other resources
