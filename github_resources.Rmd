@@ -245,6 +245,8 @@ Fixing things generally involves returning to an earlier point in git history. T
  - Undo changes since the last commit: `git reset --hard HEAD`
 
  - Undo deleted branch: Look for the SHA (hash) returned when you deleted the branch. Then `git checkout -b <branch-name> <SHA>` <br> See also: [Git undo local branch delete](https://stackoverflow.com/a/39038276/5314416){target="_blank"}
+ 
+ Slides from Karthik Ram's workshop, [Getting Unstuck from Git](http://inundata.org/lectures/git/#/){target="_blank"}, offer clear ways out of git problems, expressed in English (such as "I royally screwed up the last several commits. I just want life to be good again") , not git speak. An excellent resource!
 
 ## Troubleshooting
 
@@ -255,7 +257,6 @@ Fixing things generally involves returning to an earlier point in git history. T
 - Note that if you try to delete a branch that hasn't been fully merged, you'll get a warning, or perhaps an error depending on what's transpired. It's possible that it just *thinks* it hasn't been merged even though it has, since you're not up to date. This can be remedied with `git pull`. In other cases, you'll need to follow the instructions to use `-D` instead of `-d`, for example, if you decide to abandon and delete a branch without submitting a pull request.
 
 - If you have trouble getting rid of branches, rest assured, that you're not alone. [How do I delete a Git branch locally and remotely?](https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely){target="_blank"} is the **[third most asked question](https://stackoverflow.com/questions?sort=votes){target="_blank"}** on StackOverflow!
-
 
 ## Other resources
 
