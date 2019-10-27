@@ -230,6 +230,8 @@ Now we're ready to repeat the branch, work, commit, push, submit a pull request 
 
 Fixing things generally involves returning to an earlier point in git history. To do so we need a way of referring to the point we want to return to. There are [multiple ways](https://git-scm.com/docs/gitrevisions){target="_blank"} of referring to the past. Most of the examples below use `HEAD` (the last commit) or `HEAD~1` (the parent of the last commit, a.k.a. the 2nd to last commit).
 
+If you are [contributing to someone else's repo](#st-pr-on-another-repo-with-branching) and things on your end get hopelessly messed up, the easiest way out is to start over. First be sure to keep a local copy of the files you need in a new folder, then [delete your fork on GitHub](https://help.github.com/en/github/administering-a-repository/deleting-a-repository){target="_blank"}, delete the local clone, fork again on GitHub, clone again to get a fresh local copy, and add the files you need back into the project. This is a variation of the ["Burn it all down"](https://happygitwithr.com/burn.html){target="_blank"} described in *Happy Git with R*. 
+
 ### Forgot to create a new branch
 
  - **if you didn't commit anything yet**: <br> Just create the new branch and your work will be moved there, as [changes in the working directory do not belong to a branch until they are committed](https://stackoverflow.com/a/1394804/5314416){target="_blank"}.
