@@ -246,7 +246,9 @@ If you are [contributing to someone else's repo](#st-pr-on-another-repo-with-bra
 
  - Undo changes since the last commit: `git reset --hard HEAD`
 
- - Undo deleted branch: Look for the SHA (hash) returned when you deleted the branch. Then `git checkout -b <branch-name> <SHA>` <br> See also: [Git undo local branch delete](https://stackoverflow.com/a/39038276/5314416){target="_blank"}
+ - Undo deleted branch: Look for the SHA (hash) returned when you deleted the branch. Then `git checkout -b <branch-name> <SHA>` <br> [SO link](https://stackoverflow.com/a/39038276/5314416){target="_blank"}
+ 
+ - Make local the same as origin: `git fetch origin` <br> `git reset --hard origin/master`   [SO link](https://stackoverflow.com/questions/1628088/reset-local-repository-branch-to-be-just-like-remote-repository-head){target="_blank"}
  
  Slides from Karthik Ram's workshop, [Getting Unstuck from Git](http://inundata.org/lectures/git/#/){target="_blank"}, offer clear ways out of git problems, expressed in English (such as "I royally screwed up the last several commits. I just want life to be good again") , not git speak. An excellent resource!
 
