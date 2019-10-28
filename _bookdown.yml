@@ -12,7 +12,7 @@ rmd_files: [
   "index.Rmd",
   "intro.Rmd",
   "basics.Rmd",
-  "final_presentation.Rmd",
+  "final_project.Rmd",
   "contribute.Rmd",
 
 # part 2 continuous variables
