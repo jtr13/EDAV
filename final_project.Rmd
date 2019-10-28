@@ -4,7 +4,7 @@
 
 ## Overview
 
-This section goes over what's expected for the final project, **Spring 2019**. 
+This section goes over what's expected for the final project, **Fall 2019**. 
 
 **General Note**: Please note that this sheet cannot possibly cover all the "do's and don'ts" of data analysis and visualization. You are expected to follow all of the best practices discussed in class throughout the semester.
 
@@ -16,9 +16,9 @@ The goal of this project is to perform an exploratory data analysis / create vis
 
 ### Teams
 
-For this assignment you will work in teams of 2 people. If you wish to select your own partner, please do so by **Thursday, March 28, 2019.** Piazza is a good place to post your interests and look for partners. After March 28th, partners will be randomly assigned. (This is actually a better option in terms of preparing yourself for a work environment with colleagues that you don't know well.) If you wish to be assigned to a partner before that date so you can get started earlier (recommended) please email me.
+For this assignment you will work in teams of 2-4 people. If you wish to select your own partner, please do so by **Wednesday, November 6, 2019.** Piazza is a good place to post your interests and look for partners. After November 6th, partners will be randomly assigned. (This is actually a better option in terms of preparing yourself for a work environment with colleagues that you don't know well.) If you wish to be assigned to a partner before that date so you can get started earlier (recommended) please email me.
 
-Once you know who you wish to work with, sign up in the *People* section of CourseWorks. Do not click the *+Group* button; rather, drag your names into one of the groups already created with the name "Final Project <number>". (If you don't follow these instructions and create your own group, it will not be linked to the Final Project assignment and therefore you won't be able to submit your project properly as a team.)
+Once you know who you wish to work with, sign up in the *People* section of CourseWorks. Do not click the *+Group* button; rather, drag your names into one of the groups already created with the name "Final Project <number>". (If you don't follow these instructions and create your own group, it will not be linked to the Final Project assignment and therefore you won't be able to submit your project properly as a team.) Please join the groups in order starting with group #1 so that we don't end up with gaps in the group numbers. 
 
 Once the groups are set up, we will ask for a short description of your project ideas, so start planning!
 
@@ -32,7 +32,7 @@ The data can be pulled from multiple sources; it does not need to be a single da
 
 ### Code
 
-All of your code should be stored on GitHub. We will spend some time in class learning how to set up a Git/GitHub workflow, but there is some leeway in terms of how you accomplish this.
+All of your code should be stored on GitHub. We will spend some time in class learning how to set up a Git/GitHub workflow, but there is some leeway in terms of how you accomplish this. All group members should have write access to the same repo. You will need to discuss your work plan to avoid merge conflicts. 
 
 Keep your project organized.  At a minimum, create a `data/raw` folder (maybe put in `.gitignore`), a `data/tidy` folder (or perhaps another name to indicate that you've worked on the data or subsetted it... it may not necessarily be tidy.), and `analysis` folder for your `.Rmd`s and `.html` (output) files. Use may also have an `R` folder for preprocessing scripts or functions that don't belong in the `.Rmd` file.
 
@@ -55,23 +55,7 @@ After final projects are turned in, you will be asked write peer reviews of othe
 
 ## Report format
 
-The report should be about 15 pages with graphs, without code, approximately 5 pages for parts I.-IV. and 10 pages for parts V.-VII. You can check page length by looking at a browser print preview. All graphs should be accompanied by textual description / interpretation. You will likely produce many more graphs than you include in the report. You can keep them in separate files on GitHub, and link to them in the report as relevant.
-
-With the exception of the interactive part, your project should be submitted to CourseWorks as an **.Rmd** and **.html**, with graphs / output rendered. The output format in the YAML should be:
-
-```
-output: 
-  html_document:
-    code_folding: hide
-```
-
-This format allows users to choose whether or not they wish to see the code. There will likely be pieces of your project that you can't include in the .Rmd / .html file combo. **In those cases, you should post those resources online and provide links to them in the report.** This is particularly relevant to the interactive graph section.
-
-You will lose points if we have trouble reading your file, need to ask you to resubmit with graphs visible, if links are broken, or if we have other difficulties accessing your materials. It's ok if code is in different files and different places, just make sure there are working links in your report to these locations. **Note**: Using Markdown + code chunks is supposed to make combining code, text and graphs easier. If it is making it more difficult, you are probably trying to do something that isn't well suited to the tool set. Focus on the text and graphs, not the formatting. If you're not sure if something is important to focus on or not, please ask. 
-
-*Advice*: don't wait to start writing.  Your overall project will undoubtedly be better if you give up trying to get that last graph perfect or the last bit of analysis done and get to the *writing*!
-
-You are encouraged to be as intellectually honest as possible. That means pointing out flaws in your work, detailing obstacles, disagreements, decision points, etc. -- the kinds of "behind-the-scene" things that are important but often left out of reports. You may use the first person ("I"/"We") or specific team members' names, as relevant.
+You have a choice of report formats, all of which are rendered from `.Rmd` files: `html_document`, bookdown book, or shiny app. Your grade will not be affected by the output format you choose. Regardless of the output format, your report will have seven sections as described in the [outline section](#outline) below. These sections will be ## headers in an `html_document`, chapters in a bookdown book, or tabs in a shiny app. If you have another idea for a report format, let us know and we will consider it. (Slides will not work since there's too much information to include.)
 
 ## Outline
 
@@ -82,9 +66,9 @@ Your report should include the following sections, with headings ("I. Introducti
 Explain why you chose this topic, and the questions you are interested in studying. Provide context for readers who are not familiar with the topic.
 
 
-### II. Description of the data source {-}
+### II. Data sources {-}
 
-Describe the data source: who is responsible for collecting the data? How is it collected?  If there were a choice of options, explain how you chose. 
+Describe the data sources: who is responsible for collecting the data? How is it collected?  If there were a choice of options, explain how you chose. 
 
 Provide some basic information about the dataset: types of variables, number of records, etc.
 
@@ -92,19 +76,17 @@ Describe any known issues / problems about the data.
 
 (You should be able to write this section without actually working with the data.)
 
-### III. Description of data import / cleaning / transformation {-}
+### III. Data transformation {-}
 
 Describe the process of getting the data into a form in which you could work with it in R.
 
-### IV. Analysis of missing values {-}
+### IV. Missing values {-}
 
 Describe any patterns you discover in missing values.
 
 ### V. Results  {-}
 
-Provide a short nontechnical summary of the most revealing findings of your analysis  written for a nontechnical audience. Take extra care to clean up your graphs, ensuring that best practices for presentation are followed, as described in the [presentation style section](#presentation-style) below.
-
-**Note**: "Presentation" here refers to the style of graph, that is, graphs that are cleaned up for presentation, as opposed to the rough ones we often use for exploratory data analysis. You do not have to present your work to the class! 
+Provide a short nontechnical summary of the most revealing findings of your analysis  written for a nontechnical audience. Take extra care to clean up your graphs, ensuring that best practices for presentation are followed, as described in the [audience ready style section](#audience-ready-style) below.
 
 ### VI. Interactive component {-}
 
@@ -116,7 +98,7 @@ You may choose the tool (D3, Shiny, or other) The complexity of your tool will b
 
 Make sure that the user is clear on what the tool does and how to use it.
 
-Publish your graph somewhere on the web and provide a link in your report in the interactive section. The obvious choices are [blockbuilder.org](http://blockbuilder.org/){target="_blank"} to create a block for D3, and [shinyapps.io](https://www.shinyapps.io/){target="_blank"} for Shiny apps but other options are fine. You are encouraged to share experiences on [Piazza](https://piazza.com/){target="_blank"} to help classmates with the publishing process.
+It may be possible to include the interactive component directly in your report. If not, publish your graph somewhere on the web and provide a link in your report in the interactive section. The obvious choices are [blockbuilder.org](http://blockbuilder.org/){target="_blank"} to create a block for D3, and [shinyapps.io](https://www.shinyapps.io/){target="_blank"} for Shiny apps but other options are fine. You are encouraged to share experiences on [Piazza](https://piazza.com/){target="_blank"} to help classmates with the publishing process.
 
 Note: the interactive component is worth approximately 25\% of the final project grade. Therefore, do not spend 90\% of your time on it... concentrate on the exploratory data analysis piece.
 
@@ -124,7 +106,44 @@ Note: the interactive component is worth approximately 25\% of the final project
 
 Discuss limitations and future directions, lessons learned.
 
-## Presentation style
+## Writing advice
+
+### Start early
+
+Don't wait to start writing.  Your overall project will undoubtedly be better if you give up trying to get that last graph perfect or the last bit of analysis done and get to the *writing*. 
+
+### Tell it like it is
+
+Be as intellectually honest as possible. That means pointing out flaws in your work, detailing obstacles, disagreements, decision points, etc. -- the kinds of "behind-the-scene" things that are important but often left out of reports.
+
+### Hide code
+
+If you are rendering to `html_document` format include the following in your YAML so that viewing code is optional:
+
+```
+output: 
+  html_document:
+    code_folding: hide
+```
+
+If you are using bookdown or shiny, do not show code. Rather, include a link to your GitHub repo.
+
+### Interpret your graphs
+
+All graphs should be accompanied by textual description / interpretation.
+
+### Use simple formatting
+
+Using RMarkdown makes it easy to combine code, text and graphs into a reproducible workflow. Fancy formatting is not its strength. Therefore, focus on the text and graphs, not the formatting. If you're not sure if something is important to focus on or not, please ask.
+
+### Link effectively
+
+Link to your sources; you do not need to create a reference or bibliography section.
+
+In addition, link to your own materials that cannot be included directly in the report. Use descriptive links: "See this GitHub repo" is better than "See here."
+
+
+## Audience ready style
 
 As we've discussed throughout the semester, standards are higher for clarity in graphs designed to be shared with others. While "good enough" is our standard for EDA, we need to go the extra mile for presentation. The following is checklist of items to address to make your graphs presentation ready.  (You do not have to worry about these items for the EDA section.)
 
@@ -153,16 +172,17 @@ In determining grades, we take the following into account:
 
 * **Reproducibility** Did you provide all of your code in a manner that will be easy for the reader to rerun your analysis, and include an explanation for any pieces that cannot be reproduced? Is your code clear? 
 
-
 * **Multidimensionality** Do you examine multidimensional relationships and present them clearly?
 
 * **Choice of graph forms** Are your graph forms good choices for your data?
 
 * **Parameters / design decisions** Have you made good choices in parameters, color, etc.?
 
-* **Standards** Do your graphs meet [presentation style standards](#presentation-style)?
+* **Standards** Do your graphs meet [audience ready style standards](#audience-ready-style)?
 
-* **Interactive part** How well does the interactive component connect with the goals of the project? Does it help the reader understand the main conclusions?
+* **Interactive part** Are the instructions clear? How well does the interactive component connect with the goals of the project? Does it help the reader understand the main conclusions?
+
+* **Technical competence** Do your links work? Are your graphs displaying properly? 
 
 
 ## Resources
