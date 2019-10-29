@@ -136,7 +136,7 @@ ggmap(usmap) +
 
 ***
 
-## Mutilayerd plots with ggmaps
+### Mutilayerd plots with ggmaps
 
 We can add multiple layers to the plot as described in earlier chapters. Let’s look at the location of military stations located across US along with population density.
 
@@ -179,6 +179,6 @@ ggmap(camap3)
 
 ***
 
-## Getting Deeper
+### Getting Deeper
 
 This was just a glimpse of what you can do with `ggmaps` using the `get_stamenmap()`. Note that Stamen Maps is not limited to US and can be used to plot any part of the world. If you liked this alternative to Google Maps API, I highly recommend you to check the Stamen Maps website http://maps.stamen.com for more details.
