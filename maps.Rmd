@@ -111,7 +111,7 @@ ggmap(usmap) +
 This is not good! Most of the points are overlapping and thus it is not easy to interpret what’s going on here. Let’s try alpha blending and reduce the size of points.
 
 ```{r alpha, message=FALSE, warning=FALSE}
-# Population density across US using points
+# spread of counties across US using points
 ggmap(usmap) + 
   geom_point(data = df, 
              mapping = aes(x = lng, y = lat, color = population),
