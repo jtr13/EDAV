@@ -1,7 +1,9 @@
 language: r
-cache: packages
-
 sudo: false
+cache:
+  packages: true
+  directories:
+  - _bookdown_files
 
 repos:
   cran: http://cran.rstudio.com
