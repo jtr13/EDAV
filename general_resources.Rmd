@@ -40,7 +40,9 @@ R likes Twitter. Here are some cool people doing work with [#rstats](https://twi
 
 ## Data
 
-(Perhaps this should be a new chapter)
-
 Members of the United States Congress (1789-Present) with lots of biographical information https://github.com/unitedstates/congress-legislators
+
+## Packages
+
+[gmailr](https://gmailr.r-lib.org/){target="_blank"}
 
