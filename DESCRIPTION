@@ -11,6 +11,7 @@ Imports:
   fpp,
   GDAdata,
   GGally,
+  ggmap,
   ggmosaic,
   ggplot2movies,
   ggridges,
