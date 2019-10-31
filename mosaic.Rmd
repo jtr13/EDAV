@@ -26,7 +26,7 @@ vcd::mosaic(Favorite ~ Age + Music,
          rot_labels=c(0,0,-45)
        ),
        direction=c('v','v','h'), # Age = Vertical, Music = Vertical, Favoriate = Horizonal (a.k.a DoubleDecker)
-       gp = gpar(fill=c('lightblue', 'gray')),
+       gp = grid::gpar(fill=c('lightblue', 'gray')),
        df)
 ```
 
@@ -94,9 +94,8 @@ Note that the direction vector is in order of splits (`Age`, `Music`, `Favorite`
 ### Fill color
 
 ```{r}
-library(grid) # needed for gpar
 vcd::mosaic(Favorite ~ Age + Music, 
-       gp = gpar(fill = c("lightblue", "blue")),
+       gp = grid::gpar(fill = c("lightblue", "blue")),
        df)
 ```
 
@@ -104,7 +103,7 @@ vcd::mosaic(Favorite ~ Age + Music,
 
 ```{r}
 vcd::mosaic(Favorite ~ Age + Music,
-       gp = gpar(fill = c("lightblue", "blue"),
+       gp = grid::gpar(fill = c("lightblue", "blue"),
                  col = "white"),
        spacing = spacing_equal(sp = unit(0, "lines")),
        df)
