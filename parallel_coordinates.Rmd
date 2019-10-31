@@ -16,7 +16,7 @@ I want a Fancy Example! Not tomorrow, not after breakfast, NOW!
 <!-- Explanation: -->
 Here's a look at the effect of different attributes on each Fair cut diamond from the "diamonds" dataset:
 
-```{r tldr-show-plot, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6, fig.width=9}
 library(GGally)
 library(dplyr)
 
@@ -37,7 +37,7 @@ ggparcoord(ds_fair[order(ds_fair$diamond_cut, decreasing=TRUE),], columns=c(1,5,
 ```
 
 And here's the code:
-```{r tldr-code, eval=FALSE, message=FALSE}
+```{r, eval=FALSE, message=FALSE}
 library(GGally)
 library(dplyr)
 

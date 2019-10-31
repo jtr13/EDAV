@@ -79,6 +79,17 @@ Strange behavior from functions that previously worked are often caused by funct
 
 `dplyr::select`, `dplyr::filter` and `purrr::map`. 
 
+Other culprits:
+
+`dplyr::summarise()` and `vcdExtra::summarise()`
+
+`ggmosaic::mosaic()` and `vcd::mosaic()`
+
+`leaflet::addLegend()` and `xts::addLegend()`
+
+
+
+
 Run across other conflicts or have more troubleshooting tips? Submit an [issue](https://github.com/jtr13/edav/issues){target="_blank"}.
 
 ## Tips & Tricks

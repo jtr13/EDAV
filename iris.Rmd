@@ -72,7 +72,7 @@ Okay, now let's get to it...
 ## Viewing data
 
 Let's start with loading the package so we can get the data as a dataframe.
-```{r import_data}
+```{r}
 library(datasets)
 
 class(iris)

@@ -15,14 +15,14 @@ I want a nice example. Not tomorrow, not *after breakfast*. NOW!
 <!-- Explanation: -->
 Here's a bar chart showing the survival rates of passengers aboard the *RMS Titanic*:
 
-```{r tldr-show-plot, echo=FALSE, message=FALSE, fig.width=9, fig.height=6}
+```{r, echo=FALSE, message=FALSE, fig.width=9, fig.height=6}
 library(datasets) # data
 library(ggplot2) # plotting
 library(dplyr) # manipulation
 
 ship_grouped <- as.data.frame(Titanic) %>%
   group_by(Class, Sex, Survived) %>%
-  summarise(Total = sum(Freq))
+  dplyr::summarise(Total = sum(Freq))
 
 ggplot(ship_grouped, aes(x = Survived, y = Total, fill = Sex)) +
   geom_bar(position = "dodge", stat = "identity") +
@@ -41,7 +41,7 @@ ggplot(ship_grouped, aes(x = Survived, y = Total, fill = Sex)) +
 ```
 
 And here's the code:
-```{r tldr-code, eval=FALSE}
+```{r, eval=FALSE}
 library(datasets) # data
 library(ggplot2) # plotting
 library(dplyr) # manipulation
@@ -75,7 +75,7 @@ My eyes were bigger than my stomach. Much simpler please!
 
 <!-- Simple Explanation of Data: -->
 Let's use the `HairEyeColor` dataset. To start, we will just look at the different categories of hair color among females:
-```{r simple-example-data}
+```{r}
 colors <- as.data.frame(HairEyeColor)
 
 # just female hair color, using dplyr
@@ -91,7 +91,7 @@ head(colors_female_hair)
 Now let's make some graphs with this data.
 
 ### Bar graph using base R
-```{r base-r}
+```{r}
 barplot(colors_female_hair[["Total"]], 
         names.arg = colors_female_hair[["Hair"]],
         main = "Bar Graph Using Base R")
@@ -101,7 +101,7 @@ barplot(colors_female_hair[["Total"]],
 We recommend using Base R only for simple bar graphs for yourself. Like all of Base R, it is simple to setup. **Note**: Base R expects a vector or matrix, hence the double brackets in the barplot call (gets columns as lists).
 
 ### Bar graph using ggplot2
-```{r ggplot}
+```{r}
 library(ggplot2) # plotting
 
 ggplot(colors_female_hair, aes(x = Hair, y = Total)) +

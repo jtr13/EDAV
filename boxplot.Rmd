@@ -12,7 +12,7 @@ I want a nice example and I want it NOW!
 
 Here's a look at the weights of newborn chicks split by the feed supplement they received:
 
-```{r tldr-show-plot, echo=FALSE, out.width='75%'}
+```{r tldr-boxplot, echo=FALSE, out.width='75%'}
 library(ggplot2)
 
 # boxplot by feed supplement 
@@ -30,7 +30,7 @@ ggplot(chickwts, aes(x = reorder(feed, -weight, median), y = weight)) +
 ```
 
 And here's the code:
-```{r, ref.label="tldr-show-plot", eval=FALSE}
+```{r, ref.label="tldr-boxplot", eval=FALSE}
 ```
 
 For more info on this dataset, type `?datasets::chickwts` into the console.
@@ -42,7 +42,7 @@ Okay...*much* simpler please.
 
 Base R will give you a quick boxplot of a vector or a single column of a data frame with very little typing:
 
-```{r base-r, fig.align = 'center', out.width='60%'}
+```{r, fig.align = 'center', out.width='60%'}
 # vector
 boxplot(rivers) 
 ```

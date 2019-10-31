@@ -5,7 +5,7 @@
 
 *This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library("ggridges")
 library("tidyverse")
@@ -22,7 +22,7 @@ I want a nice example and I want it NOW!
  
 Here's a look at the dose of theophylline administered orally to the subject on which the concentration of theophylline is observed:
 
-```{r tldr-show-plot, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE}
 library("ggridges")
 library("tidyverse")
 Theoph_data <- Theoph
@@ -37,7 +37,7 @@ ggplot(Theoph_data, aes(x=Dose,y=Subject,fill=Subject))+
  
 Here is the code:
 
-```{r tldr-code, eval=FALSE}
+```{r, eval=FALSE}
 library("ggridges")
 library("tidyverse")
 Theoph_data <- Theoph

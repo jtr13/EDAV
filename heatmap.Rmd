@@ -13,14 +13,13 @@ Enough with these simple examples! I want [a complicated one](https://www.youtub
 
 Here's a heatmap of occupational categories of sons and fathers in the US, UK, and Japan:
 ```{r message=FALSE, echo=FALSE, fig.width=9}
-library(vcdExtra) # dataset
 library(dplyr) # manipulation
 library(ggplot2) # plotting
 library(viridis) # color palette
 
 # format data
 orderedclasses <- c("Farm", "LoM", "UpM", "LoNM", "UpNM")
-mydata <- Yamaguchi87
+mydata <- vcdExtra::Yamaguchi87
 mydata$Son <- factor(mydata$Son, levels = orderedclasses)
 mydata$Father <- factor(mydata$Father,
                         levels = orderedclasses)

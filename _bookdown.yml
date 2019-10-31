@@ -3,7 +3,8 @@ chapter_name: ""
 repo: https://github.com/jtr13/EDAV
 output_dir: _book
 clean: [packages.bib, bookdown.bbl]
-new_session: yes
+#new_session: yes
+delete_merged_file: true
 edit: https://github.com/jtr13/EDAV/edit/master/%s
 
 # chapter ordering

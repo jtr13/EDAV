@@ -20,8 +20,7 @@ This section covers how to make Mosaic plots
 ## tl;dr
 
 ```{r message=FALSE}
-library(vcd)
-mosaic(Favorite ~ Age + Music, 
+vcd::mosaic(Favorite ~ Age + Music, 
        labeling = labeling_border(
          abbreviate_labs = c(3, 10, 6),
          rot_labels=c(0,0,-45)
@@ -47,14 +46,13 @@ df
 Split on `Age` only:
 
 ``` {r}
-library(vcd)
-mosaic(~Age, df)
+vcd::mosaic(~Age, df)
 ```
 
 Split on `Age`, then `Music`:
 
 ```{r}
-mosaic(Music ~ Age, df)
+vcd::mosaic(Music ~ Age, df)
 ```
 
 Note that the *first* split is between "young" and "old", while the second set of splits divides each age group into "classical" and "rock".
@@ -62,7 +60,7 @@ Note that the *first* split is between "young" and "old", while the second set o
 Split on `Age`, then `Music`, then `Favorite`:
 
 ```{r}
-mosaic(Favorite ~ Age + Music, df)
+vcd::mosaic(Favorite ~ Age + Music, df)
 ```
 
 ## Direction of splits
@@ -78,14 +76,14 @@ Note that in the previous example, the direction of the splits is as follows:
 This is the default direction pattern: alternating directions beginning with horizontal. Therefore we get the same plot with the following:
 
 ```{r}
-mosaic(Favorite ~ Age + Music, 
+vcd::mosaic(Favorite ~ Age + Music, 
        direction = c("h", "v", "h"), df)
 ```
 
 The directions can be altered as desired. For example, to create a doubledecker plot, make all splits vertical except the last one:
 
 ```{r}
-mosaic(Favorite ~ Age + Music,
+vcd::mosaic(Favorite ~ Age + Music,
        direction = c("v", "v", "h"), df)
 ```
 
@@ -97,7 +95,7 @@ Note that the direction vector is in order of splits (`Age`, `Music`, `Favorite`
 
 ```{r}
 library(grid) # needed for gpar
-mosaic(Favorite ~ Age + Music, 
+vcd::mosaic(Favorite ~ Age + Music, 
        gp = gpar(fill = c("lightblue", "blue")),
        df)
 ```
@@ -105,7 +103,7 @@ mosaic(Favorite ~ Age + Music,
 ### Border color (must also set fill(?))
 
 ```{r}
-mosaic(Favorite ~ Age + Music,
+vcd::mosaic(Favorite ~ Age + Music,
        gp = gpar(fill = c("lightblue", "blue"),
                  col = "white"),
        spacing = spacing_equal(sp = unit(0, "lines")),
@@ -122,7 +120,7 @@ For official documentation on labeling options, see [Labeling in the Strucplot F
 The `rot_labels =` vector sets the rotation in degrees on the four sides of the plot--not on variable split order--in this order: *top, right, bottom, left*. (Different from the typical base graphics order!) The default is `rot_labels = c(0, 90, 0, 90)`.
 
 ```{r}
-mosaic(Favorite ~ Age + Music, 
+vcd::mosaic(Favorite ~ Age + Music, 
        labeling = labeling_border(rot_labels = c(45, -45, 0, 0)),
        df)
 ```
@@ -135,7 +133,7 @@ Labels are abbreviated in the order of the splits (as for `direction =`). The ab
 For more formatting options, see `>?vcd::labeling_border`.
 
 ```{r}
-mosaic(Favorite ~ Age + Music, 
+vcd::mosaic(Favorite ~ Age + Music, 
        labeling = labeling_border(abbreviate_labs = c(3, 1, 6)), 
        df)
 ```
@@ -143,7 +141,7 @@ mosaic(Favorite ~ Age + Music,
 ## Cell spacing
 
 ```{r}
-mosaic(Favorite ~ Age + Music,
+vcd::mosaic(Favorite ~ Age + Music,
        spacing = spacing_equal(sp = unit(0, "lines")),
        df)
 ```

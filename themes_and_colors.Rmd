@@ -17,7 +17,7 @@
   subset <- diamonds[ sample(nrow(diamonds), 20000), ]
 ```
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
