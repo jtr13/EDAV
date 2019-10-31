@@ -2,13 +2,6 @@
 
 # Spatial Data {#maps}
 
-<!-- Under Construction Section
------------------------------------------------------------------------------ -->
-![Maps](images/banners/banner_maps.png)
-*This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
-<!-- ------------------------------------------------------------------------ -->
-
-
 ## Choropleth maps
 
 Choropleth maps use color to indicate the value of a variable within a defined region, generally political boundaries. ["Mapping in R just got a whole lot easier"](https://www.computerworld.com/article/3175623/mapping-in-r-just-got-a-whole-lot-easier.html){target="_blank"} by Sharon Machlis (2017-03-03) offers a tutorial on using the **tmap**, **tmaptools**, and **tigris** packages to create choropleth maps. Note that with this approach, you will need to merge geographic shape files with your data files, and then map. 
@@ -37,7 +30,7 @@ state_choropleth(df_illiteracy,
                  legend = "Percent Illiterate")
 ```
 
-**Note**: the `choroplethr` "free course" that you may come across arrives one lesson at a time by email over an extended period so not the best option unless you have a few weeks to spare.
+**Note**: the `choroplethr` "free course" that you may come across arrives one lesson at a time by email over an extended period so not the best option unless you have a couple of weeks to spare.
 
 
 ## Square bins

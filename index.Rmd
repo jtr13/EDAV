@@ -13,10 +13,9 @@ description: "This resource is a collaborative collection of resources designed 
 cover-image: "images/edav_link_logo.png"
 ---
 
-```{r, include=FALSE}
-knitr::opts_chunk$set(cache = TRUE)
+```{r, include = FALSE}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, cache = TRUE)
 ```
-
 
 # Welcome {-}
 
