@@ -21,7 +21,7 @@ This section covers how to make Mosaic plots
 
 ```{r message=FALSE}
 vcd::mosaic(Favorite ~ Age + Music, 
-       labeling = labeling_border(
+       labeling = vcd::labeling_border(
          abbreviate_labs = c(3, 10, 6),
          rot_labels=c(0,0,-45)
        ),
@@ -120,7 +120,7 @@ The `rot_labels =` vector sets the rotation in degrees on the four sides of the 
 
 ```{r}
 vcd::mosaic(Favorite ~ Age + Music, 
-       labeling = labeling_border(rot_labels = c(45, -45, 0, 0)),
+       labeling = vcd::labeling_border(rot_labels = c(45, -45, 0, 0)),
        df)
 ```
 
@@ -133,7 +133,7 @@ For more formatting options, see `>?vcd::labeling_border`.
 
 ```{r}
 vcd::mosaic(Favorite ~ Age + Music, 
-       labeling = labeling_border(abbreviate_labs = c(3, 1, 6)), 
+       labeling = vcd::labeling_border(abbreviate_labs = c(3, 1, 6)), 
        df)
 ```
 
