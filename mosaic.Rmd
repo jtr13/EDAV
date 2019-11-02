@@ -151,7 +151,7 @@ For more details, see `>?vcd::spacings`
 ### Mosaic using vcd::doubledecker
 
 ```{r}
-data(Arthritis)
+data(Arthritis, package = "vcd")
 vcd::doubledecker(Improved ~ Treatment + Sex, data=Arthritis)
 ```
 
