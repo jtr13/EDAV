@@ -19,10 +19,6 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, cache = TRUE)
 
 # Welcome {-}
 
-<center>
-![](images/main_page.png)
-</center>
-
 ## Everything you need for Exploratory Data Analysis & Visualization
 
 This resource has everything you need and more to be successful with R, this EDAV course, and beyond. Let's get started!
@@ -36,6 +32,8 @@ There are also **several walkthroughs** where we work with data and discuss prob
 We hope this resource serves you well!
 
 This resource is specifically tailored to the GR5702 Exploratory Data Analysis and Visualization course offered at [Columbia University](https://www.columbia.edu/){target="_blank"}. However, anyone interested in working with data in R will benefit from perusing these pages. Happy coding!
+
+A [French translation](https://amelrich.github.io/EDAV/){target="_blank"} is also available!
 
 ## Contact
 
@@ -60,6 +58,10 @@ Joyce Robbins:
 ## Colophon
 
 The EDAV Logo, the url/404 banners, and associated chapter icon designs are designed by Zach Bogart and published with permission. The url and 404 banners have been adapted into a typeface called [Koji](https://zachbogart.com/koji){target="_blank"}. Selected chapter icons can be accessed/purchased at [The Noun Project](https://thenounproject.com/zachbogart/){target="_blank"}. Please attribute the creator if using them for external purposes (see [their icon attribution guidelines](https://thenounproject.zendesk.com/hc/en-us/articles/200509928-How-do-I-give-creators-credit-in-my-work-){target="_blank"} for more information). 
+
+<center>
+![](images/main_page.png)
+</center>
 
 <!-- Adding these nonvisible image files here to trick bookdown into copying them into the images folder -->
 <img src="images/icons/edav_resource_url_404.png" height="0" width = "0">
