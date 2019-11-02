@@ -105,7 +105,7 @@ vcd::mosaic(Favorite ~ Age + Music,
 vcd::mosaic(Favorite ~ Age + Music,
        gp = grid::gpar(fill = c("lightblue", "blue"),
                  col = "white"),
-       spacing = spacing_equal(sp = unit(0, "lines")),
+       spacing = vcd::spacing_equal(sp = unit(0, "lines")),
        df)
 ```
 
@@ -141,7 +141,7 @@ vcd::mosaic(Favorite ~ Age + Music,
 
 ```{r}
 vcd::mosaic(Favorite ~ Age + Music,
-       spacing = spacing_equal(sp = unit(0, "lines")),
+       spacing = vcd::spacing_equal(sp = unit(0, "lines")),
        df)
 ```
 
