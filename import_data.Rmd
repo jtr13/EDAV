@@ -92,6 +92,12 @@ head(df)
 
 ```
 
+### Read data from an API
+
+The best option here is to look for a package that has set this up for you, such as **WHO**, **atus**, and many others. Need ideas? [These R packages import sports, weather, stock data and more](https://www.computerworld.com/article/3109890/these-r-packages-import-sports-weather-stock-data-and-more.html){target="_blank"}, is a great place to start looking for such packages.
+
+If such a package does not exist for your data, use the **httr** to facilitate the API calls. The RStudio webinar [Extracting Data from the Web Part I](https://resources.rstudio.com/webinars/extracting-data-web-part1){target="_blank"} is an excellent resource for learning **httr** as is Sharon Machlis's article, [Get API data with R: No R package for the API you want? It’s easy to write your own function with the httr and jsonlite packages](https://www.infoworld.com/article/3434627/get-api-data-with-r.html){target="_blank"}.
+
 ### Scrape an HTML table using `rvest`
 
 Sometimes we wish to import data that appears as an HTML table on a web page. It might be a little messy, so best to first check if there's another means for importing the data before moving forward. If not, `rvest` makes the process as painless as possible.
@@ -146,12 +152,6 @@ mytable %>%
   facet_wrap(~var, ncol = 1, scales = "free_x") +
   guides(color = FALSE)
 ```
-
-### Read data from an API
-
-The best option here is to look for a package that has set this up for you, such as **WHO**, **atus**, and many others.
-
-If such a package does not exist for your data, use the **httr** to facilitate the API calls. The RStudio webinar [Extracting Data from the Web Part I](https://resources.rstudio.com/webinars/extracting-data-web-part1){target="_blank"} is an excellent resource for learning **httr** as is Sharon Machlis's article, [Get API data with R: No R package for the API you want? It’s easy to write your own function with the httr and jsonlite packages](https://www.infoworld.com/article/3434627/get-api-data-with-r.html){target="_blank"}.
 
 **Additional Resources**
 [Excellent webinar from RStudio on using `rvest`](https://www.rstudio.com/resources/webinars/extracting-data-from-the-web-part-2/) -- covers how to use the structure of the HTML and CSS on the page to scrape the information that you need, as well as using additional `rvest` functions such as `html_text()`, `html_name()`, `html_attrs()`, `html_children()`, etc.
