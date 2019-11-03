@@ -135,11 +135,11 @@ Now you are able to see the branch you have created on the GitHub page. The next
 
 If you submitted a PR to another project, you are not the one who will be merging the pull request, so there's nothing for you to do here. 
 
-If it is your project, and it is your job to do so, be aware that there are many methods to merge a request. The most direct simple and direct is to [merge the PR on GitHub](https://help.github.com/en/articles/merging-a-pull-request#merging-a-pull-request-on-github). This method works well for merging fixed typos and the like. If you want to be able to test code, you may want to check out the PR locally, test it, and perhaps even make edits to it before merging. 
+If it is your project, and it is your job to do so, be aware that there are many methods to merge a request. The most direct simple and direct is to [merge the PR on GitHub](https://help.github.com/en/articles/merging-a-pull-request#merging-a-pull-request-on-github){target="_blank"}. This method works well for merging fixed typos and the like. If you want to be able to test code, you may want to check out the PR locally, test it, and perhaps even make edits to it before merging. 
 
-Best practices in this area are evolving. My current recommendation is to use the `usethis` package, which makes complex tasks very simple. ["How to edit a pull request locally"](https://github.com/jtr13/usethis_demos/blob/master/how_to1.md) explains how to do so.
+Best practices in this area are evolving. My current recommendation is to use the `usethis` package, which makes complex tasks very simple. ["How to edit a pull request locally"](https://github.com/jtr13/usethis_demos/blob/master/how_to1.md){target="_blank"} explains how to do so.
 
-Another great resource is ["Explore and extend a pull request"](https://happygitwithr.com/pr-extend.html) in *Happy Git with R*. This chapter describes two official GitHub versions of merging a pull request, as well as a workflow in development using `git2r`. 
+Another great resource is ["Explore and extend a pull request"](https://happygitwithr.com/pr-extend.html){target="_blank"} in *Happy Git with R*. This chapter describes two official GitHub versions of merging a pull request, as well as a workflow in development using `git2r`. 
 
 ## 2nd-*n*th PR on another repo with branching
 
@@ -166,7 +166,7 @@ There are no reminders that you're behind, so it's up to you. Make it a habit.
 
 **Someone else's repo**
 
-If you're working on someone else's repo, make sure you've [configured an upstream remote](https://edav.info/github.html#step-3-configure-remote-that-points-to-the-upstream-repository-once).
+If you're working on someone else's repo, make sure you've [configured an upstream remote](https://edav.info/github.html#step-3-configure-remote-that-points-to-the-upstream-repository-once){target="_blank"}.
 
 Then do the following to update your fork:
 
