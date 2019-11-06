@@ -2,13 +2,17 @@
 
 # Spatial Data {#maps}
 
-## Choropleth maps
+*This chapter is under active development. Check back soon for updates.*
 
-Choropleth maps use color to indicate the value of a variable within a defined region, generally political boundaries. ["Mapping in R just got a whole lot easier"](https://www.computerworld.com/article/3175623/mapping-in-r-just-got-a-whole-lot-easier.html){target="_blank"} by Sharon Machlis (2017-03-03) offers a tutorial on using the **tmap**, **tmaptools**, and **tigris** packages to create choropleth maps. Note that with this approach, you will need to merge geographic shape files with your data files, and then map. 
+There are an overwhelming number of R packages for analyzing and visualizing spatial data. In broad terms, spatial visualizations require a merging of non-spatial and spatial information. For example, if you wish to create a choropleth map of the murder rate by county in New York State, you need county level data on murder rates, and you also need geographic data for drawing the county boundaries, stored in what are called shape files. A rough divide exists between packages that don't require you deal with shape files and those that do. The former work by taking care of the geographic data under the hood: you supply the data with a column for the location and the package takes care of figuring out how to draw those locations. Not surprisingly, there are more easy-to-use options for commonly drawn maps, such as world continents, U.S. states, etc.
+ 
+## High level packages 
 
-["Step-by-Step Choropleth Map in R: A case of mapping Nepal"](https://medium.com/@anjesh/step-by-step-choropleth-map-in-r-a-case-of-mapping-nepal-7f62a84078d9){target="_blank"} walks through the process of creating a choropleth map using **rgdal** and **ggplot2**.  (We have not followed either of these tutorials step-by-step... if you do, please provide feedback by [submitting an issue](https://github.com/jtr13/EDAV/issues){target="_blank"}).
+### Choropleth maps
 
+Choropleth maps use color to indicate the value of a variable within a defined region, generally political boundaries. In this section we provide options that do not require you to work with shape files.
 
+["Mapping in R"](https://jtr13.github.io/cc19/mapping-in-r.html){target="_blank"} by Hanjun Li and Chengchao Jin explain how to use the **maps** package to create choropleth maps both with base R graphics and **ggplot2**. The **maps** package is U.S.-centered but also contains spatial data on a few other locations, as documented in the [package reference manual](https://cran.r-project.org/web/packages/maps/maps.pdf){target="_blank"}.
 The **choroplethr** package makes it simple to draw choropleth maps of [U.S. states, countries, and census tracts, as well as countries of the world](https://arilamstein.com/documentation/choroplethr/reference/){target="_blank"} without dealing directly with shape files. The companion package, **choroplethrZip**, provides data for [zip code level choropleths](https://arilamstein.com/creating-zip-code-choropleths-choroplethrzip/){target="_blank"}; **choroplethrAdmin1** draws choropleths for administrative regions of [world countries](https://rdrr.io/cran/choroplethrAdmin1/man/get_admin1_countries.html){target="_blank"}. The following is a brief tutorial on using these packages.
 
 Note: You must install also install **choroplethrMaps** for **choroplethr** to work.  In addition, **choroplethr** requires a number of other dependencies which should be installed automatically, but if they aren't, you can manually install the missing packages that you are notified about when you call `library(choroplethr)`: **maptools**, and **rgdal**, **sp**.
@@ -30,10 +34,8 @@ state_choropleth(df_illiteracy,
                  legend = "Percent Illiterate")
 ```
 
-**Note**: the `choroplethr` "free course" that you may come across arrives one lesson at a time by email over an extended period so not the best option unless you have a couple of weeks to spare.
 
-
-## Square bins
+### Square bins
 
 Packages such as `statebins` create choropleth style maps with equal size regions that roughly represent the location of the region, but not the size or shape.
 
@@ -56,10 +58,24 @@ statebins(df_illit, value_col="Illiteracy",
   theme_statebins()
 ```
 
-## Longitude / Latitude data 
+### Longitude / latitude data 
 
-Note that the options above work with *political boundaries*, based on the names of the regions that you provide. Such maps require packages with geographical boundary information. Longitude / latitude data, on the other hand, can be plotted simply as a scatterplot with x = longitude and y = latitude, without any background maps (just don't mix up x & y!) The first part of ["Data wrangling visualisation and spatial analysis: R Workshop"](http://www.seascapemodels.org/data/data-wrangling-spatial-course.html) by C. Brown, D. Schoeman, A. Richardson, and B. Venables provides a detailed walkthrough of spatial exploratory data analysis with copepod data (a type of zooplankton) using this technique with `ggplot2::geom_point()`. 
+Note that the options above work with *political boundaries*, based on the names of the regions that you provide. Such maps require packages with geographical boundary information. Longitude / latitude data, on the other hand, can be plotted simply as a scatterplot with x = longitude and y = latitude, without any background maps (just don't mix up x & y!) The first part of ["Data wrangling visualisation and spatial analysis: R Workshop"](http://www.seascapemodels.org/data/data-wrangling-spatial-course.html#41_data_wrangling_and_plotting_with_tidyverse){target="_blank"} by C. Brown, D. Schoeman, A. Richardson, and B. Venables provides a detailed walkthrough of spatial exploratory data analysis with copepod data (a type of zooplankton) using this technique with `ggplot2::geom_point()`. It is a highly recommended resource as it covers much of the data science pipeline from the context of the problem to obtaining data, cleaning and transforming it, exploring the data, and finally modeling and predicting.
 
-If background maps are desired, there are many options.  The [tutorial](http://www.seascapemodels.org/data/data-wrangling-spatial-course.html) mentioned above provides examples using the **maps** or **sf** packages. It is a highly recommended resource as it covers much of the data science pipeline from the context of the problem to obtaining data, cleaning and transforming it, exploring the data, and finally modeling and predicting.
+Adding a background map to lon/lat data requires pulling a map from a map API and setting a bounding box. This can be done easily with **ggmap**, which offers several different map source options.  Google Maps API was the go-to, but they now [require you to enable billing through Google Cloud Platorm](https://cloud.google.com/free/){target="_blank"}.  You get $300 in free credit, but if providing a credit card isn't your thing, you may consider using Stamen Maps instead, with the `get_stamenmap()` function. Use the development version of the package; instructions and extensive examples are available on the package's [GitHub page](https://github.com/dkahle/ggmap){target="_blank"} ["Stamen Maps with ggmap"](https://jtr13.github.io/cc19/stamen-maps-with-ggmap.html){target="_blank"} by Mrugank Akarte offers an introductory tutorial. ["Getting started Stamen maps with ggmap"](https://statisticaloddsandends.wordpress.com/2018/10/25/getting-started-stamen-maps-with-ggmap/){target="_blank"} will help you get started with Stamen maps through an example using the Sacramento dataset in the **caret** package. 
 
-Another good choice for background maps is **ggmap**, which offers several different map source options.  Google Maps API was the go-to, but they now [require you to enable billing through Google Cloud Platorm](https://cloud.google.com/free/){target="_blank"}.  You get $300 in free credit, but if providing a credit card isn't your thing, you may consider using Stamen Maps instead, with the `get_stamenmap()` function. Use the development version of the package; instructions and extensive examples are available on the package's [GitHub page](https://github.com/dkahle/ggmap){target="_blank"} ["Getting started Stamen maps with ggmap"](https://statisticaloddsandends.wordpress.com/2018/10/25/getting-started-stamen-maps-with-ggmap/){target="_blank"} will help you get started with Stamen maps through an example using the Sacramento dataset in the **caret** package.
+
+## Shape files and more
+
+["Plotting Maps with R: An Example-Based Tutorial"](https://jtr13.github.io/cc19/plotting-maps-with-r-an-example-based-tutorial.html){target="_blank"} by Jonathan Santoso and Kevin Wibisono provides an introduction to working with shape files using the **rgdal** package and plotting maps with base R graphics, **ggmap**, **leaflet**, and **tmap**. 
+
+["Mapping in R just got a whole lot easier"](https://www.computerworld.com/article/3175623/mapping-in-r-just-got-a-whole-lot-easier.html){target="_blank"} by Sharon Machlis (2017-03-03) offers a tutorial on using the **tmap**, **tmaptools**, and **tigris** packages to create choropleth maps. Note that with this approach, you will need to merge geographic shape files with your data files, and then map. 
+
+["Step-by-Step Choropleth Map in R: A case of mapping Nepal"](https://medium.com/@anjesh/step-by-step-choropleth-map-in-r-a-case-of-mapping-nepal-7f62a84078d9){target="_blank"} walks through the process of creating a choropleth map using **rgdal** and **ggplot2**.
+
+The [second part of the copepod data tutorial](http://www.seascapemodels.org/data/data-wrangling-spatial-course.html#42_introduction_to_mapping_and_spatial_analysis_in_r){target="_blank"} of the  mentioned [above](#longitude-latitude-data) provides examples using the **maps** and **sf** packages. You'll learn how to set bounding boxes and change the map projection. The tutorial concludes with an interactive map created with **leaflet**.
+
+
+## State-of-the-art
+
+If you're serious about learning how to create maps in R, [Geocomputation in R](https://geocompr.robinlovelace.net/){target="_blank"} by Robin Lovelace, Jakub Nowosad, and Jannes Muenchow is the place to start. This book focuses on the **tmap** package, but is much more than a technical how-to, providing a theoretical context for working with geographical data.
