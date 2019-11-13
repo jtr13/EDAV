@@ -245,6 +245,8 @@ If you are [contributing to someone else's repo](#st-pr-on-another-repo-with-bra
  - Undo the last commit:  `git reset --soft HEAD~1` <br> (Fun fact: ["How do I undo the most recent local commits in Git?"](https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git){target="_blank"} has the second highest number of votes of any question on Stack Overflow, and over 8 million views.)
 
  - Undo changes since the last commit: `git reset --hard HEAD`
+ 
+ - Undo changes in one file since the last (or any) commit: `git checkout -- [filename]` [SO link](https://stackoverflow.com/questions/692246/undo-working-copy-modifications-of-one-file-in-git){target="_blank"}
 
  - Undo deleted branch: Look for the SHA (hash) returned when you deleted the branch. Then `git checkout -b <branch-name> <SHA>` <br> [SO link](https://stackoverflow.com/a/39038276/5314416){target="_blank"}
  
