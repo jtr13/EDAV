@@ -14,6 +14,7 @@ r_github_packages:
  - cttobin/ggthemr
  - hadley/emo
  - hrbrmstr/statebins
+ - rstudio/bookdown
  - tidyverse/forcats
 
 
