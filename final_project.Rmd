@@ -30,13 +30,27 @@ The topic you choose is open-ended... choose something that you are intereted in
 
 The data can be pulled from multiple sources; it does not need to be a single dataset. Be sure to get data from the original source. For example, if you wish to work with data collected and distributed by the [Centers for Disease Control](https://www.cdc.gov/DataStatistics/){target="_blank"}, that is where you should go to access the data, not a third party that has posted the data. Avoid overused datasets (think `Titanic`) as well as those used in Kaggle (or similar) competitions. 
 
+### Reproducible workflow
+
+It is important to think about a reproducible workflow from the very start. Everything you do should be guided by the question: Could others repeat what you've done based on the materials and explanations you've provided?
+
+In practical terms, this means:
+
+* Use git/GitHub for version control, collaboration, and sharing code.
+
+* Use rmarkdown (as with psets) to keep code, output, and analysis together. If there are pieces of your project that can't be included in the `.Rmd`, then document why this is the case and provide clear steps on how your process can be reproduced.
+
+* Use scripts for importing, cleaning and transforming data. As above, if it is not feasible or practical to do so, explain why and provide instructions for reproducing the work.
+
+* Document as you go. Copy and paste helpful links, Stack Overflow posts, whatever you use into comments in the places you use them. You will be happy you did so. 
+
 ### Code
 
 All of your code should be stored on GitHub. We will spend some time in class learning how to set up a Git/GitHub workflow, but there is some leeway in terms of how you accomplish this. All group members should have write access to the same repo. You will need to discuss your work plan to avoid merge conflicts. 
 
-Keep your project organized.  At a minimum, create a `data/raw` folder (maybe put in `.gitignore`), a `data/tidy` folder (or perhaps another name to indicate that you've worked on the data or subsetted it... it may not necessarily be tidy.), and `analysis` folder for your `.Rmd`s and `.html` (output) files. Use may also have an `R` folder for preprocessing scripts or functions that don't belong in the `.Rmd` file.
+Keep your project organized.  At a minimum, create a `data/raw` folder, a `data/clean` folder, and an `analysis` folder for your `.Rmd`s and `.html` (output) files. Use may also have an `R` or `preprocess` folder for preprocessing scripts or functions that don't belong in the `.Rmd` file.
 
-In your report, include a link to the repo, as well as links to specific files as relevant. The static visualizations should be done in R, but other pieces, such as data importation and cleaning do not. 
+In your report, include a link to the repo, as well as links to specific files as relevant. The static visualizations should be done in R, but other pieces, such as data importation and cleaning do not have to be.
 
 
 ### Analysis
@@ -55,7 +69,9 @@ After final projects are turned in, you will be asked write peer reviews of othe
 
 ## Report format
 
-You have a choice of report formats, all of which are rendered from `.Rmd` files: `html_document`, bookdown book, or shiny app. Your grade will not be affected by the output format you choose. Regardless of the output format, your report will have seven sections as described in the [outline section](#outline) below. These sections will be ## headers in an `html_document`, chapters in a bookdown book, or tabs in a shiny app. If you have another idea for a report format, let us know and we will consider it. (Slides will not work since there's too much information to include.)
+You have a choice of report formats, all of which are rendered from `.R` and/or `.Rmd` files: `pdf_document`, `html_document`, [bookdown book](https://bookdown.org/yihui/bookdown/){target="_blank"}, or [shiny app](https://shiny.rstudio.com/){target="_blank"}.
+
+Your grade will not be affected by the output format you choose. Regardless of the output format, your report will have seven sections as described in the [outline section](#outline) below. These sections will be ## headers in an `html_document`, chapters in a bookdown book, or tabs in a shiny app. If you have another idea for a report format, let us know and we will consider it. (Slides will not work since there's too much information to include.) 
 
 ## Outline
 
