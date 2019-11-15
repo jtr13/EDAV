@@ -6,6 +6,7 @@ clean: [packages.bib, bookdown.bbl]
 #new_session: yes
 delete_merged_file: true
 edit: https://github.com/jtr13/EDAV/edit/master/%s
+view: https://github.com/jtr13/EDAV/blob/master/%s
 
 # chapter ordering
 rmd_files: [

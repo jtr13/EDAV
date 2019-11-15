@@ -32,17 +32,17 @@ One of the most common problems is confusing `color` and `fill`. `geom_point()` 
 
 ### Continuous data
 
-#### ColorBrewer
+#### ColorBrewer {-}
 
 + `scale_color_distiller(palette = "PuBu")` or `scale_fill_distiller(palette = "PuBu")`
 
 (What *doesn't* work: `scale_color_brewer(palette = "PuBu")`)
 
-#### Viridis
+#### Viridis {-}
 
 + `scale_color_viridis_c()` or `scale_fill...`  (the c stands for continuous)
 
-#### Create your own
+#### Create your own {-}
 
 `+ scale_color_gradient(low = "white", high = "red")` or `+ scale_fill...`
 
@@ -53,7 +53,7 @@ One of the most common problems is confusing `color` and `fill`. `geom_point()` 
 
 ### Discrete data
 
-#### ColorBrewer
+#### ColorBrewer {-}
 
 + `scale_color_brewer(palette = "PuBu")` or `scale_fill...`
 
@@ -61,9 +61,12 @@ One of the most common problems is confusing `color` and `fill`. `geom_point()` 
 
 + `scale_color_viridis_d()` or `scale_fill...` (the d stands for discrete)
 
-#### Create your own
+#### Create your own {-}
 
 `+ scale_color_manual(values = c("red", "yellow", "blue"))` or `scale_fill...`
 
 `+ scale_fill_manual(values = c("red", "yellow", "blue"))` or `scale_fill...`
 
+## Links
+
+[An alternative to pink & blue: Colors for gender data](https://blog.datawrapper.de/gendercolor/){target="_blank"} -- excellent survey of the color pallettes used for gender by major news organizations, as well as suggestions for handling this tricky topic
