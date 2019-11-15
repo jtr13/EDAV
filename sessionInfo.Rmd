@@ -1,4 +1,4 @@
-# sessionInfo()
+# session_info()
 
 ```{r, cache=FALSE}
 devtools::session_info()
