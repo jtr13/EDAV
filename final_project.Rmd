@@ -44,6 +44,8 @@ In practical terms, this means:
 
 * Document as you go. Copy and paste helpful links, Stack Overflow posts, whatever you use into comments in the places you use them. You will be happy you did so. 
 
+Recommended reading: [Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285){target="_blank"}.
+
 ### Code
 
 All of your code should be stored on GitHub. We will spend some time in class learning how to set up a Git/GitHub workflow, but there is some leeway in terms of how you accomplish this. All group members should have write access to the same repo. You will need to discuss your work plan to avoid merge conflicts. 
