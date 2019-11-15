@@ -58,6 +58,7 @@ rmd_files: [
   "publish_using_r.Rmd",
   "workflow_notes.Rmd",
   "general_resources.Rmd",
-  "chapter_index.Rmd"
+  "chapter_index.Rmd",
+  "sessionInfo.Rmd"
 ]
 

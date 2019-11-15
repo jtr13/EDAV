@@ -1,0 +1,6 @@
+# sessionInfo()
+
+```{r, cache=FALSE}
+sessionInfo()
+```
+

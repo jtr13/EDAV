@@ -44,7 +44,7 @@ In practical terms, this means:
 
 * Document as you go. Copy and paste helpful links, Stack Overflow posts, whatever you use into comments in the places you use them. You will be happy you did so. 
 
-Recommended reading: [Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285){target="_blank"}.
+Recommended reading: [Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285){target="_blank"}. (Not all rules are applicable to this assignment but it will help you think about and develop a solid personal workflow plan going forward.)
 
 ### Code
 
