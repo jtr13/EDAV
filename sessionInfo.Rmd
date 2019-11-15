@@ -1,7 +1,6 @@
 # sessionInfo()
 
 ```{r, cache=FALSE}
-sessionInfo()
 devtools::session_info()
 ```
 
