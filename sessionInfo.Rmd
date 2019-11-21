@@ -1,6 +1,11 @@
-# sessionInfo()
+# Session information
+
+```{r, echo = FALSE}
+options(width = 100)
+```
 
 ```{r, cache=FALSE}
-sessionInfo()
+
+sessioninfo::session_info()
 ```
 
