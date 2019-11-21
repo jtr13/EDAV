@@ -252,6 +252,8 @@ If you are [contributing to someone else's repo](#st-pr-on-another-repo-with-bra
  
  - Make local the same as origin: `git fetch origin` <br> `git reset --hard origin/master`   [SO link](https://stackoverflow.com/questions/1628088/reset-local-repository-branch-to-be-just-like-remote-repository-head){target="_blank"}
  
+ - Add back a file that was deleted but still exists on another branch `git checkout otherbranch myfile.txt` [SO link](https://stackoverflow.com/questions/307579/how-do-i-copy-a-version-of-a-single-file-from-one-git-branch-to-another){taraget="_blank"}
+ 
  Slides from Karthik Ram's workshop, [Getting Unstuck from Git](http://inundata.org/lectures/git/#/){target="_blank"}, offer clear ways out of git problems, expressed in English (such as "I royally screwed up the last several commits. I just want life to be good again") , not git speak. An excellent resource!
 
 ## Troubleshooting

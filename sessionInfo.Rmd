@@ -4,8 +4,8 @@
 options(width = 100)
 ```
 
-```{r, cache=FALSE}
 
-sessioninfo::session_info()
+```{r, cache=FALSE}
+devtools::session_info()
 ```
 
