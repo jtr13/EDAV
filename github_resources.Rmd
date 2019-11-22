@@ -232,7 +232,7 @@ Fixing things generally involves returning to an earlier point in git history. T
 
 If you are [contributing to someone else's repo](#st-pr-on-another-repo-with-branching) and things on your end get hopelessly messed up, the easiest way out is to start over. First be sure to keep a local copy of the files you need in a new folder, then [delete your fork on GitHub](https://help.github.com/en/github/administering-a-repository/deleting-a-repository){target="_blank"}, delete the local clone, fork again on GitHub, clone again to get a fresh local copy, and add the files you need back into the project. This is a variation of the ["Burn it all down"](https://happygitwithr.com/burn.html){target="_blank"} described in *Happy Git with R*. 
 
-### Forgot to create a new branch
+### Forgot to branch
 
  - **if you didn't commit anything yet**: <br> Just create the new branch and your work will be moved there, as [changes in the working directory do not belong to a branch until they are committed](https://stackoverflow.com/a/1394804/5314416){target="_blank"}.
  
@@ -246,17 +246,17 @@ If you are [contributing to someone else's repo](#st-pr-on-another-repo-with-bra
 
  - Undo changes since the last commit: `git reset --hard HEAD`
  
- - Undo changes in one file since the last commit: `git checkout -- [filename]` [SO link](https://stackoverflow.com/questions/692246/undo-working-copy-modifications-of-one-file-in-git){target="_blank"}
+ - Undo changes in one file since the last commit:<br>`git checkout -- [filename]` [SO link](https://stackoverflow.com/questions/692246/undo-working-copy-modifications-of-one-file-in-git){target="_blank"}
 
- - Undo deleted branch: Look for the SHA (hash) returned when you deleted the branch. Then `git checkout -b <branch-name> <SHA>` <br> [SO link](https://stackoverflow.com/a/39038276/5314416){target="_blank"}
+ - Undo deleted branch: Look for the SHA (hash) returned when you deleted the branch. Then:<br>`git checkout -b <branch-name> <SHA>` <br> [SO link](https://stackoverflow.com/a/39038276/5314416){target="_blank"}
  
 ### Random 
  
- - Make local the same as origin: `git fetch origin` <br> `git reset --hard origin/master`   [SO link](https://stackoverflow.com/questions/1628088/reset-local-repository-branch-to-be-just-like-remote-repository-head){target="_blank"}
+ - Make local the same as origin:<br>`git fetch origin`<br>`git reset --hard origin/master`   [SO link](https://stackoverflow.com/questions/1628088/reset-local-repository-branch-to-be-just-like-remote-repository-head){target="_blank"}
  
- - Add back a file that was deleted but still exists on another branch `git checkout otherbranch myfile.txt` [SO link](https://stackoverflow.com/questions/307579/how-do-i-copy-a-version-of-a-single-file-from-one-git-branch-to-another){taraget="_blank"}
+ - Add back a file that was deleted but still exists on another branch:<br>`git checkout otherbranch myfile.txt` [SO link](https://stackoverflow.com/questions/307579/how-do-i-copy-a-version-of-a-single-file-from-one-git-branch-to-another){taraget="_blank"}
  
- - Get rid of a file on GitHub that was added to `.gitignore` but is still there: `git rm --cached [filename]` then commit and push changes to GitHub [SO link](https://stackoverflow.com/a/1143800/5314416){target="_blank"}
+ - Get rid of a file on GitHub that was added to `.gitignore` but is still there:<br>`git rm --cached [filename]`<br>(then commit and push changes to GitHub) [SO link](https://stackoverflow.com/a/1143800/5314416){target="_blank"}
  
  Slides from Karthik Ram's workshop, [Getting Unstuck from Git](http://inundata.org/lectures/git/#/){target="_blank"}, offer clear ways out of git problems, expressed in English (such as "I royally screwed up the last several commits. I just want life to be good again") , not git speak. An excellent resource!
 
