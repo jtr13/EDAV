@@ -71,7 +71,7 @@ After final projects are turned in, you will be asked write peer reviews of othe
 
 ## Report format
 
-You have a choice of report formats, all of which are rendered from `.R` and/or `.Rmd` files: `pdf_document`, `html_document`, [bookdown book](https://bookdown.org/yihui/bookdown/){target="_blank"}, or [shiny app](https://shiny.rstudio.com/){target="_blank"}.
+You have a choice of report formats, all of which are rendered from `.R` and/or `.Rmd` files: `pdf_document`, `html_document`, [bookdown book](https://bookdown.org/yihui/bookdown/){target="_blank"}, or [shiny app](https://shiny.rstudio.com/){target="_blank"}. If you choose bookdown, you may begin with the [EDAV project template](https://github.com/jtr13/EDAVproject){target="_blank"} on GitHub. Instructions are provided in the repo [README](https://github.com/jtr13/EDAVproject/blob/master/README.md){target="_blank"}.
 
 Your grade will not be affected by the output format you choose. Regardless of the output format, your report will have seven sections as described in the [outline section](#outline) below. These sections will be ## headers in an `html_document`, chapters in a bookdown book, or tabs in a shiny app. If you have another idea for a report format, let us know and we will consider it. (Slides will not work since there's too much information to include.) 
 
