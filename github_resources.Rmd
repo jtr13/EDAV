@@ -16,7 +16,7 @@ Ok, not satisfied with fixing typos on GitHub? Ready to work locally and move co
 
 3. (Optional) *Make sure that you can pull from and push to GitHub from your computer* [Connect to GitHub](https://happygitwithr.com/push-pull-github.html){target="_blank"}.
 
-### What is your goal?
+## Now what?
 
 Choose the right section based on what you're trying to accomplish:
 
