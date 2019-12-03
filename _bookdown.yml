@@ -39,7 +39,7 @@ rmd_files: [
 
 # part 6 special data types
   "maps.Rmd",
-  "leaflet.Rmd",
+ # "leaflet.Rmd",
   "network.Rmd",
   "timeseriesbasic.Rmd",
   "tidyquant.Rmd",
