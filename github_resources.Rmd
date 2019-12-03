@@ -14,7 +14,16 @@ Ok, not satisfied with fixing typos on GitHub? Ready to work locally and move co
 
 2. *Tell git your name and email address.* [Introduce yourself to Git](https://happygitwithr.com/hello-git.html){target="_blank"} in *Happy Git* explains it all.
 
-3. (Optional) *Make sure that you can pull from and push to GitHub from your computer* [Connect to GitHub](https://happygitwithr.com/push-pull-github.html){target="_blank"} 
+3. (Optional) *Make sure that you can pull from and push to GitHub from your computer* [Connect to GitHub](https://happygitwithr.com/push-pull-github.html){target="_blank"}.
+
+### What is your goal?
+
+Choose the right section based on what you're trying to accomplish:
+
+* If you are working by yourself and just getting started: [the no branch workflow](#the-no-branch-workflow).
+* If you are working by yourself and want to learn how to use branches, *or are a collaborator (i.e. have write access) to another repo*: [your repo with branching](#your-repo-with-branching).
+* If you are not a collaborator (that is, don't have write access to a repository) but wish to contribute to a project for the first time: [1st PR on another repo with branching](#st-pr-on-another-repo-with-branching).
+* If you are not a collaborator but wish to contribute to the same project again: [2nd-nth PR on another repo with branching](#nd-nth-pr-on-another-repo-with-branching).
 
 ## The no branch workflow
 
@@ -38,15 +47,15 @@ The next step is to click the **Commit** button and enter a commit message that 
 
 It's not considered good practice to commit too often, but as a beginner, it's useful to do so to learn how it all works.
 
-## Your repo with branching
+## Your repo with branching 
 
-Once you've comfortable with the workflow described above, you're ready to start branching. The process is quite similar whether you're working on your own repo or someone else's. 
+Once you've comfortable with the workflow described above, you're ready to start branching. 
 
 <center>
 ![](images/git/your-repo.jpeg)
 </center>
 
-If it's *your* repo, you can follow the steps in [these slides](https://github.com/jtr13/EDAV/blob/master/pdfs/BranchingYourRepo.pdf){target="_blank"}, which provide step-by-step detail on creating a branch, doing work on the branch and then submitting a pull request to merge the changes into origin/master. Or you can follow the steps below, skipping steps 1 and 3.
+If it's *your* repo--or you have write access to someone else's repo, begin by cloning the repo as in the workflow above. Note that if you have write access to someone else's repo, you should still clone the repo, not fork it. The repo will still be referred to as "origin" even though you're not the owner. After cloning, continue with [step 4](#step-4-branch) below, or follow the steps in [these slides](https://github.com/jtr13/EDAV/blob/master/pdfs/BranchingYourRepo.pdf){target="_blank"}, which provide step-by-step detail on creating a branch, doing work on the branch and then submitting a pull request to merge the changes into origin/master.
 
 ## 1st PR on another repo with branching
 
@@ -56,7 +65,7 @@ If it's *your* repo, you can follow the steps in [these slides](https://github.c
 
 ### Step 1: Fork the upstream repo (once) {-}
 
-*Skip this step if you are syncing with your own repo--that is, you created the repo, you're not cloning a fork of someone else's repo.*
+*Skip this step if you are syncing with a repo that you have write access to, whether it's your own or someone else's.*
 
 Let's say you want to contribute to EDAV! Fork [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and then on your own GitHub page, you will see a forked **EDAV** repo under the repositories section. Note, from now on, the term **upstream repository** refers to the original repo of the project that you forked and the term **origin repository** refers to the repo that you created or forked on GitHub. From your respective, both **upstream** and **origin** are remote repositories.
 
@@ -73,7 +82,7 @@ Since we have already connected git with RStudio, we can create a local repo in 
 
 ### Step 3: Configure remote that points to the upstream repository (once) {-}
 
-*Skip this step if you're syncing with your own repo.*
+*Skip this step if you're syncing with a repo that you have write access to.*
 
 The purpose of this step is to specify the location of the upstream repository, that is, the original project, not your copy of it.
 
