@@ -96,7 +96,7 @@ The purpose of this step is to specify the location of the upstream repository, 
 
 To complete this step, type in the following command line: 
 
-`> git remote add upstream <upstream repo url>`
+`$ git remote add upstream <upstream repo url>`
 
 Source: [Configuring a remote for a fork](https://help.github.com/en/articles/configuring-a-remote-for-a-fork){target="_blank"}
 
