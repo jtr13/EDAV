@@ -110,7 +110,7 @@ upstream        https://github.com/tidyverse/forcats (fetch)
 upstream        https://github.com/tidyverse/forcats (push)
 ```
 
-(Although we have the option to fetch from or push to either remote, as we will see, we will be *fetching* from upsteam and *pushing* to origin.)
+(Although four options are listed, that is, fetching or pushing from either remote, as the diagram above indicates, we will only *fetch* from upsteam and *push* to origin.)
 
 ### Step 4: Branch {-}
 
