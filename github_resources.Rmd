@@ -94,7 +94,7 @@ Since we have already connected git with RStudio, we can create a local repo in 
 
 The purpose of this step is to specify the location of the upstream repository, that is, the original project, not your copy of it.
 
-To complete this step, type in the following command line: 
+To complete this step, type in the following at the command line: 
 
 `$ git remote add upstream <upstream repo url>`
 
@@ -187,9 +187,9 @@ How you sync depends on whether you are syncing with your own repo ("origin") or
 
 Switch to the master branch (important!), then click the pull button (down arrow) in the Git pane in RStudio. Or you can type the following in the Terminal:
 
-`> git checkout master`  
+`$ git checkout master`  
 
-`> git pull`
+`$ git pull`
 
 There are no reminders that you're behind, so it's up to you. Make it a habit.
 
@@ -199,11 +199,11 @@ If you're working on someone else's repo, make sure you've [configured an upstre
 
 Then do the following to update your fork:
 
-`> git fetch upstream`
+`$ git fetch upstream`
 
-`> git checkout master`
+`$ git checkout master`
 
-`> git merge upstream/master`
+`$ git merge upstream/master`
 
 Source: [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork){target="_blank"}
 
@@ -218,19 +218,19 @@ If your previous pull request was merged, it's good practice to delete the assoc
 
 If you prefer to work in the terminal, you can delete the remote branch with:
 
-`> git push origin --delete <branchname>`
+`$ git push origin --delete <branchname>`
 
 2. To delete the local branch, switch to the master branch in RStudio and then type the following in the terminal:
 
-`> git branch -d branchname`
+`$ git branch -d branchname`
 
 3. Take note that git doesn't stop tracking the remote branch even though it's gone in both places! To stop tracking deleted branches use the following:
 
-`> git fetch -p`
+`$ git fetch -p`
 
 Otherwise you will still see the deleted branches listed in RStudio's Git pane, and they will still appear when you look at all of your branches with 
 
-`> git branch -a`  (* = checked out branch)
+`$ git branch -a`  (* = checked out branch)
 
 Speaking of which, be aware that the Git pane doesn't tend to update in real time, so you'll likely still see branches listed that have been deleted. Be careful not to switch to them, or you will inadvertently recreate them. (Deleted branches have a habit of coming back.) Clicking on master (even though you're already on master) appears to trigger an update of the dropdown list. If that doesn't work, switching out of the project and back in will do so, if you want to be sure that the branches you deleted are really gone.
 
