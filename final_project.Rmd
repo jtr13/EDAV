@@ -36,7 +36,7 @@ It is important to think about a reproducible workflow from the very start. Ever
 
 In practical terms, this means:
 
-* Use git/GitHub for version control, collaboration, and sharing code. All team members should have write access (i.e. be collaborators) to the same repo, either belonging to one team member or part of an organization that you create. With write access, think of the repo as "yours" and follow the ["Your repo with branching" workflow](https://edav.info/github.html#your-repo-with-branching).
+* Use git/GitHub for version control, collaboration, and sharing code. All team members should have write access (i.e. be collaborators) to the same repo, either belonging to one team member or part of a [GitHub organization](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/creating-a-new-organization-from-scratch){target="_blank"} that you create. With write access, think of the repo as "yours" and follow the ["Your repo with branching" workflow](https://edav.info/github.html#your-repo-with-branching).
 
 * Use rmarkdown (as with psets) to keep code, output, and analysis together. If there are pieces of your project that can't be included in the `.Rmd`, then document why this is the case and provide clear steps on how your process can be reproduced.
 
