@@ -57,6 +57,14 @@ Once you've comfortable with the workflow described above, you're ready to start
 
 If it's *your* repo--or you have write access to someone else's repo--begin by cloning the repo as in the workflow above. For emphasis: if you have write access to someone else's repo, you should still *clone* the repo, not *fork* it. The repo will be referred to as "origin" even though you're not the owner; origin simply means the repo from which the project was cloned. Next, continue with [step 4](#step-4-branch) below, or follow the steps in [these slides](https://github.com/jtr13/EDAV/blob/master/pdfs/BranchingYourRepo.pdf){target="_blank"}, which provide step-by-step detail on creating a branch, doing work on the branch and then submitting a pull request to merge the changes into origin/master.
 
+At any point, you can check the remotes (in this case, GitHub repositories) that are linked to your project with `git remote -v`. If your GitHub username is `person1` and you have write access to a repo called `finalproject` created by `person2`, your remotes will look like this:
+
+```
+$ git remote -v
+origin  https://github.com/person2/finalproject.git(fetch)
+origin  https://github.com/person2/finalproject.git(push)
+```
+
 ## 1st PR on another repo with branching
 
 <center>
@@ -91,6 +99,18 @@ To complete this step, type in the following command line:
 `> git remote add upstream <upstream repo url>`
 
 Source: [Configuring a remote for a fork](https://help.github.com/en/articles/configuring-a-remote-for-a-fork){target="_blank"}
+
+Once the upstream remote is added, you will have two remotes: origin and upstream. For example, the remotes for my (`jtr13`) local forcats repository are:
+
+```
+$ git remote -v
+origin  https://github.com/jtr13/forcats.git (fetch)
+origin  https://github.com/jtr13/forcats.git (push)
+upstream        https://github.com/tidyverse/forcats (fetch)
+upstream        https://github.com/tidyverse/forcats (push)
+```
+
+(Although we have the option to fetch from or push to either remote, as we will see, we will be *fetching* from upsteam and *pushing* to origin.)
 
 ### Step 4: Branch {-}
 
