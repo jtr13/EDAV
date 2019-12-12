@@ -5,7 +5,7 @@ output: html_document
 
 ![](images/banners/banner_basics.png)
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, cache=FALSE}
 package_num <- dim(available.packages(repos = "http://cloud.r-project.org/"))[1]
 numpack <- floor(package_num / 100) * 100
 ```
@@ -19,7 +19,7 @@ In an effort to get everyone on the same page, here is a checklist of essentials
 (*r4ds* = [R for Data Science](https://r4ds.had.co.nz/) by Garrett Grolemund and Hadley Wickham, free online)
 
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=FALSE}
 library(dplyr)
 r_latest_version <- xml2::read_html("https://cran.r-project.org/bin/macosx/") %>% 
     rvest::html_node("body") %>% 
