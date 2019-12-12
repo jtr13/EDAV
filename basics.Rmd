@@ -6,6 +6,7 @@ output: html_document
 ![](images/banners/banner_basics.png)
 
 ```{r, echo = FALSE, cache=FALSE}
+# number of R packages
 package_num <- dim(available.packages(repos = "http://cloud.r-project.org/"))[1]
 numpack <- floor(package_num / 100) * 100
 ```
@@ -20,6 +21,7 @@ In an effort to get everyone on the same page, here is a checklist of essentials
 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, cache=FALSE}
+# latest versions
 library(dplyr)
 r_latest_version <- xml2::read_html("https://cran.r-project.org/bin/macosx/") %>% 
     rvest::html_node("body") %>% 
@@ -36,7 +38,7 @@ rstudio_latest_version <-
 ```
 
 
-1. [Install R](https://https://r4ds.had.co.nz/introduction.html#r){target="_blank"} (*r4ds*) -- You need to have this installed but you won't open the application since you'll be working in RStudio. If you already installed R, make sure you're current! The latest version of R (as of `r Sys.Date()`) is `r r_latest_version`.
+1. [Install R](https://r4ds.had.co.nz/introduction.html#r){target="_blank"} (*r4ds*) -- You need to have this installed but you won't open the application since you'll be working in RStudio. If you already installed R, make sure you're current! The latest version of R (as of `r Sys.Date()`) is `r r_latest_version`.
 
 2. [Install RStudio](https://r4ds.had.co.nz/introduction.html#rstudio){target="_blank"} (*r4ds*) -- Download the free, Desktop version for your OS. Working in this IDE will make working in R much more enjoyable. As with R, stay current. RStudio is constantly adding new features. The latest version (as of `r Sys.Date()`) is `r rstudio_latest_version`. 
 
