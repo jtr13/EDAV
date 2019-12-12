@@ -198,7 +198,7 @@ First off...breeeeeeathe. We can fix this. There are a bunch of resources out th
 
 Relax. There are a bunch of people using the same tools you are.
 
-* Your fellow classmates are a good place to start! Post questions to [Piazza](https://piazza.com/){target="_blank"} to see how they could help.
+* Your fellow classmates are a good place to start! Post questions to [Piazza](https://piazza.com/){target="_blank"} asking for help.
 
 * There is a lot of great documentation on R and its functions/packages/etc. Get comfy with [R Documentation](https://www.rdocumentation.org/){target="_blank"} and it will help you immensely.
 
