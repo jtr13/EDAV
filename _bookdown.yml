@@ -3,62 +3,61 @@ chapter_name: ""
 repo: https://github.com/jtr13/EDAV
 output_dir: _book
 clean: [packages.bib, bookdown.bbl]
-#new_session: yes
 delete_merged_file: true
 edit: https://github.com/jtr13/EDAV/edit/master/%s
 view: https://github.com/jtr13/EDAV/blob/master/%s
-
-# chapter ordering
 rmd_files: [
-  # part 1 getting started
-  "index.Rmd",
-  "intro.Rmd",
-  "basics.Rmd",
-  "final_project.Rmd",
-  "contribute.Rmd",
+  "index.Rmd", # Welcome {-}
 
-# part 2 continuous variables
-  "histogram.Rmd",
-  "boxplot.Rmd",
-  "violin.Rmd",
-  "ridgeline.Rmd",
-  "qqplot.Rmd",
+# (PART) Getting Started {-}
+  "intro.Rmd", # Introduction {#intro}
+  "basics.Rmd", # R Basics {#basics} 
+  "final_project.Rmd", # Final Project Assignment {#project}
+  "contribute.Rmd", # Contribute to this Resource {#contribute}
 
-# part 3 categorical
-  "bargraph.Rmd",
-  "cleveland.Rmd",
+# (PART) Continuous Variables {-}
+  "histogram.Rmd", # Chart: Histogram {#histo}
+  "boxplot.Rmd", # Chart: Boxplot {#box}
+  "violin.Rmd", # Chart: Violin Plot {#violin}
+  "ridgeline.Rmd", # Chart: Ridgeline Plots {#ridgeline}
+  "qqplot.Rmd", # Chart: QQ-Plot {#qqplot}
 
-# part 4 multivariate continuous
-  "scatterplot.Rmd",
-  "iris.Rmd",
-  "parallel_coordinates.Rmd",
+# (PART) Categorical Variables {-}
+  "bargraph.Rmd", # Chart: Bar Chart {#bar}
+  "cleveland.Rmd", # Chart: Cleveland Dot Plot {#cleveland}
 
-# part 5 multivariate categorical
-  "mosaic.Rmd",
-  "heatmap.Rmd",
+# (PART) Multivariate Continuous {-}
+  "scatterplot.Rmd", # Chart: Scatterplot {#scatter}
+  "iris.Rmd", # Walkthrough: Iris Scatterplot {#iris}
+  "parallel_coordinates.Rmd", # Chart: Parallel Coordinate Plots {#parallelcoordinates}
 
-# part 6 special data types
-  "maps.Rmd",
- # "leaflet.Rmd",
-  "network.Rmd",
-  "timeseriesbasic.Rmd",
-  "tidyquant.Rmd",
+# (PART) Multivariate Categorical {-}
+  "mosaic.Rmd", # Chart: Mosaic {#mosaic}
+  "heatmap.Rmd", # Chart: Heatmap {#heatmap}
 
-# part 7 working with data
-  "import_data.Rmd",
-  "tidy_data_dplyr.Rmd",
-  "missing_data.Rmd",
-  "outliers.Rmd",
-  "dates.Rmd",
+# (PART) Special Data Types {-}
+  "maps.Rmd", # Spatial Data {#maps}
+  "leaflet.Rmd", # Interactive Geographic Data {#leaflet}
+  "network.Rmd", # Interactive Networks {#network}
+  "timeseriesbasic.Rmd", # Time Series {#timeseriesbasic}
+  "tidyquant.Rmd", # Stock data with tidyquant {#tidyquant}
 
-# part 8 other topics
-  "perception.Rmd",
-  "themes_and_colors.Rmd",
-  "github_resources.Rmd",
-  "publish_using_r.Rmd",
-  "workflow_notes.Rmd",
-  "general_resources.Rmd",
-  "chapter_index.Rmd",
-  "sessionInfo.Rmd"
+# (PART) Working with Data {-}
+  "import_data.Rmd", # Importing Data {#import}
+  "tidy_data_dplyr.Rmd", # Walkthrough: Tidy Data & dplyr {#tidy}
+  "missing_data.Rmd", # Missing Data {#missing}
+  "outliers.Rmd", # Outliers {#outliers}
+  "dates.Rmd", # Dates in R {#dates}
+
+# (PART) Other Topics {-}
+  "perception.Rmd", # Perception/Color Resources {#percept}
+  "themes_and_colors.Rmd", # Themes and Palettes {#themes}
+  "github_resources.Rmd", # GitHub/git Resources {#github}
+  "publish_using_r.Rmd", # Publishing Resources {#publish}
+  "workflow_notes.Rmd", # Workflow Notes {#workflow}
+  "general_resources.Rmd", # General Resources {#general}
+  "chapter_index.Rmd", # Chapter Index by Resource Type {#chapter-index}
+  "sessionInfo.Rmd" # Session information
 ]
 
+# Part and chapter title comments added by jtr::comment_bookdown_yml()
