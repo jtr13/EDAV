@@ -62,7 +62,7 @@ rstudio_latest_version <-
 
 9. [Learn the basic dplyr verbs](https://r4ds.had.co.nz/transform.html){target="_blank"} for data manipulation (*r4ds*) -- Concentrate on the main verbs: **`filter()`** (rows), **`select()`** (columns), **`mutate()`**, **`arrange()`** (rows), **`group_by()`**, and **`summarize()`**. Learn the pipe **`%>%`** operator.
 
-10. Know how to [tidy your data](https://github.com/jtr13/codehelp/blob/master/R/gather.md){target="_blank"} -- The **`gather()`** function from the **tidyr** package will help you get your data in the right form for plotting.  More on this in class. Check out these [super cool animations](https://github.com/gadenbuie/tidyexplain){target="_blank"}, which follow a data frame as it is transformed by `tidyr` functions.
+10. Know how to [tidy your data](https://r4ds.had.co.nz/tidy-data.html){target="_blank"} -- The **`pivot_longer()`** function from the **tidyr** package -- successor to **`gather()`** -- will help you get your data in the right form for plotting.  More on this in class. Check out these [super cool animations](https://github.com/gadenbuie/tidyexplain){target="_blank"}, which follow a data frame as it is transformed by `tidyr` functions.
 
 **General advice**: don't get caught up in the details.  Keep a list of questions and move on. 
 
