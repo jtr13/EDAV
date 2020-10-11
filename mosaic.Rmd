@@ -8,33 +8,15 @@
 
 *This page is a work in progress. We appreciate any input you may have. If you would like to help improve this page, consider [contributing to our repo](contribute.html).*
 
-```{r include=FALSE}
-df = read.csv("data/MusicIcecream.csv")
+```{r}
+df = read_csv("data/MusicIcecream.csv")
 ```
-
 
 ## Overview
 
-This section covers how to make Mosaic plots
+Mosaic plots take some investment to learn to read and draw properly. Particularly when starting out, we recommend drawing them incrementally: start with splitting on one variable and then add additional variables one at a time. The full mosaic plot will have one split per variable.
 
-## tl;dr
-
-```{r message=FALSE}
-vcd::mosaic(Favorite ~ Age + Music, 
-       labeling = vcd::labeling_border(
-         abbreviate_labs = c(3, 10, 6),
-         rot_labels=c(0,0,-45)
-       ),
-       direction=c('v','v','h'), # Age = Vertical, Music = Vertical, Favoriate = Horizonal (a.k.a DoubleDecker)
-       gp = grid::gpar(fill=c('lightblue', 'gray')),
-       df)
-```
-
-## Order of splits
-
-It is best to draw mosaic plots incrementally: start with splitting on one variable and then add additional variables one at a time. The full mosaic plot will have one split per variable.
-
-Important: if your data is in a data frame, as in the example below, **the count column must be called `Freq`**. (Tables and matrices also work, see `?vcd::structable` for more details.)
+Important: if your data has a frequency column, as in the example below, **the count column must be called `Freq`**. (Tables and matrices also work, see `?vcd::structable` for more details.)
 
 Also note that all of these plots are drawn with `vcd::mosaic()` not the base R function, `mosaicplot()`.
 
@@ -89,26 +71,15 @@ vcd::mosaic(Favorite ~ Age + Music,
 
 Note that the direction vector is in order of splits (`Age`, `Music`, `Favorite`), not in the order in which the variables appear in the formula, where the last variable to be split is listed first, before the "~".
 
-## Color
+## Fill color
 
-### Fill color
+Fill colors are applied and recycled according to the *last* cut dimension, i.e. the dependent variable--in this case favorite flavor ice cream. (If this is not working properly, update to the [latest version of **vcd**](https://cran.r-project.org/web/packages/vcd/). 
 
 ```{r}
 vcd::mosaic(Favorite ~ Age + Music, 
-       highlighting_fill = c("lightblue", "blue"),
+       highlighting_fill = c("grey90", "cornflowerblue"),
        df)
 ```
-
-### Border color (must also set fill(?))
-
-```{r}
-vcd::mosaic(Favorite ~ Age + Music,
-       gp = grid::gpar(fill = c("lightblue", "blue"),
-                 col = "white"),
-       spacing = vcd::spacing_equal(sp = unit(0, "lines")),
-       df)
-```
-
 
 ## Labels
 
@@ -162,12 +133,12 @@ vcd::doubledecker(Music ~ Favorite + Age,
 
 ## Mosaic using ggplot
 
-For a comprehensive overview of mosaic plot in ggplot check out the link below.
+To create mosaic plots in the **ggplot2** framework, use `geom_mosaic()` which is available in the **ggmosaic** package: 
+
 [https://cran.r-project.org/web/packages/ggmosaic/vignettes/ggmosaic.html](https://cran.r-project.org/web/packages/ggmosaic/vignettes/ggmosaic.html){target="_blank"}
 
-```{r message=FALSE}
+```{r, eval=FALSE, echo=FALSE}
 library(ggmosaic)
-
 # equivalent to doing Favorite ~ Age + Music in vcd::mosaic with doubledecker style cut
 ggplot(df) + 
   geom_mosaic(
