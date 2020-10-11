@@ -95,7 +95,7 @@ Note that the direction vector is in order of splits (`Age`, `Music`, `Favorite`
 
 ```{r}
 vcd::mosaic(Favorite ~ Age + Music, 
-       highlighting_fill = c("lightblue", "blue")),
+       highlighting_fill = c("lightblue", "blue"),
        df)
 ```
 
