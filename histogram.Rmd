@@ -8,6 +8,7 @@
 
 This section covers how to make histograms.
 
+## practice
 ## tl;dr
 Gimme a full-fledged example!
 
