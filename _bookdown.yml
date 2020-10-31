@@ -16,6 +16,7 @@ rmd_files: [
   "basics.Rmd",
   "final_project.Rmd",
   "contribute.Rmd",
+  "github_resources.Rmd",
 
 # part 2 continuous variables
   "histogram.Rmd",
@@ -54,7 +55,6 @@ rmd_files: [
 # part 8 other topics
   "perception.Rmd",
   "themes_and_colors.Rmd",
-  "github_resources.Rmd",
   "publish_using_r.Rmd",
   "workflow_notes.Rmd",
   "general_resources.Rmd",
