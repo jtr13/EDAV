@@ -6,6 +6,12 @@ Yibai Liu
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r, include=FALSE}
+install.packages("GGally")
+install.packages("ggplot2")
+install.packages("vcd")
+```
+
 ## 1. Overview: Things we can do with pairs() and ggpairs()
 
 When our data contains multivariate variables, it is important to evaluate associations between these variables before modeling. We can create scatterplot matrices, correlation matrix, as well as mosaic pairs plots to get an idea about if and how these variables are correlated with each other. In this tutorial, I would plot using a base r function **pairs()** and a function **ggpairs()** from the `GGally` package, which both functions provide methods to generate customized plot matrices.  
