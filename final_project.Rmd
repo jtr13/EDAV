@@ -4,7 +4,7 @@
 
 ## Overview
 
-This section goes over what's expected for the final project, **Fall 2019**. 
+This section goes over what's expected for the final project, **Fall 2020**. 
 
 **General Note**: Please note that this sheet cannot possibly cover all the "do's and don'ts" of data analysis and visualization. You are expected to follow all of the best practices discussed in class throughout the semester.
 
@@ -16,9 +16,9 @@ The goal of this project is to perform an exploratory data analysis / create vis
 
 ### Teams
 
-For this assignment you will work in teams of 2-4 people. If you wish to select your own partner, please do so by **Wednesday, November 6, 2019.** Piazza is a good place to post your interests and look for partners. After November 6th, partners will be randomly assigned. (This is actually a better option in terms of preparing yourself for a work environment with colleagues that you don't know well.) If you wish to be assigned to a partner before that date so you can get started earlier (recommended) please email me.
+For this assignment you will work in teams of 2-4 people. If you wish to select your own partner, please do so by the date specified in CourseWorks. To indicate who you are working with, sign up in the *People* section of CourseWorks. Do not click the *+Group* button; rather, drag your names into one of the groups already created with the name "Final Project <number>". (If you don't follow these instructions and create your own group, it will not be linked to the Final Project assignment and therefore you won't be able to submit your project properly as a team.) Please join the groups in order starting with group #1 so that we don't end up with gaps in the group numbers.
 
-Once you know who you wish to work with, sign up in the *People* section of CourseWorks. Do not click the *+Group* button; rather, drag your names into one of the groups already created with the name "Final Project <number>". (If you don't follow these instructions and create your own group, it will not be linked to the Final Project assignment and therefore you won't be able to submit your project properly as a team.) Please join the groups in order starting with group #1 so that we don't end up with gaps in the group numbers. 
+Piazza is a good place to post your interests and look for partners. After the date indicated, partners will be randomly assigned. (This is actually a better option in terms of preparing yourself for a work environment with colleagues that you don't know well.) If you wish to be assigned to a partner before that date so you can get started earlier (recommended) please email me.
 
 Once the groups are set up, we will ask for a short description of your project ideas, so start planning!
 
@@ -28,56 +28,15 @@ The topic you choose is open-ended... choose something that you are intereted in
 
 ### Data
 
-The data can be pulled from multiple sources; it does not need to be a single dataset. Be sure to get data from the original source. For example, if you wish to work with data collected and distributed by the [Centers for Disease Control](https://www.cdc.gov/DataStatistics/){target="_blank"}, that is where you should go to access the data, not a third party that has posted the data. Avoid overused datasets (think `Titanic`) as well as those used in Kaggle (or similar) competitions. 
-
-### Reproducible workflow
-
-It is important to think about a reproducible workflow from the very start. Everything you do should be guided by the question: Could others repeat what you've done based on the materials and explanations you've provided?
-
-In practical terms, this means:
-
-* Use git/GitHub for version control, collaboration, and sharing code. All team members should have write access (i.e. be collaborators) to the same repo, either belonging to one team member or part of a [GitHub organization](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/creating-a-new-organization-from-scratch){target="_blank"} that you create. With write access, think of the repo as "yours" and follow the ["Your repo with branching" workflow](https://edav.info/github.html#your-repo-with-branching).
-
-* Use rmarkdown (as with psets) to keep code, output, and analysis together. If there are pieces of your project that can't be included in the `.Rmd`, then document why this is the case and provide clear steps on how your process can be reproduced.
-
-* Use scripts for importing, cleaning and transforming data. As above, if it is not feasible or practical to do so, explain why and provide instructions for reproducing the work.
-
-* Document as you go. Copy and paste helpful links, Stack Overflow posts, whatever you use into comments in the places you use them. You will be happy you did so. 
-
-Recommended reading: [Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285){target="_blank"}. (Not all rules are applicable to this assignment but it will help you think about and develop a solid personal workflow plan going forward.)
-
-### Code
-
-All of your code should be stored on GitHub. We will spend some time in class learning how to set up a Git/GitHub workflow, but there is some leeway in terms of how you accomplish this. All group members should have write access to the same repo. You will need to discuss your work plan to avoid merge conflicts. 
-
-Keep your project organized.  At a minimum, create a `data/raw` folder, a `data/clean` folder, and an `analysis` folder for your `.Rmd`s and `.html` (output) files. Use may also have an `R` or `preprocess` folder for preprocessing scripts or functions that don't belong in the `.Rmd` file.
-
-In your report, include a link to the repo, as well as links to specific files as relevant. The static visualizations should be done in R, but other pieces, such as data importation and cleaning do not have to be.
-
-
-### Analysis
-
-You have a lot of freedom to choose what to do, as long as you restrict yourselves to exploratory techniques (rather than modeling / prediction approaches). In addition, your analysis must be clearly documented and reproducible.
-
-### Feedback
-
-At any point, you may ask the TAs or the instructor (Joyce) for advice. Our primary role in this regard will be to provide general guidance on your choice of data / topic / direction. As always, you are encouraged to post specific questions to [Piazza](https://piazza.com/){target="_blank"}, particularly coding questions and issues. You may also volunteer to discuss your project with the class in order to get feedback--if you'd like to do this, [email the instructor](http://stat.columbia.edu/department-directory/name/joyce-robbins/){target="_blank"} to schedule a date.
-
-### Peer review
-
-After final projects are turned in, you will be asked write peer reviews of other projects. Each individual will be assigned two project groups to review, and instructions will be provided.
-
-**Note**: part of the grade you receive for the class is based on the quality of review that you *write*, not on the feedback that your project *receives.* Your grade for the project (as for all other assignments for the class) will be determined solely by the instructor and TAs.
+The data can be pulled from multiple sources; it does not need to be a single dataset. Be sure to get data from the original source. For example, if you wish to work with data collected and distributed by the [Centers for Disease Control](https://www.cdc.gov/DataStatistics/){target="_blank"}, that is where you should go to access the data, not a third party that has posted the data. Do not use datasets that have been processed and cannot be traced to the source. For this reason, datasets from Kaggle are not good choices unless you can find the original source of the data.
 
 ## Report format
 
-You have a choice of report formats, all of which are rendered from `.R` and/or `.Rmd` files: `pdf_document`, `html_document`, [bookdown book](https://bookdown.org/yihui/bookdown/){target="_blank"}, or [shiny app](https://shiny.rstudio.com/){target="_blank"}. If you choose bookdown, you may begin with the [EDAV project template](https://github.com/jtr13/EDAVproject){target="_blank"} on GitHub. Be sure to follow the instructions provided in the repo [README](https://github.com/jtr13/EDAVproject/blob/master/README.md){target="_blank"}.
+Your report should be submitted as a bookdown book, which you can create from [this template](https://github.com/jtr13/EDAVproject){target="_blank"}. Be sure to follow the instructions provided in the repo [README](https://github.com/jtr13/EDAVproject/blob/main/README.md){target="_blank"}. 
 
-Your grade will not be affected by the output format you choose. Regardless of the output format, your report will have seven sections as described in the [outline section](#outline) below. These sections will be ## headers in an `html_document`, chapters in a bookdown book, or tabs in a shiny app. If you have another idea for a report format, let us know and we will consider it. (Slides will not work since there's too much information to include.) 
+Your report will include the following chapters, as shown in this [rendered version of the EDAV bookdown template](https://jtr13.github.io/EDAVtemplate/).
 
-## Outline
-
-Your report should include the following sections, with headings ("I. Introduction", etc.) as indicated:
+To turn in your final project, just submit the link to the rendered book (such as "https://jtr13.github.io/EDAVtemplate/" to the CourseWorks final project assignment.) After the deadline, do not make any changes to the main branch of your GitHub repo.
 
 ### I. Introduction {-}
 
@@ -104,25 +63,66 @@ Describe any patterns you discover in missing values.
 
 ### V. Results  {-}
 
+You have a lot of freedom to choose what to do, as long as you restrict yourselves to exploratory techniques (rather than modeling / prediction approaches). In addition, your analysis must be clearly documented and reproducible.
+
 Provide a short nontechnical summary of the most revealing findings of your analysis  written for a nontechnical audience. Take extra care to clean up your graphs, ensuring that best practices for presentation are followed, as described in the [audience ready style section](#audience-ready-style) below.
 
-### VI. Interactive component {-}
+Use subheadings as appropriate. See [Todd Schneider's blog posts](https://toddwschneider.com/archives/) for examples of thoughtful, informative subheadings.
 
-Select one (or more) of your key findings to present in an interactive format. Be selective in the choices that you present to the user; the idea is that in 5-10 minutes, users should have a good sense of the question(s) that you are interested in and the trends you've identified in the data. In other words, they should understand the value of the analysis, be it business value, scientific value, general knowledge, etc.
+
+### VI. Interactive or animated component {-}
+
+Select one (or more) of your key findings to present in an interactive or animated format using D3. Be thoughtful about how you use interactivity and/or animation: using these features to add value in a way that would not be possible with a static graph. 
+
+Design with the goal of users walking away with a new understanding of the data and a clear understanding of the purpose of the visualization. If the tool is interactive, provide clear instructions on how the user should engage.
+*Thoughtfulness* is more important than technical prowess; in all aspects of the project, think quality, not quantity.
 
 Interactive graphs must follow all of the best practices as with static graphs in terms of perception, labeling, accuracy, etc. 
 
-You may choose the tool (D3, Shiny, or other) The complexity of your tool will be taken into account: we expect more complexity from a higher-level tool like Shiny than a lower-level tool like D3, which requires you to build a lot from scratch.   
-
-Make sure that the user is clear on what the tool does and how to use it.
-
-It may be possible to include the interactive component directly in your report. If not, publish your graph somewhere on the web and provide a link in your report in the interactive section. The obvious choices are [blockbuilder.org](http://blockbuilder.org/){target="_blank"} to create a block for D3, and [shinyapps.io](https://www.shinyapps.io/){target="_blank"} for Shiny apps but other options are fine. You are encouraged to share experiences on [Piazza](https://piazza.com/){target="_blank"} to help classmates with the publishing process.
+It may be possible to include the interactive component directly in your report. If not, publish your graph somewhere on the web and provide a link in your report in the interactive section. The obvious choices are [blockbuilder.org](http://blockbuilder.org/){target="_blank"} to create a block for D3. You are encouraged to share experiences on [Piazza](https://piazza.com/){target="_blank"} to help classmates with the publishing process.
 
 Note: the interactive component is worth approximately 25\% of the final project grade. Therefore, do not spend 90\% of your time on it... concentrate on the exploratory data analysis piece.
 
 ### VII. Conclusion {-}
 
 Discuss limitations and future directions, lessons learned.
+
+
+## Reproducible workflow
+
+It is important to think about a reproducible workflow from the very start. Everything you do should be guided by the question: Could others repeat what you've done based on the materials and explanations you've provided?
+
+In practical terms, this means:
+
+* Use git/GitHub for version control, collaboration, and sharing code. All team members should have write access (i.e. be collaborators) on the same repo, either belonging to one team member or part of a [GitHub organization](https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/creating-a-new-organization-from-scratch){target="_blank"} that you create. With write access, think of the repo as "yours" and follow the ["Your repo with branching" workflow](https://edav.info/github.html#your-repo-with-branching).
+
+* In general, keep code, output, and analysis together in the `.Rmd` chapter files. If there are pieces of your project that can't be included in the `.Rmd`, then document why this is the case and provide clear steps on how your process can be reproduced.
+
+* Use scripts for importing, cleaning and transforming data. As above, if it is not feasible or practical to do so, explain why and clearly document your workflow.
+
+* Document as you go. Copy and paste helpful links, Stack Overflow posts, whatever you use into comments in the places you use them. You will be happy you did so. 
+
+Recommended reading: [Ten Simple Rules for Reproducible Computational Research](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285){target="_blank"}. (Not all rules are applicable to this assignment but it will help you think about and develop a solid personal workflow plan going forward.)
+
+## Code
+
+All of your code should be stored on GitHub. We will spend some time in class learning how to set up a Git/GitHub workflow. All group members should have write access to the same repo. You will need to discuss your work plan to avoid merge conflicts. 
+
+Keep your project organized. Create folders that work for you, such as `data/raw`, `data/clean`, `preprocess`, etc. 
+
+The static visualizations should be done in R, but other pieces, such as data importation and cleaning do not have to be.
+
+
+## Feedback
+
+At any point, you may ask the TAs or the instructor (Joyce) for advice. Our primary role in this regard will be to provide general guidance on your choice of data / topic / direction. As always, you are encouraged to post specific questions to [Piazza](https://piazza.com/){target="_blank"}, particularly coding questions and issues. You may also volunteer to discuss your project with the class in order to get feedback--if you'd like to do this, [email the instructor](http://stat.columbia.edu/department-directory/name/joyce-robbins/){target="_blank"} to schedule a date.
+
+## Peer review
+
+After final projects are turned in, you will be asked write peer reviews of other projects. Each individual will be assigned two project groups to review, and instructions will be provided.
+
+**Note**: part of the grade you receive for the class is based on the quality of review that you *write*, not on the feedback that your project *receives.* Your grade for the project (as for all other assignments for the class) will be determined solely by the instructor and TAs.
+
 
 ## Writing advice
 
@@ -136,15 +136,9 @@ Be as intellectually honest as possible. That means pointing out flaws in your w
 
 ### Hide code
 
-If you are rendering to `html_document` format include the following in your YAML so that viewing code is optional:
+The bookdown template is set up to do this for you. It includes an [`_common.R` file](https://github.com/jtr13/EDAVtemplate/blob/main/_common.R), referenced in the [`_bookdown.yml` file](https://github.com/jtr13/EDAVtemplate/blob/main/_bookdown.yml), which sets **knitr** chunk options for all chapters.
 
-```
-output: 
-  html_document:
-    code_folding: hide
-```
-
-If you are using bookdown or shiny, do not show code. Rather, include a link to your GitHub repo.
+Since we will not view the code in the bookdown book, be sure that the View and Edit GitHub link buttons work properly. 
 
 ### Interpret your graphs
 
@@ -172,7 +166,6 @@ As we've discussed throughout the semester, standards are higher for clarity in 
 *   The order of items on the axes and legends should be logical. (Alphabetical is usually not the best option.)
 *   Colors should be color-vision-deficiency-friendly.
 *   If categorical variable levels are long, set up the graph so the categorical variable is on the y-axis and the names are horizontal. A better option, if possible, is to shorten the names of the levels.
-*   Not all EDA graphs lend themselves to presentation, either because the graph form is hard to understand without practice or it's not well labeled. The labeling problem can be solved by adding text in an image editor. The downside is that it is not reproducible. If you want to go this route, for the Mac,  [Keynote](https://www.apple.com/keynote/){target="_blank"} and [Paintbrush](https://paintbrush.sourceforge.io/){target="_blank"} are good, free options. 
 *   Err on the side of simplicity. Don't, for example, overuse color when it's not necessary. Ask yourself: does color make this graph any clearer? If it doesn't, leave it out.
 *   Test your graphs on nontechnical friends and family and ask for feedback.
 
