@@ -32,7 +32,7 @@ The data can be pulled from multiple sources; it does not need to be a single da
 
 ## Report format
 
-Your report should be submitted as a bookdown book, which you can create from [this template](https://github.com/jtr13/EDAVproject){target="_blank"}. Be sure to follow the instructions provided in the repo [README](https://github.com/jtr13/EDAVproject/blob/main/README.md){target="_blank"}. 
+Your report should be submitted as a bookdown book, which you can create from [the EDAVproject template](https://github.com/jtr13/EDAVproject){target="_blank"}. Be sure to follow the instructions provided in the repo [README](https://github.com/jtr13/EDAVproject/blob/main/README.md){target="_blank"}. There are other templates in my account. Make sure you use this one.
 
 Your report will include the following chapters, as shown in this [rendered version of the EDAV bookdown template](https://jtr13.github.io/EDAVtemplate/).
 
