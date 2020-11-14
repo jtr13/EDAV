@@ -44,7 +44,7 @@ To turn in your final project, just submit the link to the rendered book (such a
 
 Explain why you chose this topic, and the questions you are interested in studying. Provide context for readers who are not familiar with the topic.
 
-(approximately 1/2 page)
+(suggested: approximately 1/2 page)
 
 
 ### II. Data sources {-}
@@ -55,16 +55,20 @@ Provide some basic information about the dataset: types of variables, number of 
 
 Describe any issues / problems with the data, either known or that you discover.
 
-(approximately 1 page)
+(suggested: approximately 1 page)
 
 
 ### III. Data transformation {-}
 
 Describe the process of getting the data into a form in which you could work with it in R. If your code does not lend itself to being including in the `.Rmd` file, provide a link to the folder or file(s) that contain(s) that code.
 
+(suggested: approximately 1/2 page)
+
 ### IV. Missing values {-}
 
 Describe any patterns you discover in missing values.
+
+(suggested: 2 graphs plus commentary)
 
 ### V. Results  {-}
 
@@ -74,6 +78,7 @@ Provide a short nontechnical summary of the most revealing findings of your anal
 
 Use subheadings as appropriate. See [Todd Schneider's blog posts](https://toddwschneider.com/archives/) for examples of thoughtful, informative subheadings.
 
+(suggested: 5-10 graphs plus commentary, a plot with multiple facets counts as 1 graph)
 
 ### VI. Interactive or animated component {-}
 
@@ -91,6 +96,8 @@ Note: the interactive component is worth approximately 25\% of the final project
 ### VII. Conclusion {-}
 
 Discuss limitations and future directions, lessons learned.
+
+(suggested: approximately 1/2 page)
 
 
 ## Reproducible workflow
@@ -177,6 +184,8 @@ As we've discussed throughout the semester, standards are higher for clarity in 
 Above all, have fun with it <i class="far fa-smile-beam"></i>
 
 ## Grading
+
+We grade holistically, which means that we consider the project as a whole, we do not follow a rubric with dozens of items each worth a few points. Each project is different and this gives you the flexibility to devote more or less to various aspects of the project depending on what's appropriate, within reason.
 
 We are more impressed by *quality* than *quantity*.
 
