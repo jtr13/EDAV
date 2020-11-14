@@ -32,15 +32,19 @@ The data can be pulled from multiple sources; it does not need to be a single da
 
 ## Report format
 
-Your report should be submitted as a bookdown book, which you can create from [the EDAVproject template](https://github.com/jtr13/EDAVproject){target="_blank"}. Be sure to follow the instructions provided in the repo [README](https://github.com/jtr13/EDAVproject/blob/main/README.md){target="_blank"}. There are other templates in my account. Make sure you use this one.
+Your report should be submitted as a bookdown book, which you can create from [the EDAVproject template](https://github.com/jtr13/EDAVproject){target="_blank"}. Be sure to follow the instructions provided in the repo [README](https://github.com/jtr13/EDAVproject/blob/main/README.md){target="_blank"}. (There are other templates in my account. Make sure you use this one.)
 
 Your report will include the following chapters, as shown in this [rendered version of the EDAV bookdown template](https://jtr13.github.io/EDAVtemplate/).
+
+Note that each chapter is an `.Rmd` file in the top level directory of the GitHub repo. You can have additional folders in your repo that will not be part of the bookdown book, for example, pre-processing scripts, experimental work, etc. However, **do not include additional `.Rmd` files in the top level directory** because they either will inadvertently end up in the bookdown book, or cause errors / warnings.
 
 To turn in your final project, just submit the link to the rendered book (such as "https://jtr13.github.io/EDAVtemplate/" to the CourseWorks final project assignment.) After the deadline, do not make any changes to the main branch of your GitHub repo.
 
 ### I. Introduction {-}
 
 Explain why you chose this topic, and the questions you are interested in studying. Provide context for readers who are not familiar with the topic.
+
+(approximately 1/2 page)
 
 
 ### II. Data sources {-}
@@ -49,13 +53,14 @@ Describe the data sources: who is responsible for collecting the data? How is it
 
 Provide some basic information about the dataset: types of variables, number of records, etc.
 
-Describe any known issues / problems about the data.
+Describe any issues / problems with the data, either known or that you discover.
 
-(You should be able to write this section without actually working with the data.)
+(approximately 1 page)
+
 
 ### III. Data transformation {-}
 
-Describe the process of getting the data into a form in which you could work with it in R.
+Describe the process of getting the data into a form in which you could work with it in R. If your code does not lend itself to being including in the `.Rmd` file, provide a link to the folder or file(s) that contain(s) that code.
 
 ### IV. Missing values {-}
 
