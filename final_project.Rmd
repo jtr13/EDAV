@@ -32,9 +32,9 @@ The data can be pulled from multiple sources; it does not need to be a single da
 
 ## Report format
 
-Your report should be submitted as a bookdown book, which you can create from [the EDAVproject template](https://github.com/jtr13/EDAVproject){target="_blank"}. Be sure to follow the instructions provided in the repo [README](https://github.com/jtr13/EDAVproject/blob/main/README.md){target="_blank"}. (There are other templates in my account. Make sure you use this one.)
+Your report should be submitted as a bookdown book, which you can create from [the final project template](https://github.com/jtr13/EDAVtemplate){target="_blank"}. Be sure to follow the instructions provided in the repo [README](https://github.com/jtr13/EDAVtemplate/blob/main/README.md){target="_blank"}. (There are other templates in my account. Make sure you use this one.)
 
-Your report will include the following chapters, as shown in this [rendered version of the EDAV bookdown template](https://jtr13.github.io/EDAVtemplate/).
+Your report will include the following chapters, as shown in this [rendered version of the final project template](https://jtr13.github.io/EDAVtemplate/). (The links to the GitHub repo won't work since the placeholders in the 
 
 Note that each chapter is an `.Rmd` file in the top level directory of the GitHub repo. You can have additional folders in your repo that will not be part of the bookdown book, for example, pre-processing scripts, experimental work, etc. However, **do not include additional `.Rmd` files in the top level directory** because they either will inadvertently end up in the bookdown book, or cause errors / warnings.
 
