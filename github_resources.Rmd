@@ -279,6 +279,10 @@ If you are [contributing to someone else's repo](#st-pr-on-another-repo-with-bra
 
  - Undo deleted branch: Look for the SHA (hash) returned when you deleted the branch. Then:<br>`git checkout -b <branch-name> <SHA>` <br> [SO link](https://stackoverflow.com/a/39038276/5314416){target="_blank"}
  
+ - Remove all new, untracked files: `git clean -f`
+ 
+ - Remove all new, untracked files, including in new subdirectories: `git clean -f -d`
+ 
 ### Random 
  
  - Make local the same as origin:<br>`git fetch origin`<br>`git reset --hard origin/master`   [SO link](https://stackoverflow.com/questions/1628088/reset-local-repository-branch-to-be-just-like-remote-repository-head){target="_blank"}
