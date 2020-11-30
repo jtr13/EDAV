@@ -82,14 +82,14 @@ Use subheadings as appropriate. See [Todd Schneider's blog posts](https://toddws
 
 ### VI. Interactive or animated component {-}
 
-Select one (or more) of your key findings to present in an interactive or animated format using D3. Be thoughtful about how you use interactivity and/or animation: using these features to add value in a way that would not be possible with a static graph. 
+Select one (or more) of your key findings to present in an interactive or animated format using D3 **version 6**. Be thoughtful about how you use interactivity and/or animation: using these features to add value in a way that would not be possible with a static graph. 
 
 Design with the goal of users walking away with a new understanding of the data and a clear understanding of the purpose of the visualization. If the tool is interactive, provide clear instructions on how the user should engage.
 *Thoughtfulness* is more important than technical prowess; in all aspects of the project, think quality, not quantity.
 
 Interactive graphs must follow all of the best practices as with static graphs in terms of perception, labeling, accuracy, etc. 
 
-It may be possible to include the interactive component directly in your report. If not, publish your graph somewhere on the web and provide a link in your report in the interactive section. The obvious choices are [blockbuilder.org](http://blockbuilder.org/){target="_blank"} to create a block for D3. You are encouraged to share experiences on [Piazza](https://piazza.com/){target="_blank"} to help classmates with the publishing process.
+Please see [this chapter on sharing your D3 code online](https://jtr13.github.io/d3book/share-d3-online.html){target="_blank"} for options for sharing the interactive portion of your project. You are encouraged to share experiences on [Piazza](https://piazza.com/){target="_blank"} to help classmates with the publishing process.
 
 Note: the interactive component is worth approximately 25\% of the final project grade. Therefore, do not spend 90\% of your time on it... concentrate on the exploratory data analysis piece.
 
