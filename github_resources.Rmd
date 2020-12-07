@@ -291,6 +291,8 @@ If you are [contributing to someone else's repo](#st-pr-on-another-repo-with-bra
  
  - Get rid of a file on GitHub that was added to `.gitignore` but is still there:<br>`git rm --cached [filename]`<br>(then commit and push changes to GitHub) [SO link](https://stackoverflow.com/a/1143800/5314416){target="_blank"}
  
+ - Completely remove a folder from git history (use with caution) [SO link](https://stackoverflow.com/a/32886427/5314416)
+ 
  Slides from Karthik Ram's workshop, [Getting Unstuck from Git](http://inundata.org/lectures/git/#/){target="_blank"}, offer clear ways out of git problems, expressed in English (such as "I royally screwed up the last several commits. I just want life to be good again") , not git speak. An excellent resource!
 
 ## Troubleshooting
