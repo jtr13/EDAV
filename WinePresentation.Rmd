@@ -1,0 +1,4 @@
+# Wine and wine tasting
+
+Gregor Z. Hanuschak
+I emailed the class and TAs on 2/28 to let them know I'd be presenting a little about my knowledge of wine and wine tasting on Saturday, March 6.  The presentation I put together can be found here: https://github.com/gregorzh/Wine/blob/main/Intro%20to%20wine%20tasting%202.pdf
