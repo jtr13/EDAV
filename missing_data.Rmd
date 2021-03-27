@@ -141,6 +141,8 @@ levels(x@patterns)
 summary(x@patterns)
 ```
 
+**The `extracat` package is no longer on CRAN.**
+
 We can visualize missing patterns using the `visna` (VISualize NA) function in the `extracat` package:
 ```{r}
 extracat::visna(data)
