@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Final Project Assignment | edav.info/</title>
+  <meta name="description" content="This resource is a collaborative collection of resources designed to help students succeed in GR5702 Exploratory Data Analysis and Visualization, a course offered at Columbia University. While the course lectures and textbook focus on theoretical issues, this resource, in contrast, provides coding tips and examples to assist students as they create their own analyses and visualizations. It is our hope that students will contribute to edav.info and it will grow with the course." />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Final Project Assignment | edav.info/" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://edav.info/" />
+  <meta property="og:image" content="https://edav.info/images/edav_link_logo.png" />
+  <meta property="og:description" content="This resource is a collaborative collection of resources designed to help students succeed in GR5702 Exploratory Data Analysis and Visualization, a course offered at Columbia University. While the course lectures and textbook focus on theoretical issues, this resource, in contrast, provides coding tips and examples to assist students as they create their own analyses and visualizations. It is our hope that students will contribute to edav.info and it will grow with the course." />
+  <meta name="github-repo" content="jtr13/EDAV" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Final Project Assignment | edav.info/" />
+  
+  <meta name="twitter:description" content="This resource is a collaborative collection of resources designed to help students succeed in GR5702 Exploratory Data Analysis and Visualization, a course offered at Columbia University. While the course lectures and textbook focus on theoretical issues, this resource, in contrast, provides coding tips and examples to assist students as they create their own analyses and visualizations. It is our hope that students will contribute to edav.info and it will grow with the course." />
+  <meta name="twitter:image" content="https://edav.info/images/edav_link_logo.png" />
+
+<meta name="author" content="Zach Bogart, Joyce Robbins" />
+
+
+<meta name="date" content="2021-08-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="basics.html"/>
+<link rel="next" href="contribute.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/vis-4.20.1/vis.css" rel="stylesheet" />
+<script src="libs/vis-4.20.1/vis.min.js"></script>
+<script src="libs/visNetwork-binding-2.0.9/visNetwork.js"></script>
+<!-- 
+Favicon 
+  - included in the toolbar of every page
+  - EDAV Logo favicon
+  - via: https://www.favicon-generator.org/
+-->
+
+<link rel="apple-touch-icon" sizes="57x57" href="images/icons/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/icons/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/icons/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/icons/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/icons/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/icons/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/icons/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/icons/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/icons/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/icons/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html"><b>edav.info v1/</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#everything-you-need-for-exploratory-data-analysis-visualization"><i class="fa fa-check"></i><b>0.1</b> Everything you need for Exploratory Data Analysis &amp; Visualization</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#contact"><i class="fa fa-check"></i><b>0.2</b> Contact</a></li>
+<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i><b>0.3</b> License</a></li>
+<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>0.4</b> Colophon</a></li>
+</ul></li>
+<li class="part"><span><b>I Getting Started</b></span></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#overview"><i class="fa fa-check"></i><b>1.1</b> Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#types-of-assistance"><i class="fa fa-check"></i><b>1.2</b> Types of Assistance</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#information-blue"><i class="fa fa-check"></i><b>1.2.1</b> Information (Blue)</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#walkthroughs-red"><i class="fa fa-check"></i><b>1.2.2</b> Walkthroughs (Red)</a></li>
+<li class="chapter" data-level="1.2.3" data-path="intro.html"><a href="intro.html#documentation-green"><i class="fa fa-check"></i><b>1.2.3</b> Documentation (Green)</a></li>
+<li class="chapter" data-level="1.2.4" data-path="intro.html"><a href="intro.html#references-yellow"><i class="fa fa-check"></i><b>1.2.4</b> References (Yellow)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#help-improve-edav.info"><i class="fa fa-check"></i><b>1.3</b> Help improve <em>edav.info/</em></a></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#fun-stuff"><i class="fa fa-check"></i><b>1.4</b> Fun stuff</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#t-shirts"><i class="fa fa-check"></i><b>1.4.1</b> T-shirts</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#acknowledgments"><i class="fa fa-check"></i><b>1.5</b> Acknowledgments</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#our-contributors"><i class="fa fa-check"></i><b>1.5.1</b> Our Contributors</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="basics.html"><a href="basics.html"><i class="fa fa-check"></i><b>2</b> R Basics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="basics.html"><a href="basics.html#top-10-essentials-checklist"><i class="fa fa-check"></i><b>2.1</b> Top 10 Essentials Checklist</a></li>
+<li class="chapter" data-level="2.2" data-path="basics.html"><a href="basics.html#troubleshooting"><i class="fa fa-check"></i><b>2.2</b> Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="basics.html"><a href="basics.html#document-doesnt-knit"><i class="fa fa-check"></i><b>2.2.1</b> Document doesn’t knit</a></li>
+<li class="chapter" data-level="2.2.2" data-path="basics.html"><a href="basics.html#functions-stop-working"><i class="fa fa-check"></i><b>2.2.2</b> Functions stop working</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="basics.html"><a href="basics.html#tips-tricks"><i class="fa fa-check"></i><b>2.3</b> Tips &amp; Tricks</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="basics.html"><a href="basics.html#knitr"><i class="fa fa-check"></i><b>2.3.1</b> Knitr</a></li>
+<li class="chapter" data-level="2.3.2" data-path="basics.html"><a href="basics.html#rstudio-keyboard-shortcuts"><i class="fa fa-check"></i><b>2.3.2</b> RStudio keyboard shortcuts</a></li>
+<li class="chapter" data-level="2.3.3" data-path="basics.html"><a href="basics.html#sizing-figures-and-more"><i class="fa fa-check"></i><b>2.3.3</b> Sizing figures (and more)</a></li>
+<li class="chapter" data-level="2.3.4" data-path="basics.html"><a href="basics.html#viewing-plots-in-plot-window"><i class="fa fa-check"></i><b>2.3.4</b> Viewing plots in plot window</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="basics.html"><a href="basics.html#submitting-assignments"><i class="fa fa-check"></i><b>2.4</b> Submitting Assignments</a></li>
+<li class="chapter" data-level="2.5" data-path="basics.html"><a href="basics.html#getting-help"><i class="fa fa-check"></i><b>2.5</b> Getting help</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="basics.html"><a href="basics.html#things-to-try"><i class="fa fa-check"></i><b>2.5.1</b> Things to try</a></li>
+<li class="chapter" data-level="2.5.2" data-path="basics.html"><a href="basics.html#help-me-r-community"><i class="fa fa-check"></i><b>2.5.2</b> Help me, R community!</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="project.html"><a href="project.html"><i class="fa fa-check"></i><b>3</b> Final Project Assignment</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="project.html"><a href="project.html#overview-1"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="project.html"><a href="project.html#general-info"><i class="fa fa-check"></i><b>3.2</b> General info</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="project.html"><a href="project.html#goal"><i class="fa fa-check"></i><b>3.2.1</b> Goal</a></li>
+<li class="chapter" data-level="3.2.2" data-path="project.html"><a href="project.html#teams"><i class="fa fa-check"></i><b>3.2.2</b> Teams</a></li>
+<li class="chapter" data-level="3.2.3" data-path="project.html"><a href="project.html#topics"><i class="fa fa-check"></i><b>3.2.3</b> Topics</a></li>
+<li class="chapter" data-level="3.2.4" data-path="project.html"><a href="project.html#data"><i class="fa fa-check"></i><b>3.2.4</b> Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="project.html"><a href="project.html#report-format"><i class="fa fa-check"></i><b>3.3</b> Report format</a>
+<ul>
+<li class="chapter" data-level="" data-path="project.html"><a href="project.html#i.-introduction"><i class="fa fa-check"></i>I. Introduction</a></li>
+<li class="chapter" data-level="" data-path="project.html"><a href="project.html#ii.-data-sources"><i class="fa fa-check"></i>II. Data sources</a></li>
+<li class="chapter" data-level="" data-path="project.html"><a href="project.html#iii.-data-transformation"><i class="fa fa-check"></i>III. Data transformation</a></li>
+<li class="chapter" data-level="" data-path="project.html"><a href="project.html#iv.-missing-values"><i class="fa fa-check"></i>IV. Missing values</a></li>
+<li class="chapter" data-level="" data-path="project.html"><a href="project.html#v.-results"><i class="fa fa-check"></i>V. Results</a></li>
+<li class="chapter" data-level="" data-path="project.html"><a href="project.html#vi.-interactive-or-animated-component"><i class="fa fa-check"></i>VI. Interactive or animated component</a></li>
+<li class="chapter" data-level="" data-path="project.html"><a href="project.html#vii.-conclusion"><i class="fa fa-check"></i>VII. Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="project.html"><a href="project.html#reproducible-workflow"><i class="fa fa-check"></i><b>3.4</b> Reproducible workflow</a></li>
+<li class="chapter" data-level="3.5" data-path="project.html"><a href="project.html#code"><i class="fa fa-check"></i><b>3.5</b> Code</a></li>
+<li class="chapter" data-level="3.6" data-path="project.html"><a href="project.html#feedback"><i class="fa fa-check"></i><b>3.6</b> Feedback</a></li>
+<li class="chapter" data-level="3.7" data-path="project.html"><a href="project.html#peer-review"><i class="fa fa-check"></i><b>3.7</b> Peer review</a></li>
+<li class="chapter" data-level="3.8" data-path="project.html"><a href="project.html#writing-advice"><i class="fa fa-check"></i><b>3.8</b> Writing advice</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="project.html"><a href="project.html#start-early"><i class="fa fa-check"></i><b>3.8.1</b> Start early</a></li>
+<li class="chapter" data-level="3.8.2" data-path="project.html"><a href="project.html#tell-it-like-it-is"><i class="fa fa-check"></i><b>3.8.2</b> Tell it like it is</a></li>
+<li class="chapter" data-level="3.8.3" data-path="project.html"><a href="project.html#hide-code"><i class="fa fa-check"></i><b>3.8.3</b> Hide code</a></li>
+<li class="chapter" data-level="3.8.4" data-path="project.html"><a href="project.html#interpret-your-graphs"><i class="fa fa-check"></i><b>3.8.4</b> Interpret your graphs</a></li>
+<li class="chapter" data-level="3.8.5" data-path="project.html"><a href="project.html#use-simple-formatting"><i class="fa fa-check"></i><b>3.8.5</b> Use simple formatting</a></li>
+<li class="chapter" data-level="3.8.6" data-path="project.html"><a href="project.html#link-effectively"><i class="fa fa-check"></i><b>3.8.6</b> Link effectively</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="project.html"><a href="project.html#audience-ready-style"><i class="fa fa-check"></i><b>3.9</b> Audience ready style</a></li>
+<li class="chapter" data-level="3.10" data-path="project.html"><a href="project.html#grading"><i class="fa fa-check"></i><b>3.10</b> Grading</a></li>
+<li class="chapter" data-level="3.11" data-path="project.html"><a href="project.html#resources"><i class="fa fa-check"></i><b>3.11</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="contribute.html"><a href="contribute.html"><i class="fa fa-check"></i><b>4</b> Contribute to this Resource</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="contribute.html"><a href="contribute.html#why-contribute"><i class="fa fa-check"></i><b>4.1</b> Why contribute?</a></li>
+<li class="chapter" data-level="4.2" data-path="contribute.html"><a href="contribute.html#what-to-contribute"><i class="fa fa-check"></i><b>4.2</b> What to contribute</a></li>
+<li class="chapter" data-level="4.3" data-path="contribute.html"><a href="contribute.html#ways-to-contribute"><i class="fa fa-check"></i><b>4.3</b> Ways to contribute</a></li>
+<li class="chapter" data-level="4.4" data-path="contribute.html"><a href="contribute.html#submit-an-issue"><i class="fa fa-check"></i><b>4.4</b> Submit an issue</a></li>
+<li class="chapter" data-level="4.5" data-path="contribute.html"><a href="contribute.html#github-only-walkthrough"><i class="fa fa-check"></i><b>4.5</b> GitHub only walkthrough</a>
+<ul>
+<li class="chapter" data-level="" data-path="contribute.html"><a href="contribute.html#step-1-find-something-to-change"><i class="fa fa-check"></i>Step 1: Find something to change</a></li>
+<li class="chapter" data-level="" data-path="contribute.html"><a href="contribute.html#step-2-click-the-edit-button"><i class="fa fa-check"></i>Step 2: Click the edit button</a></li>
+<li class="chapter" data-level="" data-path="contribute.html"><a href="contribute.html#step-3-fork-the-repo"><i class="fa fa-check"></i>Step 3: Fork the repo</a></li>
+<li class="chapter" data-level="" data-path="contribute.html"><a href="contribute.html#step-4-fix-the-typo"><i class="fa fa-check"></i>Step 4: Fix the typo</a></li>
+<li class="chapter" data-level="" data-path="contribute.html"><a href="contribute.html#step-5-comparing-changes"><i class="fa fa-check"></i>Step 5: Comparing changes</a></li>
+<li class="chapter" data-level="" data-path="contribute.html"><a href="contribute.html#step-6-open-a-pull-request"><i class="fa fa-check"></i>Step 6: Open a pull request</a></li>
+<li class="chapter" data-level="" data-path="contribute.html"><a href="contribute.html#what-now"><i class="fa fa-check"></i>What now?</a></li>
+<li class="chapter" data-level="" data-path="contribute.html"><a href="contribute.html#looking-ahead-the-next-edit"><i class="fa fa-check"></i>Looking ahead: the next edit</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="contribute.html"><a href="contribute.html#resources-1"><i class="fa fa-check"></i><b>4.6</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="github.html"><a href="github.html"><i class="fa fa-check"></i><b>5</b> GitHub/git Resources</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="github.html"><a href="github.html#overview-2"><i class="fa fa-check"></i><b>5.1</b> Overview</a></li>
+<li class="chapter" data-level="5.2" data-path="github.html"><a href="github.html#first-things-first"><i class="fa fa-check"></i><b>5.2</b> First things first</a></li>
+<li class="chapter" data-level="5.3" data-path="github.html"><a href="github.html#now-what"><i class="fa fa-check"></i><b>5.3</b> Now what?</a></li>
+<li class="chapter" data-level="5.4" data-path="github.html"><a href="github.html#the-no-branch-workflow"><i class="fa fa-check"></i><b>5.4</b> The no branch workflow</a></li>
+<li class="chapter" data-level="5.5" data-path="github.html"><a href="github.html#your-repo-with-branching"><i class="fa fa-check"></i><b>5.5</b> Your repo with branching</a></li>
+<li class="chapter" data-level="5.6" data-path="github.html"><a href="github.html#st-pr-on-another-repo-with-branching"><i class="fa fa-check"></i><b>5.6</b> 1st PR on another repo with branching</a>
+<ul>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#step-1-fork-the-upstream-repo-once"><i class="fa fa-check"></i>Step 1: Fork the upstream repo (once)</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#step-2-clone-origin-and-create-a-local-repository-once"><i class="fa fa-check"></i>Step 2: Clone origin and create a local repository (once)</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#step-3-configure-remote-that-points-to-the-upstream-repository-once"><i class="fa fa-check"></i>Step 3: Configure remote that points to the upstream repository (once)</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#step-4-branch"><i class="fa fa-check"></i>Step 4: Branch</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#step-5-work-commit-and-push"><i class="fa fa-check"></i>Step 5: Work, commit and push</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#step-6-submit-a-pull-request"><i class="fa fa-check"></i>Step 6: Submit a pull request</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#step-7-merge-the-pull-request"><i class="fa fa-check"></i>Step 7: Merge the pull request</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="github.html"><a href="github.html#nd-nth-pr-on-another-repo-with-branching"><i class="fa fa-check"></i><b>5.7</b> 2nd-<em>n</em>th PR on another repo with branching</a>
+<ul>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#step-1-sync"><i class="fa fa-check"></i>Step 1: Sync</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#step-2-delete-the-old-branch"><i class="fa fa-check"></i>Step 2: Delete the old branch</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#step-3-update-your-fork-on-github"><i class="fa fa-check"></i>Step 3: Update your fork on GitHub</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#steps-4-7-see-above"><i class="fa fa-check"></i>Steps 4-7: See above</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="github.html"><a href="github.html#fixing-mistakes"><i class="fa fa-check"></i><b>5.8</b> Fixing mistakes</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="github.html"><a href="github.html#forgot-to-branch"><i class="fa fa-check"></i><b>5.8.1</b> Forgot to branch</a></li>
+<li class="chapter" data-level="5.8.2" data-path="github.html"><a href="github.html#undoing-stuff"><i class="fa fa-check"></i><b>5.8.2</b> Undoing stuff</a></li>
+<li class="chapter" data-level="5.8.3" data-path="github.html"><a href="github.html#random"><i class="fa fa-check"></i><b>5.8.3</b> Random</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="github.html"><a href="github.html#troubleshooting-1"><i class="fa fa-check"></i><b>5.9</b> Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="5.9.1" data-path="github.html"><a href="github.html#deleting-a-branch-isnt-working"><i class="fa fa-check"></i><b>5.9.1</b> Deleting a branch isn’t working</a></li>
+</ul></li>
+<li class="chapter" data-level="5.10" data-path="github.html"><a href="github.html#other-resources"><i class="fa fa-check"></i><b>5.10</b> Other resources</a>
+<ul>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#getting-help-1"><i class="fa fa-check"></i>Getting Help</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#branching-out"><i class="fa fa-check"></i>Branching out</a></li>
+<li class="chapter" data-level="" data-path="github.html"><a href="github.html#more-resources"><i class="fa fa-check"></i>More Resources</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>II Continuous Variables</b></span></li>
+<li class="chapter" data-level="6" data-path="histo.html"><a href="histo.html"><i class="fa fa-check"></i><b>6</b> Chart: Histogram</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="histo.html"><a href="histo.html#overview-3"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
+<li class="chapter" data-level="6.2" data-path="histo.html"><a href="histo.html#tldr"><i class="fa fa-check"></i><b>6.2</b> tl;dr</a></li>
+<li class="chapter" data-level="6.3" data-path="histo.html"><a href="histo.html#simple-examples"><i class="fa fa-check"></i><b>6.3</b> Simple examples</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="histo.html"><a href="histo.html#histogram-using-base-r"><i class="fa fa-check"></i><b>6.3.1</b> Histogram using base R</a></li>
+<li class="chapter" data-level="6.3.2" data-path="histo.html"><a href="histo.html#histogram-using-ggplot2"><i class="fa fa-check"></i><b>6.3.2</b> Histogram using ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="histo.html"><a href="histo.html#theory"><i class="fa fa-check"></i><b>6.4</b> Theory</a></li>
+<li class="chapter" data-level="6.5" data-path="histo.html"><a href="histo.html#types-of-histograms"><i class="fa fa-check"></i><b>6.5</b> Types of histograms</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="histo.html"><a href="histo.html#frequency-or-count"><i class="fa fa-check"></i><b>6.5.1</b> Frequency or count</a></li>
+<li class="chapter" data-level="6.5.2" data-path="histo.html"><a href="histo.html#relative-frequency-historgram"><i class="fa fa-check"></i><b>6.5.2</b> Relative frequency historgram</a></li>
+<li class="chapter" data-level="6.5.3" data-path="histo.html"><a href="histo.html#cumulative-frequency-histogram"><i class="fa fa-check"></i><b>6.5.3</b> Cumulative frequency histogram</a></li>
+<li class="chapter" data-level="6.5.4" data-path="histo.html"><a href="histo.html#density"><i class="fa fa-check"></i><b>6.5.4</b> Density</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="histo.html"><a href="histo.html#parameters"><i class="fa fa-check"></i><b>6.6</b> Parameters</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="histo.html"><a href="histo.html#bin-boundaries"><i class="fa fa-check"></i><b>6.6.1</b> Bin boundaries</a></li>
+<li class="chapter" data-level="6.6.2" data-path="histo.html"><a href="histo.html#bin-number"><i class="fa fa-check"></i><b>6.6.2</b> Bin number</a></li>
+<li class="chapter" data-level="6.6.3" data-path="histo.html"><a href="histo.html#bin-alignment"><i class="fa fa-check"></i><b>6.6.3</b> Bin alignment</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="histo.html"><a href="histo.html#interactive-histograms-with-ggvis"><i class="fa fa-check"></i><b>6.7</b> Interactive histograms with <code>ggvis</code></a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="histo.html"><a href="histo.html#change-binwidth-interactively"><i class="fa fa-check"></i><b>6.7.1</b> Change binwidth interactively</a></li>
+<li class="chapter" data-level="6.7.2" data-path="histo.html"><a href="histo.html#gdp-example"><i class="fa fa-check"></i><b>6.7.2</b> GDP example</a></li>
+<li class="chapter" data-level="6.7.3" data-path="histo.html"><a href="histo.html#change-center-interactively"><i class="fa fa-check"></i><b>6.7.3</b> Change center interactively</a></li>
+<li class="chapter" data-level="6.7.4" data-path="histo.html"><a href="histo.html#change-center-with-data-values-shown"><i class="fa fa-check"></i><b>6.7.4</b> Change center (with data values shown)</a></li>
+<li class="chapter" data-level="6.7.5" data-path="histo.html"><a href="histo.html#change-boundary-interactively"><i class="fa fa-check"></i><b>6.7.5</b> Change boundary interactively</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="histo.html"><a href="histo.html#external-resources"><i class="fa fa-check"></i><b>6.8</b> External resources</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="box.html"><a href="box.html"><i class="fa fa-check"></i><b>7</b> Chart: Boxplot</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="box.html"><a href="box.html#tldr-1"><i class="fa fa-check"></i><b>7.1</b> tl;dr</a></li>
+<li class="chapter" data-level="7.2" data-path="box.html"><a href="box.html#simple-examples-1"><i class="fa fa-check"></i><b>7.2</b> Simple examples</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="box.html"><a href="box.html#single-boxplots"><i class="fa fa-check"></i><b>7.2.1</b> Single boxplots</a></li>
+<li class="chapter" data-level="7.2.2" data-path="box.html"><a href="box.html#multiple-boxplots-using-ggplot2"><i class="fa fa-check"></i><b>7.2.2</b> Multiple boxplots using ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="box.html"><a href="box.html#theory-1"><i class="fa fa-check"></i><b>7.3</b> Theory</a></li>
+<li class="chapter" data-level="7.4" data-path="box.html"><a href="box.html#when-to-use"><i class="fa fa-check"></i><b>7.4</b> When to use</a></li>
+<li class="chapter" data-level="7.5" data-path="box.html"><a href="box.html#considerations"><i class="fa fa-check"></i><b>7.5</b> Considerations</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="box.html"><a href="box.html#flipping-orientation"><i class="fa fa-check"></i><b>7.5.1</b> Flipping orientation</a></li>
+<li class="chapter" data-level="7.5.2" data-path="box.html"><a href="box.html#not-for-categorical-data"><i class="fa fa-check"></i><b>7.5.2</b> NOT for categorical data</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="box.html"><a href="box.html#external-resources-1"><i class="fa fa-check"></i><b>7.6</b> External resources</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="violin.html"><a href="violin.html"><i class="fa fa-check"></i><b>8</b> Chart: Violin Plot</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="violin.html"><a href="violin.html#overview-4"><i class="fa fa-check"></i><b>8.1</b> Overview</a></li>
+<li class="chapter" data-level="8.2" data-path="violin.html"><a href="violin.html#some-examples-in-r"><i class="fa fa-check"></i><b>8.2</b> Some Examples in R</a></li>
+<li class="chapter" data-level="8.3" data-path="violin.html"><a href="violin.html#adding-statistics-to-the-violin-plot"><i class="fa fa-check"></i><b>8.3</b> Adding Statistics to the Violin Plot</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="violin.html"><a href="violin.html#adding-the-median-and-the-interquartile-range"><i class="fa fa-check"></i><b>8.3.1</b> Adding the median and the interquartile range</a></li>
+<li class="chapter" data-level="8.3.2" data-path="violin.html"><a href="violin.html#displaying-data-as-dots"><i class="fa fa-check"></i><b>8.3.2</b> Displaying data as dots</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="violin.html"><a href="violin.html#description"><i class="fa fa-check"></i><b>8.4</b> Description</a></li>
+<li class="chapter" data-level="8.5" data-path="violin.html"><a href="violin.html#when-to-use-1"><i class="fa fa-check"></i><b>8.5</b> When to use</a></li>
+<li class="chapter" data-level="8.6" data-path="violin.html"><a href="violin.html#external-resources-2"><i class="fa fa-check"></i><b>8.6</b> External Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="ridgeline.html"><a href="ridgeline.html"><i class="fa fa-check"></i><b>9</b> Chart: Ridgeline Plots</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="ridgeline.html"><a href="ridgeline.html#overview-5"><i class="fa fa-check"></i><b>9.1</b> Overview</a></li>
+<li class="chapter" data-level="9.2" data-path="ridgeline.html"><a href="ridgeline.html#tldr-2"><i class="fa fa-check"></i><b>9.2</b> tl;dr</a></li>
+<li class="chapter" data-level="9.3" data-path="ridgeline.html"><a href="ridgeline.html#simple-examples-2"><i class="fa fa-check"></i><b>9.3</b> Simple examples</a></li>
+<li class="chapter" data-level="9.4" data-path="ridgeline.html"><a href="ridgeline.html#ridgeline-plots-using-ggridge"><i class="fa fa-check"></i><b>9.4</b> Ridgeline Plots using ggridge</a></li>
+<li class="chapter" data-level="9.5" data-path="ridgeline.html"><a href="ridgeline.html#when-to-use-2"><i class="fa fa-check"></i><b>9.5</b> When to Use</a></li>
+<li class="chapter" data-level="9.6" data-path="ridgeline.html"><a href="ridgeline.html#considerations-1"><i class="fa fa-check"></i><b>9.6</b> Considerations</a></li>
+<li class="chapter" data-level="9.7" data-path="ridgeline.html"><a href="ridgeline.html#external-resources-3"><i class="fa fa-check"></i><b>9.7</b> External Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="qqplot.html"><a href="qqplot.html"><i class="fa fa-check"></i><b>10</b> Chart: QQ-Plot</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="qqplot.html"><a href="qqplot.html#introduction"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
+<li class="chapter" data-level="10.2" data-path="qqplot.html"><a href="qqplot.html#interpreting-qqplots"><i class="fa fa-check"></i><b>10.2</b> Interpreting qqplots</a></li>
+<li class="chapter" data-level="10.3" data-path="qqplot.html"><a href="qqplot.html#normal-or-not-examples-using-qqnorm"><i class="fa fa-check"></i><b>10.3</b> Normal or not (examples using qqnorm)</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="qqplot.html"><a href="qqplot.html#normal-qqplot"><i class="fa fa-check"></i><b>10.3.1</b> Normal qqplot</a></li>
+<li class="chapter" data-level="10.3.2" data-path="qqplot.html"><a href="qqplot.html#non-normal-qqplot"><i class="fa fa-check"></i><b>10.3.2</b> Non-normal qqplot</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="qqplot.html"><a href="qqplot.html#different-kinds-of-qqplots"><i class="fa fa-check"></i><b>10.4</b> Different kinds of qqplots</a></li>
+<li class="chapter" data-level="10.5" data-path="qqplot.html"><a href="qqplot.html#qqplot-using-ggplot"><i class="fa fa-check"></i><b>10.5</b> qqplot using ggplot</a></li>
+<li class="chapter" data-level="10.6" data-path="qqplot.html"><a href="qqplot.html#references"><i class="fa fa-check"></i><b>10.6</b> References</a></li>
+</ul></li>
+<li class="part"><span><b>III Categorical Variables</b></span></li>
+<li class="chapter" data-level="11" data-path="bar.html"><a href="bar.html"><i class="fa fa-check"></i><b>11</b> Chart: Bar Chart</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="bar.html"><a href="bar.html#overview-6"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
+<li class="chapter" data-level="11.2" data-path="bar.html"><a href="bar.html#tldr-3"><i class="fa fa-check"></i><b>11.2</b> tl;dr</a></li>
+<li class="chapter" data-level="11.3" data-path="bar.html"><a href="bar.html#simple-examples-3"><i class="fa fa-check"></i><b>11.3</b> Simple examples</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="bar.html"><a href="bar.html#bar-graph-using-base-r"><i class="fa fa-check"></i><b>11.3.1</b> Bar graph using base R</a></li>
+<li class="chapter" data-level="11.3.2" data-path="bar.html"><a href="bar.html#bar-graph-using-ggplot2"><i class="fa fa-check"></i><b>11.3.2</b> Bar graph using ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="bar.html"><a href="bar.html#theory-2"><i class="fa fa-check"></i><b>11.4</b> Theory</a></li>
+<li class="chapter" data-level="11.5" data-path="bar.html"><a href="bar.html#when-to-use-3"><i class="fa fa-check"></i><b>11.5</b> When to use</a></li>
+<li class="chapter" data-level="11.6" data-path="bar.html"><a href="bar.html#considerations-2"><i class="fa fa-check"></i><b>11.6</b> Considerations</a>
+<ul>
+<li class="chapter" data-level="11.6.1" data-path="bar.html"><a href="bar.html#not-for-continuous-data"><i class="fa fa-check"></i><b>11.6.1</b> Not for continuous data</a></li>
+</ul></li>
+<li class="chapter" data-level="11.7" data-path="bar.html"><a href="bar.html#modifications"><i class="fa fa-check"></i><b>11.7</b> Modifications</a>
+<ul>
+<li class="chapter" data-level="11.7.1" data-path="bar.html"><a href="bar.html#flip-bars"><i class="fa fa-check"></i><b>11.7.1</b> Flip Bars</a></li>
+<li class="chapter" data-level="11.7.2" data-path="bar.html"><a href="bar.html#reorder-the-bars"><i class="fa fa-check"></i><b>11.7.2</b> Reorder the bars</a></li>
+<li class="chapter" data-level="11.7.3" data-path="bar.html"><a href="bar.html#facet-wrap"><i class="fa fa-check"></i><b>11.7.3</b> Facet Wrap</a></li>
+</ul></li>
+<li class="chapter" data-level="11.8" data-path="bar.html"><a href="bar.html#external-resources-4"><i class="fa fa-check"></i><b>11.8</b> External resources</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="cleveland.html"><a href="cleveland.html"><i class="fa fa-check"></i><b>12</b> Chart: Cleveland Dot Plot</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="cleveland.html"><a href="cleveland.html#overview-7"><i class="fa fa-check"></i><b>12.1</b> Overview</a></li>
+<li class="chapter" data-level="12.2" data-path="cleveland.html"><a href="cleveland.html#multiple-dots"><i class="fa fa-check"></i><b>12.2</b> Multiple dots</a></li>
+</ul></li>
+<li class="part"><span><b>IV Multivariate Continuous</b></span></li>
+<li class="chapter" data-level="13" data-path="scatter.html"><a href="scatter.html"><i class="fa fa-check"></i><b>13</b> Chart: Scatterplot</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="scatter.html"><a href="scatter.html#overview-8"><i class="fa fa-check"></i><b>13.1</b> Overview</a></li>
+<li class="chapter" data-level="13.2" data-path="scatter.html"><a href="scatter.html#tldr-4"><i class="fa fa-check"></i><b>13.2</b> tl;dr</a></li>
+<li class="chapter" data-level="13.3" data-path="scatter.html"><a href="scatter.html#simple-examples-4"><i class="fa fa-check"></i><b>13.3</b> Simple examples</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="scatter.html"><a href="scatter.html#scatterplot-using-base-r"><i class="fa fa-check"></i><b>13.3.1</b> Scatterplot using base R</a></li>
+<li class="chapter" data-level="13.3.2" data-path="scatter.html"><a href="scatter.html#scatterplot-using-ggplot2"><i class="fa fa-check"></i><b>13.3.2</b> Scatterplot using ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="scatter.html"><a href="scatter.html#theory-3"><i class="fa fa-check"></i><b>13.4</b> Theory</a></li>
+<li class="chapter" data-level="13.5" data-path="scatter.html"><a href="scatter.html#when-to-use-4"><i class="fa fa-check"></i><b>13.5</b> When to use</a></li>
+<li class="chapter" data-level="13.6" data-path="scatter.html"><a href="scatter.html#considerations-3"><i class="fa fa-check"></i><b>13.6</b> Considerations</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="scatter.html"><a href="scatter.html#overlapping-data"><i class="fa fa-check"></i><b>13.6.1</b> Overlapping data</a></li>
+<li class="chapter" data-level="13.6.2" data-path="scatter.html"><a href="scatter.html#scaling"><i class="fa fa-check"></i><b>13.6.2</b> Scaling</a></li>
+</ul></li>
+<li class="chapter" data-level="13.7" data-path="scatter.html"><a href="scatter.html#modifications-1"><i class="fa fa-check"></i><b>13.7</b> Modifications</a>
+<ul>
+<li class="chapter" data-level="13.7.1" data-path="scatter.html"><a href="scatter.html#contour-lines"><i class="fa fa-check"></i><b>13.7.1</b> Contour lines</a></li>
+<li class="chapter" data-level="13.7.2" data-path="scatter.html"><a href="scatter.html#scatterplot-matrices"><i class="fa fa-check"></i><b>13.7.2</b> Scatterplot matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="13.8" data-path="scatter.html"><a href="scatter.html#external-resources-5"><i class="fa fa-check"></i><b>13.8</b> External resources</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="iris.html"><a href="iris.html"><i class="fa fa-check"></i><b>14</b> Walkthrough: Iris Scatterplot</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="iris.html"><a href="iris.html#overview-9"><i class="fa fa-check"></i><b>14.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="iris.html"><a href="iris.html#tldr-5"><i class="fa fa-check"></i><b>14.1.1</b> tl;dr</a></li>
+<li class="chapter" data-level="14.1.2" data-path="iris.html"><a href="iris.html#packages"><i class="fa fa-check"></i><b>14.1.2</b> Packages</a></li>
+<li class="chapter" data-level="14.1.3" data-path="iris.html"><a href="iris.html#techniques"><i class="fa fa-check"></i><b>14.1.3</b> Techniques</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="iris.html"><a href="iris.html#quick-note-on-doing-it-the-lazy-way"><i class="fa fa-check"></i><b>14.2</b> Quick note on doing it the lazy way</a></li>
+<li class="chapter" data-level="14.3" data-path="iris.html"><a href="iris.html#viewing-data"><i class="fa fa-check"></i><b>14.3</b> Viewing data</a></li>
+<li class="chapter" data-level="14.4" data-path="iris.html"><a href="iris.html#plotting-data"><i class="fa fa-check"></i><b>14.4</b> Plotting data</a></li>
+<li class="chapter" data-level="14.5" data-path="iris.html"><a href="iris.html#markdown-etiquette"><i class="fa fa-check"></i><b>14.5</b> Markdown etiquette</a></li>
+<li class="chapter" data-level="14.6" data-path="iris.html"><a href="iris.html#overlapping-data-1"><i class="fa fa-check"></i><b>14.6</b> Overlapping data</a>
+<ul>
+<li class="chapter" data-level="14.6.1" data-path="iris.html"><a href="iris.html#first-the-legend"><i class="fa fa-check"></i><b>14.6.1</b> First: the legend</a></li>
+<li class="chapter" data-level="14.6.2" data-path="iris.html"><a href="iris.html#second-jittering"><i class="fa fa-check"></i><b>14.6.2</b> Second: jittering</a></li>
+<li class="chapter" data-level="14.6.3" data-path="iris.html"><a href="iris.html#aside-example-where-alpha-blending-works"><i class="fa fa-check"></i><b>14.6.3</b> <em>Aside</em>: example where alpha blending works</a></li>
+</ul></li>
+<li class="chapter" data-level="14.7" data-path="iris.html"><a href="iris.html#formatting-for-presentation"><i class="fa fa-check"></i><b>14.7</b> Formatting for presentation</a></li>
+<li class="chapter" data-level="14.8" data-path="iris.html"><a href="iris.html#alter-appearance"><i class="fa fa-check"></i><b>14.8</b> Alter appearance</a></li>
+<li class="chapter" data-level="14.9" data-path="iris.html"><a href="iris.html#consider-themes"><i class="fa fa-check"></i><b>14.9</b> Consider themes</a></li>
+<li class="chapter" data-level="14.10" data-path="iris.html"><a href="iris.html#going-deeper"><i class="fa fa-check"></i><b>14.10</b> Going deeper</a></li>
+<li class="chapter" data-level="14.11" data-path="iris.html"><a href="iris.html#helpful-links"><i class="fa fa-check"></i><b>14.11</b> Helpful links</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html"><i class="fa fa-check"></i><b>15</b> Chart: Parallel Coordinate Plots</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#overview-10"><i class="fa fa-check"></i><b>15.1</b> Overview</a></li>
+<li class="chapter" data-level="15.2" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#tldr-6"><i class="fa fa-check"></i><b>15.2</b> tl;dr</a></li>
+<li class="chapter" data-level="15.3" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#simple-examples-5"><i class="fa fa-check"></i><b>15.3</b> Simple examples</a></li>
+<li class="chapter" data-level="15.4" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#theory-4"><i class="fa fa-check"></i><b>15.4</b> Theory</a></li>
+<li class="chapter" data-level="15.5" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#when-to-use-5"><i class="fa fa-check"></i><b>15.5</b> When to use</a></li>
+<li class="chapter" data-level="15.6" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#considerations-4"><i class="fa fa-check"></i><b>15.6</b> Considerations</a>
+<ul>
+<li class="chapter" data-level="15.6.1" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#when-do-i-use-clustering"><i class="fa fa-check"></i><b>15.6.1</b> When do I use clustering?</a></li>
+<li class="chapter" data-level="15.6.2" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#deciding-the-value-of-alpha"><i class="fa fa-check"></i><b>15.6.2</b> Deciding the value of alpha</a></li>
+<li class="chapter" data-level="15.6.3" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#scales"><i class="fa fa-check"></i><b>15.6.3</b> Scales</a></li>
+<li class="chapter" data-level="15.6.4" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#order-of-the-variables"><i class="fa fa-check"></i><b>15.6.4</b> Order of the variables</a></li>
+</ul></li>
+<li class="chapter" data-level="15.7" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#modifications-2"><i class="fa fa-check"></i><b>15.7</b> Modifications</a>
+<ul>
+<li class="chapter" data-level="15.7.1" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#flipping-the-coordinates"><i class="fa fa-check"></i><b>15.7.1</b> Flipping the coordinates</a></li>
+<li class="chapter" data-level="15.7.2" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#highlighting-trends"><i class="fa fa-check"></i><b>15.7.2</b> Highlighting trends</a></li>
+<li class="chapter" data-level="15.7.3" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#using-splines"><i class="fa fa-check"></i><b>15.7.3</b> Using splines</a></li>
+<li class="chapter" data-level="15.7.4" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#adding-boxplots-to-the-graph"><i class="fa fa-check"></i><b>15.7.4</b> Adding boxplots to the graph</a></li>
+</ul></li>
+<li class="chapter" data-level="15.8" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#other-packages"><i class="fa fa-check"></i><b>15.8</b> Other Packages</a></li>
+<li class="chapter" data-level="15.9" data-path="parallelcoordinates.html"><a href="parallelcoordinates.html#external-resources-6"><i class="fa fa-check"></i><b>15.9</b> External Resources</a></li>
+</ul></li>
+<li class="part"><span><b>V Multivariate Categorical</b></span></li>
+<li class="chapter" data-level="16" data-path="mosaic.html"><a href="mosaic.html"><i class="fa fa-check"></i><b>16</b> Chart: Mosaic</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="mosaic.html"><a href="mosaic.html#overview-11"><i class="fa fa-check"></i><b>16.1</b> Overview</a></li>
+<li class="chapter" data-level="16.2" data-path="mosaic.html"><a href="mosaic.html#direction-of-splits"><i class="fa fa-check"></i><b>16.2</b> Direction of splits</a></li>
+<li class="chapter" data-level="16.3" data-path="mosaic.html"><a href="mosaic.html#fill-color"><i class="fa fa-check"></i><b>16.3</b> Fill color</a></li>
+<li class="chapter" data-level="16.4" data-path="mosaic.html"><a href="mosaic.html#labels"><i class="fa fa-check"></i><b>16.4</b> Labels</a>
+<ul>
+<li class="chapter" data-level="16.4.1" data-path="mosaic.html"><a href="mosaic.html#rotate-labels"><i class="fa fa-check"></i><b>16.4.1</b> Rotate labels</a></li>
+<li class="chapter" data-level="16.4.2" data-path="mosaic.html"><a href="mosaic.html#abbreviate-labels"><i class="fa fa-check"></i><b>16.4.2</b> Abbreviate labels</a></li>
+</ul></li>
+<li class="chapter" data-level="16.5" data-path="mosaic.html"><a href="mosaic.html#cell-spacing"><i class="fa fa-check"></i><b>16.5</b> Cell spacing</a>
+<ul>
+<li class="chapter" data-level="16.5.1" data-path="mosaic.html"><a href="mosaic.html#mosaic-using-vcddoubledecker"><i class="fa fa-check"></i><b>16.5.1</b> Mosaic using vcd::doubledecker</a></li>
+</ul></li>
+<li class="chapter" data-level="16.6" data-path="mosaic.html"><a href="mosaic.html#mosaic-using-ggplot"><i class="fa fa-check"></i><b>16.6</b> Mosaic using ggplot</a></li>
+<li class="chapter" data-level="16.7" data-path="mosaic.html"><a href="mosaic.html#theory-5"><i class="fa fa-check"></i><b>16.7</b> Theory</a></li>
+<li class="chapter" data-level="16.8" data-path="mosaic.html"><a href="mosaic.html#when-to-use-6"><i class="fa fa-check"></i><b>16.8</b> When to use</a></li>
+<li class="chapter" data-level="16.9" data-path="mosaic.html"><a href="mosaic.html#considerations-5"><i class="fa fa-check"></i><b>16.9</b> Considerations</a>
+<ul>
+<li class="chapter" data-level="16.9.1" data-path="mosaic.html"><a href="mosaic.html#labels-1"><i class="fa fa-check"></i><b>16.9.1</b> Labels</a></li>
+<li class="chapter" data-level="16.9.2" data-path="mosaic.html"><a href="mosaic.html#aspect-ratio"><i class="fa fa-check"></i><b>16.9.2</b> Aspect Ratio</a></li>
+<li class="chapter" data-level="16.9.3" data-path="mosaic.html"><a href="mosaic.html#gaps-between-rectangles"><i class="fa fa-check"></i><b>16.9.3</b> Gaps between rectangles</a></li>
+<li class="chapter" data-level="16.9.4" data-path="mosaic.html"><a href="mosaic.html#color"><i class="fa fa-check"></i><b>16.9.4</b> Color</a></li>
+</ul></li>
+<li class="chapter" data-level="16.10" data-path="mosaic.html"><a href="mosaic.html#external-resources-7"><i class="fa fa-check"></i><b>16.10</b> External resources</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="heatmap.html"><a href="heatmap.html"><i class="fa fa-check"></i><b>17</b> Chart: Heatmap</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="heatmap.html"><a href="heatmap.html#overview-12"><i class="fa fa-check"></i><b>17.1</b> Overview</a></li>
+<li class="chapter" data-level="17.2" data-path="heatmap.html"><a href="heatmap.html#tldr-7"><i class="fa fa-check"></i><b>17.2</b> tl;dr</a></li>
+<li class="chapter" data-level="17.3" data-path="heatmap.html"><a href="heatmap.html#simple-examples-6"><i class="fa fa-check"></i><b>17.3</b> Simple examples</a>
+<ul>
+<li class="chapter" data-level="17.3.1" data-path="heatmap.html"><a href="heatmap.html#heatmap-of-two-dimensional-bin-counts"><i class="fa fa-check"></i><b>17.3.1</b> Heatmap of two-dimensional bin counts</a></li>
+<li class="chapter" data-level="17.3.2" data-path="heatmap.html"><a href="heatmap.html#heat-map-of-dataframe"><i class="fa fa-check"></i><b>17.3.2</b> Heat map of dataframe</a></li>
+<li class="chapter" data-level="17.3.3" data-path="heatmap.html"><a href="heatmap.html#modifications-3"><i class="fa fa-check"></i><b>17.3.3</b> Modifications</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="heatmap.html"><a href="heatmap.html#theory-6"><i class="fa fa-check"></i><b>17.4</b> Theory</a></li>
+<li class="chapter" data-level="17.5" data-path="heatmap.html"><a href="heatmap.html#external-resources-8"><i class="fa fa-check"></i><b>17.5</b> External resources</a></li>
+</ul></li>
+<li class="part"><span><b>VI Special Data Types</b></span></li>
+<li class="chapter" data-level="18" data-path="maps.html"><a href="maps.html"><i class="fa fa-check"></i><b>18</b> Spatial Data</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="maps.html"><a href="maps.html#high-level-packages"><i class="fa fa-check"></i><b>18.1</b> High level packages</a>
+<ul>
+<li class="chapter" data-level="18.1.1" data-path="maps.html"><a href="maps.html#choropleth-maps"><i class="fa fa-check"></i><b>18.1.1</b> Choropleth maps</a></li>
+<li class="chapter" data-level="18.1.2" data-path="maps.html"><a href="maps.html#square-bins"><i class="fa fa-check"></i><b>18.1.2</b> Square bins</a></li>
+<li class="chapter" data-level="18.1.3" data-path="maps.html"><a href="maps.html#longitude-latitude-data"><i class="fa fa-check"></i><b>18.1.3</b> Longitude / latitude data</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="maps.html"><a href="maps.html#shape-files-and-more"><i class="fa fa-check"></i><b>18.2</b> Shape files and more</a></li>
+<li class="chapter" data-level="18.3" data-path="maps.html"><a href="maps.html#state-of-the-art"><i class="fa fa-check"></i><b>18.3</b> State-of-the-art</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="network.html"><a href="network.html"><i class="fa fa-check"></i><b>19</b> Interactive Networks</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="network.html"><a href="network.html#visnetwork-interactive"><i class="fa fa-check"></i><b>19.1</b> visNetwork (interactive)</a>
+<ul>
+<li class="chapter" data-level="19.1.1" data-path="network.html"><a href="network.html#minimum-working-example"><i class="fa fa-check"></i><b>19.1.1</b> Minimum working example</a></li>
+<li class="chapter" data-level="19.1.2" data-path="network.html"><a href="network.html#performance"><i class="fa fa-check"></i><b>19.1.2</b> Performance</a></li>
+<li class="chapter" data-level="19.1.3" data-path="network.html"><a href="network.html#helpful-configuration-tools"><i class="fa fa-check"></i><b>19.1.3</b> Helpful configuration tools</a></li>
+<li class="chapter" data-level="19.1.4" data-path="network.html"><a href="network.html#coloring-nodes"><i class="fa fa-check"></i><b>19.1.4</b> Coloring nodes</a></li>
+<li class="chapter" data-level="19.1.5" data-path="network.html"><a href="network.html#directed-nodes-arrows"><i class="fa fa-check"></i><b>19.1.5</b> Directed nodes (arrows)</a></li>
+<li class="chapter" data-level="19.1.6" data-path="network.html"><a href="network.html#turn-off-the-physics-simulation"><i class="fa fa-check"></i><b>19.1.6</b> Turn off the physics simulation</a></li>
+<li class="chapter" data-level="19.1.7" data-path="network.html"><a href="network.html#grey-out-nodes-far-from-selected-defined-by-degree"><i class="fa fa-check"></i><b>19.1.7</b> Grey out nodes far from selected (defined by “degree”)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="timeseriesbasic.html"><a href="timeseriesbasic.html"><i class="fa fa-check"></i><b>20</b> Time Series</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="timeseriesbasic.html"><a href="timeseriesbasic.html#overview-13"><i class="fa fa-check"></i><b>20.1</b> Overview</a></li>
+<li class="chapter" data-level="20.2" data-path="timeseriesbasic.html"><a href="timeseriesbasic.html#singlemultiple-time-series"><i class="fa fa-check"></i><b>20.2</b> Single/Multiple Time Series</a></li>
+<li class="chapter" data-level="20.3" data-path="timeseriesbasic.html"><a href="timeseriesbasic.html#secular-trend"><i class="fa fa-check"></i><b>20.3</b> Secular Trend</a></li>
+<li class="chapter" data-level="20.4" data-path="timeseriesbasic.html"><a href="timeseriesbasic.html#seasonal-trends"><i class="fa fa-check"></i><b>20.4</b> Seasonal Trends</a></li>
+<li class="chapter" data-level="20.5" data-path="timeseriesbasic.html"><a href="timeseriesbasic.html#frequency-of-data"><i class="fa fa-check"></i><b>20.5</b> Frequency of Data</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="tidyquant.html"><a href="tidyquant.html"><i class="fa fa-check"></i><b>21</b> Stock data with tidyquant</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="tidyquant.html"><a href="tidyquant.html#overview-14"><i class="fa fa-check"></i><b>21.1</b> Overview</a></li>
+<li class="chapter" data-level="21.2" data-path="tidyquant.html"><a href="tidyquant.html#what-is-tidyquant"><i class="fa fa-check"></i><b>21.2</b> What is tidyquant?</a></li>
+<li class="chapter" data-level="21.3" data-path="tidyquant.html"><a href="tidyquant.html#installing-tidyquant"><i class="fa fa-check"></i><b>21.3</b> Installing tidyquant</a></li>
+<li class="chapter" data-level="21.4" data-path="tidyquant.html"><a href="tidyquant.html#single-timeseries"><i class="fa fa-check"></i><b>21.4</b> Single timeseries</a></li>
+<li class="chapter" data-level="21.5" data-path="tidyquant.html"><a href="tidyquant.html#multiple-timeseries"><i class="fa fa-check"></i><b>21.5</b> Multiple timeseries</a></li>
+<li class="chapter" data-level="21.6" data-path="tidyquant.html"><a href="tidyquant.html#external-resources-9"><i class="fa fa-check"></i><b>21.6</b> External Resources</a></li>
+</ul></li>
+<li class="part"><span><b>VII Working with Data</b></span></li>
+<li class="chapter" data-level="22" data-path="import.html"><a href="import.html"><i class="fa fa-check"></i><b>22</b> Importing Data</a>
+<ul>
+<li class="chapter" data-level="22.1" data-path="import.html"><a href="import.html#overview-15"><i class="fa fa-check"></i><b>22.1</b> Overview</a></li>
+<li class="chapter" data-level="22.2" data-path="import.html"><a href="import.html#import-built-in-dataset"><i class="fa fa-check"></i><b>22.2</b> Import built-in dataset</a></li>
+<li class="chapter" data-level="22.3" data-path="import.html"><a href="import.html#import-local-data"><i class="fa fa-check"></i><b>22.3</b> Import local data</a>
+<ul>
+<li class="chapter" data-level="22.3.1" data-path="import.html"><a href="import.html#import-text-file"><i class="fa fa-check"></i><b>22.3.1</b> Import text file</a></li>
+<li class="chapter" data-level="22.3.2" data-path="import.html"><a href="import.html#import-csv-file"><i class="fa fa-check"></i><b>22.3.2</b> Import CSV file</a></li>
+<li class="chapter" data-level="22.3.3" data-path="import.html"><a href="import.html#import-json-file"><i class="fa fa-check"></i><b>22.3.3</b> Import JSON file</a></li>
+</ul></li>
+<li class="chapter" data-level="22.4" data-path="import.html"><a href="import.html#import-web-data"><i class="fa fa-check"></i><b>22.4</b> Import web data</a>
+<ul>
+<li class="chapter" data-level="22.4.1" data-path="import.html"><a href="import.html#read-a-data-file-directly-into-the-workspace"><i class="fa fa-check"></i><b>22.4.1</b> Read a data file directly into the workspace</a></li>
+<li class="chapter" data-level="22.4.2" data-path="import.html"><a href="import.html#read-data-from-an-api"><i class="fa fa-check"></i><b>22.4.2</b> Read data from an API</a></li>
+<li class="chapter" data-level="22.4.3" data-path="import.html"><a href="import.html#scrape-an-html-table-using-rvest"><i class="fa fa-check"></i><b>22.4.3</b> Scrape an HTML table using <code>rvest</code></a></li>
+</ul></li>
+<li class="chapter" data-level="22.5" data-path="import.html"><a href="import.html#import-data-from-database"><i class="fa fa-check"></i><b>22.5</b> Import data from database</a></li>
+<li class="chapter" data-level="22.6" data-path="import.html"><a href="import.html#more-resources-1"><i class="fa fa-check"></i><b>22.6</b> More resources</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="tidy.html"><a href="tidy.html"><i class="fa fa-check"></i><b>23</b> Walkthrough: Tidy Data &amp; dplyr</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="tidy.html"><a href="tidy.html#overview-16"><i class="fa fa-check"></i><b>23.1</b> Overview</a>
+<ul>
+<li class="chapter" data-level="23.1.1" data-path="tidy.html"><a href="tidy.html#packages-1"><i class="fa fa-check"></i><b>23.1.1</b> Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="23.2" data-path="tidy.html"><a href="tidy.html#installing-packages"><i class="fa fa-check"></i><b>23.2</b> Installing packages</a></li>
+<li class="chapter" data-level="23.3" data-path="tidy.html"><a href="tidy.html#viewing-the-data"><i class="fa fa-check"></i><b>23.3</b> Viewing the data</a></li>
+<li class="chapter" data-level="23.4" data-path="tidy.html"><a href="tidy.html#what-is-tidy-data"><i class="fa fa-check"></i><b>23.4</b> What is Tidy data?</a></li>
+<li class="chapter" data-level="23.5" data-path="tidy.html"><a href="tidy.html#tibbles"><i class="fa fa-check"></i><b>23.5</b> Tibbles</a></li>
+<li class="chapter" data-level="23.6" data-path="tidy.html"><a href="tidy.html#test-for-missing-values"><i class="fa fa-check"></i><b>23.6</b> Test for missing values</a></li>
+<li class="chapter" data-level="23.7" data-path="tidy.html"><a href="tidy.html#recode-the-missing-values"><i class="fa fa-check"></i><b>23.7</b> Recode the missing values</a></li>
+<li class="chapter" data-level="23.8" data-path="tidy.html"><a href="tidy.html#data-wrangling-verbs"><i class="fa fa-check"></i><b>23.8</b> Data wrangling verbs</a></li>
+<li class="chapter" data-level="23.9" data-path="tidy.html"><a href="tidy.html#rename"><i class="fa fa-check"></i><b>23.9</b> Rename</a></li>
+<li class="chapter" data-level="23.10" data-path="tidy.html"><a href="tidy.html#select"><i class="fa fa-check"></i><b>23.10</b> Select</a></li>
+<li class="chapter" data-level="23.11" data-path="tidy.html"><a href="tidy.html#mutate"><i class="fa fa-check"></i><b>23.11</b> Mutate</a></li>
+<li class="chapter" data-level="23.12" data-path="tidy.html"><a href="tidy.html#filter"><i class="fa fa-check"></i><b>23.12</b> Filter</a></li>
+<li class="chapter" data-level="23.13" data-path="tidy.html"><a href="tidy.html#arrange"><i class="fa fa-check"></i><b>23.13</b> Arrange</a></li>
+<li class="chapter" data-level="23.14" data-path="tidy.html"><a href="tidy.html#summarize-group-by"><i class="fa fa-check"></i><b>23.14</b> Summarize &amp; Group By</a></li>
+<li class="chapter" data-level="23.15" data-path="tidy.html"><a href="tidy.html#pipe-operator"><i class="fa fa-check"></i><b>23.15</b> Pipe Operator</a></li>
+<li class="chapter" data-level="23.16" data-path="tidy.html"><a href="tidy.html#tidying-the-transformed-data"><i class="fa fa-check"></i><b>23.16</b> Tidying the transformed data</a></li>
+<li class="chapter" data-level="23.17" data-path="tidy.html"><a href="tidy.html#helpful-links-1"><i class="fa fa-check"></i><b>23.17</b> Helpful Links</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="missing.html"><a href="missing.html"><i class="fa fa-check"></i><b>24</b> Missing Data</a>
+<ul>
+<li class="chapter" data-level="24.1" data-path="missing.html"><a href="missing.html#overview-17"><i class="fa fa-check"></i><b>24.1</b> Overview</a></li>
+<li class="chapter" data-level="24.2" data-path="missing.html"><a href="missing.html#tldr-8"><i class="fa fa-check"></i><b>24.2</b> tl;dr</a></li>
+<li class="chapter" data-level="24.3" data-path="missing.html"><a href="missing.html#what-are-nas"><i class="fa fa-check"></i><b>24.3</b> What are NAs?</a></li>
+<li class="chapter" data-level="24.4" data-path="missing.html"><a href="missing.html#types-of-missing-data"><i class="fa fa-check"></i><b>24.4</b> Types of Missing Data</a></li>
+<li class="chapter" data-level="24.5" data-path="missing.html"><a href="missing.html#missing-patterns"><i class="fa fa-check"></i><b>24.5</b> Missing Patterns</a>
+<ul>
+<li class="chapter" data-level="24.5.1" data-path="missing.html"><a href="missing.html#missing-patterns-by-columns"><i class="fa fa-check"></i><b>24.5.1</b> Missing Patterns by columns</a></li>
+<li class="chapter" data-level="24.5.2" data-path="missing.html"><a href="missing.html#missing-patterns-by-rows"><i class="fa fa-check"></i><b>24.5.2</b> Missing Patterns by rows</a></li>
+</ul></li>
+<li class="chapter" data-level="24.6" data-path="missing.html"><a href="missing.html#handling-missing-values"><i class="fa fa-check"></i><b>24.6</b> Handling Missing values</a>
+<ul>
+<li class="chapter" data-level="24.6.1" data-path="missing.html"><a href="missing.html#deletion-of-rows-containing-nas"><i class="fa fa-check"></i><b>24.6.1</b> Deletion of rows containing NAs</a></li>
+<li class="chapter" data-level="24.6.2" data-path="missing.html"><a href="missing.html#imputation-techniques"><i class="fa fa-check"></i><b>24.6.2</b> Imputation Techniques</a></li>
+<li class="chapter" data-level="24.6.3" data-path="missing.html"><a href="missing.html#model-imputation"><i class="fa fa-check"></i><b>24.6.3</b> Model Imputation</a></li>
+</ul></li>
+<li class="chapter" data-level="24.7" data-path="missing.html"><a href="missing.html#external-resources-10"><i class="fa fa-check"></i><b>24.7</b> External Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="outliers.html"><a href="outliers.html"><i class="fa fa-check"></i><b>25</b> Outliers</a>
+<ul>
+<li class="chapter" data-level="25.1" data-path="outliers.html"><a href="outliers.html#overview-18"><i class="fa fa-check"></i><b>25.1</b> Overview</a></li>
+<li class="chapter" data-level="25.2" data-path="outliers.html"><a href="outliers.html#tldr-9"><i class="fa fa-check"></i><b>25.2</b> tl;dr</a></li>
+<li class="chapter" data-level="25.3" data-path="outliers.html"><a href="outliers.html#what-are-outliers"><i class="fa fa-check"></i><b>25.3</b> What are outliers?</a></li>
+<li class="chapter" data-level="25.4" data-path="outliers.html"><a href="outliers.html#types-of-outliers"><i class="fa fa-check"></i><b>25.4</b> Types of Outliers</a>
+<ul>
+<li class="chapter" data-level="25.4.1" data-path="outliers.html"><a href="outliers.html#univariate-outliers"><i class="fa fa-check"></i><b>25.4.1</b> Univariate Outliers</a></li>
+<li class="chapter" data-level="25.4.2" data-path="outliers.html"><a href="outliers.html#multivariate-outliers"><i class="fa fa-check"></i><b>25.4.2</b> Multivariate Outliers</a></li>
+<li class="chapter" data-level="25.4.3" data-path="outliers.html"><a href="outliers.html#categorical-outliers"><i class="fa fa-check"></i><b>25.4.3</b> Categorical Outliers</a></li>
+</ul></li>
+<li class="chapter" data-level="25.5" data-path="outliers.html"><a href="outliers.html#handling-outliers"><i class="fa fa-check"></i><b>25.5</b> Handling Outliers</a>
+<ul>
+<li class="chapter" data-level="25.5.1" data-path="outliers.html"><a href="outliers.html#not-informative"><i class="fa fa-check"></i><b>25.5.1</b> Not informative</a></li>
+<li class="chapter" data-level="25.5.2" data-path="outliers.html"><a href="outliers.html#more-informative"><i class="fa fa-check"></i><b>25.5.2</b> More informative</a></li>
+</ul></li>
+<li class="chapter" data-level="25.6" data-path="outliers.html"><a href="outliers.html#external-resources-11"><i class="fa fa-check"></i><b>25.6</b> External Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="26" data-path="dates.html"><a href="dates.html"><i class="fa fa-check"></i><b>26</b> Dates in R</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="dates.html"><a href="dates.html#introduction-1"><i class="fa fa-check"></i><b>26.1</b> Introduction</a></li>
+<li class="chapter" data-level="26.2" data-path="dates.html"><a href="dates.html#converting-to-date-class"><i class="fa fa-check"></i><b>26.2</b> Converting to <code>Date</code> class</a></li>
+<li class="chapter" data-level="26.3" data-path="dates.html"><a href="dates.html#working-with-date-class"><i class="fa fa-check"></i><b>26.3</b> Working with <code>Date</code> Class</a></li>
+<li class="chapter" data-level="26.4" data-path="dates.html"><a href="dates.html#plotting-with-a-date-class-variable"><i class="fa fa-check"></i><b>26.4</b> Plotting with a <code>Date</code> class variable</a>
+<ul>
+<li class="chapter" data-level="26.4.1" data-path="dates.html"><a href="dates.html#base-r"><i class="fa fa-check"></i><b>26.4.1</b> base R</a></li>
+<li class="chapter" data-level="26.4.2" data-path="dates.html"><a href="dates.html#ggplot2"><i class="fa fa-check"></i><b>26.4.2</b> ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="26.5" data-path="dates.html"><a href="dates.html#date-and-time-classes"><i class="fa fa-check"></i><b>26.5</b> Date and time classes</a></li>
+</ul></li>
+<li class="part"><span><b>VIII Other Topics</b></span></li>
+<li class="chapter" data-level="27" data-path="percept.html"><a href="percept.html"><i class="fa fa-check"></i><b>27</b> Perception/Color Resources</a>
+<ul>
+<li class="chapter" data-level="27.1" data-path="percept.html"><a href="percept.html#overview-19"><i class="fa fa-check"></i><b>27.1</b> Overview</a></li>
+<li class="chapter" data-level="27.2" data-path="percept.html"><a href="percept.html#perception"><i class="fa fa-check"></i><b>27.2</b> Perception</a></li>
+<li class="chapter" data-level="27.3" data-path="percept.html"><a href="percept.html#color-1"><i class="fa fa-check"></i><b>27.3</b> Color</a></li>
+<li class="chapter" data-level="27.4" data-path="percept.html"><a href="percept.html#quick-tips-on-using-color-with-ggplot2"><i class="fa fa-check"></i><b>27.4</b> Quick tips on using color with <code>ggplot2</code></a>
+<ul>
+<li class="chapter" data-level="27.4.1" data-path="percept.html"><a href="percept.html#continuous-data"><i class="fa fa-check"></i><b>27.4.1</b> Continuous data</a></li>
+<li class="chapter" data-level="27.4.2" data-path="percept.html"><a href="percept.html#discrete-data"><i class="fa fa-check"></i><b>27.4.2</b> Discrete data</a></li>
+</ul></li>
+<li class="chapter" data-level="27.5" data-path="percept.html"><a href="percept.html#links"><i class="fa fa-check"></i><b>27.5</b> Links</a></li>
+</ul></li>
+<li class="chapter" data-level="28" data-path="themes.html"><a href="themes.html"><i class="fa fa-check"></i><b>28</b> Themes and Palettes</a>
+<ul>
+<li class="chapter" data-level="28.1" data-path="themes.html"><a href="themes.html#overview-20"><i class="fa fa-check"></i><b>28.1</b> Overview</a></li>
+<li class="chapter" data-level="28.2" data-path="themes.html"><a href="themes.html#ggplot2-themes"><i class="fa fa-check"></i><b>28.2</b> ggplot2 themes</a>
+<ul>
+<li class="chapter" data-level="28.2.1" data-path="themes.html"><a href="themes.html#ggplot2-theme-example"><i class="fa fa-check"></i><b>28.2.1</b> ggplot2 theme example</a></li>
+</ul></li>
+<li class="chapter" data-level="28.3" data-path="themes.html"><a href="themes.html#rcolorbrewer"><i class="fa fa-check"></i><b>28.3</b> RColorBrewer</a></li>
+<li class="chapter" data-level="28.4" data-path="themes.html"><a href="themes.html#ggthemes"><i class="fa fa-check"></i><b>28.4</b> ggthemes</a>
+<ul>
+<li class="chapter" data-level="28.4.1" data-path="themes.html"><a href="themes.html#ggthemes-examples"><i class="fa fa-check"></i><b>28.4.1</b> ggthemes examples</a></li>
+</ul></li>
+<li class="chapter" data-level="28.5" data-path="themes.html"><a href="themes.html#ggthemr"><i class="fa fa-check"></i><b>28.5</b> ggthemr</a>
+<ul>
+<li class="chapter" data-level="28.5.1" data-path="themes.html"><a href="themes.html#ggthemr-examples"><i class="fa fa-check"></i><b>28.5.1</b> ggthemr examples</a></li>
+</ul></li>
+<li class="chapter" data-level="28.6" data-path="themes.html"><a href="themes.html#ggsci"><i class="fa fa-check"></i><b>28.6</b> ggsci</a>
+<ul>
+<li class="chapter" data-level="28.6.1" data-path="themes.html"><a href="themes.html#ggsci-for-discrete-data"><i class="fa fa-check"></i><b>28.6.1</b> ggsci for discrete data</a></li>
+<li class="chapter" data-level="28.6.2" data-path="themes.html"><a href="themes.html#ggsci-for-continuous-data"><i class="fa fa-check"></i><b>28.6.2</b> ggsci for continuous data</a></li>
+</ul></li>
+<li class="chapter" data-level="28.7" data-path="themes.html"><a href="themes.html#external-resources-12"><i class="fa fa-check"></i><b>28.7</b> External Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="29" data-path="publish.html"><a href="publish.html"><i class="fa fa-check"></i><b>29</b> Publishing Resources</a>
+<ul>
+<li class="chapter" data-level="29.1" data-path="publish.html"><a href="publish.html#overview-21"><i class="fa fa-check"></i><b>29.1</b> Overview</a></li>
+<li class="chapter" data-level="29.2" data-path="publish.html"><a href="publish.html#tldr-10"><i class="fa fa-check"></i><b>29.2</b> tl;dr</a></li>
+<li class="chapter" data-level="29.3" data-path="publish.html"><a href="publish.html#bookdown"><i class="fa fa-check"></i><b>29.3</b> Bookdown</a></li>
+<li class="chapter" data-level="29.4" data-path="publish.html"><a href="publish.html#essentials"><i class="fa fa-check"></i><b>29.4</b> Essentials</a></li>
+<li class="chapter" data-level="29.5" data-path="publish.html"><a href="publish.html#adding-a-custom-domain-name"><i class="fa fa-check"></i><b>29.5</b> Adding a custom domain name</a></li>
+<li class="chapter" data-level="29.6" data-path="publish.html"><a href="publish.html#make-a-custom-404-page"><i class="fa fa-check"></i><b>29.6</b> Make a custom 404 page</a></li>
+<li class="chapter" data-level="29.7" data-path="publish.html"><a href="publish.html#hooking-up-travis"><i class="fa fa-check"></i><b>29.7</b> Hooking up Travis</a>
+<ul>
+<li class="chapter" data-level="29.7.1" data-path="publish.html"><a href="publish.html#add-travis-files-to-github-repo"><i class="fa fa-check"></i><b>29.7.1</b> Add Travis files to GitHub repo</a></li>
+<li class="chapter" data-level="29.7.2" data-path="publish.html"><a href="publish.html#add-travis-service"><i class="fa fa-check"></i><b>29.7.2</b> Add Travis service</a></li>
+</ul></li>
+<li class="chapter" data-level="29.8" data-path="publish.html"><a href="publish.html#notes-on-our-workflow"><i class="fa fa-check"></i><b>29.8</b> Notes on our workflow</a>
+<ul>
+<li class="chapter" data-level="29.8.1" data-path="publish.html"><a href="publish.html#section"><i class="fa fa-check"></i><b>29.8.1</b> </a></li>
+</ul></li>
+<li class="chapter" data-level="29.9" data-path="publish.html"><a href="publish.html#other-resources-1"><i class="fa fa-check"></i><b>29.9</b> Other resources</a></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>30</b> Workflow Notes</a></li>
+<li class="chapter" data-level="31" data-path="general.html"><a href="general.html"><i class="fa fa-check"></i><b>31</b> General Resources</a>
+<ul>
+<li class="chapter" data-level="31.1" data-path="general.html"><a href="general.html#books"><i class="fa fa-check"></i><b>31.1</b> Books</a></li>
+<li class="chapter" data-level="31.2" data-path="general.html"><a href="general.html#cheatsheets"><i class="fa fa-check"></i><b>31.2</b> Cheatsheets</a></li>
+<li class="chapter" data-level="31.3" data-path="general.html"><a href="general.html#articles"><i class="fa fa-check"></i><b>31.3</b> Articles</a></li>
+<li class="chapter" data-level="31.4" data-path="general.html"><a href="general.html#meetups"><i class="fa fa-check"></i><b>31.4</b> Meetups</a></li>
+<li class="chapter" data-level="31.5" data-path="general.html"><a href="general.html#twitter"><i class="fa fa-check"></i><b>31.5</b> Twitter</a></li>
+<li class="chapter" data-level="31.6" data-path="general.html"><a href="general.html#data-1"><i class="fa fa-check"></i><b>31.6</b> Data</a></li>
+<li class="chapter" data-level="31.7" data-path="general.html"><a href="general.html#packages-2"><i class="fa fa-check"></i><b>31.7</b> Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="32" data-path="chapter-index.html"><a href="chapter-index.html"><i class="fa fa-check"></i><b>32</b> Chapter Index by Resource Type</a>
+<ul>
+<li class="chapter" data-level="32.1" data-path="chapter-index.html"><a href="chapter-index.html#overview-22"><i class="fa fa-check"></i><b>32.1</b> Overview</a></li>
+<li class="chapter" data-level="32.2" data-path="chapter-index.html"><a href="chapter-index.html#index"><i class="fa fa-check"></i><b>32.2</b> Index</a></li>
+</ul></li>
+<li class="chapter" data-level="33" data-path="session-information.html"><a href="session-information.html"><i class="fa fa-check"></i><b>33</b> Session information</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">edav.info/</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!-- 
+Header 
+  - included at the top (head) of every page
+  - EDAV logo back to index.html
+  - smiles on hover :)
+-->
+
+<!-- Free Font Awesome Stylesheet -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+<!-- JS -->
+<script>
+function hover(element) {
+  element.setAttribute('src', 'images/icons/edav_resource_url.png');
+}
+
+function unhover(element) {
+  element.setAttribute('src', 'images/icons/edav_resource_url_no_smile.png');
+}
+</script>
+
+<!-- Anchor point for scroll-top button -->
+<a id="top"></a>
+
+<!-- URL Logo -->
+<center>
+<br><br>
+<a href="index.html"><img src="images/icons/edav_resource_url_no_smile.png" onmouseover="hover(this);" onmouseout="unhover(this);" /></a>
+</center>
+<div id="project" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Final Project Assignment</h1>
+<p><img src="images/banners/banner_presentation.png" /></p>
+<div id="overview-1" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Overview</h2>
+<p>This section goes over what’s expected for the final project, <strong>Fall 2020</strong>.</p>
+<p><strong>General Note</strong>: Please note that this sheet cannot possibly cover all the “do’s and don’ts” of data analysis and visualization. You are expected to follow all of the best practices discussed in class throughout the semester.</p>
+</div>
+<div id="general-info" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> General info</h2>
+<div id="goal" class="section level3" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Goal</h3>
+<p>The goal of this project is to perform an exploratory data analysis / create visualizations with data of your choosing in order to gain preliminary insights on questions of interest to you.</p>
+</div>
+<div id="teams" class="section level3" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Teams</h3>
+<p>For this assignment you will work in teams of 2-4 people. If you wish to select your own partner, please do so by the date specified in CourseWorks. To indicate who you are working with, sign up in the <em>People</em> section of CourseWorks. Do not click the <em>+Group</em> button; rather, drag your names into one of the groups already created with the name “Final Project <number>”. (If you don’t follow these instructions and create your own group, it will not be linked to the Final Project assignment and therefore you won’t be able to submit your project properly as a team.) Please join the groups in order starting with group #1 so that we don’t end up with gaps in the group numbers.</p>
+<p>Piazza is a good place to post your interests and look for partners. After the date indicated, partners will be randomly assigned. (This is actually a better option in terms of preparing yourself for a work environment with colleagues that you don’t know well.) If you wish to be assigned to a partner before that date so you can get started earlier (recommended) please email me.</p>
+<p>Once the groups are set up, we will ask for a short description of your project ideas, so start planning!</p>
+</div>
+<div id="topics" class="section level3" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Topics</h3>
+<p>The topic you choose is open-ended… choose something that you are intereted in and genuinely curious about! Think of some questions that you don’t know the answer to. Next look for data that might help you answer those questions.</p>
+</div>
+<div id="data" class="section level3" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Data</h3>
+<p>The data can be pulled from multiple sources; it does not need to be a single dataset. Be sure to get data from the original source. For example, if you wish to work with data collected and distributed by the <a href="https://www.cdc.gov/DataStatistics/" target="_blank">Centers for Disease Control</a>, that is where you should go to access the data, not a third party that has posted the data. Do not use datasets that have been processed and cannot be traced to the source. For this reason, datasets from Kaggle are not good choices unless you can find the original source of the data.</p>
+</div>
+</div>
+<div id="report-format" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Report format</h2>
+<p>Your report should be submitted as a bookdown book, which you can create from <a href="https://github.com/jtr13/EDAVtemplate" target="_blank">the final project template</a>. Be sure to follow the instructions provided in the repo <a href="https://github.com/jtr13/EDAVtemplate/blob/main/README.md" target="_blank">README</a>. (There are other templates in my account. Make sure you use this one.)</p>
+<p>Your report will include the following chapters, as shown in this <a href="https://jtr13.github.io/EDAVtemplate/">rendered version of the final project template</a>. (The links to the GitHub repo won’t work since the placeholders in the</p>
+<p>Note that each chapter is an <code>.Rmd</code> file in the top level directory of the GitHub repo. You can have additional folders in your repo that will not be part of the bookdown book, for example, pre-processing scripts, experimental work, etc. However, <strong>do not include additional <code>.Rmd</code> files in the top level directory</strong> because they either will inadvertently end up in the bookdown book, or cause errors / warnings.</p>
+<p>To turn in your final project, just submit the link to the rendered book (such as “<a href="https://jtr13.github.io/EDAVtemplate/" class="uri">https://jtr13.github.io/EDAVtemplate/</a>” to the CourseWorks final project assignment.) After the deadline, do not make any changes to the main branch of your GitHub repo.</p>
+<div id="i.-introduction" class="section level3 unnumbered">
+<h3>I. Introduction</h3>
+<p>Explain why you chose this topic, and the questions you are interested in studying. Provide context for readers who are not familiar with the topic.</p>
+<p>(suggested: approximately 1/2 page)</p>
+</div>
+<div id="ii.-data-sources" class="section level3 unnumbered">
+<h3>II. Data sources</h3>
+<p>Describe the data sources: who is responsible for collecting the data? How is it collected? If there were a choice of options, explain how you chose.</p>
+<p>Provide some basic information about the dataset: types of variables, number of records, etc.</p>
+<p>Describe any issues / problems with the data, either known or that you discover.</p>
+<p>(suggested: approximately 1 page)</p>
+</div>
+<div id="iii.-data-transformation" class="section level3 unnumbered">
+<h3>III. Data transformation</h3>
+<p>Describe the process of getting the data into a form in which you could work with it in R. If your code does not lend itself to being including in the <code>.Rmd</code> file, provide a link to the folder or file(s) that contain(s) that code.</p>
+<p>(suggested: approximately 1/2 page)</p>
+</div>
+<div id="iv.-missing-values" class="section level3 unnumbered">
+<h3>IV. Missing values</h3>
+<p>Describe any patterns you discover in missing values.</p>
+<p>(suggested: 2 graphs plus commentary)</p>
+</div>
+<div id="v.-results" class="section level3 unnumbered">
+<h3>V. Results</h3>
+<p>You have a lot of freedom to choose what to do, as long as you restrict yourselves to exploratory techniques (rather than modeling / prediction approaches). In addition, your analysis must be clearly documented and reproducible.</p>
+<p>Provide a short nontechnical summary of the most revealing findings of your analysis written for a nontechnical audience. Take extra care to clean up your graphs, ensuring that best practices for presentation are followed, as described in the <a href="project.html#audience-ready-style">audience ready style section</a> below.</p>
+<p>Use subheadings as appropriate. See <a href="https://toddwschneider.com/archives/">Todd Schneider’s blog posts</a> for examples of thoughtful, informative subheadings.</p>
+<p>(suggested: 5-10 graphs plus commentary, a plot with multiple facets counts as 1 graph)</p>
+</div>
+<div id="vi.-interactive-or-animated-component" class="section level3 unnumbered">
+<h3>VI. Interactive or animated component</h3>
+<p>Select one (or more) of your key findings to present in an interactive or animated format using D3 <strong>version 6</strong>. Be thoughtful about how you use interactivity and/or animation: using these features to add value in a way that would not be possible with a static graph.</p>
+<p>Design with the goal of users walking away with a new understanding of the data and a clear understanding of the purpose of the visualization. If the tool is interactive, provide clear instructions on how the user should engage.
+<em>Thoughtfulness</em> is more important than technical prowess; in all aspects of the project, think quality, not quantity.</p>
+<p>Interactive graphs must follow all of the best practices as with static graphs in terms of perception, labeling, accuracy, etc.</p>
+<p>Please see <a href="https://jtr13.github.io/d3book/share-d3-online.html" target="_blank">this chapter on sharing your D3 code online</a> for options for sharing the interactive portion of your project. You are encouraged to share experiences on <a href="https://piazza.com/" target="_blank">Piazza</a> to help classmates with the publishing process.</p>
+<p>Note: the interactive component is worth approximately 25% of the final project grade. Therefore, do not spend 90% of your time on it… concentrate on the exploratory data analysis piece.</p>
+</div>
+<div id="vii.-conclusion" class="section level3 unnumbered">
+<h3>VII. Conclusion</h3>
+<p>Discuss limitations and future directions, lessons learned.</p>
+<p>(suggested: approximately 1/2 page)</p>
+</div>
+</div>
+<div id="reproducible-workflow" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Reproducible workflow</h2>
+<p>It is important to think about a reproducible workflow from the very start. Everything you do should be guided by the question: Could others repeat what you’ve done based on the materials and explanations you’ve provided?</p>
+<p>In practical terms, this means:</p>
+<ul>
+<li><p>Use git/GitHub for version control, collaboration, and sharing code. All team members should have write access (i.e. be collaborators) on the same repo, either belonging to one team member or part of a <a href="https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/creating-a-new-organization-from-scratch" target="_blank">GitHub organization</a> that you create. With write access, think of the repo as “yours” and follow the <a href="https://edav.info/github.html#your-repo-with-branching">“Your repo with branching” workflow</a>.</p></li>
+<li><p>In general, keep code, output, and analysis together in the <code>.Rmd</code> chapter files. If there are pieces of your project that can’t be included in the <code>.Rmd</code>, then document why this is the case and provide clear steps on how your process can be reproduced.</p></li>
+<li><p>Use scripts for importing, cleaning and transforming data. As above, if it is not feasible or practical to do so, explain why and clearly document your workflow.</p></li>
+<li><p>Document as you go. Copy and paste helpful links, Stack Overflow posts, whatever you use into comments in the places you use them. You will be happy you did so.</p></li>
+</ul>
+<p>Recommended reading: <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285" target="_blank">Ten Simple Rules for Reproducible Computational Research</a>. (Not all rules are applicable to this assignment but it will help you think about and develop a solid personal workflow plan going forward.)</p>
+</div>
+<div id="code" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Code</h2>
+<p>All of your code should be stored on GitHub. We will spend some time in class learning how to set up a Git/GitHub workflow. All group members should have write access to the same repo. You will need to discuss your work plan to avoid merge conflicts.</p>
+<p>Keep your project organized. Create folders that work for you, such as <code>data/raw</code>, <code>data/clean</code>, <code>preprocess</code>, etc.</p>
+<p>The static visualizations should be done in R, but other pieces, such as data importation and cleaning do not have to be.</p>
+</div>
+<div id="feedback" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Feedback</h2>
+<p>At any point, you may ask the TAs or the instructor (Joyce) for advice. Our primary role in this regard will be to provide general guidance on your choice of data / topic / direction. As always, you are encouraged to post specific questions to <a href="https://piazza.com/" target="_blank">Piazza</a>, particularly coding questions and issues. You may also volunteer to discuss your project with the class in order to get feedback–if you’d like to do this, <a href="http://stat.columbia.edu/department-directory/name/joyce-robbins/" target="_blank">email the instructor</a> to schedule a date.</p>
+</div>
+<div id="peer-review" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> Peer review</h2>
+<p>After final projects are turned in, you will be asked write peer reviews of other projects. Each individual will be assigned two project groups to review, and instructions will be provided.</p>
+<p><strong>Note</strong>: part of the grade you receive for the class is based on the quality of review that you <em>write</em>, not on the feedback that your project <em>receives.</em> Your grade for the project (as for all other assignments for the class) will be determined solely by the instructor and TAs.</p>
+</div>
+<div id="writing-advice" class="section level2" number="3.8">
+<h2><span class="header-section-number">3.8</span> Writing advice</h2>
+<div id="start-early" class="section level3" number="3.8.1">
+<h3><span class="header-section-number">3.8.1</span> Start early</h3>
+<p>Don’t wait to start writing. Your overall project will undoubtedly be better if you give up trying to get that last graph perfect or the last bit of analysis done and get to the <em>writing</em>.</p>
+</div>
+<div id="tell-it-like-it-is" class="section level3" number="3.8.2">
+<h3><span class="header-section-number">3.8.2</span> Tell it like it is</h3>
+<p>Be as intellectually honest as possible. That means pointing out flaws in your work, detailing obstacles, disagreements, decision points, etc. – the kinds of “behind-the-scene” things that are important but often left out of reports.</p>
+</div>
+<div id="hide-code" class="section level3" number="3.8.3">
+<h3><span class="header-section-number">3.8.3</span> Hide code</h3>
+<p>The bookdown template is set up to do this for you. It includes an <a href="https://github.com/jtr13/EDAVtemplate/blob/main/_common.R"><code>_common.R</code> file</a>, referenced in the <a href="https://github.com/jtr13/EDAVtemplate/blob/main/_bookdown.yml"><code>_bookdown.yml</code> file</a>, which sets <strong>knitr</strong> chunk options for all chapters.</p>
+<p>Since we will not view the code in the bookdown book, be sure that the View and Edit GitHub link buttons work properly.</p>
+</div>
+<div id="interpret-your-graphs" class="section level3" number="3.8.4">
+<h3><span class="header-section-number">3.8.4</span> Interpret your graphs</h3>
+<p>All graphs should be accompanied by textual description / interpretation.</p>
+</div>
+<div id="use-simple-formatting" class="section level3" number="3.8.5">
+<h3><span class="header-section-number">3.8.5</span> Use simple formatting</h3>
+<p>Using RMarkdown makes it easy to combine code, text and graphs into a reproducible workflow. Fancy formatting is not its strength. Therefore, focus on the text and graphs, not the formatting. If you’re not sure if something is important to focus on or not, please ask.</p>
+</div>
+<div id="link-effectively" class="section level3" number="3.8.6">
+<h3><span class="header-section-number">3.8.6</span> Link effectively</h3>
+<p>Link to your sources; you do not need to create a reference or bibliography section.</p>
+<p>In addition, link to your own materials that cannot be included directly in the report. Use descriptive links: “See this GitHub repo” is better than “See here.”</p>
+</div>
+</div>
+<div id="audience-ready-style" class="section level2" number="3.9">
+<h2><span class="header-section-number">3.9</span> Audience ready style</h2>
+<p>As we’ve discussed throughout the semester, standards are higher for clarity in graphs designed to be shared with others. While “good enough” is our standard for EDA, we need to go the extra mile for presentation. The following is checklist of items to address to make your graphs presentation ready. (You do not have to worry about these items for the EDA section.)</p>
+<ul>
+<li>Title, axis labels, tick mark labels, and legends should be comprehensible (easy to understand) and legible (easy to read / decipher).</li>
+<li>Tick marks should not be labeled in scientific notation or with long strings of zeros, such as 3000000000. Instead, convert to smaller numbers and change the units: 3000000000 becomes “3” and the axis label “billions of views”.</li>
+<li>Units should be intuitive (An axis labeled in month/day/year format is intuitive; one labeled in seconds since January 1, 1970 is not.)</li>
+<li>The font size should be large enough to read clearly. The default in ggplot2 is generally too small. You can easily change it by passing the base font size to the theme, such as <code>+ theme_grey(16)</code> (The default base font size is 11).</li>
+<li>The order of items on the axes and legends should be logical. (Alphabetical is usually not the best option.)</li>
+<li>Colors should be color-vision-deficiency-friendly.</li>
+<li>If categorical variable levels are long, set up the graph so the categorical variable is on the y-axis and the names are horizontal. A better option, if possible, is to shorten the names of the levels.</li>
+<li>Err on the side of simplicity. Don’t, for example, overuse color when it’s not necessary. Ask yourself: does color make this graph any clearer? If it doesn’t, leave it out.</li>
+<li>Test your graphs on nontechnical friends and family and ask for feedback.</li>
+</ul>
+<p>Above all, have fun with it <i class="far fa-smile-beam"></i></p>
+</div>
+<div id="grading" class="section level2" number="3.10">
+<h2><span class="header-section-number">3.10</span> Grading</h2>
+<p>We grade holistically, which means that we consider the project as a whole, we do not follow a rubric with dozens of items each worth a few points. Each project is different and this gives you the flexibility to devote more or less to various aspects of the project depending on what’s appropriate, within reason.</p>
+<p>We are more impressed by <em>quality</em> than <em>quantity</em>.</p>
+<p>In determining grades, we take the following into account:</p>
+<ul>
+<li><p><strong>Originality</strong> Are your questions thought-provoking? Do they encourage the reader to think about the topic in a new way?</p></li>
+<li><p><strong>Real world context</strong> Do your graphs and textual descriptions reflect a solid understanding of what your data mean? Is it clear <em>why</em> you are asking the questions that you are asking? Are your interpretations reasonable?</p></li>
+<li><p><strong>Reproducibility</strong> Did you provide all of your code in a manner that will be easy for the reader to rerun your analysis, and include an explanation for any pieces that cannot be reproduced? Is your code clear?</p></li>
+<li><p><strong>Multidimensionality</strong> Do you examine multidimensional relationships and present them clearly?</p></li>
+<li><p><strong>Choice of graph forms</strong> Are your graph forms good choices for your data?</p></li>
+<li><p><strong>Parameters / design decisions</strong> Have you made good choices in parameters, color, etc.?</p></li>
+<li><p><strong>Standards</strong> Do your graphs meet <a href="project.html#audience-ready-style">audience ready style standards</a>?</p></li>
+<li><p><strong>Interactive part</strong> Are the instructions clear? How well does the interactive component connect with the goals of the project? Does it help the reader understand the main conclusions?</p></li>
+<li><p><strong>Technical competence</strong> Do your links work? Are your graphs displaying properly?</p></li>
+</ul>
+</div>
+<div id="resources" class="section level2" number="3.11">
+<h2><span class="header-section-number">3.11</span> Resources</h2>
+<p><a href="https://www.youtube.com/watch?v=nx5yhXAQLxw" target="_blank">“Tidy Tuesday Screencast: analyzing college major &amp; income data in R”</a> David Robinson explores a dataset in R live, without looking at the data in advance. This may be helpful in figuring out how to get started.</p>
+
+</div>
+</div>
+<!-- 
+Footer 
+  - included at the end of every page
+  - EDAV logo to top of current page
+  - GitHub link
+  - License Link
+  - scroll-top button
+-->
+
+<center>
+<br><br>
+<a href="index.html"><img class="active-banner footer-logo" src="images/icons/edav_resource_black_small.png" title="Jump to the homepage"></a>
+<br><br>
+<a href="https://github.com/jtr13/EDAV" target="_blank"><img class="active-banner github-logo" src="images/icons/GitHub-Mark-120px-plus.png" title="Our GitHub repo"></a>
+<br><br>
+<i class="fas fa-code"></i> <b>with</b> <i class="fas fa-heart"></i>
+<a href="#top" id="scroll-top"><i class="fas fa-chevron-up"></i></a>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="contribute.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/jtr13/EDAV/edit/master/final_project.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/jtr13/EDAV/blob/master/final_project.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
