@@ -12,11 +12,10 @@ repos:
 
 r_github_packages:
  - cran/extracat
- - cttobin/ggthemr
+ - Mikata-Project/ggthemr
  - hadley/emo
  - hrbrmstr/statebins
  - tidyverse/forcats
-
 
 addons:
   apt:
