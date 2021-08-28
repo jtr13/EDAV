@@ -1,7 +1,7 @@
 book_filename: "edav-resource"
 chapter_name: ""
 repo: https://github.com/jtr13/EDAV
-output_dir: _book
+output_dir: docs
 clean: [packages.bib, bookdown.bbl]
 #new_session: yes
 delete_merged_file: true

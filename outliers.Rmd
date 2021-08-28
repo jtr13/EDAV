@@ -77,9 +77,7 @@ ggparcoord(diamonds[1:1000,], columns=1:5, scale="uniminmax", alpha=0.8) +
 Outliers can be rare on a categorical scale. Certain combinations of categories are rare or should not occur at all. Fluctuation diagrams can be used to find such outliers. We can see rare cases in the `HairEyeColor` dataset:
 ```{r fig.height=8, fig.width=8}
 library(datasets)
-library(extracat)
-
-fluctile(HairEyeColor)
+#fluctile(HairEyeColor) from extracat package, no longer on CRAN
 ```
 
 ## Handling Outliers
