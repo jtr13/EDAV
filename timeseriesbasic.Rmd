@@ -90,12 +90,12 @@ g + geom_smooth(method = "loess", span = .5, se = FALSE)
 
 ## Seasonal Trends
 In addition to secular trends, there are also seasonal trends in time series data. One way is to visualize seasonal trends is to use fact on season(day of month, day of week etc.).
-```{r, message = FALSE}
+```{r problem, message = FALSE}
 library(lubridate)
 dfman <- read_csv("data/ManchesterByTheSea.csv")
 ggplot(dfman, aes(Date, Gross)) +
   geom_line() +
-  facet_grid(wday(Date, label = TRUE)~.)
+  facet_wrap(~wday(Date, label = TRUE), ncol = 1, strip.position="right")
 ```
 
 Or, let us create a monthly plot.
