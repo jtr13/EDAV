@@ -43,7 +43,7 @@ g
 
 The following exmaple shows the closing price for four big technology companies in the US. When analyzing GDP, salary level and stock prices, it is often difficult to compare trends since the scales are so different. For example, since AAPL and MSFT prices per share are so much lower than GOOG's price per share, it's hard to discern the trends:
 
-```{r, message = FALSE, warning = FALSE}
+```{r tq, message = FALSE, warning = FALSE}
 library(tidyquant)
 stocks <- c("AAPL", "GOOG", "IBM", "MSFT")
 df <- tq_get(stocks, from = as.Date("2013-01-01"),
