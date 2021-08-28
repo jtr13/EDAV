@@ -144,24 +144,28 @@ summary(x@patterns)
 **The `extracat` package is no longer on CRAN.**
 
 We can visualize missing patterns using the `visna` (VISualize NA) function in the `extracat` package:
-```{r}
+```{r, eval=FALSE}
+# not run
 extracat::visna(data)
 ```
 
 Here, the rows represent a missing pattern and the columns represent the column level missing values. The advantage of this graph is that it shows you only the missing patterns available in the data, not all the possible combinations of data (which will be 2^6 = 64), so that you can focus on the pattern in the data itself. 
 
 We can sort the graph by most to least common missing pattern (i.e., by row):
-```{r}
+```{r, eval=FALSE}
+# not run
 extracat::visna(data, sort = "r")
 ```
 
 Or, by most to least missing values (i.e., by column):
-```{r}
+```{r, eval=FALSE}
+# not run
 extracat::visna(data, sort = "c")
 ```
 
 Or, by both row and column sort:
-```{r}
+```{r, eval=FALSE}
+# not run
 extracat::visna(data, sort = "b")
 ```
 
