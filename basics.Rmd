@@ -27,7 +27,7 @@ r_latest_version <- xml2::read_html("https://cran.r-project.org/bin/macosx/") %>
 
 rstudio_latest_version <- 
     xml2::read_html("https://www.rstudio.com/products/rstudio/download/") %>% 
-    rvest::html_node("h3") %>% 
+    rvest::html_node("h3#download") %>% 
     rvest::html_text() %>% 
     stringr::str_extract_all("[0-9].") %>% 
     unlist() %>% 
