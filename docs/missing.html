@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -921,7 +921,7 @@ Most of the data we encounter is MAR.</p></li>
 <span id="cb232-3"><a href="missing.html#cb232-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Names dataset with NAs added&quot;</span>) <span class="sc">+</span></span>
 <span id="cb232-4"><a href="missing.html#cb232-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>() <span class="sc">+</span></span>
 <span id="cb232-5"><a href="missing.html#cb232-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-153-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-153-1.png" width="672" /></p>
 <p>And we can also add a scale to check the numerical values available in the dataset and look for any trends:</p>
 <div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="missing.html#cb233-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales) <span class="co"># for legend</span></span>
 <span id="cb233-2"><a href="missing.html#cb233-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Select columns having numeric values</span></span>
@@ -933,7 +933,7 @@ Most of the data we encounter is MAR.</p></li>
 <span id="cb233-8"><a href="missing.html#cb233-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb233-9"><a href="missing.html#cb233-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">low =</span> <span class="st">&quot;grey80&quot;</span>, <span class="at">high =</span> <span class="st">&quot;red&quot;</span>, <span class="at">na.value =</span> <span class="st">&quot;black&quot;</span>, <span class="at">label=</span>comma) <span class="sc">+</span> </span>
 <span id="cb233-10"><a href="missing.html#cb233-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-154-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-154-1.png" width="672" /></p>
 <p>Can you see the problem with the above graph? Notice that the scale is for <em>all</em> the variables, hence it cannot show the variable level differences!
 To solve this problem, we can standardize the variables:</p>
 <div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="missing.html#cb234-1" aria-hidden="true" tabindex="-1"></a>filtered_for_numeric <span class="ot">&lt;-</span> filtered_for_numeric <span class="sc">%&gt;%</span> </span>
@@ -944,7 +944,7 @@ To solve this problem, we can standardize the variables:</p>
 <span id="cb234-6"><a href="missing.html#cb234-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(filtered_for_numeric, <span class="fu">aes</span>(<span class="at">x =</span> key, <span class="at">y =</span> <span class="fu">fct_rev</span>(Name), <span class="at">fill =</span> Std)) <span class="sc">+</span></span>
 <span id="cb234-7"><a href="missing.html#cb234-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb234-8"><a href="missing.html#cb234-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradient2</span>(<span class="at">low =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;white&quot;</span>, <span class="at">high =</span><span class="st">&quot;yellow&quot;</span>, <span class="at">na.value =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-155-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-155-1.png" width="672" /></p>
 <p>Now, we can see the missing trends better! Let us sort them by the number missing by each row and column:</p>
 <div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="missing.html#cb235-1" aria-hidden="true" tabindex="-1"></a><span class="co"># convert missing to numeric so it can be summed up</span></span>
 <span id="cb235-2"><a href="missing.html#cb235-2" aria-hidden="true" tabindex="-1"></a>filtered_for_numeric <span class="ot">&lt;-</span> filtered_for_numeric <span class="sc">%&gt;%</span> </span>
@@ -953,7 +953,7 @@ To solve this problem, we can standardize the variables:</p>
 <span id="cb235-5"><a href="missing.html#cb235-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(filtered_for_numeric, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(key, <span class="sc">-</span>missing2, sum), <span class="at">y =</span> <span class="fu">fct_reorder</span>(Name, <span class="sc">-</span>missing2, sum), <span class="at">fill =</span> Std)) <span class="sc">+</span></span>
 <span id="cb235-6"><a href="missing.html#cb235-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="at">color =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb235-7"><a href="missing.html#cb235-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradient2</span>(<span class="at">low =</span> <span class="st">&quot;blue&quot;</span>, <span class="at">mid =</span> <span class="st">&quot;white&quot;</span>, <span class="at">high =</span><span class="st">&quot;yellow&quot;</span>, <span class="at">na.value =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-156-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-156-1.png" width="672" /></p>
 </div>
 <div id="missing-patterns-by-rows" class="section level3" number="24.5.2">
 <h3><span class="header-section-number">24.5.2</span> Missing Patterns by rows</h3>
@@ -966,7 +966,7 @@ To solve this problem, we can standardize the variables:</p>
 ## [1,] &quot;Age&quot;       &quot;Income&quot;
 ## [2,] &quot;Education&quot; &quot;Income&quot;</code></pre>
 <div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="missing.html#cb238-1" aria-hidden="true" tabindex="-1"></a><span class="fu">image</span>(x)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-157-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-157-1.png" width="672" /></p>
 <p>Did you notice that the <code>Education</code> variable has been skipped? That is because the whole column is missing.
 Let us try to see some patterns in the missing data:</p>
 <div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="missing.html#cb239-1" aria-hidden="true" tabindex="-1"></a>x<span class="sc">@</span>patterns</span></code></pre></div>

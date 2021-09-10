@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -807,7 +807,7 @@ function unhover(element) {
 <h2><span class="header-section-number">9.2</span> tl;dr</h2>
 <p>I want a nice example and I want it NOW!</p>
 <p>Here’s a look at the dose of theophylline administered orally to the subject on which the concentration of theophylline is observed:</p>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-33-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
 <p>Here is the code:</p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="ridgeline.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggridges&quot;</span>)</span>
 <span id="cb41-2"><a href="ridgeline.html#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
@@ -847,7 +847,7 @@ function unhover(element) {
 <span id="cb44-8"><a href="ridgeline.html#cb44-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Circumference at Breast Height&quot;</span>, <span class="at">y=</span><span class="st">&quot;Tree with ordering of max diameter&quot;</span>)<span class="sc">+</span></span>
 <span id="cb44-9"><a href="ridgeline.html#cb44-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Density estimation of circumference of different types of Trees&quot;</span>)<span class="sc">+</span></span>
 <span id="cb44-10"><a href="ridgeline.html#cb44-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-36-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
 <p><code>ggridge</code> uses two main geoms to plot the ridgeline density plots: “geom_density_ridges” and “geom_ridgeline”. They are used to plot the densities of categorical variable factors and see their distribution over a continuous scale.</p>
 </div>
 <div id="when-to-use-2" class="section level2" number="9.5">
@@ -868,7 +868,7 @@ function unhover(element) {
 <span id="cb45-8"><a href="ridgeline.html#cb45-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Response in repelling honeybees&quot;</span>,<span class="at">y=</span><span class="st">&quot;Treatment&quot;</span>)<span class="sc">+</span></span>
 <span id="cb45-9"><a href="ridgeline.html#cb45-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Density estimation of response by honeybees to a treatment for scale=3&quot;</span>)<span class="sc">+</span></span>
 <span id="cb45-10"><a href="ridgeline.html#cb45-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-37-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-37-1.png" width="960" /></p>
 <div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="ridgeline.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(OrchardSprays_data, <span class="fu">aes</span>(<span class="at">x=</span>decrease,<span class="at">y=</span>treatment,<span class="at">fill=</span>treatment))<span class="sc">+</span></span>
 <span id="cb46-2"><a href="ridgeline.html#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density_ridges_gradient</span>(<span class="at">scale=</span><span class="dv">5</span>) <span class="sc">+</span> <span class="fu">theme_ridges</span>()<span class="sc">+</span></span>
 <span id="cb46-3"><a href="ridgeline.html#cb46-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_discrete</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="fl">0.3</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
@@ -876,13 +876,13 @@ function unhover(element) {
 <span id="cb46-5"><a href="ridgeline.html#cb46-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Response in repelling honeybees&quot;</span>,<span class="at">y=</span><span class="st">&quot;Treatment&quot;</span>)<span class="sc">+</span></span>
 <span id="cb46-6"><a href="ridgeline.html#cb46-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Density estimation of response by honeybees to a treatment for scale=5&quot;</span>)<span class="sc">+</span></span>
 <span id="cb46-7"><a href="ridgeline.html#cb46-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-37-2.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-37-2.png" width="960" /></p>
 <p>Ridgeline plots can also be used to plot histograms on the common horizontal axis rather than density plots. But doing that may not give us any valuable results.</p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="ridgeline.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggridges&quot;</span>)</span>
 <span id="cb47-2"><a href="ridgeline.html#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
 <span id="cb47-3"><a href="ridgeline.html#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(InsectSprays, <span class="fu">aes</span>(<span class="at">x =</span> count, <span class="at">y =</span> spray, <span class="at">height =</span> ..density.., <span class="at">fill =</span> spray)) <span class="sc">+</span> </span>
 <span id="cb47-4"><a href="ridgeline.html#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density_ridges</span>(<span class="at">stat =</span> <span class="st">&quot;binline&quot;</span>, <span class="at">bins =</span> <span class="dv">20</span>, <span class="at">scale =</span> <span class="fl">0.7</span>, <span class="at">draw_baseline =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-38-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
 <p>If the same thing is done in ridgeline plots, it gives better results.</p>
 <div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="ridgeline.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;ggridges&quot;</span>)</span>
 <span id="cb48-2"><a href="ridgeline.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
@@ -891,7 +891,7 @@ function unhover(element) {
 <span id="cb48-5"><a href="ridgeline.html#cb48-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Count of Insects&quot;</span>,<span class="at">y=</span><span class="st">&quot;Types of Spray&quot;</span>)<span class="sc">+</span></span>
 <span id="cb48-6"><a href="ridgeline.html#cb48-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;The counts of insects treated with different insecticides.&quot;</span>)<span class="sc">+</span></span>
 <span id="cb48-7"><a href="ridgeline.html#cb48-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-39-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
 </div>
 <div id="external-resources-3" class="section level2" number="9.7">
 <h2><span class="header-section-number">9.7</span> External Resources</h2>

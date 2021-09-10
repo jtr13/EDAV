@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -801,7 +801,7 @@ function unhover(element) {
 <h2><span class="header-section-number">7.1</span> tl;dr</h2>
 <p>I want a nice example and I want it NOW!</p>
 <p>Here’s a look at the weights of newborn chicks split by the feed supplement they received:</p>
-<p><img src="edav-resource_files/figure-html/tldr-boxplot-1.png" width="75%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/tldr-boxplot-1.png" width="75%" /></p>
 <p>And here’s the code:</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="box.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb19-2"><a href="box.html#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -831,7 +831,7 @@ function unhover(element) {
 <p>Or, the horizontal version:</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="box.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># single column of a data frame</span></span>
 <span id="cb21-2"><a href="box.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(chickwts<span class="sc">$</span>weight, <span class="at">horizontal =</span> <span class="cn">TRUE</span>) </span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-17-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>Creating a single boxplot in <strong>ggplot2</strong> is somewhat problematic. (The joke is that it’s the package author’s way of saying that if you only have one group, make a histogram instead!)</p>
 <p>If you only include one aesthetic mapping, it will be assumed to the <code>x</code> (group) variable and you will get an error:</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="box.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chickwts, <span class="fu">aes</span>(weight)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code></pre></div>
@@ -840,11 +840,11 @@ function unhover(element) {
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="box.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chickwts, <span class="fu">aes</span>(<span class="at">y =</span> weight)) <span class="sc">+</span> </span>
 <span id="cb24-2"><a href="box.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
 <span id="cb24-3"><a href="box.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>(<span class="dv">16</span>) <span class="co"># make all font sizes larger (default is 11)</span></span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-19-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <p>Another, cleaner approach is to create a name for the single group as the <code>x</code> aesthetic and remove the x-axis label:</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="box.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(chickwts, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">&quot;all 71 chickens&quot;</span>, <span class="at">y =</span> weight)) <span class="sc">+</span> </span>
 <span id="cb25-2"><a href="box.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span> <span class="fu">theme_grey</span>(<span class="dv">16</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-20-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 </div>
 <div id="multiple-boxplots-using-ggplot2" class="section level3" number="7.2.2">
 <h3><span class="header-section-number">7.2.2</span> Multiple boxplots using ggplot2</h3>
@@ -858,7 +858,7 @@ function unhover(element) {
 <span id="cb28-2"><a href="box.html#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
 <span id="cb28-3"><a href="box.html#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;feed type&quot;</span>) <span class="sc">+</span></span>
 <span id="cb28-4"><a href="box.html#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>(<span class="dv">16</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-22-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <p>Data frames that contain a separate column of values for each desired boxplot must be tidied first. (For more detail on using <code>tidy::gather()</code>, see <a href="https://github.com/jtr13/codehelp/blob/master/R/gather.md" target="_blank">this tutorial</a>.)</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="box.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb29-2"><a href="box.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(attitude)</span></code></pre></div>
@@ -883,7 +883,7 @@ function unhover(element) {
 <span id="cb33-2"><a href="box.html#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
 <span id="cb33-3"><a href="box.html#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;question short name&quot;</span>) <span class="sc">+</span></span>
 <span id="cb33-4"><a href="box.html#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>(<span class="dv">16</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-24-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 </div>
 </div>
 <div id="theory-1" class="section level2" number="7.3">
@@ -912,14 +912,14 @@ function unhover(element) {
 <span id="cb34-3"><a href="box.html#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
 <span id="cb34-4"><a href="box.html#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;question short name&quot;</span>) <span class="sc">+</span></span>
 <span id="cb34-5"><a href="box.html#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>(<span class="dv">16</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/flip-boxplot-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/flip-boxplot-1.png" width="672" /></p>
 <p>Note that switching <code>x</code> and <code>y</code> insteading of using <code>coord_flip()</code> doesn’t work!</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="box.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(tidyattitude, <span class="fu">aes</span>(rating, <span class="fu">reorder</span>(question, rating, median))) <span class="sc">+</span> </span>
 <span id="cb35-2"><a href="box.html#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
 <span id="cb35-3"><a href="box.html#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;This is not what we wanted!&quot;</span>) <span class="sc">+</span></span>
 <span id="cb35-4"><a href="box.html#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;question short name&quot;</span>) <span class="sc">+</span></span>
 <span id="cb35-5"><a href="box.html#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>(<span class="dv">16</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-25-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
 </div>
 <div id="not-for-categorical-data" class="section level3" number="7.5.2">
 <h3><span class="header-section-number">7.5.2</span> NOT for categorical data</h3>
@@ -932,7 +932,7 @@ function unhover(element) {
 ## 3       4       1       1       3       1       4
 ## 4       2       2       3       1       2       2</code></pre>
 <p>Creating a boxplot from this data is a good example of what <em>not</em> to do:</p>
-<p><img src="edav-resource_files/figure-html/bad-boxplots-1.png" width="75%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/bad-boxplots-1.png" width="75%" /></p>
 </div>
 </div>
 <div id="external-resources-1" class="section level2" number="7.6">

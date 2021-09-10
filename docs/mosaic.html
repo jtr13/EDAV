@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -821,14 +821,14 @@ function unhover(element) {
 ## 8 young rock      coffee         0</code></pre>
 <p>Split on <code>Age</code> only:</p>
 <div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="mosaic.html#cb116-1" aria-hidden="true" tabindex="-1"></a>vcd<span class="sc">::</span><span class="fu">mosaic</span>(<span class="sc">~</span>Age, df)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-68-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
 <p>Split on <code>Age</code>, then <code>Music</code>:</p>
 <div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="mosaic.html#cb117-1" aria-hidden="true" tabindex="-1"></a>vcd<span class="sc">::</span><span class="fu">mosaic</span>(Music <span class="sc">~</span> Age, df)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-69-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-69-1.png" width="672" /></p>
 <p>Note that the <em>first</em> split is between “young” and “old”, while the second set of splits divides each age group into “classical” and “rock”.</p>
 <p>Split on <code>Age</code>, then <code>Music</code>, then <code>Favorite</code>:</p>
 <div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="mosaic.html#cb118-1" aria-hidden="true" tabindex="-1"></a>vcd<span class="sc">::</span><span class="fu">mosaic</span>(Favorite <span class="sc">~</span> Age <span class="sc">+</span> Music, df)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-70-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
 </div>
 <div id="direction-of-splits" class="section level2" number="16.2">
 <h2><span class="header-section-number">16.2</span> Direction of splits</h2>
@@ -841,11 +841,11 @@ function unhover(element) {
 <p>This is the default direction pattern: alternating directions beginning with horizontal. Therefore we get the same plot with the following:</p>
 <div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="mosaic.html#cb119-1" aria-hidden="true" tabindex="-1"></a>vcd<span class="sc">::</span><span class="fu">mosaic</span>(Favorite <span class="sc">~</span> Age <span class="sc">+</span> Music, </span>
 <span id="cb119-2"><a href="mosaic.html#cb119-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">direction =</span> <span class="fu">c</span>(<span class="st">&quot;h&quot;</span>, <span class="st">&quot;v&quot;</span>, <span class="st">&quot;h&quot;</span>), df)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-71-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
 <p>The directions can be altered as desired. For example, to create a doubledecker plot, make all splits vertical except the last one:</p>
 <div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="mosaic.html#cb120-1" aria-hidden="true" tabindex="-1"></a>vcd<span class="sc">::</span><span class="fu">mosaic</span>(Favorite <span class="sc">~</span> Age <span class="sc">+</span> Music,</span>
 <span id="cb120-2"><a href="mosaic.html#cb120-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">direction =</span> <span class="fu">c</span>(<span class="st">&quot;v&quot;</span>, <span class="st">&quot;v&quot;</span>, <span class="st">&quot;h&quot;</span>), df)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-72-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
 <p>Note that the direction vector is in order of splits (<code>Age</code>, <code>Music</code>, <code>Favorite</code>), not in the order in which the variables appear in the formula, where the last variable to be split is listed first, before the “~”.</p>
 </div>
 <div id="fill-color" class="section level2" number="16.3">
@@ -854,7 +854,7 @@ function unhover(element) {
 <div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="mosaic.html#cb121-1" aria-hidden="true" tabindex="-1"></a>vcd<span class="sc">::</span><span class="fu">mosaic</span>(Favorite <span class="sc">~</span> Age <span class="sc">+</span> Music, </span>
 <span id="cb121-2"><a href="mosaic.html#cb121-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">highlighting_fill =</span> <span class="fu">c</span>(<span class="st">&quot;grey90&quot;</span>, <span class="st">&quot;cornflowerblue&quot;</span>),</span>
 <span id="cb121-3"><a href="mosaic.html#cb121-3" aria-hidden="true" tabindex="-1"></a>       df)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-73-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
 </div>
 <div id="labels" class="section level2" number="16.4">
 <h2><span class="header-section-number">16.4</span> Labels</h2>
@@ -865,7 +865,7 @@ function unhover(element) {
 <div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="mosaic.html#cb122-1" aria-hidden="true" tabindex="-1"></a>vcd<span class="sc">::</span><span class="fu">mosaic</span>(Favorite <span class="sc">~</span> Age <span class="sc">+</span> Music, </span>
 <span id="cb122-2"><a href="mosaic.html#cb122-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">labeling =</span> vcd<span class="sc">::</span><span class="fu">labeling_border</span>(<span class="at">rot_labels =</span> <span class="fu">c</span>(<span class="dv">45</span>, <span class="sc">-</span><span class="dv">45</span>, <span class="dv">0</span>, <span class="dv">0</span>)),</span>
 <span id="cb122-3"><a href="mosaic.html#cb122-3" aria-hidden="true" tabindex="-1"></a>       df)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-74-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
 </div>
 <div id="abbreviate-labels" class="section level3" number="16.4.2">
 <h3><span class="header-section-number">16.4.2</span> Abbreviate labels</h3>
@@ -874,7 +874,7 @@ function unhover(element) {
 <div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="mosaic.html#cb123-1" aria-hidden="true" tabindex="-1"></a>vcd<span class="sc">::</span><span class="fu">mosaic</span>(Favorite <span class="sc">~</span> Age <span class="sc">+</span> Music, </span>
 <span id="cb123-2"><a href="mosaic.html#cb123-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">labeling =</span> vcd<span class="sc">::</span><span class="fu">labeling_border</span>(<span class="at">abbreviate_labs =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">6</span>)), </span>
 <span id="cb123-3"><a href="mosaic.html#cb123-3" aria-hidden="true" tabindex="-1"></a>       df)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-75-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-75-1.png" width="672" /></p>
 </div>
 </div>
 <div id="cell-spacing" class="section level2" number="16.5">
@@ -882,16 +882,16 @@ function unhover(element) {
 <div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="mosaic.html#cb124-1" aria-hidden="true" tabindex="-1"></a>vcd<span class="sc">::</span><span class="fu">mosaic</span>(Favorite <span class="sc">~</span> Age <span class="sc">+</span> Music,</span>
 <span id="cb124-2"><a href="mosaic.html#cb124-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">spacing =</span> vcd<span class="sc">::</span><span class="fu">spacing_equal</span>(<span class="at">sp =</span> <span class="fu">unit</span>(<span class="dv">0</span>, <span class="st">&quot;lines&quot;</span>)),</span>
 <span id="cb124-3"><a href="mosaic.html#cb124-3" aria-hidden="true" tabindex="-1"></a>       df)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-76-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
 <p>For more details, see <code>&gt;?vcd::spacings</code></p>
 <div id="mosaic-using-vcddoubledecker" class="section level3" number="16.5.1">
 <h3><span class="header-section-number">16.5.1</span> Mosaic using vcd::doubledecker</h3>
 <div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="mosaic.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Arthritis, <span class="at">package =</span> <span class="st">&quot;vcd&quot;</span>)</span>
 <span id="cb125-2"><a href="mosaic.html#cb125-2" aria-hidden="true" tabindex="-1"></a>vcd<span class="sc">::</span><span class="fu">doubledecker</span>(Improved <span class="sc">~</span> Treatment <span class="sc">+</span> Sex, <span class="at">data=</span>Arthritis)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-77-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
 <div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="mosaic.html#cb126-1" aria-hidden="true" tabindex="-1"></a>vcd<span class="sc">::</span><span class="fu">doubledecker</span>(Music <span class="sc">~</span> Favorite <span class="sc">+</span> Age, </span>
 <span id="cb126-2"><a href="mosaic.html#cb126-2" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">xtabs</span>(Freq <span class="sc">~</span> Age <span class="sc">+</span> Music <span class="sc">+</span> Favorite, df))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-78-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
 </div>
 </div>
 <div id="mosaic-using-ggplot" class="section level2" number="16.6">

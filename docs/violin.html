@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -806,7 +806,7 @@ function unhover(element) {
 <div id="some-examples-in-r" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Some Examples in R</h2>
 <p>Let’s use the <code>chickwts</code> dataset from the <code>datasets</code> package to plot a violin plot using <code>ggplot2</code>.</p>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-28-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
 <p>Here’s the code for that:</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="violin.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import ggplot and the Datasets Package</span></span>
 <span id="cb38-2"><a href="violin.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasets)</span>
@@ -833,7 +833,7 @@ function unhover(element) {
 <span id="cb39-4"><a href="violin.html#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">fill =</span> <span class="st">&quot;lightBlue&quot;</span>, <span class="at">color =</span> <span class="st">&quot;#473e2c&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb39-5"><a href="violin.html#cb39-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Feed Supplement&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Chick Weight (g)&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb39-6"><a href="violin.html#cb39-6" aria-hidden="true" tabindex="-1"></a>   <span class="fu">geom_boxplot</span>(<span class="at">width=</span><span class="fl">0.1</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-30-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 <p>To get the result, we just add a boxplot geom.</p>
 </div>
 <div id="displaying-data-as-dots" class="section level3" number="8.3.2">
@@ -844,7 +844,7 @@ function unhover(element) {
 <span id="cb40-4"><a href="violin.html#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">fill =</span> <span class="st">&quot;lightBlue&quot;</span>, <span class="at">color =</span> <span class="st">&quot;#473e2c&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb40-5"><a href="violin.html#cb40-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Feed Supplement&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Chick Weight (g)&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb40-6"><a href="violin.html#cb40-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_dotplot</span>(<span class="at">binaxis=</span><span class="st">&#39;y&#39;</span>, <span class="at">dotsize=</span><span class="fl">0.5</span>, <span class="at">stackdir=</span><span class="st">&#39;center&#39;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-31-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 </div>
 </div>
 <div id="description" class="section level2" number="8.4">

@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -822,7 +822,7 @@ function unhover(element) {
 <div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="tidyquant.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get historical data for single stock. e.g. google</span></span>
 <span id="cb159-2"><a href="tidyquant.html#cb159-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyquant)</span>
 <span id="cb159-3"><a href="tidyquant.html#cb159-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tq_get</span>(<span class="st">&quot;GOOGL&quot;</span>, <span class="at">get=</span><span class="st">&quot;stock.prices&quot;</span>)</span></code></pre></div>
-<pre><code>## # A tibble: 2,682 × 8
+<pre><code>## # A tibble: 2,690 × 8
 ##    symbol date        open  high   low close  volume adjusted
 ##    &lt;chr&gt;  &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
 ##  1 GOOGL  2011-01-03  299.  303.  299.  302. 4725670     302.
@@ -835,7 +835,7 @@ function unhover(element) {
 ##  8 GOOGL  2011-01-12  310.  310.  308.  309. 3262135     309.
 ##  9 GOOGL  2011-01-13  309.  310.  307.  309. 2665332     309.
 ## 10 GOOGL  2011-01-14  309.  312.  309.  312. 4726469     312.
-## # … with 2,672 more rows</code></pre>
+## # … with 2,680 more rows</code></pre>
 <p>Calculate monthly return of single stock:</p>
 <div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="tidyquant.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
 <span id="cb161-2"><a href="tidyquant.html#cb161-2" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate monthly return of single stock</span></span>
@@ -844,7 +844,7 @@ function unhover(element) {
 <span id="cb161-5"><a href="tidyquant.html#cb161-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">mutate_fun=</span>periodReturn,</span>
 <span id="cb161-6"><a href="tidyquant.html#cb161-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">period=</span><span class="st">&quot;monthly&quot;</span>,</span>
 <span id="cb161-7"><a href="tidyquant.html#cb161-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">col_rename =</span> <span class="st">&quot;monthly_return&quot;</span>)</span></code></pre></div>
-<pre><code>## # A tibble: 128 × 2
+<pre><code>## # A tibble: 129 × 2
 ##    date       monthly_return
 ##    &lt;date&gt;              &lt;dbl&gt;
 ##  1 2011-01-31       -0.00660
@@ -857,14 +857,14 @@ function unhover(element) {
 ##  8 2011-08-31       -0.104  
 ##  9 2011-09-30       -0.0479 
 ## 10 2011-10-31        0.151  
-## # … with 118 more rows</code></pre>
+## # … with 119 more rows</code></pre>
 <p>Create a line chart of the <em>closing price</em> for single stock:</p>
 <div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="tidyquant.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="co"># showing closing price for single stock</span></span>
 <span id="cb163-2"><a href="tidyquant.html#cb163-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb163-3"><a href="tidyquant.html#cb163-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tq_get</span>(<span class="fu">c</span>(<span class="st">&quot;GOOGL&quot;</span>), <span class="at">get=</span><span class="st">&quot;stock.prices&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb163-4"><a href="tidyquant.html#cb163-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(date, close)) <span class="sc">+</span></span>
 <span id="cb163-5"><a href="tidyquant.html#cb163-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-110-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
 <p>Create a line chart of the <em>monthly return</em> for single stock:</p>
 <div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="tidyquant.html#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="co"># showing monthly return for single stock</span></span>
 <span id="cb164-2"><a href="tidyquant.html#cb164-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tq_get</span>(<span class="fu">c</span>(<span class="st">&quot;GOOGL&quot;</span>), <span class="at">get=</span><span class="st">&quot;stock.prices&quot;</span>) <span class="sc">%&gt;%</span></span>
@@ -874,14 +874,14 @@ function unhover(element) {
 <span id="cb164-6"><a href="tidyquant.html#cb164-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">col_rename =</span> <span class="st">&quot;monthly_return&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb164-7"><a href="tidyquant.html#cb164-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(date, monthly_return)) <span class="sc">+</span></span>
 <span id="cb164-8"><a href="tidyquant.html#cb164-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-111-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-111-1.png" width="672" /></p>
 </div>
 <div id="multiple-timeseries" class="section level2" number="21.5">
 <h2><span class="header-section-number">21.5</span> Multiple timeseries</h2>
 <p>Obtain historical data for multiple stocks (for example, GAFA):</p>
 <div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="tidyquant.html#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get historical data for multiple stocks. e.g. GAFA</span></span>
 <span id="cb165-2"><a href="tidyquant.html#cb165-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tq_get</span>(<span class="fu">c</span>(<span class="st">&quot;GOOGL&quot;</span>,<span class="st">&quot;AMZN&quot;</span>,<span class="st">&quot;FB&quot;</span>,<span class="st">&quot;AAPL&quot;</span>), <span class="at">get=</span><span class="st">&quot;stock.prices&quot;</span>)</span></code></pre></div>
-<pre><code>## # A tibble: 10,381 × 8
+<pre><code>## # A tibble: 10,413 × 8
 ##    symbol date        open  high   low close  volume adjusted
 ##    &lt;chr&gt;  &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
 ##  1 GOOGL  2011-01-03  299.  303.  299.  302. 4725670     302.
@@ -894,14 +894,14 @@ function unhover(element) {
 ##  8 GOOGL  2011-01-12  310.  310.  308.  309. 3262135     309.
 ##  9 GOOGL  2011-01-13  309.  310.  307.  309. 2665332     309.
 ## 10 GOOGL  2011-01-14  309.  312.  309.  312. 4726469     312.
-## # … with 10,371 more rows</code></pre>
+## # … with 10,403 more rows</code></pre>
 <p>Create a multiple line chart of the closing prices of multiple stocks (again, GAFA). We can show each stock in a different color on the same graph:</p>
 <div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="tidyquant.html#cb167-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a multiple line chart of the closing prices of the four stocks,</span></span>
 <span id="cb167-2"><a href="tidyquant.html#cb167-2" aria-hidden="true" tabindex="-1"></a><span class="co"># showing each stock in a different color on the same graph.</span></span>
 <span id="cb167-3"><a href="tidyquant.html#cb167-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tq_get</span>(<span class="fu">c</span>(<span class="st">&quot;GOOGL&quot;</span>,<span class="st">&quot;AMZN&quot;</span>,<span class="st">&quot;FB&quot;</span>,<span class="st">&quot;AAPL&quot;</span>), <span class="at">get=</span><span class="st">&quot;stock.prices&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb167-4"><a href="tidyquant.html#cb167-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(date, close, <span class="at">color=</span>symbol)) <span class="sc">+</span></span>
 <span id="cb167-5"><a href="tidyquant.html#cb167-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-113-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-113-1.png" width="672" /></p>
 <p>Transform the data so each stock begins at 100 and replot (Standardize the data so that we can compare timeseries):</p>
 <div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="tidyquant.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a multiple line chart of the closing prices of the four stocks,</span></span>
 <span id="cb168-2"><a href="tidyquant.html#cb168-2" aria-hidden="true" tabindex="-1"></a><span class="co"># showing each stock in a different color on the same graph.</span></span>
@@ -911,7 +911,7 @@ function unhover(element) {
 <span id="cb168-6"><a href="tidyquant.html#cb168-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">close =</span> <span class="dv">100</span><span class="sc">*</span>close<span class="sc">/</span><span class="fu">first</span>(close)) <span class="sc">%&gt;%</span></span>
 <span id="cb168-7"><a href="tidyquant.html#cb168-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(date, close, <span class="at">color=</span>symbol)) <span class="sc">+</span></span>
 <span id="cb168-8"><a href="tidyquant.html#cb168-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-114-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-114-1.png" width="672" /></p>
 <p>Calculate <em>monthly return</em> of multiple stocks (again, GAFA):</p>
 <div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="tidyquant.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate monthly return of multiple stocks</span></span>
 <span id="cb169-2"><a href="tidyquant.html#cb169-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tq_get</span>(<span class="fu">c</span>(<span class="st">&quot;GOOGL&quot;</span>,<span class="st">&quot;AMZN&quot;</span>,<span class="st">&quot;FB&quot;</span>,<span class="st">&quot;AAPL&quot;</span>), <span class="at">get=</span><span class="st">&quot;stock.prices&quot;</span>) <span class="sc">%&gt;%</span></span>
@@ -920,7 +920,7 @@ function unhover(element) {
 <span id="cb169-5"><a href="tidyquant.html#cb169-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">mutate_fun=</span>periodReturn,</span>
 <span id="cb169-6"><a href="tidyquant.html#cb169-6" aria-hidden="true" tabindex="-1"></a>               <span class="at">period=</span><span class="st">&quot;monthly&quot;</span>,</span>
 <span id="cb169-7"><a href="tidyquant.html#cb169-7" aria-hidden="true" tabindex="-1"></a>               <span class="at">col_rename =</span> <span class="st">&quot;monthly_return&quot;</span>)</span></code></pre></div>
-<pre><code>## # A tibble: 496 × 3
+<pre><code>## # A tibble: 500 × 3
 ## # Groups:   symbol [4]
 ##    symbol date       monthly_return
 ##    &lt;chr&gt;  &lt;date&gt;              &lt;dbl&gt;
@@ -934,7 +934,7 @@ function unhover(element) {
 ##  8 GOOGL  2011-08-31       -0.104  
 ##  9 GOOGL  2011-09-30       -0.0479 
 ## 10 GOOGL  2011-10-31        0.151  
-## # … with 486 more rows</code></pre>
+## # … with 490 more rows</code></pre>
 <p>Create a multiple line chart of monthly return of the four stocks. Again, we can show each stock in a different color on the same graph:</p>
 <div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="tidyquant.html#cb171-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a multiple line chart of monthly return of the four stocks,</span></span>
 <span id="cb171-2"><a href="tidyquant.html#cb171-2" aria-hidden="true" tabindex="-1"></a><span class="co"># showing each stock in a different color on the same graph</span></span>
@@ -946,7 +946,7 @@ function unhover(element) {
 <span id="cb171-8"><a href="tidyquant.html#cb171-8" aria-hidden="true" tabindex="-1"></a>               <span class="at">col_rename =</span> <span class="st">&quot;monthly_return&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb171-9"><a href="tidyquant.html#cb171-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(date, monthly_return, <span class="at">color=</span>symbol)) <span class="sc">+</span></span>
 <span id="cb171-10"><a href="tidyquant.html#cb171-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-116-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-116-1.png" width="672" /></p>
 </div>
 <div id="external-resources-9" class="section level2" number="21.6">
 <h2><span class="header-section-number">21.6</span> External Resources</h2>

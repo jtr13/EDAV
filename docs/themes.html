@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -823,7 +823,7 @@ function unhover(element) {
 <span id="cb321-2"><a href="themes.html#cb321-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.5</span>,<span class="at">alpha =</span> <span class="fl">0.75</span>) </span>
 <span id="cb321-3"><a href="themes.html#cb321-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb321-4"><a href="themes.html#cb321-4" aria-hidden="true" tabindex="-1"></a>q <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-196-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-196-1.png" width="672" /></p>
 <p>There are several other packages available that set the themes and colors in many ways. We will discuss 4 of them.</p>
 <ol style="list-style-type: decimal">
 <li>RColorBrewer</li>
@@ -843,17 +843,17 @@ function unhover(element) {
 <li><strong>Sequential Palette</strong>: It represents the shade of the color from light to dark. It is usually used to represent interval data where low values can be shown with a light color and high values can be shown with a dark color. For instance –Blues, BuPu, YlGn, Reds, OrRd</li>
 </ul>
 <div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb323-1"><a href="themes.html#cb323-1" aria-hidden="true" tabindex="-1"></a>q <span class="sc">+</span> <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Blues&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-198-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-198-1.png" width="672" /></p>
 <ul>
 <li><strong>Diverging Palette</strong>: It has darker colors of contrasting hues on both the ends, and lighter color in the middle. For instance –Spectral, RdGy, PuOr</li>
 </ul>
 <div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb324-1"><a href="themes.html#cb324-1" aria-hidden="true" tabindex="-1"></a>q <span class="sc">+</span> <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;PuOr&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-199-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-199-1.png" width="672" /></p>
 <ul>
 <li><strong>Qualitative Palette</strong>: It is usually used when we want to highlight the differences in the classes (categorial variables). For instance –set1, set2, set3, pastel1, pastel2 , dark2</li>
 </ul>
 <div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="themes.html#cb325-1" aria-hidden="true" tabindex="-1"></a>q <span class="sc">+</span> <span class="fu">scale_colour_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Pastel1&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-200-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-200-1.png" width="672" /></p>
 </div>
 <div id="ggthemes" class="section level2" number="28.4">
 <h2><span class="header-section-number">28.4</span> ggthemes</h2>
@@ -863,16 +863,16 @@ function unhover(element) {
 <div id="ggthemes-examples" class="section level3" number="28.4.1">
 <h3><span class="header-section-number">28.4.1</span> ggthemes examples</h3>
 <div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="themes.html#cb327-1" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">+</span> <span class="fu">theme_economist</span>() <span class="sc">+</span> <span class="fu">scale_colour_economist</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-202-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-202-1.png" width="672" /></p>
 <div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="themes.html#cb328-1" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">+</span> <span class="fu">theme_igray</span>() <span class="sc">+</span> <span class="fu">scale_colour_tableau</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-203-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-203-1.png" width="672" /></p>
 <div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="themes.html#cb329-1" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">+</span> <span class="fu">theme_wsj</span>() <span class="sc">+</span> <span class="fu">scale_color_wsj</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-204-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-204-1.png" width="672" /></p>
 <div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb330-1"><a href="themes.html#cb330-1" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">+</span> <span class="fu">theme_igray</span>() <span class="sc">+</span> <span class="fu">scale_colour_colorblind</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-205-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-205-1.png" width="672" /></p>
 <p>If we would like to use these colors in the graphs, which may not support using <code>ggthemes</code>, we can use the <code>scales</code> package to know what colors were used for a given palette. For example:</p>
 <div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="themes.html#cb331-1" aria-hidden="true" tabindex="-1"></a><span class="fu">show_col</span>(<span class="fu">colorblind_pal</span>()(<span class="dv">6</span>))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-206-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-206-1.png" width="672" /></p>
 </div>
 </div>
 <div id="ggthemr" class="section level2" number="28.5">
@@ -884,18 +884,18 @@ function unhover(element) {
 <span id="cb332-2"><a href="themes.html#cb332-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb332-3"><a href="themes.html#cb332-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(subset, <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">y =</span> carat, <span class="at">color =</span> cut)) <span class="sc">+</span></span>
 <span id="cb332-4"><a href="themes.html#cb332-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.5</span>, <span class="at">alpha =</span> <span class="fl">0.75</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-207-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-207-1.png" width="672" /></p>
 <div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb333-1"><a href="themes.html#cb333-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggthemr</span>(<span class="st">&quot;flat&quot;</span>)</span>
 <span id="cb333-2"><a href="themes.html#cb333-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb333-3"><a href="themes.html#cb333-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(subset, <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">y =</span> carat, <span class="at">color =</span> cut)) <span class="sc">+</span></span>
 <span id="cb333-4"><a href="themes.html#cb333-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.5</span>, <span class="at">alpha =</span> <span class="fl">0.75</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-208-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-208-1.png" width="672" /></p>
 <p>Interestingly, we can set more parameters to change the themes:</p>
 <div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb334-1"><a href="themes.html#cb334-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggthemr</span>(<span class="st">&quot;lilac&quot;</span>, <span class="at">type =</span> <span class="st">&quot;outer&quot;</span>, <span class="at">layout =</span> <span class="st">&quot;scientific&quot;</span>, <span class="at">spacing =</span> <span class="dv">2</span>)</span>
 <span id="cb334-2"><a href="themes.html#cb334-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb334-3"><a href="themes.html#cb334-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(subset, <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">y =</span> carat, <span class="at">color =</span> cut)) <span class="sc">+</span></span>
 <span id="cb334-4"><a href="themes.html#cb334-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.5</span>, <span class="at">alpha =</span> <span class="fl">0.75</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-209-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-209-1.png" width="672" /></p>
 </div>
 </div>
 <div id="ggsci" class="section level2" number="28.6">
@@ -910,22 +910,22 @@ function unhover(element) {
 <span id="cb335-5"><a href="themes.html#cb335-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.5</span>, <span class="at">alpha =</span> <span class="fl">0.75</span>)</span>
 <span id="cb335-6"><a href="themes.html#cb335-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb335-7"><a href="themes.html#cb335-7" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">+</span> <span class="fu">scale_color_startrek</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-210-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-210-1.png" width="672" /></p>
 <div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb336-1"><a href="themes.html#cb336-1" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">+</span> <span class="fu">scale_color_jama</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-211-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-211-1.png" width="672" /></p>
 <div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb337-1"><a href="themes.html#cb337-1" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">+</span> <span class="fu">scale_color_locuszoom</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-212-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-212-1.png" width="672" /></p>
 </div>
 <div id="ggsci-for-continuous-data" class="section level3" number="28.6.2">
 <h3><span class="header-section-number">28.6.2</span> ggsci for continuous data</h3>
 <div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb338-1"><a href="themes.html#cb338-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(carat, price)) <span class="sc">+</span></span>
 <span id="cb338-2"><a href="themes.html#cb338-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hex</span>(<span class="at">bins =</span> <span class="dv">20</span>, <span class="at">color =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
 <span id="cb338-3"><a href="themes.html#cb338-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_material</span>(<span class="st">&quot;orange&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-213-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-213-1.png" width="672" /></p>
 <p>We can also find out the color used, so that we can use them in some other graphs created in base R:</p>
 <div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb339-1"><a href="themes.html#cb339-1" aria-hidden="true" tabindex="-1"></a>palette <span class="ot">=</span> <span class="fu">pal_lancet</span>(<span class="st">&quot;lanonc&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>)(<span class="dv">9</span>)</span>
 <span id="cb339-2"><a href="themes.html#cb339-2" aria-hidden="true" tabindex="-1"></a><span class="fu">show_col</span>(palette)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-214-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-214-1.png" width="672" /></p>
 </div>
 </div>
 <div id="external-resources-12" class="section level2" number="28.7">

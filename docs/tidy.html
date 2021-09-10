@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1030,7 +1030,7 @@ The filter function takes the data frame as the first argument. The next argumen
 <span id="cb207-3"><a href="tidy.html#cb207-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(biopsy_new)<span class="sc">+</span></span>
 <span id="cb207-4"><a href="tidy.html#cb207-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span>thickness,<span class="at">y=</span>cell_size,<span class="at">color=</span>class))<span class="sc">+</span></span>
 <span id="cb207-5"><a href="tidy.html#cb207-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Plot of Clump Thickness Vs Tumor Cell Size&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-137-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-137-1.png" width="672" /></p>
 <div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="tidy.html#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="co">#normalize the bare nuclei values </span></span>
 <span id="cb208-2"><a href="tidy.html#cb208-2" aria-hidden="true" tabindex="-1"></a>biopsy_new<span class="ot">&lt;-</span><span class="fu">filter</span>(biopsy_new,thickness<span class="sc">&gt;</span><span class="fl">5.5</span>)</span>
 <span id="cb208-3"><a href="tidy.html#cb208-3" aria-hidden="true" tabindex="-1"></a></span>

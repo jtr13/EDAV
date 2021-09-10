@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -806,7 +806,7 @@ function unhover(element) {
 <h2><span class="header-section-number">17.2</span> tl;dr</h2>
 <p>Enough with these simple examples! I want <a href="https://www.youtube.com/watch?v=tl8WjoE79Wo" target="_blank">a complicated one</a>!</p>
 <p>Here’s a heatmap of occupational categories of sons and fathers in the US, UK, and Japan:
-<img src="edav-resource_files/figure-html/unnamed-chunk-80-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<img src="edav-resource_files/figure-html/unnamed-chunk-80-1.png" width="864" /></p>
 <p>And here’s the code:</p>
 <div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="heatmap.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(vcdExtra) <span class="co"># dataset</span></span>
 <span id="cb127-2"><a href="heatmap.html#cb127-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># manipulation</span></span>
@@ -863,7 +863,7 @@ function unhover(element) {
 <span id="cb128-3"><a href="heatmap.html#cb128-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb128-4"><a href="heatmap.html#cb128-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(SpeedSki, <span class="fu">aes</span>(Year, Speed)) <span class="sc">+</span> </span>
 <span id="cb128-5"><a href="heatmap.html#cb128-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bin2d</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/heat-map-default-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/heat-map-default-1.png" width="672" /></p>
 </div>
 <div id="heat-map-of-dataframe" class="section level3" number="17.3.2">
 <h3><span class="header-section-number">17.3.2</span> Heat map of dataframe</h3>
@@ -882,7 +882,7 @@ function unhover(element) {
 <span id="cb129-12"><a href="heatmap.html#cb129-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(wine_new, <span class="fu">aes</span>(<span class="at">x =</span> rowname, <span class="at">y =</span> colname, <span class="at">fill =</span> value)) <span class="sc">+</span></span>
 <span id="cb129-13"><a href="heatmap.html#cb129-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>() <span class="sc">+</span> <span class="fu">scale_fill_viridis</span>() <span class="sc">+</span></span>
 <span id="cb129-14"><a href="heatmap.html#cb129-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Italian Wine Dataframe&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/heat-map-wine-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/heat-map-wine-1.png" width="672" /></p>
 <div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="heatmap.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="co"># only difference from above is scaling</span></span>
 <span id="cb130-2"><a href="heatmap.html#cb130-2" aria-hidden="true" tabindex="-1"></a>wine_scaled <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">scale</span>(wine)) <span class="sc">%&gt;%</span></span>
 <span id="cb130-3"><a href="heatmap.html#cb130-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rownames_to_column</span>() <span class="sc">%&gt;%</span></span>
@@ -891,7 +891,7 @@ function unhover(element) {
 <span id="cb130-6"><a href="heatmap.html#cb130-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(wine_scaled, <span class="fu">aes</span>(<span class="at">x =</span> rowname, <span class="at">y =</span> colname, <span class="at">fill =</span> value)) <span class="sc">+</span></span>
 <span id="cb130-7"><a href="heatmap.html#cb130-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>() <span class="sc">+</span> <span class="fu">scale_fill_viridis</span>() <span class="sc">+</span></span>
 <span id="cb130-8"><a href="heatmap.html#cb130-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Italian Wine Dataframe, Scaled&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-82-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
 </div>
 <div id="modifications-3" class="section level3" number="17.3.3">
 <h3><span class="header-section-number">17.3.3</span> Modifications</h3>
@@ -904,23 +904,23 @@ function unhover(element) {
 <span id="cb131-6"><a href="heatmap.html#cb131-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb131-7"><a href="heatmap.html#cb131-7" aria-hidden="true" tabindex="-1"></a><span class="co"># show plot</span></span>
 <span id="cb131-8"><a href="heatmap.html#cb131-8" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">+</span> <span class="fu">geom_bin2d</span>(<span class="at">binwidth =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">5</span>)) <span class="co"># modify bin width</span></span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/heat-map-color-bin-width-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/heat-map-color-bin-width-1.png" width="672" /></p>
 <p>Here are some other examples:</p>
 <div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="heatmap.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="co"># larger bin width</span></span>
 <span id="cb132-2"><a href="heatmap.html#cb132-2" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">+</span> <span class="fu">geom_bin2d</span>(<span class="at">binwidth =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">10</span>)) </span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-83-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-83-1.png" width="672" /></p>
 <div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="heatmap.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="co"># hexagonal bins</span></span>
 <span id="cb133-2"><a href="heatmap.html#cb133-2" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">+</span> <span class="fu">geom_hex</span>(<span class="at">binwidth =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">5</span>))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-84-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-84-1.png" width="672" /></p>
 <div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="heatmap.html#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="co"># hexagonal bins + scatterplot layer</span></span>
 <span id="cb134-2"><a href="heatmap.html#cb134-2" aria-hidden="true" tabindex="-1"></a>g1 <span class="sc">+</span> <span class="fu">geom_hex</span>(<span class="at">binwidth =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">5</span>), <span class="at">alpha =</span> .<span class="dv">4</span>) <span class="sc">+</span> </span>
 <span id="cb134-3"><a href="heatmap.html#cb134-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-85-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
 <div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="heatmap.html#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="co"># hexagonal bins with custom color gradient/bin count</span></span>
 <span id="cb135-2"><a href="heatmap.html#cb135-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(SpeedSki, <span class="fu">aes</span>(Year, Speed)) <span class="sc">+</span> </span>
 <span id="cb135-3"><a href="heatmap.html#cb135-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">low =</span> <span class="st">&quot;#cccccc&quot;</span>, <span class="at">high =</span> <span class="st">&quot;#09005F&quot;</span>) <span class="sc">+</span> <span class="co"># color</span></span>
 <span id="cb135-4"><a href="heatmap.html#cb135-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hex</span>(<span class="at">bins =</span> <span class="dv">10</span>) <span class="co"># number of bins horizontally/vertically</span></span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-86-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p>
 </div>
 </div>
 <div id="theory-6" class="section level2" number="17.4">

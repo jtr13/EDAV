@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -835,19 +835,19 @@ function unhover(element) {
 <pre><code>## [1] TRUE</code></pre>
 <p>Note that <code>Sys.Date()</code> returns today’s date as a <code>Date</code> class:</p>
 <div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="dates.html#cb282-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;2021-08-28&quot;</code></pre>
+<pre><code>## [1] &quot;2021-09-10&quot;</code></pre>
 <div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="dates.html#cb284-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="fu">Sys.Date</span>())</span></code></pre></div>
 <pre><code>## [1] &quot;Date&quot;</code></pre>
 <p>R has functions to pull particular pieces of information from a date:</p>
 <div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="dates.html#cb286-1" aria-hidden="true" tabindex="-1"></a>today <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>()</span>
 <span id="cb286-2"><a href="dates.html#cb286-2" aria-hidden="true" tabindex="-1"></a><span class="fu">weekdays</span>(today)</span></code></pre></div>
-<pre><code>## [1] &quot;Saturday&quot;</code></pre>
+<pre><code>## [1] &quot;Friday&quot;</code></pre>
 <div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="dates.html#cb288-1" aria-hidden="true" tabindex="-1"></a><span class="fu">weekdays</span>(today, <span class="at">abbreviate =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;Sat&quot;</code></pre>
+<pre><code>## [1] &quot;Fri&quot;</code></pre>
 <div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="dates.html#cb290-1" aria-hidden="true" tabindex="-1"></a><span class="fu">months</span>(today)</span></code></pre></div>
-<pre><code>## [1] &quot;August&quot;</code></pre>
+<pre><code>## [1] &quot;September&quot;</code></pre>
 <div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="dates.html#cb292-1" aria-hidden="true" tabindex="-1"></a><span class="fu">months</span>(today, <span class="at">abbreviate =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<pre><code>## [1] &quot;Aug&quot;</code></pre>
+<pre><code>## [1] &quot;Sep&quot;</code></pre>
 <div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="dates.html#cb294-1" aria-hidden="true" tabindex="-1"></a><span class="fu">quarters</span>(today)</span></code></pre></div>
 <pre><code>## [1] &quot;Q3&quot;</code></pre>
 <p>The <strong>lubridate</strong> package provides additional functions to extract information from a date:</p>
@@ -855,18 +855,18 @@ function unhover(element) {
 <span id="cb296-2"><a href="dates.html#cb296-2" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">year</span>(today)</span></code></pre></div>
 <pre><code>## [1] 2021</code></pre>
 <div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="dates.html#cb298-1" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">yday</span>(today)</span></code></pre></div>
-<pre><code>## [1] 240</code></pre>
+<pre><code>## [1] 253</code></pre>
 <div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="dates.html#cb300-1" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">month</span>(today)</span></code></pre></div>
-<pre><code>## [1] 8</code></pre>
+<pre><code>## [1] 9</code></pre>
 <div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="dates.html#cb302-1" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">month</span>(today, <span class="at">label =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
-<pre><code>## [1] Aug
+<pre><code>## [1] Sep
 ## 12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec</code></pre>
 <div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="dates.html#cb304-1" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">mday</span>(today)</span></code></pre></div>
-<pre><code>## [1] 28</code></pre>
+<pre><code>## [1] 10</code></pre>
 <div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="dates.html#cb306-1" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">week</span>(today)</span></code></pre></div>
-<pre><code>## [1] 35</code></pre>
+<pre><code>## [1] 37</code></pre>
 <div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="dates.html#cb308-1" aria-hidden="true" tabindex="-1"></a>lubridate<span class="sc">::</span><span class="fu">wday</span>(today)</span></code></pre></div>
-<pre><code>## [1] 7</code></pre>
+<pre><code>## [1] 6</code></pre>
 </div>
 <div id="plotting-with-a-date-class-variable" class="section level2" number="26.4">
 <h2><span class="header-section-number">26.4</span> Plotting with a <code>Date</code> class variable</h2>
@@ -876,9 +876,9 @@ function unhover(element) {
 <div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb310-1"><a href="dates.html#cb310-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/mortgage.csv&quot;</span>)</span>
 <span id="cb310-2"><a href="dates.html#cb310-2" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>DATE <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(df<span class="sc">$</span>DATE)</span>
 <span id="cb310-3"><a href="dates.html#cb310-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>DATE, df<span class="sc">$</span>X5.<span class="fl">1.</span>ARM, <span class="at">type =</span> <span class="st">&quot;l&quot;</span>) <span class="co"># on the order of years</span></span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-188-1.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-188-1.png" width="50%" /></p>
 <div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb311-1"><a href="dates.html#cb311-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df<span class="sc">$</span>DATE[<span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>], df<span class="sc">$</span>X5.<span class="fl">1.</span>ARM[<span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>], <span class="at">type =</span> <span class="st">&quot;l&quot;</span>) <span class="co"># switch to months</span></span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-188-2.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-188-2.png" width="50%" /></p>
 <p>Note the the change in x-axis labels in the second graph.</p>
 </div>
 <div id="ggplot2" class="section level3" number="26.4.2">
@@ -893,12 +893,12 @@ function unhover(element) {
 <span id="cb313-5"><a href="dates.html#cb313-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>(<span class="dv">14</span>)</span>
 <span id="cb313-6"><a href="dates.html#cb313-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb313-7"><a href="dates.html#cb313-7" aria-hidden="true" tabindex="-1"></a>g</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-190-1.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-190-1.png" width="50%" /></p>
 <div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="dates.html#cb314-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df <span class="sc">%&gt;%</span> <span class="fu">filter</span>(DATE <span class="sc">&lt;</span> <span class="fu">as.Date</span>(<span class="st">&quot;2006-01-01&quot;</span>)), </span>
 <span id="cb314-2"><a href="dates.html#cb314-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(DATE, <span class="st">`</span><span class="at">30 YR FIXED</span><span class="st">`</span>)) <span class="sc">+</span> </span>
 <span id="cb314-3"><a href="dates.html#cb314-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
 <span id="cb314-4"><a href="dates.html#cb314-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>(<span class="dv">14</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-190-2.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-190-2.png" width="50%" /></p>
 <p>Again, when the data is filtered, the x-axis labels switch from years to months.</p>
 <div id="breaks-limits-labels" class="section level4" number="26.4.2.1">
 <h4><span class="header-section-number">26.4.2.1</span> Breaks, limits, labels</h4>
@@ -906,13 +906,13 @@ function unhover(element) {
 <div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="dates.html#cb315-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
 <span id="cb315-2"><a href="dates.html#cb315-2" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">scale_x_date</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="fu">ymd</span>(<span class="st">&quot;2008-01-01&quot;</span>), <span class="fu">ymd</span>(<span class="st">&quot;2008-12-31&quot;</span>))) <span class="sc">+</span></span>
 <span id="cb315-3"><a href="dates.html#cb315-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;limits = c(ymd(</span><span class="sc">\&quot;</span><span class="st">2008-01-01</span><span class="sc">\&quot;</span><span class="st">), ymd(</span><span class="sc">\&quot;</span><span class="st">2008-12-31</span><span class="sc">\&quot;</span><span class="st">))&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-191-1.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-191-1.png" width="50%" /></p>
 <div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb316-1"><a href="dates.html#cb316-1" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">scale_x_date</span>(<span class="at">date_breaks =</span> <span class="st">&quot;4 years&quot;</span>) <span class="sc">+</span></span>
 <span id="cb316-2"><a href="dates.html#cb316-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;scale_x_date(date_breaks = </span><span class="sc">\&quot;</span><span class="st">4 years</span><span class="sc">\&quot;</span><span class="st">)&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-191-2.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-191-2.png" width="50%" /></p>
 <div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb317-1"><a href="dates.html#cb317-1" aria-hidden="true" tabindex="-1"></a>g <span class="sc">+</span> <span class="fu">scale_x_date</span>(<span class="at">date_labels =</span> <span class="st">&quot;%Y-%m&quot;</span>) <span class="sc">+</span></span>
 <span id="cb317-2"><a href="dates.html#cb317-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;scale_x_date(date_labels = </span><span class="sc">\&quot;</span><span class="st">%Y-%m</span><span class="sc">\&quot;</span><span class="st">)&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-191-3.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-191-3.png" width="50%" /></p>
 <p>(Yes, even in the tidyverse we cannot completely escape the <code>%</code> conversion specification notation. Remember <code>?strptime</code> for help.)</p>
 </div>
 <div id="annotations" class="section level4" number="26.4.2.2">
@@ -929,14 +929,14 @@ function unhover(element) {
 <span id="cb318-9"><a href="dates.html#cb318-9" aria-hidden="true" tabindex="-1"></a>               <span class="at">date_labels =</span> <span class="st">&quot;%Y&quot;</span>) <span class="sc">+</span> </span>
 <span id="cb318-10"><a href="dates.html#cb318-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>(<span class="dv">16</span>) <span class="sc">+</span></span>
 <span id="cb318-11"><a href="dates.html#cb318-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;`geom_vline()` with `annotate()`&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-192-1.png" width="50%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-192-1.png" width="50%" /></p>
 </div>
 </div>
 </div>
 <div id="date-and-time-classes" class="section level2" number="26.5">
 <h2><span class="header-section-number">26.5</span> Date and time classes</h2>
 <div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb319-1"><a href="dates.html#cb319-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;2021-08-28 17:41:53 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2021-09-10 17:35:06 EDT&quot;</code></pre>
 <p><em>Considering submitting a pull request to expand this section.</em></p>
 
 </div>

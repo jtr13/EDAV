@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -806,7 +806,7 @@ function unhover(element) {
 <p>Fancy Example NOW! Gimme Gimme GIMME!</p>
 <!-- Explanation: -->
 <p>Here’s a look at the relationship between brain weight vs. body weight for 62 species of land mammals:</p>
-<p><img src="edav-resource_files/figure-html/tldr-scatter-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/tldr-scatter-1.png" width="864" /></p>
 <p>And here’s the code:</p>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="scatter.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># plotting</span></span>
 <span id="cb65-2"><a href="scatter.html#cb65-2" aria-hidden="true" tabindex="-1"></a>mammals <span class="ot">&lt;-</span> MASS<span class="sc">::</span>mammals</span>
@@ -880,7 +880,7 @@ function unhover(element) {
 <span id="cb68-2"><a href="scatter.html#cb68-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> SpeedSki<span class="sc">$</span>Speed</span>
 <span id="cb68-3"><a href="scatter.html#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="co"># plot data</span></span>
 <span id="cb68-4"><a href="scatter.html#cb68-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, y, <span class="at">main =</span> <span class="st">&quot;Scatterplot of Speed vs. Birth Year&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-57-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
 <!-- Base R Plot Explanation -->
 <p>Base R scatterplots are easy to make. All you need are the two variables you want to plot. Although scatterplots can be made with categorical data, the variables you are plotting will usually be continuous.</p>
 </div>
@@ -896,7 +896,7 @@ function unhover(element) {
 <span id="cb69-8"><a href="scatter.html#cb69-8" aria-hidden="true" tabindex="-1"></a>scatter <span class="sc">+</span></span>
 <span id="cb69-9"><a href="scatter.html#cb69-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Birth Year&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Speed Achieved (km/hr)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb69-10"><a href="scatter.html#cb69-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Ninety-One Skiers by Birth Year and Speed Achieved&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-58-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
 <!-- ggplot2 explanation -->
 <p><code>ggplot2</code> makes it very easy to create scatterplots. Using <code>geom_point()</code>, you can easily plot two different aesthetics in one graph. It also is simple to add on extra formatting to make your plots look nice (All that is really necessary is the data, the aesthetics, and the geom).</p>
 </div>
@@ -935,12 +935,12 @@ function unhover(element) {
 <span id="cb70-8"><a href="scatter.html#cb70-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(wide_x, wide_y)) <span class="sc">+</span></span>
 <span id="cb70-9"><a href="scatter.html#cb70-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb70-10"><a href="scatter.html#cb70-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Linear X-Axis&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/scaling-fix-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/scaling-fix-1.png" width="672" /></p>
 <div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="scatter.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(wide_x, wide_y)) <span class="sc">+</span></span>
 <span id="cb71-2"><a href="scatter.html#cb71-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb71-3"><a href="scatter.html#cb71-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Log-10 X-Axis&quot;</span>) <span class="sc">+</span></span>
 <span id="cb71-4"><a href="scatter.html#cb71-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_log10</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/scaling-fix-2.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/scaling-fix-2.png" width="672" /></p>
 </div>
 </div>
 <div id="modifications-1" class="section level2" number="13.7">
@@ -953,12 +953,12 @@ function unhover(element) {
 <p>Contour lines can be added to the plot call using <code>geom_density_2d()</code>:</p>
 <div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="scatter.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(SpeedSki, <span class="fu">aes</span>(Year, Speed)) <span class="sc">+</span> </span>
 <span id="cb72-2"><a href="scatter.html#cb72-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density_2d</span>() </span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-59-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
 <p>Contour lines work best when combined with other layers:</p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="scatter.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(SpeedSki, <span class="fu">aes</span>(Year, Speed)) <span class="sc">+</span> </span>
 <span id="cb73-2"><a href="scatter.html#cb73-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
 <span id="cb73-3"><a href="scatter.html#cb73-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density_2d</span>(<span class="at">bins =</span> <span class="dv">5</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-60-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
 </div>
 <div id="scatterplot-matrices" class="section level3" number="13.7.2">
 <h3><span class="header-section-number">13.7.2</span> Scatterplot matrices</h3>
@@ -975,13 +975,13 @@ function unhover(element) {
 <span id="cb74-8"><a href="scatter.html#cb74-8" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(length, budget, votes, rating, year)</span>
 <span id="cb74-9"><a href="scatter.html#cb74-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb74-10"><a href="scatter.html#cb74-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(splomvar)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-61-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
 <p>While this is quite useful for personal exploration of a datset, it is <strong>not</strong> recommended for presentation purposes. Something called the <a href="https://en.wikipedia.org/wiki/Grid_illusion" target="_blank">Hermann grid illusion</a> makes this plot very difficult to examine.</p>
 <p>To remove this problem, consider using the <code>splom()</code> function from the <code>lattice</code> package:</p>
 <div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="scatter.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lattice) <span class="co">#sploms</span></span>
 <span id="cb75-2"><a href="scatter.html#cb75-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb75-3"><a href="scatter.html#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="fu">splom</span>(splomvar)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-62-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
 </div>
 </div>
 <div id="external-resources-5" class="section level2" number="13.8">

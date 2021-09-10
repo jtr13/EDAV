@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -813,7 +813,7 @@ function unhover(element) {
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="qqplot.html#cb49-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="dv">50</span>, <span class="dv">10</span>)</span>
 <span id="cb49-2"><a href="qqplot.html#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(x)</span>
 <span id="cb49-3"><a href="qqplot.html#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(x, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-41-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
 <p>The points seem to fall along a straight line. Notice the x-axis plots the theoretical quantiles. Those are the quantiles from the standard Normal distribution with mean 0 and standard deviation 1.</p>
 </div>
 <div id="non-normal-qqplot" class="section level3" number="10.3.2">
@@ -821,7 +821,7 @@ function unhover(element) {
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="qqplot.html#cb50-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rexp</span>(<span class="dv">1000</span>, <span class="dv">5</span>)</span>
 <span id="cb50-2"><a href="qqplot.html#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(x)</span>
 <span id="cb50-3"><a href="qqplot.html#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="fu">qqline</span>(x, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-42-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
 <p>Notice the points form a curve instead of a straight line. Normal Q-Q plots that look like this usually mean your sample data are skewed.</p>
 </div>
 </div>
@@ -848,13 +848,13 @@ function unhover(element) {
 <span id="cb51-4"><a href="qqplot.html#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(x, <span class="fu">aes</span>(<span class="at">sample =</span> x)) <span class="sc">+</span></span>
 <span id="cb51-5"><a href="qqplot.html#cb51-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
 <span id="cb51-6"><a href="qqplot.html#cb51-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq_line</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-43-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
 <p>However, when we need to plot different groups, ggplot will be very helpful with its coloring by factor.</p>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="qqplot.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb52-2"><a href="qqplot.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">sample =</span> mpg, <span class="at">colour =</span> <span class="fu">factor</span>(cyl))) <span class="sc">+</span></span>
 <span id="cb52-3"><a href="qqplot.html#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq</span>() <span class="sc">+</span></span>
 <span id="cb52-4"><a href="qqplot.html#cb52-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_qq_line</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-44-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
 </div>
 <div id="references" class="section level2" number="10.6">
 <h2><span class="header-section-number">10.6</span> References</h2>

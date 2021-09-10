@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -811,7 +811,7 @@ function unhover(element) {
 <span id="cb76-6"><a href="iris.html#cb76-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Sepal Dimensions in Different Species of Iris Flowers&quot;</span>)</span>
 <span id="cb76-7"><a href="iris.html#cb76-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb76-8"><a href="iris.html#cb76-8" aria-hidden="true" tabindex="-1"></a>base_plot <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/goal-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/goal-1.png" width="672" /></p>
 <p>Wondering how we got there? Read on.</p>
 </div>
 <div id="packages" class="section level3" number="14.1.2">
@@ -912,21 +912,21 @@ function unhover(element) {
 <div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="iris.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Something&#39;s missing</span></span>
 <span id="cb87-2"><a href="iris.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb87-3"><a href="iris.html#cb87-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/blank_plot-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/blank_plot-1.png" width="672" /></p>
 <p>Where is it? Maybe if we add some aesthetics. I remember that was an important word that came up somewhere:</p>
 <div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="iris.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Still not working...</span></span>
 <span id="cb88-2"><a href="iris.html#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/blank_plot_aes-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/blank_plot_aes-1.png" width="672" /></p>
 <p>Still nothing. Remember, you have to add a <code>geom</code> for something to show up.</p>
 <div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="iris.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># There we go!</span></span>
 <span id="cb89-2"><a href="iris.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span></span>
 <span id="cb89-3"><a href="iris.html#cb89-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/first_ggplot-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/first_ggplot-1.png" width="672" /></p>
 <p>Yay! Something showed up! Notice where we put the <code>data</code>, inside of <code>ggplot()</code>. ggplot is built on layers. Here we put it in the main call to <code>ggplot</code>. The <code>data</code> argument is also available in <code>geom_point()</code>, but in that case it would only apply to that layer. Here, we are saying, for all layers, unless specified, make the <code>data</code> be <code>iris</code>.</p>
 <p>Now let’s add a color mapping by <code>Species</code>:</p>
 <div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="iris.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span></span>
 <span id="cb90-2"><a href="iris.html#cb90-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Species))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/ggplot_colored-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/ggplot_colored-1.png" width="672" /></p>
 <p>Usually it is helpful to store the main portion of the plot in a variable and add on the layers. The code below achieves the same output as above:</p>
 <div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="iris.html#cb91-1" aria-hidden="true" tabindex="-1"></a>sepal_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width))</span>
 <span id="cb91-2"><a href="iris.html#cb91-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -950,11 +950,11 @@ function unhover(element) {
 <div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="iris.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This plot hides some of the points</span></span>
 <span id="cb92-2"><a href="iris.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
 <span id="cb92-3"><a href="iris.html#cb92-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Species))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/overlapping_data_repeated-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/overlapping_data_repeated-1.png" width="672" /></p>
 <p>What’s the culprit? The <code>color</code> aesthetic. The color by default is opaque and will hide any points that are behind it. As a rule, it is always beneficial to reduce the opacity a little no matter what to avoid this problem. To do this, change the <code>alpha</code> value to something other than it’s default <code>1</code>, like <code>0.5</code>.</p>
 <div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="iris.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
 <span id="cb93-2"><a href="iris.html#cb93-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Species, <span class="at">alpha =</span> <span class="fl">0.5</span>))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/overlap_alpha-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/overlap_alpha-1.png" width="672" /></p>
 <p>Okay…a couple things with this.</p>
 <div id="first-the-legend" class="section level3" number="14.6.1">
 <h3><span class="header-section-number">14.6.1</span> First: the legend</h3>
@@ -963,7 +963,7 @@ function unhover(element) {
 <p>So, we are mapping these given <em>aesthetics</em>, <code>color</code> and <code>alpha</code>, to certain values. <code>ggplot</code> knows that usually the aesthetic mapping will vary since you are probably passing in data that varies, so it will create a legend for each mapping. However, we don’t need a legend for the <code>alpha</code>: we explicitly set it to be 0.5. To fix this, we can pull <code>alpha</code> out of <code>aes</code> and instead treat it like an <em>attribute</em>:</p>
 <div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="iris.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
 <span id="cb94-2"><a href="iris.html#cb94-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Species), <span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/overlap_alpha_fix1-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/overlap_alpha_fix1-1.png" width="672" /></p>
 <p>No more legend. So, in ggplot, there is a difference between where an aesthetic is placed. It is also called MAPPING an aesthetic (making it vary with data inside <code>aes</code>) or SETTING an aesthetic (make it a constant attribute across all datapoints outside of <code>aes</code>).</p>
 </div>
 <div id="second-jittering" class="section level3" number="14.6.2">
@@ -972,7 +972,7 @@ function unhover(element) {
 <p>We can fix this by introducing some <em>jitter</em> to the datapoints. Jitter adds a little random noise and moves the datapoints so that they don’t fully overlap:</p>
 <div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="iris.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
 <span id="cb95-2"><a href="iris.html#cb95-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Species), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">position =</span> <span class="st">&quot;jitter&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/overlap-jitter-fix1-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/overlap-jitter-fix1-1.png" width="672" /></p>
 <p>Consider your motives when using jittering. You are by definition altering the data, but it may be beneficial in some situations.</p>
 <hr />
 </div>
@@ -998,7 +998,7 @@ function unhover(element) {
 <span id="cb96-17"><a href="iris.html#cb96-17" aria-hidden="true" tabindex="-1"></a><span class="co"># arrange plots</span></span>
 <span id="cb96-18"><a href="iris.html#cb96-18" aria-hidden="true" tabindex="-1"></a>gridExtra<span class="sc">::</span><span class="fu">grid.arrange</span>(plt1, plt2, </span>
 <span id="cb96-19"><a href="iris.html#cb96-19" aria-hidden="true" tabindex="-1"></a>                        <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">nrow =</span> <span class="dv">1</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/opacity-useful-aside-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/opacity-useful-aside-1.png" width="672" /></p>
 <p>Here it is much easier to see where the dataset is concentrated.</p>
 <hr />
 </div>
@@ -1006,7 +1006,7 @@ function unhover(element) {
 <div id="formatting-for-presentation" class="section level2" number="14.7">
 <h2><span class="header-section-number">14.7</span> Formatting for presentation</h2>
 <p>Let’s say we have finished this plot and we are ready to present it to other people:
-<img src="edav-resource_files/figure-html/present-plot-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<img src="edav-resource_files/figure-html/present-plot-1.png" width="672" /></p>
 <p>We should clean it up a bit so it can stand on its own.</p>
 </div>
 <div id="alter-appearance" class="section level2" number="14.8">
@@ -1016,21 +1016,21 @@ function unhover(element) {
 <span id="cb97-2"><a href="iris.html#cb97-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Species), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">position =</span> <span class="st">&quot;jitter&quot;</span>) <span class="sc">+</span></span>
 <span id="cb97-3"><a href="iris.html#cb97-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Sepal Length (cm)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb97-4"><a href="iris.html#cb97-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Sepal Width (cm)&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/clean-xy-labels-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/clean-xy-labels-1.png" width="672" /></p>
 <p>Next, add a title that encapsulates the plot:</p>
 <div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="iris.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
 <span id="cb98-2"><a href="iris.html#cb98-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Species), <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">position =</span> <span class="st">&quot;jitter&quot;</span>) <span class="sc">+</span></span>
 <span id="cb98-3"><a href="iris.html#cb98-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Sepal Length (cm)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb98-4"><a href="iris.html#cb98-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Sepal Width (cm)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb98-5"><a href="iris.html#cb98-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Sepal Dimensions in Different Species of Iris Flowers&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/title_added-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/title_added-1.png" width="672" /></p>
 <p>And make the points a little bigger:</p>
 <div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="iris.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Sepal.Width)) <span class="sc">+</span> </span>
 <span id="cb99-2"><a href="iris.html#cb99-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Species), <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">position =</span> <span class="st">&quot;jitter&quot;</span>) <span class="sc">+</span></span>
 <span id="cb99-3"><a href="iris.html#cb99-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;Sepal Length (cm)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb99-4"><a href="iris.html#cb99-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Sepal Width (cm)&quot;</span>) <span class="sc">+</span></span>
 <span id="cb99-5"><a href="iris.html#cb99-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Sepal Dimensions in Different Species of Iris Flowers&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/size_fixed-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/size_fixed-1.png" width="672" /></p>
 <p>Now it’s looking presentable.</p>
 </div>
 <div id="consider-themes" class="section level2" number="14.9">
@@ -1043,19 +1043,19 @@ function unhover(element) {
 <span id="cb100-5"><a href="iris.html#cb100-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Sepal Dimensions in Different Species of Iris Flowers&quot;</span>)</span>
 <span id="cb100-6"><a href="iris.html#cb100-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb100-7"><a href="iris.html#cb100-7" aria-hidden="true" tabindex="-1"></a>base_plot</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/themes-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/themes-1.png" width="672" /></p>
 <div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="iris.html#cb101-1" aria-hidden="true" tabindex="-1"></a>base_plot <span class="sc">+</span> <span class="fu">theme_light</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/themes-2.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/themes-2.png" width="672" /></p>
 <div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="iris.html#cb102-1" aria-hidden="true" tabindex="-1"></a>base_plot <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/themes-3.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/themes-3.png" width="672" /></p>
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="iris.html#cb103-1" aria-hidden="true" tabindex="-1"></a>base_plot <span class="sc">+</span> <span class="fu">theme_classic</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/themes-4.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/themes-4.png" width="672" /></p>
 <div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="iris.html#cb104-1" aria-hidden="true" tabindex="-1"></a>base_plot <span class="sc">+</span> <span class="fu">theme_void</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/themes-5.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/themes-5.png" width="672" /></p>
 <p>I’m going to go with <code>theme_minimal()</code> this time.</p>
 <hr />
 <p>So here we are! We got a lovely scatterplot ready to show the world!</p>
-<p><img src="edav-resource_files/figure-html/final-result-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/final-result-1.png" width="672" /></p>
 </div>
 <div id="going-deeper" class="section level2" number="14.10">
 <h2><span class="header-section-number">14.10</span> Going deeper</h2>

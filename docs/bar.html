@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -807,7 +807,7 @@ function unhover(element) {
 <p>I want a nice example. Not tomorrow, not <em>after breakfast</em>. NOW!</p>
 <!-- Explanation: -->
 <p>Here’s a bar chart showing the survival rates of passengers aboard the <em>RMS Titanic</em>:</p>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-45-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-45-1.png" width="864" /></p>
 <p>And here’s the code:</p>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="bar.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(datasets) <span class="co"># data</span></span>
 <span id="cb53-2"><a href="bar.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># plotting</span></span>
@@ -863,7 +863,7 @@ function unhover(element) {
 <div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="bar.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(colors_female_hair[[<span class="st">&quot;Total&quot;</span>]], </span>
 <span id="cb56-2"><a href="bar.html#cb56-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">names.arg =</span> colors_female_hair[[<span class="st">&quot;Hair&quot;</span>]],</span>
 <span id="cb56-3"><a href="bar.html#cb56-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">&quot;Bar Graph Using Base R&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-48-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
 <!-- Base R Plot Explanation -->
 <p>We recommend using Base R only for simple bar graphs for yourself. Like all of Base R, it is simple to setup. <strong>Note</strong>: Base R expects a vector or matrix, hence the double brackets in the barplot call (gets columns as lists).</p>
 </div>
@@ -874,7 +874,7 @@ function unhover(element) {
 <span id="cb57-3"><a href="bar.html#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(colors_female_hair, <span class="fu">aes</span>(<span class="at">x =</span> Hair, <span class="at">y =</span> Total)) <span class="sc">+</span></span>
 <span id="cb57-4"><a href="bar.html#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
 <span id="cb57-5"><a href="bar.html#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Bar Graph Using ggplot2&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-49-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
 <!-- ggplot2 explanation -->
 <p>Bar plots are very easy in <code>ggplot2</code>. You pass in a dataframe and let it know which parts you want to map to different aesthetics. <strong>Note</strong>: In this case, we have a table of values and want to plot them as explicit bar heights. Because of this, we specify the y aesthetic as the <code>Total</code> column, but we also have to specify <code>stat = "identity"</code> in <code>geom_bar()</code> so it knows to plot them correctly. Often you will have datasets where each row is one observation and you want to group them into bars. In that case, the y aesthetic and <code>stat = "identity"</code> do not have to be specified.</p>
 </div>
@@ -914,7 +914,7 @@ function unhover(element) {
 <span id="cb58-2"><a href="bar.html#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
 <span id="cb58-3"><a href="bar.html#cb58-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Bar Graph Using ggplot2&quot;</span>) <span class="sc">+</span></span>
 <span id="cb58-4"><a href="bar.html#cb58-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/coord-flip-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/coord-flip-1.png" width="672" /></p>
 </div>
 <div id="reorder-the-bars" class="section level3" number="11.7.2">
 <h3><span class="header-section-number">11.7.2</span> Reorder the bars</h3>
@@ -926,7 +926,7 @@ function unhover(element) {
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="bar.html#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(colors, <span class="fu">aes</span>(<span class="at">x =</span> Sex, <span class="at">y =</span> Freq)) <span class="sc">+</span></span>
 <span id="cb59-2"><a href="bar.html#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="sc">+</span></span>
 <span id="cb59-3"><a href="bar.html#cb59-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Hair)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/small-multiples-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/small-multiples-1.png" width="672" /></p>
 </div>
 </div>
 <div id="external-resources-4" class="section level2" number="11.8">

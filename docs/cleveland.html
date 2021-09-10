@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -801,7 +801,7 @@ function unhover(element) {
 <div id="overview-7" class="section level2" number="12.1">
 <h2><span class="header-section-number">12.1</span> Overview</h2>
 <p>This section covers how to make Cleveland dot plots. Cleveland dot plots are a great alternative to a simple bar chart, particularly if you have more than a few items. It doesn’t take much for a bar chart to look cluttered. In the same amount of space, many more values can be included in a dot plot, and it’s easier to read as well. R has a built-in base function, <code>dotchart()</code>, but since it’s such an easy graph to draw, doing it “from scratch” in <em>ggplot2</em> or base allows for more customization.</p>
-<p><img src="edav-resource_files/figure-html/ggdot-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/ggdot-1.png" width="480" /></p>
 <p>The code:</p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="cleveland.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb60-2"><a href="cleveland.html#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="co"># create a theme for dot plots, which can be reused</span></span>
@@ -843,7 +843,7 @@ function unhover(element) {
 <span id="cb61-12"><a href="cleveland.html#cb61-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb61-13"><a href="cleveland.html#cb61-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;Schools are sorted alphabetically&quot;</span>, <span class="at">sub =</span> <span class="st">&quot;not the best option&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
 <span id="cb61-14"><a href="cleveland.html#cb61-14" aria-hidden="true" tabindex="-1"></a>  theme_dotplot</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-51-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
 <p>Note that <code>School Name</code> is sorted by factor level, which by default is alphabetical. A better choice is to sort by one of the levels of <code>Test</code>. It’s usually best to try sorting on different factor levels and observe the patterns that appear.</p>
 <p>To perform the double sort, that is, sorting <code>School Name</code> by <code>Test</code> <em>and then</em> <code>Mean</code>, we use <code>forcats::fct_reorder2()</code>. This function sorts <code>.f</code> (a factor or character vector) by two sorting vectors, <code>.x</code> and <code>.y</code>. For this type of plot, <code>.x</code> is the variable represented by the colored dots and <code>.y</code> is the continuous variable mapped to the y-axis.</p>
 <p>Suppose we wish to sort the schools by mean reading score. We can do this by limiting the <code>Test</code> variable to “Reading” when sorting on <code>Mean</code>:</p>
@@ -852,7 +852,7 @@ function unhover(element) {
 <span id="cb62-3"><a href="cleveland.html#cb62-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> Test)) <span class="sc">+</span></span>
 <span id="cb62-4"><a href="cleveland.html#cb62-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">&quot;Schools sorted by Reading mean&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
 <span id="cb62-5"><a href="cleveland.html#cb62-5" aria-hidden="true" tabindex="-1"></a>  theme_dotplot </span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-52-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
 <p>(Many thanks to Zeyu Qiu for the tip on setting <code>.x</code> directly to the factor level, a much better approach than reordering factor levels to conform with <code>fct_reorder2()</code> defaults, as discussed below.)</p>
 <p>While this is the go-to method, there may be cases in which it’s easier to specify that you wish to sort by the first or the last factor level of the first sorting variable (<code>Test</code>), without spelling it out.</p>
 <p>If a factor level is not specified, <code>fct_reorder2()</code> by default will sort on the <em>last</em> factor level of <code>.x</code>. In this case, “Writing” is the last factor level of <code>Test</code>:</p>
@@ -861,7 +861,7 @@ function unhover(element) {
 <span id="cb63-3"><a href="cleveland.html#cb63-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> Test)) <span class="sc">+</span></span>
 <span id="cb63-4"><a href="cleveland.html#cb63-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">&quot;Schools sorted by Writing mean&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
 <span id="cb63-5"><a href="cleveland.html#cb63-5" aria-hidden="true" tabindex="-1"></a>  theme_dotplot</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-53-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
 <p>If you desire to sort by the <em>first</em> factor level of <code>.x</code>, “Math” in this case, you’ll need the development version of <strong>forcats</strong>, which you can install with:</p>
 <p><code>devtools::install_github("tidyverse/forcats")</code></p>
 <p>Change the default sorting function, <code>last2()</code>, to <code>first2()</code>:</p>
@@ -870,7 +870,7 @@ function unhover(element) {
 <span id="cb64-3"><a href="cleveland.html#cb64-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> Test)) <span class="sc">+</span></span>
 <span id="cb64-4"><a href="cleveland.html#cb64-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">&quot;Schools sorted by Math mean&quot;</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
 <span id="cb64-5"><a href="cleveland.html#cb64-5" aria-hidden="true" tabindex="-1"></a>  theme_dotplot</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-54-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
 
 </div>
 </div>

@@ -24,7 +24,7 @@
 <meta name="author" content="Zach Bogart, Joyce Robbins" />
 
 
-<meta name="date" content="2021-08-28" />
+<meta name="date" content="2021-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -808,7 +808,7 @@ function unhover(element) {
 <p>I want a Fancy Example! Not tomorrow, not after breakfast, NOW!</p>
 <!-- Explanation: -->
 <p>Here’s a look at the effect of different attributes on each Fair cut diamond from the “diamonds” dataset:</p>
-<p><img src="edav-resource_files/figure-html/unnamed-chunk-64-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/unnamed-chunk-64-1.png" width="864" /></p>
 <p>And here’s the code:</p>
 <div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="parallelcoordinates.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)</span>
 <span id="cb105-2"><a href="parallelcoordinates.html#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
@@ -837,7 +837,7 @@ function unhover(element) {
 <span id="cb106-2"><a href="parallelcoordinates.html#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)</span>
 <span id="cb106-3"><a href="parallelcoordinates.html#cb106-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb106-4"><a href="parallelcoordinates.html#cb106-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggparcoord</span>(iris, <span class="at">columns=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">title =</span> <span class="st">&quot;Parallel coordinate plot for Iris flowers&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/simple-example-iris-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/simple-example-iris-1.png" width="672" /></p>
 <p>For more information about the dataset, type <code>?iris</code> into the console.</p>
 </div>
 <div id="theory-4" class="section level2" number="15.4">
@@ -862,7 +862,7 @@ function unhover(element) {
 <span id="cb107-3"><a href="parallelcoordinates.html#cb107-3" aria-hidden="true" tabindex="-1"></a><span class="co">#highlight the clusters based on the Species column</span></span>
 <span id="cb107-4"><a href="parallelcoordinates.html#cb107-4" aria-hidden="true" tabindex="-1"></a>graph<span class="ot">&lt;-</span><span class="fu">ggparcoord</span>(iris, <span class="at">columns=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">groupColumn =</span> <span class="dv">5</span>, <span class="at">title =</span> <span class="st">&quot;Plot for Iris data, where each color represents a specific Species&quot;</span>)</span>
 <span id="cb107-5"><a href="parallelcoordinates.html#cb107-5" aria-hidden="true" tabindex="-1"></a>graph</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/iris-clustering-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/iris-clustering-1.png" width="672" /></p>
 </div>
 <div id="deciding-the-value-of-alpha" class="section level3" number="15.6.2">
 <h3><span class="header-section-number">15.6.2</span> Deciding the value of alpha</h3>
@@ -872,7 +872,7 @@ function unhover(element) {
 <span id="cb108-2"><a href="parallelcoordinates.html#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(GGally)</span>
 <span id="cb108-3"><a href="parallelcoordinates.html#cb108-3" aria-hidden="true" tabindex="-1"></a><span class="co">#set the value of alpha to 0.5</span></span>
 <span id="cb108-4"><a href="parallelcoordinates.html#cb108-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggparcoord</span>(iris, <span class="at">columns=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">groupColumn =</span> <span class="dv">5</span>, <span class="at">alphaLines =</span> <span class="fl">0.5</span>, <span class="at">title =</span> <span class="st">&quot;Iris data with a lower alpha value&quot;</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/iris-alpha-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/iris-alpha-1.png" width="672" /></p>
 </div>
 <div id="scales" class="section level3" number="15.6.3">
 <h3><span class="header-section-number">15.6.3</span> Scales</h3>
@@ -902,7 +902,7 @@ function unhover(element) {
 <span id="cb109-13"><a href="parallelcoordinates.html#cb109-13" aria-hidden="true" tabindex="-1"></a>g6<span class="ot">&lt;-</span><span class="fu">ggparcoord</span>(df1, <span class="at">columns=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">scale =</span> <span class="st">&quot;centerObs&quot;</span>, <span class="at">centerObsID =</span> <span class="dv">4</span>, <span class="at">title =</span> <span class="st">&quot;CenterObs Scale&quot;</span>)</span>
 <span id="cb109-14"><a href="parallelcoordinates.html#cb109-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb109-15"><a href="parallelcoordinates.html#cb109-15" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(g1, g2, g3, g4, g5, g6, <span class="at">nrow=</span><span class="dv">2</span>)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/scales-example-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/scales-example-1.png" width="672" /></p>
 </div>
 <div id="order-of-the-variables" class="section level3" number="15.6.4">
 <h3><span class="header-section-number">15.6.4</span> Order of the variables</h3>
@@ -929,7 +929,7 @@ function unhover(element) {
 <span id="cb110-4"><a href="parallelcoordinates.html#cb110-4" aria-hidden="true" tabindex="-1"></a><span class="co">#using the iris dataset</span></span>
 <span id="cb110-5"><a href="parallelcoordinates.html#cb110-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb110-6"><a href="parallelcoordinates.html#cb110-6" aria-hidden="true" tabindex="-1"></a>graph <span class="sc">+</span> <span class="fu">coord_flip</span>()</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/iris-flip-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/iris-flip-1.png" width="672" /></p>
 </div>
 <div id="highlighting-trends" class="section level3" number="15.7.2">
 <h3><span class="header-section-number">15.7.2</span> Highlighting trends</h3>
@@ -942,7 +942,7 @@ function unhover(element) {
 <span id="cb111-6"><a href="parallelcoordinates.html#cb111-6" aria-hidden="true" tabindex="-1"></a>ds_versi<span class="ot">&lt;-</span><span class="fu">within</span>(iris, versicolor<span class="ot">&lt;-</span><span class="fu">if_else</span>(Species<span class="sc">==</span><span class="st">&quot;versicolor&quot;</span>, <span class="st">&quot;Yes&quot;</span>, <span class="st">&quot;No&quot;</span>))</span>
 <span id="cb111-7"><a href="parallelcoordinates.html#cb111-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggparcoord</span>(ds_versi[<span class="fu">order</span>(ds_versi<span class="sc">$</span>versicolor),], <span class="at">columns =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">groupColumn =</span> <span class="st">&quot;versicolor&quot;</span>, <span class="at">title =</span> <span class="st">&quot;Highlighting trends of Versicolor species&quot;</span>) <span class="sc">+</span></span>
 <span id="cb111-8"><a href="parallelcoordinates.html#cb111-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;gray&quot;</span>,<span class="st">&quot;maroon&quot;</span>))</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/iris-trends-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/iris-trends-1.png" width="672" /></p>
 </div>
 <div id="using-splines" class="section level3" number="15.7.3">
 <h3><span class="header-section-number">15.7.3</span> Using splines</h3>
@@ -961,7 +961,7 @@ function unhover(element) {
 <span id="cb112-12"><a href="parallelcoordinates.html#cb112-12" aria-hidden="true" tabindex="-1"></a>g8<span class="ot">&lt;-</span><span class="fu">ggparcoord</span>(df2, <span class="at">columns =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">scale =</span> <span class="st">&quot;globalminmax&quot;</span>, <span class="at">splineFactor=</span><span class="dv">10</span>, <span class="at">title =</span> <span class="st">&quot;Spline factor set to 10&quot;</span>)</span>
 <span id="cb112-13"><a href="parallelcoordinates.html#cb112-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb112-14"><a href="parallelcoordinates.html#cb112-14" aria-hidden="true" tabindex="-1"></a><span class="fu">grid.arrange</span>(g7,g8)</span></code></pre></div>
-<p><img src="edav-resource_files/figure-html/spline-example-1.png" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="edav-resource_files/figure-html/spline-example-1.png" width="672" /></p>
 </div>
 <div id="adding-boxplots-to-the-graph" class="section level3" number="15.7.4">
 <h3><span class="header-section-number">15.7.4</span> Adding boxplots to the graph</h3>
