@@ -13,4 +13,4 @@ Self-Evaluation:
 By creating this cheat sheet and summarizing the main knowledge points about Tidyverse, I have gained a better understanding of the main packages in Tidyverse and consolidated the knowledge I had learned in the class. I found that Tidyverse provides an efficient, fast, and well-documented workflow for general data modeling and visualization tasks. On the other hand, there are many other important and useful packages in Tidyverse. Therefore, I hope to create a more complete cheat sheet about Tidyverse next time to help more people better understand and apply it in their data analysis process.
 
 Cheatsheet:
-![tidyverse_cheatsheet](tidyverse_cheatsheet.jpg)
+https://github.com/zs2488/cc21fall1/blob/main/Community%20Contribution%20-%20Cheat%20Sheet.pdf
