@@ -1,0 +1,310 @@
+#  TidyVerse
+
+Zhisen Cai
+
+Sometimes we may forget the way to use Tidyverse. Therefore, I create this for help. People can finish most of the basic part of tidyverse by using this. I separate it into 4 parts, manipulation between two datasets, manipulation on rows, manipulation on columns and group_by.  With the examples of each function, people can know how to use the function and how the function works.
+
+```{r}
+library(tidyverse)
+```
+Magrittr use pipeline to convey the data. (%>%) We have to use a dot to represent the thing we convey if it is not used in the first parameter. 
+```{r}
+# we can omit '.'
+c(1, 3, 4, 5, NA) %>% mean(., na.rm=TRUE)
+c(1, 3, 4, 5, NA) %>% mean(na.rm = TRUE)  
+# we can not omit '.' in the second parameter
+c(1, 3, 4, 5) %>% plot(., main=paste(., collapse=", "))
+c(1, 3, 4, 5) %>% plot(main=paste(., collapse=", "))
+```
+
+### 0. Connection Bewtween two datasets
+Efficiently bind multiple data frames by row and column 
+bind_rows() and bind_cols() return the same type as the first input, either a data frame, tbl_df, or grouped_df
+code:  bind_rows(..., .id = NULL)   bind_cols(...)
+```{r}
+bind_rows(
++   sample_n(iris, 10),
++   sample_n(iris, 10),
++   sample_n(iris, 10)) %>% 
+  glimpse()
+```
+```{r}
+bind_cols(
+  sample_n(iris, 10),
+  sample_n(iris, 10),
+  sample_n(iris, 10)
+) %>% glimpse()
+```
+
+### 1.combime two datasets by value: join
+
+```{r}
+# prepare data 
+superheroes <- tribble(
+  ~name,      ~alignment,  ~gender,   ~publisher,
+  "Magneto",  "bad",       "male",    "Marvel",
+  "Storm",    "good",      "female",  "Marvel",
+  "Mystique", "bad",       "female",  "Marvel",
+  "Batman",   "good",      "male",    "DC",
+  "Joker",    "bad",       "male",    "DC",
+  "Catwoman", "bad",       "female",  "DC",
+  "Hellboy",  "good",      "male",    "Dark Horse Comics"
+)
+publishers <- tribble(
+  ~publisher, ~yr_founded,
+  "DC",       1934L,
+  "Marvel",   1939L,
+  "Image",    1992L
+)
+```
+
+left_join
+A left join in R is a merge operation between two data frames where the merge returns all of the rows from one table (the left side) and any matching rows from the second table. A left join in R will NOT return values of the second table which do not already exist in the first table.
+left_join(a_tibble, another_tibble, by = ...)
+```{r}
+superheroes %>% 
+  left_join(publishers, by="publisher")
+```
+inner join:
+he inner_join keyword selects records that have matching values in both tables.It will not return unmatched rows. Therefore, we do not see the last row shown in the left_join.
+code: inner_join(a_tibble, another_tibble, by = ...)
+```{r}
+inner_join(superheroes, publishers, by="publisher")
+```
+anti join:
+An anti join returns the rows of the first table where it cannot find a match in the second table.
+```{r}
+superheroes %>%
+  anti_join(publishers, by="publisher")
+```
+
+semi join
+Semi joins are the opposite of anti joins: an anti-anti join, if you like.
+A semi join returns the rows of the first table where it can find a match in the second table. 
+code: semi_join(a_tibble, another_tibble, by = ...)
+```{r}
+superheroes %>%
+  semi_join(publishers, by="publisher")
+```
+### 2. manipulation on column
+we use select to choose column.
+we can use helper function to choose column
+starts_with() : start with a literal string
+ends_with() : end with a literal string
+matches(): match a regular expression
+num_range(): are part of a numercial range
+everything(): selects all columns
+```{r}
+colnames(iris)
+```
+```{r}
+iris <- iris %>% as_tibble() 
+iris %>%
+  select(starts_with("Petal")) %>%
+  head(10)
+```
+```{r}
+iris %>%
+  select(ends_with("Length"))%>%
+  head(10)
+```
+
+```{r}
+iris %>%
+  select(contains(".")) %>%
+  head(10)
+```
+
+select_if 
+we can use select_if to choose column with logical condition or any function return true or false.
+```{r}
+starwars %>%
+  select_if(is.numeric) %>%
+  head(10)
+```
+
+```{r}
+less_than_500 <- function(x) {
+  sum(x) < 500
+}
+iris[1:4] %>%
+  select_if(less_than_500)%>%
+  head(10)
+```
+
+!!!! we can use ~ to represent anonymous function
+```{r}
+iris[1:4] %>%
+  select_if(~ sum(.) < 500)%>%
+  head(10)
+```
+
+We can select the data by deleting columns using minus sign.
+```{r}
+iris %>%
+  select(-Species, -Petal.Length) %>%
+  head(10)
+```
+
+```{r}
+iris %>%   
+  select(Species, everything(), -ends_with("Length")) %>%
+  head(10)
+```
+
+rename the column
+```{r}
+iris %>%
+  rename(sep_len=Sepal.Length, sep_wid=Sepal.Width) %>%
+  names()
+```
+
+### 4. manipulation on row
+```{r}
+# prepare data
+set.seed(896)
+sw_dup <-
+  starwars %>%
+  select(-(films:starships)) %>%  
+  sample_n(100, replace=TRUE)
+head(sw_dup,10) 
+```
+
+Use arrange() to reorder the rows. 
+```{r}
+sw_dup %>%
+  arrange(name, gender) %>%
+  head(10)
+```
+
+using desc() for decreasing order
+```{r}
+sw_dup %>%
+  arrange(desc(mass)) %>%
+  head(10)
+```
+use distinct() to remove the duplicated rows
+```{r}
+sw_dup %>%
+  distinct() %>%
+  glimpse() %>%
+  anyDuplicated()  
+```
+
+use drop_na() to remove all the rows including NA
+```{r}
+sw_dup %>%
+  drop_na() %>%
+  glimpse() %>%
+  anyNA()
+```
+or can only drop na with specific rows
+```{r}
+sw_dup %>%
+  drop_na(gender:species) %>%
+  glimpse() %>%
+  anyNA()
+```
+
+use filter to select rows
+```{r}
+sw_dup %>%
+  filter(species == "Human", (is.na(mass) | height > 180)) %>%
+  head(10)
+```
+
+use filter_all() to choose rows in all the columns
+```{r}
+iris[,1:4] %>%
+  as_tibble() %>%  
+  filter_all(any_vars(. > 7.5))
+```
+
+use filter_if() to choose rows 
+```{r}
+sw_dup %>% 
+  filter_if(is.character, any_vars(is.na(.)))
+```
+
+### 5. build new column or mutate column
+use mutate to create rows or columns
+```{r}
+iris %>%
+  as_tibble(iris) %>%
+  mutate(add_all = Sepal.Length + Sepal.Width + Petal.Length + Petal.Width) %>%
+  head(10)
+```
+
+```{r}
+iris %>%
+  as_tibble() %>%
+  mutate(median_petal_length = median(Petal.Length),
+         has_long_petals = Petal.Length > median_petal_length,
+         has_long_petals = as.numeric(has_long_petals)) %>%  
+  select(Petal.Length, median_petal_length, has_long_petals)
+```
+
+use mutate_all to apply function to all the rows and columns
+```{r}
+msleep %>%
+  mutate_all(tolower)
+```
+
+use mutate_if to apply function to specific row and column which satisfied some conditions
+```{r}
+iris %>%
+  mutate_if(is.double, as.integer) %>%
+  head(10)
+```
+
+use mutate_at to apply function to specific row and column
+```{r}
+iris %>%
+  as_tibble() %>%
+  mutate_at(vars(contains("Length"), contains("Width")), ~ .*10) %>%
+  head(10)
+```
+
+We can use if_else() and case_when() to decide how to change the value
+if_else(condition, if true:---, if false: ----)
+```{r}
+warpbreaks %>%
+  mutate(breed = if_else(wool == "A",
+                         true = "Merino",
+                         false = "Corriedale")) %>%
+  sample_frac(size = 0.15)
+```
+case_when (condition1 ~ class1,
+           condition2 ~ class2,
+           condition3 ~ class3,
+           ......
+  )
+```{r}
+warpbreaks %>%
+  mutate(tension=case_when(tension == "H" ~ "High",
+                           tension == "M" ~ "Medium",
+                           tension == "L" ~ "Low",
+                           TRUE ~ NA_character_)) %>%
+  sample_frac(size = 0.15)
+```
+
+### 6. Group
+use group_by() to create groups and use ungroup to separate group
+use summarize() to find out the properties of the group
+n() :count the frequency
+sum(var),max(var),min(var),mean(var),median(var),sd(var)
+```{r}
+iris %>%
+  group_by(Species) %>%
+  summarise(n = n(),
+            avg_len = mean(Petal.Length, na.rm=TRUE),
+            med_len = median(Petal.Length))
+```
+
+We can also use summarize_if,summarize_all
+```{r}
+dat <- iris %>%
+  group_by(Species) %>%
+  summarise_if(is.numeric, list(~mean(.), ~median(.), ~min(.), ~max(.)))
+dat
+```
