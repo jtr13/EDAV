@@ -22,7 +22,7 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, cache = TRUE)
 
 ## Everything you need for Exploratory Data Analysis & Visualization
 
-**We are in the process of writing a 2nd edition of this resource, which can be found at: edav.info. This 1st edition will no longer be updated.**
+**We are in the process of writing a 2nd edition of this resource, which can be found at: [https://edav.info/](https://edav.info/). The 1st edition will no longer be updated.**
 
 This resource has everything you need and more to be successful with R, this course, and beyond. Let's get started!
 
