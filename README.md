@@ -1,12 +1,12 @@
-# edav.info/
+# edav dot info, 1st edition
 
-This is code and text behind the [edav.info/](https://jtr13.github.io/EDAV/) resource. 
+This is no longer being updated. Please refer to the 2nd edition available at: [https://edav.info/](https://edav.info/)
+
+2nd edition repo: [https://github.com/jtr13/edav2](https://github.com/jtr13/edav2)
+
+This is code and text behind the [https://jtr13.github.io/EDAV/](https://jtr13.github.io/EDAV/) resource. 
 
 ![Cover Image](https://github.com/jtr13/EDAV/blob/master/images/cover.png) 
-
-## I wanna help!
-
-Visit [our contribute page](http://edav.info/contribute.html) to learn more about how you can contribute to *edav.info/*.
 
 ## Contact
 

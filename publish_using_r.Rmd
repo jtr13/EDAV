@@ -4,7 +4,7 @@
 
 ## Overview
 
-This section discusses how we built *edav.info/* and includes references for building sites and books of your own using R.
+This section discusses how we built this book and includes references for building sites and books of your own using R.
 
 ## tl;dr
 
@@ -82,6 +82,8 @@ That said, there are various tutorials for how to set up the `gh-pages` branch; 
 We should note that this makes it all seem very easy to add Travis, which actually was not the case at all for us.  I guess everything looks easy in retrospect. If you run into trouble, let us know by [filing an issue](https://github.com/jtr13/edav/issues){target="_blank"} or [submitting a pull request](https://github.com/jtr13/edav/pulls){target="_blank}. More info on all the contribution stuff can be found on our [contribute page](contribute.html).
 
 ### Add Travis files to GitHub repo
+
+*Note: we are no longer using Travis.*
 
 **Add these files** to your repo:
 

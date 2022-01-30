@@ -14,7 +14,6 @@ rmd_files: [
   "index.Rmd",
   "intro.Rmd",
   "basics.Rmd",
-  "final_project.Rmd",
   "contribute.Rmd",
   "github_resources.Rmd",
 
@@ -56,7 +55,6 @@ rmd_files: [
   "perception.Rmd",
   "themes_and_colors.Rmd",
   "publish_using_r.Rmd",
-  "workflow_notes.Rmd",
   "general_resources.Rmd",
   "chapter_index.Rmd",
   "sessionInfo.Rmd"

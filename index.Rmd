@@ -1,5 +1,5 @@
 --- 
-title: "edav.info/"
+title: "edav dot info, 1st edition"
 author: "Zach Bogart, Joyce Robbins"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,8 +8,9 @@ documentclass: book
 #biblio-style: apalike
 link-citations: yes
 github-repo: "jtr13/EDAV"
-url: 'https://edav.info/'
-description: "This resource is a collaborative collection of resources designed to help students succeed in GR5702 Exploratory Data Analysis and Visualization, a course offered at Columbia University. While the course lectures and textbook focus on theoretical issues, this resource, in contrast, provides coding tips and examples to assist students as they create their own analyses and visualizations. It is our hope that students will contribute to edav.info and it will grow with the course."
+url: 'https://jtr13.github.io/EDAV'
+
+description: "This resource is a collaborative collection of resources designed to help students succeed in GR5702 Exploratory Data Analysis and Visualization, a course offered at Columbia University. While the course lectures and textbook focus on theoretical issues, this resource, in contrast, provides coding tips and examples to assist students as they create their own analyses and visualizations. It is our hope that students will contribute to this resource and it will grow with the course."
 cover-image: "images/edav_link_logo.png"
 ---
 
@@ -20,6 +21,8 @@ knitr::opts_chunk$set(message = FALSE, warning = FALSE, cache = TRUE)
 # Welcome {-}
 
 ## Everything you need for Exploratory Data Analysis & Visualization
+
+**We are in the process of writing a 2nd edition of this resource, which can be found at: edav.info. This 1st edition will no longer be updated.**
 
 This resource has everything you need and more to be successful with R, this course, and beyond. Let's get started!
 

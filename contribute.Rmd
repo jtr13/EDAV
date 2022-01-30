@@ -4,11 +4,11 @@
 
 ## Why contribute?
 
-We don't want *edav.info/* to be just another resource. Rather, we want it to be *your* resource. If there are things that trip you up or cause you frustration, chances are you're not alone. Everyone comes to this course with different backgrounds and expertise. Being able to collect all that knowledge in one place is this resource's mission and you can help move that mission forward.
+We don't want this to be just another resource. Rather, we want it to be *your* resource. If there are things that trip you up or cause you frustration, chances are you're not alone. Everyone comes to this course with different backgrounds and expertise. Being able to collect all that knowledge in one place is this resource's mission and you can help move that mission forward.
 
 ## What to contribute
 
-The focus of edav.info is the coding aspect of data visualization using R.  It is not meant to substitute for course lectures or provide much theory about exploratory data analysis and visualization.  We want to make it easy for students to find what they need quickly to produce a particular kind of graph. We are open to a wide range of contributions but we do have some ground rules:
+The focus of this resource is the coding aspect of data visualization using R.  It is not meant to substitute for course lectures or provide much theory about exploratory data analysis and visualization.  We want to make it easy for students to find what they need quickly to produce a particular kind of graph. We are open to a wide range of contributions but we do have some ground rules:
 
 * We are happy to receive *original work* that will help someone else. For example, if you worked out how to use a function that is not documented well, or mastered a type of graph that was difficult to get right, please share! On the other hand, if good tutorials already exist, there's no need to repeat the work.  Just submit a link to the resource with a short description to the appropriate chapter.
 
@@ -37,7 +37,7 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 1. Go to [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and click on the [Issues Tab](https://github.com/jtr13/EDAV/issues){target="_blank"}
 2. Click on "[New Issue](https://github.com/jtr13/EDAV/issues/new){target="_blank"}"
 3. Propose your Issue and click "Submit new issue"
-4. That's it! We appreciate your input and will take your issue into account in improving *edav.info/* <i class="far fa-smile"></i>
+4. That's it! We appreciate your input and will take your issue into account in improving this resource. <i class="far fa-smile"></i>
 
 **Notes about submitting issues**:
 
@@ -51,7 +51,7 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 
 *You will need to create a github.com account if you don't have one, but you do not need to install git locally.*
 
-**Note**: This is a full walkthough that follows a hypothetical student that spots a typo and uses a pull request to fix it. Although the instructions are written for proposing a change to *edav.info*, they apply to making changes to any repo. Navigate to the file you wish to edit, and click the pencil button:
+**Note**: This is a full walkthough that follows a hypothetical student that spots a typo and uses a pull request to fix it. Although the instructions are written for proposing a change to this book, they apply to making changes to any repo. Navigate to the file you wish to edit, and click the pencil button:
 
 <center>
 ![](images/git/fork_repo_edit_file.png)
@@ -59,7 +59,7 @@ You do *not* have to know how to code up your issue; from fixing a bug to propos
 
 **Do not click the fork button on the home page of the repo.** Then jump ahead to Step 4 below.
 
-One way to contribute to *edav.info* is to contribute directly by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
+One way to contribute to this resource is to contribute directly by editing a chapter. At the top of every page of this resource, you will see an icon that looks like this: <i class="fas fa-edit"></i>. Clicking it will open a new tab where you can edit the markdown for that page on [our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"} and submit your change as a pull request. Essentially, you will create a copy of our repo, make your desired changes, and suggest to us that we include them. If we approve of your changes, they will be rendered and published to the site.
 
 Contributing directly in this manner works best if the change you are proposing is something relatively small, such as a typo/grammatical error or an unclear phrasing/explanation. In general, it doesn't work well to propose changes to code directly on GitHub.
 
@@ -95,7 +95,7 @@ Let's fix that embarrassing typo! We **update the code** right in this editor, *
 
 ### Step 5: Comparing changes {-}
 
-Now GitHub is once again helping out by letting us review the changes we made. On this page we can **review our proposed changes** by scrolling down and looking at the [diffs](https://git-scm.com/docs/git-diff){target="_blank"}. Our fix is very simple so there isn't much to see. Once again, we are going to **push the big green button**, this time labeled **Create pull request**. This will start the process of letting the *edav.info/* people know that we would like them to include our changes (in git-speak, we are *requesting* that the *edav.info/* people do a `git merge` to update their files with our proposed changes.) Note that the proposed changes are in a branch called **patch-1** on our repo; we are asking to merge them into the **master** branch on their repo.
+Now GitHub is once again helping out by letting us review the changes we made. On this page we can **review our proposed changes** by scrolling down and looking at the [diffs](https://git-scm.com/docs/git-diff){target="_blank"}. Our fix is very simple so there isn't much to see. Once again, we are going to **push the big green button**, this time labeled **Create pull request**. This will start the process of letting the authors know that we would like them to include our changes (in git-speak, we are *requesting* that the collaborators do a `git merge` to update their files with our proposed changes.) Note that the proposed changes are in a branch called **patch-1** on our repo; we are asking to merge them into the **master** branch on their repo.
 ![](images/excited_student/directly-06.png)
 *Chance to review your changes. Once satisfied, hit the big green button to start a pull request.*
 
@@ -148,10 +148,11 @@ We contributed to a GitHub repo! Hooray! Time to celebrate!
 
 ### Looking ahead: the next edit {-}
 
-If you have a second edit to propose, simply follow the instructions again. As noted above, the second time through you will not be asked to fork the repo again. If you look closely at the pull request for the second edit, the branch to be merged will be named **patch-2** instead of **patch-1**. Although GitHub keeps mentioning "your fork" as you proceed through the process, this is not really something that you have to concern yourself with.  In fact, you're better off not!  In fact, you should stay away from your fork -- that is, your copy of the `EDAV` repo in *your* GitHub account, because it will inevitably get behind the main one and cause you trouble if you work on the old version and then try to create a pull request.  So, the bottom line is, each time you have an edit to propose, go directly to either `edav.info` or `https://github.com/jtr13/EDAV` and start the editing process there, *not on your fork!*.
+If you have a second edit to propose, simply follow the instructions again. As noted above, the second time through you will not be asked to fork the repo again. If you look closely at the pull request for the second edit, the branch to be merged will be named **patch-2** instead of **patch-1**. Although GitHub keeps mentioning "your fork" as you proceed through the process, this is not really something that you have to concern yourself with.  In fact, you're better off not!  In fact, you should stay away from your fork -- that is, your copy of the `EDAV` repo in *your* GitHub account, because it will inevitably get behind the main one and cause you trouble if you work on the old version and then try to create a pull request.  So, the bottom line is, each time you have an edit to propose, go directly to `https://github.com/jtr13/EDAV` and start the editing process there, *not on your fork!*.
 
 
 ## Resources
 
-- [Our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"}: Link to the GitHub repository for *edav.info/*
+- [Our GitHub repo](https://github.com/jtr13/EDAV){target="_blank"}
+
 - [Open Source Guide](https://opensource.guide/how-to-contribute/){target="_blank"}: Fantastic guide on how to contribute to projects like this one
