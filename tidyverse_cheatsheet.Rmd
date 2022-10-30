@@ -1,0 +1,16 @@
+# tidyverse_cheatsheet
+
+Ziyu Song
+
+Motivation:
+
+R is one of the most widely used programming languages in today’s society. R can not only help people build statistical models but also visualize the data analysis results. However, there are so many R packages and functions that users may feel hard to remember all the details and apply in their data analysis process. In this project, I will create a cheat sheet about Tidyverse, a powerful collection of R packages that are data tools for transforming and visualizing data, to help users quickly find the information they need when they want to do the exploratory data visualization in R. 
+
+The cheat sheet includes that main knowledge points and the most popular functions of Tidyverse, including definition of Tidyverse, core Tidyverse packages, typical data analysis workflow by using Tidyverse, and key functions in the core packages. In order to make it easier for users to understand the each function provided, I incorporated the example axis and parameters.
+
+Self-Evaluation:
+
+By creating this cheat sheet and summarizing the main knowledge points about Tidyverse, I have gained a better understanding of the main packages in Tidyverse and consolidated the knowledge I had learned in the class. I found that Tidyverse provides an efficient, fast, and well-documented workflow for general data modeling and visualization tasks. On the other hand, there are many other important and useful packages in Tidyverse. Therefore, I hope to create a more complete cheat sheet about Tidyverse next time to help more people better understand and apply it in their data analysis process.
+
+Cheatsheet:
+https://github.com/zs2488/cc21fall1/blob/main/Community%20Contribution%20-%20Cheat%20Sheet.pdf
